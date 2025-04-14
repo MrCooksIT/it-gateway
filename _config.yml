@@ -1,0 +1,18 @@
+title: IT Gateway
+description: Comprehensive IT theory and practical resource for Grade 10-12
+theme: just-the-docs
+
+# Enable search
+search_enabled: true
+
+# Enable navigation structure
+nav_external_links:
+  - title: Google Classroom
+    url: https://classroom.google.com
+    hide_icon: false
+
+# Enable copy code buttons
+enable_copy_code_button: true
+
+# Footer content
+footer_content: "Created by Mr Cooks &copy; 2025"
