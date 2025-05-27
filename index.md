@@ -1,81 +1,92 @@
 ---
 layout: home
 title: IT Gateway
-nav_order: 1
-permalink: /
 ---
 
 # IT Gateway
-{: .fs-9 }
 
-Your bridge between IT theory and practical programming
-{: .fs-6 .fw-300 }
+**Your bridge between IT theory and practical programming**
 
-[Get Started Now](#quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Exam Prep](./exam-prep){: .btn .btn-outline .fs-5 .mb-4 .mb-md-0 }
+Welcome to your complete resource for Grade 10-12 Information Technology. This site combines theoretical knowledge with practical programming skills to help you succeed in both your coursework and exams.
 
 ---
 
-## Quick Start
-{: .text-blue-200 }
+## 🚀 Quick Start
 
-<div class="code-example" markdown="1">
+**New to IT?** → Start with [Computer Fundamentals](./fundamentals)
 
-**New to IT?** Start with [Computer Fundamentals](./fundamentals)
+**Need exam help?** → Jump to [Exam Preparation](./exam-prep)
 
-**Need exam help?** Jump to [Exam Preparation](./exam-prep)
+**Working on PAT?** → Check out [Project Guidance](./projects)
 
-**Working on PAT?** Check out [Project Guidance](./projects)
-
-**Programming practice?** Visit [Programming & Development](./programming)
-
-</div>
-
-## Learning Pathways
-{: .text-blue-200 }
-
-### 📚 Theory Foundations
-Master the concepts that power modern technology
-- **[Computer Fundamentals](./fundamentals)** - Basic computing concepts
-- **[Systems Technologies](./systems)** - Hardware and software
-- **[Communication & Internet](./networks)** - Connected world
-- **[Data Management](./data)** - Information systems
-
-### 💻 Programming Skills  
-Build practical coding abilities
-- **[Programming Basics](./programming)** - Start coding in Delphi
-- **[Database Development](./database-dev)** - SQL and data apps
-- **[Problem Solving](./problem-solving)** - Algorithms and logic
-
-### 🎯 Exam Success
-Targeted preparation for success
-- **[Paper 1 Prep](./exam-prep/paper1)** - Practical programming exam
-- **[Paper 2 Prep](./exam-prep/paper2)** - Theory knowledge exam
-- **[PAT Guidance](./projects)** - Practical Assessment Tasks
+**Programming practice?** → Visit [Programming & Development](./programming)
 
 ---
 
-## Grade-Specific Quick Access
+## 📚 Learning Pathways
 
-| Grade 10 | Grade 11 | Grade 12 |
-|-----------|----------|----------|
-| [Computing Basics](./fundamentals/grade10) | [Advanced Programming](./programming/grade11) | [Complex Systems](./systems/hardware/grade12) |
+### Theory Foundations
+Master the concepts that power modern technology:
+
+- **[Computer Fundamentals](./fundamentals)** - Basic computing concepts and data representation
+- **[Systems Technologies](./systems)** - Hardware, software, and system management  
+- **[Communication & Internet](./networks)** - Networks, protocols, and web technologies
+- **[Data Management](./data)** - Database concepts and information systems
+
+### Programming Skills  
+Build practical coding abilities:
+
+- **[Programming & Development](./programming)** - Learn Delphi programming from basics to advanced
+- **[Database Development](./database-dev)** - SQL programming and database applications
+- **[Problem Solving](./problem-solving)** - Algorithms, logic, and computational thinking
+
+### Exam Success
+Targeted preparation for assessments:
+
+- **[Exam Preparation](./exam-prep)** - Paper 1 (Practical) and Paper 2 (Theory) preparation
+- **[Project Guidance](./projects)** - PAT (Practical Assessment Task) support
+- **[Additional Resources](./resources)** - Quick reference, glossary, and practice materials
+
+---
+
+## 🎯 Grade-Specific Quick Access
+
+| **Grade 10** | **Grade 11** | **Grade 12** |
+|---------------|---------------|---------------|
+| [Computing Basics](./fundamentals/grade10) | [Advanced Programming](./programming/grade11) | [Complex Systems](./systems) |
 | [First Programs](./programming/grade10) | [Database Programming](./database-dev/grade11) | [Advanced SQL](./database-dev/grade12) |
-| [Internet Basics](./networks/grade10) | [Network Security](./networks/grade11) | [Emerging Tech](./systems/emerging) |
+| [Internet Basics](./networks/grade10) | [Network Security](./networks/grade11) | [Emerging Technologies](./systems/emerging) |
 
 ---
 
-## Recent Updates
-{: .text-blue-200 }
+## 📖 How to Use This Site
 
-- ✅ New website structure with improved navigation
-- ✅ Blue theme for better readability  
-- ✅ Grade-specific organization
-- 🔄 Content migration in progress
+This resource is designed to work alongside your regular IT classes and Google Classroom:
 
-## Need Help?
-{: .text-blue-200 }
+1. **Browse by topic** using the main navigation menu
+2. **Search for specific content** using your browser's search (Ctrl+F)
+3. **Follow the learning progressions** from Grade 10 → 11 → 12
+4. **Practice with code examples** and work through tutorials
+5. **Prepare for exams** with targeted revision materials
 
-- 💬 Ask questions in [Google Classroom](https://classroom.google.com)
-- 📧 Email your teacher
-- 🔍 Use the search bar above to find specific topics
+---
+
+## 🆕 Recent Updates
+
+- ✅ **New website structure** with improved navigation
+- ✅ **Enhanced mobile experience** for learning on any device
+- ✅ **Grade-specific organization** to reduce confusion
+- 🔄 **Content migration** - adding materials regularly
+
+---
+
+## 💡 Need Help?
+
+- 💬 **Ask questions** in your Google Classroom
+- 📧 **Email your teacher** for specific guidance  
+- 🔍 **Use browser search** (Ctrl+F) to find topics quickly
+- 📚 **Check the glossary** in [Resources](./resources) for definitions
+
+---
+
+**Ready to start learning?** Choose your pathway above and begin your IT journey!
