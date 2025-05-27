@@ -1,0 +1,168 @@
+/* Custom CSS for IT Gateway - save as assets/css/style.scss */
+@import "{{ site.theme }}";
+
+/* Blue color scheme */
+:root {
+  --primary-blue: #2563eb;
+  --light-blue: #dbeafe;
+  --dark-blue: #1e40af;
+  --text-blue: #1e3a8a;
+}
+
+/* Header styling */
+.site-header {
+  background-color: var(--primary-blue);
+  border-bottom: 3px solid var(--dark-blue);
+}
+
+.site-title {
+  color: white !important;
+  font-weight: 700;
+}
+
+.site-nav .page-link {
+  color: white !important;
+}
+
+.site-nav .page-link:hover {
+  color: var(--light-blue) !important;
+}
+
+/* Main content styling */
+.page-content {
+  background-color: #fafafa;
+}
+
+/* Blue headings */
+h1,
+h2,
+h3 {
+  color: var(--text-blue);
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--light-blue);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-blue);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  background: transparent;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-blue);
+  color: white;
+  text-decoration: none;
+}
+
+/* Alert boxes */
+.alert {
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.alert-info {
+  background-color: var(--light-blue);
+  border-left: 4px solid var(--primary-blue);
+  color: var(--text-blue);
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+pre {
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Navigation improvements */
+.site-nav {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background-color: var(--primary-blue);
+  }
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+.site-footer a {
+  color: var(--light-blue);
+}
+
+/* Quick start section */
+.quick-start {
+  background-color: var(--light-blue);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
