@@ -1,75 +1,49 @@
-# EMERGENCY FIX - Replace _config.yml Completely
+# WORKING Just the Docs Configuration for GitHub Pages
+# This is the correct way to use Just the Docs in 2025
 
-## The Problem
-Your `_config.yml` still contains `theme: jekyll-theme-just-the-docs` which GitHub Pages doesn't support.
-
-## IMMEDIATE SOLUTION
-
-### Step 1: Delete Everything in _config.yml
-**Open your `_config.yml` file in VS Code and delete ALL content**
-
-### Step 2: Replace with This EXACT Content
-```yaml
 title: IT Gateway
 description: Comprehensive IT theory and practical resource for Grade 10-12
 
-# Use ONLY themes supported by GitHub Pages
-theme: minima
+# Use remote_theme instead of theme (this is the key!)
+remote_theme: just-the-docs/just-the-docs
 
-# Basic settings
-url: "https://yourusername.github.io"
-baseurl: "/it-gateway"
+# Color scheme
+color_scheme: blue
 
-# Plugins (only GitHub Pages supported ones)
+# Enable search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Navigation
+nav_sort: case_insensitive
+nav_external_links:
+  - title: Google Classroom
+    url: https://classroom.google.com
+    hide_icon: false
+
+# Enable features
+enable_copy_code_button: true
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer
+footer_content: "IT Gateway - Your bridge between theory and practice © 2025"
+
+# Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
-# Navigation
-header_pages:
-  - fundamentals/index.md
-  - systems/index.md
-  - networks/index.md
-  - programming/index.md
-  - exam-prep/index.md
+  - jekyll-seo-tag
 
 # Exclude files
 exclude:
   - README.md
   - "*.py"
-```
-
-### Step 3: Save and Push
-```bash
-git add _config.yml
-git commit -m "Fix theme for GitHub Pages compatibility"
-git push
-```
-
-## Alternative: Use Remote Theme
-If you want better styling, replace the `theme: minima` line with:
-```yaml
-remote_theme: pmarsceill/just-the-docs
-```
-
-## What Was Wrong
-- GitHub Pages only supports these themes by default: minima, slate, leap-day, architect, cayman, dinky, hacker, merlot, midnight, minimal, modernist, tactile, time-machine
-- `jekyll-theme-just-the-docs` is NOT in that list
-- Using `remote_theme` is the workaround for unsupported themes
-
-## Quick Test
-After pushing, wait 2-3 minutes and check:
-`https://yourusername.github.io/it-gateway`
-
-If it still fails, try the `remote_theme` approach instead.
-
-## Nuclear Option (If Nothing Works)
-Create a completely minimal `_config.yml`:
-```yaml
-title: IT Gateway
-description: IT Gateway Website
-```
-
-This will use GitHub's absolute defaults and WILL work.
-
-**The key is removing ANY reference to `jekyll-theme-just-the-docs`!**
+  - .gitignore
