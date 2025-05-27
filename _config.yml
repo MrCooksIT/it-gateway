@@ -1,28 +1,21 @@
-# WORKING Just the Docs Configuration for GitHub Pages
-# This is the correct way to use Just the Docs in 2025
+# Fixed _config.yml - Remove the problematic color_scheme line
 
 title: IT Gateway
 description: Comprehensive IT theory and practical resource for Grade 10-12
 
-# Use remote_theme instead of theme (this is the key!)
+# Use remote theme (this is working)
 remote_theme: just-the-docs/just-the-docs
 
-# Color scheme
-color_scheme: blue
+# Remove this line temporarily - it's causing the CSS error
+# color_scheme: blue
 
 # Enable search
 search_enabled: true
 search:
   heading_level: 2
   previews: 3
-  preview_words_before: 5
-  preview_words_after: 10
-  tokenizer_separator: /[\s/]+/
-  rel_url: true
-  button: false
 
 # Navigation
-nav_sort: case_insensitive
 nav_external_links:
   - title: Google Classroom
     url: https://classroom.google.com
@@ -31,7 +24,6 @@ nav_external_links:
 # Enable features
 enable_copy_code_button: true
 back_to_top: true
-back_to_top_text: "Back to top"
 
 # Footer
 footer_content: "IT Gateway - Your bridge between theory and practice © 2025"
