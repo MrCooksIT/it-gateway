@@ -6,6 +6,9 @@ description: Comprehensive IT theory and practical resource for Grade 10-12
 # Use remote theme (this is working)
 remote_theme: just-the-docs/just-the-docs
 
+sass:
+  sass_dir: assets/css
+  style: compressed
 # Enable search
 search_enabled: true
 search:
