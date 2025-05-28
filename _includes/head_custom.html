@@ -1,21 +1,56 @@
 <style>
+    /* Blue color variables */
+    :root {
+        --primary-blue: #2563eb;
+        --light-blue: #dbeafe;
+        --dark-blue: #1e40af;
+        --text-blue: #1e3a8a;
+    }
+
+    /* Narrow sidebar */
     @media (min-width: 50rem) {
         .side-bar {
-            width: 190px !important;
-            min-width: 190px !important;
+            width: 220px !important;
+            min-width: 220px !important;
         }
 
         .main {
-            margin-left: 190px !important;
+            margin-left: 220px !important;
         }
     }
 
+    /* Compact navigation */
     .nav-list .nav-list-item .nav-list-link {
         font-size: 13px !important;
         padding: 0.3rem 0.75rem !important;
+        color: var(--text-blue) !important;
+    }
+
+    .nav-list .nav-list-item .nav-list-link:hover {
+        background-color: var(--light-blue) !important;
+        color: var(--dark-blue) !important;
     }
 
     .site-title {
         font-size: 16px !important;
+        color: var(--text-blue) !important;
+    }
+
+    /* Blue headings and links */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--text-blue) !important;
+    }
+
+    a {
+        color: var(--primary-blue) !important;
+    }
+
+    a:hover {
+        color: var(--dark-blue) !important;
     }
 </style>
