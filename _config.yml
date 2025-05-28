@@ -1,34 +1,24 @@
-# Fixed _config.yml - Remove the problematic color_scheme line
-
 title: IT Gateway
 description: Comprehensive IT theory and practical resource for Grade 10-12
 
-# Use remote theme (this is working)
+# Use remote theme
 remote_theme: just-the-docs/just-the-docs
 
-sass:
-  sass_dir: assets/css
-  style: compressed
 # Enable search
 search_enabled: true
-search:
-  heading_level: 2
-  previews: 3
 
 # Navigation
 nav_external_links:
   - title: Google Classroom
     url: https://classroom.google.com
-    hide_icon: false
 
 # Enable features
 enable_copy_code_button: true
-back_to_top: true
 
 # Footer
 footer_content: "IT Gateway - Your bridge between theory and practice © 2025"
 
-# Plugins (GitHub Pages compatible)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -38,4 +28,3 @@ plugins:
 exclude:
   - README.md
   - "*.py"
-  - .gitignore
