@@ -1,0 +1,29 @@
+@import "just-the-docs";
+
+/* Optimal sidebar width reduction */
+@media (min-width: 50rem) {
+    .side-bar {
+        width: 190px !important;
+        min-width: 190px !important;
+    }
+
+    .main {
+        margin-left: 190px !important;
+    }
+}
+
+/* Compact navigation styling */
+.nav-list .nav-list-item .nav-list-link {
+    font-size: 13px !important;
+    padding: 0.3rem 0.75rem !important;
+    line-height: 1.3;
+}
+
+.nav-list .nav-list-item {
+    margin: 0 !important;
+}
+
+.site-title {
+    font-size: 16px !important;
+    padding: 0.75rem !important;
+}
