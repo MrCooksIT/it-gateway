@@ -28,3 +28,14 @@ plugins:
 exclude:
   - README.md
   - "*.py"
+
+# Custom sidebar sizing
+head_custom: |
+  <style>
+    @media (min-width: 50rem) {
+      .side-bar { width: 190px !important; min-width: 190px !important; }
+      .main { margin-left: 190px !important; }
+    }
+    .nav-list .nav-list-item .nav-list-link { font-size: 13px !important; padding: 0.3rem 0.75rem !important; }
+    .site-title { font-size: 16px !important; }
+  </style>
