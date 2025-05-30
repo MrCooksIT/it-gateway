@@ -9,168 +9,136 @@
   --text-blue: #1e3a8a;
 }
 
-/* MOBILE FIRST - Start with mobile styles */
+/* FORCE SIDEBAR TO BE FULLY VISIBLE */
 .side-bar {
   position: fixed !important;
-  left: -100% !important;
+  left: 0 !important;
   top: 0 !important;
   bottom: 0 !important;
   width: 280px !important;
-  z-index: 100 !important;
-  transition: left 0.3s ease !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+  z-index: 1000 !important;
+  overflow-x: visible !important;
+  overflow-y: auto !important;
+  background-color: #f8f9fa !important;
+  border-right: 1px solid #e1e4e8 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.side-bar.nav-open {
-  left: 0 !important;
-}
-
+/* Ensure main content doesn't overlap sidebar */
 .main {
+  margin-left: 280px !important;
+  width: calc(100% - 280px) !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Fix site header positioning */
+.site-header {
+  margin-left: 280px !important;
+  width: calc(100% - 280px) !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.main-content-wrap {
+  max-width: none !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
   margin-left: 0 !important;
+}
+
+/* ENSURE NAVIGATION TEXT IS VISIBLE */
+.nav-list {
+  padding: 0 !important;
+  margin: 0 !important;
   width: 100% !important;
 }
 
-.site-header {
-  padding-left: 0 !important;
+.nav-list .nav-list-item {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* TABLET AND UP - Where sidebar should be visible */
-@media screen and (min-width: 800px) {
-  .side-bar {
-    position: fixed !important;
-    left: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: 220px !important;
-    min-width: 220px !important;
-    max-width: 220px !important;
-    z-index: 10 !important;
-    overflow-y: auto !important;
-    transform: none !important;
-    margin-left: 0 !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transition: none !important;
-  }
-
-  .main {
-    margin-left: 220px !important;
-    width: calc(100% - 220px) !important;
-    max-width: none !important;
-    position: relative !important;
-    z-index: 1 !important;
-  }
-
-  .site-header {
-    padding-left: 220px !important;
-    position: relative !important;
-    z-index: 5 !important;
-  }
-
-  .main-content-wrap {
-    max-width: none !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-    margin-left: 0 !important;
-  }
-}
-
-/* MEDIUM SCREENS - Slightly narrower sidebar */
-@media screen and (min-width: 800px) and (max-width: 1200px) {
-  .side-bar {
-    width: 200px !important;
-    min-width: 200px !important;
-    max-width: 200px !important;
-  }
-
-  .main {
-    margin-left: 200px !important;
-    width: calc(100% - 200px) !important;
-  }
-
-  .site-header {
-    padding-left: 200px !important;
-  }
-}
-
-/* LARGE SCREENS - Your 24" monitor */
-@media screen and (min-width: 1400px) {
-  .side-bar {
-    width: 240px !important;
-    min-width: 240px !important;
-    max-width: 240px !important;
-  }
-
-  .main {
-    margin-left: 240px !important;
-    width: calc(100% - 240px) !important;
-  }
-
-  .site-header {
-    padding-left: 240px !important;
-  }
-
-  .main-content-wrap {
-    max-width: 70rem !important;
-  }
-}
-
-/* Override any conflicting Just the Docs styles */
-@media screen and (min-width: 800px) {
-  .site-nav,
-  .main-nav {
-    display: block !important;
-  }
-
-  /* Force sidebar to stay put */
-  .side-bar {
-    position: fixed !important;
-    left: 0 !important;
-    transform: translateX(0) !important;
-  }
-}
-
-/* Compact navigation styling */
 .nav-list .nav-list-item .nav-list-link {
-  font-size: 13px !important;
-  padding: 0.35rem 0.75rem !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 0.5rem 1rem !important;
+  font-size: 14px !important;
   color: var(--text-blue) !important;
-  line-height: 1.3 !important;
-  border-radius: 4px !important;
-  margin: 1px 4px !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
 }
 
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link:focus {
   background-color: var(--light-blue) !important;
   color: var(--dark-blue) !important;
-  text-decoration: none !important;
 }
 
 /* Active navigation item */
 .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
   background-color: var(--primary-blue) !important;
   color: white !important;
+  font-weight: 600 !important;
 }
 
-/* Site title styling */
+/* Site title - make sure it's fully visible */
 .site-title {
-  font-size: 16px !important;
-  font-weight: 600 !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 1rem !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
   color: var(--text-blue) !important;
-  padding: 0.75rem !important;
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--light-blue) !important;
   margin-bottom: 0.5rem !important;
-  border-bottom: 1px solid var(--light-blue) !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  overflow: visible !important;
 }
 
 /* Navigation section headers */
 .nav-list .nav-list-item .nav-list-expander {
   color: var(--text-blue) !important;
+  display: inline-block !important;
+  width: auto !important;
 }
 
 .nav-list .nav-list-item > .nav-list-link {
   font-weight: 600 !important;
   color: var(--dark-blue) !important;
+  background-color: rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Make sure search is visible if it exists */
+.search {
+  width: 100% !important;
+  padding: 1rem !important;
+  box-sizing: border-box !important;
+}
+
+.search-input {
+  width: 100% !important;
+  padding: 0.5rem !important;
+  border: 1px solid var(--primary-blue) !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
 }
 
 /* Blue headings and links throughout site */
@@ -190,7 +158,6 @@ a {
 a:hover,
 a:focus {
   color: var(--dark-blue) !important;
-  text-decoration: underline !important;
 }
 
 /* Button styling */
@@ -206,29 +173,30 @@ a:focus {
   border-color: var(--dark-blue) !important;
 }
 
-.btn-outline {
-  border-color: var(--primary-blue) !important;
-  color: var(--primary-blue) !important;
+/* Mobile - hide sidebar completely */
+@media (max-width: 768px) {
+  .side-bar {
+    left: -100% !important;
+    transition: left 0.3s ease !important;
+  }
+
+  .side-bar.nav-open {
+    left: 0 !important;
+  }
+
+  .main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .site-header {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
 }
 
-.btn-outline:hover,
-.btn-outline:focus {
-  background-color: var(--primary-blue) !important;
-  color: white !important;
-}
-
-/* Search styling */
-.search-input {
-  border-color: var(--primary-blue) !important;
-}
-
-.search-input:focus {
-  border-color: var(--dark-blue) !important;
-  box-shadow: 0 0 0 2px var(--light-blue) !important;
-}
-
-/* Debug helper - temporary red border to see sidebar bounds */
+/* Debug - temporary background to see sidebar bounds */
 .side-bar {
-  border-right: 2px solid red !important;
-  background-color: rgba(255, 255, 255, 0.95) !important;
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1) !important;
 }
