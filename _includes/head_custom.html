@@ -1,5 +1,11 @@
 <style>
-  /* Just adjust sidebar width - keep everything else default */
+  /* Hide the redundant IT Gateway menu item - only if it links to homepage */
+  .nav-list-item:has(> .nav-list-link[href="/"]),
+  .nav-list-item:has(> .nav-list-link[href="/it-gateway/"]) {
+    display: none !important;
+  }
+
+  /* Adjust sidebar width */
   @media (min-width: 50rem) {
     .side-bar {
       width: 280px !important;
