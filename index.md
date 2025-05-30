@@ -1,10 +1,10 @@
-```
-   ---
-   layout: home
-   title: IT Gateway
-   permalink: /
-   ---
-```
+---
+
+layout: home
+title: IT Gateway
+permalink: /
+
+---
 
 # IT Gateway
 
@@ -16,7 +16,7 @@ Welcome to your complete resource for Grade 10-12 Information Technology. This s
 
 ## 🚀 Quick Start
 
-**New to IT?** → Start with [Computer Fundamentals](./fundamentals)
+**Start from fresh?** → Start with [Computer Fundamentals](./fundamentals)
 
 **Need exam help?** → Jump to [Exam Preparation](./exam-prep)
 
