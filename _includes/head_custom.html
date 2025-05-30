@@ -5,98 +5,173 @@
     --light-blue: #dbeafe;
     --dark-blue: #1e40af;
     --text-blue: #1e3a8a;
+    --sidebar-bg: #f8fafc;
   }
 
-  /* FIXED SIDEBAR - Make it wider and ensure text is visible */
+  /* MUCH BETTER SIDEBAR */
   @media (min-width: 50rem) {
     .side-bar {
-      width: 280px !important;
-      min-width: 280px !important;
+      width: 320px !important;
+      min-width: 320px !important;
       position: fixed !important;
       left: 0 !important;
       top: 0 !important;
       bottom: 0 !important;
       z-index: 100 !important;
-      background: #f8f9fa !important;
-      border-right: 2px solid var(--primary-blue) !important;
+      background: var(--sidebar-bg) !important;
+      border-right: 1px solid #e2e8f0 !important;
       overflow-y: auto !important;
       overflow-x: visible !important;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1) !important;
     }
 
     .main {
-      margin-left: 280px !important;
-      width: calc(100% - 280px) !important;
+      margin-left: 320px !important;
+      width: calc(100% - 320px) !important;
     }
 
     .site-header {
-      margin-left: 280px !important;
-      width: calc(100% - 280px) !important;
+      margin-left: 320px !important;
+      width: calc(100% - 320px) !important;
     }
   }
 
-  /* ENSURE NAVIGATION TEXT IS FULLY VISIBLE */
-  .nav-list .nav-list-item .nav-list-link {
-    display: block !important;
-    width: 100% !important;
-    padding: 0.5rem 1rem !important;
-    font-size: 14px !important;
-    color: var(--text-blue) !important;
-    text-decoration: none !important;
-    box-sizing: border-box !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow: visible !important;
-    line-height: 1.4 !important;
-  }
-
-  .nav-list .nav-list-item .nav-list-link:hover {
-    background-color: var(--light-blue) !important;
-    color: var(--dark-blue) !important;
-  }
-
-  /* Make sure site title is visible */
+  /* BEAUTIFUL SITE TITLE */
   .site-title {
     display: block !important;
     width: 100% !important;
-    padding: 1rem !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    color: var(--text-blue) !important;
-    border-bottom: 2px solid var(--light-blue) !important;
+    padding: 1.5rem 1.25rem !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: var(--primary-blue) !important;
+    background: white !important;
+    border: none !important;
+    border-bottom: 3px solid var(--primary-blue) !important;
     text-decoration: none !important;
     box-sizing: border-box !important;
+    margin-bottom: 1rem !important;
   }
 
-  /* Navigation sections should be clear */
-  .nav-list .nav-list-item > .nav-list-link {
-    font-weight: 600 !important;
+  .site-title:hover {
     color: var(--dark-blue) !important;
-    background-color: rgba(37, 99, 235, 0.1) !important;
+    background: #fafbfc !important;
   }
 
-  /* Active page highlighting */
-  .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
-    background-color: var(--primary-blue) !important;
-    color: white !important;
-    font-weight: 600 !important;
+  /* SPACIOUS NAVIGATION */
+  .nav-list {
+    padding: 0 0.75rem !important;
+    margin: 0 !important;
   }
 
-  /* Make sure search box fits if present */
-  .search {
+  .nav-list .nav-list-item {
+    margin: 0 0 0.25rem 0 !important;
+  }
+
+  .nav-list .nav-list-item .nav-list-link {
+    display: block !important;
     width: 100% !important;
-    padding: 0.75rem !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 15px !important;
+    color: #475569 !important;
+    text-decoration: none !important;
     box-sizing: border-box !important;
+    border-radius: 8px !important;
+    background: white !important;
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.2s ease !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+  }
+
+  .nav-list .nav-list-item .nav-list-link:hover {
+    background: var(--light-blue) !important;
+    color: var(--dark-blue) !important;
+    border-color: var(--primary-blue) !important;
+    transform: translateX(2px) !important;
+  }
+
+  /* MAIN SECTION HEADERS */
+  .nav-list .nav-list-item > .nav-list-link {
+    font-weight: 700 !important;
+    color: var(--primary-blue) !important;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+    border-color: var(--primary-blue) !important;
+    font-size: 16px !important;
+  }
+
+  .nav-list .nav-list-item > .nav-list-link:hover {
+    background: linear-gradient(
+      135deg,
+      var(--light-blue) 0%,
+      #bfdbfe 100%
+    ) !important;
+    color: var(--dark-blue) !important;
+  }
+
+  /* ACTIVE PAGE HIGHLIGHT */
+  .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
+    background: var(--primary-blue) !important;
+    color: white !important;
+    border-color: var(--dark-blue) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.3) !important;
+  }
+
+  /* BEAUTIFUL SEARCH BOX */
+  .search {
+    padding: 1rem 1.25rem !important;
+    background: white !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    margin-bottom: 1rem !important;
   }
 
   .search-input {
     width: 100% !important;
-    padding: 0.5rem !important;
-    border: 1px solid var(--primary-blue) !important;
-    border-radius: 4px !important;
-    box-sizing: border-box !important;
+    padding: 0.75rem 1rem !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    background: #f8fafc !important;
+    transition: all 0.2s ease !important;
   }
 
-  /* Blue headings and links throughout site */
+  .search-input:focus {
+    border-color: var(--primary-blue) !important;
+    background: white !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  }
+
+  /* CONTENT AREA IMPROVEMENTS */
+  .main-content-wrap {
+    padding: 2rem 3rem !important;
+    max-width: none !important;
+  }
+
+  /* MOBILE - Clean mobile experience */
+  @media (max-width: 49.99rem) {
+    .side-bar {
+      left: -100% !important;
+      width: 280px !important;
+      transition: left 0.3s ease !important;
+    }
+
+    .side-bar.nav-open {
+      left: 0 !important;
+    }
+
+    .main,
+    .site-header {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+
+    .main-content-wrap {
+      padding: 1rem 1.5rem !important;
+    }
+  }
+
+  /* KEEP YOUR BLUE THEME */
   h1,
   h2,
   h3,
@@ -114,27 +189,12 @@
     color: var(--dark-blue) !important;
   }
 
-  /* Button styling */
   .btn-primary {
     background-color: var(--primary-blue) !important;
     border-color: var(--primary-blue) !important;
-    color: white !important;
   }
 
   .btn-primary:hover {
     background-color: var(--dark-blue) !important;
-    border-color: var(--dark-blue) !important;
-  }
-
-  /* Mobile - hide sidebar */
-  @media (max-width: 49.99rem) {
-    .side-bar {
-      left: -100% !important;
-    }
-    .main,
-    .site-header {
-      margin-left: 0 !important;
-      width: 100% !important;
-    }
   }
 </style>
