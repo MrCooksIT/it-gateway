@@ -1,7 +1,7 @@
 ---
 ---
-/* Import Just the Docs theme */
-@import "{{ site.theme }}";
+/* Import Just the Docs theme - use direct name instead of variable */
+@import "just-the-docs";
 
 /* Blue color variables */
 :root {
