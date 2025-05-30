@@ -1,7 +1,7 @@
 ---
 ---
-/* Import Just the Docs theme - use direct name instead of variable */
-@import "just-the-docs";
+/* Import Just the Docs theme styles */
+@import "just-the-docs/just-the-docs";
 
 /* Blue color variables */
 :root {
@@ -82,18 +82,6 @@
     .main {
         margin-left: 0 !important;
         width: 100% !important;
-    }
-
-    /* Overlay when mobile menu is open */
-    .nav-open::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 99;
     }
 }
 
