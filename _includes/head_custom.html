@@ -1,10 +1,4 @@
 <style>
-  /* Hide the redundant IT Gateway menu item - only if it links to homepage */
-  .nav-list-item:has(> .nav-list-link[href="/"]),
-  .nav-list-item:has(> .nav-list-link[href="/it-gateway/"]) {
-    display: none !important;
-  }
-
   /* Adjust sidebar width */
   @media (min-width: 50rem) {
     .side-bar {
@@ -19,5 +13,18 @@
     .site-header {
       margin-left: 280px !important;
     }
+  }
+
+  /* Hide IT Gateway navigation item that appears before external links */
+  /* This targets the last internal navigation item before external links */
+  .nav-list > .nav-list-item:has(> .nav-list-link[href="/"]):last-of-type,
+  .nav-list
+    > .nav-list-item:has(> .nav-list-link:contains("IT Gateway")):last-of-type {
+    display: none !important;
+  }
+
+  /* Alternative: Hide based on position - if it's item #13 (after your 12 items) */
+  .nav-list > .nav-list-item:nth-child(13):has(> .nav-list-link[href="/"]) {
+    display: none !important;
   }
 </style>
