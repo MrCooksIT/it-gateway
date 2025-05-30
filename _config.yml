@@ -28,3 +28,4 @@ plugins:
 exclude:
   - README.md
   - "*.py"
+  - head_custom.html
