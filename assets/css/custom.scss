@@ -1,196 +1,218 @@
 ---
 ---
-
 /* Blue color variables */
 :root {
-  --primary-blue: #2563eb;
-  --light-blue: #dbeafe;
-  --dark-blue: #1e40af;
-  --text-blue: #1e3a8a;
+    --primary-blue: #2563eb;
+    --light-blue: #dbeafe;
+    --dark-blue: #1e40af;
+    --text-blue: #1e3a8a;
 }
 
-/* Responsive sidebar - ensure it stays on screen */
+/* AGGRESSIVE SIDEBAR FIX - Override all positioning */
 @media (min-width: 50rem) {
-  .side-bar {
-    width: min(220px, 25vw) !important;
-    min-width: 180px !important;
-    max-width: 280px !important;
-    position: fixed !important;
-    left: 0 !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    overflow-y: auto !important;
-  }
+    .side-bar {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 220px !important;
+        min-width: 220px !important;
+        max-width: 220px !important;
+        z-index: 10 !important;
+        overflow-y: auto !important;
+        transform: none !important;
+        margin-left: 0 !important;
+        /* Force visibility */
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 
-  .main {
-    margin-left: min(220px, 25vw) !important;
-    width: calc(100% - min(220px, 25vw)) !important;
-    max-width: none !important;
-  }
+    .main {
+        margin-left: 220px !important;
+        width: calc(100% - 220px) !important;
+        max-width: none !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
 
-  .main-content-wrap {
-    max-width: none !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
+    .main-content-wrap {
+        max-width: none !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin-left: 0 !important;
+    }
+
+    /* Force the site header/nav to work with fixed sidebar */
+    .site-header {
+        padding-left: 220px !important;
+        position: relative !important;
+        z-index: 5 !important;
+    }
 }
 
-/* Medium screens - slightly narrower sidebar */
-@media (min-width: 50rem) and (max-width: 66.5rem) {
-  .side-bar {
-    width: min(200px, 22vw) !important;
-    min-width: 160px !important;
-  }
+/* Smaller screens - make sidebar narrower but still visible */
+@media (min-width: 50rem) and (max-width: 75rem) {
+    .side-bar {
+        width: 200px !important;
+        min-width: 200px !important;
+        max-width: 200px !important;
+    }
 
-  .main {
-    margin-left: min(200px, 22vw) !important;
-    width: calc(100% - min(200px, 22vw)) !important;
-  }
+    .main {
+        margin-left: 200px !important;
+        width: calc(100% - 200px) !important;
+    }
+
+    .site-header {
+        padding-left: 200px !important;
+    }
 }
 
-/* Small desktop screens - even narrower */
-@media (min-width: 50rem) and (max-width: 56rem) {
-  .side-bar {
-    width: min(180px, 20vw) !important;
-    min-width: 150px !important;
-  }
+/* Very small desktop screens */
+@media (min-width: 50rem) and (max-width: 60rem) {
+    .side-bar {
+        width: 180px !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+    }
 
-  .main {
-    margin-left: min(180px, 20vw) !important;
-    width: calc(100% - min(180px, 20vw)) !important;
-  }
+    .main {
+        margin-left: 180px !important;
+        width: calc(100% - 180px) !important;
+    }
+
+    .site-header {
+        padding-left: 180px !important;
+    }
 }
 
-/* Mobile - ensure sidebar is hidden by default and slides in when needed */
+/* Mobile - hide sidebar completely */
 @media (max-width: 49.99rem) {
-  .side-bar {
-    position: fixed !important;
-    left: -100% !important;
-    top: 0 !important;
-    bottom: 0 !important;
-    width: min(280px, 80vw) !important;
-    z-index: 100 !important;
-    transition: left 0.3s ease !important;
-  }
+    .side-bar {
+        position: fixed !important;
+        left: -100% !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 280px !important;
+        z-index: 100 !important;
+        transition: left 0.3s ease !important;
+    }
 
-  .side-bar.nav-open {
-    left: 0 !important;
-  }
+    .side-bar.nav-open {
+        left: 0 !important;
+    }
 
-  .main {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
+    .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .site-header {
+        padding-left: 0 !important;
+    }
 }
 
 /* Compact navigation styling */
 .nav-list .nav-list-item .nav-list-link {
-  font-size: 13px !important;
-  padding: 0.35rem 0.75rem !important;
-  color: var(--text-blue) !important;
-  line-height: 1.3 !important;
-  border-radius: 4px !important;
-  margin: 1px 4px !important;
+    font-size: 13px !important;
+    padding: 0.35rem 0.75rem !important;
+    color: var(--text-blue) !important;
+    line-height: 1.3 !important;
+    border-radius: 4px !important;
+    margin: 1px 4px !important;
 }
 
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item .nav-list-link:focus {
-  background-color: var(--light-blue) !important;
-  color: var(--dark-blue) !important;
-  text-decoration: none !important;
+    background-color: var(--light-blue) !important;
+    color: var(--dark-blue) !important;
+    text-decoration: none !important;
 }
 
 /* Active navigation item */
 .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
-  background-color: var(--primary-blue) !important;
-  color: white !important;
+    background-color: var(--primary-blue) !important;
+    color: white !important;
 }
 
 /* Site title styling */
 .site-title {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  color: var(--text-blue) !important;
-  padding: 0.75rem !important;
-  margin-bottom: 0.5rem !important;
-  border-bottom: 1px solid var(--light-blue) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--text-blue) !important;
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    border-bottom: 1px solid var(--light-blue) !important;
 }
 
 /* Navigation section headers */
 .nav-list .nav-list-item .nav-list-expander {
-  color: var(--text-blue) !important;
+    color: var(--text-blue) !important;
 }
 
 .nav-list .nav-list-item > .nav-list-link {
-  font-weight: 600 !important;
-  color: var(--dark-blue) !important;
+    font-weight: 600 !important;
+    color: var(--dark-blue) !important;
 }
 
 /* Blue headings and links throughout site */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-blue) !important;
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-blue) !important;
 }
 
 a {
-  color: var(--primary-blue) !important;
+    color: var(--primary-blue) !important;
 }
 
-a:hover,
-a:focus {
-  color: var(--dark-blue) !important;
-  text-decoration: underline !important;
+a:hover, a:focus {
+    color: var(--dark-blue) !important;
+    text-decoration: underline !important;
 }
 
 /* Button styling */
 .btn-primary {
-  background-color: var(--primary-blue) !important;
-  border-color: var(--primary-blue) !important;
-  color: white !important;
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: white !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: var(--dark-blue) !important;
-  border-color: var(--dark-blue) !important;
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
 }
 
 .btn-outline {
-  border-color: var(--primary-blue) !important;
-  color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--primary-blue) !important;
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
-  background-color: var(--primary-blue) !important;
-  color: white !important;
+    background-color: var(--primary-blue) !important;
+    color: white !important;
 }
 
 /* Search styling */
 .search-input {
-  border-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
 }
 
 .search-input:focus {
-  border-color: var(--dark-blue) !important;
-  box-shadow: 0 0 0 2px var(--light-blue) !important;
+    border-color: var(--dark-blue) !important;
+    box-shadow: 0 0 0 2px var(--light-blue) !important;
 }
 
 /* Ensure content doesn't get too wide on large screens */
 @media (min-width: 88rem) {
-  .main-content-wrap {
-    max-width: 65rem !important;
-  }
+    .main-content-wrap {
+        max-width: 65rem !important;
+    }
 }
 
-/* Fix for very small screens */
-@media (max-width: 31.25rem) {
-  .main-content-wrap {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+/* Debug helper - temporary red border to see sidebar bounds */
+.side-bar {
+    border-right: 2px solid red !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
 }
