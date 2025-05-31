@@ -1,54 +1,16 @@
-// Override Just the Docs variables and styles
+// Custom overrides for Just the Docs theme
 
-// Content width
-.main {
-  @include mq(md) {
-    max-width: 100%;
-  }
-}
-
-.main-content {
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  padding: 2rem !important;
-
-  // Code blocks
-  pre {
-    font-size: 18px !important;
-    overflow-x: auto !important;
-    max-width: 100% !important;
-  }
-
-  // Inline code
-  code {
-    font-size: 16px !important;
-  }
-
-  // Headers
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #1e3a8a !important;
-  }
-
-  // Links
-  a {
-    color: #2563eb !important;
-
-    &:hover {
-      color: #1e40af !important;
-    }
-  }
-}
-
-// Navigation
+// Adjust sidebar width (keeping your preference)
 .side-bar {
   @include mq(md) {
     width: 280px !important;
     min-width: 280px !important;
+  }
+}
+
+.main {
+  @include mq(md) {
+    margin-left: 280px !important;
   }
 }
 
@@ -58,24 +20,55 @@
   }
 }
 
-// Hide duplicate home links
+// Content width and padding adjustments
+.main-content {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 3rem 4rem !important; // Increased padding for better spacing
+
+  @include mq(md) {
+    padding: 3rem 5rem !important; // Even more padding on larger screens
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem !important; // Less padding on mobile
+  }
+
+  // Code blocks - better sizing and spacing
+  pre {
+    font-size: 18px !important;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+    margin: 1.5rem 0 !important; // Add vertical spacing
+  }
+
+  // Code blocks can extend slightly beyond text
+  .highlighter-rouge {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+
+    pre {
+      padding: 1.5rem !important;
+      border-radius: 6px !important;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: -0.5rem !important;
+      margin-right: -0.5rem !important;
+    }
+  }
+
+  // Inline code
+  code {
+    font-size: 16px !important;
+  }
+}
+
+// Hide duplicate IT Gateway navigation links
 a.nav-list-link[href="/it-gateway/"],
 a.nav-list-link[href="/IT Gateway/"] {
   display: none !important;
 }
 
-// Make it more like a normal website
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif !important;
-}
-
-// Remove Just the Docs specific styling
-.main-header {
-  display: none; // Removes the built-in search if you want
-}
-
-// Or if you want to keep search but style it differently
-.search {
-  margin-bottom: 2rem;
-}
+// Keep original Just the Docs colors and styling
+// Only override specific elements as needed
