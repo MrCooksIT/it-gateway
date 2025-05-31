@@ -4,7 +4,6 @@ description: Comprehensive IT theory and practical resource for Grade 10-12
 # Use remote theme
 remote_theme: just-the-docs/just-the-docs@v0.4.0
 # Built-in theme options
-color_scheme: Dark
 search_enabled: true
 heading_anchors: true
 
