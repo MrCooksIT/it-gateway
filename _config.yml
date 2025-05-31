@@ -2,7 +2,7 @@ title: IT Gateway
 description: Comprehensive IT theory and practical resource for Grade 10-12
 
 # Use remote theme
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: just-the-docs/just-the-docs@v0.4.0
 # Built-in theme options
 color_scheme: light
 search_enabled: true
