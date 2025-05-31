@@ -29,6 +29,7 @@
   a.nav-list-link[href="/it-gateway/"] + * {
     display: none !important;
   }
+
   /* Hide the IT Gateway home link that appears before external links */
   .nav-list-item:has(> a.nav-list-link[href="/IT Gateway/"]) {
     display: none !important;
@@ -59,8 +60,38 @@
     line-height: 1.5 !important;
   }
 
-  /* Optional: Make code blocks use full width */
-  .main-content pre {
-    max-width: 100%;
+  /* FIX WIDE CODE BLOCKS - More specific selectors for Just the Docs theme */
+  .main .main-content {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Target the specific div structure used by Just the Docs */
+  .main .main-content .highlighter-rouge {
+    margin: 1.5rem 0 !important;
+  }
+
+  /* The actual pre element inside */
+  .main .main-content .highlighter-rouge pre.highlight {
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* For inline code */
+  .main .main-content p code,
+  .main .main-content li code {
+    font-size: 16px !important;
+    padding: 0.2em 0.4em !important;
+  }
+
+  /* Ensure proper scrolling on mobile */
+  @media (max-width: 768px) {
+    .main .main-content {
+      padding: 1rem !important;
+    }
+
+    .main .main-content .highlighter-rouge pre.highlight {
+      font-size: 16px !important;
+    }
   }
 </style>
