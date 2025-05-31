@@ -8,7 +8,6 @@ nav_order: 1
 
 # Grade 12 Mid-Year Paper 1 Study Guide
 
-{: .text-blue-200 }
 
 Complete preparation guide for the Grade 12 practical programming mid-year exam
 {: .fs-6 .fw-300 }
