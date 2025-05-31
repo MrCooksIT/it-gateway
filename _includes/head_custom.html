@@ -1,30 +1,57 @@
 <style>
-  /* Narrow sidebar */
+  /* Adjust sidebar width */
   @media (min-width: 50rem) {
     .side-bar {
-      width: 220px !important;
-      min-width: 220px !important;
+      width: 280px !important;
+      min-width: 280px !important;
     }
 
     .main {
-      margin-left: 220px !important;
+      margin-left: 280px !important;
+    }
+
+    .site-header {
+      margin-left: 280px !important;
     }
   }
 
-  /* Compact navigation */
-  .nav-list .nav-list-item .nav-list-link {
-    font-size: 13px !important;
-    padding: 0.3rem 0.75rem !important;
+  /* Hide the IT Gateway home link that appears before external links */
+  .nav-list-item:has(> a.nav-list-link[href="/it-gateway/"]) {
+    display: none !important;
+  }
+
+  /* Alternative if :has() doesn't work in some browsers */
+  a.nav-list-link[href="/it-gateway/"] {
+    display: none !important;
+  }
+
+  /* Also hide its parent li element */
+  a.nav-list-link[href="/it-gateway/"] + * {
+    display: none !important;
+  }
+  /* Hide the IT Gateway home link that appears before external links */
+  .nav-list-item:has(> a.nav-list-link[href="/IT Gateway/"]) {
+    display: none !important;
+  }
+
+  /* Alternative if :has() doesn't work in some browsers */
+  a.nav-list-link[href="/IT Gateway/"] {
+    display: none !important;
+  }
+
+  /* Also hide its parent li element */
+  a.nav-list-link[href="/IT Gateway/"] + * {
+    display: none !important;
   }
 
   /* INCREASED CODE FONT SIZE */
   pre.highlight {
-    font-size: 16px !important; /* Increased from ~14px default */
+    font-size: 18px !important; /* Increased from ~14px default */
   }
 
   /* Increase inline code font size */
   code {
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
 
   /* Better line spacing for readability */
@@ -32,31 +59,8 @@
     line-height: 1.5 !important;
   }
 
-  /* OPTIMIZED CODE BLOCK WIDTH */
-  /* Keep text content at readable width */
-  .main-content {
-    max-width: 900px !important; /* Good reading width */
-    margin: 0 auto !important;
-    padding: 2rem 2rem !important;
-  }
-
-  /* Make code blocks slightly wider than text */
+  /* Optional: Make code blocks use full width */
   .main-content pre {
-    margin-left: -2rem !important;
-    margin-right: -2rem !important;
-    padding: 1.5rem 2rem !important;
-    max-width: calc(100% + 4rem) !important;
-    overflow-x: auto !important; /* Horizontal scroll for long lines */
-    border-radius: 8px;
-  }
-
-  /* On smaller screens, don't extend code blocks */
-  @media (max-width: 768px) {
-    .main-content pre {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-      padding: 1rem !important;
-      max-width: 100% !important;
-    }
+    max-width: 100%;
   }
 </style>
