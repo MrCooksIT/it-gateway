@@ -19,21 +19,21 @@ Complete preparation guide for the Grade 12 practical programming mid-year exam
 
 | Section       | Topic                       | Marks   |
 | ------------- | --------------------------- | ------- |
-| **Section A** | General Programming Skills  | 38      |
-| **Section B** | Database & SQL              | 40      |
-| **Section C** | Object-Oriented Programming | 42      |
-| **Section D** | Problem-Solving Programming | 30      |
+| **Section A** | General Programming Skills  | ~40     |
+| **Section B** | Database & SQL              | ~40     |
+| **Section C** | Object-Oriented Programming | ~40     |
+| **Section D** | Problem-Solving Programming | ~30     |
 | **Total**     |                             | **150** |
 
 ---
 
-## Section A: General Programming Skills (38 marks)
+## Section A: General Programming Skills
 
 ### 1. GUI Component Properties
 
 Setting visual properties of interface components programmatically:
 
-```delphi
+```pascal
 // Example: Formatting a panel
 pnlExample.Height := 100;
 pnlExample.Width := 500;
@@ -48,7 +48,7 @@ Remember to access properties using the dot notation: `ComponentName.PropertyNam
 
 Common math functions you should know:
 
-```delphi
+```pascal
 // Floor function - rounds down to nearest integer
 edtFloor.Text := IntToStr(Floor(5.7));  // Result: 5
 
@@ -67,7 +67,7 @@ edtPower.Text := FloatToStrF(Power(2, 3), ffFixed, 15, 2);  // Result: 8.00
 
 Making decisions based on user input:
 
-```delphi
+```pascal
 // Example: Age and checkbox validation
 if (spnAge.Value >= 18) and (chkLicense.Checked) then
   ShowMessage('You can apply now!')
@@ -83,7 +83,7 @@ if (condition1) and (condition2) or (condition3) then
 
 Displaying information to users:
 
-```delphi
+```pascal
 // Simple message
 ShowMessage('Success message');
 
@@ -98,7 +98,7 @@ ShowMessage('Line 1' + #13 + 'Line 2');
 
 Creating patterns using nested loops:
 
-```delphi
+```pascal
 // Example: Star triangle pattern
 for i := 1 to rows do
 begin
@@ -118,7 +118,7 @@ end;
 
 Reading and displaying file contents:
 
-```delphi
+```pascal
 // Reading a text file
 var
   txtFile: TextFile;
@@ -139,7 +139,7 @@ end;
 
 ---
 
-## Section B: Database & SQL (40 marks)
+## Section B: Database & SQL
 
 ### 1. SQL Query Fundamentals
 
@@ -202,7 +202,7 @@ WHERE p.ProductID = s.ProductID
 
 Working with database tables in code:
 
-```delphi
+```pascal
 // Loop through all records
 tblExample.First;
 while not tblExample.EOF do
@@ -228,7 +228,7 @@ tblExample.Next;     // Go to next record
 
 ### Class Structure Template
 
-```delphi
+```pascal
 type
   TExampleClass = class
   private
@@ -253,7 +253,7 @@ type
 
 ### Constructor Implementation
 
-```delphi
+```pascal
 constructor TExampleClass.Create(param1: string; param2: real);
 begin
   fAttribute1 := param1;
@@ -263,7 +263,7 @@ end;
 
 ### Getter Methods
 
-```delphi
+```pascal
 function TExampleClass.getAttribute1: string;
 begin
   Result := fAttribute1;
@@ -277,7 +277,7 @@ end;
 
 ### Setter/Mutator Methods
 
-```delphi
+```pascal
 procedure TExampleClass.setAttribute1(value: string);
 begin
   fAttribute1 := value;
@@ -292,7 +292,7 @@ end;
 
 ### Calculation Methods
 
-```delphi
+```pascal
 function TExampleClass.calculateSomething: real;
 begin
   Result := fAttribute2 / 10.5;  // Example calculation
@@ -301,7 +301,7 @@ end;
 
 ### Conditional Methods with Parameters
 
-```delphi
+```pascal
 function TExampleClass.getCategory(level: integer): integer;
 begin
   case level of
@@ -317,7 +317,7 @@ end;
 
 ### toString Method
 
-```delphi
+```pascal
 function TExampleClass.toString: string;
 begin
   Result := 'Name: ' + fAttribute1 + #13 +
@@ -328,7 +328,7 @@ end;
 
 ### Using Objects in Main Program
 
-```delphi
+```pascal
 var
   objExample: TExampleClass;
 begin
@@ -360,7 +360,7 @@ end;
 
 Showing array contents in formatted columns:
 
-```delphi
+```pascal
 // Display with tab alignment
 for i := 1 to arraySize do
 begin
@@ -379,7 +379,7 @@ end;
 
 Calculating averages and totals:
 
-```delphi
+```pascal
 // Calculate average
 total := 0;
 for i := 1 to arraySize do
@@ -393,7 +393,7 @@ edtAverage.Text := FloatToStrF(average, ffFixed, 15, 2);
 
 Simple bubble sort implementation:
 
-```delphi
+```pascal
 // Sort two parallel arrays (bubble sort)
 for i := 1 to arraySize - 1 do
   for j := 1 to arraySize - i do
@@ -413,7 +413,7 @@ for i := 1 to arraySize - 1 do
 
 ### 4. Finding Maximum/Minimum Values
 
-```delphi
+```pascal
 // Find highest value and its position
 highest := arrValues[1];
 position := 1;
@@ -462,11 +462,8 @@ ShowMessage('Highest: ' + arrNames[position] +
 
 ---
 
-## Practice Resources
-
-- Review past exam papers focusing on these four sections
 - Practice writing complete classes from scratch
 - Create small programs combining GUI, database, and OOP
-- Time yourself solving problems to improve speed
+- Review the class activties and Virtual learner support day
 
 Good luck with your exam!
