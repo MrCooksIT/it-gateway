@@ -1,18 +1,9 @@
 title: IT Gateway
-description: Comprehensive IT theory and practical resource for Grade 10-12
+description: Comprehensive resource for Digital Technology (Grades 8-9) and Information Technology (Grades 10-12)
 
 # Use remote theme
-remote_theme: just-the-docs/just-the-docs@v0.4.0
-# Built-in theme options
-search_enabled: true
-heading_anchors: true
+remote_theme: just-the-docs/just-the-docs
 
-# Try disabling some features
-ga_tracking: false
-ga_tracking_anonymize_ip: true
-
-# Custom variables
-content_width: "900px"
 # Enable search
 search_enabled: true
 
@@ -25,7 +16,7 @@ nav_external_links:
 enable_copy_code_button: true
 
 # Footer
-footer_content: "IT Gateway - Your bridge between theory and practice © 2025"
+footer_content: "IT Gateway - Digital Technology & Information Technology © 2025"
 
 # Plugins
 plugins:
