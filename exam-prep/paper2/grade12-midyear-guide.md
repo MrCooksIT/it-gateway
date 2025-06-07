@@ -3,7 +3,7 @@ layout: page
 title: Grade 12 Mid-Year Paper 2 Study Guide
 parent: Paper 2 Preparation
 grand_parent: Examination Preparation
-nav_order: 1
+nav_order: 3
 ---
 
 # Grade 12 Mid-Year Paper 2 Study Guide
