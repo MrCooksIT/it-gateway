@@ -3,7 +3,7 @@ layout: page
 title: Grade 10 Mid-Year Paper 2 Study Guide
 parent: Paper 2 Preparation
 grand_parent: Examination Preparation
-nav_order: 3
+nav_order: 1
 ---
 
 # Grade 10 Mid-Year Paper 2 Study Guide
