@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Communication & Internet
+nav_order: 6
+has_children: True
 permalink: /networks/
-nav_order: 5
-has_children: true
 ---
 
 # Communication & Internet Technologies

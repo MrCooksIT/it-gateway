@@ -3,7 +3,7 @@ layout: page
 title: Paper 2 Preparation
 parent: Examination Preparation
 nav_order: 2
-has_children: true
+has_children: True
 ---
 
 # Paper 2: Theory Knowledge

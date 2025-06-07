@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Systems Technologies
+nav_order: 5
+has_children: True
 permalink: /systems/
-nav_order: 4
-has_children: true
 ---
 
 # Systems Technologies

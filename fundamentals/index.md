@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Computer Fundamentals
+nav_order: 4
+has_children: True
 permalink: /fundamentals/
-nav_order: 3
-has_children: true
 ---
 
 # Computer Fundamentals

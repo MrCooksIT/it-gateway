@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Digital Technology (Grades 8-9)
+nav_order: 3
+has_children: True
 permalink: /digital-technology/
-nav_order: 2
-has_children: true
 ---
 
 # Digital Technology (Grades 8-9)
