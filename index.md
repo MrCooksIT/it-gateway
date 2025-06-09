@@ -1,6 +1,8 @@
 ---
 layout: home
 title: IT Gateway
+nav_order: 1
+permalink: /
 ---
 
 # IT Gateway

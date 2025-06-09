@@ -3,7 +3,7 @@ layout: page
 title: Paper 1 Preparation
 parent: Examination Preparation
 nav_order: 1
-has_children: true
+has_children: True
 ---
 
 # Paper 1: Practical Programming

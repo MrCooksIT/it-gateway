@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Database Development
+nav_order: 9
+has_children: True
 permalink: /database-dev/
-nav_order: 8
-has_children: true
 ---
 
 # Database Development

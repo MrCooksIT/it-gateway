@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Algorithms & Problem Solving
+nav_order: 10
+has_children: True
 permalink: /problem-solving/
-nav_order: 9
-has_children: true
 ---
 
 # Algorithms & Problem Solving

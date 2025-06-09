@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Additional Resources
+nav_order: 13
+has_children: True
 permalink: /resources/
-nav_order: 12
-has_children: true
 ---
 
 # Additional Resources

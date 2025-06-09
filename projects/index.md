@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Practical Assessment Tasks
+nav_order: 11
+has_children: True
 permalink: /projects/
-nav_order: 10
-has_children: true
 ---
 
 # Practical Assessment Tasks (PAT)

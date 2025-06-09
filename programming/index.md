@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Programming & Development
+nav_order: 8
+has_children: True
 permalink: /programming/
-nav_order: 7
-has_children: true
 ---
 
 # Programming & Development
