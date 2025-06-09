@@ -16,13 +16,6 @@ Welcome to your digital journey! This year focuses on building essential digital
 In Grade 8, you'll explore the basics of technology and develop responsible digital citizenship habits that will serve you throughout your life.
 
 ## Key Topics This Year
-
-### 🌐 Digital Citizenship
-- **Online Safety**: Protecting yourself and others online
-- **Digital Ethics**: Right and wrong in the digital world  
-- **Privacy & Security**: Keeping your information safe
-- **Digital Footprints**: Understanding your online presence
-
 ### 💻 Computer Basics
 - **Hardware & Software**: Understanding computer components
 - **Operating Systems**: How computers work
@@ -34,6 +27,7 @@ In Grade 8, you'll explore the basics of technology and develop responsible digi
 - **Patterns**: Recognizing similarities and sequences
 - **Algorithms**: Step-by-step instructions
 - **Introduction to Programming**: Basic coding concepts
+
 
 ### 🎨 Digital Creation
 - **Document Creation**: Professional word processing
