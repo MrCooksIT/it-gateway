@@ -9,59 +9,50 @@ has_children: true
 # Grade 8: Digital Technology Foundations
 {: .text-blue-200 }
 
-Welcome to your digital journey! This year focuses on building essential digital literacy skills.
+Welcome to your digital journey! This year focuses on understanding computers and starting your programming adventure.
 
 ## Year Overview
 
-In Grade 8, you'll explore the basics of technology and develop responsible digital citizenship habits that will serve you throughout your life.
+In Grade 8, you'll learn what computers are, how they work, and begin programming with Karel the Robot using JavaScript concepts.
 
 ## Key Topics This Year
-### 💻 Computer Basics
-- **Hardware & Software**: Understanding computer components
-- **Operating Systems**: How computers work
-- **File Management**: Organizing your digital files
-- **Input & Output**: How we interact with computers
 
-### 🧠 Computational Thinking
-- **Problem Solving**: Breaking big problems into smaller parts
-- **Patterns**: Recognizing similarities and sequences
-- **Algorithms**: Step-by-step instructions
-- **Introduction to Programming**: Basic coding concepts
+### 🖥️ Computer Fundamentals
+- **Computer History**: How computing technology developed over time
+- **Computer Organization**: Understanding hardware and software components
+- **Computer Models**: How computers process information
 
-
-### 🎨 Digital Creation
-- **Document Creation**: Professional word processing
-- **Presentations**: Effective slideshow design
-- **Digital Art**: Creating and editing images
-- **Research Skills**: Finding reliable information online
+### 💻 Programming Foundations
+- **Introduction to Programming**: Basic coding concepts with Karel
+- **Problem Solving**: Breaking down problems into steps
+- **Programming Logic**: Using loops, conditions, and functions
 
 ---
 
 ## Learning Modules
 
-### Module 1: Digital Citizen
-Learn to be a responsible member of the digital community.
-- [Online Safety Basics](./digital-citizenship/online-safety)
-- [Digital Footprints](./digital-citizenship/digital-footprints)
-- [Cyberbullying Prevention](./digital-citizenship/cyberbullying)
+### Module 1: What is Computing?
+Understand the foundations of computer technology and its development.
+- [History of Computers](./what-is-computing/history-of-computers)
+- [Computer Organization](./what-is-computing/computer-organization)
+- [Software vs Hardware](./what-is-computing/software-hardware)
+- [Future of Computing](./what-is-computing/future-computing)
+- [Model of Computer](./what-is-computing/computer-model)
 
-### Module 2: Computer Foundations
-Understand how computers work and how to use them effectively.
-- [Computer Components](./computer-basics/components)
-- [Operating System Basics](./computer-basics/operating-systems)
-- [File Organization](./computer-basics/file-management)
-
-### Module 3: Problem Solving
-Develop logical thinking skills for the digital age.
-- [Computational Thinking](./problem-solving/computational-thinking)
-- [Algorithm Design](./problem-solving/algorithms)
-- [Introduction to Coding](./problem-solving/intro-coding)
-
-### Module 4: Digital Creator
-Build practical skills with digital tools.
-- [Word Processing Mastery](./digital-creation/word-processing)
-- [Presentation Skills](./digital-creation/presentations)
-- [Image Editing Basics](./digital-creation/image-editing)
+### Module 2: Introduction to Coding (JavaScript with Karel)
+Start your programming journey with visual coding concepts.
+- [Introduction to Programming With Karel](./coding-karel/intro-programming)
+- [More Basic Karel](./coding-karel/basic-karel)
+- [Karel Can't Turn Right](./coding-karel/karel-turn-right)
+- [Functions in Karel](./coding-karel/functions)
+- [The Start Function](./coding-karel/start-function)
+- [Top Down Design and Decomposition](./coding-karel/top-down-design)
+- [Commenting Your Code](./coding-karel/commenting)
+- [Super Karel](./coding-karel/super-karel)
+- [For Loops](./coding-karel/for-loops)
+- [If Statements](./coding-karel/if-statements)
+- [If/Else Statements](./coding-karel/if-else-statements)
+- [While Loops in Karel](./coding-karel/while-loops)
 
 ---
 
@@ -69,19 +60,18 @@ Build practical skills with digital tools.
 
 Throughout the year, you'll complete various projects to demonstrate your learning:
 
-- **Digital Citizenship Portfolio**: Showcase your understanding of online responsibility
-- **Computer Basics Presentation**: Explain how computers work
-- **Algorithm Challenge**: Create step-by-step solutions to problems
-- **Digital Creation Showcase**: Demonstrate your technical skills
+- **Computer Fundamentals Portfolio**: Show your understanding of computing concepts
+- **Karel Programming Challenges**: Solve increasingly complex problems with code
+- **Algorithm Design Projects**: Create step-by-step solutions to real-world problems
 
 ---
 
 ## Preparing for Grade 9
 
-The skills you learn in Grade 8 will prepare you for more advanced topics in Grade 9, including:
-- More complex programming concepts
-- Advanced digital creation techniques
-- Deeper understanding of computer systems
-- Introduction to databases and networks
+The skills you learn in Grade 8 will prepare you for Grade 9 topics including:
+- **Digital Citizenship**: Online safety and digital ethics
+- **Advanced Programming**: More complex coding concepts
+- **System Design**: Understanding how technology systems work together
+- **Data and Information**: Working with digital information
 
-*Ready to start your digital technology journey? Explore the modules above to begin learning!*
+*Ready to start your computing journey? Begin with Module 1 to understand what computing is all about!*
