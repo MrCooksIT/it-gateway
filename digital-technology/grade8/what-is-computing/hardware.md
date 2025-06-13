@@ -150,7 +150,7 @@ The CPU receives the input and performs calculations:
 - Accesses the printer device driver software
 - Sends instructions to make the printer ready
 
-![CPU processing data with arrows showing information flow](./images/cpu-processing-data.jpg)
+![CPU processing data with arrows showing information flow](./images/cpu-processing-data.gif)
 
 **Step 3: Output Execution**
 The printer (output device) receives the processed data and instructions, then prints the physical document.
