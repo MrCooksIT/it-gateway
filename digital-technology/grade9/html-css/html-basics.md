@@ -42,6 +42,18 @@ Think of building a house:
 **HTML provides the skeleton of a web page** - it defines what content appears and how it's organized, but not how it looks visually (that's CSS's job).
 
 ---
+## 💻 Interactive Examples
+
+Throughout this lesson, you'll find **"Try It Yourself"** interactive examples. These let you:
+- See the code running live in your browser
+- Edit the code and see changes immediately
+- Experiment without breaking anything
+- Learn by doing!
+
+{: .tip }
+**How to use interactive examples**: Click "Run Pen" to load the example, then edit the code in the editor. Your changes appear instantly in the preview!
+
+---
 
 ## 🏛️ Basic HTML Document Structure
 
@@ -87,6 +99,20 @@ Every HTML page follows the same basic structure:
 
 {: .structure-note }
 **Remember**: Every HTML tag that opens must also close! Opening tag: `<tagname>`, Closing tag: `</tagname>`
+
+### 💡 Try It Yourself: Basic HTML Structure
+
+Let's see a complete HTML page in action. Click "Run Pen" below to load the interactive example:
+
+<p class="codepen" data-height="400" data-theme-id="light" data-default-tab="html,result" data-slug-hash="preview" data-preview="true" data-user="yourusername" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/pen/">Basic HTML Structure</a> - Try editing the title or adding a new paragraph!</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+**Challenge**: 
+1. Change the title in the `<head>` section
+2. Add another paragraph in the `<body>`
+3. Watch the result update automatically!
 
 ---
 
@@ -144,6 +170,19 @@ HTML provides six levels of headings, from most important (h1) to least importan
 
 {: .accessibility-note }
 **Accessibility Tip**: Screen readers use heading structure to help visually impaired users navigate pages. Proper heading hierarchy makes your website more accessible!
+
+### 💡 Try It Yourself: Heading Levels
+
+Experiment with different heading levels and see how they look:
+
+<p class="codepen" data-height="450" data-theme-id="light" data-default-tab="html,result" data-slug-hash="preview" data-preview="true" data-user="yourusername" style="height: 450px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/pen/">Heading Hierarchy</a> - Try changing the heading levels!</span>
+</p>
+
+**Challenge**: 
+1. Change some of the heading numbers (e.g., change h3 to h2)
+2. Add a new subsection with appropriate heading levels
+3. Notice how the size changes with each level!
 
 ---
 
@@ -368,6 +407,19 @@ Use `<ul>` when the **order doesn't matter** (features, lists, collections).
 | Table of contents | Collections of items |
 | Chronological events | Team members |
 
+### 💡 Try It Yourself: Creating Lists
+
+Practice making both types of lists:
+
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="html,result" data-slug-hash="preview" data-preview="true" data-user="yourusername" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/pen/">HTML Lists Practice</a> - Try adding your own list items!</span>
+</p>
+
+**Challenge**: 
+1. Add more items to the shopping list
+2. Create your own "Top 5" list using `<ol>`
+3. Try creating a nested list (list inside a list)!
+
 ---
 
 ## 📊 Tables: Displaying Data
@@ -510,6 +562,19 @@ Tables are used to display data in rows and columns.
 {: .styling-note }
 **Styling Tables**: Tables by default look plain. We'll use CSS to add borders, colors, and spacing to make them look professional!
 
+### 💡 Try It Yourself: Building Tables
+
+Create and modify your own data table:
+
+<p class="codepen" data-height="500" data-theme-id="light" data-default-tab="html,result" data-slug-hash="preview" data-preview="true" data-user="yourusername" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/pen/">HTML Table Builder</a> - Try adding more rows and columns!</span>
+</p>
+
+**Challenge**: 
+1. Add another row to the table
+2. Add a new column (remember to add a `<th>` and `<td>` in each row)
+3. Create your own table showing something you're interested in!
+
 ---
 
 ## 🔘 Buttons: Interactive Elements
@@ -640,9 +705,30 @@ Let's combine all these elements into a complete, well-structured HTML page:
 
 ---
 
-## 💻 Try It Yourself!
+---
 
-The best way to learn HTML is by practicing. Here are some exercises:
+## 💻 Try It Yourself: Complete HTML Page
+
+Here's a complete example using everything we've learned. Try editing any part of it:
+
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="html,result" data-slug-hash="preview" data-preview="true" data-user="yourusername" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/pen/">Complete HTML Example</a> - A full page using all HTML basics!</span>
+</p>
+
+**Your Turn**: 
+1. Change the page topic from "Emergency Procedures" to something you choose
+2. Modify the table data to fit your new topic
+3. Update the lists with relevant information
+4. Add your own content sections!
+
+{: .practice }
+**Practice Tip**: Fork this pen to your own CodePen account to save your work! Just click "Fork" in the bottom right of the CodePen editor.
+
+---
+
+## 💻 Practice Exercises
+
+Now that you've seen interactive examples, here are some exercises:
 
 ### Exercise 1: Personal Page
 Create an HTML page about yourself that includes:
