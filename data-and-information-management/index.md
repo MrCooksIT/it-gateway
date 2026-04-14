@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Data and Information Management
-nav_order: 6
+nav_order: 7
 has_children: true
 permalink: /data-and-information-management/
 ---

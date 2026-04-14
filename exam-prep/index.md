@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Examination Preparation
-nav_order: 12
+nav_order: 10
 has_children: True
 permalink: /exam-prep/
 ---
