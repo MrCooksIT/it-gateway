@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200">
+  <defs>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#2563eb"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#44006b"/>
+      <stop offset="100%" style="stop-color:#9333ea"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card 1: Theory -->
+  <rect x="10" y="10" width="220" height="180" rx="14" fill="url(#card1)"/>
+  <text x="120" y="58" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="36">📚</text>
+  <text x="120" y="100" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="white">Theory</text>
+  <text x="120" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#93c5fd">Paper 2</text>
+  <rect x="40" y="138" width="160" height="2" rx="1" fill="white" opacity="0.2"/>
+  <text x="120" y="162" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#bfdbfe" opacity="0.9">Networks · Databases · Systems</text>
+  <text x="120" y="178" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#bfdbfe" opacity="0.9">Internet · Social · Programming</text>
+
+  <!-- Card 2: Practical -->
+  <rect x="250" y="10" width="220" height="180" rx="14" fill="url(#card2)"/>
+  <text x="360" y="58" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="36">💻</text>
+  <text x="360" y="100" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="white">Practical</text>
+  <text x="360" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#6ee7b7">Paper 1</text>
+  <rect x="280" y="138" width="160" height="2" rx="1" fill="white" opacity="0.2"/>
+  <text x="360" y="162" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#a7f3d0" opacity="0.9">Delphi · SQL · Algorithms</text>
+  <text x="360" y="178" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#a7f3d0" opacity="0.9">Number Systems · OOP</text>
+
+  <!-- Card 3: Quick Study -->
+  <rect x="490" y="10" width="220" height="180" rx="14" fill="url(#card3)"/>
+  <text x="600" y="58" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="36">⚡</text>
+  <text x="600" y="100" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" fill="white">Quick Study</text>
+  <text x="600" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#d8b4fe">Cheat Sheets</text>
+  <rect x="520" y="138" width="160" height="2" rx="1" fill="white" opacity="0.2"/>
+  <text x="600" y="162" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#e9d5ff" opacity="0.9">Syntax · SQL · Delphi · Flowcharts</text>
+  <text x="600" y="178" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#e9d5ff" opacity="0.9">Summary tables for every topic</text>
+</svg>

@@ -1,42 +1,64 @@
-# IT Gateway
+---
+layout: home
 
-Your complete CAPS IT study resource for Grades 10, 11 and 12.
+hero:
+  name: "IT Gateway"
+  text: "Your complete CAPS IT resource"
+  tagline: "Grades 10 · 11 · 12 — Theory · Practical · Quick Study"
+  image:
+    src: /images/hero.svg
+    alt: IT Gateway
+  actions:
+    - theme: brand
+      text: 📚 Theory (Paper 2)
+      link: /theory/
+    - theme: alt
+      text: 💻 Practical (Paper 1)
+      link: /practical/
+    - theme: alt
+      text: ⚡ Quick Study
+      link: /quick-study/
 
+features:
+  - icon: 🖥️
+    title: Systems Technologies
+    details: Hardware, CPU, RAM, storage, software, OS, mobile tech, cloud computing and virtualisation.
+    link: /theory/systems/
+    linkText: Study Systems →
+
+  - icon: 🌐
+    title: Communication Technologies
+    details: Network types, topologies, protocols (TCP/IP, HTTP), wireless tech, encryption and e-communication.
+    link: /theory/networks/
+    linkText: Study Networks →
+
+  - icon: 🔗
+    title: Internet Technologies
+    details: WWW, web design, HTML, scripting languages, multimedia, online services and cookies.
+    link: /theory/internet/
+    linkText: Study Internet →
+
+  - icon: 🗄️
+    title: Data & Information Management
+    details: Database design, ERDs, normalisation, SQL theory, data integrity and DBMS software.
+    link: /theory/databases/
+    linkText: Study Databases →
+
+  - icon: ⚖️
+    title: Social Implications
+    details: Copyright, cybercrime, online safety, privacy, POPIA, digital divide and environmental impact.
+    link: /theory/social/
+    linkText: Study Social →
+
+  - icon: 💡
+    title: Solution Development
+    details: Programming concepts, OOP principles, algorithm theory and software engineering methodologies.
+    link: /theory/programming/
+    linkText: Study Programming →
 ---
 
-## What's here
-
-| Section | What it covers |
-|---|---|
-| [📚 Theory — Paper 2](theory/index.md) | All six CAPS theory topics: systems, networks, internet, databases, social implications, and programming concepts |
-| [💻 Practical — Paper 1](practical/index.md) | Delphi programming, SQL, algorithms, and number systems — worked examples and practice exercises |
-| [⚡ Quick Study](quick-study/index.md) | Cheat sheets and summary tables for last-minute revision |
-
----
-
-## Theory topics
-
-| Topic | Grades | Key content |
-|---|---|---|
-| [Systems Technologies](theory/systems/index.md) | 10–12 | Hardware, OS, mobile tech, cloud |
-| [Communication Technologies](theory/networks/index.md) | 10–12 | Networks, protocols, wireless, security |
-| [Internet Technologies](theory/internet/index.md) | 10–12 | WWW, web design, HTML, scripting |
-| [Data & Information Management](theory/databases/index.md) | 10–12 | Databases, SQL, normalisation |
-| [Social Implications](theory/social/index.md) | 10–12 | Copyright, cybercrime, privacy, ethics |
-| [Solution Development](theory/programming/index.md) | 10–12 | Programming concepts, OOP, algorithms |
-
----
-
-## Practical topics
-
-| Topic | Key content |
-|---|---|
-| [Algorithms](practical/algorithms/index.md) | Flowcharts, pseudocode, classic problems |
-| [Delphi Programming](practical/delphi/index.md) | Full language reference with worked examples |
-| [SQL](practical/sql/index.md) | SELECT, JOINs, DML, DDL, database connection |
-| [Number Systems](practical/number-systems/index.md) | Binary, hexadecimal, data sizes |
-
----
-
-> **Built for Marist Brothers College IT learners.**
-> Use the sidebar to navigate, or the search bar to find any topic instantly.
+<div style="padding: 3rem 1rem 1rem; text-align: center;">
+  <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Three ways to study</h2>
+  <p style="color: var(--vp-c-text-2); margin-bottom: 2rem;">Everything you need for Paper 1 and Paper 2 in one place.</p>
+  <img src="/images/three-pillars.svg" alt="Theory, Practical, Quick Study" style="max-width: 100%; border-radius: 12px;" />
+</div>
