@@ -1,223 +1,287 @@
-# SQL Joins
+# Multi-Table Queries
 
-A single table is rarely enough. Real databases split data across multiple tables to avoid duplication. **Joins** bring that data back together in a query, letting you combine information from two or more tables.
+Real databases split data across multiple tables to avoid duplication. A festival database, for example, stores company details in one table and activity details in another. When you need information from both — such as a company name alongside the activities they run — you must query both tables at the same time. The two tables are linked by a common field: the **primary key** in one table matches a **foreign key** in the other. Your SQL tells Access which field forms that link, and Access combines the rows for you.
 
 > [!NOTE] Grade 12
-> Joins are a Grade 12 topic. The CAPS specification limits Paper 1 to a maximum of **two tables**. INNER JOIN is the most common. LEFT JOIN appears less frequently but is examined.
+> Multi-table queries are a Grade 12 CAPS topic. Expect at least one in every Paper 1 exam. The CAPS specification covers queries involving two tables; knowing how to extend the pattern to three tables is useful for full marks questions.
 
 ---
 
-## Why Joins?
+## How It Works
 
-Consider storing student marks. You could put everything in one table:
+Four rules cover every multi-table query you will write:
 
-```
-Marks (flat) — BAD
-StudentID | Surname | SubjectID | SubjectName | Mark
-1001      | Adams   | S01       | IT          | 87
-1001      | Adams   | S02       | Math        | 72     ← "Adams" repeated
-```
-
-Better design: separate tables with a FK linking them:
-
-```
-Students           Marks              Subjects
-StudentID|Surname  MarkID|StuID|SubID|Mark  SubID|SubjectName
-1001     |Adams    1     |1001 |S01  |87    S01  |IT
-1002     |Botha    2     |1001 |S02  |72    S02  |Math
-                   3     |1002 |S01  |91
-```
-
-A JOIN query reassembles this into a readable result.
+- List **all tables** in the `FROM` clause, separated by a comma.
+- Write the **relationship condition** in `WHERE` using `table1.field = table2.field` — this tells Access how the tables are connected.
+- Any **extra filter conditions** go after the relationship condition, joined with `AND`.
+- When the **same field name exists in more than one table**, always prefix it with the table name: `tblCompany.CompanyID`, not just `CompanyID`.
 
 ---
 
-## INNER JOIN
-
-Returns only rows where there is a **match in both tables**.
+## Basic Syntax
 
 ```sql
-SELECT table1.column, table2.column
-FROM table1
-INNER JOIN table2 ON table1.PKcolumn = table2.FKcolumn;
+SELECT table1.Field1, table2.Field2
+FROM table1, table2
+WHERE table1.LinkField = table2.LinkField
 ```
 
-### Worked Example
+Replace `LinkField` with the actual primary key / foreign key pair that connects the two tables.
+
+---
+
+## Worked Example — Festivals Database
 
 **Tables:**
 
-`Students`: StudentID, Surname, Grade  
-`Marks`: MarkID, StudentID (FK), Subject, Mark
+`tblCompany`: CompanyID (PK), CompanyName, ContactPerson  
+`tblActivity`: ActivityID (PK), CompanyID (FK), Activity, TicketsSold, Price
+
+The two tables are linked by `CompanyID`. It is the primary key in `tblCompany` and the foreign key in `tblActivity`.
+
+**Query:** Show the company name, activity, and tickets sold for every activity.
 
 ```sql
--- Show each student's name with their mark
-SELECT Students.Surname, Students.Grade, Marks.Subject, Marks.Mark
-FROM Students
-INNER JOIN Marks ON Students.StudentID = Marks.StudentID;
+SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold
+FROM tblCompany, tblActivity
+WHERE tblCompany.CompanyID = tblActivity.CompanyID
 ```
 
-Result: Only students who HAVE marks appear. Students with no marks are excluded.
+**Reading the query step by step:**
 
-### With WHERE and ORDER BY
-
-```sql
--- Students who passed (mark >= 50), sorted by surname
-SELECT Students.Surname, Marks.Subject, Marks.Mark
-FROM Students
-INNER JOIN Marks ON Students.StudentID = Marks.StudentID
-WHERE Marks.Mark >= 50
-ORDER BY Students.Surname;
-```
-
-### Using Table Aliases
-
-Long table names repeated many times get tedious. Aliases make queries shorter:
-
-```sql
-SELECT s.Surname, s.Grade, m.Subject, m.Mark
-FROM Students AS s
-INNER JOIN Marks AS m ON s.StudentID = m.StudentID
-WHERE m.Mark >= 50
-ORDER BY s.Surname;
-```
-
----
-
-## Three-Table Join
-
-When you have three related tables:
-
-**Tables:**
-- `Students`: StudentID, Surname
-- `Marks`: MarkID, StudentID (FK), SubjectID (FK), Mark
-- `Subjects`: SubjectID, SubjectName
-
-```sql
-SELECT s.Surname, sub.SubjectName, m.Mark
-FROM Students AS s
-INNER JOIN Marks AS m ON s.StudentID = m.StudentID
-INNER JOIN Subjects AS sub ON m.SubjectID = sub.SubjectID
-WHERE m.Mark >= 50
-ORDER BY s.Surname, sub.SubjectName;
-```
-
-> [!WARNING] CAPS Limit: Maximum 2 Tables in Paper 1
-> The CAPS specification states joins involving at most **two tables** in the Paper 1 examination. In practice, some exams may have a 3-table join. Know the 2-table pattern cold; the 3-table version is an extension of the same logic.
-
----
-
-## LEFT JOIN (LEFT OUTER JOIN)
-
-Returns **all rows from the left table**, plus matched rows from the right table. Where there is no match in the right table, the result shows `NULL`.
-
-```sql
-SELECT Students.Surname, Marks.Mark
-FROM Students
-LEFT JOIN Marks ON Students.StudentID = Marks.StudentID;
-```
-
-Result: ALL students appear. Those with no marks show `NULL` in the Mark column.
-
-| Surname | Mark |
+| Part | What it does |
 |---|---|
-| Adams | 87 |
-| Botha | NULL ← no mark record for Botha |
-| Coetzee | 91 |
-
-### When to use LEFT JOIN
-
-Use LEFT JOIN when you need **all records from the main table**, even those without matching records in the secondary table:
-- "Show all students, even those not yet marked"
-- "Show all products, even those with no orders"
+| `SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold` | Choose the columns to display, prefixed with their table names |
+| `FROM tblCompany, tblActivity` | Tell Access both tables are needed |
+| `WHERE tblCompany.CompanyID = tblActivity.CompanyID` | Define the link — only combine rows where the CompanyID matches across both tables |
 
 ---
 
-## INNER vs LEFT JOIN — Summary
+## In Delphi
 
-| | INNER JOIN | LEFT JOIN |
-|---|---|---|
-| **Returns** | Only rows with matches in BOTH tables | ALL rows from left table + matched from right |
-| **Unmatched rows** | Excluded | Shown with NULL values |
-| **Use when** | You only want complete data | You want all records even without a match |
+SQL is written as a string and assigned to `qryFestival.SQL.Text`. Open the query with `.Open` to run a SELECT.
+
+```pascal
+qryFestival.Close;
+qryFestival.SQL.Clear;
+qryFestival.SQL.Text := 'SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold ' +
+                        'FROM tblCompany, tblActivity ' +
+                        'WHERE tblCompany.CompanyID = tblActivity.CompanyID';
+qryFestival.Open;
+```
+
+> [!TIP]
+> Each string segment in the concatenation must end with a **space before the closing quote**, or the keywords from different lines will run together (e.g. `...tblActivityWHERE...`).
+
+---
+
+## Adding Extra Filter Conditions
+
+Place extra conditions **after** the relationship condition using `AND`. The relationship condition always comes first.
+
+**Query:** Show the company name, activity, and tickets sold where fewer than 100 tickets were sold.
+
+```sql
+SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold
+FROM tblCompany, tblActivity
+WHERE tblCompany.CompanyID = tblActivity.CompanyID
+AND tblActivity.TicketsSold < 100
+```
+
+In Delphi:
+
+```pascal
+qryFestival.Close;
+qryFestival.SQL.Clear;
+qryFestival.SQL.Text := 'SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold ' +
+                        'FROM tblCompany, tblActivity ' +
+                        'WHERE tblCompany.CompanyID = tblActivity.CompanyID ' +
+                        'AND tblActivity.TicketsSold < 100';
+qryFestival.Open;
+```
+
+---
+
+## When to Prefix Field Names
+
+**Rule:** If a field name appears in **only one** of the queried tables, the prefix is optional but strongly recommended. If the same field name appears in **more than one** table, the prefix is **required** — Access cannot tell which table you mean, and the query will fail with an ambiguous field error.
+
+In the Festivals database, `CompanyID` exists in both `tblCompany` and `tblActivity`. You must always write `tblCompany.CompanyID` or `tblActivity.CompanyID` — never just `CompanyID`.
+
+**Good habit:** prefix every field name in a multi-table query, regardless of whether it is ambiguous. This makes your intent clear and prevents errors when table structures change.
+
+```sql
+-- Correct — every field is prefixed
+SELECT tblCompany.CompanyName, tblActivity.Activity
+FROM tblCompany, tblActivity
+WHERE tblCompany.CompanyID = tblActivity.CompanyID
+
+-- Will cause an error — CompanyID is ambiguous
+SELECT CompanyName, Activity
+FROM tblCompany, tblActivity
+WHERE CompanyID = CompanyID
+```
+
+---
+
+## Three Tables
+
+When three tables are involved, list all three in `FROM` and write **two** relationship conditions in `WHERE` chained with `AND`.
+
+```sql
+SELECT tblA.Field1, tblB.Field2, tblC.Field3
+FROM tblA, tblB, tblC
+WHERE tblA.ID = tblB.ID AND tblB.ID = tblC.ID
+```
+
+Each condition links one pair of adjacent tables. The pattern extends naturally: four tables would need three relationship conditions.
+
+---
+
+## With User Input
+
+When the user types a value that will be included in the SQL string, store it in a variable and concatenate it in. For text fields, wrap the value in `QuotedStr()` to add the required single quotes around it.
+
+**Query:** Ask the user for a company ID and show only that company's activities.
+
+```pascal
+var
+  sCompany: string;
+begin
+  sCompany := InputBox('Company', 'Enter company ID', '');
+  qryFestival.Close;
+  qryFestival.SQL.Clear;
+  qryFestival.SQL.Text := 'SELECT tblCompany.CompanyName, tblActivity.Activity ' +
+                          'FROM tblCompany, tblActivity ' +
+                          'WHERE tblCompany.CompanyID = tblActivity.CompanyID ' +
+                          'AND tblCompany.CompanyID = ' + QuotedStr(sCompany);
+  qryFestival.Open;
+end;
+```
+
+`QuotedStr(sCompany)` wraps the value in single quotes, producing SQL like:
+
+```sql
+AND tblCompany.CompanyID = 'C001'
+```
+
+For numeric fields, do not use `QuotedStr` — concatenate the number directly:
+
+```pascal
+'AND tblActivity.TicketsSold < ' + IntToStr(nLimit)
+```
 
 ---
 
 ## Common Mistakes
 
-> [!WARNING] Watch Out For
-> 1. **Wrong JOIN condition** — always match PK to FK: `ON Students.StudentID = Marks.StudentID`, not a name field
-> 2. **Ambiguous column names** — if both tables have a column called `Name`, specify: `Students.Name`; without the prefix you get an error
-> 3. **Forgetting the ON clause** — `FROM Students INNER JOIN Marks` with no ON creates a Cartesian product (every student × every mark)
-> 4. **Using column names from wrong table** — in a JOIN, be explicit: `Marks.Mark`, not just `Mark`
-> 5. **LEFT JOIN order** — the "left" table (in FROM) is the one that returns all rows; swap the order and you get different results
+| Mistake | What happens | Fix |
+|---|---|---|
+| Forgetting the relationship condition in `WHERE` entirely | Access combines every row from table 1 with every row from table 2 — a **Cartesian product**. If `tblCompany` has 10 rows and `tblActivity` has 50, you get 500 rows of garbage. | Always include `WHERE table1.PK = table2.FK` |
+| Omitting the table prefix when the field name exists in both tables | Access returns an "ambiguous field name" error and the query does not run | Prefix every field with its table name |
+| Writing the extra filter condition **before** the relationship condition | The query may still run but is harder to read and can cause logic errors with complex conditions | Write the relationship condition first, then `AND` for each filter |
+| Forgetting a space at the end of a string segment in Delphi | Keywords merge across lines: `...tblActivityWHERE...` — Access returns a syntax error | End each string segment with a space before the closing quote |
+| Using a field from the wrong table | Results may be incorrect or the query may fail | Know which table owns each field; check the database design |
 
 ---
 
-## Practice Exercises
+## Key Terms
 
-**Tables for all exercises:**
-
-**Students**: `StudentID (PK)`, `Surname`, `Grade`  
-**Marks**: `MarkID (PK)`, `StudentID (FK)`, `Subject`, `Mark`
-
-Sample data:  
-- Students: (1001, Adams, 11), (1002, Botha, 12), (1003, Coetzee, 11), (1004, Dlamini, 12)
-- Marks: (1, 1001, IT, 87), (2, 1001, Math, 72), (3, 1002, IT, 91), (4, 1003, IT, 55)
-  - Note: Dlamini (1004) has NO marks recorded
+| Term | Meaning |
+|---|---|
+| **Primary key (PK)** | A field that uniquely identifies each record in a table — e.g. `CompanyID` in `tblCompany` |
+| **Foreign key (FK)** | A field in one table that stores the primary key value of a related record in another table — e.g. `CompanyID` in `tblActivity` |
+| **Relationship condition** | The `WHERE` clause expression that links two tables: `tblCompany.CompanyID = tblActivity.CompanyID` |
+| **Cartesian product** | The result when no relationship condition is given — every row from table 1 is combined with every row from table 2, producing meaningless data |
+| **Ambiguous field name** | An error caused by using a field name that exists in more than one of the queried tables without specifying which table it belongs to |
+| **QuotedStr()** | A Delphi function that wraps a string in single quotes so it can be embedded safely in a SQL string |
 
 ---
 
-**Exercise 1** — Show the surname, subject, and mark for all Grade 11 students, sorted by mark descending.
+## Exam Focus
+
+**1.** A database has two tables: `tblStudent` (StudentID PK, Surname, Grade) and `tblMark` (MarkID PK, StudentID FK, Subject, Mark). Write a SQL query to show the surname, subject, and mark for all students in Grade 12.
 
 <details>
-<summary>Show solution</summary>
+<summary>Show answer</summary>
 
 ```sql
-SELECT Students.Surname, Marks.Subject, Marks.Mark
-FROM Students
-INNER JOIN Marks ON Students.StudentID = Marks.StudentID
-WHERE Students.Grade = 11
-ORDER BY Marks.Mark DESC;
-```
-
-Result: Adams (IT: 87), Adams (Math: 72), Coetzee (IT: 55)
-</details>
-
----
-
-**Exercise 2** — Show all students (including those without marks). Display surname, grade, and mark. If no mark exists, show "No Mark" (use ISNULL or IS NULL check).
-
-<details>
-<summary>Show solution</summary>
-
-```sql
--- Basic LEFT JOIN showing NULL
-SELECT Students.Surname, Students.Grade, Marks.Mark
-FROM Students
-LEFT JOIN Marks ON Students.StudentID = Marks.StudentID
-ORDER BY Students.Surname;
-
--- Dlamini will show with NULL in the Mark column
+SELECT tblStudent.Surname, tblMark.Subject, tblMark.Mark
+FROM tblStudent, tblMark
+WHERE tblStudent.StudentID = tblMark.StudentID
+AND tblStudent.Grade = 12
 ```
 </details>
 
 ---
 
-**Exercise 3** — Using aggregate functions with JOIN: Show each student's surname and their average mark across all subjects. Only include students with at least one mark. Sort by average descending.
+**2.** Using the same tables, write the Delphi code to run the query above and display results in a `DBGrid` connected to `qryMarks`. Assume the query component is already linked to the database.
 
 <details>
-<summary>Show solution</summary>
+<summary>Show answer</summary>
+
+```pascal
+qryMarks.Close;
+qryMarks.SQL.Clear;
+qryMarks.SQL.Text := 'SELECT tblStudent.Surname, tblMark.Subject, tblMark.Mark ' +
+                     'FROM tblStudent, tblMark ' +
+                     'WHERE tblStudent.StudentID = tblMark.StudentID ' +
+                     'AND tblStudent.Grade = 12';
+qryMarks.Open;
+```
+
+The `DBGrid` updates automatically when the query is opened, provided its `DataSource` is linked to `qryMarks`.
+</details>
+
+---
+
+**3.** A learner writes the following query. Identify the error and explain what result it would produce.
 
 ```sql
-SELECT Students.Surname, ROUND(AVG(Marks.Mark), 1) AS Average
-FROM Students
-INNER JOIN Marks ON Students.StudentID = Marks.StudentID
-GROUP BY Students.StudentID, Students.Surname
-ORDER BY AVG(Marks.Mark) DESC;
+SELECT Surname, Subject, Mark
+FROM tblStudent, tblMark
+```
+
+<details>
+<summary>Show answer</summary>
+
+Two errors: (1) The `WHERE` clause with the relationship condition is missing entirely, so Access produces a Cartesian product — every student row is combined with every mark row, producing a meaningless result with many duplicate rows. (2) If `StudentID` or any other field name exists in both tables, the query will also fail with an ambiguous field name error. The fix is to add `WHERE tblStudent.StudentID = tblMark.StudentID` and prefix all field names with their table names.
+</details>
+
+---
+
+**4.** Write a SQL query that asks the user to type a subject name and then displays the surname and mark of every student who took that subject. Use `InputBox` and `QuotedStr` in your Delphi code.
+
+<details>
+<summary>Show answer</summary>
+
+```pascal
+var
+  sSubject: string;
+begin
+  sSubject := InputBox('Subject', 'Enter subject name', '');
+  qryMarks.Close;
+  qryMarks.SQL.Clear;
+  qryMarks.SQL.Text := 'SELECT tblStudent.Surname, tblMark.Mark ' +
+                       'FROM tblStudent, tblMark ' +
+                       'WHERE tblStudent.StudentID = tblMark.StudentID ' +
+                       'AND tblMark.Subject = ' + QuotedStr(sSubject);
+  qryMarks.Open;
+end;
 ```
 </details>
 
 ---
 
-> [!TIP] Exam Tip
-> The JOIN condition (`ON table1.PK = table2.FK`) is the most important part — get that wrong and nothing works. Before writing a JOIN query, identify: (1) which field links the two tables, (2) which table has the PK and which has the FK. Write the ON clause first, then build the SELECT and WHERE around it.
+**5.** A database has three tables: `tblDepartment` (DeptID PK, DeptName), `tblEmployee` (EmpID PK, DeptID FK, EmpName), and `tblProject` (ProjID PK, EmpID FK, ProjectName). Write a SQL query to show the department name, employee name, and project name for all records.
+
+<details>
+<summary>Show answer</summary>
+
+```sql
+SELECT tblDepartment.DeptName, tblEmployee.EmpName, tblProject.ProjectName
+FROM tblDepartment, tblEmployee, tblProject
+WHERE tblDepartment.DeptID = tblEmployee.DeptID
+AND tblEmployee.EmpID = tblProject.EmpID
+```
+</details>

@@ -1,392 +1,369 @@
-# Connecting Databases to Delphi
+# Delphi & Databases
 
-Writing SQL is only half the job. In the exam, you connect an Access or SQL database to a Delphi application and use code to query, display, and update data. This page covers everything you need: the components, the connection process, and the code patterns.
+In the Grade 12 exam you connect a Delphi application to a Microsoft Access database and use code to query, display, and update data. All SQL runs as a text string assigned to a query component's `SQL.Text` property, then executed with either `Open` (SELECT) or `ExecSQL` (INSERT, UPDATE, DELETE).
 
----
-
-## The Component Chain
-
-Data flows through a chain of components:
-
-```
-TADOConnection
-      ↓
-TADOQuery  (or TADOTable)
-      ↓
-TDataSource
-      ↓
-TDBGrid  (or TDBEdit, TDBLabel, etc.)
-```
-
-| Component | Prefix | Purpose |
-|---|---|---|
-| `TADOConnection` | `adoConn` | Holds connection string to the database file |
-| `TADOQuery` | `adoQry` | Executes SQL and holds the result set |
-| `TDataSource` | `dsSrc` | Bridge between ADO component and visual controls |
-| `TDBGrid` | `dbgGrid` | Displays query results in a table |
-| `TDBEdit` | `dbeField` | Displays/edits a single field value |
-| `TDBNavigator` | `dbNav` | Buttons to navigate and edit records |
+> [!NOTE] Grade 11–12
+> Database integration with Delphi is a Grade 12 CAPS topic. You must be able to set up the ADO components, write dynamic SQL strings, loop through results, and perform all four CRUD operations.
 
 ---
 
-## Setting Up at Design Time
+## Component Setup (Design Time)
 
-### Step 1 — TADOConnection
+Two non-visual ADO components do all the work. Drop them on the form and configure them in the Object Inspector — no code needed for the connection itself.
 
-1. Drop `TADOConnection` on the form
-2. Set `LoginPrompt` → `False`
-3. Click `ConnectionString` → `Build...`
-4. Select **Microsoft Jet 4.0 OLE DB Provider** (for `.mdb`) or **Microsoft ACE OLEDB 12.0** (for `.accdb`)
-5. Browse to your `.accdb` file
-6. Test connection → OK
+### TADOConnection
 
-**In code:**
-```pascal
-adoConn.ConnectionString :=
-  'Provider=Microsoft.ACE.OLEDB.12.0;' +
-  'Data Source=C:\Path\To\Database.accdb;' +
-  'Persist Security Info=False';
-adoConn.LoginPrompt := False;
-adoConn.Open;
-```
-
-### Step 2 — TADOQuery
-
-1. Drop `TADOQuery` on form
-2. Set `Connection` → your `TADOConnection`
-3. (Optional) Set `SQL.Text` at design time
-
-### Step 3 — TDataSource
-
-1. Drop `TDataSource` on form
-2. Set `DataSet` → your `TADOQuery`
-
-### Step 4 — TDBGrid
-
-1. Drop `TDBGrid` on form
-2. Set `DataSource` → your `TDataSource`
-
----
-
-## Opening a Query (Displaying Data)
-
-```pascal
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  // Connect to the database
-  adoConn.ConnectionString :=
-    'Provider=Microsoft.ACE.OLEDB.12.0;' +
-    'Data Source=' + ExtractFilePath(Application.ExeName) + 'Students.accdb;' +
-    'Persist Security Info=False';
-  adoConn.LoginPrompt := False;
-  adoConn.Open;
-  
-  // Run initial query — show all students
-  adoQryStudents.Connection := adoConn;
-  adoQryStudents.SQL.Text := 'SELECT * FROM Students ORDER BY Surname';
-  adoQryStudents.Open;
-end;
-```
-
----
-
-## Dynamic SQL Queries
-
-The most important skill: building SQL based on user input.
-
-### Filter by a field:
-
-```pascal
-procedure TForm1.btnSearchClick(Sender: TObject);
-var
-  sGrade: String;
-begin
-  sGrade := edtGrade.Text;
-  adoQryStudents.Close;
-  adoQryStudents.SQL.Text :=
-    'SELECT StudentID, FirstName, Surname, Grade ' +
-    'FROM Students ' +
-    'WHERE Grade = ' + sGrade + ' ' +
-    'ORDER BY Surname';
-  adoQryStudents.Open;
-end;
-```
-
-### Search with LIKE:
-
-```pascal
-procedure TForm1.btnSearchSurnameClick(Sender: TObject);
-var
-  sSurname: String;
-begin
-  sSurname := edtSurname.Text;
-  adoQryStudents.Close;
-  adoQryStudents.SQL.Text :=
-    'SELECT * FROM Students ' +
-    'WHERE Surname LIKE ' + QuotedStr('%' + sSurname + '%') + ' ' +
-    'ORDER BY Surname';
-  adoQryStudents.Open;
-end;
-```
-
-> [!TIP] Use QuotedStr() for string values in SQL
-> `QuotedStr('hello')` returns `'hello'` (with single quotes added)  
-> This prevents SQL injection and handles apostrophes in names.
-
----
-
-## Reading Values from the Dataset
-
-### Access a field value from the current record:
-
-```pascal
-// Access by field name (most readable)
-sName := adoQryStudents.FieldByName('FirstName').AsString;
-iGrade := adoQryStudents.FieldByName('Grade').AsInteger;
-rMark := adoQryStudents.FieldByName('Mark').AsFloat;
-```
-
-### Loop through all records:
-
-```pascal
-procedure TForm1.btnListAllClick(Sender: TObject);
-var
-  sOutput: String;
-begin
-  adoQryStudents.First;
-  sOutput := '';
-  while not adoQryStudents.EOF do
-  begin
-    sOutput := sOutput +
-      adoQryStudents.FieldByName('Surname').AsString + ', ' +
-      adoQryStudents.FieldByName('FirstName').AsString +
-      ' (Grade ' + adoQryStudents.FieldByName('Grade').AsString + ')' + #13#10;
-    adoQryStudents.Next;
-  end;
-  redOutput.Text := sOutput;
-end;
-```
-
-> [!WARNING] Always use First + while EOF loop
-> - `.First` — moves to first record  
-> - `.EOF` — True when past the last record  
-> - `.Next` — advance to next record  
-> - Forgetting `.Next` creates an infinite loop!
-
----
-
-## Aggregate Queries (Single Values)
-
-When your SQL returns one row/value:
-
-```pascal
-procedure TForm1.btnAverageClick(Sender: TObject);
-var
-  rAvg: Real;
-begin
-  adoQryTemp.Close;
-  adoQryTemp.SQL.Text :=
-    'SELECT AVG(Mark) AS AvgMark FROM Marks WHERE Grade = 12';
-  adoQryTemp.Open;
-  
-  if not adoQryTemp.IsEmpty then
-  begin
-    rAvg := adoQryTemp.FieldByName('AvgMark').AsFloat;
-    lblAvg.Caption := 'Class average: ' + FloatToStrF(rAvg, ffFixed, 8, 1) + '%';
-  end;
-end;
-```
-
----
-
-## JOIN Queries in Delphi
-
-```pascal
-procedure TForm1.btnJoinClick(Sender: TObject);
-begin
-  adoQryResults.Close;
-  adoQryResults.SQL.Text :=
-    'SELECT s.Surname, s.FirstName, sub.SubjectName, m.Mark ' +
-    'FROM Students AS s ' +
-    'INNER JOIN Marks AS m ON s.StudentID = m.StudentID ' +
-    'INNER JOIN Subjects AS sub ON m.SubjectCode = sub.SubjectCode ' +
-    'WHERE s.Grade = ' + edtGrade.Text + ' ' +
-    'ORDER BY s.Surname, sub.SubjectName';
-  adoQryResults.Open;
-  // dbgGrid automatically shows results via TDataSource
-end;
-```
-
----
-
-## Executing Non-SELECT Queries (INSERT, UPDATE, DELETE)
-
-For DML statements that don't return a result set, use `ExecSQL` instead of `Open`.
-
-```pascal
-// INSERT
-procedure TForm1.btnAddClick(Sender: TObject);
-begin
-  adoQryEdit.Close;
-  adoQryEdit.SQL.Text :=
-    'INSERT INTO Students (FirstName, Surname, Grade) ' +
-    'VALUES (' +
-    QuotedStr(edtFirstName.Text) + ', ' +
-    QuotedStr(edtSurname.Text) + ', ' +
-    edtGrade.Text + ')';
-  adoQryEdit.ExecSQL;
-  ShowMessage('Student added!');
-  
-  // Refresh display query
-  adoQryStudents.Close;
-  adoQryStudents.Open;
-end;
-
-// UPDATE
-procedure TForm1.btnUpdateMarkClick(Sender: TObject);
-begin
-  adoQryEdit.Close;
-  adoQryEdit.SQL.Text :=
-    'UPDATE Marks ' +
-    'SET Mark = ' + edtNewMark.Text + ' ' +
-    'WHERE MarkID = ' + edtMarkID.Text;
-  adoQryEdit.ExecSQL;
-  ShowMessage('Mark updated!');
-  adoQryStudents.Close;
-  adoQryStudents.Open;    // refresh
-end;
-
-// DELETE
-procedure TForm1.btnDeleteClick(Sender: TObject);
-begin
-  if MessageDlg('Delete this student?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-  begin
-    adoQryEdit.Close;
-    adoQryEdit.SQL.Text :=
-      'DELETE FROM Students WHERE StudentID = ' +
-      adoQryStudents.FieldByName('StudentID').AsString;
-    adoQryEdit.ExecSQL;
-    adoQryStudents.Close;
-    adoQryStudents.Open;
-  end;
-end;
-```
-
----
-
-## Complete Worked Example
-
-A form with: a DBGrid showing students, a grade filter, and a search by surname.
-
-```pascal
-unit StudentUnit;
-
-interface
-
-uses
-  ADODB, DB, Grids, DBGrids, StdCtrls, Forms, ...;
-
-type
-  TfrmStudents = class(TForm)
-    adoConn: TADOConnection;
-    adoQryStudents: TADOQuery;
-    adoQryEdit: TADOQuery;
-    dsSrc: TDataSource;
-    dbgStudents: TDBGrid;
-    edtSurnameSearch: TEdit;
-    cmbGrade: TComboBox;
-    btnSearch: TButton;
-    btnClear: TButton;
-    lblCount: TLabel;
-    procedure FormCreate(Sender: TObject);
-    procedure btnSearchClick(Sender: TObject);
-    procedure btnClearClick(Sender: TObject);
-    procedure adoQryStudentsAfterOpen(DataSet: TDataSet);
-  end;
-
-implementation
-
-procedure TfrmStudents.FormCreate(Sender: TObject);
-begin
-  adoConn.ConnectionString :=
-    'Provider=Microsoft.ACE.OLEDB.12.0;Data Source=' +
-    ExtractFilePath(Application.ExeName) + 'School.accdb;Persist Security Info=False';
-  adoConn.LoginPrompt := False;
-  adoConn.Open;
-
-  adoQryStudents.Connection := adoConn;
-  adoQryEdit.Connection := adoConn;
-  dsSrc.DataSet := adoQryStudents;
-  dbgStudents.DataSource := dsSrc;
-
-  btnClearClick(nil);   // load all students on startup
-end;
-
-procedure TfrmStudents.btnSearchClick(Sender: TObject);
-var
-  sSQL, sWhere: String;
-begin
-  sSQL := 'SELECT StudentID, FirstName, Surname, Grade FROM Students';
-  sWhere := '';
-
-  if edtSurnameSearch.Text <> '' then
-    sWhere := 'Surname LIKE ' + QuotedStr('%' + edtSurnameSearch.Text + '%');
-
-  if cmbGrade.ItemIndex > 0 then  // 0 = 'All grades'
-  begin
-    if sWhere <> '' then sWhere := sWhere + ' AND ';
-    sWhere := sWhere + 'Grade = ' + cmbGrade.Text;
-  end;
-
-  if sWhere <> '' then
-    sSQL := sSQL + ' WHERE ' + sWhere;
-
-  sSQL := sSQL + ' ORDER BY Surname, FirstName';
-
-  adoQryStudents.Close;
-  adoQryStudents.SQL.Text := sSQL;
-  adoQryStudents.Open;
-end;
-
-procedure TfrmStudents.btnClearClick(Sender: TObject);
-begin
-  edtSurnameSearch.Clear;
-  cmbGrade.ItemIndex := 0;
-  adoQryStudents.Close;
-  adoQryStudents.SQL.Text := 'SELECT * FROM Students ORDER BY Surname, FirstName';
-  adoQryStudents.Open;
-end;
-
-procedure TfrmStudents.adoQryStudentsAfterOpen(DataSet: TDataSet);
-begin
-  lblCount.Caption := 'Records: ' + IntToStr(adoQryStudents.RecordCount);
-end;
-```
-
----
-
-## Common Patterns and Tips
-
-| Pattern | Code |
+| Property | Value to set |
 |---|---|
-| Check if query returned results | `if not adoQry.IsEmpty then ...` |
-| Count records returned | `adoQry.RecordCount` |
-| Get current field value | `adoQry.FieldByName('Field').AsString` |
-| Move to first record | `adoQry.First` |
-| Loop all records | `while not adoQry.EOF do begin ... adoQry.Next; end` |
-| Build relative path | `ExtractFilePath(Application.ExeName) + 'DB.accdb'` |
-| String in SQL | `QuotedStr(sValue)` |
+| `Name` | `adoConn` (or any meaningful name) |
+| `ConnectionString` | Path to your `.mdb` or `.accdb` file — click **Build…** to use the wizard |
+| `LoginPrompt` | `False` — prevents a password dialog appearing at runtime |
+
+**ConnectionString wizard steps:**
+1. Click the `...` button on `ConnectionString`
+2. Choose **Microsoft Jet 4.0 OLE DB Provider** (`.mdb`) or **Microsoft ACE OLEDB 12.0** (`.accdb`)
+3. Browse to the database file
+4. Click **Test Connection** → OK
+
+### TADOQuery
+
+| Property | Value to set |
+|---|---|
+| `Name` | `qryStudents`, `qryActivity`, etc. — prefix `qry` is the convention |
+| `Connection` | Select your `TADOConnection` component from the drop-down |
+| `SQL.Text` | Optionally set a default SELECT at design time |
+
+### TDataSource and TDBGrid (for display)
+
+If you want results to appear automatically in a grid:
+
+| Component | Property | Value |
+|---|---|---|
+| `TDataSource` | `DataSet` | Your `TADOQuery` component |
+| `TDBGrid` | `DataSource` | Your `TDataSource` component |
+
+Once this chain is in place, every time you call `qryStudents.Open` the grid updates automatically.
+
+---
+
+## Running a SELECT Query
+
+Use `Open` to run any SELECT statement. If the query is already open, close it first or you will get a runtime error.
+
+```pascal
+// First time — query is not yet open
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity ORDER BY ActivityName';
+qryActivity.Open;
+```
+
+```pascal
+// Query is already open — close it first
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity WHERE CompanyID = ' + QuotedStr(sID);
+qryActivity.Open;
+```
+
+> [!WARNING] Always close before changing SQL.Text
+> Setting `SQL.Text` on an open query causes a runtime error. Calling `Close` on a query that is already closed is safe — it does nothing.
+
+---
+
+## Reading Field Values
+
+After `Open`, the query is positioned on the first record. Access any field by name using bracket notation or `FieldByName`.
+
+### Bracket notation (most common in exams)
+
+```pascal
+sName    := qryActivity['ActivityName'];
+iTickets := qryActivity['TicketsSold'];
+rCost    := qryActivity['RentingCost'];
+```
+
+No type conversion is needed when assigning to a `String` variable or populating a `ComboBox`. The bracket syntax returns the raw field value.
+
+### FieldByName (also valid)
+
+```pascal
+sName    := qryActivity.FieldByName('ActivityName').AsString;
+iTickets := qryActivity.FieldByName('TicketsSold').AsInteger;
+rCost    := qryActivity.FieldByName('RentingCost').AsFloat;
+```
+
+Both approaches work — use whichever the question or your teacher requires.
+
+---
+
+## Getting a Record Count
+
+`RecordCount` returns the number of rows the query retrieved.
+
+```pascal
+qryLearners.SQL.Text := 'SELECT * FROM tblLearners WHERE Grade = 11';
+qryLearners.Open;
+iNum := qryLearners.RecordCount;
+lblCount.Caption := 'Learners in Grade 11: ' + IntToStr(iNum);
+```
+
+> [!TIP]
+> `RecordCount` is only meaningful after `Open`. Also note that `SELECT COUNT(*) AS Total ...` returns a single row with the count as a field — use `qry['Total']` to read it.
+
+---
+
+## Looping Through Records
+
+Use `First`, `Eof`, and `Next` to visit every record in the result set.
+
+```pascal
+qryActivity.First;
+while not qryActivity.Eof do
+begin
+  lstOutput.Items.Add(qryActivity['ActivityName']);
+  qryActivity.Next;   // MUST be here — moves to the next record
+end;
+```
+
+A more complete example that builds a formatted list:
+
+```pascal
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity ORDER BY ActivityName';
+qryActivity.Open;
+
+lstOutput.Clear;
+qryActivity.First;
+while not qryActivity.Eof do
+begin
+  lstOutput.Items.Add(qryActivity['ActivityName'] + ' — R' + qryActivity['TicketCost']);
+  qryActivity.Next;
+end;
+```
+
+> [!WARNING] Never forget qryActivity.Next
+> Omitting `Next` at the bottom of the loop means `Eof` is never reached — the loop runs forever and freezes the application.
+
+---
+
+## User Input in SQL Strings
+
+Dynamic queries are built by concatenating user input into the SQL string. The quoting rules depend on the data type of the field.
+
+### String field — two valid options
+
+```pascal
+// Option 1: QuotedStr (recommended — handles apostrophes automatically)
+sInput := InputBox('Search', 'Enter company name', '');
+qryCompany.SQL.Text := 'SELECT * FROM tblCompany WHERE CompanyName = ' + QuotedStr(sInput);
+
+// Option 2: manual double-quote delimiters (Access SQL style)
+qryCompany.SQL.Text := 'SELECT * FROM tblCompany WHERE CompanyName = "' + sInput + '"';
+```
+
+### Number field — no quotes at all
+
+```pascal
+// Store as a string to avoid manual conversion — just concatenate directly
+sGrade := InputBox('Grade', 'Enter grade number', '');
+qryLearners.SQL.Text := 'SELECT * FROM tblLearners WHERE Grade = ' + sGrade;
+```
+
+### Date field — wrap in `#` delimiters
+
+```pascal
+sDate := DateToStr(dtpDate.Date);
+qryCompany.SQL.Text := 'SELECT * FROM tblCompany WHERE RegDate < #' + sDate + '#';
+```
+
+### Boolean field — use BoolToStr
+
+```pascal
+bRestricted := chkAgeRestriction.Checked;
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity WHERE AgeRestriction = ' + BoolToStr(bRestricted);
+```
+
+> [!WARNING] Quoting rules summary
+> - **String** → `"value"` or `QuotedStr(value)` — double quotes inside the SQL string, or use `QuotedStr`
+> - **Number** → no quotes — just concatenate the digits
+> - **Date** → `#date#` — hash symbols, not quotes
+> - **Boolean** → no quotes — `True` or `False` as a bare word
+
+---
+
+## INSERT, UPDATE, DELETE
+
+These statements do not return a result set. Use `ExecSQL` instead of `Open`.
+
+### INSERT — adding a new record
+
+```pascal
+qryActivity.SQL.Text := 'INSERT INTO tblActivity (ActivityName, CompanyID, TicketCost) ' +
+                        'VALUES ("' + edtName.Text + '", "' + edtCompID.Text + '", ' +
+                        edtCost.Text + ')';
+qryActivity.ExecSQL;
+```
+
+### UPDATE — changing existing records
+
+```pascal
+qryActivity.SQL.Text := 'UPDATE tblActivity SET TicketCost = ' + edtCost.Text +
+                        ' WHERE ActivityID = ' + QuotedStr(edtID.Text);
+qryActivity.ExecSQL;
+```
+
+### DELETE — removing a record
+
+```pascal
+qryActivity.SQL.Text := 'DELETE FROM tblActivity WHERE ActivityID = ' + QuotedStr(edtID.Text);
+qryActivity.ExecSQL;
+```
+
+### Refreshing the DBGrid after a change
+
+After `ExecSQL`, the grid still shows the old data. Re-run the display query to update it.
+
+```pascal
+// After INSERT/UPDATE/DELETE:
+qryActivity.ExecSQL;
+
+// Refresh the grid
+qryDisplay.Close;
+qryDisplay.SQL.Text := 'SELECT * FROM tblActivity ORDER BY ActivityName';
+qryDisplay.Open;
+```
+
+> [!TIP]
+> It is common practice to use a separate `TADOQuery` for INSERT/UPDATE/DELETE (`qryEdit`) and a different one for the display grid (`qryDisplay`). This keeps them independent and makes refreshing simpler.
+
+---
+
+## Displaying Aggregate Results in a Label
+
+When your SQL uses `COUNT`, `SUM`, `AVG`, `MIN`, or `MAX`, the query returns a single row. Give the aggregate an alias and read it with bracket notation.
+
+```pascal
+// Average ticket cost
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT AVG(TicketCost) AS AvgCost FROM tblActivity';
+qryActivity.Open;
+lblResult.Caption := 'Average cost: ' + FloatToStrF(qryActivity['AvgCost'], ffCurrency, 10, 2);
+```
+
+```pascal
+// Count how many activities have age restriction
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT COUNT(*) AS Total FROM tblActivity WHERE AgeRestriction = True';
+qryActivity.Open;
+lblCount.Caption := 'Restricted activities: ' + IntToStr(qryActivity['Total']);
+```
+
+```pascal
+// Total tickets sold
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT SUM(TicketsSold) AS GrandTotal FROM tblActivity';
+qryActivity.Open;
+lblTotal.Caption := 'Total tickets sold: ' + IntToStr(qryActivity['GrandTotal']);
+```
 
 ---
 
 ## Common Mistakes
 
-| Mistake | Fix |
+| Mistake | What goes wrong | Fix |
+|---|---|---|
+| Setting `SQL.Text` without calling `Close` first | Runtime error — cannot change SQL on an open query | Always call `qry.Close` before changing `SQL.Text` |
+| Using `Open` for INSERT, UPDATE, or DELETE | Runtime error — these statements return no result set | Use `qry.ExecSQL` for all non-SELECT statements |
+| Using `ExecSQL` for SELECT | No records are loaded — the grid stays empty | Use `qry.Open` for SELECT statements |
+| Forgetting `qry.Next` inside the while loop | Infinite loop — the program freezes | `qry.Next` must be the last line inside the `while not qry.Eof` block |
+| Putting string values without quotes in the SQL string | Access rejects the query with a syntax error | Wrap strings in `"..."` or use `QuotedStr()` |
+| Using `'` (single quotes) around string values inside the SQL | Access SQL uses `"` for string delimiters, not `'` | Use double quotes inside the SQL string, or use `QuotedStr` (which adds single quotes Delphi-side but the result is compatible) |
+
+---
+
+## Key Terms
+
+| Term | Meaning |
 |---|---|
-| Call `Open` on INSERT/UPDATE/DELETE | Use `ExecSQL` for non-SELECT queries |
-| Call `ExecSQL` on SELECT | Use `Open` for SELECT queries |
-| Forget `.Close` before changing `SQL.Text` | Always `.Close` before modifying SQL |
-| String value not quoted in SQL | Use `QuotedStr()` for string values |
-| Hardcoded file path | Use `ExtractFilePath(Application.ExeName)` |
-| Infinite loop — forgot `.Next` | Always call `adoQry.Next` inside EOF loop |
-| Case sensitive field names | Match field names exactly as in the database |
+| `TADOConnection` | Component that holds the connection string to the database file |
+| `TADOQuery` | Component that runs SQL and holds the returned records |
+| `SQL.Text` | Property where the SQL statement is stored as a string |
+| `Open` | Method — executes a SELECT query and loads the result set |
+| `ExecSQL` | Method — executes INSERT, UPDATE, or DELETE (no result set returned) |
+| `Close` | Method — closes the query and releases the result set |
+| `RecordCount` | Property — number of rows returned by the last `Open` |
+| `First` | Method — moves the current position to the first record |
+| `Next` | Method — advances the current position by one record |
+| `Eof` | Property — `True` when the current position is past the last record |
+| `FieldByName` | Method — returns a field object by name; use `.AsString`, `.AsInteger`, `.AsFloat` |
+| `QuotedStr` | Delphi function — wraps a string in single quotes for safe SQL embedding |
+| `BoolToStr` | Delphi function — converts a Boolean to `'True'` or `'False'` |
+| `DateToStr` | Delphi function — converts a `TDate` to a string for use in SQL |
+
+---
+
+## Exam Focus
+
+The following question types appear regularly in Grade 12 Paper 1. Practice each one until the pattern is automatic.
+
+**1. Open a query and count the records**
+
+> Write code to count how many activities in `tblActivity` have a ticket cost greater than R50. Display the count in `lblCount`.
+
+```pascal
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity WHERE TicketCost > 50';
+qryActivity.Open;
+lblCount.Caption := IntToStr(qryActivity.RecordCount);
+```
+
+**2. Loop through records and populate a list box**
+
+> Write code to add the name and ticket cost of every activity to `lstActivity`, one per line.
+
+```pascal
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT * FROM tblActivity ORDER BY ActivityName';
+qryActivity.Open;
+
+lstActivity.Clear;
+qryActivity.First;
+while not qryActivity.Eof do
+begin
+  lstActivity.Items.Add(qryActivity['ActivityName'] + ' — R' + qryActivity['TicketCost']);
+  qryActivity.Next;
+end;
+```
+
+**3. Filter using user input from an edit box**
+
+> The user types a company ID into `edtCompID`. Write code to display all activities for that company in the DBGrid (linked to `qryDisplay`).
+
+```pascal
+qryDisplay.Close;
+qryDisplay.SQL.Text := 'SELECT * FROM tblActivity WHERE CompanyID = "' + edtCompID.Text + '"';
+qryDisplay.Open;
+```
+
+**4. Display an aggregate value in a label**
+
+> Write code to calculate and display the average ticket cost of all activities in `lblAverage`.
+
+```pascal
+qryActivity.Close;
+qryActivity.SQL.Text := 'SELECT AVG(TicketCost) AS AvgCost FROM tblActivity';
+qryActivity.Open;
+lblAverage.Caption := FloatToStrF(qryActivity['AvgCost'], ffCurrency, 10, 2);
+```
+
+**5. INSERT a new record and refresh the grid**
+
+> The user fills in `edtName` (activity name) and `edtCost` (ticket cost). Write code to insert the new record and refresh `qryDisplay`.
+
+```pascal
+qryActivity.SQL.Text := 'INSERT INTO tblActivity (ActivityName, TicketCost) ' +
+                        'VALUES ("' + edtName.Text + '", ' + edtCost.Text + ')';
+qryActivity.ExecSQL;
+
+qryDisplay.Close;
+qryDisplay.SQL.Text := 'SELECT * FROM tblActivity ORDER BY ActivityName';
+qryDisplay.Open;
+```

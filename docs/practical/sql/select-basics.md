@@ -1,382 +1,336 @@
 # SQL SELECT — The Basics
 
-SQL (Structured Query Language) is the language used to communicate with a relational database. In Paper 1, you write SQL queries — usually to retrieve, filter, and sort data from one or more tables.
+In Delphi, all SQL runs as a text string assigned to a query component — you build the SQL with Pascal string operations, then open the query to execute it. Clause order is fixed and must follow the mnemonic **SFWGHO**: Select, From, Where, Group By, Having, Order By.
 
-> [!NOTE] Grade 11+
-> Basic SELECT queries are introduced in Grade 11. Grade 12 extends to JOINs, GROUP BY, and aggregate functions. Every Paper 1 paper has at least one SQL section.
-
----
-
-## The SELECT Statement
-
-The core structure of every query:
-
-```sql
-SELECT column1, column2
-FROM TableName
-WHERE condition
-ORDER BY column;
-```
-
-Each clause has a specific role:
-
-| Clause | Purpose | Required? |
-|---|---|---|
-| `SELECT` | Which columns to display | Yes |
-| `FROM` | Which table(s) to query | Yes |
-| `WHERE` | Filter rows (only show matching rows) | No |
-| `ORDER BY` | Sort the results | No |
+> [!NOTE] Grade 11–12
+> Basic SELECT (SELECT, FROM, WHERE, ORDER BY, DISTINCT) is introduced in Grade 11. Grade 12 extends this to joins, aggregate functions, GROUP BY, and HAVING. Every Paper 1 paper has at least one SQL section.
 
 ---
 
-## SELECT All Columns
+## Clause Order — SFWGHO
 
-```sql
-SELECT *
-FROM Students;
-```
+Clauses must appear in this exact order. Writing them out of order causes a syntax error.
 
-`*` means "all columns". Use it when you want every field from the table.
+| # | Clause | Purpose | Required? |
+|---|---|---|---|
+| 1 | `SELECT` | Which fields to display | Yes |
+| 2 | `FROM` | Which table(s) to query | Yes |
+| 3 | `WHERE` | Filter rows by condition | No |
+| 4 | `GROUP BY` | Group rows for aggregation | No |
+| 5 | `HAVING` | Filter groups (used with GROUP BY) | No |
+| 6 | `ORDER BY` | Sort the result set | No |
 
 ---
 
-## SELECT Specific Columns
+## SELECT
+
+### Specific fields
 
 ```sql
 SELECT StudentID, Surname, Mark
-FROM Students;
+FROM tblStudents
 ```
 
-Only the listed columns appear in the result. Order matters — columns display in the order you list them.
+Only the listed fields appear in the result, in the order listed.
+
+### All fields
+
+```sql
+SELECT *
+FROM tblStudents
+```
+
+`*` means every field in the table.
+
+### DISTINCT — remove duplicates
+
+```sql
+SELECT DISTINCT Province
+FROM tblStudents
+```
+
+Returns each unique value of `Province` once. By default, `DISTINCT` sorts the result ascending.
+
+Two fields with DISTINCT finds unique **combinations** of those fields:
+
+```sql
+SELECT DISTINCT Grade, Gender
+FROM tblStudents
+```
+
+Returns each unique Grade + Gender pair — for example, (10, M), (10, F), (11, M) — with no repeated combinations.
+
+---
+
+## ORDER BY
+
+```sql
+-- Sort by mark ascending (lowest first) — ASC is the default and can be omitted
+SELECT Surname, Mark
+FROM tblStudents
+ORDER BY Mark ASC
+
+-- Sort by mark descending (highest first)
+SELECT Surname, Mark
+FROM tblStudents
+ORDER BY Mark DESC
+
+-- Multiple sort fields: sort by grade ascending, then by mark descending within each grade
+SELECT Surname, Grade, Mark
+FROM tblStudents
+ORDER BY Grade ASC, Mark DESC
+```
 
 ---
 
 ## WHERE — Filtering Rows
 
-`WHERE` keeps only rows where the condition is true.
-
-```sql
--- Students who passed (mark >= 50)
-SELECT Surname, Mark
-FROM Students
-WHERE Mark >= 50;
-
--- Students in Grade 11
-SELECT *
-FROM Students
-WHERE Grade = 11;
-
--- Specific student by name
-SELECT *
-FROM Students
-WHERE Surname = 'Coetzee';
-```
-
-> [!WARNING] String Values Need Quotes
-> String values in WHERE conditions must be in **single quotes** (or double quotes — depends on the database):
-> ```sql
-> WHERE Surname = 'Coetzee'    -- correct ✓
-> WHERE Surname = Coetzee      -- error ❌
-> ```
-> Numbers do NOT use quotes:
-> ```sql
-> WHERE Mark >= 50             -- correct ✓
-> WHERE Mark >= '50'           -- wrong ❌
-> ```
-
----
-
-## Relational Operators in WHERE
+### Relational operators
 
 | Operator | Meaning | Example |
 |---|---|---|
 | `=` | Equal to | `WHERE Grade = 11` |
-| `<>` or `!=` | Not equal to | `WHERE Status <> 'Inactive'` |
-| `<` | Less than | `WHERE Mark < 50` |
+| `<>` | Not equal to | `WHERE Status <> "Inactive"` |
 | `>` | Greater than | `WHERE Mark > 80` |
-| `<=` | Less than or equal | `WHERE Age <= 17` |
+| `<` | Less than | `WHERE Mark < 50` |
 | `>=` | Greater than or equal | `WHERE Mark >= 50` |
+| `<=` | Less than or equal | `WHERE Age <= 17` |
 
----
-
-## AND / OR — Multiple Conditions
-
-```sql
--- Both conditions must be true (AND)
-SELECT Surname, Mark, Grade
-FROM Students
-WHERE Grade = 11 AND Mark >= 60;
-
--- Either condition is enough (OR)
-SELECT Surname, Grade
-FROM Students
-WHERE Grade = 10 OR Grade = 12;
-
--- Combining AND and OR — use brackets to be safe
-SELECT *
-FROM Students
-WHERE (Grade = 11 OR Grade = 12) AND Mark >= 50;
-```
-
----
-
-## NOT — Exclude Rows
+### AND / OR / NOT
 
 ```sql
--- Everyone except Grade 10
-SELECT *
-FROM Students
-WHERE NOT Grade = 10;
+-- Both conditions must be true
+WHERE Grade = 11 AND Mark >= 60
 
+-- Either condition is enough
+WHERE Grade = 10 OR Grade = 12
+
+-- Exclude rows
+WHERE NOT Grade = 10
 -- Equivalent:
-WHERE Grade <> 10;
+WHERE Grade <> 10
+
+-- Combining — use brackets to control precedence
+WHERE (Grade = 11 OR Grade = 12) AND Mark >= 50
 ```
+
+### BETWEEN (inclusive on both ends)
+
+```sql
+WHERE Mark BETWEEN 60 AND 79
+```
+
+Equivalent to `WHERE Mark >= 60 AND Mark <= 79`. Both endpoints are included.
+
+### IN — match a list
+
+```sql
+WHERE Grade IN (10, 11, 12)
+
+-- Same as:
+WHERE Grade = 10 OR Grade = 11 OR Grade = 12
+
+-- Works with text values too:
+WHERE Province IN ("GP", "WC", "KZN")
+```
+
+### IS NULL / IS NOT NULL
+
+```sql
+-- Records with no email on file
+WHERE Email IS NULL
+
+-- Records that do have an email
+WHERE Email IS NOT NULL
+```
+
+> [!NOTE]
+> `NULL` means "no value at all". You cannot use `= NULL` — it never matches. Always use `IS NULL` or `IS NOT NULL`.
 
 ---
 
 ## LIKE — Pattern Matching
 
-Used to find values that **match a pattern**. Uses two wildcards:
+`LIKE` finds values that match a pattern. It only works on **Text** and **Date/Time** fields.
 
-| Wildcard | Meaning | Example |
-|---|---|---|
-| `%` | Any number of characters (including none) | `'Co%'` matches `'Coetzee'`, `'Cole'`, `'Co'` |
-| `_` | Exactly ONE character | `'Co_'` matches `'Cox'`, `'Col'` (not `'Coetzee'`) |
+| Wildcard | Meaning |
+|---|---|
+| `%` | Any number of characters (including zero) |
+| `_` | Exactly one character |
+
+### Examples
 
 ```sql
--- Surnames starting with C
-WHERE Surname LIKE 'C%';
+-- Starts with "Car"
+WHERE Name LIKE "Car%"
+-- matches: Carlos, Carla, Car
 
--- Surnames ending in 'ee'
-WHERE Surname LIKE '%ee';
+-- Ends with "GP"
+WHERE Reg LIKE "%GP"
+-- matches: CA 123 GP, GP
 
--- Surnames containing 'Smith' anywhere
-WHERE Surname LIKE '%Smith%';
+-- Contains "bosch" anywhere
+WHERE Suburb LIKE "%bosch%"
+-- matches: Constantiabosch, Boschenmeer, bosch
 
--- Email addresses from school.co.za domain
-WHERE Email LIKE '%@school.co.za';
-
--- ID numbers starting with 01 (born in January)
-WHERE IDNumber LIKE '01%';
+-- Exactly one character before "at"
+WHERE Animal LIKE "_at"
+-- matches: Cat, Bat, Rat  —  does NOT match "Goat" (two chars before "at")
 ```
 
 ---
 
-## BETWEEN — Range Check
+## User Input in Delphi SQL
 
-```sql
--- Marks from 60 to 79 (inclusive of both endpoints)
-WHERE Mark BETWEEN 60 AND 79;
+All SQL runs as a Pascal string. When you insert a variable into that string, the quoting rules depend on the field's data type in the Access database.
 
--- Same as:
-WHERE Mark >= 60 AND Mark <= 79;
+### String fields (Text in Access)
 
--- Dates in a range
-WHERE OrderDate BETWEEN '2024-01-01' AND '2024-12-31';
+Access SQL uses `"` to delimit string values inside the query. In Pascal you build this with either `QuotedStr()` or direct string concatenation.
+
+```pascal
+var
+  sInput: string;
+begin
+  sInput := InputBox('Search', 'Enter surname:', '');
+
+  // Option 1 — QuotedStr wraps the value in double quotes automatically
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname = ' + QuotedStr(sInput);
+
+  // Option 2 — manual double-quote concatenation
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname = "' + sInput + '"';
+
+  // From a component (e.g. TEdit named edtSurname):
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname = ' + QuotedStr(edtSurname.Text);
+
+  qry.Open;
+end;
+```
+
+### Number, Currency, and AutoNumber fields
+
+These field types do not use quotes in the SQL. Store the user's input as a string variable and concatenate it directly — no conversion needed.
+
+```pascal
+var
+  sNum: string;
+  iNum: integer;
+begin
+  // From InputBox — already a string, concatenate directly
+  sNum := InputBox('Search', 'Enter student ID:', '');
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE StudentID = ' + sNum;
+
+  // If you already have an integer variable:
+  iNum := 1042;
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE StudentID = ' + IntToStr(iNum);
+
+  qry.Open;
+end;
+```
+
+### Date/Time fields
+
+Access SQL uses `#` to delimit date values. Convert a date to a string with `DateToStr`, then wrap it in `#`.
+
+```pascal
+var
+  sDate, sDate1, sDate2: string;
+begin
+  // Single date comparison
+  sDate := DateToStr(Date);  // today's date as a string
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE DOB < #' + sDate + '#';
+
+  // From a DateTimePicker component named dtpDOB:
+  sDate := DateToStr(dtpDOB.Date);
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE DOB < #' + sDate + '#';
+
+  // Date range with BETWEEN
+  sDate1 := DateToStr(dtpFrom.Date);
+  sDate2 := DateToStr(dtpTo.Date);
+  qry.SQL.Text := 'SELECT * FROM tblStudents ' +
+                  'WHERE DOB BETWEEN #' + sDate1 + '# AND #' + sDate2 + '#';
+
+  qry.Open;
+end;
+```
+
+### Boolean (Yes/No) fields
+
+Use `BoolToStr` to convert a Boolean value to a string for the SQL.
+
+```pascal
+var
+  bFlag: boolean;
+begin
+  // From a variable:
+  bFlag := chkActive.Checked;
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Active = ' + BoolToStr(bFlag);
+
+  // Directly from a TCheckBox component:
+  qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Active = ' + BoolToStr(chkActive.Checked);
+
+  qry.Open;
+end;
+```
+
+### Accessing field values from a query result
+
+```pascal
+// Read a field value from the current record:
+ShowMessage(qry['Surname']);
+lblMark.Caption := IntToStr(qry['Mark']);
+```
+
+### LIKE with user input
+
+Wrap the wildcard characters inside the string value before concatenating:
+
+```pascal
+// Option 1 — QuotedStr adds the double quotes; % goes inside the value
+qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname LIKE ' +
+                QuotedStr('%' + sInput + '%');
+
+// Option 2 — manual concatenation
+qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname LIKE "%' + sInput + '%"';
 ```
 
 ---
 
-## IN — Match a List of Values
+## Common Runtime Errors
 
-```sql
--- Students in Grade 10, 11, or 12
-WHERE Grade IN (10, 11, 12);
-
--- Same as:
-WHERE Grade = 10 OR Grade = 11 OR Grade = 12;
-
--- Specific surnames
-WHERE Surname IN ('Smith', 'Jones', 'Brown');
-```
+| Error message | Most likely cause |
+|---|---|
+| `Parameter XXX has no default value` | Field name spelled wrong, field does not exist in that table, or a Text field value is missing its quotes |
+| `Cannot find input table XXX` | Table name spelled wrong |
+| `Syntax error in From clause` | Missing `WHERE` keyword before a condition, or missing space in `ORDER BY` / `GROUP BY` |
+| `Syntax error (missing operator) in query expression XXX` | Missing `FROM`, clauses written out of SFWGHO order, missing `AND`/`OR`, or field name needs square brackets |
 
 ---
 
-## IS NULL / IS NOT NULL
+## Key Terms
 
-Used to check for missing values:
-
-```sql
--- Students with no email address on record
-WHERE Email IS NULL;
-
--- Students who DO have an email
-WHERE Email IS NOT NULL;
-```
-
-> [!NOTE] NULL vs Empty String
-> `NULL` means "no value at all" — it is not the same as an empty string `''`. `= NULL` never works in SQL; always use `IS NULL`.
-
----
-
-## ORDER BY — Sorting Results
-
-```sql
--- Sort by mark, lowest first (ASC = ascending, default)
-SELECT Surname, Mark
-FROM Students
-ORDER BY Mark ASC;
-
--- Sort by mark, highest first
-SELECT Surname, Mark
-FROM Students
-ORDER BY Mark DESC;
-
--- Sort by surname alphabetically
-SELECT *
-FROM Students
-ORDER BY Surname;
-
--- Sort by grade, then by mark within each grade
-SELECT Surname, Grade, Mark
-FROM Students
-ORDER BY Grade ASC, Mark DESC;
-```
+| Term | Meaning |
+|---|---|
+| `SELECT` | Specifies which fields to return |
+| `FROM` | Specifies the table(s) to query |
+| `WHERE` | Filters rows; only rows where the condition is true are returned |
+| `ORDER BY` | Sorts the result set; ASC (default) or DESC |
+| `DISTINCT` | Removes duplicate rows from the result; sorts ascending by default |
+| `BETWEEN x AND y` | Range check, inclusive of both x and y |
+| `IN (...)` | Matches any value in the given list |
+| `LIKE` | Pattern match using `%` (any chars) or `_` (one char); Text and Date fields only |
+| `IS NULL` | Tests whether a field has no value |
+| `QuotedStr()` | Delphi function that wraps a string in double quotes for use in Access SQL |
+| `BoolToStr()` | Delphi function that converts a Boolean to its string representation |
+| `DateToStr()` | Delphi function that converts a TDate/TDateTime to a string |
+| SFWGHO | Mnemonic for clause order: Select, From, Where, Group By, Having, Order By |
 
 ---
 
-## Aliases — Rename Columns in Output
-
-```sql
-SELECT Surname AS 'Last Name', Mark AS 'Test Score'
-FROM Students;
-```
-
-The result column headers will show "Last Name" and "Test Score" instead of the field names.
-
----
-
-## SELECT DISTINCT — Remove Duplicate Values
-
-```sql
--- Show each grade only once (no duplicates)
-SELECT DISTINCT Grade
-FROM Students;
-
--- All different cities in the database
-SELECT DISTINCT City
-FROM Customers;
-```
-
----
-
-## Combining Clauses — Full Example
-
-```sql
--- Show the surname and mark of all Grade 11 students
--- who scored between 60 and 100,
--- whose surname starts with 'A' or 'B',
--- sorted by mark descending
-
-SELECT Surname, Mark
-FROM Students
-WHERE Grade = 11
-  AND Mark BETWEEN 60 AND 100
-  AND (Surname LIKE 'A%' OR Surname LIKE 'B%')
-ORDER BY Mark DESC;
-```
-
----
-
-## Common Mistakes
-
-> [!WARNING] Watch Out For
-> 1. **Forgetting quotes around string values** — `WHERE Name = Smith` fails; use `'Smith'`
-> 2. **Using `=` instead of `LIKE`** for pattern matching — `= 'C%'` looks for the literal text `'C%'`
-> 3. **`ORDER BY` before `WHERE`** — clauses must be in order: SELECT → FROM → WHERE → ORDER BY
-> 4. **`= NULL` instead of `IS NULL`** — always `IS NULL` / `IS NOT NULL`
-> 5. **Case sensitivity** — SQL keywords are case-insensitive (`select` = `SELECT`) but string values may be case-sensitive depending on the database
-
----
-
-## Quick Reference — Clause Order
-
-```sql
-SELECT   -- 1. What columns
-FROM     -- 2. Which table
-WHERE    -- 3. Filter rows (optional)
-ORDER BY -- 4. Sort result (optional)
-```
-
-The clauses **must** appear in this order. Swapping them causes a syntax error.
-
----
-
-## Practice Exercises
-
-Use this table for all exercises:
-
-**Table: `Learners`**
-
-| LearnerID | Surname | Grade | Mark | Gender |
-|---|---|---|---|---|
-| 1 | Adams | 10 | 72 | F |
-| 2 | Botha | 11 | 45 | M |
-| 3 | Coetzee | 12 | 88 | M |
-| 4 | Dlamini | 11 | 91 | F |
-| 5 | Evans | 10 | 55 | M |
-| 6 | Fortuin | 12 | 38 | F |
-| 7 | Gordon | 11 | 67 | M |
-
----
-
-**Exercise 1** — Write a query to show all learners in Grade 11 with a mark above 60, sorted by surname.
-
-<details>
-<summary>Show solution</summary>
-
-```sql
-SELECT Surname, Grade, Mark
-FROM Learners
-WHERE Grade = 11 AND Mark > 60
-ORDER BY Surname;
-```
-
-Result: Dlamini (91), Gordon (67)
-</details>
-
----
-
-**Exercise 2** — Show all learners whose surname starts with a letter from A to D, displaying only surname and mark.
-
-<details>
-<summary>Show solution</summary>
-
-```sql
-SELECT Surname, Mark
-FROM Learners
-WHERE Surname LIKE 'A%'
-   OR Surname LIKE 'B%'
-   OR Surname LIKE 'C%'
-   OR Surname LIKE 'D%';
-```
-
-Alternative using BETWEEN on a string (works in some databases):
-```sql
-WHERE Surname BETWEEN 'A' AND 'D~';
-```
-
-Result: Adams, Botha, Coetzee, Dlamini
-</details>
-
----
-
-**Exercise 3** — Show all learners who failed (mark below 50), sorted by mark from lowest to highest.
-
-<details>
-<summary>Show solution</summary>
-
-```sql
-SELECT Surname, Grade, Mark
-FROM Learners
-WHERE Mark < 50
-ORDER BY Mark ASC;
-```
-
-Result: Fortuin (38), Botha (45)
-</details>
-
----
-
-> [!TIP] Exam Tip
-> In Paper 1 SQL questions, read the question twice before writing. Check: (1) which table, (2) which columns to SELECT, (3) what the WHERE condition is exactly, (4) whether an ORDER BY is needed and in which direction. Writing the clauses in order — SELECT, FROM, WHERE, ORDER BY — prevents syntax errors from reordering.
+> [!TIP] Exam Focus
+> Typical exam questions on this topic:
+> 1. Write a SELECT query that filters on a text field entered by the user — you must use `QuotedStr()` or `'"' + var + '"'` correctly.
+> 2. Write a SELECT query that filters on a date range using `BETWEEN #date1# AND #date2#`.
+> 3. Use `LIKE` with `%` to find records where a name **contains** a specific substring entered by the user.
+> 4. Explain what the error "Parameter XXX has no default value" means and give one possible cause.
+> 5. Write a complete Delphi code snippet — `InputBox`, build the SQL string, and call `qry.Open` — for a given scenario involving a number or Boolean field.

@@ -124,7 +124,7 @@ export default defineConfig({
       '/practical/': [
         {
           text: '📐 Algorithms',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: 'Overview', link: '/practical/algorithms/' },
             { text: 'Sequential Algorithms', link: '/practical/algorithms/sequential' },
@@ -135,7 +135,7 @@ export default defineConfig({
         },
         {
           text: '🔵 Delphi Programming',
-          collapsed: false,
+          collapsed: true,
           items: [
             { text: 'Delphi overview', link: '/practical/delphi/' },
             { text: 'Components & IDE', link: '/practical/delphi/components' },
@@ -159,12 +159,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'SQL overview', link: '/practical/sql/' },
-            { text: 'SELECT Basics', link: '/practical/sql/select-basics' },
-            { text: 'SELECT Advanced', link: '/practical/sql/select-advanced' },
-            { text: 'JOINs', link: '/practical/sql/joins' },
+            { text: 'SELECT — Basics', link: '/practical/sql/select-basics' },
+            { text: 'SELECT — Advanced', link: '/practical/sql/select-advanced' },
+            { text: 'Multi-Table Queries', link: '/practical/sql/joins' },
             { text: 'INSERT / UPDATE / DELETE', link: '/practical/sql/data-manipulation' },
-            { text: 'CREATE TABLE (DDL)', link: '/practical/sql/ddl' },
-            { text: 'Databases in Delphi', link: '/practical/sql/delphi-database' },
+            { text: 'SQL in Delphi', link: '/practical/sql/delphi-database' },
           ],
         },
         {
