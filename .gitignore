@@ -1,0 +1,12 @@
+# Claude Code working directories
+.claude/
+
+# Node
+node_modules/
+
+# VitePress cache (build output is kept for deployment)
+docs/.vitepress/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
