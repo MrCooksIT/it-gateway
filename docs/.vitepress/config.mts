@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'IT Gateway',
   description: 'Your complete CAPS Information Technology resource for Grades 10–12',
-  base: '/',
+  base: '/it-gateway/',
 
   head: [
     ['meta', { name: 'theme-color', content: '#0f766e' }],
