@@ -11,11 +11,11 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: { light: '/logo-light.svg', dark: '/logo-dark.svg', alt: 'IT Gateway' },
     siteTitle: 'IT Gateway',
 
     // ─── Top navigation bar ───────────────────────────────────────────────
     nav: [
+      { text: '🏠 Home', link: '/' },
       { text: '📚 Theory', link: '/theory/' },
       { text: '💻 Practical', link: '/practical/' },
       { text: '⚡ Quick Study', link: '/quick-study/' },
@@ -28,17 +28,11 @@ export default defineConfig({
       },
     ],
 
-    // ─── Sidebar per section ──────────────────────────────────────────────
+    // ─── Sidebar ──────────────────────────────────────────────────────────
     sidebar: {
 
       // ── THEORY ────────────────────────────────────────────────────────
       '/theory/': [
-        {
-          text: 'Getting started',
-          items: [
-            { text: 'Theory overview', link: '/theory/' },
-          ],
-        },
         {
           text: '🖥️ Systems Technologies',
           collapsed: false,
@@ -51,7 +45,7 @@ export default defineConfig({
             { text: 'Types of Computers', link: '/theory/systems/types-of-computers' },
             { text: 'Mobile Technologies', link: '/theory/systems/mobile-tech' },
             { text: 'Software', link: '/theory/systems/software' },
-            { text: 'OS & Computer Management', link: '/theory/systems/os-management' },
+            { text: 'OS & File Management', link: '/theory/systems/os-management' },
             { text: 'Data Representation', link: '/theory/systems/data-representation' },
             { text: 'Cloud & Virtualisation', link: '/theory/systems/cloud-virtualisation' },
           ],
@@ -82,8 +76,8 @@ export default defineConfig({
             { text: 'Multimedia & Streaming', link: '/theory/internet/multimedia' },
             { text: 'Website Design', link: '/theory/internet/website-design' },
             { text: 'HTML Basics', link: '/theory/internet/html-basics' },
-            { text: 'Web Scripting (Gr12)', link: '/theory/internet/web-scripting' },
-            { text: 'Online Services', link: '/theory/internet/online-services' },
+            { text: 'Web Scripting', link: '/theory/internet/web-scripting' },
+            { text: 'Online Services & Cookies', link: '/theory/internet/online-services' },
           ],
         },
         {
@@ -129,12 +123,6 @@ export default defineConfig({
       // ── PRACTICAL ─────────────────────────────────────────────────────
       '/practical/': [
         {
-          text: 'Getting started',
-          items: [
-            { text: 'Paper 1 guide', link: '/practical/' },
-          ],
-        },
-        {
           text: '📐 Algorithms',
           collapsed: false,
           items: [
@@ -146,7 +134,7 @@ export default defineConfig({
           ],
         },
         {
-          text: '🔵 Delphi',
+          text: '🔵 Delphi Programming',
           collapsed: false,
           items: [
             { text: 'Delphi overview', link: '/practical/delphi/' },
@@ -167,7 +155,7 @@ export default defineConfig({
           ],
         },
         {
-          text: '🗃️ SQL',
+          text: '🗃️ SQL & Databases',
           collapsed: true,
           items: [
             { text: 'SQL overview', link: '/practical/sql/' },
@@ -194,24 +182,20 @@ export default defineConfig({
       // ── QUICK STUDY ───────────────────────────────────────────────────
       '/quick-study/': [
         {
-          text: 'Quick Study',
-          items: [
-            { text: 'How to use this section', link: '/quick-study/' },
-          ],
-        },
-        {
-          text: 'Theory summaries',
+          text: '📋 Theory Summaries',
+          collapsed: false,
           items: [
             { text: '🖥️ Systems Technologies', link: '/quick-study/systems-summary' },
             { text: '🌐 Networks', link: '/quick-study/networks-summary' },
             { text: '🌍 Internet Technologies', link: '/quick-study/internet-summary' },
             { text: '🗄️ Databases', link: '/quick-study/databases-summary' },
             { text: '⚖️ Social Implications', link: '/quick-study/social-summary' },
-            { text: '🔢 Number Systems', link: '/quick-study/number-conversion' },
+            { text: '🔢 Number Conversion', link: '/quick-study/number-conversion' },
           ],
         },
         {
-          text: 'Practical reference',
+          text: '💻 Practical Reference',
+          collapsed: false,
           items: [
             { text: 'Delphi Syntax', link: '/quick-study/delphi-syntax' },
             { text: 'String Functions', link: '/quick-study/string-functions' },
@@ -229,19 +213,13 @@ export default defineConfig({
 
     // ─── Social / external links ──────────────────────────────────────────
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/acoetzee' },
+      { icon: 'github', link: 'https://github.com/MrCooksIT/it-gateway' },
     ],
 
     // ─── Footer ───────────────────────────────────────────────────────────
     footer: {
       message: 'IT Gateway — CAPS Information Technology for Grades 10–12',
       copyright: '© 2026 A. Coetzee · Marist Brothers College',
-    },
-
-    // ─── Edit link ────────────────────────────────────────────────────────
-    editLink: {
-      pattern: 'https://github.com/acoetzee/it-gateway/edit/main/docs/:path',
-      text: 'Suggest an edit',
     },
 
     // ─── Doc footer nav ───────────────────────────────────────────────────
