@@ -255,25 +255,6 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Overview', link: '/digital-technology/' },
-          {
-            text: 'Grade 8',
-            collapsed: true,
-            items: [
-              { text: 'What is Computing?',      link: '/digital-technology/gr8/what-is-computing' },
-              { text: 'History of Computers',    link: '/digital-technology/gr8/history' },
-              { text: 'Karel Coding (JavaScript)',link: '/digital-technology/gr8/karel-coding' },
-            ],
-          },
-          {
-            text: 'Grade 9',
-            collapsed: true,
-            items: [
-              { text: 'Digital Citizenship',     link: '/digital-technology/gr9/digital-citizenship' },
-              { text: 'Web Design Basics',       link: '/digital-technology/gr9/web-design' },
-              { text: 'HTML & CSS',              link: '/digital-technology/gr9/html-css' },
-              { text: 'Internet & Browsers',     link: '/digital-technology/gr9/internet-browsers' },
-            ],
-          },
         ],
       },
 
