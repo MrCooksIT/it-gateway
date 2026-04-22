@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "IT Gateway"
-  text: "Your complete CAPS IT resource"
+  text: "Your complete IT resource"
   tagline: "Grades 10 · 11 · 12 — everything you need for Paper 1 and Paper 2"
   actions:
     - theme: brand
@@ -60,7 +60,7 @@ features:
     linkText: Practise Algorithms →
 
   - icon: 🔵
-    title: Delphi Programming
+    title: Programming with Delphi
     details: Variables, selection, loops, arrays, string functions, OOP, text files and database connections — with worked examples.
     link: /practical/delphi/
     linkText: Practise Delphi →
