@@ -332,7 +332,7 @@ procedure TForm1.btnStudentClick(Sender: TObject);
 var
   oS : TStudent;
 begin
-  oS := TStudent.Create('Ayden', 11, 87);
+  oS := TStudent.Create('Finn', 11, 87);
 
   redOutput.Lines.Clear;
   redOutput.Lines.Add(oS.Describe);

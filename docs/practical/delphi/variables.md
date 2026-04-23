@@ -173,7 +173,7 @@ The **assignment operator** `:=` copies a value into a variable:
 ```pascal
 iAge  := 16;
 rPrice := 49.99;
-sName  := 'Ayden';
+sName  := 'Finn';
 bPassed := True;
 
 // Right side can be an expression:

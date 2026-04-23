@@ -11,9 +11,9 @@ Before a database can be designed, we need to understand what data actually is �
 
 | Concept | Definition | Example |
 |---|---|---|
-| **Data** | Raw, unprocessed facts — no context or meaning | `85`, `2024-03-15`, `Ayden` |
-| **Information** | Data that has been processed, organised, and given context | "Ayden scored 85% on the March 2024 test" |
-| **Knowledge** | Information applied with understanding and experience | "Ayden is performing well and likely to pass; a 90%+ target is achievable" |
+| **Data** | Raw, unprocessed facts — no context or meaning | `85`, `2024-03-15`, `Finn` |
+| **Information** | Data that has been processed, organised, and given context | "Finn scored 85% on the March 2024 test" |
+| **Knowledge** | Information applied with understanding and experience | "Finn is performing well and likely to pass; a 90%+ target is achievable" |
 
 ```
 Data → [Process] → Information → [Apply experience] → Knowledge
@@ -178,7 +178,7 @@ Collection → Storage → Processing → Analysis → Distribution → Archivin
 
 > [!IMPORTANT] High-Frequency Questions
 >
-> 1. **"What is the difference between data and information?"** — Data is raw unprocessed facts (e.g. "85"); information is data that has been processed and given context (e.g. "Ayden scored 85% in the March test")
+> 1. **"What is the difference between data and information?"** — Data is raw unprocessed facts (e.g. "85"); information is data that has been processed and given context (e.g. "Finn scored 85% in the March test")
 >
 > 2. **"Give FOUR characteristics of quality data"** — accurate, complete, consistent, relevant, timely, valid, unique
 >

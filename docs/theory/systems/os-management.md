@@ -30,10 +30,10 @@ The OS organises all data on storage devices using a **hierarchical folder struc
 |---|---|
 | **File** | A named collection of data stored on a storage device |
 | **Folder/Directory** | A container that organises files |
-| **Path** | Full address of a file: `C:\Users\Ayden\Documents\notes.txt` |
+| **Path** | Full address of a file: `C:\Users\Finn\Documents\notes.txt` |
 | **Extension** | Letters after the dot indicating file type: `.docx`, `.py`, `.txt` |
 | **Root directory** | Top-level folder — `C:\` on Windows, `/` on Linux |
-| **Absolute path** | Full path from root: `C:\Users\Ayden\file.txt` |
+| **Absolute path** | Full path from root: `C:\Users\Finn\file.txt` |
 | **Relative path** | Path relative to current location: `..\file.txt` |
 
 ### Common File Extensions

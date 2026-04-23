@@ -152,14 +152,14 @@ This allows detection of suspicious activity and reconstruction of events after 
 
 **Normal login query:**
 ```sql
-SELECT * FROM Users WHERE Username = 'ayden' AND Password = 'mypassword'
+SELECT * FROM Users WHERE Username = 'finn' AND Password = 'mypassword'
 ```
 
-**Attacker enters in the username field:** `ayden' OR '1'='1`
+**Attacker enters in the username field:** `finn' OR '1'='1`
 
 **Resulting query:**
 ```sql
-SELECT * FROM Users WHERE Username = 'ayden' OR '1'='1' AND Password = ''
+SELECT * FROM Users WHERE Username = 'finn' OR '1'='1' AND Password = ''
 ```
 
 Since `'1'='1'` is always true, this returns all users — bypassing authentication entirely.

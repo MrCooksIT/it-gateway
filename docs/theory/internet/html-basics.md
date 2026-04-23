@@ -163,11 +163,11 @@ Six levels of headings — `<h1>` is most important (page title), `<h6>` is leas
     <th>Mark</th>
   </tr>
   <tr>
-    <td>Ayden</td>
+    <td>Finn</td>
     <td>95</td>
   </tr>
   <tr>
-    <td>Luca</td>
+    <td>Jake</td>
     <td>88</td>
   </tr>
 </table>
