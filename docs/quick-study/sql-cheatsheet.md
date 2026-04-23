@@ -85,27 +85,20 @@ ORDER BY Grade;
 
 ---
 
-## INNER JOIN (Two Tables)
+## Multi-Table Query (Two Tables)
+
+In Microsoft Access via Delphi, list both tables in FROM and define the link in WHERE:
 
 ```sql
-SELECT t1.column, t2.column
-FROM Table1 AS t1
-INNER JOIN Table2 AS t2 ON t1.KeyColumn = t2.KeyColumn
-WHERE condition;
+SELECT tblStudents.Surname, tblMarks.Subject, tblMarks.Mark
+FROM tblStudents, tblMarks
+WHERE tblStudents.StudentID = tblMarks.StudentID
+AND tblMarks.Mark >= 50
+ORDER BY tblStudents.Surname;
 ```
 
-**Real example:**
-```sql
-SELECT Learners.Surname, Subjects.SubjectName, Marks.Mark
-FROM Learners
-INNER JOIN Marks ON Learners.LearnerID = Marks.LearnerID
-INNER JOIN Subjects ON Marks.SubjectID = Subjects.SubjectID
-WHERE Marks.Mark >= 50
-ORDER BY Learners.Surname;
-```
-
-> `INNER JOIN` returns rows where there is a **match in BOTH tables**.  
-> `LEFT JOIN` returns ALL rows from the left table + matched rows from right (unmatched = NULL).
+- Always prefix field names with the table name when the same field exists in both tables.
+- The relationship condition (`tblStudents.StudentID = tblMarks.StudentID`) must come first in WHERE; add extra filters with AND.
 
 ---
 
@@ -192,8 +185,9 @@ CREATE TABLE Learners (
 
 **Top N records:**
 ```sql
+-- Microsoft Access (used in CAPS exam):
 SELECT TOP 5 Surname, Mark FROM Learners ORDER BY Mark DESC;
--- or in MySQL/SQLite:
+-- MySQL/SQLite use LIMIT instead of TOP:
 SELECT Surname, Mark FROM Learners ORDER BY Mark DESC LIMIT 5;
 ```
 
@@ -209,13 +203,6 @@ SELECT Surname, COUNT(*) AS Occurrences
 FROM Learners
 GROUP BY Surname
 HAVING COUNT(*) > 1;
-```
-
-**Students with above-average mark:**
-```sql
-SELECT Surname, Mark
-FROM Learners
-WHERE Mark > (SELECT AVG(Mark) FROM Learners);
 ```
 
 ---

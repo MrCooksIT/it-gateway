@@ -15,7 +15,7 @@ SQL is the language used to interact with relational databases. In the IT examin
 |---|---|
 | [SELECT Basics](./select-basics) | SELECT, FROM, WHERE, ORDER BY, DISTINCT — retrieving and filtering data |
 | [SELECT Advanced](./select-advanced) | Aggregate functions (COUNT, SUM, AVG, MIN, MAX), GROUP BY, HAVING |
-| [Joins](./joins) | INNER JOIN, LEFT JOIN — combining data from multiple tables |
+| [Joins](./joins) | Multi-table queries — querying data from two tables using WHERE |
 | [Data Manipulation (DML)](./data-manipulation) | INSERT INTO, UPDATE, DELETE — adding and changing records |
 | [DDL](./ddl) | CREATE TABLE, ALTER TABLE, DROP TABLE — defining database structure |
 | [Delphi & Databases](./delphi-database) | Connecting Delphi to a database, TADOConnection, TADOQuery, displaying results |
@@ -33,4 +33,4 @@ SQL is assessed in **Paper 1** across Grades 10–12 under the Data & Informatio
 
 - **Grade 10** — Basic SELECT with WHERE and ORDER BY.
 - **Grade 11** — Aggregate functions, GROUP BY, HAVING, simple joins.
-- **Grade 12** — Complex joins, DML (INSERT/UPDATE/DELETE), DDL, Delphi database integration.
+- **Grade 12** — Multi-table queries, DML (INSERT/UPDATE/DELETE), Delphi database integration.
