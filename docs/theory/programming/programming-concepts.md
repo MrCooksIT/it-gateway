@@ -117,6 +117,54 @@ end;
 - Easy to handle multiple input types simultaneously
 - Code is modular — each event handler is independent
 
+### Relationship diagram
+
+The diagram below shows how all the parts of an event-driven program connect:
+
+```mermaid
+flowchart TD
+    subgraph OOP["OOP Structure"]
+        direction TB
+        CLASS["Class"]
+        OBJ["Object"]
+        COMP["Component"]
+        CLASS -->|defines an| OBJ
+        OBJ -->|is an instance of a| CLASS
+        OBJ -->|is a special type of| COMP
+    end
+
+    subgraph AB["  "]
+        ATTR["Attributes"]
+        BEH["Behaviour"]
+    end
+
+    COMP -->|has| AB
+
+    PROP["Properties"]
+    EV["Events"]
+    EH["Event handlers"]
+    METH["Methods"]
+    ACTIONS["Actions"]
+    PROC["Procedures"]
+    PF["Procedures or Functions"]
+
+    AB -->|described through| PROP
+    AB -->|described through| EV
+    AB -->|linked to| EH
+    EH -->|implemented through| PROC
+    METH -->|implemented through| PF
+    EV -->|triggers| ACTIONS
+
+    subgraph SRC["Event Sources"]
+        USER["User\n• Clicks a button\n• Closes an application\n• Selects an item"]
+        OS["Operating System\n• Date or time change\n• Error messages\n• Printer not on"]
+        OTHER["Other Applications\n• Software drivers\n• Application software"]
+    end
+
+    SRC -->|perform| ACTIONS
+    SRC -->|trigger| EV
+```
+
 ---
 
 ## Object-Oriented Programming (OOP)

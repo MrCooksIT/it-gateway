@@ -22,6 +22,36 @@ end;
 
 ---
 
+## Variable Overview
+
+A variable has several key properties — where it is stored, what it can hold, and where in the program it can be used:
+
+```mermaid
+mindmap
+  root((Variable))
+    Name
+      Refers to the address of the variable in memory
+      There are rules for naming variables
+    Scope
+      Unit scope
+        Class scope
+          Method scope
+      Accessible by different parts of a program depending on where it was declared
+    Memory Address
+      RAM address represented in hexadecimal
+      Different variables are stored at different locations in memory
+    Size in bytes
+      Different variables take up a different number of bytes in memory
+    Value
+      The value must be compatible with the data type of the variable
+    Data Type
+      Integer, Real, Char, String, Boolean, etc.
+    Duration
+      The lifetime of a variable
+```
+
+---
+
 ## Delphi Data Types
 
 ### Integer Types

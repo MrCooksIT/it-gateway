@@ -44,6 +44,25 @@ If you want results to appear automatically in a grid:
 
 Once this chain is in place, every time you call `qryStudents.Open` the grid updates automatically.
 
+### Component chain diagram
+
+```mermaid
+flowchart TD
+    DB[("Access database\non disk\n.mdb / .accdb")]
+
+    DB <-->|ConnectionString| CONN
+
+    subgraph DM["Data Module — components not visible at runtime"]
+        CONN["TADOConnection\nconStudents\nLoginPrompt: False"]
+        QRY["TADOQuery\nqryStudents\nConnection: conStudents"]
+        DSR["TDataSource\ndsrStudents\nDataSet: qryStudents"]
+        CONN --> QRY
+        QRY --> DSR
+    end
+
+    DSR --> GRID["TDBGrid on the Form\nDataSource: dsrStudents\nData-aware control — updates automatically"]
+```
+
 ---
 
 ## Running a SELECT Query
