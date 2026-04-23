@@ -1,5 +1,8 @@
 # DDL — Creating and Defining Tables
 
+> [!WARNING] Not Assessed in CAPS Grade 12 IT Paper 1
+> DDL commands (CREATE TABLE, ALTER TABLE, DROP TABLE, CREATE INDEX, CREATE VIEW) are **not** part of the CAPS Grade 10–12 IT Paper 1 practical examination. This page is provided for general reference only. Focus your exam preparation on SELECT, DML (INSERT/UPDATE/DELETE), and multi-table queries instead.
+
 Before you can store any data, you need to define the structure. Data Definition Language (DDL) is the set of SQL commands that create, modify, and delete database objects — tables, indexes, and constraints.
 
 ---

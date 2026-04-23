@@ -33,22 +33,22 @@ AS [Amount Incl VAT]
 ### Examples
 
 ```sql
--- VAT amount on each activity
-SELECT Activity, RentingCost, (RentingCost * 15 / 100) AS VAT
-FROM tblActivity
+-- VAT amount on each product
+SELECT ProductName, Price, (Price * 15 / 100) AS VAT
+FROM tblProducts
 
--- Cost including VAT (square brackets because heading has spaces)
-SELECT Cost, (Cost + Cost * 15 / 100) AS [Amount Incl VAT]
-FROM tblLearners
+-- Price including VAT (square brackets because heading has spaces)
+SELECT ProductName, Price, (Price + Price * 15 / 100) AS [Amount Incl VAT]
+FROM tblProducts
 
--- Average percentage — repeat the calculation in WHERE to filter on it
-SELECT NAME, ROUND((Mark1 + Mark2) / 300 * 100) AS Average
-FROM tblLearners
-WHERE (Mark1 + Mark2) / 300 * 100 < 50
+-- Student's percentage out of 300, filtered to below 50
+SELECT Surname, Mark, (Mark / 300 * 100) AS Percentage
+FROM tblStudents
+WHERE (Mark / 300 * 100) < 50
 ```
 
 > [!IMPORTANT] Repeat the Calculation
-> SQL does not allow you to reference an alias (like `Average`) in WHERE or ORDER BY. You must **repeat the full calculation** in the WHERE clause if filtering on it, and again in ORDER BY if sorting by it.
+> SQL does not allow you to reference an alias (like `Percentage`) in WHERE or ORDER BY. You must **repeat the full calculation** in the WHERE clause if filtering on it, and again in ORDER BY if sorting by it.
 
 ---
 
@@ -62,19 +62,18 @@ These functions work on numeric fields or expressions.
 | `Round(F)` | (same rule, even target) | `Round(121.5)` | `122` |
 | `Round(F, Y)` | Rounds F to Y decimal places | `Round(122.888, 1)` | `122.9` |
 | `Int(F)` | Returns the integer part only — does not round, just truncates | `Int(122.8)` | `122` |
-| `ABS(F)` | Returns the positive (absolute) value of F | `ABS(15000 - 20000)` | `5000` |
 
 ### Examples in queries
 
 ```sql
--- Round the average percentage to 1 decimal place
-SELECT ROUND(AVG(percentage), 1) AS Average
-FROM tblLearners
+-- Round the average mark to 1 decimal place for Grade 11 students
+SELECT ROUND(AVG(Mark), 1) AS Average
+FROM tblStudents
 WHERE Grade = 11
 
--- Show the absolute difference between two costs
-SELECT Activity, ABS(CostA - CostB) AS Difference
-FROM tblActivity
+-- Truncate a calculated percentage to a whole number (no rounding)
+SELECT Surname, INT(Mark / 300 * 100) AS Percentage
+FROM tblStudents
 ```
 
 ---
@@ -85,34 +84,27 @@ These functions work on text fields but can also be applied to other data types.
 
 | Function | Description | Example | Result |
 |---|---|---|---|
-| `Left(F, Y)` | First Y characters from the left | `Left('Ayden', 3)` | `Ayd` |
-| `Right(F, Y)` | Last Y characters from the right | `Right('Ayden', 2)` | `en` |
-| `MID(F, X, Y)` | Y characters starting at position X | `MID('Ayden', 2, 3)` | `yde` |
-| `LEN(F)` | Total number of characters (including spaces) | `LEN('Ayden Cooks')` | `11` |
-| `F & F` | Concatenate (join) fields or strings into one | `'Ayden' & ' ' & 'Cooks'` | `Ayden Cooks` |
-| `INStr(F, "Z")` | Position of the first occurrence of Z in F. Returns 0 if not found. Not case-sensitive. | `INSTR('Ayden', 'E')` | `4` |
-| `UCase(F)` | Converts all characters to uppercase | `UCase(LEFT('ayden', 1))` | `A` |
-| `LCase(F)` | Converts all characters to lowercase | `LCase('AYDEN')` | `ayden` |
+| `Left(F, Y)` | First Y characters from the left | `Left('Sarah', 3)` | `Sar` |
+| `Right(F, Y)` | Last Y characters from the right | `Right('Sarah', 2)` | `ah` |
+| `MID(F, X, Y)` | Y characters starting at position X | `MID('Sarah', 2, 3)` | `ara` |
+| `LEN(F)` | Total number of characters (including spaces) | `LEN('Sarah Botha')` | `11` |
+| `F & F` | Concatenate (join) fields or strings into one | `'Sarah' & ' ' & 'Botha'` | `Sarah Botha` |
 
 ### Examples in queries
 
 ```sql
--- Show first 3 characters of each learner's name
-SELECT Left(NAME, 3) AS Initials
-FROM tblLearners
+-- Show first 3 characters of each student's surname
+SELECT Left(Surname, 3) AS Initial
+FROM tblStudents
 
 -- Combine first name and surname into one column
 SELECT FirstName & ' ' & Surname AS [Full Name]
-FROM tblLearners
+FROM tblStudents
 
--- Filter learners whose email contains '@'
-SELECT NAME, Email
-FROM tblLearners
-WHERE INSTR(Email, '@') > 0
-
--- Show names in all caps
-SELECT UCase(Surname) AS Surname
-FROM tblLearners
+-- Students whose surname is exactly 5 characters long
+SELECT Surname
+FROM tblStudents
+WHERE LEN(Surname) = 5
 ```
 
 ---
@@ -149,27 +141,27 @@ FROM tblLearners
 ### Examples in queries
 
 ```sql
--- Calculate each learner's age from their date of birth
-SELECT NAME, Round((Date() - DOB) / 365.25) AS Age
-FROM tblLearners
+-- Calculate each student's age from their date of birth
+SELECT Surname, Round((Date() - DOB) / 365.25) AS Age
+FROM tblStudents
 
--- Learners born in the year 2008
-SELECT NAME, DOB
-FROM tblLearners
+-- Students born in the year 2008
+SELECT Surname, DOB
+FROM tblStudents
 WHERE YEAR(DOB) = 2008
 
--- Learners born in September (month 9)
-SELECT NAME, DOB
-FROM tblLearners
+-- Students born in September (month 9)
+SELECT Surname, DOB
+FROM tblStudents
 WHERE MONTH(DOB) = 9
 
--- Display cost as currency
-SELECT Activity, Format(RentingCost, "Currency") AS [Rental Cost]
-FROM tblActivity
+-- Display price as currency
+SELECT ProductName, Format(Price, "Currency") AS [Product Price]
+FROM tblProducts
 
 -- Display current time alongside each record
 SELECT *, Format(Now(), "hh:mm") AS [Time Now]
-FROM tblActivity
+FROM tblStudents
 ```
 
 ---
@@ -190,21 +182,21 @@ Aggregate functions operate on a **set of rows** and return a **single result**.
 ### Using aggregate functions
 
 ```sql
--- Total number of learners
-SELECT Count(*) AS [Total Learners]
-FROM tblLearners
+-- Total number of students
+SELECT Count(*) AS [Total Students]
+FROM tblStudents
 
--- Count only learners who have a cell number on record
+-- Count only students who have a cell number on record
 SELECT Count(CellNum) AS [Have Cell]
-FROM tblLearners
+FROM tblStudents
 
 -- Highest and lowest marks
 SELECT Max(Mark) AS Highest, Min(Mark) AS Lowest
-FROM tblLearners
+FROM tblStudents
 
--- Sum of all rental costs
-SELECT Sum(RentingCost) AS [Total Cost]
-FROM tblActivity
+-- Total value of all products
+SELECT Sum(Price) AS [Total Value]
+FROM tblProducts
 ```
 
 ### Calculations inside aggregate functions
@@ -212,9 +204,9 @@ FROM tblActivity
 You can nest a calculation inside an aggregate function:
 
 ```sql
--- Average percentage rounded to 1 decimal, for Grade 11 only
-SELECT ROUND(AVG(percentage), 1) AS Average
-FROM tblLearners
+-- Average mark rounded to 1 decimal, for Grade 11 only
+SELECT ROUND(AVG(Mark), 1) AS Average
+FROM tblStudents
 WHERE Grade = 11
 ```
 
@@ -238,16 +230,16 @@ lblOutput.Caption := FloatToStrF(qry['Owing'], ffCurrency, 10, 2);
 `GROUP BY` collects all rows that share the same value in a column and collapses them into one row per group. You then apply aggregate functions to each group.
 
 ```sql
--- Count how many learners are in each grade
-SELECT Grade, Count(*) AS [Number of Learners]
-FROM tblLearners
+-- Count how many students are in each grade
+SELECT Grade, Count(*) AS [Number of Students]
+FROM tblStudents
 GROUP BY Grade
 
--- Total ticket sales per company
-SELECT CompanyID, Sum(TicketsSold) AS [Total Tickets]
-FROM tblActivity
-GROUP BY CompanyID
-ORDER BY CompanyID
+-- Average mark per subject
+SELECT Subject, Round(Avg(Mark), 1) AS [Average Mark]
+FROM tblMarks
+GROUP BY Subject
+ORDER BY Subject
 ```
 
 ### HAVING
@@ -260,15 +252,15 @@ ORDER BY CompanyID
 - You can use aggregate functions inside `HAVING`.
 
 ```sql
--- Only show companies that sold more than 3 activities
-SELECT CompanyID, Count(*) AS Activities
-FROM tblActivity
-GROUP BY CompanyID
+-- Only show subjects with more than 3 mark entries
+SELECT Subject, Count(*) AS [Entries]
+FROM tblMarks
+GROUP BY Subject
 HAVING Count(*) > 3
 
 -- Grades where the average mark is 60 or above
 SELECT Grade, Round(Avg(Mark), 1) AS Average
-FROM tblLearners
+FROM tblStudents
 GROUP BY Grade
 HAVING Avg(Mark) >= 60
 ORDER BY Average DESC
@@ -298,10 +290,10 @@ WHERE tblA.KeyField = tblB.KeyField
 ### Full example
 
 ```sql
-SELECT tblCompany.CompanyName, tblActivity.Activity, tblActivity.TicketsSold
-FROM tblCompany, tblActivity
-WHERE tblCompany.CompanyID = tblActivity.CompanyID
-  AND tblActivity.TicketsSold < 100
+SELECT tblStudents.Surname, tblMarks.Subject, tblMarks.Mark
+FROM tblStudents, tblMarks
+WHERE tblStudents.StudentID = tblMarks.StudentID
+  AND tblMarks.Mark < 50
 ```
 
 ### Key points
@@ -325,7 +317,7 @@ You often need to fill a ComboBox, ListBox, or RadioGroup with values from the d
 3. Loop through every record until end-of-file: `while not qry.Eof do begin ... end`.
 4. Inside the loop, add the field value to the control: `cmbXXX.Items.Add(qry['FieldName'])`. No type conversion is needed — `Items.Add` accepts the value directly.
 5. After adding, call `qry.Next` to advance to the next record.
-6. After the loop, set a prompt text: `cmbXXX.Text := 'Select a company'`.
+6. After the loop, set a prompt text: `cmbXXX.Text := 'Select a grade'`.
 
 > [!WARNING] Always include qry.Next inside the loop
 > If you forget `qry.Next`, the record pointer never advances and the loop runs forever, freezing the application. This is a common exam mistake.
@@ -333,24 +325,24 @@ You often need to fill a ComboBox, ListBox, or RadioGroup with values from the d
 ### Worked example
 
 ```pascal
-procedure TfrmFestival.FormActivate(Sender: TObject);
+procedure TfrmStudents.FormActivate(Sender: TObject);
 begin
-  qryFestival.SQL.Text := 'SELECT DISTINCT CompanyID FROM tblActivity ORDER BY CompanyID';
-  qryFestival.Open;
-  qryFestival.First;
-  while not qryFestival.Eof do
+  qryData.SQL.Text := 'SELECT DISTINCT Grade FROM tblStudents ORDER BY Grade';
+  qryData.Open;
+  qryData.First;
+  while not qryData.Eof do
   begin
-    cmbCompany.Items.Add(qryFestival['CompanyID']);
-    qryFestival.Next;
+    cmbGrade.Items.Add(qryData['Grade']);
+    qryData.Next;
   end;
-  cmbCompany.Text := 'Select a company';
+  cmbGrade.Text := 'Select a grade';
 end;
 ```
 
 ### Checking how many items loaded
 
 ```pascal
-ShowMessage(IntToStr(cmbCompany.Items.Count) + ' companies loaded');
+ShowMessage(IntToStr(cmbGrade.Items.Count) + ' grades loaded');
 ```
 
 `Items.Count` returns the number of items currently in the ComboBox.
@@ -384,12 +376,12 @@ ShowMessage(IntToStr(cmbCompany.Items.Count) + ' companies loaded');
 >
 > Work through these exam-style questions:
 >
-> **1.** Write a query that displays each learner's name and their mark as a percentage of 300, rounded to 1 decimal place, for all learners whose percentage is below 50. Label the column `Percentage`.
+> **1.** Write a query that displays each student's surname and their mark as a percentage of 300, rounded to 1 decimal place, for all students whose percentage is below 50. Label the column `Percentage`.
 >
-> **2.** Write a query that shows each company name and the total tickets sold by that company, but only for companies that sold more than 500 tickets in total. Use two tables: `tblCompany` (fields: `CompanyID`, `CompanyName`) and `tblActivity` (fields: `CompanyID`, `TicketsSold`).
+> **2.** Write a query that shows each student's surname and their total marks across all subjects, but only for students who have a total above 400. Use two tables: `tblStudents` (fields: `StudentID`, `Surname`) and `tblMarks` (fields: `StudentID`, `Mark`).
 >
-> **3.** Write a query that displays each learner's full name (first name and surname joined with a space) and their date of birth formatted as `dd mmm yyyy`. Label the columns `[Full Name]` and `[Date of Birth]`.
+> **3.** Write a query that displays each student's full name (first name and surname joined with a space) and their date of birth formatted as `dd mmm yyyy`. Label the columns `[Full Name]` and `[Date of Birth]`.
 >
-> **4.** Write the Delphi code for a `FormActivate` event that populates a ComboBox called `cmbGrade` with all distinct grade values from `tblLearners`, ordered by grade, with a prompt of `'Select a grade'`.
+> **4.** Write the Delphi code for a `FormActivate` event that populates a ComboBox called `cmbGrade` with all distinct grade values from `tblStudents`, ordered by grade, with a prompt of `'Select a grade'`.
 >
-> **5.** Write a query that counts how many learners were born in each year, showing only years that have more than 5 learners. Label the columns `BirthYear` and `Count`. Sort from most to least learners.
+> **5.** Write a query that counts how many students were born in each year, showing only years that have more than 5 students. Label the columns `BirthYear` and `Count`. Sort from most to least students.

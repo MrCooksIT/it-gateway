@@ -209,39 +209,23 @@ HAVING AVG(Mark) > 70;
 
 ---
 
-## JOINs — Combining Tables
+## Multi-Table Queries — Combining Tables
 
-A **JOIN** combines rows from two or more tables based on a related column.
+A multi-table query retrieves data from two tables at once by linking them on a common field (primary key / foreign key pair).
 
-### INNER JOIN
-Returns only rows where there is a match in both tables.
-
-```sql
-SELECT s.Surname, s.Grade, m.Mark
-FROM Students AS s
-INNER JOIN Marks AS m ON s.StudentID = m.StudentID
-WHERE m.Mark >= 50
-ORDER BY s.Surname;
-```
-
-### LEFT JOIN
-Returns all rows from the left table, and matching rows from the right table.  
-If no match, right-table columns are NULL.
+> [!IMPORTANT] Access / Delphi Syntax
+> In Microsoft Access accessed through Delphi ADO, list both tables in `FROM` separated by a comma and define the link in `WHERE`. Do **not** use `INNER JOIN` or `LEFT JOIN` syntax in Paper 1.
 
 ```sql
-SELECT s.Surname, m.Mark
-FROM Students AS s
-LEFT JOIN Marks AS m ON s.StudentID = m.StudentID;
--- Shows all students even if they have no marks
+SELECT tblStudents.Surname, tblMarks.Subject, tblMarks.Mark
+FROM tblStudents, tblMarks
+WHERE tblStudents.StudentID = tblMarks.StudentID
+AND tblMarks.Mark >= 50
+ORDER BY tblStudents.Surname;
 ```
 
-### JOIN with multiple tables:
-```sql
-SELECT s.Surname, sub.SubjectName, m.Mark
-FROM Students AS s
-INNER JOIN Marks AS m ON s.StudentID = m.StudentID
-INNER JOIN Subjects AS sub ON m.SubjectCode = sub.SubjectCode;
-```
+> [!NOTE] Standard SQL vs Access/Delphi
+> Standard SQL (MySQL, SQL Server, PostgreSQL) uses `INNER JOIN … ON` and `LEFT JOIN … ON` syntax. These are equivalent in logic to the WHERE-based method above, but are not used in the CAPS Paper 1 exam environment. `INNER JOIN` returns only matching rows from both tables; `LEFT JOIN` returns all rows from the left table plus matched rows from the right (unmatched = NULL).
 
 ---
 
@@ -250,7 +234,7 @@ INNER JOIN Subjects AS sub ON m.SubjectCode = sub.SubjectCode;
 ### INSERT — Add new rows:
 ```sql
 INSERT INTO Students (FirstName, Surname, Grade)
-VALUES ('Ayden', 'Coetzee', 12);
+VALUES ('Thabo', 'Nkosi', 12);
 ```
 
 ### UPDATE — Modify existing rows:
@@ -262,7 +246,7 @@ WHERE StudentID = 1001;
 -- Update multiple fields:
 UPDATE Students
 SET Grade = 12, Active = TRUE
-WHERE Surname = 'Coetzee';
+WHERE Surname = 'Nkosi';
 ```
 
 ### DELETE — Remove rows:
@@ -288,37 +272,11 @@ Clauses must appear in this exact order:
 ```sql
 SELECT     -- what to retrieve
 FROM       -- which table(s)
-[JOIN]     -- join conditions
-WHERE      -- filter rows
+WHERE      -- filter rows (also defines table links for multi-table queries)
 GROUP BY   -- group rows
 HAVING     -- filter groups
 ORDER BY   -- sort results
 ```
-
----
-
-## DDL — Creating Tables
-
-```sql
-CREATE TABLE Students (
-  StudentID   INTEGER         PRIMARY KEY,
-  FirstName   VARCHAR(50)     NOT NULL,
-  Surname     VARCHAR(50)     NOT NULL,
-  Grade       INTEGER         NOT NULL,
-  Email       VARCHAR(100),
-  DateOfBirth DATE
-);
-```
-
-**Common constraints:**
-| Constraint | Effect |
-|---|---|
-| `PRIMARY KEY` | Unique, not null |
-| `NOT NULL` | Field cannot be empty |
-| `UNIQUE` | All values must be different |
-| `DEFAULT value` | Provide default if not specified |
-| `CHECK (condition)` | Value must satisfy condition |
-| `FOREIGN KEY` | References PK in another table |
 
 ---
 
@@ -332,9 +290,7 @@ CREATE TABLE Students (
 | **ORDER BY** | Clause sorting results |
 | **GROUP BY** | Clause grouping rows for aggregate calculations |
 | **HAVING** | Clause filtering groups (after GROUP BY) |
-| **JOIN** | Combining rows from multiple tables |
-| **INNER JOIN** | Returns only matching rows from both tables |
-| **LEFT JOIN** | Returns all left-table rows; NULLs for non-matches |
+| **Multi-table query** | A query that retrieves data from two tables linked by a primary/foreign key relationship |
 | **Aggregate function** | Calculates a single value from multiple rows (COUNT, SUM, AVG) |
 | **INSERT** | Adds new rows to a table |
 | **UPDATE** | Modifies existing rows |
@@ -350,7 +306,7 @@ CREATE TABLE Students (
 >
 > 2. **"What is the purpose of GROUP BY?"** — Groups rows with the same value in specified columns, allowing aggregate functions (COUNT, AVG, SUM) to be applied per group
 >
-> 3. **"What is the difference between INNER JOIN and LEFT JOIN?"** — INNER JOIN returns only matching rows from both tables; LEFT JOIN returns all rows from the left table plus matching rows from the right (non-matches are NULL)
+> 3. **"How do you query data from two tables in Microsoft Access via Delphi?"** — List both tables in the FROM clause separated by a comma, then define the link between them in the WHERE clause using `table1.PrimaryKey = table2.ForeignKey`; add extra conditions with AND
 >
 > 4. **"Write the correct order of SQL clauses"** — SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY
 >
