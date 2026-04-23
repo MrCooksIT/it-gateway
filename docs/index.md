@@ -67,7 +67,7 @@ features:
 
   - icon: 🗃️
     title: SQL & Quick Study
-    details: SELECT, JOINs, INSERT/UPDATE/DELETE, DDL — plus cheat sheets and syntax cards for last-minute revision.
+    details: SELECT, JOINs, INSERT/UPDATE/DELETE — plus cheat sheets and syntax cards for last-minute revision.
     link: /practical/sql/
     linkText: Practise SQL →
 ---
