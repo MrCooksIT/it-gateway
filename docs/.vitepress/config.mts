@@ -196,7 +196,6 @@ export default withMermaid(defineConfig({
               { text: 'SELECT — Advanced', link: '/practical/sql/select-advanced', badge: { type: 'info', text: 'Gr 11' } },
               { text: 'Multi-Table Queries', link: '/practical/sql/joins', badge: { type: 'info', text: 'Gr 11' } },
               { text: 'INSERT / UPDATE / DELETE', link: '/practical/sql/data-manipulation', badge: { type: 'warning', text: 'Gr 12' } },
-              { text: 'DDL (CREATE / ALTER / DROP)', link: '/practical/sql/ddl', badge: { type: 'warning', text: 'Gr 12' } },
               { text: 'SQL in Delphi', link: '/practical/sql/delphi-database', badge: { type: 'warning', text: 'Gr 12' } },
             ],
           },
