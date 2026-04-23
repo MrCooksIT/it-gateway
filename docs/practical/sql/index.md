@@ -17,7 +17,6 @@ SQL is the language used to interact with relational databases. In the IT examin
 | [SELECT Advanced](./select-advanced) | Aggregate functions (COUNT, SUM, AVG, MIN, MAX), GROUP BY, HAVING |
 | [Joins](./joins) | Multi-table queries — querying data from two tables using WHERE |
 | [Data Manipulation (DML)](./data-manipulation) | INSERT INTO, UPDATE, DELETE — adding and changing records |
-| [DDL](./ddl) | CREATE TABLE, ALTER TABLE, DROP TABLE — defining database structure |
 | [Delphi & Databases](./delphi-database) | Connecting Delphi to a database, TADOConnection, TADOQuery, displaying results |
 
 ## SQL in the exam

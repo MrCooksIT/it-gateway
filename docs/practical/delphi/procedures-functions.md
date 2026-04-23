@@ -13,20 +13,24 @@ The diagram below shows how these terms relate to each other:
 
 ```mermaid
 flowchart TD
-    SUB(["A Subroutine"])
+    classDef orange fill:#ffe8cc,stroke:#e67e22,color:#000,font-weight:bold
+    classDef green  fill:#d4edda,stroke:#28a745,color:#000
+    classDef blue   fill:#dce8ff,stroke:#4477bb,color:#000
 
-    SUB -->|can be| STD["Standard subroutine\nsupplied by Delphi\ne.g. IntToStr, Round, Copy,\nRandomize, Delete\nStored in SysUtils, System"]
-    SUB -->|can be| PROG["Programmer-developed\nsubroutine\nStored in a Code Unit"]
+    SUB{{A Subroutine}}:::orange
+
+    SUB -->|can be| STD["Standard subroutine\nsupplied by Delphi\ne.g. IntToStr, Round, Copy,\nRandomize, Delete\nStored in SysUtils, System"]:::blue
+    SUB -->|can be| PROG["Programmer-developed\nsubroutine\nStored in a Code Unit"]:::blue
 
     SUB -->|implemented as| FUNC
     SUB -->|implemented as| PROC
 
-    FUNC["Function\n• A set of instructions\n• Performs a specific task\n• Normally returns a result"]
-    PROC["Procedure\n• A set of instructions\n• Executes a specific task\n• Delivers results via\n  reference parameters"]
+    FUNC["Function\n• A set of instructions\n• Performs a specific task\n• Normally returns a result"]:::green
+    PROC["Procedure\n• A set of instructions\n• Executes a specific task\n• Delivers results via\n  reference parameters"]:::green
 
-    METH(["A Method"])
-    METH -->|can be| BI["Built-in code forming\npart of a Delphi object\ne.g. SetFocus, Add, Hide, Clear"]
-    METH -->|can be| PW["Programmer-written code\nthat defines the\nbehaviour of a class"]
+    METH{{A Method}}:::orange
+    METH -->|can be| BI["Built-in code forming\npart of a Delphi object\ne.g. SetFocus, Add, Hide, Clear"]:::blue
+    METH -->|can be| PW["Programmer-written code\nthat defines the\nbehaviour of a class"]:::blue
 
     FUNC -->|implemented as| METH
     PROC -->|implemented as| METH

@@ -122,47 +122,33 @@ end;
 The diagram below shows how all the parts of an event-driven program connect:
 
 ```mermaid
-flowchart TD
-    subgraph OOP["OOP Structure"]
-        direction TB
-        CLASS["Class"]
-        OBJ["Object"]
-        COMP["Component"]
-        CLASS -->|defines an| OBJ
-        OBJ -->|is an instance of a| CLASS
-        OBJ -->|is a special type of| COMP
-    end
-
-    subgraph AB["  "]
-        ATTR["Attributes"]
-        BEH["Behaviour"]
-    end
-
-    COMP -->|has| AB
-
-    PROP["Properties"]
-    EV["Events"]
-    EH["Event handlers"]
-    METH["Methods"]
-    ACTIONS["Actions"]
-    PROC["Procedures"]
-    PF["Procedures or Functions"]
-
-    AB -->|described through| PROP
-    AB -->|described through| EV
-    AB -->|linked to| EH
-    EH -->|implemented through| PROC
-    METH -->|implemented through| PF
-    EV -->|triggers| ACTIONS
+flowchart LR
+    classDef orange fill:#ffe8cc,stroke:#e67e22,color:#000,font-weight:bold
+    classDef green  fill:#d4edda,stroke:#28a745,color:#000
+    classDef teal   fill:#d0f0f0,stroke:#00897b,color:#000
+    classDef blue   fill:#dce8ff,stroke:#4477bb,color:#000
 
     subgraph SRC["Event Sources"]
-        USER["User\n• Clicks a button\n• Closes an application\n• Selects an item"]
-        OS["Operating System\n• Date or time change\n• Error messages\n• Printer not on"]
-        OTHER["Other Applications\n• Software drivers\n• Application software"]
+        direction TB
+        USER["User\n• Clicks a button\n• Closes an application\n• Selects an item"]:::teal
+        OS["Operating System\n• Date or time change\n• Error messages\n• Printer not on"]:::teal
+        OTHER["Other Applications\n• Software drivers\n• Application software"]:::teal
     end
 
-    SRC -->|perform| ACTIONS
+    EV["Events\ne.g. OnClick\nOnKeyPress\nOnTimer"]:::orange
+    COMP["Component\ne.g. TButton\nTEdit\nTLabel"]:::blue
+    ATTR["Attributes\nProperties"]:::green
+    BEH["Behaviour\nMethods & Events"]:::green
+    EH["Event Handlers\nprocedure btnClickClick\n(Sender: TObject)"]:::orange
+    PROC["Procedures\nor Functions"]:::green
+
     SRC -->|trigger| EV
+    COMP -->|has| ATTR
+    COMP -->|has| BEH
+    BEH -->|includes| EV
+    EV -->|handled by| EH
+    EH -->|implemented as| PROC
+    BEH -->|includes| PROC
 ```
 
 ---
