@@ -72,7 +72,7 @@ These three always work together in a modern web page.
 
 ```php
 <?php
-  $name = "Ayden";
+  $name = "Finn";
   $grade = 12;
   echo "<h1>Welcome, $name!</h1>";
   echo "<p>You are in Grade $grade.</p>";
@@ -96,12 +96,12 @@ These three always work together in a modern web page.
 <?xml version="1.0" encoding="UTF-8"?>
 <students>
   <student>
-    <name>Ayden</name>
+    <name>Finn</name>
     <grade>12</grade>
     <mark>95</mark>
   </student>
   <student>
-    <name>Luca</name>
+    <name>Jake</name>
     <grade>11</grade>
     <mark>88</mark>
   </student>
@@ -150,8 +150,8 @@ User action → JavaScript sends HTTP request → Server processes → Returns d
 ```json
 {
   "students": [
-    {"name": "Ayden", "grade": 12, "mark": 95},
-    {"name": "Luca", "grade": 11, "mark": 88}
+    {"name": "Finn", "grade": 12, "mark": 95},
+    {"name": "Jake", "grade": 11, "mark": 88}
   ]
 }
 ```

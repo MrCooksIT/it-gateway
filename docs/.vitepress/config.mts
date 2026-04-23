@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   title: 'IT Gateway',
   description: 'Your complete CAPS Information Technology resource for Grades 10–12',
   base: '/it-gateway/',
@@ -311,4 +312,9 @@ export default defineConfig({
     },
     lineNumbers: true,
   },
-})
+
+  // ─── Mermaid diagrams ─────────────────────────────────────────────────
+  mermaid: {
+    theme: 'default',
+  },
+}))

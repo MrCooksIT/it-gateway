@@ -15,10 +15,10 @@ A `String` in Delphi is a sequence of characters. Strings are **1-indexed** — 
 var
   sName : String;
 begin
-  sName := 'Ayden';
-  // sName[1] = 'A'
-  // sName[2] = 'y'
-  // sName[5] = 'n'
+  sName := 'Finn';
+  // sName[1] = 'F'
+  // sName[2] = 'i'
+  // sName[4] = 'n'
 end;
 ```
 
@@ -325,7 +325,7 @@ end;
 Strings are compared character by character using standard relational operators:
 
 ```pascal
-IF sName = 'Ayden' THEN   // exact match
+IF sName = 'Finn' THEN   // exact match
 IF sName < 'M'    THEN   // alphabetically before M
 IF sName > 'M'    THEN   // alphabetically from M onward
 ```
@@ -377,7 +377,7 @@ IF sName > 'M'    THEN   // alphabetically from M onward
 
 **Exercise 1 — Username formatter**
 
-Read a first name and surname from two edit boxes. Display a username in the format: first letter of first name + full surname, all lowercase. (e.g. "Ayden" + "Coetzee" → "acoetzee")
+Read a first name and surname from two edit boxes. Display a username in the format: first letter of first name + full surname, all lowercase. (e.g. "Finn" + "Mertens" → "fmertens")
 
 <details>
 <summary>Show solution</summary>

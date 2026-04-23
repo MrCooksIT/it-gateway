@@ -7,6 +7,58 @@ As programs grow, repeating the same code in multiple places becomes a maintenan
 
 ---
 
+## Subroutines, Functions, Procedures and Methods
+
+The diagram below shows how these terms relate to each other:
+
+```mermaid
+flowchart TD
+    SUB(["A Subroutine"])
+
+    SUB -->|can be| STD["Standard subroutine\nsupplied by Delphi\ne.g. IntToStr, Round, Copy,\nRandomize, Delete\nStored in SysUtils, System"]
+    SUB -->|can be| PROG["Programmer-developed\nsubroutine\nStored in a Code Unit"]
+
+    SUB -->|implemented as| FUNC
+    SUB -->|implemented as| PROC
+
+    FUNC["Function\n• A set of instructions\n• Performs a specific task\n• Normally returns a result"]
+    PROC["Procedure\n• A set of instructions\n• Executes a specific task\n• Delivers results via\n  reference parameters"]
+
+    METH(["A Method"])
+    METH -->|can be| BI["Built-in code forming\npart of a Delphi object\ne.g. SetFocus, Add, Hide, Clear"]
+    METH -->|can be| PW["Programmer-written code\nthat defines the\nbehaviour of a class"]
+
+    FUNC -->|implemented as| METH
+    PROC -->|implemented as| METH
+```
+
+### Units — what a unit can contain
+
+```mermaid
+flowchart LR
+    U["A Unit\n(container)"]
+
+    U -->|code associated\nwith Forms| FU["Form Units"]
+    FU --> MF["Main form"]
+    FU --> AF["Additional forms\nadded by the programmer"]
+
+    U --> SS["Standard subroutines"]
+    SS --> AUTO["Auto-added by Delphi\ne.g. Windows, Messages, SysUtils"]
+    SS --> MANUAL["Added by programmer\ne.g. Math, DateUtils"]
+
+    U --> PS["Programmer-developed\nsubroutines"]
+    U --> PC["Programmer-developed\nclasses"]
+    U --> DM["Data module"]
+
+    style FU fill:#d4edda
+    style SS fill:#d4edda
+    style PS fill:#d4edda
+    style PC fill:#d4edda
+    style DM fill:#d4edda
+```
+
+---
+
 ## Procedure vs Function — The Key Difference
 
 | | Procedure | Function |

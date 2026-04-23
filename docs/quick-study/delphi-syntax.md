@@ -45,7 +45,7 @@ const
 ```pascal
 iAge   := 16;
 rPrice := 49.99;
-sName  := 'Ayden';
+sName  := 'Thabo';
 bFlag  := True;
 iTotal := iTotal + iValue;     // accumulate
 ```
@@ -310,16 +310,23 @@ iNum   := StrToInt(InputBox('Input', 'Enter number:', ''));
 | Function | Returns | Notes |
 |---|---|---|
 | `Round(x)` | Integer | Banker's rounding (.5 → nearest even) |
-| `Trunc(x)` | Integer | Chops decimal part |
+| `RoundTo(x, n)` | Real | n decimal places (use negative n) *(Math unit)* |
+| `Trunc(x)` | Integer | Chops decimal part, no rounding |
 | `Frac(x)` | Real | Decimal portion only |
 | `Ceil(x)` | Integer | Always rounds UP *(Math unit)* |
 | `Floor(x)` | Integer | Always rounds DOWN *(Math unit)* |
-| `Sqr(x)` | same | x squared |
+| `Abs(x)` | same | Positive value of x |
+| `Odd(x)` | Boolean | True if x is odd |
+| `Sqr(x)` | same | x squared (x²) |
 | `Sqrt(x)` | Real | Square root |
-| `Power(b,e)` | Real | b^e *(Math unit)* |
+| `Power(b, e)` | Real | b^e *(Math unit)* |
+| `Random` | Real | 0 to < 1 |
 | `Random(n)` | Integer | 0 to n−1 |
+| `RandomRange(a, b)` | Integer | a to b−1 *(Math unit)* |
 | `Inc(v)` | — | v := v + 1 |
+| `Inc(v, n)` | — | v := v + n |
 | `Dec(v)` | — | v := v − 1 |
+| `Dec(v, n)` | — | v := v − n |
 
 ---
 
@@ -327,13 +334,49 @@ iNum   := StrToInt(InputBox('Input', 'Enter number:', ''));
 
 | Function | From → To | Example |
 |---|---|---|
-| `IntToStr(i)` | Int → String | `IntToStr(42)` = `'42'` |
-| `StrToInt(s)` | String → Int | `StrToInt('42')` = `42` |
-| `FloatToStr(r)` | Real → String | `FloatToStr(3.14)` = `'3.14'` |
-| `StrToFloat(s)` | String → Real | `StrToFloat('3.14')` = `3.14` |
-| `FloatToStrF(r,ffFixed,8,2)` | Real → String | 2 decimal places |
-| `Chr(i)` | Int → Char | `Chr(65)` = `'A'` |
-| `Ord(c)` | Char → Int | `Ord('A')` = `65` |
+| `IntToStr(i)` | Int → String | `IntToStr(42)` → `'42'` |
+| `StrToInt(s)` | String → Int | `StrToInt('42')` → `42` |
+| `FloatToStr(r)` | Real → String | `FloatToStr(3.14)` → `'3.14'` |
+| `StrToFloat(s)` | String → Real | `StrToFloat('3.14')` → `3.14` |
+| `FloatToStrF(r,ffFixed,8,2)` | Real → String | `FloatToStrF(3.1,ffFixed,8,2)` → `'3.10'` |
+| `FloatToStrF(r,ffCurrency,10,2)` | Real → String | Formats with currency symbol |
+| `Chr(i)` | Int → Char | `Chr(65)` → `'A'` |
+| `Ord(c)` | Char → Int | `Ord('A')` → `65` |
+| `DateToStr(d)` | TDate → String | `DateToStr(Date)` → `'2026/04/23'` |
+| `StrToDate(s)` | String → TDate | `StrToDate('2026/04/23')` → TDate |
+
+---
+
+## Input & Output Patterns
+
+**Type key:** I = Integer, R = Real, S = String, B = Boolean, D = TDate
+
+### Reading from controls (Input)
+
+| From | To | Code |
+|---|---|---|
+| TEdit | Integer | `iNum := StrToInt(edtInput.Text)` |
+| TEdit | Real | `rNum := StrToFloat(edtInput.Text)` |
+| TEdit | String | `sName := edtInput.Text` |
+| TCheckBox | Boolean | `bDiscount := chkDiscount.Checked` |
+| TDateTimePicker | TDate | `dToday := dtpDOB.Date` |
+| TEdit | TDate | `dDate := StrToDate(edtInput.Text)` |
+| TSpinEdit | Integer | `iNum := sedInput.Value` |
+| InputBox | String | `sName := InputBox('Title', 'Prompt', 'Default')` |
+| InputBox | Integer | `iBooks := StrToInt(InputBox('Input', 'How many?', '0'))` |
+| InputBox | Real | `rCash := StrToFloat(InputBox('Input', 'Amount:', '0.00'))` |
+
+### Writing to controls (Output)
+
+| From | To | Code |
+|---|---|---|
+| Integer | TLabel | `lblOutput.Caption := IntToStr(iNum)` |
+| Real | TLabel (2 dp) | `lblOutput.Caption := FloatToStrF(rNum, ffFixed, 10, 2)` |
+| Real | TLabel (currency) | `lblOutput.Caption := FloatToStrF(rNum, ffCurrency, 10, 2)` |
+| TDate | TLabel | `lblOutput.Caption := DateToStr(Date)` |
+
+> [!WARNING] Never use `FloatToStr` in exams
+> `FloatToStrF` with `ffFixed` or `ffCurrency` is expected. `FloatToStr` gives unpredictable decimal places and will lose marks.
 
 ---
 

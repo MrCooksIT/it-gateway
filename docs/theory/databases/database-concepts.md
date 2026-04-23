@@ -12,7 +12,7 @@ A spreadsheet stores data in rows and columns — so does a database. But a data
 | | Data | Information | Knowledge |
 |---|---|---|---|
 | **Definition** | Raw, unprocessed facts | Data processed into meaningful context | Information understood and applied |
-| **Example** | `87`, `Ayden`, `2024-03-15` | "Ayden scored 87% on the March 2024 test" | "Ayden consistently scores high in programming — recommend advanced class" |
+| **Example** | `87`, `Finn`, `2024-03-15` | "Finn scored 87% on the March 2024 test" | "Finn consistently scores high in programming — recommend advanced class" |
 | **Useful?** | Not on its own | Yes | Actionable |
 
 ---
