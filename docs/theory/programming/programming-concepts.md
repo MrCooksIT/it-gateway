@@ -122,47 +122,51 @@ end;
 The diagram below shows how all the parts of an event-driven program connect:
 
 ```mermaid
-flowchart TD
-    subgraph OOP["OOP Structure"]
-        direction TB
-        CLASS["Class"]
-        OBJ["Object"]
-        COMP["Component"]
-        CLASS -->|defines an| OBJ
-        OBJ -->|is an instance of a| CLASS
-        OBJ -->|is a special type of| COMP
-    end
+flowchart LR
+    classDef orange fill:#f0a050,stroke:#c07020,color:#000,font-weight:bold
+    classDef green  fill:#7dbf6a,stroke:#4a8f37,color:#000
+    classDef teal   fill:#5bb8d4,stroke:#2a88a4,color:#fff,font-weight:bold
 
-    subgraph AB["  "]
-        ATTR["Attributes"]
-        BEH["Behaviour"]
+    CLASS(["Class"]):::orange
+    OBJ(["Object"]):::orange
+    COMP(["Component"]):::orange
+
+    CLASS <-->|"defines an /\nis an instance of a"| OBJ
+    OBJ -->|"is a special type of"| COMP
+
+    subgraph AB["Attributes & Behaviour"]
+        direction TB
+        ATTR["Attributes"]:::green
+        BEH["Behaviour"]:::green
     end
 
     COMP -->|has| AB
 
-    PROP["Properties"]
-    EV["Events"]
-    EH["Event handlers"]
-    METH["Methods"]
-    ACTIONS["Actions"]
-    PROC["Procedures"]
-    PF["Procedures or Functions"]
+    PROP["Properties"]:::green
+    EV["Events"]:::green
+    EH["Event Handlers"]:::green
+    METH["Methods"]:::green
+    ACT["Actions"]:::green
+    PROC["Procedures"]:::green
+    PF["Procedures or\nFunctions"]:::green
 
     AB -->|described through| PROP
     AB -->|described through| EV
     AB -->|linked to| EH
+    AB -->|described through| METH
     EH -->|implemented through| PROC
     METH -->|implemented through| PF
-    EV -->|triggers| ACTIONS
+    EV -->|triggers| ACT
 
     subgraph SRC["Event Sources"]
-        USER["User\n• Clicks a button\n• Closes an application\n• Selects an item"]
-        OS["Operating System\n• Date or time change\n• Error messages\n• Printer not on"]
-        OTHER["Other Applications\n• Software drivers\n• Application software"]
+        direction TB
+        USER(["User\n• Click a button\n• Close application\n• Select an item"]):::teal
+        OS(["Operating System\n• Date / time change\n• Error messages"]):::teal
+        OTHER(["Other Applications\n• Software drivers\n• App software"]):::teal
     end
 
-    SRC -->|perform| ACTIONS
     SRC -->|trigger| EV
+    SRC -->|perform| ACT
 ```
 
 ---

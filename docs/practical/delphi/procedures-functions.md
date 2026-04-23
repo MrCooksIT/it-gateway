@@ -13,48 +13,78 @@ The diagram below shows how these terms relate to each other:
 
 ```mermaid
 flowchart TD
-    SUB(["A Subroutine"])
+    classDef orange fill:#f0a050,stroke:#c07020,color:#000,font-weight:bold
+    classDef green  fill:#7dbf6a,stroke:#4a8f37,color:#000
 
-    SUB -->|can be| STD["Standard subroutine\nsupplied by Delphi\ne.g. IntToStr, Round, Copy,\nRandomize, Delete\nStored in SysUtils, System"]
-    SUB -->|can be| PROG["Programmer-developed\nsubroutine\nStored in a Code Unit"]
+    SUB{{A Subroutine}}:::orange
 
-    SUB -->|implemented as| FUNC
-    SUB -->|implemented as| PROC
+    STD["Standard subroutine supplied by Delphi\ne.g. IntToStr, Round, Copy, Randomize\nStored in SysUtils, System"]:::green
+    PROG["Programmer-developed subroutine\nStored in a Code Unit"]:::green
 
-    FUNC["Function\n• A set of instructions\n• Performs a specific task\n• Normally returns a result"]
-    PROC["Procedure\n• A set of instructions\n• Executes a specific task\n• Delivers results via\n  reference parameters"]
+    SUB -->|can be| STD
+    SUB -->|can be| PROG
 
-    METH(["A Method"])
-    METH -->|can be| BI["Built-in code forming\npart of a Delphi object\ne.g. SetFocus, Add, Hide, Clear"]
-    METH -->|can be| PW["Programmer-written code\nthat defines the\nbehaviour of a class"]
+    FUNC{{a Function}}:::orange
+    PROC_N{{a Procedure}}:::orange
 
-    FUNC -->|implemented as| METH
-    PROC -->|implemented as| METH
+    FDESC["• A set of instructions\n• Performs a specific task\n• Normally delivers a result"]:::green
+    PDESC["• A set of instructions\n• Executes a specific task\n• Delivers results via\n  reference parameters"]:::green
+
+    STD & PROG -->|it can be implemented as| FUNC
+    STD & PROG -->|it can be implemented as| PROC_N
+
+    FUNC --> FDESC
+    PROC_N --> PDESC
+
+    METH{{A Method}}:::orange
+
+    BI["Built-in code forming part of a Delphi object\ne.g. SetFocus, Add, Hide, Clear"]:::green
+    PW["Programmer-written code\nthat defines the behaviour of a class"]:::green
+
+    FDESC & PDESC -->|it can be implemented as| METH
+
+    METH -->|can be| BI
+    METH -->|can be| PW
 ```
 
 ### Units — what a unit can contain
 
 ```mermaid
 flowchart LR
-    U["A Unit\n(container)"]
+    classDef greenbar fill:#4a8f37,stroke:#2a6f17,color:#fff,font-weight:bold
+    classDef green    fill:#7dbf6a,stroke:#4a8f37,color:#000
+    classDef note     fill:#fff9c4,stroke:#e6c619,color:#333,font-style:italic
 
-    U -->|code associated\nwith Forms| FU["Form Units"]
-    FU --> MF["Main form"]
-    FU --> AF["Additional forms\nadded by the programmer"]
+    U["A unit can act\nas a container for:"]:::greenbar
 
-    U --> SS["Standard subroutines"]
-    SS --> AUTO["Auto-added by Delphi\ne.g. Windows, Messages, SysUtils"]
-    SS --> MANUAL["Added by programmer\ne.g. Math, DateUtils"]
+    FU["code associated\nwith Forms\n— Form Units"]:::green
+    SS["standard subroutines"]:::green
+    PS["programmer-developed\nsubroutines"]:::green
+    PC["programmer-developed\nclasses"]:::green
+    DM["a data module"]:::green
 
-    U --> PS["Programmer-developed\nsubroutines"]
-    U --> PC["Programmer-developed\nclasses"]
-    U --> DM["Data module"]
+    U --> FU
+    U --> SS
+    U --> PS
+    U --> PC
+    U --> DM
 
-    style FU fill:#d4edda
-    style SS fill:#d4edda
-    style PS fill:#d4edda
-    style PC fill:#d4edda
-    style DM fill:#d4edda
+    MF["main form"]:::green
+    AF["additional forms\nadded by the programmer"]:::green
+    FU -->|for the| MF
+    FU -->|for the| AF
+
+    AUTO["auto-added by Delphi\ne.g. Windows, Messages, SysUtils"]:::note
+    MANUAL["added by the programmer\ne.g. Math, DateUtils"]:::note
+    SS -->|the unit name can| AUTO
+    SS -->|the unit name can| MANUAL
+
+    N2["Covered in OOP chapter\nGrade 12"]:::note
+    PC -.-> N2
+
+    N3["Covered in database\nprocessing chapter"]:::note
+    DM -.-> N3
+    FU -.-> N3
 ```
 
 ---

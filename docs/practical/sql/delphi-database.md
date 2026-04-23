@@ -48,19 +48,22 @@ Once this chain is in place, every time you call `qryStudents.Open` the grid upd
 
 ```mermaid
 flowchart TD
-    DB[("Access database\non disk\n.mdb / .accdb")]
+    classDef db   fill:#dce8ff,stroke:#4477bb,color:#000,font-weight:bold
+    classDef comp fill:#e8f5e9,stroke:#388e3c,color:#000,font-weight:bold
+    classDef grid fill:#fff9c4,stroke:#f9a825,color:#000,font-weight:bold
 
-    DB <-->|ConnectionString| CONN
+    DB[("Actual database on disk\n.mdb / .accdb")]:::db
 
-    subgraph DM["Data Module — components not visible at runtime"]
-        CONN["TADOConnection\nconStudents\nLoginPrompt: False"]
-        QRY["TADOQuery\nqryStudents\nConnection: conStudents"]
-        DSR["TDataSource\ndsrStudents\nDataSet: qryStudents"]
+    subgraph DM["Data Module — not visible at runtime"]
+        CONN["TADOConnection\nName: conStudents\nConnectionString → database file\nLoginPrompt: False"]:::comp
+        QRY["TADOQuery\nName: qryStudents\nConnection: conStudents\nActive: True"]:::comp
+        DSR["TDataSource\nName: dsrStudents\nDataSet: qryStudents"]:::comp
         CONN --> QRY
         QRY --> DSR
     end
 
-    DSR --> GRID["TDBGrid on the Form\nDataSource: dsrStudents\nData-aware control — updates automatically"]
+    DB <-->|ConnectionString| CONN
+    DSR --> GRID["TDBGrid — placed on the Form\nDataSource: dsrStudents\nUpdates automatically when query opens"]:::grid
 ```
 
 ---

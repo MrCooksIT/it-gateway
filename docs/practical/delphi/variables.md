@@ -30,24 +30,25 @@ A variable has several key properties — where it is stored, what it can hold, 
 mindmap
   root((Variable))
     Name
-      Refers to the address of the variable in memory
-      There are rules for naming variables
+      Address in memory
+      Naming rules apply
     Scope
       Unit scope
         Class scope
           Method scope
-      Accessible by different parts of a program depending on where it was declared
+      Where declared determines where it can be used
     Memory Address
-      RAM address represented in hexadecimal
-      Different variables are stored at different locations in memory
+      Hexadecimal RAM address
+      Each variable has a unique location
     Size in bytes
-      Different variables take up a different number of bytes in memory
+      Varies by data type
     Value
-      The value must be compatible with the data type of the variable
+      Must be compatible with the data type
     Data Type
-      Integer, Real, Char, String, Boolean, etc.
+      Integer · Real · Char
+      String · Boolean
     Duration
-      The lifetime of a variable
+      The lifetime of the variable
 ```
 
 ---
