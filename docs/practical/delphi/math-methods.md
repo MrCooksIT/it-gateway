@@ -39,6 +39,25 @@ iResult := Round(rValue);
 
 ---
 
+## RoundTo — Round to a specific power of ten *(Math unit)*
+
+```pascal
+rResult := RoundTo(rValue, iPlace);
+```
+
+`iPlace` is the number of decimal places. Use **negative** values for decimal places, **positive** for rounding to tens/hundreds.
+
+| Statement | Result | Meaning |
+|---|---|---|
+| `RoundTo(247.93816, -3)` | `247.938` | 3 decimal places |
+| `RoundTo(247.93816, -1)` | `247.9` | 1 decimal place |
+| `RoundTo(247.93816, 2)` | `300.0` | Nearest hundred |
+
+> [!NOTE]
+> `RoundTo` uses Banker's rounding at .5, just like `Round`. For display purposes, `FloatToStrF` with `ffFixed` is usually simpler.
+
+---
+
 ## Trunc — Remove the decimal part
 
 ```pascal
@@ -123,6 +142,51 @@ Always returns Real. Square root of negative number → runtime error (validate 
 **Pythagoras example:**
 ```pascal
 rC := Sqrt(Sqr(rA) + Sqr(rB));
+```
+
+---
+
+## Abs — Absolute value
+
+```pascal
+rResult := Abs(rValue);   // works with Real
+iResult := Abs(iValue);   // works with Integer
+```
+
+Returns the positive (non-negative) value of a number. Negative numbers become positive; positive numbers are unchanged.
+
+| Statement | Result |
+|---|---|
+| `Abs(-45)` | `45` |
+| `Abs(45)` | `45` |
+| `Abs(-7.3)` | `7.3` |
+
+Useful for calculating differences when you don't know which value is larger:
+```pascal
+rDiff := Abs(rScore1 - rScore2);
+```
+
+---
+
+## Odd — Test if a number is odd
+
+```pascal
+bResult := Odd(iValue);
+```
+
+Returns `True` if the integer is odd, `False` if even. Argument must be **Integer**.
+
+| Statement | Result |
+|---|---|
+| `Odd(9)` | `True` |
+| `Odd(4)` | `False` |
+| `Odd(0)` | `False` |
+
+```pascal
+IF Odd(iNumber) THEN
+  lblResult.Caption := 'Odd'
+ELSE
+  lblResult.Caption := 'Even';
 ```
 
 ---
@@ -224,21 +288,118 @@ Inc(cLetter, 2);  // cLetter = 'D'
 | Function | Unit | Returns | What it does |
 |---|---|---|---|
 | `Round(x)` | System | Integer | Nearest integer (Banker's rounding) |
-| `Trunc(x)` | System | Integer | Drops decimal part |
+| `RoundTo(x, n)` | **Math** | Real | Rounds to n decimal places (negative n) or powers of 10 (positive n) |
+| `Trunc(x)` | System | Integer | Drops decimal part (no rounding) |
 | `Frac(x)` | System | Real | Decimal portion only |
 | `Ceil(x)` | **Math** | Integer | Always rounds up |
 | `Floor(x)` | **Math** | Integer | Always rounds down |
-| `Sqr(x)` | System | same as input | x squared |
-| `Sqrt(x)` | System | Real | Square root |
+| `Abs(x)` | System | same as input | Positive value of x |
+| `Odd(x)` | System | Boolean | True if x is odd |
+| `Sqr(x)` | System | same as input | x squared (x²) |
+| `Sqrt(x)` | System | Real | Square root of x |
 | `Pi` | System | Real | 3.14159... |
-| `Power(b,e)` | **Math** | Real | b raised to power e |
+| `Power(b, e)` | **Math** | Real | b raised to power e |
 | `Random` | System | Real | 0 to < 1 |
 | `Random(n)` | System | Integer | 0 to n−1 |
-| `RandomRange(a,b)` | **Math** | Integer | a to b−1 |
-| `Inc(v)` | System | — | v + 1 (modifies in place) |
-| `Inc(v, n)` | System | — | v + n (modifies in place) |
-| `Dec(v)` | System | — | v − 1 (modifies in place) |
-| `Dec(v, n)` | System | — | v − n (modifies in place) |
+| `RandomRange(a, b)` | **Math** | Integer | a to b−1 |
+| `Inc(v)` | System | — | v := v + 1 (modifies in place) |
+| `Inc(v, n)` | System | — | v := v + n (modifies in place) |
+| `Dec(v)` | System | — | v := v − 1 (modifies in place) |
+| `Dec(v, n)` | System | — | v := v − n (modifies in place) |
+
+---
+
+## Date Functions
+
+Delphi has built-in support for working with dates. Use `TDate` (or just `TDateTime`) to store date values. The `DatePicker` (TDateTimePicker) component lets users select a date visually.
+
+### Required units
+
+```pascal
+uses
+  ..., SysUtils, DateUtils;   // DateUtils needed for YearOf, MonthOf, DayOf etc.
+```
+
+> The `FormatSettings` prefix is needed in Delphi 10+ for `LongMonthNames` and `LongDayNames`. In older Delphi versions these are global arrays.
+
+---
+
+### Basic date functions
+
+| Function | Returns | Example | Result |
+|---|---|---|---|
+| `Date` | TDate | `dToday := Date` | Today's date |
+| `CurrentYear` | Integer | `iYear := CurrentYear` | `2026` |
+| `IsLeapYear(iYear)` | Boolean | `IsLeapYear(2024)` | `True` |
+| `IsLeapYear(iYear)` | Boolean | `IsLeapYear(2026)` | `False` |
+| `DayOfWeek(dDate)` | Integer | `DayOfWeek(Date)` | 1 = Sunday … 7 = Saturday |
+
+```pascal
+// Display today's date as a string
+lblDate.Caption := DateToStr(Date);
+
+// Check if a year is a leap year
+IF IsLeapYear(StrToInt(edtYear.Text)) THEN
+  lblResult.Caption := 'Leap year'
+ELSE
+  lblResult.Caption := 'Not a leap year';
+
+// Show the name of the current day
+lblDay.Caption := FormatSettings.LongDayNames[DayOfWeek(Date)];
+```
+
+---
+
+### Day / month name arrays
+
+These arrays let you look up month and day names by number.
+
+| Array | Index | Example | Result |
+|---|---|---|---|
+| `FormatSettings.LongMonthNames[k]` | 1–12 | `LongMonthNames[9]` | `'September'` |
+| `FormatSettings.ShortMonthNames[k]` | 1–12 | `ShortMonthNames[9]` | `'Sep'` |
+| `FormatSettings.LongDayNames[k]` | 1–7 | `LongDayNames[1]` | `'Sunday'` |
+| `FormatSettings.ShortDayNames[k]` | 1–7 | `ShortDayNames[2]` | `'Mon'` |
+
+```pascal
+// Display "Wednesday, 23 April 2026"
+lblDate.Caption := FormatSettings.LongDayNames[DayOfWeek(Date)]
+                   + ', ' + DateToStr(Date);
+```
+
+---
+
+### DateUtils functions *(add DateUtils to uses)*
+
+| Function | Returns | Example | Result |
+|---|---|---|---|
+| `YearOf(dDate)` | Integer | `YearOf(dDOB)` | `2008` |
+| `MonthOf(dDate)` | Integer | `MonthOf(dDOB)` | `11` |
+| `DayOf(dDate)` | Integer | `DayOf(dDOB)` | `3` |
+| `YearsBetween(d1, d2)` | Integer | `YearsBetween(dDOB, Date)` | `17` (age) |
+| `DaysBetween(d1, d2)` | Integer | `DaysBetween(dStart, Date)` | `230` |
+| `DaysInAMonth(iYear, iMonth)` | Integer | `DaysInAMonth(2026, 2)` | `28` |
+| `DaysInMonth(dDate)` | Integer | `DaysInMonth(Date)` | `30` |
+| `IsValidDate(iY, iM, iD)` | Boolean | `IsValidDate(2026, 2, 30)` | `False` |
+| `IsValidDate(iY, iM, iD)` | Boolean | `IsValidDate(2024, 2, 29)` | `True` |
+
+```pascal
+// Calculate age from a DateTimePicker
+iAge := YearsBetween(dtpDOB.Date, Date);
+lblAge.Caption := IntToStr(iAge) + ' years old';
+
+// Validate a date before using it
+iY := StrToInt(edtYear.Text);
+iM := StrToInt(edtMonth.Text);
+iD := StrToInt(edtDay.Text);
+IF IsValidDate(iY, iM, iD) THEN
+  dDate := EncodeDate(iY, iM, iD)
+ELSE
+  ShowMessage('Invalid date entered');
+
+// How many days are in February this year?
+lblDays.Caption := IntToStr(DaysInAMonth(CurrentYear, 2)) + ' days in Feb';
+```
 
 ---
 

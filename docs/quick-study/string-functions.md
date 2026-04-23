@@ -20,6 +20,8 @@ Complete reference for all Delphi string and conversion functions. No prose — 
 | `Insert` | `Insert(ins, s, pos)` | — modifies s | Insert string at position |
 | `StringOfChar` | `StringOfChar(c, n)` | String | Repeat character n times |
 | `UpCase` | `UpCase(c)` | Char | Single char to uppercase |
+| `Succ` | `Succ(c)` | Char | Next character in ASCII table |
+| `Pred` | `Pred(c)` | Char | Previous character in ASCII table |
 | `Concat` | `Concat(s1, s2, ...)` | String | Join strings (prefer `+` operator) |
 
 ---
@@ -76,6 +78,37 @@ IF UpperCase(sInput) = UpperCase(sTarget) THEN
 ### Check if string contains a substring
 ```pascal
 IF Pos('error', LowerCase(sLog)) > 0 THEN
+```
+
+### Pos — Finding a substring (three cases to know)
+
+```pascal
+// Returns the position of the first character of the match.
+// Returns 0 if the substring is NOT found. Pos is case-sensitive.
+
+Pos('at', 'I am at school')   // → 6  (found at position 6)
+Pos('IT', 'Python is cool')   // → 0  (not found)
+Pos('oo', 'I am cool')        // → 8  (found at position 8)
+```
+
+Always check the result before using it:
+```pascal
+iPos := Pos('@', sEmail);
+IF iPos > 0 THEN
+  sDomain := Copy(sEmail, iPos + 1, Length(sEmail) - iPos)
+ELSE
+  ShowMessage('Not a valid email address');
+```
+
+### Succ and Pred — stepping through characters
+
+```pascal
+cNext := Succ('M');    // → 'N'  (next in ASCII)
+cPrev := Pred('M');    // → 'L'  (previous in ASCII)
+
+// Step through A-Z using Inc (same effect as Succ):
+cLetter := 'A';
+Inc(cLetter);          // cLetter → 'B'
 ```
 
 ### Count occurrences of a character
