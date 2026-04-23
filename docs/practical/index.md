@@ -16,7 +16,7 @@ This section of IT Gateway covers everything you need for Paper 1, organised by 
 |---|---|
 | [Algorithms](./algorithms/) | Designing solutions using flowcharts, pseudocode, sequential, decision and repetition structures |
 | [Delphi Programming](./delphi/) | Delphi IDE, components, variables, operators, selection, loops, arrays, strings, files and OOP |
-| [SQL](./sql/) | SELECT queries, filtering, sorting, joins, aggregate functions, DML and DDL |
+| [SQL](./sql/) | SELECT queries, filtering, sorting, joins, aggregate functions and DML |
 | [Number Systems](./number-systems/) | Binary, hexadecimal, conversions, arithmetic and data size calculations |
 
 ## How Paper 1 works
