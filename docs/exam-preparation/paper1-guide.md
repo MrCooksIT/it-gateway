@@ -120,14 +120,13 @@ Paper 1 generally consists of 3-4 questions:
 To prepare effectively for Paper 1, use these resources:
 
 ### Sample Questions
-- [Algorithm Questions](../paper1-topics/algorithm-questions)
-- [Database Questions](../paper1-topics/database-questions)
-- [OOP Questions](../paper1-topics/oop-questions)
-- [Problem-Solving Strategies](../paper1-topics/problem-solving-strategies)
+- Algorithm Questions — see [Algorithms](../practical/algorithms/)
+- Database Questions — see [SQL](../practical/sql/)
+- OOP Questions — see [OOP in Delphi](../practical/delphi/oop-delphi)
+- Problem-Solving Strategies — see [Algorithms](../practical/algorithms/)
 
 ### Past Paper Analysis
-- [Analysis of Recent Paper 1 Exams](../past-papers/paper1-analysis)
-- [Common Mistakes and How to Avoid Them](../past-papers/common-mistakes)
+Use the official NSC past papers available from the DBE website. Focus on the last 3–5 years.
 
 ## Final Checklist
 
