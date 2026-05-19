@@ -255,28 +255,30 @@ export default withMermaid(defineConfig({
         text: '📝 Exam Preparation',
         collapsed: true,
         items: [
+          { text: 'Overview',      link: '/exam-preparation/' },
+          { text: 'Paper 1 Guide', link: '/exam-preparation/paper1-guide' },
           {
             text: '📗 Grade 10',
             collapsed: false,
             items: [
-              { text: 'Practical Notes', link: '/exam-preparation/Grade_10_lT_Practical_Notes' },
-              { text: 'Theory Notes',    link: '/exam-preparation/Grade_10_lT_Theory_Notes' },
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_10_IT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_10_IT_Theory_Notes' },
             ],
           },
           {
             text: '📘 Grade 11',
             collapsed: false,
             items: [
-              { text: 'Practical Notes', link: '/exam-preparation/Grade_11_lT_Practical_Notes' },
-              { text: 'Theory Notes',    link: '/exam-preparation/Grade_11_lT_Theory_Notes' },
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_11_IT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_11_IT_Theory_Notes' },
             ],
           },
           {
             text: '📙 Grade 12',
             collapsed: false,
             items: [
-              { text: 'Practical Notes', link: '/exam-preparation/Grade_12_lT_Practical_Notes' },
-              { text: 'Theory Notes',    link: '/exam-preparation/Grade_12_lT_Theory_Notes' },
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_12_IT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_12_IT_Theory_Notes' },
             ],
           },
         ],
