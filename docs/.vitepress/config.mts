@@ -20,6 +20,7 @@ export default withMermaid(defineConfig({
       { text: 'Theory', link: '/theory/' },
       { text: 'Practical', link: '/practical/' },
       { text: 'Quick Study', link: '/quick-study/' },
+      { text: 'Exam Prep', link: '/exam-preparation/' },
       {
         text: 'More',
         items: [
@@ -242,6 +243,40 @@ export default withMermaid(defineConfig({
               { text: 'String Functions', link: '/quick-study/string-functions' },
               { text: 'SQL Cheat Sheet', link: '/quick-study/sql-cheatsheet' },
               { text: 'Algorithms & Flowcharts', link: '/quick-study/algorithms-flowchart' },
+            ],
+          },
+        ],
+      },
+
+      // ══════════════════════════════════════════════════════════════════
+      //  EXAM PREPARATION
+      // ══════════════════════════════════════════════════════════════════
+      {
+        text: '📝 Exam Preparation',
+        collapsed: true,
+        items: [
+          {
+            text: '📗 Grade 10',
+            collapsed: false,
+            items: [
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_10_lT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_10_lT_Theory_Notes' },
+            ],
+          },
+          {
+            text: '📘 Grade 11',
+            collapsed: false,
+            items: [
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_11_lT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_11_lT_Theory_Notes' },
+            ],
+          },
+          {
+            text: '📙 Grade 12',
+            collapsed: false,
+            items: [
+              { text: 'Practical Notes', link: '/exam-preparation/Grade_12_lT_Practical_Notes' },
+              { text: 'Theory Notes',    link: '/exam-preparation/Grade_12_lT_Theory_Notes' },
             ],
           },
         ],
