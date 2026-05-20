@@ -116,6 +116,8 @@ export default withMermaid(defineConfig({
         collapsed: true,
         items: [
           { text: 'Overview', link: '/practice/' },
+          { text: 'Studying Without Delphi', link: '/practice/study-without-delphi' },
+          { text: 'Setting Up & Practising in Delphi', link: '/practice/setup-delphi' },
         ],
       },
 
