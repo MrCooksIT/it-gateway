@@ -8,8 +8,6 @@ Delphi Community Edition is **free** for students and personal use. If you have 
 
 ::: warning Windows only
 Delphi Community Edition only runs on Windows. If you don't have a Windows PC, see the [Studying Without Delphi](./study-without-delphi) guide instead.
-
-**Linux users:** Install **Lazarus IDE** (free, open-source, nearly identical to Delphi). See the note at the bottom of this page.
 :::
 
 ---
@@ -358,22 +356,3 @@ Use this as a guide once Delphi is set up:
 From week 4 onwards, time yourself: 45 minutes per question, no pausing. This builds the speed and pressure management you need for the real exam.
 :::
 
----
-
-## Lazarus IDE — for Linux users
-
-If you have a Linux PC (including an older laptop, a Raspberry Pi, or a converted Chromebook running Linux), **Lazarus IDE** is a free, open-source alternative to Delphi that is nearly identical in layout and syntax.
-
-**What's the same:**
-- The visual form designer
-- Object Pascal language (same syntax as Delphi)
-- All programming logic, string functions, arrays, OOP, and file handling
-- The `TEdit`, `TLabel`, `TButton`, `TListBox`, `TMemo` components
-
-**What's different:**
-- Database components use a different set (`TSQLite3Connection` instead of `TADOConnection`)
-- Some component names and properties differ slightly
-
-For Grades 10–11, Lazarus is effectively identical to Delphi. For Grade 12 database work, there are small differences in how database connections are set up — but the SQL and logic are the same.
-
-**Download:** Search for "Lazarus IDE download" at `lazarus-ide.org`
