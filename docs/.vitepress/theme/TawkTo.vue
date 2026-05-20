@@ -6,10 +6,8 @@ onMounted(() => {
 
   // Replace these two values with your Tawk.to property ID and widget ID
   // Find them at: tawk.to → Administration → Channels → Chat Widget → Direct Chat Link
-  const PROPERTY_ID = 'YOUR_PROPERTY_ID'
-  const WIDGET_ID   = 'YOUR_WIDGET_ID'
-
-  if (PROPERTY_ID === 'YOUR_PROPERTY_ID') return // not configured yet
+  const PROPERTY_ID = '6a0d761769cc591c36969fef'
+  const WIDGET_ID   = '1jp29ajfs'
 
   window.Tawk_API = window.Tawk_API || {}
   window.Tawk_LoadStart = new Date()
