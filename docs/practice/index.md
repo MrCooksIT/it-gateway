@@ -59,7 +59,7 @@ These are the skills Paper 1 tests. They are the same whether you study them on 
 - [ ] String functions: `Length`, `Copy`, `Pos`, `UpCase`, `LowerCase`, `Trim`, `IntToStr`, `StrToInt`
 - [ ] Math functions: `Round`, `Trunc`, `Abs`, `Sqr`, `Sqrt`
 - [ ] Input validation (while loops checking conditions)
-- [ ] SQL `SELECT` with `WHERE`, `ORDER BY`, `GROUP BY`, `HAVING`
+- [ ] Delphi database programming — connecting to a database, navigating and displaying records
 
 ### Grade 12 skills
 - [ ] Procedures with parameters (`var` and value parameters)
@@ -67,8 +67,8 @@ These are the skills Paper 1 tests. They are the same whether you study them on 
 - [ ] Text file operations (`AssignFile`, `Reset`, `Rewrite`, `ReadLn`, `WriteLn`, `CloseFile`)
 - [ ] OOP: classes, constructors, properties, methods
 - [ ] Inheritance and method overriding
-- [ ] SQL `INSERT`, `UPDATE`, `DELETE`
-- [ ] Connecting Delphi to a database (`TADOConnection`, `TADOQuery`)
+- [ ] SQL — `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+- [ ] SQL in Delphi (`TADOConnection`, `TADOQuery`)
 
 ---
 

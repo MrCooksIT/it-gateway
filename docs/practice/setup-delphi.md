@@ -127,7 +127,7 @@ The exam uses standard Hungarian-style prefixes. Use them consistently — it ma
 
 | Prefix | Data type | Example names |
 |--------|-----------|--------------|
-| `n` | Integer | `nScore`, `nCount`, `nTotal` |
+| `i` | Integer | `iScore`, `iCount`, `iTotal` |
 | `r` | Real / Double | `rAverage`, `rPrice` |
 | `s` | String | `sName`, `sResult`, `sSurname` |
 | `b` | Boolean | `bFound`, `bValid` |
@@ -169,19 +169,19 @@ Learning these shortcuts will save you significant time in the exam. Practise us
 **1. Forgetting to convert between String and Integer**
 ```pascal
 // Wrong — won't compile:
-nTotal := edtScore.Text + 10;
+iTotal := edtScore.Text + 10;
 
 // Correct:
-nTotal := StrToInt(edtScore.Text) + 10;
+iTotal := StrToInt(edtScore.Text) + 10;
 ```
 
 **2. Using `=` instead of `:=` for assignment**
 ```pascal
 // Wrong:
-nScore = 75;
+iScore = 75;
 
 // Correct:
-nScore := 75;
+iScore := 75;
 ```
 
 **3. Off-by-one errors in loops**
@@ -194,21 +194,21 @@ for i := 1 to 10 do  // Correct
 **4. Not initialising counters and totals before a loop**
 ```pascal
 // Always do this before the loop:
-nTotal := 0;
-nCount := 0;
-for i := 1 to nSize do
+iTotal := 0;
+iCount := 0;
+for i := 1 to iSize do
   ...
 ```
 
 **5. Missing `begin...end` when a loop body has more than one line**
 ```pascal
 // Wrong — only the first line is inside the if:
-if nScore >= 50 then
+if iScore >= 50 then
   lblGrade.Caption := 'Pass';
   lblColour.Font.Color := clGreen;  // This always runs!
 
 // Correct:
-if nScore >= 50 then
+if iScore >= 50 then
 begin
   lblGrade.Caption := 'Pass';
   lblColour.Font.Color := clGreen;
@@ -308,29 +308,32 @@ Create a 4×5 array of random marks. Display in a `TStringGrid`. Show:
 - The average per column (subject average)
 - The highest mark in the entire grid
 
+**Exercise 9: Delphi database — browse and navigate**
+Connect to an Access database using `TADOConnection` and `TADOTable`. Display records in a `TDBGrid`. Add four navigation buttons: First, Previous, Next, Last. Show the current record number and total records in a label (e.g. `Record 3 of 25`). Add a search edit box that filters the table by surname as the user types.
+
 ---
 
-### Grade 12 — Files, OOP, and databases
+### Grade 12 — Files, OOP, and SQL
 
-**Exercise 9: Text file reader**
+**Exercise 10: Text file reader**
 Read a text file containing names and scores (`Dlamini,78` format, one per line). Store in parallel arrays. Display in a `TStringGrid`. Show the average score.
 
-**Exercise 10: OOP — Student class**
+**Exercise 11: OOP — Student class**
 
 Create a `TStudent` class with:
 - Private fields: `FSurname`, `FName`, `FScore` (all strings/integers)
-- Constructor: `Create(sSurname, sName : String; nScore : Integer)`
+- Constructor: `Create(sSurname, sName : String; iScore : Integer)`
 - Read-only properties: `Surname`, `Name`, `Score`
 - Method `GetGrade`: returns the grade symbol (`'A'`–`'F'`) for the score
 - Method `GetDetails`: returns a formatted string: `'Dlamini, Sipho — 78 (B)'`
 
 Create 5 `TStudent` objects and display them in a `TListBox`.
 
-**Exercise 11: Database search**
-Connect to an Access database. Display all records in a `TDBGrid`. Add:
-- A search `TEdit` and button that filters by surname (`LIKE '%..%'`)
-- A label showing how many records are currently displayed
-- A Clear button that resets the filter
+**Exercise 12: SQL in Delphi**
+Connect to an Access database using `TADOQuery`. Display all records in a `TDBGrid`. Add:
+- A search `TEdit` and button that queries by surname using `SELECT ... WHERE Surname LIKE`
+- A label showing how many records match
+- A Clear button that resets the query to show all records
 
 ---
 
@@ -347,10 +350,11 @@ Use this as a guide once Delphi is set up:
 | 5 | String functions | Exercise 6 |
 | 6 | Sorting and searching | Exercise 7 |
 | 7 | 2D arrays | Exercise 8 |
-| 8 | Text files and procedures | Exercise 9 |
-| 9 | OOP | Exercise 10 |
-| 10 | Databases and SQL in Delphi | Exercise 11 |
-| 11–12 | Past papers under timed conditions | One full paper per week |
+| 8 | Delphi database programming (Gr 11) | Exercise 9 |
+| 9 | Text files and procedures (Gr 12) | Exercise 10 |
+| 10 | OOP (Gr 12) | Exercise 11 |
+| 11 | SQL in Delphi (Gr 12) | Exercise 12 |
+| 12–13 | Past papers under timed conditions | One full paper per week |
 
 ::: tip Timed practice
 From week 4 onwards, time yourself: 45 minutes per question, no pausing. This builds the speed and pressure management you need for the real exam.
