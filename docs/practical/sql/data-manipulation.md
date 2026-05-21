@@ -100,6 +100,34 @@ SET Email = NULL
 WHERE Email = '';
 ```
 
+### UPDATE with a user-supplied variable in Delphi
+
+When the new value comes from a variable rather than a literal, concatenate it into the SQL string. The conversion function depends on the variable's data type — the result goes directly into the SQL with no quotes, because it is a number.
+
+| Variable type | Conversion function | Example |
+|---|---|---|
+| `Integer` | `IntToStr(n)` | `'SET Mark = Mark + ' + IntToStr(nBonus)` |
+| `Real` / `Double` | `FloatToStr(r)` | `'SET WeeklyRent = WeeklyRent * ' + FloatToStr(rFactor)` |
+
+```pascal
+// Increase all Coffee stall rents by a user-entered percentage
+// rPercent is a Real variable already read from an edit box or InputBox
+qry.SQL.Text := 'UPDATE tblStalls ' +
+                'SET WeeklyRent = WeeklyRent * (1 + ' + FloatToStr(rPercent) + ' / 100) ' +
+                'WHERE Category = "Coffee"';
+qry.ExecSQL;
+
+// Add a whole-number bonus to all Grade 12 marks
+// nBonus is an Integer variable
+qry.SQL.Text := 'UPDATE tblStudents ' +
+                'SET Mark = Mark + ' + IntToStr(nBonus) + ' ' +
+                'WHERE Grade = 12';
+qry.ExecSQL;
+```
+
+> [!NOTE]
+> `Round()` and `IntToStr()` are both accepted alternatives where a Real value only needs whole-number precision. Use `FloatToStr()` when the variable is declared as `Real`, `Double`, or `Currency` and you need to preserve decimal places in the calculation.
+
 ---
 
 ## DELETE — Removing Rows
