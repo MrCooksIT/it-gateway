@@ -1,0 +1,65 @@
+
+Browsers
+
+What is a browser?
+
+Browsers
+A browser is a program on your computer that allows you to browse web pages on the Internet
+
+Examples of browsers:
+Chrome
+Firefox
+Safari
+Internet Explorer
+Opera
+
+A browser is NOT
+An operating system like Windows
+
+A browser is NOT
+A website like Google
+
+A browser IS
+An application running on your computer that allows you to visit websites on the Internet
+
+Using a browser
+When you type a URL into the browser, the browser retrieves all the HTML code, CSS code, images, and videos that make up the web page at that URL
+
+Rendering the Page
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+style.css
+logo.png
+The browser takes all those resources and renders a usable web page
+
+Rendering the Page
+
+Rendering the Page
+That all happened in
+
+LESS THAN A SECOND
+
+Compatibility
+There are some differences across browsers
+For the most part, every browser will allow you to browse the Internet and view web pages the same way
+All browsers buy into the same protocols for how HTML and CSS code should be displayed!
+
+Keeping your browser up to date
+EVERY WEB PAGE YOU VIEW is code running in your browser
+Some web pages may try to attack your computer (install viruses, trick you into giving up information, etc)
+Keeping your browser up to date helps prevent this
+
+Keeping your browser up to date
+An up to date browser:
+Has the latest bug fixes
+Has the latest security features
+Is able to use the most up to date versions of HTML and CSS
+Likely runs faster
+
+Recommended browser for this course
+Google Chrome
+Download for free here: https://www.google.com/chrome/browser/features.html

@@ -1,0 +1,84 @@
+
+Hacking Ethics & Legality
+
+Hacker Definition:
+A security hacker is someone who seeks to break through defenses and exploit weaknesses in a computer system or network.
+
+
+Are all hackers bad?
+
+“White Hat”
+and
+“Black Hat”
+
+White Hat/Black Hat 
+Bundesarchiv, Bild 102-00053 / CC-BY-SA 3.0 [CC BY-SA 3.0 de (https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)], via Wikimedia Commons
+Origins in early Western films
+
+Hero = white hat
+Villain = black hat
+
+Black Hat Hackers
+Break into secure networks to 
+destroy, modify, or steal data
+Break network functionality
+Hack for personal gain or to cause harm
+Criminal hackers who face serious legal consequences
+
+White Hat Hackers
+Have permission to hack a system
+Hired for penetration testing:
+Use same methods as black hats
+Find vulnerabilities before malicious attackers
+Contribute to robust security systems
+
+You forgot to lock the back door!
+
+Grey Hat Hackers
+Hack without permission--oftentimes
+illegally
+Once vulnerabilities are found, will
+contact the organization and request payment
+
+
+Bug Bounty Programs
+Companies pay individuals who report vulnerabilities before malicious hackers can exploit them
+Program rules may exclude certain products or hacking methods
+
+Legal Hacking
+Examples of legal hacking:
+Working as a penetration tester
+Following the rules of a company’s bug bounty program
+Hacking a site created explicitly as a teaching tool (hackthissite.org)
+
+Illegal Hacking
+Examples of illegal hacking:
+Finding and exploiting vulnerabilities for personal gain
+“Hacktivism” (hacking to promote a political agenda or social change)
+Trying to find system vulnerabilities without permission (grey hat hacking)
+Breaking the rules of a bug bounty program
+
+Consequences of Illegal Hacking
+In the United States, a criminal hacker faces:
+Felony charges
+Prison time (up to 20 years)
+Fines (up to $15,000)
+
+
+
+Source: Computer Fraud and Abuse Act
+
+Consequences of Illegal Hacking
+In the United States, a criminal hacker faces:
+Felony charges
+Prison time (up to 20 years)
+Fines (up to $15,000)
+In addition to punishment for any other crimes committed!
+
+Source: Computer Fraud and Abuse Act
+
+Conclusion:
+Don’t break the law. 
+Only hack with explicit permission
+If you aren’t sure about the legality of your actions, stop and seek clarification
+There are very real consequences for illegal hacking, even if you don’t mean any harm

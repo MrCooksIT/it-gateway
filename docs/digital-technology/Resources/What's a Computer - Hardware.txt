@@ -1,0 +1,62 @@
+Transcript
+
+0:00hi in this video we'll be talking about Hardware so what is Hardware well Hardware are the physical components of
+0:088 secondsyour computer those physical pieces that you can touch that build your Computing machine so Hardware are the physical parts that make up your computer we'll
+0:1717 secondsget into each of the different kinds of Hardware soon but first we need to understand that Hardware uses electrical signals to carry out the instructions
+0:2424 secondsgiven to it by programs these electrical signals Implement binary which is the language of the computer now binary is
+0:3232 secondssimply a way to represent numbers using only zeros and ones that's what's going on at the base level of computers everything is represented as a zero or a
+0:4141 secondsone now these electric signals are able to implement binary just by having a high voltage to represent a one and a low voltage to represent a zero then
+0:4949 secondswe're able to represent binary so how does the hardware work let's get a basic overview of how the hardware operates so first let's get an overview
+0:5858 secondsfor bits bytes and the binary number system so binary is simply a numbering system that only uses ones and zeros to represent numbers it's still
+1:061 minute, 6 secondsrepresenting the same numbers we use every day 0 1 2 3 4 5 6 7 8 9 but those numbers instead of being represented by the digits that we use 0 through 9
+1:151 minute, 15 secondsthey're only represented using zeros and ones now the way this is possible is with a little bit of math that we're not going to go into but the point is that
+1:231 minute, 23 secondsit's all represented in binary at the base level computers are constantly manipulating numbers and all those numbers are being manipulated in bin binary so computers understand
+1:321 minute, 32 secondsinstructions in binary if a binary instruction comes in maybe it's the number 32 represented in binary that means something special to the computer
+1:401 minute, 40 secondsit sees 32 and it says oh I need to turn the screen off or I need to print this piece of paper things like that so a
+1:481 minute, 48 secondssingle binary digit is called a bit and that is a zero or a one if you put eight bits together you get a bite such as
+1:561 minute, 56 seconds1101 1110 now a bite is a unit of Digital Data everything is stored in bytes a
+2:032 minutes, 3 secondssingle bite is enough information enough bits to represent a single letter Like A or B or C if you get a lot of bytes
+2:102 minutes, 10 secondstogether a million bytes and make a megabyte that's enough data to store a short song now at the base of it all computers are just carrying out
+2:182 minutes, 18 secondsmathematical operations on numbers but since these numbers are all represented in binary using only zeros and ones that
+2:262 minutes, 26 secondsthose mathematical operations are actually carried out using what are called l iic Gates so all Hardware is built using logic gates it's these
+2:342 minutes, 34 secondsmassive circuits bunch of signals tied together using only logic gates to combine them so these logic gates are
+2:412 minutes, 41 secondsphysical components that process the incoming binary signals the incoming binary data and they emit electrical signals based on what they see so all
+2:502 minutes, 50 secondsthese computations are performed only using these logical operations these logic gates for example here we have what's called an and gate if an and gate
+2:582 minutes, 58 secondssees two ones it's spits out a one otherwise it spits out a zero so here it's getting a zero on one input and a
+3:053 minutes, 5 secondsone on the other input and so as a result it spits out a zero or a low voltage so when you put enough of these and Gates together and Gates and or
+3:133 minutes, 13 secondsGates all these different logical Gates you're able to actually simulate addition and subtraction and multiplication on these binary numbers
+3:203 minutes, 20 secondsso that's important to understand is that at the base of it all everything is represented in binary and computers are able to perform operations on this
+3:283 minutes, 28 secondsbinary data using logic gates and all that binary information is being represented by using electrical signals a high voltage for a one and a low
+3:353 minutes, 35 secondsvoltage for a zero now what are the main Hardware components well every computer has at least three parts these three
+3:433 minutes, 43 secondsparts are the memory the motherboard and the central processing unit or the CPU this is the processor this is where all
+3:513 minutes, 51 secondsthe processing is going down so let's first go over memory there's two kinds of memory there's the main memory and the external memory so
+3:593 minutes, 59 secondsthe main memory M stores the currently executing programs instructions and it stores the data that the computer needs in order to just
+4:064 minutes, 6 secondsfunction this is temporary main memory that is very fast and it only works when the power is turned on and then we have external memory and this is more
+4:154 minutes, 15 secondslongterm and permanent and it takes a while to fetch information from external memory so with external memory this is memory that computers use to store data
+4:234 minutes, 23 secondslong-term and it's the memory that we as users use to store our data so we have Main and exter internal memory first let's go over main memory the first kind
+4:324 minutes, 32 secondsof main memory is random access memory or the ram this is a very important part of the computer RAM will only store
+4:404 minutes, 40 secondsinformation if the power is turned on it needs electricity to store information the operating system is loaded into RAM memory as soon as the computer started
+4:484 minutes, 48 secondsup The Ram stores the currently running applications and the corresponding data that those applications need to run and it's constantly changing it's very fast
+4:564 minutes, 56 secondsdata is coming in and out really quickly it's all random random access memory we also have read only memory in main memory and the readon memory you cannot
+5:055 minutes, 5 secondschange you cannot write to this memory you can only read from it and this memory keeps important information and this memory is stored regardless if the
+5:135 minutes, 13 secondspower is turned on or not this is where the BIOS is stored for example the basic input output system then we have external memory now
+5:225 minutes, 22 secondsexternal memory is used to store data long term we can plug it into the computer take it out it's external we can take it in and out at our will and
+5:305 minutes, 30 secondsthis external memory will keep data regardless of whether or not it's being powered examples of external memory include CDs USB drives hard drives and
+5:385 minutes, 38 secondsfloppy discs these are physical discs that the computer's actually burning ones and zeros into in order to store
+5:455 minutes, 45 secondsmemory long term so that's memory now we go to the motherboard so the motherboard is where everything lives it's where the
+5:525 minutes, 52 secondsprocessor and the memory both live the motherboard connects all the different parts of the computer together the input the output the storage it's all it's all
+6:006 minutesstored on the motherboard and the motherboard is responsible for creating the clock signal for the CPU now this is an important part about
+6:076 minutes, 7 secondsHardware is that computers have an internal clock that is constantly cycling and at each cycle of the clock the computer performs an operation so
+6:156 minutes, 15 secondsthe motherboard keeps this clock going then we have the CPU the central processing unit now this is responsible for actually carrying out the
+6:236 minutes, 23 secondsinstructions of a program this is where all the number crunching is going down so the CPU executes the instructions that it receives from the computer's
+6:306 minutes, 30 secondssoftware each instruction is executed on a clock cycle so every tick of that clock on the motherboard pushes electricity through the computer to
+6:396 minutes, 39 secondsperform the next round of computations so those are the main parts of computer hardware now let's see an
+6:466 minutes, 46 secondsexample of how this all works together let's say that I'm using my computer and I use my mouse to click on the print icon and I'm saying I want to print this
+6:556 minutes, 55 secondsdocument so me clicking that icon is me giving input into the computer using the mouse device an input device so I give
+7:037 minutes, 3 secondsinput to the computer that sends an electrical signal into the CPU the CPU takes that input and based on the
+7:107 minutes, 10 secondsnumbers and combinations put together it knows that I must have clicked the print button in my text editor application so performs some calculations it gets the
+7:197 minutes, 19 secondsfile that I want from memory and It prepares to send it to the printer and it gets the printer ready by accessing the printer's device driver which is the
+7:277 minutes, 27 secondssoftware that runs the printer so as soon as it has everything ready it sends an electrical signal to the printer that contains all the information that the
+7:357 minutes, 35 secondsprinter needs to print out the file so now the printer takes over and it prints out my document so that's one example of how Hardware works together and that is
+7:437 minutes, 43 secondsa brief overview of computer hardware
+

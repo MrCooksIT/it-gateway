@@ -1,0 +1,67 @@
+
+Internet Safety
+Hi, in this video, we’ll be talking about Internet safety.
+
+Staying Safe Online
+The Internet is a great place to socialize, but it is important to be aware of risks.
+
+Common sense and following safety guidelines can help you stay safe online.
+The internet has become a great place to socialize, but it is important to be aware of the risks involved. Using common sense and following some safety guidelines can help you stay safe online.
+
+Safety Guidelines
+Be wary when communicating with people you don’t know in real life
+Don’t disclose personal information--even if it doesn’t seem important
+Block/report if you are being harassed
+Ask a trusted adult if you need help
+Here are some guidelines that can help you stay safe online. Be wary whenever you are communicating with people you don’t know in real life. Don’t disclose personal information--even details that don’t seem important. If you are being harassed, block and report the person who is harassing you, and ask a trusted adult if you need help or just aren’t sure about an online relationship.
+
+Be wary of strangers
+If a person reaches out to you online claiming to know you, proceed with caution
+Ask friends if they are being contacted as well
+It’s very easy for a person to be dishonest online--it’s good to be wary
+Be wary of strangers. If a person reaches out to you online claiming to know you, you should always proceed with caution. If a person is claiming to go to your school or know a mutual friend, you should ask your friends if they know this person in real life, or if they are being contacted as well. Remember that it is very easy for a person to be dishonest about their identity online, so it’s actually a good thing to be wary of people you don’t know in real life. 
+
+Don’t disclose personal information
+Usernames should not contain personal information (full name, birthday, age)
+Be careful with information about your life, even if it feels unimportant (school mascot, schedule)
+If somebody is asking you for personal information online, stop communication
+Next, be very careful about the personal information you reveal online--this can make you vulnerable to predatory people online. Your usernames shouldn’t contain any personal information like your full name, birthday, or age. Even if information feels unimportant, like your school mascot, or your personal schedule, a predatory person can use this information to find out more than they should about your life. You should especially be careful if a person keeps asking you for personal information, and stop communication with them. This could be a predatory person, and giving them information can jeopardize your safety.
+
+Don’t be afraid to block or report
+If you feel uncomfortable with an interaction, stop communication
+Block communication if needed
+If person continues to reach out, report harassment to the website admin
+You should not be afraid to block or report if needed. If you feel uncomfortable with an interaction or relationship online, stop communication immediately, and block the person if you need to. If the person continues to reach out, this is harassment and you should report this to the website admin.
+
+Ask for help
+If you aren’t sure how to deal with an online interaction, talk to a trusted adult (parent, teacher, coach)
+Lastly, ask for help. If you aren’t sure how to deal with an online interaction, talk to a trusted adult. This might be a parent, teacher or coach--ask them for help if you feel unsure or worried. They can help make sure you stay safe in your online relationships.
+
+Use common sense
+If a situation doesn’t feel right, trust your instincts.
+
+
+Lastly, use common sense and trust your instincts. If a situation doesn’t feel right, it probably isn’t, so don’t be afraid to take steps or ask for help. Following these guidelines and using good judgment can help you stay safe online.
+
+CompTIA ITF+ Alignment
+6.3 Summarize confidentiality, integrity and availability concerns.
+Expectations of privacy when using:
+The Internet
+ Social networking sites
+ Email
+ File sharing
+ Instant messaging
+Mobile applications
+Desktop software
+Business software
+Corporate network
+Written policies and procedures
+Handling of confidential information
+Passwords
+Personal information
+Customer information
+Company confidential information
+
+
+
+

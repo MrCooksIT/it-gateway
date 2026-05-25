@@ -1,0 +1,229 @@
+
+Viewing a Web Page:
+Step by Step
+
+We know web pages are made with HTML and CSS code
+How do we let the world see the web pages we make?
+
+How exactly does a browser find and display a web page?
+
+Step 1: The URL
+www.example.com/homepage.html
+
+Typing it in the browser
+Clicking on a link
+Refreshing a page
+
+Step 1: The URL
+www.example.com/homepage.html
+
+Uniform
+Resource
+Locator
+You are locating a resource
+that exists somewhere on the internet
+
+Step 1: The URL
+www.example.com/homepage.html
+
+
+DOMAIN
+Where in the Internet you need to look for this resource.
+
+Step 1: The URL
+www.example.com/homepage.html
+
+
+DOMAIN
+Where in the Internet you need to look for this resource.
+PATH
+What resource you are requesting.
+
+Step 1: The URL
+www.example.com/homepage.html
+
+
+DOMAIN
+Where in the Internet you need to look for this resource.
+PATH
+What resource you are requesting.
+.HTML
+.JPG
+.MP4
+
+Step 1: The URL
+www.example.com/homepage.html
+
+
+DOMAIN
+Where in the Internet you need to look for this resource.
+PATH
+What resource you are requesting.
+
+Step 1: The URL
+www.example.com/homepage.html
+
+Step 2: The Request
+www.example.com/homepage.html
+Request
+
+Step 2: The Request
+www.example.com/homepage.html
+“Hey example.com! Can you send me your homepage.html file please?”
+Request
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+
+Step 2: The Request
+Phone icon: https://commons.wikimedia.org/wiki/File:Mobile_phone_font_awesome.svg Attribution: Font Awesome by Dave Gandy 
+Watch icon: https://commons.wikimedia.org/wiki/File:White_AppleWatch_with_Screen.png#/media/File:White_AppleWatch_with_Screen.png by Justin14: https://commons.wikimedia.org/wiki/User:Justin14
+Large network image: http://www.martingrandjean.ch/wp-content/uploads/2013/10/Graphe3.png by Martin Grandjean
+
+www.google.com
+www.codehs.com
+www.example.com
+
+Step 2: The Request
+Request
+www.example.com
+
+Step 2: The Request
+www.example.com
+“Hey example.com! Can you send me your homepage.html file please?”
+
+Step 2: The Request
+www.example.com
+GET /homepage.html HTTP/1.1
+Host: www.example.com
+Content-Type: text/html
+Content-Language: en
+...
+
+Step 2: The Request
+www.example.com
+GET /homepage.html HTTP/1.1
+Host: www.example.com
+Content-Type: text/html
+Content-Language: en
+...
+HTTP
+
+Step 2: The Request
+www.example.com
+“Hey example.com! Can you send me your homepage.html file please?”
+
+Step 3: The Response
+www.example.com
+Response
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+“Yeah! Here you go!”
+
+Step 3: The Response
+www.example.com
+
+Step 3: The Response
+www.example.com
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+
+Step 4: Rendering the Page
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+
+Step 4: Rendering the Page
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+
+Step 4: Rendering the Page
+<>
+  <>__<>
+    <>__<>
+  <>__<>
+<>
+homepage.html
+
+Step 4: Rendering the Page
+
+Step 4: Rendering the Page
+That all happened in
+
+LESS THAN A SECOND
+
+Hosting our own website
+Register a domain
+Have a server listen for requests coming in to that domain
+Give the server files to respond with
+Ex: homepage.html
+
+Hosting our own website
+Register a domain
+Have a server listen for requests coming in to that domain
+Give the server files to respond with
+Ex: homepage.html
+
+We’ve taken care of the first two for you
+
+Hosting our own website
+Register a domain
+Have a server listen for requests coming in to that domain
+Give the server files to respond with
+Ex: homepage.html
+
+You’ll be creating this part!

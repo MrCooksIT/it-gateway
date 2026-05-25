@@ -1,0 +1,412 @@
+
+How does the Internet Work?
+
+What is the internet? 
+
+
+Questions
+
+What is the internet? 
+
+How does it WORK?
+Questions
+
+What is the Internet?
+A philosophy of making information and knowledge open and accessible to ALL
+
+A network of networks
+
+Built on open, agreed upon protocols
+
+
+
+What is the Internet?
+A way for all machines to communicate with each other
+
+A way for humans to communicate with each other
+
+Protocol
+A widely agreed upon set of rules that standardize communication between machines
+
+Protocol
+Computers represent all information using binary.
+
+All information is built up using 0s and 1s
+
+Protocol
+A protocol is adopted to ensure that all computers interpret the 0s and 1s in the same way
+110100 → A
+110101 → B
+...
+
+Protocol
+The Internet lays out a series of protocols that all devices connected to the Internet must adopt.
+
+That way ALL devices can communicate, no matter what type or when it was made.
+
+How does the Internet work?
+The Internet is a wire
+It’s not in the cloud, it’s literally in the ground, in the oceans, spanning the entire globe.
+
+How does the Internet work?
+The Internet is a wire
+Some parts of the wire send information using electricity
+High voltage = 1		Low voltage = 0
+
+How does the Internet work?
+The Internet is a wire
+Some parts of the wire send information using light
+Light on = 1		Light off = 0
+
+How does the Internet work?
+The Internet is a wire
+Some parts of the wire send information using radio waves
+Short wave = 1		Long wave = 0
+
+How does the Internet work?
+The Internet is a wire
+We are continually finding better and better ways to send information, but the layout of the information remains the same! Every computer uses the same protocols.
+
+How does the Internet work?
+The Internet is a wire
+We are continually finding better and better ways to send information, but the layout of the information remains the same! Every computer uses the same protocols.
+:)
+
+How does the Internet work?
+The Internet is a wire
+We are continually finding better and better ways to send information, but the layout of the information remains the same! Every computer uses the same protocols.
+
+How does the Internet work?
+The Internet is a wire
+We are continually finding better and better ways to send information, but the layout of the information remains the same! Every computer uses the same protocols.
+:)
+
+How does the Internet work?
+Now how does this one wire carry ALL the information flowing through the Internet??
+
+
+
+How does the Internet work?
+It’s actually a lot of wires put together. It’s a vast network of wires.
+
+
+
+Networks
+A group of 2 or more computer systems linked together.
+
+Simple Networks
+
+Simple Networks
+:)
+
+Simple Networks
+
+Simple Networks
+:)
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+NOT SCALABLE!
+
+Simple Networks
+
+Simple Networks
+“Switch”
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Simple Networks
+
+Complex Networks
+
+Complex Networks
+
+Complex Networks
+
+Complex Networks
+
+“Router”
+Complex Networks
+
+Complex Networks
+
+Complex Networks
+
+Complex Networks
+Too much!
+
+The Internet
+
+The Internet
+
+The Internet
+
+The Internet
+
+The Internet
+
+The Internet
+THE INTERNET
+
+The Internet
+THE INTERNET
+
+What is the Internet?
+A network connecting individual networks
+
+Internet Addresses
+2.1.3.3
+2.1.3.4
+2.1.3.5
+2.1.3.6
+2.1.3.9
+122.80.32.200
+103.23.5.122
+190.122.10.10
+190.222.5.99
+108.232.1.89
+90.22.124.55
+45.221.56.17
+98.127.76.89
+5.2.6.6
+5.2.6.1
+5.2.6.2
+5.2.6.3
+5.2.6.4
+Information is sent to and from unique addresses, called Internet Protocol addresses (IP addresses)
+
+Servers
+2.1.3.3
+2.1.3.4
+2.1.3.5
+2.1.3.6
+2.1.3.9
+122.80.32.200
+103.23.5.122
+190.122.10.10
+190.222.5.99
+
+108.232.1.89
+90.22.124.55
+45.221.56.17
+98.127.76.89
+5.2.6.6
+5.2.6.1
+5.2.6.2
+5.2.6.3
+5.2.6.4
+Websites are hosted on servers. Servers sit at particular IP addresses and listen for requests. They respond with the HTML / CSS code that makes up the requested site.
+122.21.44.100
+45.56.232.100
+
+Domain Names
+2.1.3.3
+2.1.3.4
+2.1.3.5
+2.1.3.6
+2.1.3.9
+122.80.32.200
+103.23.5.122
+190.122.10.10
+190.222.5.99
+
+108.232.1.89
+90.22.124.55
+45.221.56.17
+98.127.76.89
+5.2.6.6
+5.2.6.1
+5.2.6.2
+5.2.6.3
+5.2.6.4
+You can choose to register a domain name like codehs.com or wikipedia.org to associate a nice readable name with your IP address
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+
+Sending and Receiving Information
+2.1.3.3
+2.1.3.4
+2.1.3.5
+2.1.3.6
+2.1.3.9
+122.80.32.200
+103.23.5.122
+190.122.10.10
+190.222.5.99
+
+108.232.1.89
+90.22.124.55
+45.221.56.17
+98.127.76.89
+5.2.6.6
+5.2.6.1
+5.2.6.2
+5.2.6.3
+5.2.6.4
+Information is broken down into manageable pieces when it is sent through the Internet. Those pieces are called packets.
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+To: 5.2.6.2
+From: 122.21.44.100
+
+To: 5.2.6.2
+From: 122.21.44.100
+
+To: 5.2.6.2
+From: 122.21.44.100
+
+To: 5.2.6.2
+From: 122.21.44.100
+
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+The packets can take different paths through the network of routers, and arrive at different times, even out of order, and they’ll be put back together at the other end!
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+Sending Packets
+122.21.44.100
+(codehs.com)
+
+45.56.232.100
+(wikipedia.org)
+5.2.6.2
+
+That is how the Internet works!

@@ -1,0 +1,105 @@
+
+Information Literacy
+Hi in this video we’ll be talking about information literacy.
+
+Information is Everywhere
+The Internet gives us access to massive amounts of information.
+
+However, it is easy to find information that is misleading and inaccurate.
+Information is everywhere--the internet has given us access to massive amounts of information. However, it is very easy to find information that is misleading or inaccurate, so we need to be careful.
+
+What is Information Literacy?
+Information literacy is having the ability to find information, evaluate information credibility, and use information effectively.
+
+
+Information literacy is having the ability to find information, evaluate information credibility, and use information effectively. It is important to practice information literacy as we use the internet to make sure we are finding and using reliable sources online.
+
+What is Information Literacy?
+Effective Internet Searches
+Recognizing Advertising
+Judging Legitimacy of Online Sources
+Identifying Misinformation
+
+
+
+Today we’ll talk about a few skills that can help you build information literacy. We’ll talk about effective internet searches, judging the legitimacy of online sources, identifying misinformation, and recognizing advertising
+
+Effective Internet Searches
+Search for keywords that define your topic--be specific
+
+Question: Which US state produces the most solar energy?
+Keywords: United States solar energy production
+There is so much information online, sometimes it can be hard to find what we are looking for. This is why it’s important to know how to conduct effective internet searches. When you are searching online, it’s important to search for keywords that define your topic--and be specific. For example, if I were trying to answer the question “which us state produces the most solar energy?” I could search for the key words united states, and solar energy production. If I took out any of these words, I might not be specific enough. 
+
+Effective Internet Searches
+Use quotation marks to search for exact phrases.
+
+“solar energy” returns results that contain the exact phrase
+You can also use quotation marks to search for exact phrases. If I search for solar energy in quotation marks, I am going to see resutls that contain that exact phrase. This is another trick to narrow down search results.
+
+Effective Internet Searches
+Use + and - to narrow your search.“Solar energy” +USA returns results that contain “solar energy” AND USA“Solar energy” -jobs returns results that contain “solar energy” AND NOT jobs
+
+No space between +/- and keyword: -jobs not - jobs
+
+
+
+
+You can also use plus and minus to narrow your search. The plus sign means AND. So searching for solar energy plus USA is going to return results that contain solar energy AND usa. The minus does the exact opposite. If you search solar energy minus jobs, you’ll see results that contain solar energy and NOT jobs. This is especially helpful if you are looking at a specific subset of a larger topic. If I’m searching for just solar energy, I might see a lot of information about how to get a job working in solar energy. By using the minus sign, I can filter out all of the results that talk about jobs in solar energy, so I am more likely to find results that are relevant to me. 
+
+
+Effective Internet Searches
+Use + and - to narrow your search.“Solar energy” +USA returns results that contain “solar energy” AND USA“Solar energy” -jobs returns results that contain “solar energy” AND NOT jobs
+
+No space between +/- and keyword: -jobs not - jobs
+
+
+
+
+As a note, there is no space between the plus and minus and the keyword you want to include or exclude. If you put a space between the character and your keyword, it won’t work.
+
+Recognizing Advertising
+Sponsored links are forms of ads, where companies pay to appear at the top of a search page. 
+
+
+Ads are NOT credible sources
+Be careful to recognize advertising! Companies can pay to appear at the top of a search page as a sponsored link, so it seem like they are top search results, but they are actually just ads. Ads are definitely not credible sources.
+
+Judging Source Legitimacy
+Author: Is there an author? What are their credentials?
+Date: How recently was this published?
+Sources: Are scholarly sources cited?
+Domain: Is the site .edu or .gov?
+Site Design: Is the site well-designed? 
+Writing Style: Does the site follow spelling and grammar rules?
+Now that we know how to find information on the internet, it’s important to know how to judge whether a source is legitimate or not. It’s very easy for people to post misinformation online, so we want to make sure that our source that we are using is legitimate. 
+
+When you’re evaluating whether a source is legitimate, you want to take a look at a few things. First is the author--does the site even have an author? If the site doesn’t have an author, oftentimes this is a bad sign. It’s impossible to know if the person who wrote the article is an expert in the topic. If there is an author, what are their credentials? Are they experts in the topic?
+
+You also want to check on the date. When was the source published? If it was published more than a few years ago, this could mean the information is no longer accurate, so you might need to find a more recent source.
+
+You also want to look at what sources the author cites. If the author doesn’t cite any sources, it’s hard to know if they actually researched their topic, and where they got their information from. 
+You can also look at the domain. If the site domain is .edu or .gov, that is typically a good sign, because only educational or government organizations publish content under these domains. Other domains like .com .net and .org can still be reliable, but you should be more cautious, as anyone can purchase sites under these domains.
+
+Next, look at the site design. If the site design is confusing or unprofessional, this can indicate an unreliable source.
+Finally, look at writing style. Credible sources should follow spelling and grammar rules. If the site is poorly written, this is an indication that it’s not a credible source.
+
+Now this isn’t an exact science. Some credible sources may not meet all of these requirements. If you aren’t sure about a source’s legitimacy, you can always cross-reference with a source you know to be reliable, like an encyclopedia or textbook.
+
+Identifying Misinformation
+Is the author biased? Are they pushing a certain viewpoint or agenda?
+What sources are cited? Do these sources look credible?
+Can you find this information on other (credible) sites?
+
+In addition to evaluating the legitimacy of a source, you should also know how to identify misinformation. 
+First, evaluate if the author is biased. Are they pushing a certain viewpoint or agenda? You can also search for the authors name to find out more about the author. 
+Next, look at the sources that are cited. Do these sources look credible? The sources cited should look scholarly and credible.
+Lastly, search for this information on other sites that you know are credible. If you can’t find the information on a credible site, it’s probably not true.
+
+Be Information Literate!
+Find information with effective searches
+Evaluate whether a source is legitimate
+Identify misinformation
+Avoid advertisements in the form of sponsored results
+
+It’s really important to be information literate! Use effective searches to find the information you want, and make sure to evaluate whether your source is legitimate. Look for misinformation and bias, and avoid advertisements that are in the form of sponsored results.

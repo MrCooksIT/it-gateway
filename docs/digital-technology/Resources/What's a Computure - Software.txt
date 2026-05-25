@@ -1,0 +1,55 @@
+Transcript
+
+0:00hi in this video we'll be talking about software so what is software
+0:077 secondswell software also called programs or applications are programs that run on the computer they contain instructions
+0:1616 secondsto tell the computer exactly what to do software is how the computer does the cool things that we want it to do there
+0:2424 secondsare a couple types of software the first we'll be going over is user application software now user application software are programs that run on the computer
+0:3333 secondsthat allow us users to perform cool tasks so user applications are programs that are installed onto your computer by
+0:4242 secondsyou the user they don't come prepackaged on the computer you go out you find them you install them and then you use them so user applications enable the user to
+0:5151 secondsaccomplish tasks by using the application things like sending a message or writing an email or writing
+0:5959 secondsyour paper for a class these are all examples of user applications now these user applications are written by programmers but they're packaged so that
+1:071 minute, 7 secondsother people can install it on their own computers so a programmer makes it publishes it to the world and then other people can find these applications and
+1:141 minute, 14 secondsinstall them on their own computers so some examples of user applications are things like games office applications
+1:211 minute, 21 secondslike word processors or spreadsheets web browsers are user applications and file explorers or user applications these are
+1:281 minute, 28 secondsall things that run on your computer that allow you to do the cool things that you want to do then we have system
+1:351 minute, 35 secondssoftware now system software are programs that run on the computer that help the computer perform tasks so
+1:431 minute, 43 secondsrather than helping you perform your tasks these help the computer perform computer tasks so there's a hierarchy going on inside of your computer where
+1:521 minute, 52 secondscertain things depend on certain other things the very first thing you need is the hardware you need the physical machine the metal and the CPU and the
+2:002 minutesdiscs and the mouse and the printer you need that physical hardware in order to have your computer but that Hardware doesn't do anything on its own it needs instructions to know exactly how to work
+2:092 minutes, 9 secondsso installed on the hardware prepackaged on the hardware is the system software and the system
+2:162 minutes, 16 secondssoftware are things like the operating system and specific utilities that help the computer do its job it helps the computer access memory and helps the
+2:242 minutes, 24 secondscomputer save files it helps the computer handle multiple tasks it helps the computer turn on and off these are the systems software applications that
+2:322 minutes, 32 secondsrun on the hardware once you have the system software running correctly then you can start installing application software which are much higher level and
+2:402 minutes, 40 secondsthey rely on the system software to do their jobs correctly but the application software are what allow you to do your cool things like play games right papers
+2:492 minutes, 49 secondsaccess spreadsheets access the internet all these kinds of things so this is the hierarchy going on system software runs directly on the hardware it interacts
+2:562 minutes, 56 secondswith the hardware to help the computer do its job so it is a layer between the user applications and the hardware it
+3:033 minutes, 3 secondshelps the user applications get to the hardware the user applications can't actually access the printer and the mouse and these things on its own it
+3:103 minutes, 10 secondsneeds to ask the system software to send messages to these actual physical devices so the user the user does not directly interact with the system
+3:193 minutes, 19 secondssoftware it's all behind the scenes you are only interacting with the user applications so what are some examples of system software while some important
+3:283 minutes, 28 secondssystem software programs are the boot program which loads the operating system into main memory when the computers first turned on there's the BIOS which is the basic
+3:363 minutes, 36 secondsinput/output system and this manages communication between the input and output devices and the operating system and then you have device drivers for
+3:443 minutes, 44 secondseach of your devices so this is software it's a program for a specific input or output device it tells the input or output device how it should function so
+3:533 minutes, 53 secondsone very important example of system software is operating systems now operating systems make your computer usable they make your computer operate
+4:014 minutes, 1 secondso where's the operating system live well the operating system is between the user applications and the hardware the user applications have to ask the
+4:094 minutes, 9 secondsoperating system for permission to do things with the hardware if they want to save a file or they want to load a file that I want to print something these are all messages sent to the operating
+4:174 minutes, 17 secondssystem and the operating system is a program that tells the hardware what to do it is one type of system software so
+4:254 minutes, 25 secondswhat does the OS do well the operating system also know as the OS manages user applications it manages memory allocation so that
+4:324 minutes, 32 secondsdifferent applications can be using different memory it manages multitasking so that you can have multiple applications running on your computer at
+4:404 minutes, 40 secondsthe same time and it displays a graphical user interface so this is what allows you to interact with the computer
+4:474 minutes, 47 secondsusing displays and pictures and icons rather than a text-based console it used to be that to give the computer instructions you had to literally type
+4:554 minutes, 55 secondsin commands into this little text-based console and that was all you could do now we have graphical user interfaces where you can use a mouse and click on
+5:035 minutes, 3 secondsthings and drag things around and that's how we're sending messages to the computer is through this graphical interface and that is all provided by the operating system so what are some
+5:115 minutes, 11 secondscommon operating systems well the big ones today are Microsoft Windows Apple Mac OS also known as OS X Linux and UNIX
+5:195 minutes, 19 secondspretty much every computer you'll ever use has one of these four operating systems here we have the Microsoft Windows logo the Apple logo and that
+5:275 minutes, 27 secondspenguin is actually the Linux logo so in addition to these user applications and system software there's another type of
+5:345 minutes, 34 secondssoftware and that's simply programs so we've been calling all of this software programs and that's true but a lot of times we use the word program to refer
+5:435 minutes, 43 secondsto a small piece of code that the user writes to do a very specific task so a program is a set of specific
+5:505 minutes, 50 secondsinstructions for the computer written by a programmer using a programming language it's written to perform a task but it's not necessarily meant to be
+5:585 minutes, 58 secondsinstalled as software on other computers you're not necessarily going to publish it to the world it's just a program that you want to run to do something very specific like visualize some music or
+6:086 minutes, 8 secondsremind you to get up at a certain time or process a bunch of data and tell you what the biggest number in your data set is things like this simple programs that
+6:166 minutes, 16 secondsthe user can write now programs are written in a programming language and a programming language is a human readable
+6:236 minutes, 23 secondsway to write computer instructions so we use a language like C or Java or JavaScript to write a computer program and when we run this computer program we
+6:326 minutes, 32 secondsare giving the computer instructions based on the program that we wrote and there are so many computer programming languages there's constantly more being
+6:396 minutes, 39 secondscreated every year this is a small subset of all the computer programming languages in this course will learn how to use a computer programming language to write our own
+6:476 minutes, 47 secondsprograms will actually make our own software so that is an overview of computer software
+
