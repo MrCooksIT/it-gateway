@@ -302,15 +302,99 @@ export default withMermaid(defineConfig({
       //  DIGITAL TECHNOLOGY — Grades 8–9
       // ══════════════════════════════════════════════════════════════════
       {
-        text: '🎓 Digital Technology (Gr8 and 9)',
+        text: '🎓 Digital Technology (Gr 8 & 9)',
         collapsed: true,
         items: [
-          { text: 'Overview',                    link: '/digital-technology/' },
-          { text: 'Systems Technologies',        link: '/digital-technology/systems-tech' },
-          { text: 'Communication Technologies',  link: '/digital-technology/communication-tech' },
-          { text: 'Internet Technologies',       link: '/digital-technology/internet-tech' },
-          { text: 'Data and Information',        link: '/digital-technology/data-management' },
-          { text: 'Social Implications',         link: '/digital-technology/social-implications' },
+          { text: 'Overview', link: '/digital-technology/' },
+
+          // ── Grade 8 ───────────────────────────────────────────────────
+          {
+            text: '📗 Grade 8',
+            collapsed: false,
+            items: [
+              { text: 'Grade 8 Overview', link: '/digital-technology/grade-8/' },
+
+              {
+                text: '💻 What is Computing?',
+                collapsed: true,
+                items: [
+                  { text: 'Unit Overview', link: '/digital-technology/grade-8/what-is-computing/' },
+                  { text: 'History of Computers', link: '/digital-technology/grade-8/what-is-computing/history' },
+                  { text: 'Computer Organisation', link: '/digital-technology/grade-8/what-is-computing/computer-organisation' },
+                  { text: 'Software', link: '/digital-technology/grade-8/what-is-computing/software' },
+                  { text: 'Hardware', link: '/digital-technology/grade-8/what-is-computing/hardware' },
+                  { text: 'Future of Computing', link: '/digital-technology/grade-8/what-is-computing/future-of-computing' },
+                ],
+              },
+
+              {
+                text: '🌐 Digital Citizenship & Cyber Hygiene',
+                collapsed: true,
+                items: [
+                  { text: 'Unit Overview', link: '/digital-technology/grade-8/digital-citizenship/' },
+                  { text: 'Digital Footprint & Reputation', link: '/digital-technology/grade-8/digital-citizenship/digital-footprint' },
+                  { text: 'Cyberbullying', link: '/digital-technology/grade-8/digital-citizenship/cyberbullying' },
+                  { text: 'Internet Safety', link: '/digital-technology/grade-8/digital-citizenship/internet-safety' },
+                  { text: 'Privacy & Security', link: '/digital-technology/grade-8/digital-citizenship/privacy-security' },
+                  { text: 'Information Literacy', link: '/digital-technology/grade-8/digital-citizenship/information-literacy' },
+                  { text: 'Creative Credit & Copyright', link: '/digital-technology/grade-8/digital-citizenship/creative-credit-copyright' },
+                  { text: 'Hacking Ethics', link: '/digital-technology/grade-8/digital-citizenship/hacking-ethics' },
+                ],
+              },
+            ],
+          },
+
+          // ── Grade 9 ───────────────────────────────────────────────────
+          {
+            text: '📘 Grade 9',
+            collapsed: false,
+            items: [
+              { text: 'Grade 9 Overview', link: '/digital-technology/grade-9/' },
+
+              {
+                text: '🌐 Digital Citizenship & Cyber Hygiene',
+                collapsed: true,
+                items: [
+                  { text: 'Unit Overview', link: '/digital-technology/grade-9/digital-citizenship/' },
+                  { text: 'Digital Footprint & Reputation', link: '/digital-technology/grade-9/digital-citizenship/digital-footprint' },
+                  { text: 'Cyberbullying', link: '/digital-technology/grade-9/digital-citizenship/cyberbullying' },
+                  { text: 'Internet Safety', link: '/digital-technology/grade-9/digital-citizenship/internet-safety' },
+                  { text: 'Privacy & Security', link: '/digital-technology/grade-9/digital-citizenship/privacy-security' },
+                  { text: 'Information Literacy', link: '/digital-technology/grade-9/digital-citizenship/information-literacy' },
+                  { text: 'Creative Credit & Copyright', link: '/digital-technology/grade-9/digital-citizenship/creative-credit-copyright' },
+                  { text: 'Hacking Ethics', link: '/digital-technology/grade-9/digital-citizenship/hacking-ethics' },
+                ],
+              },
+
+              {
+                text: '🕸️ What is the Web?',
+                collapsed: true,
+                items: [
+                  { text: 'Unit Overview', link: '/digital-technology/grade-9/what-is-the-web/' },
+                  { text: 'The Internet', link: '/digital-technology/grade-9/what-is-the-web/the-internet' },
+                  { text: 'Browsers', link: '/digital-technology/grade-9/what-is-the-web/browsers' },
+                  { text: 'Viewing Websites', link: '/digital-technology/grade-9/what-is-the-web/viewing-websites' },
+                  { text: 'Web Design', link: '/digital-technology/grade-9/what-is-the-web/web-design' },
+                ],
+              },
+
+              {
+                text: '🏗️ HTML — Structuring Websites',
+                collapsed: true,
+                items: [
+                  { text: 'Unit Overview', link: '/digital-technology/grade-9/html/' },
+                  { text: 'Introduction to HTML', link: '/digital-technology/grade-9/html/intro' },
+                  { text: 'Structure of an HTML Page', link: '/digital-technology/grade-9/html/page-structure' },
+                  { text: 'Formatting Text', link: '/digital-technology/grade-9/html/formatting-text' },
+                  { text: 'Links', link: '/digital-technology/grade-9/html/links' },
+                  { text: 'Images', link: '/digital-technology/grade-9/html/images' },
+                  { text: 'HTML Lists', link: '/digital-technology/grade-9/html/lists' },
+                  { text: 'HTML Tables', link: '/digital-technology/grade-9/html/tables' },
+                  { text: 'HTML Styling', link: '/digital-technology/grade-9/html/styling' },
+                ],
+              },
+            ],
+          },
         ],
       },
 

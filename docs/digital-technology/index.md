@@ -1,15 +1,33 @@
-# Digital Technology (Gr8 and 9)
+---
+title: Digital Technology (Gr 8 & 9)
+---
 
-This section contains revision and exam preparation material for Grade 8 and 9 learners. For the full curriculum your class uses [CodeHS](https://codehs.com) — use these pages to revise concepts and practise for tests and exams.
+# Digital Technology — Grade 8 & 9
 
-| Topic | What it covers |
-|-------|---------------|
-| Systems Technologies | Hardware, software, types of computers, operating systems |
-| Communication Technologies | Networks, internet, communication tools, LAN vs WAN |
-| Internet Technologies | Internet services, online safety, browsers, web basics |
-| Data and Information | Data vs information, spreadsheets, databases, storage units |
-| Social Implications | Responsible use, cyberbullying, digital citizenship, copyright |
+Welcome to the Digital Technology section. This covers the two-year course for Grade 8 and Grade 9 learners. Your class uses [CodeHS](https://codehs.com) — use these pages to study concepts, revise for tests, and prepare for exams.
+
+## Grade 8 Course
+
+| Unit | Topics covered |
+|------|---------------|
+| [What is Computing?](/digital-technology/grade-8/what-is-computing/) | History of computers, computer organisation, hardware, software, future of computing |
+| [Digital Citizenship & Cyber Hygiene](/digital-technology/grade-8/digital-citizenship/) | Digital footprint, cyberbullying, internet safety, privacy & security, information literacy, copyright, hacking ethics |
+
+## Grade 9 Course
+
+| Unit | Topics covered |
+|------|---------------|
+| [Digital Citizenship & Cyber Hygiene](/digital-technology/grade-9/digital-citizenship/) | Deepening of Grade 8 content — POPI Act, Cybercrimes Act, advanced threats, South African context |
+| [What is the Web?](/digital-technology/grade-9/what-is-the-web/) | The internet, browsers, how websites work, web design principles |
+| [HTML — Structuring Websites](/digital-technology/grade-9/html/) | HTML syntax, page structure, formatting, links, images, lists, tables, styling |
+
+## How to use this section
+
+- Click a unit to see all topics
+- Each topic page works like a textbook chapter — read through it, then try the questions at the bottom
+- Use CodeHS for the interactive exercises and coding activities
+- Once you're comfortable with the content, your teacher will set tests using the full resources
 
 ::: info
-Content for this section continues to be developed as the year progresses.
+Content is updated throughout the year as topics are covered in class.
 :::
