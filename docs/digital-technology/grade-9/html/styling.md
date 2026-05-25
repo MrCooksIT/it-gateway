@@ -1,323 +1,229 @@
 ---
-title: HTML Styling
+title: HTML Inline Styling
 ---
 
-# HTML Styling
+# HTML Inline Styling
 
-A plain HTML page works — but it looks like a plain text document from the 1990s. CSS (Cascading Style Sheets) is what makes web pages look good. In this chapter you'll learn three ways to add CSS to HTML and the essential CSS properties every web developer knows.
+## Making Pages More Stylish
 
-## Separation of Concerns
+So far our web pages have been looking pretty good — we have got headers, formatted text, links, images, lists, and tables. But we can make our pages look even more stylish by adding colour, changing font sizes, and adjusting text alignment.
 
-:::tip Key Term
-**Separation of concerns** is a design principle that says each technology should handle one responsibility:
-- **HTML** → structure and content
-- **CSS** → appearance and layout
-- **JavaScript** → behaviour and interactivity
+The way we do this is by introducing the **`style` attribute**.
+
+---
+
+## The `style` Attribute
+
+The **`style` attribute** is an attribute that we can add to **any HTML tag**. It lets us add several different types of visual styles to that tag.
+
+```html
+<tagname style="property: value; property: value;">content</tagname>
+```
+
+The `style` attribute works like this:
+- Inside the double quotes, we define **style properties**
+- Each property has a **name** and a **value**, separated by a colon `:`
+- Each property declaration ends with a semicolon `;`
+- We can have **multiple styles on one tag** by separating them with semicolons
+
+For example:
+
+```html
+<p style="color: blue;">Hello</p>
+```
+
+This paragraph will display with blue text.
+
+```html
+<h1 style="color: blue; font-size: 60px;">Hello</h1>
+```
+
+This heading will display in blue with a font size of 60 pixels.
+
+---
+
+## Adding Multiple Styles
+
+We can stack as many style properties as we like on a single tag, as long as we separate them with semicolons and keep everything inside the double quotes:
+
+```html
+<p style="color: blue; background-color: yellow; font-size: 60px;">Hello</p>
+```
+
+This paragraph would display with:
+- Blue text
+- A yellow background (highlighted)
+- Text that is 60 pixels tall
+
+---
+
+## Style Properties
+
+Here are the key style properties you can use:
+
+### `color`
+
+The `color` property defines the **text colour** for the tag. All text inside that tag — including text in any nested tags — will have that colour.
+
+```html
+<p style="color: red;">This text is red.</p>
+<h1 style="color: navy;">This heading is navy blue.</h1>
+```
+
+### `background-color`
+
+The `background-color` property sets the **background colour** for the entire tag area — like a highlighter effect.
+
+```html
+<p style="background-color: yellow;">This is highlighted yellow.</p>
+<ul style="background-color: navy; color: white;">...</ul>
+```
+
+### `font-size`
+
+The `font-size` property controls how large the text is. We specify the size in **pixels**.
+
+```html
+<p style="font-size: 12px;">Small text</p>
+<p style="font-size: 30px;">Medium text</p>
+<p style="font-size: 60px;">Large text</p>
+```
+
+### `text-align`
+
+The `text-align` property controls the **alignment** of the text within the tag. Options include:
+
+| Value | Effect |
+|-------|--------|
+| `left` | Aligns text to the left (default) |
+| `center` | Centres the text |
+| `right` | Aligns text to the right |
+
+```html
+<h1 style="text-align: center;">Centred Heading</h1>
+<p style="text-align: right;">Right-aligned text</p>
+```
+
+### `list-style-type`
+
+For lists, we can change the type of bullet or marker used with the `list-style-type` property:
+
+```html
+<ul style="list-style-type: square;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+For ordered lists, we can change from numbers to letters:
+
+```html
+<ol style="list-style-type: lower-alpha;">
+  <li>First item</li>
+  <li>Second item</li>
+</ol>
+```
+
+`lower-alpha` gives us lowercase letters (a, b, c) instead of numbers.
+
+---
+
+## HTML Colour Names
+
+You may be wondering: what colours can I use? It turns out there are **140 colours that have names in HTML**. You have your standard colours like red, blue, and green, but there are also some unusual ones — like `cyan`, `blanchedalmond`, and `darkgoldenrod`.
+
+Some examples:
+
+```html
+<p style="color: red;">Red text</p>
+<p style="color: navy;">Navy text</p>
+<p style="color: olive;">Olive text</p>
+<p style="color: darkgoldenrod;">Dark golden rod text</p>
+<p style="color: chocolate;">Chocolate text</p>
+```
+
+:::tip
+You can find a full list of all 140 HTML colour names at **w3schools.com**. Simply search for "HTML color names" to see the complete list and what each colour looks like.
 :::
 
-Keeping these separate makes code easier to maintain. One CSS file can style an entire website of hundreds of pages.
+---
 
-## Three Ways to Add CSS
+## Styling Individual List Items
 
-### Method 1: Inline Styles
-
-CSS written directly on an element using the `style` attribute:
+We can apply different styles to individual `<li>` tags:
 
 ```html
-<h1 style="color: blue; font-size: 36px;">Welcome</h1>
-<p style="background-color: yellow;">This is highlighted.</p>
+<ol style="list-style-type: lower-alpha; font-size: 18px;">
+  <li style="color: chocolate;">Chocolate chip</li>
+  <li style="color: darkgoldenrod;">Oatmeal raisin</li>
+  <li style="color: brown;">Peanut butter</li>
+</ol>
 ```
 
-**When to use**: Quick tests, one-off styling, email templates.
+Each cookie type gets its own colour, making the list visually distinct.
 
-**Disadvantages**:
-- Cannot be reused — must be repeated on every element
-- Mixes structure and style (against best practice)
-- Hard to maintain on large sites
-
-### Method 2: Internal Styles
-
-CSS placed inside a `<style>` element in the `<head>`:
-
-```html
-<head>
-  <meta charset="UTF-8">
-  <title>My Page</title>
-  <style>
-    h1 {
-      color: blue;
-      font-size: 36px;
-    }
-    p {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-```
-
-**When to use**: Single-page websites, quick prototypes.
-
-**Disadvantages**: The styles only apply to that one page — not reusable across multiple pages.
-
-### Method 3: External Stylesheet (Best Practice)
-
-CSS in a separate `.css` file, linked from the HTML `<head>`:
-
-**HTML file (index.html):**
-```html
-<head>
-  <meta charset="UTF-8">
-  <title>My Page</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-```
-
-**CSS file (styles.css):**
-```css
-h1 {
-  color: navy;
-  font-size: 36px;
-}
-
-p {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-```
-
-**Advantages**:
-- One CSS file styles the entire website
-- Change the CSS file → all pages update instantly
-- Browser caches the CSS — pages load faster
-- Clean separation of HTML and CSS
-
-## CSS Syntax
-
-A CSS rule has this structure:
-
-```css
-selector {
-  property: value;
-  property: value;
-}
-```
-
-- **Selector**: which element(s) to style
-- **Property**: what aspect to change (colour, size, font, etc.)
-- **Value**: what to change it to
-- Each declaration ends with a semicolon `;`
-
-## CSS Selectors
-
-| Selector | Syntax | What it selects |
-|----------|--------|----------------|
-| Element | `p { }` | All `<p>` elements |
-| Class | `.intro { }` | All elements with `class="intro"` |
-| ID | `#header { }` | The element with `id="header"` |
-| All | `* { }` | Every element on the page |
-
-```html
-<!-- HTML -->
-<h1 class="title">Hello</h1>
-<p class="intro">First paragraph</p>
-<p>Second paragraph</p>
-<footer id="main-footer">Footer text</footer>
-```
-
-```css
-/* CSS */
-h1 { color: navy; }           /* styles all h1 elements */
-.intro { font-weight: bold; } /* styles elements with class="intro" */
-#main-footer { color: grey; } /* styles element with id="main-footer" */
-```
-
-:::warning
-Use `id` selectors sparingly — each `id` should be unique on a page. Use `class` for styling multiple elements with the same style.
-:::
-
-## Essential CSS Properties
-
-### Colour
-
-```css
-p {
-  color: red;               /* Text colour */
-  background-color: yellow; /* Background colour */
-}
-```
-
-**Colour values:**
-
-| Format | Example | Notes |
-|--------|---------|-------|
-| Named colour | `red`, `navy`, `forestgreen` | ~140 named colours available |
-| Hex code | `#ff0000` | 6 hex digits: #RRGGBB |
-| Short hex | `#f00` | 3 digit shorthand when digits repeat |
-| RGB | `rgb(255, 0, 0)` | Red, Green, Blue values 0–255 |
-| RGBA | `rgba(255, 0, 0, 0.5)` | RGB + Alpha (transparency 0–1) |
-
-```css
-h1 { color: #2c3e50; }             /* Dark blue-grey hex */
-nav { background-color: rgb(0, 128, 0); }  /* Green RGB */
-.overlay { background-color: rgba(0, 0, 0, 0.7); } /* Semi-transparent black */
-```
-
-### Typography
-
-```css
-p {
-  font-family: Arial, Helvetica, sans-serif; /* Font stack */
-  font-size: 16px;                           /* Text size */
-  font-weight: bold;                         /* bold or normal */
-  font-style: italic;                        /* italic or normal */
-  text-align: center;                        /* left, center, right, justify */
-  text-decoration: underline;                /* underline, line-through, none */
-  line-height: 1.6;                          /* Space between lines */
-  letter-spacing: 2px;                       /* Space between letters */
-}
-```
-
-**Font stacks**: List multiple fonts in case the first isn't installed. End with a generic family:
-
-```css
-font-family: "Georgia", "Times New Roman", serif;
-font-family: "Arial", "Helvetica", sans-serif;
-font-family: "Courier New", "Courier", monospace;
-```
-
-### Box Model: Spacing
-
-Every element is a rectangular box. CSS controls spacing:
-
-```css
-div {
-  margin: 20px;     /* Space OUTSIDE the element */
-  padding: 15px;    /* Space INSIDE the element, between border and content */
-  border: 2px solid black; /* Border around the element */
-}
-```
-
-You can set each side individually:
-
-```css
-p {
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-
-/* Shorthand: top, right, bottom, left (clockwise) */
-p { margin: 10px 20px 10px 20px; }
-
-/* Same on all sides */
-p { margin: 10px; }
-```
-
-### Dimensions
-
-```css
-div {
-  width: 400px;           /* Fixed width in pixels */
-  width: 80%;             /* Width as percentage of parent */
-  max-width: 800px;       /* Maximum width */
-  height: 200px;          /* Fixed height */
-}
-```
+---
 
 ## A Complete Styled Example
 
-**index.html:**
+Here is a complete example that styles a heading and a list:
+
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Styled Page</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <header>
-    <h1>Digital Technology Notes</h1>
-    <nav>
-      <ul>
-        <li><a href="#html">HTML</a></li>
-        <li><a href="#css">CSS</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h2 id="html">What is HTML?</h2>
-    <p class="intro">HTML is the foundation of every web page.</p>
-    <p>It uses tags to structure content.</p>
-
-    <h2 id="css">What is CSS?</h2>
-    <p class="intro">CSS controls how HTML elements look.</p>
-  </main>
-
-</body>
+<html>
+  <head>
+    <title>Styled Page</title>
+  </head>
+  <body>
+    <h1 style="color: olive; font-size: 50px;">My Grocery List</h1>
+    <ul style="list-style-type: square; font-size: 20px; color: navy;">
+      <li>Apples</li>
+      <li>Milk</li>
+      <li>Cookies
+        <ol style="list-style-type: lower-alpha; font-size: 18px;">
+          <li style="color: chocolate;">Chocolate chip</li>
+          <li style="color: darkgoldenrod;">Oatmeal raisin</li>
+          <li style="color: brown;">Peanut butter</li>
+        </ol>
+      </li>
+      <li>Bread</li>
+    </ul>
+  </body>
 </html>
 ```
 
-**styles.css:**
-```css
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  color: #333333;
-}
+---
 
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px;
-  margin-bottom: 30px;
-}
+## Summary of Style Properties
 
-h1 {
-  font-size: 28px;
-  margin: 0;
-}
+| Property | What it changes | Example value |
+|----------|----------------|--------------|
+| `color` | Text colour | `red`, `navy`, `olive` |
+| `background-color` | Background colour behind the element | `yellow`, `blue` |
+| `font-size` | Size of the text | `20px`, `60px` |
+| `text-align` | Alignment of text | `left`, `center`, `right` |
+| `list-style-type` | Bullet/marker type for lists | `square`, `lower-alpha` |
 
-h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #2c3e50;
-  padding-bottom: 5px;
-}
-
-.intro {
-  font-weight: bold;
-  color: #555555;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-}
-```
+---
 
 ## Check Your Understanding
 
-1. Explain the three ways to add CSS to HTML. Which is best practice for a multi-page website and why?
-2. Write the CSS rule to make all `<h1>` elements display in dark blue (`#003366`) with a font size of 32 pixels.
-3. What is the difference between `margin` and `padding`? Draw a simple sketch or describe in words.
-4. A student has `class="highlight"` on several `<p>` tags. Write the CSS selector and rule to give these paragraphs a yellow background.
-5. What is a font stack? Write a CSS font-family declaration for a sans-serif style with three fallback fonts.
-6. Write complete HTML and CSS for a page about your favourite food that includes:
-   - A styled heading (colour and size of your choice)
-   - Two paragraphs with readable line height
-   - A coloured background for the page
-7. What does `margin: 0 auto` do when applied to a block element with a set width? Why is this technique useful?
+1. What is the `style` attribute? Which HTML tags can it be added to?
+
+2. What is the format of a style declaration inside the `style` attribute? Describe both the syntax and give an example.
+
+3. Write the HTML for a paragraph that displays the text "Welcome!" in red with a font size of 30 pixels.
+
+4. Write the HTML for a heading that is centred, has an olive colour, and a font size of 50 pixels.
+
+5. How can you add multiple style properties to a single tag? Write an example with at least three properties.
+
+6. What does the `background-color` property do? How is it different from the `color` property?
+
+7. Write the HTML for an unordered list that uses square bullets, has a navy text colour, and a font size of 20 pixels. Include at least three items.
+
+8. How many named colours does HTML provide? Where can you find the full list?
+
+9. Write the HTML for an ordered list that uses lowercase letters (a, b, c) instead of numbers, with at least three items.
+
+10. **Extended question:** Look at this style attribute: `style="color: blue; background-color: yellow; font-size: 60px;"` — what will the element look like? Describe it in words, and explain what each of the three properties is doing.

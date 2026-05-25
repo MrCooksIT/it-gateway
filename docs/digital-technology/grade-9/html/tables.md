@@ -4,53 +4,76 @@ title: HTML Tables
 
 # HTML Tables
 
-HTML tables are used to display **structured, tabular data** — information that naturally organises into rows and columns, like a timetable, price list, or comparison chart.
+## What are Tables?
 
-:::warning
-Tables are for **data**, not for page layout. In the early web, tables were misused to position elements on pages. Modern web design uses CSS (Flexbox, Grid) for layout. Using tables for layout is bad practice.
-:::
+Tables are a great way to display information in a **grid** on our web pages. We see tables all the time on the internet:
 
-## Basic Table Structure
+- Sports websites like ESPN use tables to display rankings and scores
+- Wikipedia uses tables to display information like a list of national birds
+- Address books, schedules, and price lists are all great uses for tables
 
-A table is built from nested elements:
+Whenever information naturally fits into rows and columns, a table is the right tool to use.
+
+---
+
+## Table Terminology
+
+Before we start building tables, we need to understand some table terms. Consider a table showing the top summer songs of all time:
+
+| Rank | Title | Artist | Peak Year |
+|------|-------|--------|-----------|
+| 1 | Song A | Artist A | 2005 |
+| 2 | Song B | Artist B | 2010 |
+
+- **Table** — the entire grid of information is called the table
+- **Table rows** — each horizontal line of data is a table row (the header row and each data row)
+- **Table headers** — the first row of a table usually contains **table headers**, which describe what information is in each column (e.g., Rank, Title, Artist, Peak Year)
+- **Table data** — the actual information inside each cell of the table (e.g., "1", "Song A", "Artist A", "2005")
+
+---
+
+## HTML Tags for Tables
+
+To build tables in HTML, we have a tag for each of these concepts:
+
+| Tag | Stands For | Purpose |
+|-----|-----------|---------|
+| `<table>` | Table | The container for all the table data |
+| `<tr>` | Table Row | One row inside the table |
+| `<th>` | Table Header | A header cell (displayed bold and centred) |
+| `<td>` | Table Data | A regular data cell in the table |
+
+---
+
+## Building a Basic Table
+
+Here is how the tags work together:
 
 ```html
 <table>
   <tr>
     <th>Name</th>
-    <th>Grade</th>
-    <th>Mark</th>
+    <th>Points</th>
   </tr>
   <tr>
-    <td>Sipho</td>
-    <td>9</td>
-    <td>78%</td>
-  </tr>
-  <tr>
-    <td>Aisha</td>
-    <td>9</td>
-    <td>92%</td>
+    <td>Carol</td>
+    <td>32</td>
   </tr>
 </table>
 ```
 
-| Element | What it does |
-|---------|-------------|
-| `<table>` | Container for the entire table |
-| `<tr>` | Table Row — wraps a row of cells |
-| `<th>` | Table Header cell — displayed **bold and centred** by default |
-| `<td>` | Table Data cell — regular content |
+Breaking this down:
+- The `<table>` tag wraps the entire table
+- The first `<tr>` is the header row — it uses `<th>` tags (table headers)
+- The second `<tr>` is a data row — it uses `<td>` tags (table data)
+- In the first row, "Name" and "Points" are the headers describing each column
+- In the second row, "Carol" and "32" are the actual data
 
-**Output** (no borders by default):
+---
 
-Name | Grade | Mark
------|-------|-----
-Sipho | 9 | 78%
-Aisha | 9 | 92%
+## Adding a Border
 
-## Adding Visible Borders
-
-By default, tables have no visible borders. The `border` attribute adds simple borders:
+By default, a table has no visible border — the cells appear without any lines between them. To add a border, we add a **`border` attribute** to the `<table>` tag:
 
 ```html
 <table border="1">
@@ -58,197 +81,99 @@ By default, tables have no visible borders. The `border` attribute adds simple b
 </table>
 ```
 
-:::info
-The `border` attribute is considered old-fashioned (deprecated in HTML5). For production websites, use CSS to style table borders. But for quick practice, `border="1"` is fine.
-:::
+The `border` attribute specifies **how thick the border should be in pixels**. The default is 0 (no border). Setting it to 1 gives a thin border around each cell. You can increase the value (for example, `border="5"`) to get a thicker border around the edge of the table.
 
-## Table Caption
+---
 
-A caption gives the table a title, displayed above (or below) it:
+## A Complete Table Example
 
-```html
-<table border="1">
-  <caption>Class Test Results — June 2026</caption>
-  <tr>
-    <th>Name</th>
-    <th>Mark</th>
-  </tr>
-  <tr>
-    <td>Lerato</td>
-    <td>85%</td>
-  </tr>
-</table>
-```
-
-## Semantic Grouping: `<thead>`, `<tbody>`, `<tfoot>`
-
-For larger tables, you can group rows semantically:
-
-```html
-<table border="1">
-  <caption>Hardware Prices</caption>
-  <thead>
-    <tr>
-      <th>Component</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CPU</td>
-      <td>R3 500</td>
-    </tr>
-    <tr>
-      <td>RAM (16 GB)</td>
-      <td>R1 200</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td>Total</td>
-      <td>R4 700</td>
-    </tr>
-  </tfoot>
-</table>
-```
-
-- `<thead>` — header rows (column names)
-- `<tbody>` — main data rows
-- `<tfoot>` — footer rows (totals, summaries)
-
-This is useful for screen readers and allows CSS to style each section independently.
-
-## Spanning Cells: colspan and rowspan
-
-### colspan — Merge Columns
-
-`colspan` makes a cell span across multiple columns:
-
-```html
-<table border="1">
-  <tr>
-    <th colspan="3">School Timetable — Monday</th>
-  </tr>
-  <tr>
-    <th>Period</th>
-    <th>Subject</th>
-    <th>Teacher</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Mathematics</td>
-    <td>Mr Dlamini</td>
-  </tr>
-</table>
-```
-
-The first row has one `<th>` that spans all 3 columns — creating a merged header.
-
-### rowspan — Merge Rows
-
-`rowspan` makes a cell span down multiple rows:
-
-```html
-<table border="1">
-  <tr>
-    <th>Day</th>
-    <th>Period</th>
-    <th>Subject</th>
-  </tr>
-  <tr>
-    <td rowspan="2">Monday</td>
-    <td>1</td>
-    <td>Maths</td>
-  </tr>
-  <tr>
-    <!-- No <td> for Day — it's covered by the rowspan above -->
-    <td>2</td>
-    <td>Science</td>
-  </tr>
-</table>
-```
-
-:::warning
-When using `rowspan`, remember that the rows it covers must have **one fewer `<td>`** — the rowspan cell takes up that space.
-:::
-
-## Complete Example: Hardware Comparison Table
+Here is a complete example of an address book table:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hardware Comparison</title>
-</head>
-<body>
-
-  <h1>Computer Types Comparison</h1>
-
-  <table border="1">
-    <caption>Comparison of Computer Form Factors</caption>
-    <thead>
+<html>
+  <head>
+    <title>Address Book</title>
+  </head>
+  <body>
+    <h1>My Address Book</h1>
+    <table border="1">
       <tr>
-        <th>Feature</th>
-        <th>Desktop</th>
-        <th>Laptop</th>
-        <th>Tablet</th>
-        <th>Smartphone</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Portability</th>
-        <td>None</td>
-        <td>Good</td>
-        <td>Excellent</td>
-        <td>Excellent</td>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
       </tr>
       <tr>
-        <th>Processing Power</th>
-        <td>Very High</td>
-        <td>High</td>
-        <td>Medium</td>
-        <td>Medium</td>
+        <td>Carol</td>
+        <td>123-4567</td>
+        <td>carol@codehs.com</td>
       </tr>
       <tr>
-        <th>Battery</th>
-        <td>N/A (mains)</td>
-        <td>4–12 hours</td>
-        <td>8–15 hours</td>
-        <td>12–24 hours</td>
+        <td>Jenny</td>
+        <td>867-5309</td>
+        <td>jenny@yahoo.com</td>
       </tr>
-      <tr>
-        <th>Typical Cost (ZAR)</th>
-        <td colspan="2">R6 000 – R30 000</td>
-        <td>R4 000 – R20 000</td>
-        <td>R3 000 – R25 000</td>
-      </tr>
-    </tbody>
-  </table>
-
-</body>
+    </table>
+  </body>
 </html>
 ```
 
+This creates a nicely organised address book with a header row and two rows of data. The `border="1"` gives us visible lines so we can clearly see each cell.
+
+---
+
+## How Tables are Structured
+
+Notice the nesting structure of a table:
+
+```
+<table>
+  └── <tr> (row 1 — headers)
+        ├── <th>Name</th>
+        ├── <th>Phone Number</th>
+        └── <th>Email Address</th>
+  └── <tr> (row 2 — data)
+        ├── <td>Carol</td>
+        ├── <td>123-4567</td>
+        └── <td>carol@codehs.com</td>
+```
+
+- `<tr>` tags go inside the `<table>` tag
+- `<th>` and `<td>` tags go inside the `<tr>` tags
+- The number of cells in each row should match the number of columns
+
+---
+
 ## Check Your Understanding
 
-1. Name the four main elements used to build a table and explain what each does.
-2. What is the difference between `<th>` and `<td>`? How does the browser display them differently by default?
-3. Write a table (with borders) showing a school timetable for one day with three periods, including the subject and teacher for each period.
-4. What does `colspan="2"` do? In what situation would you use it?
-5. The following table should have "Monday" appear only once in the first column, spanning the two periods. Fix the code:
+1. What are the four HTML tags used to build a table? What does each one do?
+
+2. What is the difference between `<th>` and `<td>`? How are they displayed differently by the browser?
+
+3. What is the purpose of the `border` attribute on a `<table>` tag? What value gives a thin border?
+
+4. Write the HTML for a table with borders that shows three of your favourite foods. The table should have columns for "Food" and "Category" (e.g., fruit, snack, main meal).
+
+5. In a table, where do `<tr>` tags go? Where do `<th>` and `<td>` tags go?
+
+6. What does the following code produce? Describe the table in words.
    ```html
-   <tr>
-     <td>Monday</td>
-     <td>1</td>
-     <td>Maths</td>
-   </tr>
-   <tr>
-     <td>Monday</td>
-     <td>2</td>
-     <td>Science</td>
-   </tr>
+   <table border="1">
+     <tr>
+       <th>Day</th>
+       <th>Weather</th>
+     </tr>
+     <tr>
+       <td>Monday</td>
+       <td>Sunny</td>
+     </tr>
+     <tr>
+       <td>Tuesday</td>
+       <td>Cloudy</td>
+     </tr>
+   </table>
    ```
-6. What is `<caption>` used for? Add a caption to your timetable from question 3.
-7. Why should tables NOT be used for page layout? What technology should be used for layout instead?
+
+7. Write the HTML for a table with borders showing a school timetable. Include columns for "Period", "Subject", and "Teacher", with at least three rows of data.
+
+8. **Extended question:** Why do you think table headers (`<th>`) are displayed in bold and centred by default? How does this help the reader of the table?
