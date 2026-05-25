@@ -17,8 +17,8 @@ export default withMermaid(defineConfig({
     // ─── Top navigation bar ───────────────────────────────────────────────
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Theory', link: '/theory/' },
       { text: 'Practical', link: '/practical/' },
+      { text: 'Theory', link: '/theory/' },
       { text: 'Quick Study', link: '/quick-study/' },
       { text: 'Exam Prep', link: '/exam-preparation/' },
       {
@@ -32,8 +32,94 @@ export default withMermaid(defineConfig({
 
     // ─── Unified sidebar ──────────────────────────────────────────────────
     // Single structure shown on all pages — textbook style:
-    // Theory → Practical → Quick Study → Digital Technology (Gr 8–9)
+    // Practical → Theory → Quick Study → Digital Technology (Gr 8–9)
     sidebar: [
+
+      // ══════════════════════════════════════════════════════════════════
+      //  PRACTICAL — Paper 1  (first exam)
+      // ══════════════════════════════════════════════════════════════════
+      {
+        text: '💻 Practical — Paper 1',
+        collapsed: false,
+        items: [
+
+          // ── Algorithms & Flowcharts ───────────────────────────────────
+          {
+            text: '📐 Algorithms & Flowcharts',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/practical/algorithms/' },
+              { text: 'Sequential Algorithms', link: '/practical/algorithms/sequential', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Decision Algorithms', link: '/practical/algorithms/decision', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Repetition Algorithms', link: '/practical/algorithms/repetition', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Classic Problems', link: '/practical/algorithms/classic-problems', badge: { type: 'info', text: 'Gr 11' } },
+            ],
+          },
+
+          // ── Delphi Programming ────────────────────────────────────────
+          {
+            text: '🔵 Delphi Programming',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/practical/delphi/' },
+              { text: 'Components & IDE', link: '/practical/delphi/components', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Variables & Data Types', link: '/practical/delphi/variables', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Operators', link: '/practical/delphi/operators', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Selection (IF / CASE)', link: '/practical/delphi/selection', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Loops (FOR / WHILE / REPEAT)', link: '/practical/delphi/loops', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'ShowMessage & Dialogs', link: '/practical/delphi/showmessage', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: '1D Arrays', link: '/practical/delphi/arrays-1d', badge: { type: 'info', text: 'Gr 11' } },
+              { text: '2D Arrays', link: '/practical/delphi/arrays-2d', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'String Functions', link: '/practical/delphi/strings', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Math Methods', link: '/practical/delphi/math-methods', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Input Validation', link: '/practical/delphi/validation', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Procedures & Functions', link: '/practical/delphi/procedures-functions', badge: { type: 'warning', text: 'Gr 12' } },
+              { text: 'Text Files', link: '/practical/delphi/text-files', badge: { type: 'warning', text: 'Gr 12' } },
+              { text: 'OOP in Delphi', link: '/practical/delphi/oop-delphi', badge: { type: 'warning', text: 'Gr 12' } },
+            ],
+          },
+
+          // ── SQL & Databases ───────────────────────────────────────────
+          {
+            text: '🗃️ SQL & Databases',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/practical/sql/' },
+              { text: 'SELECT — Basics', link: '/practical/sql/select-basics', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'SELECT — Advanced', link: '/practical/sql/select-advanced', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Multi-Table Queries', link: '/practical/sql/joins', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'INSERT / UPDATE / DELETE', link: '/practical/sql/data-manipulation', badge: { type: 'warning', text: 'Gr 12' } },
+              { text: 'SQL in Delphi', link: '/practical/sql/delphi-database', badge: { type: 'warning', text: 'Gr 12' } },
+            ],
+          },
+
+          // ── Number Systems ────────────────────────────────────────────
+          {
+            text: '🔢 Number Systems',
+            collapsed: true,
+            items: [
+              { text: 'Overview', link: '/practical/number-systems/' },
+              { text: 'Binary', link: '/practical/number-systems/binary', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Hexadecimal', link: '/practical/number-systems/hexadecimal', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Data Sizes', link: '/practical/number-systems/data-sizes', badge: { type: 'info', text: 'Gr 11' } },
+            ],
+          },
+
+        ],
+      },
+
+      // ══════════════════════════════════════════════════════════════════
+      //  HOW TO PRACTICE & STUDY CODE
+      // ══════════════════════════════════════════════════════════════════
+      {
+        text: '🖊️ How to Practice & Study Code',
+        collapsed: true,
+        items: [
+          { text: 'Overview', link: '/practice/' },
+          { text: 'Studying Without Delphi', link: '/practice/study-without-delphi' },
+          { text: 'Setting Up & Practising in Delphi', link: '/practice/setup-delphi' },
+        ],
+      },
 
       // ══════════════════════════════════════════════════════════════════
       //  THEORY — Paper 2
@@ -144,79 +230,6 @@ export default withMermaid(defineConfig({
       },
 
       // ══════════════════════════════════════════════════════════════════
-      //  PRACTICAL — Paper 1
-      // ══════════════════════════════════════════════════════════════════
-      {
-        text: '💻 Practical — Paper 1',
-        collapsed: false,
-        items: [
-
-          // ── Algorithms & Flowcharts ───────────────────────────────────
-          {
-            text: '📐 Algorithms & Flowcharts',
-            collapsed: true,
-            items: [
-              { text: 'Overview', link: '/practical/algorithms/' },
-              { text: 'Sequential Algorithms', link: '/practical/algorithms/sequential', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Decision Algorithms', link: '/practical/algorithms/decision', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Repetition Algorithms', link: '/practical/algorithms/repetition', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Classic Problems', link: '/practical/algorithms/classic-problems', badge: { type: 'info', text: 'Gr 11' } },
-            ],
-          },
-
-          // ── Delphi Programming ────────────────────────────────────────
-          {
-            text: '🔵 Delphi Programming',
-            collapsed: true,
-            items: [
-              { text: 'Overview', link: '/practical/delphi/' },
-              { text: 'Components & IDE', link: '/practical/delphi/components', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Variables & Data Types', link: '/practical/delphi/variables', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Operators', link: '/practical/delphi/operators', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Selection (IF / CASE)', link: '/practical/delphi/selection', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Loops (FOR / WHILE / REPEAT)', link: '/practical/delphi/loops', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'ShowMessage & Dialogs', link: '/practical/delphi/showmessage', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: '1D Arrays', link: '/practical/delphi/arrays-1d', badge: { type: 'info', text: 'Gr 11' } },
-              { text: '2D Arrays', link: '/practical/delphi/arrays-2d', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'String Functions', link: '/practical/delphi/strings', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Math Methods', link: '/practical/delphi/math-methods', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Input Validation', link: '/practical/delphi/validation', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Procedures & Functions', link: '/practical/delphi/procedures-functions', badge: { type: 'warning', text: 'Gr 12' } },
-              { text: 'Text Files', link: '/practical/delphi/text-files', badge: { type: 'warning', text: 'Gr 12' } },
-              { text: 'OOP in Delphi', link: '/practical/delphi/oop-delphi', badge: { type: 'warning', text: 'Gr 12' } },
-            ],
-          },
-
-          // ── SQL & Databases ───────────────────────────────────────────
-          {
-            text: '🗃️ SQL & Databases',
-            collapsed: true,
-            items: [
-              { text: 'Overview', link: '/practical/sql/' },
-              { text: 'SELECT — Basics', link: '/practical/sql/select-basics', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'SELECT — Advanced', link: '/practical/sql/select-advanced', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Multi-Table Queries', link: '/practical/sql/joins', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'INSERT / UPDATE / DELETE', link: '/practical/sql/data-manipulation', badge: { type: 'warning', text: 'Gr 12' } },
-              { text: 'SQL in Delphi', link: '/practical/sql/delphi-database', badge: { type: 'warning', text: 'Gr 12' } },
-            ],
-          },
-
-          // ── Number Systems ────────────────────────────────────────────
-          {
-            text: '🔢 Number Systems',
-            collapsed: true,
-            items: [
-              { text: 'Overview', link: '/practical/number-systems/' },
-              { text: 'Binary', link: '/practical/number-systems/binary', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Hexadecimal', link: '/practical/number-systems/hexadecimal', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Data Sizes', link: '/practical/number-systems/data-sizes', badge: { type: 'info', text: 'Gr 11' } },
-            ],
-          },
-
-        ],
-      },
-
-      // ══════════════════════════════════════════════════════════════════
       //  QUICK STUDY
       // ══════════════════════════════════════════════════════════════════
       {
@@ -288,29 +301,16 @@ export default withMermaid(defineConfig({
       //  DIGITAL TECHNOLOGY — Grades 8–9
       // ══════════════════════════════════════════════════════════════════
       {
-        text: '🎓 Digital Technology (Gr 8–9)',
+        text: '🎓 Digital Technology (Gr8 and 9)',
         collapsed: true,
         items: [
-          { text: 'Overview', link: '/digital-technology/' },
-          {
-            text: 'Grade 8',
-            collapsed: true,
-            items: [
-              { text: 'What is Computing?',      link: '/digital-technology/gr8/what-is-computing' },
-              { text: 'History of Computers',    link: '/digital-technology/gr8/history' },
-              { text: 'Karel Coding (JavaScript)',link: '/digital-technology/gr8/karel-coding' },
-            ],
-          },
-          {
-            text: 'Grade 9',
-            collapsed: true,
-            items: [
-              { text: 'Digital Citizenship',     link: '/digital-technology/gr9/digital-citizenship' },
-              { text: 'Web Design Basics',       link: '/digital-technology/gr9/web-design' },
-              { text: 'HTML & CSS',              link: '/digital-technology/gr9/html-css' },
-              { text: 'Internet & Browsers',     link: '/digital-technology/gr9/internet-browsers' },
-            ],
-          },
+          { text: 'Overview',                    link: '/digital-technology/' },
+          { text: 'What is Computing?',          link: '/digital-technology/gr8/what-is-computing' },
+          { text: 'History of Computers',        link: '/digital-technology/gr8/history' },
+          { text: 'Digital Citizenship',         link: '/digital-technology/gr9/digital-citizenship' },
+          { text: 'Web Design Basics',           link: '/digital-technology/gr9/web-design' },
+          { text: 'HTML & CSS',                  link: '/digital-technology/gr9/html-css' },
+          { text: 'Internet & Browsers',         link: '/digital-technology/gr9/internet-browsers' },
         ],
       },
 
