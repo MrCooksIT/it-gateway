@@ -1,0 +1,106 @@
+
+Welcome to Web Design
+
+Question
+
+Have you ever used a website?
+
+Communication
+
+Education
+
+Music
+
+Art
+
+Ecommerce
+
+Access to Knowledge
+
+Websites Impact the WORLD
+Which websites do you commonly use?
+
+How have these websites affected your life?
+
+Question
+
+How are websites made??
+
+With Code!
+Specifically, HTML and CSS code
+
+The New Literacy
+You don’t learn to read to become a professional reader.
+	(but you can if you want)
+
+You learn to read because it enables you to do a LOT of other things.
+
+The New Literacy
+You don’t learn to write to become a professional writer.
+	(but you can if you want)
+
+You learn to write because it enables you to do a LOT of other things.
+
+The New Literacy
+You don’t learn to code to become a professional coder.
+	(but you can if you want)
+
+You learn to code because it enables you to do a LOT of other things.
+
+Computer Science Skills
+Collaboration
+Communication
+Problem Solving
+Creativity
+Analyzing and Fixing
+Connecting concepts
+Impacting the world
+Building your own creations
+Computer Science is so important to learn because it teaches you a valuable way of thinking. Computer science builds skills that are applicable to any field!
+
+Computer Science Fields
+Machine Learning
+Data Science
+Web Design / Web Development
+Graphics and visualization
+Game Design
+Computer Hardware
+Cybersecurity
+Computer Networking
+And there are sooo many fields in computer science. In this course we’ll be looking at a small slice of the field of computer science, and really diving in to web design and web development
+
+Computer Science Fields
+Machine Learning
+Data Science
+Graphics and visualization
+Game Design
+Computer Hardware
+Cybersecurity
+Computer Networking
+Web Design / Web Development
+And there are sooo many fields in computer science. In this course we’ll be looking at a small slice of the field of computer science, and really diving in to web design and web development
+
+Web Design
+
+Creating the look and feel of a website
+
+Figuring out how best to display information
+
+Think a lot about the user experience on the site
+Web Development
+
+Building the actual site based on a given design
+
+Writing the HTML and CSS code that brings the site to life
+
+Think a lot about how to write clean, readable code
+
+
+
+What is this course about?
+Designing and building websites
+Finding and fixing problems
+Using websites creatively to express yourself and tell stories
+Understanding how websites are developed, sent over the Internet, and used to impact the world
+
+Welcome to Web Design!

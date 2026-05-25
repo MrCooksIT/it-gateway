@@ -1,0 +1,192 @@
+
+Privacy & Security
+Hi there! Let’s jump back into Cyber hygiene with privacy and security
+
+The Digital Age 
+In the past 5 years, humans created more data than ever before, creating new challenges around protecting and securing that data for individual users, large companies, banks, small startups, doctors, movie makers, and everyone in between 
+This means it’s more important than ever to be smart about security and privacy in the digital age of computing
+
+Data Privacy AND Data Security
+Privacy =  the appropriate use of your data
+
+Security = the integrity, confidentiality, and availability of your data
+
+
+Data security is commonly referred to as the confidentiality, availability, and integrity of data. In other words, it is all of the practices and processes that are in place to ensure data isn't being used or accessed by unauthorized individuals or parties. Data security ensures that the data is accurate and reliable and is available when those with authorized access need it.
+Data privacy is suitably defined as the appropriate use of data. When companies and merchants use data or information that is provided or entrusted to them, the data should be used according to the agreed purposes. 
+
+(save for later)
+The Relationship Between Data Security and Data Privacy
+Companies need to enact a data security policy for the sole purpose of ensuring data privacy or the privacy of their consumers' information. More so, companies must ensure data privacy because the information is an asset to the company. A data security policy is simply the means to the desired end, which is data privacy. However, no data security policy can overcome the willing sell or soliciting of the consumer data that was entrusted to an organization. 
+
+
+Questions to think about...
+
+
+How do I keep my personal data secure and private?
+Think for a second, what are some ways your keep your personal data secure and private? How would you rate yourself? Do you use strong passwords? do you practice safe web browsing? Do you send information to strangers over the internet? Let’s look at a few ways we can increase our personal digital security and privacy.
+
+Strong Passwords
+Complex passwords containing 8-20 characters 
+Capital and lowercase letters
+Special characters (! @ # $ % ^ & *)
+Numbers 
+Different passwords for different accounts
+Strong passwords are critical today. In the last major survey, teens were found to spend about 9 hours per day on some type of connected device! This leads to more accounts, whether it be social media, for school, for email, for coding, for work, or anything else, each account needs a password to ensure you are the one accessing your data. 
+
+There are a few tips for ensuring a stronger password. 
+Complex passwords are typically longer in length, contain a combination of lower case letter, upper case letter, special characters, punctuation, and numbers
+Also, complex passwords will be completely random and not have full words written out
+Lastly, using different passwords for different accounts is important so that if one password is hacked, only one of your accounts needs to be taken care of, rather than all.
+
+
+Strong Passwords
+2 Factor Authentication
+A 2 step verification process for an added layer of security
+Texting your phone with a unique pin
+Calling your phone with a unique pin
+Asking you a security question specific to you
+Password Managers
+Help manage and diversify your passwords
+Be careful...you need to keep your master password safe!
+A few new security practices can help you keep your accounts secure online 
+2 factor authentication is used by many companies to add a second layer of security. A few examples of 2 factor authentication are
+Sending a text message to your phone with a unique pin
+Calling your phone and having a unique pin spoken to you
+Asking you security questions specific to you like the name of the street you grew up on or the name of your first pet
+Password managers are also a great tool for creating complex, diverse, and random passwords. They also store and organize these passwords for you but remember, you need to keep the master password in a very safe place otherwise you wont be able to access your password manager! 
+It is recommended you store a master password written down on paper in a secret place like a safe or other secure location 
+
+Which is stronger?
+password123    or    *pA$s5%w0Rxd86#18
+codehs2018     or     c0#d*3HhSs!()fn
+
+Tips:
+Limit any personal details included (birthday, graduation year, name)
+Try not to spell out full words (the more random the better)
+Don’t write passwords out on apps like Notes, Evernote, iMessage, or other places your digital footprint lives 
+
+
+If we take a look at these passwords, it’s pretty clear which two are more complex and would be more difficult to hack. When creating passwords, there can be a tendency to use familiar words and numbers, but challenge yourself to use more random characters and stay away from personal details like birthdays, meaningful years, or names.
+
+Also, while storing your passwords on an app in your phone like Notes, iMessage, or Evernote, these can be easily stolen if another individual has access to these apps for a moment.
+
+Writing passwords down or using personal systems to recall passwords will ensure your passwords are safe with you.
+
+Secure Sites
+https://
+s = secure
+http:// = less secure
+Verify  the URL 
+Avoid lots of popups
+1 or 2 popups are okay
+Use your best judgment
+Another way to stay safe digitally is to browse on secure websites. A newer method in security protocol has become more and more used by the web. You have likely noticed some website urls starting with https instead of http. The s stands for secure and uses a complex encryption process to ensure your data and information are secure. 
+
+Always verify the url is the url you expected to visit and that you were not re routed to an unsecure or unknown web page that may be looking to access your personal details.
+Just like in the real world, use your best judgment when visiting sites and if a site seems a bit sketchy or unsafe, best to air on the side of safety and browse somewhere else!
+
+Secure Access to Hardware
+Webcam access 
+Audio access
+Microphone access
+Location access
+
+Security has extended into your hardware, meaning your actual computer or smartphone. Companies will often ask if they can ask your camera, audio, microphone, or location but you would be surprised at how many apps and websites have access to your location. 
+
+To check whether a website has access to your camera or location, you can select the secure lock next the the https in a url and see the connection details and the site settings. This can be smart to do every now and then because it can be easy to accidentally grant location or microphone access to a site and forget to turn it off!
+
+These settings are another important reason why secure websites using https are much better to use!
+
+Privacy Policies
+Legal documents websites have that disclose the ways they can store and share your data
+Typically very long and dense documents many users do not want to read
+You have probably skipped reading a privacy policy or two. Okay maybe you’ve never read a privacy policy in your life. You’re probably not alone. However, these are important legal documents that disclose how website can gather, store and share your data. This means you might be giving them the right to sell your information, to read your emails, or to look at your saved photos. 
+
+Most privacy policies are lengthy and boring to read. This is on purpose. But it’s good practice to quickly read through them to learn how your privacy is being used. If you have trouble understanding a company’s policy, there are usually online summaries for major company privacy policies
+
+Feel free to 
+
+Not all privacy policies are equal
+Some privacy policies use your data to make money or to target products and advertisements at your 
+Ever wonder why that watch you just Googled about appeared on your Instagram newsfeed?
+By checking the you agree box on a privacy policy you are granting that company permission to use your data in the ways they outlined it. You may have noticed advertisements lately on Google, or Facebook, or Instagram that are very familiar. Perhaps they are things you searched, read, about, or shopped for. That data was then used to target advertisements to you later.
+
+Avoiding Phishing Scams
+Phishing: a method to gather personal information such as usernames and passwords using deceptive emails and websites			
+
+There are plenty of ways people try to hack others online. Phishing is a relatively straightforward, but difficult to catch method. Phishing is a method to gather personal information such as usernames, passwords, credit card numbers, addresses, bacnk account info, and more using deceptive emails and websites.
+
+An email may come from a familiar looking address but if you look closely there may be a very minor misspelling. The email may then direct you to login to a deceptive portal and then steal your login data.
+
+Stolen Data: What Can Happen?
+Online impersonation on social media
+Bank account theft
+Identity theft
+Communicating inappropriately with others
+Sharing or selling your private data
+While staying safe on the web is possible, especially if you are using good practices and using your best judgment, hacks can still occur.
+
+If you are hacked, someone might impersonate you online, steal your bank account information, communicate inappropriately with colleagues or friends, or sell your private data to third party companies. 
+
+Stolen Data: What to do?
+Contact a parent or IT professional at your school
+Contact a representative from the company (Gmail, School portal login, Instagram, etc.)
+Contact your bank and notify them of any fraudulent charges
+
+If you think you may have been hacked, contact a parent or IT professional at your school immediately. Many companies may email you if they see suspicious behavior such as an unfamiliar device logging on to your account or someone from another country logging into your account. If this happens communicate with the company representative this was not you and to freeze your account.
+Similarly, notify your bank immediately if you notice any fraudulent charges and make sure to freeze any compromised debit or credit cards. 
+
+Security Reminders
+Use your best judgment
+Use password best practices
+Check twice to make sure a website is secure
+Be careful when logging on to public computers
+Stay up to date on the best web security practices
+Yikes that was a lot! But remember, the goal is to stay safe on the web to protect yourself and your digital identity. To recap:
+Use your best judgment online whether it is visiting websites or accessing permissions to parts of your hardware like a camera
+Create secure and diverse passwords
+Double check the url of a website
+Be careful about entering private information when on a public computer.
+Stay up to date on the best web security practices
+
+Now keep exploring, but stay safe and stay private!
+
+CompTIA ITF+ Alignment
+6.3 Summarize confidentiality, integrity and availability concerns.
+Expectations of privacy when using:
+The Internet
+ Social networking sites
+ Email
+ File sharing
+ Instant messaging
+Mobile applications
+Desktop software
+Business software
+Corporate network
+Written policies and procedures
+Handling of confidential information
+Passwords
+Personal information
+Customer information
+Company confidential information
+
+
+
+
+
+CompTIA ITF+ Alignment
+6.5 Explain password best practices.
+Password length
+Password complexity
+Password history
+Password expiration
+Password reuse across sites
+Password managers
+Password reset process
+
+
+
+
+
+

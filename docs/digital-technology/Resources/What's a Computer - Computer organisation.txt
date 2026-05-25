@@ -1,0 +1,63 @@
+Transcript
+
+0:00hi in this video we'll be talking about computer organization how computers are organized on the
+0:077 secondsinside so what are the main parts of a computer really there are two main categories computer parts are divided
+0:1414 secondsinto hardware and software so the hardware is the physical components of your computer it's those physical things that you can touch and hold usually made
+0:2323 secondsof silicon or metal that is the hardware the physical pieces that make up your computer now the soft software are the
+0:3131 secondsprograms that run on the computer and make your computer do the things that you want it to do these programs aren't physical things that you can touch
+0:3939 secondsinstead they are just ideas they are instructions that are given to the computer that have it do the interesting things now there are several subcategories with all these computer
+0:4848 secondsparts we have network devices and storage devices input devices and output devices some of these devices are purely hardware and some of these devices have
+0:5656 secondsboth hardware and software components we'll be diving into each of these subcategories and seeing what all these devices are so we'll start with output
+1:031 minute, 3 secondsdevices now what are output devices well output devices are how your computer tells you things output devices allow
+1:101 minute, 10 secondsyour computer to get information from inside the computer out into the outside world so output devices allow your computer to display information give
+1:191 minute, 19 secondsaudio signals like music and really in general output devices transform the digital information stored inside your computer into physical information that
+1:281 minute, 28 secondsyou can actually understand and interact with things like lights and sounds so really behind the scenes at the core of it inside the computer everything is
+1:361 minute, 36 secondsstored as numbers everything is stored as digits that's why we call it digital information but that's not very useful to humans we can't look at a bunch of
+1:441 minute, 44 secondsones and zeros and get any useful information about that so the output devices allow your computer to take that digital information those ones and zeros
+1:511 minute, 51 secondsand actually do useful things with it so if your computer reads the number 28 it might put a blue pixel on your screen or if it reads the number 32 it might might
+2:002 minutesput a yellow pixel on your screen things like this it's taking those digital numbers behind the scenes and turning them into physical information so what are some output
+2:082 minutes, 8 secondsdevices that display visual information well we have things like monitors we have things like video cards and things like projectors these are all output devices that take digital information
+2:172 minutes, 17 secondsand turn them into visual information we have output devices for audio we have things like speakers and sound cards at headphones we have output
+2:252 minutes, 25 secondsdevices that take digital information and turn them into actual physical objects things like Laser Printers or inkjet printers or even 3D
+2:332 minutes, 33 secondsprinters then we have input devices input devices are how you give your information to the computer it allows
+2:402 minutes, 40 secondsinformation to go from the outside world into the computer so input devices allow you to interact with your computer and turn
+2:482 minutes, 48 secondsphysical data into Digital Data it's taking this kind of messy chaotic physical data like sound and light and noise and touch and turning that into
+2:562 minutes, 56 secondswell-formed digital data that are simply numbers that the computer can store and work with so we have several interactive
+3:023 minutes, 2 secondsinput devices that are taking your touch and turning that into information the computer can understand things like touchpads or trackpads mouses keyboards
+3:113 minutes, 11 secondsjoysticks remotes and touch screens are all ways that we can give input into the computer we also have input devices that
+3:193 minutes, 19 secondsare constantly monitoring the outside world and capturing information about it to be stored as numbers inside the computer things like scanners
+3:273 minutes, 27 secondsmicrophones to store audio information digital cameras to store visual information webcams and sensors that are doing all sorts of things for example
+3:353 minutes, 35 secondshere's an airplane cockpit we have several airplane sensors that are constantly gathering information like altitude Direction humidity things like
+3:433 minutes, 43 secondsthis and these dials are the output devices they get information from the input devices which are the sensors and then they output that information to the
+3:513 minutes, 51 secondsuser in the form of the dial then we have storage devices so what are storage devices well storage devices are how
+3:583 minutes, 58 secondsyour computer is able bble to remember information and store it for later so storage devices are really the computer's memory they allow computers
+4:064 minutes, 6 secondsto store information to retrieve later and they allow us users to save data for later and there's two categories there's
+4:124 minutes, 12 secondsprimary storage and secondary storage so primary storage is the memory that the computer uses just to perform its normal
+4:204 minutes, 20 secondsactivity when the computer is on and operating it's doing several calculations a second and it needs space to store numbers for these quick
+4:284 minutes, 28 secondscalculations and so this is the primary storage this memory is cleared when the power is turned off this memory needs power to be on in order to work now this
+4:374 minutes, 37 secondsmemory is called Ram which stands for random access memory and we'll get to more info on this later but this memory is very very quick to access but it
+4:454 minutes, 45 secondsneeds power and it's constantly changing then we have secondary storage now this storage is extra memory used
+4:524 minutes, 52 secondsfor persistent storage so this is where we can store things permanently whether there's power or not secondary storage continues to store the data that we want
+5:005 minutesto store and examples of this are CDs USB drives hard drives floppy discs and cloud storage these are all places that
+5:085 minutes, 8 secondswe can put these numbers this Digital Data we can store it in these storage devices and then pull it back out
+5:155 minutes, 15 secondslater and finally we have network devices network devices are how your computer communicates with other computers and this is huge this is a
+5:235 minutes, 23 secondsvery important application of computers is that they are able to talk to each other and send information from one computer to another this says to
+5:295 minutes, 29 secondsincredible things like the internet so what are networks well the idea of a network is that computers usually don't directly communicate between one another
+5:385 minutes, 38 secondswe don't have links going from every computer to every other computer instead what we do is we have these Central locations that your computer connects to
+5:465 minutes, 46 secondsso your computer connects to one central location and then that central location looks at the information that you've sent and passes it on to the proper
+5:545 minutes, 54 secondslocation now this machine sitting in the center is a very special machine and it's called a router so a router is the center of the network it receives and
+6:036 minutes, 3 secondsanalyzes data from computers and it routes the information to where it's supposed to go it's kind of like the traffic controller of the network it receives data from computers and
+6:116 minutes, 11 secondsforwards it along to where it's supposed to go it can also receive and analyze data set from other routers on other networks and doing this we can actually
+6:196 minutes, 19 secondsconnect two different networks to each other so there are a couple kinds of networks first off we have a local area network or a landan for short so a local
+6:286 minutes, 28 secondsarea network is very small it connects computers that are very close to each other such as in the same building and it can usually be connected with one single router we might have one router
+6:376 minutes, 37 secondsin one building that connects eight different computers now we have wide area networks or a WN for short now a wide area network connects computers
+6:456 minutes, 45 secondsthat are very far away from each other and to do this it needs multiple routers and special cables that can span very long
+6:536 minutes, 53 secondsdistances now a wide area network is usually made up of several smaller local area networks so WI wide area network will connect several different buildings
+7:017 minutes, 1 secondeach of which have their own local area network so the internet is actually one example of a wide area network the Internet connects your computer to all
+7:087 minutes, 8 secondsother computers by connecting together all these smaller networks and the way it does this is with the routers the routers are really the the important
+7:177 minutes, 17 secondsdevice here that are receiving information and forwarding it along to where it needs to go so the important network devices that we need to remember are routers which receive and analyze
+7:267 minutes, 26 secondsdata sent from other networks but how exactly do we connect to this router there's a couple ways that we might actually get information from a computer to a router one is through an ethernet
+7:357 minutes, 35 secondsport so an ethernet port allows an ethernet cable to be attached to your computer and ethernet is just one way to physically connect to a router and it
+7:437 minutes, 43 secondsconnects through a cable that is you're sending information through that cable then we have a wireless internet card or a Wi-Fi card and this allows you to
+7:517 minutes, 51 secondsconnect to a router by sending radio waves to the router and so these are the different network devices routers ethernet ports and wireless Internet
+7:587 minutes, 58 secondscards and that is a brief overview of some of the most important Computing devices
