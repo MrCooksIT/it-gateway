@@ -4,17 +4,17 @@ layout: home
 hero:
   name: "IT Gateway"
   text: "Your complete IT resource"
-  tagline: "Grades 10 · 11 · 12 — everything you need for Paper 1 and Paper 2"
+  tagline: "All your IT content in one place — Grades 8 to 12"
   actions:
     - theme: brand
-      text: 📚 Theory — Paper 2
-      link: /theory/
-    - theme: alt
-      text: 💻 Practical — Paper 1
+      text: 💻 IT Practical — Paper 1
       link: /practical/
     - theme: alt
-      text: ⚡ Quick Study
-      link: /quick-study/
+      text: 📚 IT Theory — Paper 2
+      link: /theory/
+    - theme: alt
+      text: 🎓 Digital Technology
+      link: /digital-technology/
 
 features:
   - icon: 🖥️
@@ -66,8 +66,20 @@ features:
     linkText: Practise Delphi →
 
   - icon: 🗃️
-    title: SQL & Quick Study
+    title: SQL & Databases
     details: SELECT, JOINs, INSERT/UPDATE/DELETE — plus cheat sheets and syntax cards for last-minute revision.
     link: /practical/sql/
     linkText: Practise SQL →
+
+  - icon: 🎓
+    title: Digital Technology
+    details: Gr 8 & 9 revision — Systems, Communication, Internet, Data and Social Implications.
+    link: /digital-technology/
+    linkText: Go to Digital Tech →
+
+  - icon: ⚡
+    title: Cheat Sheets
+    details: Quick-reference cards for syntax, keywords, SQL, Delphi functions and exam day essentials.
+    link: /quick-study/
+    linkText: Open Cheat Sheets →
 ---

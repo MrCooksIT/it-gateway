@@ -19,6 +19,7 @@ export default withMermaid(defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Practical', link: '/practical/' },
       { text: 'Theory', link: '/theory/' },
+      { text: 'Digital Technology', link: '/digital-technology/' },
       { text: 'Quick Study', link: '/quick-study/' },
       { text: 'Exam Prep', link: '/exam-preparation/' },
       {
