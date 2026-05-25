@@ -19,75 +19,75 @@ title: Grade 9 Digital Technology — Exam 1
 
 *Circle the letter of the correct answer. Each question is worth 1 mark.*
 
-**1.** Under the Protection of Personal Information Act (POPIA), what is the maximum fine an organisation can face for a serious failure to protect personal information?
+**1.** Which type of cyberbullying involves someone creating a **fake identity** to build a relationship with a victim in order to manipulate or humiliate them?
 
-&emsp;A) R1 million
+&emsp;A) Cyberstalking
 
-&emsp;B) R5 million
+&emsp;B) Outing
 
-&emsp;C) R10 million
+&emsp;C) Catfishing
 
-&emsp;D) R50 million
-
----
-
-**2.** Under the South African Cybercrimes Act No. 19 of 2020, which section makes it an offence to send a message that is threatening or intimidating in character with the intent to cause harm?
-
-&emsp;A) Section 2
-
-&emsp;B) Section 6
-
-&emsp;C) Section 9
-
-&emsp;D) Section 14
+&emsp;D) Exclusion
 
 ---
 
-**3.** Under the Cybercrimes Act, the maximum prison sentence for unauthorised interference with a computer system (Section 5) is:
+**2.** When conducting an internet search, how do you tell the search engine to find results containing an **exact phrase**?
 
-&emsp;A) 3 years
+&emsp;A) Use the `+` operator before the phrase
 
-&emsp;B) 5 years
+&emsp;B) Put the phrase in quotation marks `""`
 
-&emsp;C) 10 years
+&emsp;C) Use the `−` operator before the phrase
 
-&emsp;D) 15 years
-
----
-
-**4.** **Foldit** is an example of:
-
-&emsp;A) A crowdfunding platform where users fund science projects
-
-&emsp;B) Citizen science — ordinary people using the internet to help solve a complex scientific problem
-
-&emsp;C) An e-commerce platform for buying science equipment
-
-&emsp;D) A social network for professional researchers
+&emsp;D) Search using only the first and last word of the phrase
 
 ---
 
-**5.** A web browser is best described as:
+**3.** **Citizen science** is best described as:
 
-&emsp;A) An operating system that manages your computer's hardware
+&emsp;A) Science taught only in government schools
 
-&emsp;B) A website such as Google or YouTube
+&emsp;B) Research funded by citizens paying taxes
 
-&emsp;C) An application that retrieves and displays web pages from the internet
+&emsp;C) Ordinary people contributing to scientific research through the internet
 
-&emsp;D) A programming language used to build web pages
+&emsp;D) A government programme for training scientists
 
 ---
 
-**6.** In the URL `www.example.com/results.html`, the path `/results.html` tells the server:
+**4.** A **phishing attack** works by:
 
-&emsp;A) Which domain to look up
+&emsp;A) Installing a virus that crashes your computer
 
-&emsp;B) Which specific file or resource you are requesting
+&emsp;B) Overloading a server so it cannot respond to requests
 
-&emsp;C) Which protocol the browser is using
+&emsp;C) Tricking you into entering personal information on a fake website or email
 
-&emsp;D) Which country the server is located in
+&emsp;D) Accessing your files through an unsecured Wi-Fi connection
+
+---
+
+**5.** When a web browser loads a page, which of the following does it **NOT** retrieve?
+
+&emsp;A) HTML code
+
+&emsp;B) CSS styles
+
+&emsp;C) The operating system
+
+&emsp;D) Images
+
+---
+
+**6.** In the URL `www.example.com/results.html`, what does `www.example.com` represent?
+
+&emsp;A) The path to the specific file
+
+&emsp;B) The protocol being used
+
+&emsp;C) The domain — where on the internet to look
+
+&emsp;D) The file extension
 
 ---
 
@@ -103,7 +103,7 @@ title: Grade 9 Digital Technology — Exam 1
 
 ---
 
-**8.** In an HTML table, which tag is used for a **header** cell (displayed bold and centred)?
+**8.** In an HTML table, which tag creates a **header** cell (displayed bold and centred)?
 
 &emsp;A) `<td>`
 
@@ -133,9 +133,9 @@ title: Grade 9 Digital Technology — Exam 1
 
 &emsp;B) Centres the text horizontally within the element
 
-&emsp;C) Sets the background colour to the centre value
+&emsp;C) Changes the background colour of the element
 
-&emsp;D) Changes the font size to the default centre value
+&emsp;D) Sets the font size to the browser's default centred value
 
 ---
 
@@ -147,29 +147,31 @@ title: Grade 9 Digital Technology — Exam 1
 
 **Question 11** (4 marks)
 
-Name and briefly explain **any four** of the eight conditions of POPIA that organisations must follow when handling personal information. Give one example for each condition of what it would look like in practice.
+Describe **four different types** of cyberbullying. For each type, use the correct term and give a brief, realistic example of what it looks like in practice.
 
 ---
 
 **Question 12** (3 marks)
 
-**(a)** What is a **data breach**? Give one example of how a data breach can happen. **(1½ marks)**
+**(a)** Explain the difference between **data privacy** and **data security**. Use an example to illustrate how the two concepts relate to each other. **(1½ marks)**
 
-**(b)** When a data breach occurs, what does POPIA require the organisation to do? Name **two** specific obligations. **(1½ marks)**
+**(b)** What is **two-factor authentication (2FA)**? Explain how it adds an extra layer of security beyond just a password, and give **one** example of how a second factor can be delivered. **(1½ marks)**
 
 ---
 
 **Question 13** (4 marks)
 
-Describe **four different types** of cyberbullying. For each type, use the correct term and give a brief, realistic example of what it looks like in practice.
+**(a)** What is **citizen science**? Describe the **Foldit** example — what problem did it tackle, who solved it, and what did they achieve? **(2 marks)**
+
+**(b)** What is **crowdfunding**? Explain how the internet makes it possible for people to fund projects that might not receive traditional bank funding. Give one example of a type of project that could benefit. **(2 marks)**
 
 ---
 
 **Question 14** (3 marks)
 
-Lerato discovers a vulnerability in her school's exam system. She does not exploit it, but she explores it out of curiosity and shows a friend. She argues: "I didn't cause any harm, so I haven't done anything wrong."
+**(a)** What is **copyright**? Name **two** types of creative work that copyright protects. **(1 mark)**
 
-Using the Cybercrimes Act No. 19 of 2020, explain why Lerato's argument is incorrect. Include the relevant section of the Act and the possible consequences she could face.
+**(b)** Describe the **three broad categories** of copyright licence. For each one, state whether a person needs the creator's permission before using the work. **(2 marks)**
 
 ---
 
@@ -181,21 +183,21 @@ Describe the **four steps** that happen when you type a URL into a browser and a
 
 **Question 16** (4 marks)
 
-**(a)** What is **citizen science**? Describe one specific example from what you have learned that shows how the internet made citizen science possible — and what that community of people was able to achieve. **(2 marks)**
+**(a)** Explain how a **phishing scam** works. Describe **two warning signs** that an email or website might be a phishing attempt. **(2 marks)**
 
-**(b)** What is **crowdfunding**? How has the internet made it possible for people to fund projects that might not receive traditional bank funding? Give one example of a type of project that could benefit. **(2 marks)**
+**(b)** What is **information literacy**? Describe **two** techniques you can use to get better results when searching the internet. **(2 marks)**
 
 ---
 
 **Question 17** (3 marks)
 
-Web pages are built using three languages. Name each language and explain in one sentence what role it plays in building a website.
+Web pages are built using three different languages. Name each language and explain in one sentence what role it plays in building a website.
 
 ---
 
 ## SECTION C — HTML Practical (25 marks)
 
-*Write your HTML code clearly and neatly. Use correct indentation to show the nesting structure. Marks may be deducted for seriously unclear or unreadable code.*
+*Write your HTML code clearly and neatly. Use correct indentation to show the nesting structure.*
 
 ---
 
@@ -229,7 +231,7 @@ Study the HTML code below and answer the questions that follow.
 </table>
 ```
 
-**(a)** Describe what this table looks like when displayed in a browser. How many rows and columns does it have? What does the first row look like compared to the other rows? **(2 marks)**
+**(a)** Describe what this table looks like when displayed in a browser. How many rows and columns does it have? How does the first row look different from the other rows? **(2 marks)**
 
 **(b)** What is the purpose of the `border="1"` attribute? What would the table look like without it? **(1 mark)**
 
@@ -301,12 +303,12 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 
 | Question | Answer |
 |---|---|
-| 1 | C — R10 million |
-| 2 | D — Section 14 |
-| 3 | C — 10 years |
-| 4 | B — Citizen science |
-| 5 | C — An application that retrieves and displays web pages |
-| 6 | B — Which specific file is being requested |
+| 1 | C — Catfishing |
+| 2 | B — Quotation marks |
+| 3 | C — Ordinary people contributing to scientific research through the internet |
+| 4 | C — Tricking you into entering personal information on a fake website or email |
+| 5 | C — The operating system |
+| 6 | C — The domain |
 | 7 | C — `<a>` |
 | 8 | C — `<th>` |
 | 9 | B — Alternative text if the image cannot load |
@@ -316,61 +318,60 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 
 ### Section B — Marking Guidelines
 
-**Q11 (4 marks)** — 1 mark per condition (name + brief explanation + example). Accept any four from:
-
-| Condition | Explanation | Example |
-|---|---|---|
-| Accountability | Responsible party must ensure POPIA is followed | Appointing an Information Officer |
-| Processing limitation | Data may only be collected lawfully and with knowledge | Can't secretly harvest email addresses |
-| Purpose specification | Must state why data is collected and only use it for that purpose | Telling users a newsletter signup is only for newsletters |
-| Further processing limitation | Cannot use data for a different purpose later without consent | Can't later sell the email list without permission |
-| Information quality | Must keep information accurate and up to date | Updating a changed address when notified |
-| Openness | Must be transparent about collection and use | Publishing a clear privacy policy |
-| Security safeguards | Must protect information against loss, theft, and unauthorised access | Encrypting customer databases |
-| Data subject participation | Person can access, correct, and request deletion of their data | Honouring a "delete my account" request |
-
-**Q12 (3 marks)**
-
-**(a)** A data breach is a security incident where personal information is accessed, disclosed, or stolen without authorisation. *(½ mark for definition)* Examples: hacking (attackers exploit a vulnerability), phishing (employee tricked into revealing credentials), insider threat (dishonest employee), accidental exposure (misconfigured database), lost/stolen unencrypted device. *(1 mark for valid example)*
-
-**(b)** Under POPIA, the organisation must: (1) notify the Information Regulator as soon as reasonably possible, and (2) notify affected individuals if there is a risk of harm. The notification must include what information was breached, what they are doing about it, and what the individual can do to protect themselves. *(1½ marks — ½ mark per obligation)*
-
-**Q13 (4 marks)** — 1 mark per type (correct term + realistic example). Award marks for any four from:
+**Q11 (4 marks)** — 1 mark per type (correct term + realistic example). Accept any four from:
 
 | Type | Example |
 |---|---|
-| Harassment | Repeatedly flooding someone's DMs with abusive messages after an argument |
+| Harassment | Repeatedly flooding someone's DMs with abusive messages |
 | Cyberstalking | Tracking every post someone makes and showing up at places they mention |
-| Impersonation/Fraping | Creating a fake Instagram account using someone's photos to post embarrassing content |
-| Outing | Publicly revealing someone's sexuality online without their consent |
-| Exclusion/Ostracism | Removing someone from the class WhatsApp group to isolate them |
+| Impersonation / Fraping | Creating a fake account using someone's photos to post embarrassing content |
+| Outing | Revealing someone's sexuality or personal secret online without their consent |
+| Exclusion / Ostracism | Removing someone from a class WhatsApp group to isolate them |
 | Troll attack | Coordinating a group to mass-report someone's account or flood their posts with abuse |
-| Catfishing | Creating a fake romantic persona to manipulate someone emotionally or gather private information |
-| Sexting coercion/Sextortion | Pressuring someone for intimate images and then threatening to share them unless money is paid |
+| Catfishing | Using a fake romantic persona to manipulate someone emotionally |
+| Sexting coercion / Sextortion | Pressuring someone for intimate images then threatening to share them |
+
+**Q12 (3 marks)**
+
+**(a)** Data **privacy** is about *who should have access* to your data — whether your information is being used for the correct, agreed purpose. Data **security** is about *protecting* data so only authorised people can access it. *(1 mark)* Example: a company needs good security practices in order to honour the privacy of its users — security is the means; privacy is the goal. *(½ mark)*
+
+**(b)** Two-factor authentication adds a **second verification step** on top of a password, so that even if someone discovers your password they still cannot log in without the second factor. *(1 mark)* Examples of the second factor: a PIN sent via SMS, a phone call with a unique code, or a security question. *(½ mark — any valid example)*
+
+**Q13 (4 marks)**
+
+**(a)** Citizen science is the involvement of ordinary people in scientific research through the internet. *(½ mark)* Foldit was an online game where players attempted to work out the folding structure of proteins. Players produced an accurate model of an AIDS-causing virus protein in just **10 days** — a problem that had been unsolved by computer simulations and professional researchers for **15 years**. *(1½ marks — award for problem identified, who solved it, and what they achieved)*
+
+**(b)** Crowdfunding is a method of raising money for a project by collecting small contributions from a large number of people, usually through an online platform. *(1 mark)* The internet makes this possible by connecting project creators with a global audience of supporters who do not need to be in the same location. Projects that would not qualify for a bank loan — creative works, community projects, new inventions — can get the funding they need from people who believe in the idea. *(1 mark — accept any valid type of project)*
 
 **Q14 (3 marks)**
 
-- Lerato's argument is incorrect because under **Section 2** of the Cybercrimes Act, accessing a computer system **without authorisation** is a criminal offence in itself — regardless of whether any harm was caused or any data was taken. *(1 mark)*
-- The phrase "I didn't cause any harm" is explicitly not a defence under the Act. *(1 mark)*
-- Consequences: a fine of up to **R10 million** and/or imprisonment of up to **3 years**. *(1 mark — award for any relevant consequence stated)*
+**(a)** Copyright is a form of legal protection for creative or intellectual work — any original work belongs to its creator and is protected by law. *(½ mark)* Examples: written text (books, articles, song lyrics), music, films, photographs, artwork, software. *(½ mark — any two valid examples)*
+
+**(b)** *(2 marks — award roughly ½–¾ mark per category)*
+
+| Category | Permission needed? |
+|---|---|
+| **All rights reserved** — the creator keeps all rights; the work cannot be copied, shared, or modified without explicit permission. | Yes, always |
+| **Some rights reserved** — the creator allows certain uses (e.g. reuse or modification) as long as they are credited. The licence specifies exactly what is permitted. | Depends on the specific licence |
+| **Public domain** — the creator has given up all rights; anyone may freely use or modify the work however they wish. | No |
 
 **Q15 (4 marks)** — 1 mark per step:
 
-1. **The URL** — The user enters a URL (web address) in the browser. The URL contains the domain (where to look) and the path (which file to request).
-2. **The Request** — The browser sends an HTTP request to the server asking for the file. The request travels through the internet via routers.
-3. **The Response** — The server receives the request and sends back the HTML file (and any CSS, images, or other files needed).
-4. **Rendering** — The browser reads all the downloaded files and renders (builds) the visual web page that the user sees on screen.
+1. **The URL** — The user enters a URL (web address). The URL has a domain (where to look) and a path (which file to request).
+2. **The Request** — The browser sends an HTTP request to the server, travelling through the internet via routers, asking for the specified file.
+3. **The Response** — The server receives the request and sends back the HTML file (plus any CSS, images, or other files needed).
+4. **Rendering** — The browser reads all the downloaded files and renders the visual web page that the user sees on screen.
 
 **Q16 (4 marks)**
 
-**(a)** Citizen science is the involvement of ordinary people in scientific research through the internet. *(1 mark)* Example: Foldit — an online game where players solved the folding structure of an AIDS-causing virus protein. The problem had been unsolved by researchers and computer simulations for 15 years; the crowd of online players solved it in 10 days. *(1 mark)*
+**(a)** A phishing attack uses deceptive emails or fake websites to trick a user into entering personal information (login credentials, passwords, banking details). The attacker may mimic a trusted sender or website. *(1 mark)* Warning signs: the sender's email address has a subtle misspelling; the URL of the website does not match the real site; the email creates urgency ("Act now or your account will be closed"); poor grammar or spelling; unexpected requests for personal information. *(1 mark — any two valid warning signs)*
 
-**(b)** Crowdfunding is a method of raising money for a project from a large number of people, each contributing a small amount, through online platforms. *(1 mark)* The internet makes this possible by connecting project creators with a global audience of potential supporters who do not need to be in the same location. This allows projects that would not qualify for a bank loan — creative projects, inventions, community initiatives — to get the funding they need. *(1 mark — accept any valid example of project type)*
+**(b)** Information literacy is the ability to find information, evaluate its credibility, and use it effectively. *(1 mark)* Search techniques: use specific **keywords** rather than full questions; put phrases in **quotation marks** for exact-phrase searching; use `+` to require a term and `−` to exclude a term; search for the author or source to check legitimacy. *(1 mark — any two valid techniques)*
 
 **Q17 (3 marks)** — 1 mark each:
 
 - **HTML (HyperText Markup Language):** provides the structure and content of the web page — headings, paragraphs, lists, images, links, and tables.
-- **CSS (Cascading Style Sheets):** controls the visual appearance of the page — colours, fonts, layout, and spacing.
+- **CSS (Cascading Style Sheets):** controls the visual appearance — colours, fonts, layout, and spacing.
 - **JavaScript:** adds interactivity and dynamic behaviour — responding to user actions, animations, and updating content without reloading the page.
 
 ---
@@ -397,9 +398,9 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 
 **Q19 (4 marks)**
 
-**(a)** The table has **3 columns** (Name, Subject, Mark) and **3 rows** (1 header row + 2 data rows). The first row contains header cells (`<th>`) displayed in **bold and centred**. The other two rows contain regular data cells (`<td>`) in normal (non-bold, left-aligned) text. *(2 marks — 1 for correct row/column count, 1 for correct description of header vs data cells)*
+**(a)** The table has **3 columns** (Name, Subject, Mark) and **3 rows** (1 header row + 2 data rows). The first row uses `<th>` tags — its text is displayed **bold and centred**. The other two rows use `<td>` tags — their text appears in normal (non-bold, left-aligned) style. *(2 marks)*
 
-**(b)** `border="1"` adds a thin visible border around each cell and around the outside of the table. Without it, the table would have no visible lines between cells — all the data would appear without any grid. *(1 mark)*
+**(b)** `border="1"` adds a thin visible border around each cell and around the outside of the table. Without it, the table would have no visible grid lines — the data would appear as plain text without any cell boundaries. *(1 mark)*
 
 **(c)**
 ```html
@@ -430,15 +431,15 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 </html>
 ```
 
-- 1 mark: correct page structure with `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`
+- 1 mark: correct page structure (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`)
 - 1 mark: correct `<title>Useful Websites</title>`
 - 1 mark: `<h1>My Favourite Websites</h1>` inside `<body>`
-- 1 mark: `<ol>` used (not `<ul>`) with three `<li>` items
-- 1 mark: each `<li>` contains a correctly formed `<a href="...">Link text</a>` (award if majority are correct)
+- 1 mark: `<ol>` (not `<ul>`) with three `<li>` items
+- 1 mark: each `<li>` contains a correctly formed `<a href="...">Name</a>`
 
 **Q21 (5 marks)**
 
-**(a)** *(2 marks — 1 for correct tag and text, 1 for all three style properties correct)*
+**(a)** *(2 marks — 1 for correct tag and text, 1 for all three style properties)*
 ```html
 <h1 style="text-align: center; color: navy; font-size: 40px;">Welcome to My Page</h1>
 ```
@@ -448,7 +449,7 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 <p style="color: darkgreen; font-size: 18px;">I am a Grade 9 Digital Technology learner.</p>
 ```
 
-**(c)** *(1½ marks — 1 for correct `<img>` syntax, ½ for all three attributes correct)*
+**(c)** *(1½ marks — 1 for correct `<img>` tag, ½ for all three attributes correct)*
 ```html
 <img src="profile.jpg" alt="My profile photo" width="200">
 ```
@@ -458,9 +459,9 @@ Write the HTML for an **unordered list** of your three favourite foods. Apply th
 | Error | Fix |
 |---|---|
 | Missing `<!DOCTYPE html>` at the top | Add `<!DOCTYPE html>` as the first line |
-| `<title>Sports Page<title>` — missing slash | `<title>Sports Page</title>` |
-| `<h1>My Favourite Sport<h1>` — missing slash | `<h1>My Favourite Sport</h1>` |
-| `<a href="https://www.fifa.com>` — missing closing `"` before `>` | `<a href="https://www.fifa.com">` |
+| `<title>Sports Page<title>` — missing slash in closing tag | `<title>Sports Page</title>` |
+| `<h1>My Favourite Sport<h1>` — missing slash in closing tag | `<h1>My Favourite Sport</h1>` |
+| `<a href="https://www.fifa.com>` — missing closing quote `"` before `>` | `<a href="https://www.fifa.com">` |
 
 Corrected code:
 ```html
@@ -488,10 +489,10 @@ Corrected code:
 </ul>
 ```
 
-- 1 mark: `<ul>` with `style` attribute
-- 1 mark: `list-style-type: square` correctly applied
+- 1 mark: `<ul>` with `style` attribute present
+- 1 mark: `list-style-type: square` correctly applied to `<ul>`
 - 1 mark: `color: navy` and `font-size: 20px` on the `<ul>`
-- 1 mark: first `<li>` with `style="color: red;"` and two remaining items without red styling
+- 1 mark: first `<li>` styled with `color: red` only; remaining items not red
 
 *(Accept any three foods. Deduct ½ mark if `color: red` is placed on the `<ul>` instead of only the first `<li>`.)*
 
