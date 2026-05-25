@@ -2,163 +2,224 @@
 title: Hardware
 ---
 
-# Hardware
+# Topic 4: Hardware
 
-Hardware refers to the **physical components** of a computer — the parts you can actually touch and see. Every device you use — a laptop, tablet, smartphone, or desktop — is made up of hardware components that work together.
+## Introduction
 
-## The Four Categories of Hardware
-
-All hardware fits into one of four roles:
-
-| Category | Role | Examples |
-|----------|------|---------|
-| Input | Sends data **into** the computer | Keyboard, mouse, microphone, camera |
-| Processing | Manipulates and processes data | CPU, GPU |
-| Storage | Holds data short-term or long-term | RAM, HDD, SSD, USB drive |
-| Output | Presents results **from** the computer | Monitor, printer, speakers |
-
-## Input Devices
-
-Input devices allow you to enter data or commands into the computer.
-
-### Keyboard
-The most common input device. Letters, numbers, and symbols are typed using physical or virtual keys. Keyboards come in different layouts (QWERTY is the most common) and types (wired, wireless, ergonomic, on-screen).
-
-### Mouse and Touchpad
-A mouse detects movement and translates it into cursor movement on screen. A touchpad (on laptops) does the same using finger gestures. A trackball is a stationary version of a mouse.
-
-### Touchscreen
-Combines input and output — you interact directly with the display using your finger or stylus. Used in smartphones, tablets, and modern laptops.
-
-### Microphone
-Converts sound waves into digital data. Used for voice calls, voice assistants (Siri, Google Assistant), recording audio, and speech-to-text.
-
-### Webcam / Camera
-Captures still images or video and sends them to the computer. Built into laptops and smartphones; also available as external USB devices.
-
-### Scanner
-Converts a physical document or image into a digital file. Flatbed scanners are common in offices; smartphone camera apps can also scan documents.
-
-### Other input devices
-
-| Device | Used for |
-|--------|---------|
-| Barcode reader | Reading barcodes at shops, libraries, warehouses |
-| Joystick / game controller | Gaming and simulation |
-| Graphics tablet | Digital drawing and design |
-| Fingerprint scanner | Biometric security (unlocking devices) |
-| Remote control | Controlling TVs, set-top boxes, projectors |
-
-## Processing Hardware
-
-### CPU — Central Processing Unit
+**Hardware** refers to the physical components of your computer — the parts you can actually touch that make up the computing machine. Every device you use, whether a laptop, tablet, smartphone, or desktop, is built from hardware components that work together.
 
 :::tip Key Term
-The **CPU** (Central Processing Unit) is the "brain" of the computer. It carries out instructions from software by performing calculations and making decisions millions of times per second.
+**Hardware** — the physical components of a computer; the parts you can touch, usually made of silicon or metal.
 :::
 
-**Clock speed** is measured in GHz (gigahertz) — higher means more instructions per second. Modern CPUs have multiple **cores** (e.g. quad-core = 4 independent processors in one chip), allowing them to handle several tasks simultaneously.
+Hardware uses **electrical signals** to carry out the instructions given to it by programs. These electrical signals implement **binary** — the language of the computer.
 
-**Inside the CPU:**
-- **ALU** (Arithmetic Logic Unit) — performs maths and logical comparisons
-- **CU** (Control Unit) — fetches and coordinates instructions
-- **Cache** — tiny, ultra-fast memory built into the CPU for frequently used data
+---
 
-### GPU — Graphics Processing Unit
+## 1. Binary: The Language of Computers
 
-:::info
-The **GPU** handles graphics and visual processing. While a CPU has a few powerful cores, a GPU has thousands of smaller cores that handle many tasks in parallel — essential for gaming, video editing, and AI. GPUs are also used in machine learning and scientific calculations.
-:::
-
-## Storage Hardware
-
-### RAM — Random Access Memory
+At the very base level of every computer, everything is represented as a zero or a one. This system is called **binary**.
 
 :::tip Key Term
-**RAM** is temporary (volatile) memory. It holds the programs and data currently in use. When you turn the computer off, everything in RAM is lost. More RAM means more programs can run simultaneously without slowing down.
+**Binary** — a numbering system that uses only two digits: 0 and 1. All information inside a computer is ultimately stored and processed in binary.
 :::
 
-Measured in GB (gigabytes). Most computers today have 8–32 GB of RAM.
+Binary is simply a different way of representing numbers. The same numbers we use every day — 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 — can all be represented using only zeros and ones.
 
-### Internal Storage
+Electrical signals can implement binary very simply:
+- A **high voltage** represents a **1**
+- A **low voltage** represents a **0**
 
-| Type | How it works | Speed | Cost | Lifespan |
-|------|-------------|-------|------|----------|
-| **HDD** (Hard Disk Drive) | Magnetic spinning disk | Slower | Cheaper | Fragile (moving parts) |
-| **SSD** (Solid State Drive) | Flash memory chips | Much faster | More expensive | Very durable |
+This means the hardware only ever needs to distinguish between two states — on or off, high or low — which makes it much simpler to build.
 
-Most modern computers use an SSD as the main drive because it boots much faster. HDDs are still used where large capacity at low cost matters (e.g. external backup drives).
+---
 
-### Removable Storage
+## 2. Bits, Bytes, and Digital Data
 
-| Device | Typical capacity | Use |
-|--------|-----------------|-----|
-| USB flash drive | 8 GB – 256 GB | Portable file transfer |
-| Memory card (SD, microSD) | 32 GB – 512 GB | Cameras, smartphones |
-| External HDD/SSD | 500 GB – 4 TB | Portable backup |
-| Optical disc (DVD) | 4.7 GB | Legacy software, movies |
+The smallest unit of digital data is a single binary digit — a single zero or one. This is called a **bit**.
 
-## Output Devices
+:::tip Key Term
+**Bit** — a single binary digit; either a 0 or a 1. The smallest possible unit of digital data.
+:::
 
-### Monitor / Screen
-Displays visual output. Key specs:
-- **Resolution**: number of pixels (e.g. 1920×1080 Full HD). More pixels = sharper image.
-- **Size**: measured diagonally in inches
-- **Refresh rate**: how many times per second the image updates (Hz) — important for gaming
-- **Panel type**: LCD, LED, OLED — affects colour quality and brightness
+On its own, one bit cannot store much information. So bits are grouped together into larger units:
 
-### Printer
-
-| Type | Technology | Best for |
-|------|-----------|---------|
-| **Inkjet** | Sprays tiny droplets of ink | Photos, colour documents |
-| **Laser** | Uses heat and toner powder | Fast, high-volume black text |
-| **3D printer** | Builds objects layer by layer | Prototypes, custom parts |
-| **Label printer** | Prints adhesive labels | Retail, shipping |
-
-### Speakers and Headphones
-Convert digital audio signals into sound waves. Headphones/earphones are speakers worn on or in the ears, providing personal audio.
-
-### Projector
-Projects a large image onto a screen or wall. Common in classrooms, boardrooms, and home theatre setups.
-
-## Types of Computers
-
-The same hardware components are packaged in different ways for different purposes.
-
-| Type | Description | Typical use |
-|------|-------------|------------|
-| **Desktop** | Separate tower, monitor, keyboard, mouse. Most powerful, not portable | Home/office productivity |
-| **Laptop** | All-in-one portable computer | Students, travel, work |
-| **Tablet** | Touchscreen, no physical keyboard | Media consumption, light work |
-| **Smartphone** | Pocket-sized, always-on, cellular | Communication, apps, internet |
-| **Server** | Powerful computer providing services to other devices | Websites, file storage, email |
-| **Supercomputer** | Thousands of CPUs working together | Weather forecasting, science |
-| **Embedded system** | Computer built into another device | Smart TV, car ECU, microwave |
+| Unit | Size | What it can represent |
+|------|------|-----------------------|
+| **Bit** | 1 binary digit (0 or 1) | One of two states |
+| **Byte** | 8 bits | Enough data to represent a single letter (e.g. A, B, or C) |
+| **Megabyte (MB)** | About 1 million bytes | Roughly enough to store a short song |
 
 :::info
-An **embedded system** is a computer hidden inside another device with a specific purpose. Your car, microwave, traffic lights, and ATM all contain embedded computers.
+Everything stored in a computer is stored in bytes. A single byte — 8 bits, such as `11011110` — is enough information to represent one character of text.
 :::
 
-## Comparing Portable Devices
+---
 
-| Feature | Laptop | Tablet | Smartphone |
-|---------|--------|--------|------------|
-| Portability | Good | Excellent | Excellent |
-| Processing power | High | Medium | Medium |
-| Input method | Physical keyboard + touchpad | Touchscreen (+ optional keyboard) | Touchscreen |
-| Battery life | 4–12 hours | 8–15 hours | 1–2 days |
-| Best for | Work, studying, coding | Reading, media, casual use | Communication, apps |
+## 3. Logic Gates
+
+Computers are able to perform mathematical operations on binary data using physical components called **logic gates**.
+
+:::tip Key Term
+**Logic gate** — a physical electronic component that processes incoming binary signals and produces an output signal based on a logical rule.
+:::
+
+All hardware is built using logic gates arranged in circuits. A logic gate takes one or more binary inputs and produces a binary output based on a specific rule.
+
+For example, an **AND gate** works like this: if it receives a 1 on both of its inputs, it outputs a 1. Otherwise, it outputs a 0.
+
+| AND Gate Input A | AND Gate Input B | Output |
+|-----------------|-----------------|--------|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+By combining thousands — and eventually billions — of logic gates together, computers are able to simulate addition, subtraction, multiplication, and all the other mathematical operations they perform. At the base of it all, everything a computer does comes down to binary signals passing through logic gates.
+
+---
+
+## 4. The Main Hardware Components
+
+Every computer has at least three core hardware components: **memory**, the **motherboard**, and the **CPU**.
+
+### 4.1 Memory
+
+Memory is how a computer stores the numbers and instructions it needs. There are two types of memory: **main memory** and **external memory**.
+
+#### Main Memory
+
+Main memory stores the currently running program's instructions and the data the computer needs to function in the moment. It is **temporary** — it is very fast, but it only works when the power is on.
+
+There are two kinds of main memory:
+
+**RAM (Random Access Memory)**
+
+:::tip Key Term
+**RAM (Random Access Memory)** — fast, temporary memory that only stores data while the power is on. The operating system and currently running applications are all stored here.
+:::
+
+- RAM only stores information if the power is turned on — it needs electricity.
+- When the computer starts up, the operating system is loaded into RAM.
+- RAM stores the currently running applications and the data those applications need.
+- It is constantly changing — data comes in and out very quickly.
+- It is sometimes called "random access" because any part of it can be accessed directly and instantly.
+
+**ROM (Read-Only Memory)**
+
+:::tip Key Term
+**ROM (Read-Only Memory)** — memory that cannot be changed; it keeps its data regardless of whether the power is on or off.
+:::
+
+- You cannot write new data to ROM — you can only read from it.
+- ROM keeps its information even when the power is off.
+- ROM stores important information the computer needs to start up, such as the **BIOS** (Basic Input/Output System).
+
+#### External Memory
+
+External memory is used to store data **long-term**. It holds data whether or not the computer is powered, and it can be physically connected to or removed from the computer.
+
+Examples of external memory:
+- CDs
+- USB drives
+- Hard drives
+- Floppy discs
+
+Physical discs like CDs and hard drives literally burn zeros and ones into their surface to store binary data long-term.
+
+| Feature | Main Memory (RAM) | ROM | External Memory |
+|---------|------------------|-----|----------------|
+| Speed | Very fast | Fast | Slower |
+| Keeps data when power off | No | Yes | Yes |
+| Can be changed | Yes, constantly | No | Yes |
+| Purpose | Active programs and data | Startup information (BIOS) | Long-term storage |
+| Examples | RAM chips | BIOS chip | Hard drive, USB drive, CD |
+
+---
+
+### 4.2 The Motherboard
+
+The **motherboard** is where everything lives. It is the main circuit board of the computer.
+
+:::tip Key Term
+**Motherboard** — the main circuit board of a computer. It connects all the different parts of the computer together — the CPU, memory, input devices, output devices, and storage all connect to and through the motherboard.
+:::
+
+The motherboard is responsible for:
+- **Connecting all parts** — the processor, memory, input, output, and storage all connect here.
+- **Creating the clock signal** for the CPU — this is critical, because the CPU performs one operation per clock cycle, so the motherboard keeps the clock running to pace the CPU's work.
+
+---
+
+### 4.3 The CPU (Central Processing Unit)
+
+The **CPU** is the heart of the computer. It is responsible for actually carrying out the instructions of a program — this is where all the number crunching happens.
+
+:::tip Key Term
+**CPU (Central Processing Unit)** — the main processing component of a computer. It executes the instructions received from software, performing one instruction per clock cycle.
+:::
+
+Key facts about the CPU:
+- It executes the instructions given to it by the computer's software.
+- Each instruction is executed on one **clock cycle** — every tick of the motherboard's clock pushes electricity through the CPU to perform the next round of computations.
+- The faster the clock speed, the more instructions the CPU can execute per second.
+
+---
+
+## 5. How It All Works Together: A Worked Example
+
+Let us trace what happens when you click the print icon in a word processor. This brings together all the hardware components discussed above.
+
+**Step 1 — Input**
+You use your mouse to click the print icon. The mouse is an input device. Clicking it sends an electrical signal into the CPU.
+
+**Step 2 — Processing**
+The CPU receives the signal. Based on the numbers and combinations it sees, it recognises that you clicked the print button in the text editor application. It begins processing: it fetches the file you want to print from memory, and prepares to send it to the printer.
+
+**Step 3 — Accessing the Device Driver**
+The CPU gets the printer ready by accessing the printer's **device driver** — the system software that controls how the printer functions.
+
+**Step 4 — Output**
+Once everything is prepared, the CPU sends an electrical signal to the printer containing all the information the printer needs to print the document. The printer takes over and prints your document.
+
+:::info
+This entire sequence — from clicking the icon to the printer receiving its instructions — happens in a fraction of a second, because the CPU is executing millions of instructions per second on each clock cycle.
+:::
+
+---
+
+## 6. Summary of Main Hardware Components
+
+| Component | What It Is | What It Does |
+|-----------|-----------|-------------|
+| **CPU** | Central Processing Unit | Executes program instructions; one instruction per clock cycle |
+| **RAM** | Random Access Memory | Fast, temporary storage for running programs and active data |
+| **ROM** | Read-Only Memory | Permanent storage for startup information (BIOS); survives power-off |
+| **External memory** | Hard drives, USB drives, CDs | Long-term storage of files; survives power-off |
+| **Motherboard** | Main circuit board | Connects all components; generates clock signal for CPU |
+
+---
 
 ## Check Your Understanding
 
-1. A learner is setting up a home studio to record music. List **three** input devices and **two** output devices they would need.
-2. Explain the difference between RAM and a hard drive. Give an example of data stored in each.
-3. Why would a school choose laser printers over inkjet printers for their computer lab?
-4. A friend says their old laptop is slow because it has a "small processor". You suspect the real problem is not the CPU. What two other hardware components could cause slowness and why?
-5. Name the type of computer best suited for each situation:
-   - Running a website that serves thousands of visitors
-   - Checking emails on the train
-   - Creating a 3D animation film
-6. Explain the difference between an SSD and an HDD. In what situation would you choose an HDD over an SSD?
-7. A supermarket checkout uses a device that reads barcodes. What type of input device is this, and what category does it belong to (input/processing/storage/output)?
+1. What is hardware? How is it different from software?
+
+2. Explain how electrical signals are used to represent binary data in hardware.
+
+3. What is a bit? What is a byte? How many bits make up one byte?
+
+4. What is a logic gate? Describe how an AND gate works using the table from this chapter.
+
+5. How do logic gates make it possible for a computer to perform mathematical operations like addition?
+
+6. What is RAM? Why does RAM lose its data when the power is switched off?
+
+7. What is ROM? Give **one** example of important information stored in ROM.
+
+8. How is external memory different from main memory? Give **three** examples of external memory devices.
+
+9. What is the motherboard? List **two** important roles it plays in the computer.
+
+10. What is the CPU? What is the relationship between the clock cycle and the CPU's execution of instructions?
+
+11. Using the worked example in Section 5 as a guide, describe what happens inside a computer when you press a key on the keyboard and a letter appears on the screen. Name each hardware component involved.

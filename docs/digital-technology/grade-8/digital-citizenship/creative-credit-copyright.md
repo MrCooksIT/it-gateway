@@ -4,149 +4,97 @@ title: Creative Credit & Copyright
 
 # Creative Credit & Copyright
 
-Every time you use an image from Google, listen to a song, or copy text from a website, you are using someone else's creative work. Understanding copyright and how to properly credit creators is an essential part of being a responsible digital citizen.
+## Introduction
+
+Increased connectivity has made it easier than ever to share and access movies, music, articles, books, and art. However, it is important that we access and share this content in a way that is both **legal** and **ethical**. Understanding copyright — and how to give credit to creators — is a core part of being a responsible digital citizen.
+
+---
 
 ## What Is Copyright?
 
 :::tip Key Term
-**Copyright** is a legal right that gives the creator of an original work exclusive control over how it is copied, shared, adapted, and sold. Copyright is automatic — the moment someone creates an original work, they own it.
+**Copyright** is a form of legal protection for intellectual property, usually applying to artistic works. Any work of original thought is the legal property of its creator, and this is protected by copyright law.
 :::
 
-Copyright protects:
-- Written text (books, articles, song lyrics, poems)
+This means that the owner or creator of a work has the right to decide how their work is used and distributed. Someone else cannot simply take, copy, or share that work without permission.
+
+Copyright applies to many types of creative work, including:
+- Written text (books, articles, poems, song lyrics)
 - Music and recordings
 - Films and videos
 - Photographs and artwork
-- Computer software and games
 - Websites and their content
+- Software and games
 
-Copyright does **NOT** protect:
-- Ideas, facts, or concepts (only the specific way they are expressed)
-- Works in the public domain (copyright has expired)
-- Titles and slogans (these may be protected by trademarks instead)
+---
 
-### How Long Does Copyright Last?
+## Types of Copyright Licences
 
-In most countries, copyright lasts for the **creator's lifetime plus 50–70 years**. After that, the work enters the **public domain** and anyone can use it freely. This is why Shakespeare's plays and Beethoven's music are free to use — their copyright expired long ago.
+There are several types of copyright licences, some offering more protection than others. All of them fall into one of three broad categories:
 
-## What Is Fair Use / Fair Dealing?
+| Category | What It Means |
+|---|---|
+| **All rights reserved** | The creator reserves all rights. The work cannot be distributed, reused, or modified without their explicit permission. This is the most strict copyright licence. |
+| **Some rights reserved** | The creator allows certain uses — such as reuse or modification — as long as they are credited as the original creator. The specific licence spells out exactly what is permitted. |
+| **Public domain** | The creator has dedicated the work to the public domain and waived all rights. Anyone is free to reuse or modify the work however they wish. |
 
-:::tip Key Term
-**Fair use** (or **fair dealing** in South Africa) allows limited use of copyrighted material without permission for purposes such as education, criticism, news reporting, and research.
+:::info Choosing a Licence
+When you share your own creative work online, you can choose which type of licence to apply. A "some rights reserved" licence lets you allow others to build on your work while still being credited. The "public domain" option gives up all rights entirely.
 :::
 
-This means:
-- A teacher can show a clip of a movie to a class for educational discussion
-- A reviewer can quote a few lines from a book in their review
-- A student can include a small portion of an image in a school project (with attribution)
+---
 
-Fair use is NOT a blanket excuse. It depends on:
-- How much of the work you used
-- The purpose (education vs commercial use)
-- Whether it harms the original creator's income
+## Respecting Others' Copyright
 
-:::warning
-"I found it on Google" is not a legal defence for using a copyrighted image. Google Images shows all images indexed from the web — most of them are copyrighted.
+It is very important to respect the copyright that belongs to other creators. Here are two common violations you should know about:
+
+:::danger Copyright Violations
+1. **Distributing copyrighted materials** — sharing images, movies, music, or albums over file-sharing networks without permission is a clear violation of copyright and is against the law.
+2. **Passing off someone else's work as your own** — taking pictures, quotes, or videos from the internet and claiming you made them is also a violation of copyright law.
 :::
 
-## Creative Commons Licences
+Just as you would properly reference sources in a research paper at school, when you use pictures, quotes, or videos that somebody else created, you must **give credit to the original author**.
 
-**Creative Commons** is a system that allows creators to share their work with specific permissions attached. Instead of "all rights reserved" (traditional copyright), Creative Commons gives "some rights reserved".
+---
 
-| Licence | Symbol | What it allows |
-|---------|--------|---------------|
-| **CC BY** | Attribution | Use freely for any purpose — just credit the creator |
-| **CC BY-SA** | Attribution-ShareAlike | Use freely, but your version must use the same licence |
-| **CC BY-NC** | Attribution-NonCommercial | Use for non-commercial purposes only |
-| **CC BY-ND** | Attribution-NoDerivs | Can share unchanged, but cannot remix or adapt |
-| **CC BY-NC-SA** | Attribution-NonCommercial-ShareAlike | Non-commercial + same licence for adaptations |
-| **CC0** | Public Domain | No rights reserved — completely free to use for anything |
+## How to Cite Your Sources
 
-:::info
-**Where to find free-to-use content:**
-- **Images**: [Unsplash](https://unsplash.com), [Pexels](https://pexels.com), [Creative Commons Search](https://search.creativecommons.org)
-- **Music**: Free Music Archive (FMA), ccMixter
-- **Video**: Pexels Videos, Pixabay
-- Always check the specific licence and credit the creator.
+Whenever you use someone else's work, you should cite it. A proper citation includes:
+
+:::info What to Include in a Citation
+- **Name of the author**, if available
+- **Name of the work**, if available
+- **Year of the work**, if available
+- **Name of the site** you sourced it from
+- **A direct link** to the work
 :::
 
-## Plagiarism
+There are websites and browser extensions that make it very easy to generate citations in the format you need. These tools are particularly useful when putting together bibliographies for school assignments.
 
-:::tip Key Term
-**Plagiarism** is presenting someone else's work, ideas, or words as your own without giving them credit. It doesn't matter whether you do it intentionally or accidentally — it is dishonest and has serious consequences.
-:::
+---
 
-### Types of Plagiarism
+## Summary
 
-| Type | Description |
-|------|-------------|
-| **Direct plagiarism** | Copying text word-for-word without quotation marks or citation |
-| **Paraphrasing without credit** | Rewording someone else's ideas without acknowledging the source |
-| **Patch-writing** | Changing a few words from a source and claiming it as your own |
-| **Self-plagiarism** | Submitting the same work for more than one assignment without permission |
-| **Contract cheating** | Having someone else (or an AI) write your assignment |
+| Concept | Key Point |
+|---|---|
+| Copyright | Legal protection for a creator's original work — the creator controls how it is used |
+| All rights reserved | No use without the creator's explicit permission |
+| Some rights reserved | Certain uses allowed (e.g. with credit); specific licence defines the rules |
+| Public domain | All rights waived — anyone can use the work freely |
+| Copyright violation | Sharing copyrighted files illegally, or presenting someone else's work as your own |
+| Citing sources | Always credit the original author: include author name, work title, year, site name, and direct link |
 
-### Consequences of Plagiarism
-
-- Zero mark for the assignment
-- Disciplinary action at school
-- Permanent note on your academic record
-- In university, expulsion is possible
-- In professional contexts, legal action (copyright infringement)
-
-### How to Avoid Plagiarism
-
-1. **Always cite your sources** — even if you paraphrase
-2. **Use quotation marks** when copying exact words, and cite the source
-3. **Write in your own words** after reading and understanding the material
-4. **Keep notes** of where you found your information while researching
-5. **Use a plagiarism checker** (e.g. Grammarly, Turnitin) before submitting
-
-## Citing Digital Sources
-
-When you use information from a website, you must reference it so others can verify it.
-
-**Harvard / author-date style for a webpage:**
-> Surname, Initials. Year. *Title of webpage*. [Online]. Available: URL [Accessed: date].
-
-**Example:**
-> Cook, A. 2024. *Understanding Digital Citizenship*. [Online]. Available: https://example.school.co.za/digital-citizenship [Accessed: 12 May 2024].
-
-**For an image:**
-> Creator name. Year. *Title or description*. [Photograph/Image]. Source/website. Licence type.
-
-## What About Music and Videos?
-
-Using copyrighted music or video in your own content (even just as background music in a school video project) can get your video removed or result in a copyright strike.
-
-**Safer alternatives:**
-- Use music with a Creative Commons licence
-- Use royalty-free music sites (e.g. YouTube Audio Library, Bensound)
-- Create your own music
-- Use silence — it's also an option
-
-:::warning
-**Software piracy** means illegally copying, distributing, or using software without a valid licence. It is illegal in South Africa under the Copyright Act. Using cracked (hacked) software also exposes your device to malware.
-:::
-
-## When YOU Create Something
-
-When you create original work — a photograph, essay, drawing, song, code — **you automatically own the copyright**. You don't need to register it.
-
-Practical implications:
-- Photos you take are yours — others need your permission to use them
-- Code you write is yours (unless written for a company or school project under specific terms)
-- If you post on social media, check the platform's terms of service — you may be giving them a licence to use your content
+---
 
 ## Check Your Understanding
 
-1. Explain what copyright is and give two examples of things it protects.
-2. What is the difference between copyright and plagiarism?
-3. A learner wants to use a photograph from the internet in their school project. List **two** steps they should take to use it legally and ethically.
-4. Look at these Creative Commons licences — describe what each allows:
-   - CC BY
-   - CC BY-NC
-   - CC0
-5. Your friend tells you: "I can use any image I find on Google because it's on the internet for free." Is your friend correct? Explain.
-6. What is fair use/fair dealing? Give one example where it would apply.
-7. A learner copies a paragraph from Wikipedia and changes a few words before handing it in as their own work. Is this plagiarism? Explain why or why not.
+1. Define copyright in your own words. Why does copyright law exist?
+2. Describe the difference between "all rights reserved," "some rights reserved," and "public domain." Give a practical example of each.
+3. Why is distributing copyrighted movies or music over file-sharing networks illegal? What law does it violate?
+4. A learner finds a photograph on Google Images and uses it in their school project without crediting the photographer. Is this a copyright violation? Explain your answer.
+5. What information should you include when citing a source you used from the internet? List all five elements.
+6. You want to use a quote from an online article in your class presentation. Describe the steps you should take to use it legally and ethically.
+7. A classmate says: "Copyright only matters for movies and music — images on the internet are free to use." Is your classmate correct? Explain why or why not.
+8. Why is it important to give credit to the original author, even when the licence allows you to use the work for free?
+9. What are citation tools and website extensions useful for? When would you use them?
+10. In your own words, explain why respecting copyright is a matter of both legality and ethics — not just one or the other.

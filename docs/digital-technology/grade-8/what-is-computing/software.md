@@ -6,386 +6,193 @@ title: Software
 
 ## Introduction
 
-When you pick up a smartphone, it is just a piece of glass, metal, and silicon. Without software, pressing the power button would do nothing. Software is what transforms inert hardware into something useful — it is the set of instructions that tells the hardware what to do, when to do it, and how to respond to your input.
+Hardware on its own does nothing — it is just metal and silicon sitting there. **Software** is what brings a computer to life. Software contains the instructions that tell the computer exactly what to do and how to do it. Without software, hardware is useless.
 
-In this topic, we explore what software is, how it is organised into different categories, how it is created, and how it is distributed and licensed. We will also look at the different types of programming languages and understand how code written by a human gets turned into actions by a machine.
+:::tip Key Term
+**Software** (also called programs or applications) — instructions that run on a computer and tell it what to do. Software is how the computer does the useful things we want it to do.
+:::
+
+There are two main types of software: **user application software** and **system software**. Understanding the difference between them, and how they relate to each other, is key to understanding how computers work.
 
 ---
 
-## 1. What Is Software?
+## 1. The Software Hierarchy
 
-**Software** is a collection of instructions and data that tell a computer how to operate. Unlike hardware, which you can physically touch, software is abstract — it exists as stored patterns of electrical charges (data) on chips or disks.
+There is a clear hierarchy inside your computer — each layer depends on the layer below it:
 
-:::tip Key Term
-**Software** — a set of instructions (programs) that direct a computer's hardware to perform specific tasks. Without software, hardware cannot do anything useful.
-:::
-
-Every action your computer takes is driven by software:
-- When you see icons on your screen — that is the operating system
-- When you type a document — that is a word processor application
-- When a webpage loads — that is a browser application and web server software working together
-- When your computer scans for viruses — that is utility software
-
-Software can be divided into two major categories: **system software** and **application software**.
-
-```mermaid
-graph TD
-    S["SOFTWARE"]
-    S --> SS["System Software"]
-    S --> AS["Application Software"]
-
-    SS --> OS["Operating Systems\n(Windows, macOS, Linux,\nAndroid, iOS)"]
-    SS --> DD["Device Drivers"]
-    SS --> UP["Utility Programs\n(antivirus, backup,\ndisk cleaner)"]
-
-    AS --> PROD["Productivity\n(Word, Excel,\nGoogle Docs)"]
-    AS --> COMM["Communication\n(WhatsApp, email)"]
-    AS --> ENT["Entertainment\n(games, streaming)"]
-    AS --> EDU["Educational\n(Duolingo, Khan Academy)"]
-```
-
----
-
-## 2. System Software
-
-System software manages and controls the hardware and provides a platform on which other software can run. Users rarely interact directly with system software — it works behind the scenes.
-
-### 2.1 Operating Systems
-
-The **operating system (OS)** is the most important piece of system software. It is the first major program that loads when the computer starts, and it stays running the entire time the computer is on.
-
-:::tip Key Term
-**Operating System (OS)** — system software that manages all hardware resources and provides services for application programs. It acts as an intermediary between the user, the applications, and the hardware.
-:::
-
-The operating system is responsible for:
-
-| Task | What the OS does |
-|------|-----------------|
-| **Process management** | Decides which program gets CPU time and when |
-| **Memory management** | Allocates RAM to different programs; prevents one program from corrupting another's data |
-| **File management** | Organises files into folders/directories on storage; handles reading and writing |
-| **Device management** | Communicates with hardware through device drivers |
-| **User interface** | Provides the desktop, windows, icons, and menus you interact with |
-| **Security** | Manages user accounts, passwords, and access permissions |
-| **Networking** | Manages network connections — wired and wireless |
-
-**Common operating systems:**
-
-| OS | Platform | Notable Features |
-|----|----------|-----------------|
-| **Windows 11** | Desktop/laptop (PC) | Most widely used desktop OS; familiar Start menu and taskbar |
-| **macOS Sonoma** | Apple Mac computers | Smooth integration with other Apple devices; known for design quality |
-| **Linux** (various distributions) | Desktop, servers, embedded | Free, open-source; very popular on servers; Ubuntu is a common desktop version |
-| **Android** | Smartphones, tablets | Google's OS; open-source; largest mobile OS market share globally |
-| **iOS** | iPhone, iPad | Apple's mobile OS; known for security and smooth performance |
-| **ChromeOS** | Chromebooks | Lightweight OS; most functionality requires internet; popular in schools |
-
-:::info South African Context
-Android dominates the South African smartphone market, largely because Android phones are available at a much wider range of price points than iPhones. Budget Android smartphones costing under R2,000 are common. iOS, while popular in wealthier demographics, has a smaller overall market share locally. On the desktop, Windows is overwhelmingly dominant in schools and businesses.
-:::
-
-### 2.2 Device Drivers
-
-A **device driver** is a specialised piece of software that allows the operating system to communicate with a specific hardware device.
-
-:::tip Key Term
-**Device Driver** — a program that acts as a translator between the operating system and a hardware device, allowing the OS to use the device without needing to know its specific technical details.
-:::
-
-Think of it this way: your operating system is generic — it needs to work with hundreds of different brands of printer, mouse, graphics card, and webcam. It cannot know the specific commands for every device. So instead, the hardware manufacturer writes a driver that acts as a translator. The OS sends generic commands ("print this document") and the driver translates those commands into the specific instructions that particular printer understands.
-
-When you plug in a new USB device and Windows says "Installing drivers…" — this is what is happening.
-
-:::warning Common Problem
-If a hardware device is not working correctly, the problem is very often a missing, outdated, or corrupted device driver — not the hardware itself. Updating drivers is a standard first step in hardware troubleshooting.
-:::
-
-### 2.3 Utility Programs
-
-**Utility programs** are system tools that help maintain, optimise, or protect the computer. They are more specialised than the operating system but more "behind the scenes" than typical applications.
-
-| Utility | Purpose | South African Example |
-|---------|---------|----------------------|
-| **Antivirus / anti-malware** | Detects and removes malicious software | Avast Free Antivirus; Windows Defender (built-in) |
-| **Disk cleaner** | Removes temporary files and frees up storage | Windows Disk Cleanup; CCleaner |
-| **Backup software** | Creates copies of files to protect against data loss | Windows Backup; Acronis |
-| **File compression** | Reduces file sizes for storage or email | WinRAR; 7-Zip |
-| **Disk defragmenter** | Reorganises data on an HDD for faster access | Built into Windows; not needed for SSDs |
-| **System monitor** | Shows CPU, RAM, and network usage | Task Manager (Windows); Activity Monitor (macOS) |
-| **Firewall** | Monitors and controls network traffic | Windows Defender Firewall |
-
----
-
-## 3. Application Software
-
-**Application software** (or "apps") are programs designed to help users perform specific tasks. Unlike system software, application software interacts directly with the user to accomplish a particular goal.
-
-:::tip Key Term
-**Application Software** — programs designed for end users to perform specific tasks. Examples include word processors, web browsers, games, and email clients.
-:::
-
-### 3.1 Productivity Software
-
-Productivity software helps users create, edit, organise, and manage documents, spreadsheets, and presentations.
-
-| Software | Purpose | Example Task |
-|----------|---------|-------------|
-| Word processor | Write and format text documents | Writing an essay, creating a letter |
-| Spreadsheet | Organise and analyse numerical data | Tracking a budget, calculating averages |
-| Presentation | Create slideshows | Making a class presentation |
-| Database | Store and query structured data | Managing a school's learner records |
-
-**Examples:** Microsoft Word, Microsoft Excel, Microsoft PowerPoint (the Office suite), Google Docs, Google Sheets, Google Slides (free, browser-based, popular in South African schools), LibreOffice Writer/Calc/Impress (free, open-source alternative).
+1. **Hardware** — the physical machine (the CPU, discs, mouse, printer, etc.). Hardware does not do anything on its own; it needs instructions.
+2. **System software** — programs installed on the hardware that help the computer perform its own internal tasks. System software sits between the hardware and everything else.
+3. **Application software** — programs that you install and use to do cool things like play games, write papers, or browse the internet. Application software depends on the system software to do its job.
 
 :::info
-Google Workspace (Docs, Sheets, Slides) is popular in South African schools because it is free for educational institutions and works well even with limited hardware, since the processing happens in the cloud rather than on the device.
+The user interacts directly only with **application software**. System software works behind the scenes — the user does not directly interact with it. But without system software, application software cannot function.
 :::
-
-### 3.2 Communication Software
-
-Communication software enables users to send messages, make calls, and share information with others.
-
-| Software | Type | Notes |
-|----------|------|-------|
-| **WhatsApp** | Instant messaging / voice / video | Dominant messaging platform in South Africa |
-| **Gmail / Outlook** | Email | Standard professional communication |
-| **Microsoft Teams / Google Meet** | Video conferencing | Used for remote meetings and online classes |
-| **Zoom** | Video conferencing | Widely used during COVID-19 school closures |
-| **Discord** | Chat / gaming community | Popular with gamers and online communities |
-
-### 3.3 Entertainment Software
-
-Entertainment software is designed to provide enjoyment rather than to accomplish a work task.
-
-- **Games:** FIFA, Minecraft, Fortnite, GTA, Candy Crush
-- **Media players:** VLC Media Player, Windows Media Player
-- **Streaming apps:** Netflix, YouTube, Showmax, DStv Stream, Spotify
-- **Photo/video editing:** Adobe Photoshop, CapCut, TikTok editor
-
-### 3.4 Educational Software
-
-Educational software is designed to facilitate learning.
-
-- **Khan Academy** — free lessons on maths, science, and more; popular in South African schools
-- **Duolingo** — language learning
-- **CodeHS** — the platform used in this course to practise coding
-- **Google Classroom** — manages assignments and communication between teachers and learners
 
 ---
 
-## 4. Programming Languages
+## 2. User Application Software
 
-Software does not appear by magic — it is written by humans using **programming languages**. A programming language is a formal notation that programmers use to write instructions that can be translated into machine code for a computer to execute.
+**User application software** (often just called "apps") are programs that you install on your computer to accomplish tasks. You go out, find them, install them, and then use them.
 
 :::tip Key Term
-**Programming Language** — a formal language with a specific vocabulary and syntax (grammar rules) that programmers use to write software. Examples include Python, Java, JavaScript, C++, and Scratch.
+**User application software** — programs installed by the user that allow them to accomplish specific tasks, such as writing, gaming, browsing the web, or sending messages.
 :::
 
-### 4.1 Low-Level Languages
+Application software enables you to do things like:
+- Send a message or write an email
+- Write a paper for class
+- Play a game
+- Browse the internet
 
-**Low-level languages** are close to the hardware — they work directly with the computer's processor and memory.
+These programs are written by programmers and published so that anyone can install them on their own computers.
 
-- **Machine code** is the lowest level: pure binary (0s and 1s) that the CPU understands directly. It is extremely difficult for humans to write.
-- **Assembly language** uses short text codes (like `MOV`, `ADD`, `JMP`) as human-readable substitutes for machine code instructions. Still very difficult and tedious to write.
+### Examples of User Application Software
 
-Low-level languages are fast and efficient, but writing them requires a deep understanding of the specific processor architecture. They are used in situations where performance is critical, such as device drivers and embedded systems.
-
-### 4.2 High-Level Languages
-
-**High-level languages** are much closer to human language. They use familiar words and structures that are easier to read and write.
-
-| Language | Common Uses | Example Code |
-|----------|------------|-------------|
-| **Python** | AI/ML, data science, scripting, education | `print("Hello, World!")` |
-| **JavaScript** | Web development (browser-side) | `console.log("Hello!")` |
-| **Java** | Android apps, enterprise software | `System.out.println("Hello!");` |
-| **C++** | Games, operating systems, performance apps | `cout << "Hello!" << endl;` |
-| **HTML/CSS** | Web page structure and styling | `<h1>Hello World</h1>` |
-| **Scratch** | Visual programming for beginners | Block-based; drag and drop |
-| **SQL** | Database queries | `SELECT * FROM students;` |
-
-High-level code cannot run directly on a computer — it must first be translated into machine code.
-
-:::warning Common Misconception
-HTML and CSS are often called "programming languages" in everyday conversation, but technically they are **markup** and **style sheet** languages — they describe the structure and appearance of content, rather than describing logic or algorithms. Python, JavaScript, and Java are true programming languages.
-:::
-
-### 4.3 How Code Becomes a Running Program
-
-There are two main ways to translate high-level code into machine code:
-
-**Compilation:**
-1. A programmer writes source code in a high-level language (e.g., C++)
-2. A **compiler** reads the entire source code and translates it all into machine code at once
-3. The result is an **executable file** (.exe on Windows) that can run without the compiler
-4. Running the program is fast, because translation is done beforehand
-5. If there are errors, the whole program fails to compile
-
-**Interpretation:**
-1. A programmer writes source code (e.g., Python)
-2. An **interpreter** reads the code one line at a time and executes each line immediately
-3. There is no separate executable file — you always need the interpreter to run the code
-4. Easier to test and debug (you can run partial code), but generally slower than compiled code
-
-```mermaid
-flowchart LR
-    subgraph Compilation
-        A1["Source Code\n(e.g., C++)"] --> B1["Compiler"] --> C1["Executable file\n(.exe)"] --> D1["Running Program"]
-    end
-
-    subgraph Interpretation
-        A2["Source Code\n(e.g., Python)"] --> B2["Interpreter"] --> D2["Running Program\n(line by line)"]
-    end
-```
-
-| Feature | Compiler | Interpreter |
-|---------|----------|-------------|
-| Translation method | All at once before running | Line by line while running |
-| Output | Standalone executable file | No executable — needs interpreter |
-| Speed | Faster execution | Slower execution |
-| Error detection | Shows all errors before run | Stops at first error |
-| Languages | C, C++, Rust, Go | Python, JavaScript (partly), Ruby |
+| Category | Examples |
+|----------|---------|
+| **Games** | Minecraft, FIFA, Fortnite |
+| **Office applications** | Word processors, spreadsheets |
+| **Web browsers** | Chrome, Firefox, Edge |
+| **File explorers** | Windows Explorer, Finder (macOS) |
+| **Communication apps** | WhatsApp, Gmail |
 
 ---
 
-## 5. Open Source vs Proprietary Software
+## 3. System Software
 
-### 5.1 Proprietary (Commercial) Software
-
-**Proprietary software** is owned by a company or individual. The **source code** (the human-readable code the software was written in) is kept secret. You can use the software, but you cannot modify it, redistribute it, or see how it works internally.
+**System software** are programs that run on the computer to help the computer itself perform its tasks — not to help you directly, but to help the machine operate correctly.
 
 :::tip Key Term
-**Proprietary Software** — software whose source code is owned and kept private by the developer. Users can run it but cannot view, modify, or redistribute the code.
+**System software** — programs that help the computer perform its own internal tasks. System software acts as a layer between the hardware and the user application software.
 :::
 
-Examples: Microsoft Windows, Microsoft Office, Adobe Photoshop, Apple iOS, most commercial games.
+System software handles tasks like:
+- Helping the computer access memory
+- Saving and loading files
+- Handling multiple tasks running at the same time
+- Turning the computer on and off properly
 
-Proprietary software is usually sold (or licensed) for a fee. The company invests in development and expects to recoup that investment through sales or subscriptions.
+### Examples of System Software
 
-### 5.2 Open-Source Software
+| System Software | What It Does |
+|----------------|-------------|
+| **Boot program** | Loads the operating system into main memory when the computer is first turned on |
+| **BIOS** (Basic Input/Output System) | Manages communication between the input/output devices and the operating system |
+| **Device drivers** | Software for a specific input or output device that tells it how to function |
 
-**Open-source software** is software whose source code is made publicly available. Anyone can view it, study it, modify it, and — in most cases — distribute their own modified version.
+---
+
+## 4. Operating Systems
+
+The most important example of system software is the **operating system**. The operating system makes your computer usable — it makes the computer *operate*.
 
 :::tip Key Term
-**Open-Source Software** — software whose source code is freely available for anyone to view, use, modify, and distribute, typically under a specific open-source licence.
+**Operating system (OS)** — the most important piece of system software. It sits between the user applications and the hardware, managing all the computer's resources and making the hardware usable by applications and the user.
 :::
 
-Examples:
-- **Linux** — the operating system powering most of the world's servers, Android, and many supercomputers
-- **Firefox** — the web browser
-- **LibreOffice** — a free alternative to Microsoft Office
-- **VLC Media Player** — plays almost any video or audio format
-- **Python** — the programming language
-- **WordPress** — powers about 40% of all websites globally
+The operating system sits between the user applications and the hardware. User applications cannot directly access the printer, the mouse, or other hardware devices — they must ask the operating system for permission, and the OS handles communication with the hardware.
 
-Open-source software is developed collaboratively — often by thousands of volunteers around the world, sometimes supported by companies or foundations.
+### What the Operating System Does
 
-### 5.3 Comparison
-
-| Feature | Proprietary Software | Open-Source Software |
-|---------|---------------------|---------------------|
-| Source code visible? | No | Yes |
-| Can you modify it? | No | Usually yes |
-| Cost | Often paid | Usually free |
-| Support | Official support from vendor | Community forums; some paid support |
-| Updates | Developer's schedule | Community-driven |
-| Examples | Windows, MS Office, Photoshop | Linux, Firefox, LibreOffice |
-| Security | Vulnerabilities found internally | Many eyes → some argue more secure |
+| Task | Description |
+|------|-------------|
+| **Manages user applications** | Controls which programs can run and gives each one the resources it needs |
+| **Memory allocation** | Divides RAM between different applications so they can all run without interfering with each other |
+| **Multitasking** | Allows multiple applications to run on your computer at the same time |
+| **Graphical user interface (GUI)** | Provides the visual desktop — icons, windows, and menus — so you can interact with the computer using a mouse instead of typing text commands |
 
 :::info
-Many of the world's largest technology companies, including Google, Facebook (Meta), and Microsoft, both use open-source software extensively and contribute their own open-source projects. Microsoft, once famously hostile to open source, now hosts millions of open-source projects on GitHub (which it owns).
+Before graphical user interfaces existed, users had to type commands into a text-based console to give the computer instructions. The GUI, provided by the operating system, is what allows you to click on icons, drag windows around, and interact with the computer visually.
 :::
+
+### Common Operating Systems
+
+| Operating System | Notes |
+|-----------------|-------|
+| **Microsoft Windows** | The most widely used desktop operating system |
+| **Apple macOS (OS X)** | Used on Apple Mac computers |
+| **Linux** | Free, open-source; popular on servers and among developers |
+| **UNIX** | An older, powerful OS that influenced both Linux and macOS |
 
 ---
 
-## 6. Software Licences
+## 5. Programs
 
-When you "buy" software, you are almost never buying it outright — you are buying a **licence** to use it under certain conditions. A software licence is a legal agreement between the software developer and the user.
+In addition to user application software and system software, there is a third way we use the word "software" — **programs**.
+
+A **program** is a small piece of code that a user writes to perform a very specific task. It is not necessarily published for others to install; it is simply instructions written to solve a particular problem.
 
 :::tip Key Term
-**Software Licence** — a legal document that specifies how software may be used, distributed, and modified. When you install software, you agree to its licence terms.
+**Program** — a set of specific instructions for the computer, written by a programmer using a programming language to perform a particular task.
 :::
 
-### Common Types of Software Licences
+Examples of things a user might write as a program:
+- Visualise music
+- Send a reminder at a certain time
+- Process a large dataset and find the biggest number in it
 
-| Licence Type | Description | Examples |
-|-------------|-------------|---------|
-| **Freeware** | Free to use at no cost, but source code is not available and you cannot modify it | Skype, Adobe Reader, WhatsApp (mobile) |
-| **Shareware** | Free to try for a limited time or with limited features; you pay to unlock full functionality or remove time limits | Many mobile games, WinRAR |
-| **Subscription** | Pay a regular fee (monthly or annually) to use the software; stops working if you stop paying | Microsoft 365, Adobe Creative Cloud, Netflix |
-| **One-time purchase / Perpetual licence** | Pay once and use forever, but may not receive major updates | Older versions of Office (before 365) |
-| **Open-source licence** | Free to use, modify, and distribute under specific conditions set by the licence | Linux (GPL), MIT licence, Apache licence |
-| **Educational licence** | Discounted or free licence for students and educational institutions | Microsoft 365 Education (free for schools) |
+### Programming Languages
 
-:::info South African School Context
-Many South African schools have access to **Microsoft 365 Education**, which gives learners free access to Word, Excel, PowerPoint, Teams, and OneDrive through their school email address. If your school is on this programme, you may be able to install these apps on your personal device at no cost. Ask your teacher or ICT coordinator.
+Programs are written in a **programming language** — a human-readable way to write computer instructions.
+
+:::tip Key Term
+**Programming language** — a formal language that programmers use to write instructions for a computer. It is human-readable and gets translated into instructions the computer can follow.
 :::
 
-### The EULA
+Examples of programming languages include:
+- **C**
+- **Java**
+- **JavaScript**
+- **Python**
 
-When you install most software, you are shown an **End User Licence Agreement (EULA)** — a long legal document explaining the terms of use. Most people click "I Agree" without reading it, but the EULA contains important information: what you can and cannot do with the software, whether the company can collect your data, and what happens if the software causes problems.
+There are many, many programming languages, and new ones are created every year. In this course, you will learn to use a programming language to write your own programs — you will actually make your own software.
 
 ---
 
-## 7. Summary
+## 6. How Software Layers Work Together
 
-```mermaid
-mindmap
-  root((Software))
-    System Software
-      Operating Systems
-        Windows
-        macOS
-        Linux
-        Android
-        iOS
-      Device Drivers
-      Utility Programs
-        Antivirus
-        Backup tools
-        Disk cleaners
-    Application Software
-      Productivity
-      Communication
-      Entertainment
-      Educational
-    How Software is Made
-      Programming Languages
-        Low level - Machine code, Assembly
-        High level - Python, Java, C++
-      Compilation
-      Interpretation
-    Distribution Models
-      Proprietary
-      Open Source
-      Freeware
-      Shareware
-      Subscription
+The diagram below shows how hardware, system software, and application software depend on each other:
+
 ```
+┌────────────────────────────────┐
+│      USER APPLICATION          │  ← What you interact with (games, browsers, etc.)
+│         SOFTWARE               │
+├────────────────────────────────┤
+│        SYSTEM SOFTWARE         │  ← Manages the hardware for applications
+│    (Operating System, BIOS,    │
+│       device drivers)          │
+├────────────────────────────────┤
+│          HARDWARE              │  ← The physical machine
+│   (CPU, RAM, printer, mouse)   │
+└────────────────────────────────┘
+```
+
+- The **hardware** is the foundation — it cannot do anything without instructions.
+- The **system software** runs directly on the hardware and manages it, acting as a bridge.
+- The **user application software** runs on top of the system software and uses it to access the hardware indirectly.
 
 ---
 
 ## Check Your Understanding
 
-1. Define software in your own words. How is software different from hardware?
+1. What is software? Explain why hardware cannot do anything useful without software.
 
-2. What is an operating system? List three tasks that an operating system performs that most users never think about.
+2. Describe the three layers of the software hierarchy. What does each layer do, and what does it depend on?
 
-3. Explain the role of a device driver. Why are drivers necessary?
+3. What is user application software? Give **three** examples of user applications and describe what each one does.
 
-4. Name and describe three types of utility software. For each, explain what problem it solves.
+4. What is system software? Explain how it is different from user application software.
 
-5. Give two examples of productivity software and two examples of communication software. For each, briefly describe what it is used for.
+5. Why does a user application need to ask the operating system to do things with the hardware, rather than accessing the hardware directly?
 
-6. Explain the difference between a **compiler** and an **interpreter**. Give one advantage of each approach.
+6. What is the BIOS? What role does it play when you first turn on your computer?
 
-7. What is the difference between high-level and low-level programming languages? Why would a programmer choose to use a high-level language?
+7. What is a device driver? Give an example of a device that would need a driver and explain why.
 
-8. Explain the difference between open-source and proprietary software. Give two advantages of open-source software and one potential disadvantage.
+8. Name **four** things an operating system is responsible for managing on your computer.
 
-9. What is a software licence? Explain the difference between **freeware** and **shareware**.
+9. What is a graphical user interface (GUI)? How was interacting with a computer different before GUIs existed?
 
-10. **Scenario question:** A learner wants to put together a computer for doing schoolwork. They have a tight budget. Suggest three pieces of software they could use instead of paid alternatives, and explain your choices. (Hint: think about open-source and freeware options.)
+10. Name the **four** most common operating systems mentioned in this chapter. On what type of computer would you typically find each one?
 
-11. **Extension:** Explain why it is important to keep software (especially operating systems and antivirus software) up to date. What risks are there in using outdated software?
+11. What is a programming language? Why do programmers use high-level programming languages rather than writing directly in the computer's own language?

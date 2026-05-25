@@ -6,314 +6,245 @@ title: The Internet
 
 ## What is the Internet?
 
-The internet is the largest computer network ever built. At its simplest, it is a **global network of networks** — millions of private, public, academic, business, and government networks all linked together by a common set of rules (called **protocols**) that allow them to communicate.
+The internet is one of the most important inventions in human history. But what exactly is it? The internet can be understood in several different ways:
 
-:::tip Key Term
-**Network:** A group of computers and devices connected together so they can share information and resources.
+- It is a **philosophy** — a commitment to making information and knowledge open and accessible to all people.
+- It is a **network of networks** — millions of individual networks connected together into one enormous global network.
+- It is built on **open, agreed-upon protocols** — shared rules that allow all computers to communicate with one another.
+- It is a **way for all machines to communicate** with each other, and through those machines, a way for **humans to communicate** with each other.
 
-**Internet:** A worldwide system of interconnected networks that allows computers everywhere to communicate with each other.
+:::tip Key Terms
+**Network:** A group of two or more computer systems linked together so that they can share information.
+
+**Internet:** A global network of networks connecting billions of devices, built on shared communication protocols that allow any device to communicate with any other device.
 :::
 
-To picture it, imagine that every town in South Africa had its own local telephone exchange — a small network connecting all the phones in that area. Now imagine connecting all those exchanges together so that someone in Cape Town can call someone in Limpopo. That is roughly what the internet does, but instead of phone calls, it carries data: web pages, emails, videos, messages, and everything else.
-
-The internet is not owned by any single company, government, or person. It is a cooperative system maintained by thousands of organisations around the world. This makes it remarkably resilient — there is no single switch that can turn it off.
+The internet is not owned by any one company or government. It is a cooperative global system — and it is extraordinarily popular. Billions of people around the world use the internet every single day.
 
 ---
 
-## A Brief History of the Internet
+## Why is the Internet Important?
 
-### ARPANET (1969)
-The internet's story begins with a Cold War project. In the 1960s, the United States military worried that a nuclear attack could destroy their communication systems. They funded research into a network that could survive partial destruction by automatically rerouting data around damaged sections.
+The internet has completely changed the way we live. It has transformed how we:
 
-The result was **ARPANET** (Advanced Research Projects Agency Network), launched in **1969**. On 29 October 1969, the first message was sent between computers at UCLA and Stanford University. The intended message was "LOGIN" — but the system crashed after the first two letters. The first internet message ever sent was simply "LO".
+- **Communicate** with friends, family, and colleagues
+- **Access information** on any topic instantly
+- **Find news** from sources around the world
+- **Get directions** and navigate the world
+- **Collaborate** to solve problems with others
+- **Conduct business** — buying, selling, banking, and working
 
-:::info Interesting Fact
-The first ARPANET network had just four computers (called nodes). Today, the internet connects more than **15 billion devices** worldwide.
-:::
-
-### Growth and Civilian Use (1970s–1980s)
-Through the 1970s and 1980s, universities and research institutions connected to ARPANET. Researchers used it to share files and send electronic mail. In 1983, ARPANET adopted the TCP/IP protocol (more on this shortly), which became the foundation of the modern internet.
-
-By the late 1980s, the network was growing rapidly, but it was still mainly used by academics and scientists. Ordinary people had no easy way to access it.
-
-### Tim Berners-Lee and the World Wide Web (1989–1991)
-The breakthrough that brought the internet to the public came from a British scientist named **Tim Berners-Lee**, working at the CERN physics laboratory in Switzerland.
-
-In **1989**, he proposed a system for sharing research documents using a concept he called **hypertext** — documents that could link to other documents. In **1991**, he launched the first website and made the system publicly available for free.
-
-He called his invention the **World Wide Web**.
-
-:::info Tim Berners-Lee
-Tim Berners-Lee could have patented the World Wide Web and become one of the richest people on earth. Instead, he gave it away for free, saying he wanted it to be open and accessible to everyone. He has since campaigned for net neutrality and an open internet.
-:::
-
-### The Web Goes Mainstream (1990s–2000s)
-The 1990s saw explosive growth. Web browsers like Netscape Navigator made the web accessible to ordinary people. Companies like Amazon (1994) and Google (1998) were founded. The "dot-com boom" saw huge investment in internet businesses — followed by a crash in 2000 when many of those businesses failed.
-
-By the 2000s, broadband connections replaced slow dial-up modems, making the internet fast enough for video and music. Social media platforms like Facebook (2004) and YouTube (2005) transformed how people used the web.
+The list goes on. Think about how the internet has impacted your own life. How do you use it every day?
 
 ---
 
-## The Internet vs the World Wide Web
+## The Internet Enables Amazing Things
 
-This is one of the most common confusions in digital technology. **The internet and the World Wide Web are not the same thing.**
+### Community-Supported Causes
 
-| | Internet | World Wide Web |
-|--|----------|----------------|
-| **What it is** | The physical network infrastructure | A service that runs on top of the internet |
-| **Components** | Cables, routers, servers, satellites, protocols | Web pages, websites, hyperlinks, browsers |
-| **Invented** | ~1969 (ARPANET) | 1989–1991 (Tim Berners-Lee) |
-| **Who uses it** | Everyone with a connected device | Anyone who visits a website |
-| **Other services on the same network** | Email, video calls, online gaming, file transfers | Web pages and web apps only |
+The internet allows communities to come together around shared causes in ways that were impossible before. A single hashtag can spread awareness of an issue to millions of people in hours. Campaigns like **#match4lara** — which aimed to diversify the bone marrow registry to help a patient who needed a stem cell transplant — showed how the internet can mobilise a global community for a cause.
 
-:::warning Common Misconception
-Many people use "internet" and "web" interchangeably, but they mean different things. When you send an email, you are using the internet but not the World Wide Web. When you visit a website, you are using both the internet (to carry the data) and the Web (the system of pages and links).
-:::
+### Collaborative Problem Solving
 
-Think of it this way: the internet is like the road network. The World Wide Web is like the delivery trucks that use those roads. Email, online gaming, and video calls are like other vehicles using the same roads for different purposes.
+The internet connects people with shared interests and skills so they can work together on difficult problems — even when they are thousands of kilometres apart.
 
----
+One remarkable example is **Foldit** — an online game where players attempt to solve the folding structure of important proteins. Players produced an accurate model of an AIDS-causing virus in just 10 days. This problem had been unsolved by computer simulations and professional researchers for 15 years. The internet made it possible for a crowd of ordinary people to outperform experts.
 
-## How the Internet Works: Packets and Routing
+This is called **citizen science** — involving ordinary people in scientific research through the internet.
 
-When you send data over the internet — whether it is a message, a video, or a web page request — that data does not travel as one big block. It is broken up into small chunks called **packets**.
+### E-Commerce
 
-:::tip Key Term
-**Packet:** A small unit of data transmitted over the internet. Each packet contains a piece of the data being sent, plus addressing information so it knows where to go.
-:::
+The internet has transformed buying and selling:
 
-Here is how it works:
+- **Online shopping** lets you buy directly from retailers without leaving home
+- You can easily purchase from individuals who do not have the funds to run a physical store
+- Comparison sites help you find the best product at the lowest price
+- Your location no longer limits what you can buy or sell
 
-1. **Splitting:** Your data is split into packets, each typically around 1,500 bytes in size.
-2. **Addressing:** Each packet is labelled with the sender's IP address and the destination IP address.
-3. **Routing:** Packets travel through a series of **routers** — specialised devices that read the destination address and decide the best path forward. Different packets may take different routes.
-4. **Reassembly:** When all the packets arrive at the destination, they are reassembled in the correct order.
-5. **Error checking:** If a packet is lost or damaged, the receiving device requests it again.
-
-:::tip Key Term
-**Router:** A device that connects networks together and directs packets of data towards their destination. Your home Wi-Fi box is a small router.
-:::
-
-The advantage of this approach is **resilience**. If one route is congested or broken, packets can automatically take a different path. The network does not have a single point of failure.
+Beyond traditional shopping, the internet enabled **crowdfunding** platforms like Kickstarter, Indiegogo, and Tilt, where projects can get funding from a community of supporters rather than relying on banks or investors. This has allowed creative projects, inventions, and social enterprises to get started that would never have received traditional funding.
 
 ---
 
-## TCP/IP: The Rules of the Internet
+## Complications: Legal and Ethical Concerns
 
-For all these different computers and networks to communicate, they need to follow the same rules. These rules are called **protocols**.
+The internet's openness creates challenges alongside its benefits. Several legal and ethical issues arise:
 
-The internet runs on **TCP/IP** — two protocols that work together:
+### Access to Copyrighted Material
+
+Peer-to-peer networks allow people to share content with one another. Often, that shared content is not owned by the people sharing it — it is protected by copyright. The internet has made it easier than ever to distribute information or content that does not belong to you.
+
+### Anonymity
+
+There is an ongoing debate about how identifiable internet users should be. The question has two sides:
+
+- **In favour of anonymity:** If all users are anonymous, they cannot be targeted or discriminated against. Everyone has equal standing on the internet.
+- **Against anonymity:** If all users are anonymous, no one is accountable for their actions. This creates an environment where cyberbullying and harassment can thrive.
+
+### Censorship
+
+Should search engines like Google display results that contain explicit or illegal content? Should governments be allowed to filter what content their citizens can see on the internet? These questions have no simple answers and are debated around the world.
+
+---
+
+## How Does the Internet Work?
+
+At its heart, the internet solves one problem: how do we get information **from point A to point B**?
+
+Everything on the internet — messages, web pages, videos, emails — is really just information travelling from one computer to another. The internet is the system that makes this possible.
+
+### The Internet is a Wire
+
+Despite talk of "the cloud," the internet is a very physical thing. It is literally a vast network of wires — in the ground, under the oceans, spanning the entire globe.
+
+Different parts of this wire carry information in different ways:
+
+- Some wires carry information using **electricity**: a high voltage represents a 1, and a low voltage represents a 0.
+- Some carry information using **light** (fibre-optic cables): light on = 1, light off = 0.
+- Wireless connections carry information using **radio waves**: a short wave = 1, a long wave = 0.
+
+All of these are just different physical ways of sending the same thing: **binary data** — streams of 1s and 0s.
+
+We are continually finding better and better ways to send information, but the layout of that information remains the same — every computer uses the same protocols.
+
+---
+
+## Protocols
+
+Because computers represent all information using binary (0s and 1s), every computer needs to interpret those 0s and 1s in the same way. A **protocol** is a widely agreed-upon set of rules that standardise communication between machines.
 
 :::tip Key Term
-**TCP (Transmission Control Protocol):** Responsible for breaking data into packets, ensuring all packets arrive, and reassembling them in the correct order.
-
-**IP (Internet Protocol):** Responsible for addressing and routing packets — making sure each packet reaches the right destination.
+**Protocol:** A widely agreed-upon set of rules that standardise how computers communicate with each other. Protocols ensure that all devices can communicate, regardless of who made them or when.
 :::
 
-- **IP** is like the postal system — it handles addressing and routing, making sure each packet gets to the right place.
-- **TCP** is like a careful delivery service — it tracks every packet, requests re-delivery of any that are lost, and puts everything back in the right order.
+For example, using an agreed protocol:
+- `110100` might represent the letter A
+- `110101` might represent the letter B
+- And so on...
 
-Together, TCP/IP makes communication reliable even over an unreliable network.
+Without shared protocols, computers made by different companies at different times would not be able to communicate with each other. The internet lays out a series of protocols that all devices connected to it must adopt. This is what makes the internet universal — a smartphone made today can communicate with a server built decades ago because they both follow the same protocols.
+
+---
+
+## Networks: From Simple to Complex
+
+The internet is not just one wire. It is a vast network of wires connecting billions of devices.
+
+### Simple Networks
+
+A **network** is a group of two or more computer systems linked together.
+
+In a simple network, a few computers are connected directly to each other. This works fine for a small number of machines, but it is **not scalable** — as you add more computers, the number of connections required grows very quickly and becomes unmanageable.
+
+The solution is to use a **switch** — a device that allows many computers to connect to a single central point, rather than connecting every computer directly to every other computer.
+
+### Complex Networks
+
+As networks grow larger and need to connect to other networks, switches are not enough. This is where **routers** come in.
+
+:::tip Key Term
+**Router:** A device that connects networks together and directs data towards its destination. Routers decide the best path for data to travel through the network.
+:::
+
+A router connects multiple networks together and routes data between them. When you want to send data from your home network to a server on the other side of the world, that data passes through many routers along the way — each one deciding the best next step to take.
+
+### The Internet: A Network of Networks
+
+The internet is the result of connecting all of these individual networks together into one enormous system. The internet connects individual networks — home networks, school networks, business networks, government networks — into one global network.
+
+:::info Key Definition
+**The Internet:** A network connecting individual networks from around the world into one global system.
+:::
 
 ---
 
 ## IP Addresses
 
-Every device on the internet needs a unique address so that data can be sent to it. This is called an **IP address** (Internet Protocol address).
+Every device on the internet needs a unique address, just like every house needs a unique postal address so that letters can be delivered to the right place. On the internet, these unique addresses are called **IP addresses** (Internet Protocol addresses).
+
+Information is sent to and from unique IP addresses. When your computer sends a request to a web server, it includes your IP address (so the server knows where to send the response) and the server's IP address (so the data knows where to go).
+
+IP addresses look like this:
+
+```
+2.1.3.3
+122.80.32.200
+190.122.10.10
+```
+
+---
+
+## Servers and Domain Names
+
+**Websites are hosted on servers.** A server is a computer that sits at a particular IP address and listens for requests. When a request comes in, the server responds with the HTML and CSS code that makes up the requested web page.
+
+Remember that IP addresses are hard for humans to remember. You can choose to register a **domain name** — a human-readable name like `codehs.com` or `wikipedia.org` — and associate it with your server's IP address.
+
+So for example:
+- IP address `122.21.44.100` might be associated with the domain name `codehs.com`
+- IP address `45.56.232.100` might be associated with `wikipedia.org`
+
+When you type `codehs.com` into your browser, the internet's naming system translates that human-readable name into the corresponding IP address, and your request is sent to the right server.
+
+---
+
+## Packets: How Information Travels
+
+How does information actually travel through the internet? The answer is: in small pieces called **packets**.
 
 :::tip Key Term
-**IP Address:** A unique numerical label assigned to each device connected to the internet, used to identify and locate that device.
+**Packet:** A small unit of data. When information is sent over the internet, it is broken down into manageable pieces called packets. Each packet is labelled with where it is going and where it came from.
 :::
 
-### IPv4
-The original IP address system, known as **IPv4**, uses addresses in this format:
+When you request a web page:
+1. Your request is broken into packets
+2. Each packet is labelled with the destination IP address and the source IP address (e.g., "To: 5.2.6.2, From: 122.21.44.100")
+3. The packets travel through the network of routers
+4. **The packets can take different paths through the network** — they may arrive at different times, or even out of order
+5. At the destination, the packets are **reassembled in the correct order** to recreate the original information
 
-```
-192.168.1.1
-```
-
-Four numbers, each between 0 and 255, separated by dots. This gives about **4.3 billion** possible addresses — which sounded like more than enough in the 1970s. By the 2010s, we had nearly run out.
-
-### IPv6
-To solve the address shortage, **IPv6** was developed. IPv6 addresses look like this:
-
-```
-2001:0db8:85a3:0000:0000:8a2e:0370:7334
-```
-
-Eight groups of four hexadecimal digits, separated by colons. IPv6 provides approximately **340 undecillion** addresses (that is 340 followed by 36 zeros) — enough for every atom on earth to have multiple addresses.
-
-:::info Transition to IPv6
-The world is slowly transitioning from IPv4 to IPv6, but both systems coexist today. Most home and mobile connections still use IPv4 for the "last mile" but increasingly use IPv6 on the backbone networks.
-:::
-
-### Public vs Private IP Addresses
-Your home router has a **public IP address** assigned by your ISP — this is how the internet identifies your home network. Each device inside your home (phone, laptop, smart TV) gets a **private IP address** assigned by your router. This is why many devices can share one internet connection.
+This packet-switching system is incredibly robust. Even if part of the network fails, packets can find alternative routes to their destination.
 
 ---
 
-## Internet Infrastructure
+## That is How the Internet Works!
 
-The internet is not just software — it is a massive physical infrastructure spread across the entire planet.
+To summarise:
 
-### Servers and Data Centres
-A **server** is a computer that stores and serves data to other computers. Web servers host websites. Email servers handle mail. Video servers store streaming content.
+1. Information is represented as binary (0s and 1s) and travels through physical wires as electricity, light, or radio waves.
+2. All devices follow shared **protocols** to ensure they can communicate.
+3. Devices are connected into **networks**, and networks are connected together through **routers** into the global internet.
+4. Every device has a unique **IP address**. Human-readable **domain names** are translated into IP addresses.
+5. **Websites are hosted on servers** that respond to requests with web page code.
+6. Data travels in small pieces called **packets**, which can take different routes through the network and are reassembled at the destination.
 
-Servers live in **data centres** — massive buildings filled with thousands of computers, kept cool by industrial air conditioning, powered by enormous electricity supplies, and protected by multiple layers of physical and digital security.
-
-:::info Data Centres in South Africa
-South Africa is home to several major data centres in Johannesburg, Cape Town, and Durban. Companies like Teraco and Africa Data Centres operate facilities that connect South Africa to the global internet backbone. Johannesburg's Teraco Isando campus is one of the largest interconnection hubs on the African continent.
-:::
-
-### Undersea Cables
-Most international internet traffic travels through **fibre-optic cables** laid on the ocean floor. These cables carry data as pulses of light and can transmit enormous amounts of data over thousands of kilometres.
-
-South Africa is connected to the global internet by several undersea cable systems:
-- **SAT-3/WASC** — one of the first cables connecting southern Africa to Europe
-- **SEACOM** — connecting East Africa and South Africa to Europe and Asia
-- **WACS (West Africa Cable System)** — connecting West and South Africa to Europe
-- **ACE (Africa Coast to Europe)** — connecting 23 African countries to France
-
-:::warning When Cables Break
-Undersea cables do get damaged — by ship anchors, fishing trawlers, earthquakes, and even sharks. When a major cable breaks, internet speeds across a region can drop dramatically. South Africa has experienced significant disruptions when cables serving the region have been damaged.
-:::
-
-### Satellites
-Satellites in orbit can provide internet access to areas that cables cannot reach — remote rural areas, ships at sea, aircraft in flight. Traditional satellite internet was slow and had high latency (delay), but newer systems like **SpaceX Starlink** use large constellations of low-earth orbit (LEO) satellites to provide much faster, lower-latency connections.
-
-Starlink became available in South Africa in 2023, offering a potential solution for rural connectivity.
-
----
-
-## How the Request Travels: From Your Device to a Server
-
-Here is a simplified view of what happens when you type a web address and press Enter:
-
-```mermaid
-sequenceDiagram
-    participant You as Your Device
-    participant Router as Home Router
-    participant ISP as Your ISP
-    participant DNS as DNS Server
-    participant Internet as Internet Backbone
-    participant Server as Web Server
-
-    You->>Router: "I want to visit www.school.co.za"
-    Router->>ISP: Forward request
-    ISP->>DNS: "What is the IP address for www.school.co.za?"
-    DNS-->>ISP: "It's 196.22.133.10"
-    ISP->>Internet: Route packets to 196.22.133.10
-    Internet->>Server: Packets arrive at web server
-    Server-->>Internet: Send back the web page data
-    Internet-->>ISP: Route response back
-    ISP-->>Router: Deliver response
-    Router-->>You: Display the web page
-```
-
-The entire process above typically happens in **less than a second**.
-
----
-
-## Internet Service Providers (ISPs)
-
-To connect to the internet, you need an **Internet Service Provider (ISP)** — a company that provides a connection to the internet's backbone infrastructure.
-
-:::tip Key Term
-**ISP (Internet Service Provider):** A company that provides internet access to homes and businesses, typically for a monthly subscription fee.
-:::
-
-### Connection Types in South Africa
-
-| Type | How it works | Typical Speed | Availability |
-|------|-------------|---------------|--------------|
-| **ADSL** | Data over copper telephone lines | 1–40 Mbps | Urban areas |
-| **Fibre** | Light pulses through glass cables | 10–1000 Mbps | Urban/suburban |
-| **LTE/4G** | Mobile cellular network | 5–100 Mbps | Most of SA |
-| **5G** | Next-gen mobile network | 50–500+ Mbps | Major cities |
-| **VSAT** | Satellite connection | 5–100 Mbps | Remote areas |
-| **Starlink** | Low-earth orbit satellite | 50–200 Mbps | Most of SA |
-
-Major ISPs in South Africa include Telkom, MTN, Vodacom, Afrihost, MWEB, Rain, and many others.
-
----
-
-## The Internet in South Africa
-
-### Coverage and Access
-South Africa has one of the most developed internet infrastructures on the African continent, but access remains unequal. As of 2024:
-
-- Approximately **72%** of South Africans have access to the internet
-- Internet penetration in urban areas is significantly higher than in rural areas
-- The Eastern Cape, Limpopo, and Northern Cape have the lowest levels of connectivity
-
-### Mobile Internet Dominance
-Unlike in Europe or North America where most people access the internet on computers via fixed broadband, **most South Africans access the internet primarily through mobile phones**. This has important implications for web design — websites must work well on mobile devices.
-
-:::info Mobile-First South Africa
-Because most South Africans browse the web on their phones, web designers working for South African audiences need to design "mobile-first" — meaning the mobile experience should be the priority, not an afterthought.
-:::
-
-### Challenges
-- **Cost:** Data remains expensive relative to average income, though prices have dropped significantly
-- **Load shedding:** Eskom's power outages disrupt internet connectivity (cell towers lose power)
-- **Rural connectivity:** Many rural schools, clinics, and homes still lack affordable internet access
-- **Digital divide:** The gap between those with and without internet access reinforces inequality
-
-### Government Initiatives
-The South African government has launched several programmes to address the digital divide, including providing free Wi-Fi hotspots in townships and subsidising internet access for schools through programmes like the National Curriculum Framework for ICT.
-
----
-
-## Key Statistics: The Scale of the Internet
-
-To appreciate just how enormous the internet is, consider these statistics (approximate, as of 2024):
-
-- **5.4 billion** people use the internet worldwide (about 67% of the global population)
-- **2 million** emails are sent every second
-- **500 hours** of video are uploaded to YouTube every minute
-- **5 million** Google searches happen every minute
-- **1.3 trillion** GB of data is transmitted over the internet every year
-- **200+ billion** websites exist (though most are inactive)
-- **15 billion+** devices are connected to the internet (the "Internet of Things")
-
-:::info Data Generated Per Minute
-Every single minute on the internet (approximate figures):
-- 500 hours of YouTube video uploaded
-- 6 million Google searches
-- 42 million WhatsApp messages sent
-- 1 million TikTok videos watched
-- 350,000 tweets posted
-- 240,000 photos uploaded to Facebook
-:::
+Many areas of human life have been impacted by the internet — all thanks to the ability to get information from point A to point B.
 
 ---
 
 ## Check Your Understanding
 
-1. In your own words, explain the difference between the internet and the World Wide Web. Give an example to support your explanation.
+1. Give four different ways of describing what the internet is. Which description do you find most useful? Explain why.
 
-2. What was ARPANET, and why was it developed? In what year was the first message sent over ARPANET?
+2. List six ways the internet has changed how we live. For each one, give a specific example from your own life.
 
-3. Who invented the World Wide Web, and in which year was it launched? Why is this person considered significant in the history of technology?
+3. Explain what the Foldit game experiment showed about the power of the internet. Why is this considered an example of "citizen science"?
 
-4. Explain what a packet is. Why is data broken into packets rather than sent as one large block?
+4. What is a protocol? Why are protocols important for the internet to work?
 
-5. What does TCP/IP stand for? Briefly explain the role of TCP and the role of IP in internet communication.
+5. The video says "the internet is a wire." What does this mean? Name three different physical ways that data can be carried through the internet's wires.
 
-6. What is an IP address? Write an example of an IPv4 address.
+6. How does binary relate to the internet? How do the different ways of sending data (electricity, light, radio waves) represent 1s and 0s?
 
-7. Why was IPv6 developed? How many possible addresses does IPv6 provide compared to IPv4?
+7. What is a network? What is the difference between a switch and a router?
 
-8. Name THREE physical components of internet infrastructure discussed in this chapter.
+8. What is an IP address? Why does every device on the internet need one?
 
-9. Name TWO undersea cable systems that connect South Africa to the rest of the world.
+9. What is a domain name? How does it relate to an IP address? Give an example.
 
-10. What is an ISP? Name THREE South African ISPs.
+10. What is a packet? Why is data broken into packets rather than sent as one large block?
 
-11. Why does South Africa have a "mobile-first" approach to web design? Explain in terms of how most South Africans access the internet.
+11. Explain what happens to packets that travel through the network. Can they take different paths? What happens when they arrive at the destination?
 
-12. List THREE challenges facing internet access in South Africa.
+12. Name two legal or ethical concerns that arise from the internet's openness. For each one, explain both sides of the issue.
 
-13. Look at the Mermaid diagram showing how a request travels from your device to a server. Describe each step in your own words.
-
-14. **Extended question:** A friend says "I'm going to turn off the internet." Explain why this is not possible, based on what you have learned about how the internet is structured.
+13. **Extended question:** A friend says "I am going to turn off the internet." Based on what you have learned about how the internet is structured, explain why this is not possible.

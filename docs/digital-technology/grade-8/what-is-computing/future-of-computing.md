@@ -2,159 +2,202 @@
 title: Future of Computing
 ---
 
-# Future of Computing
+# Topic 5: Future of Computing
 
-Computing has changed enormously since the first room-sized computers in the 1940s. The pace of change is accelerating — technologies that seemed like science fiction ten years ago are now everyday tools. Understanding these trends prepares you for a world where technology will shape every career and aspect of life.
+## Introduction
 
-## Artificial Intelligence (AI)
+We have looked at the history of computing and how computers work today. In this chapter we look ahead — at some of the directions computing might take us in the near future. Two of the most exciting areas involve completely rethinking how computers are built (new computer architectures) and rethinking what computers are used for (artificial intelligence and its applications).
+
+---
+
+## 1. Traditional Computer Architecture
+
+Before exploring what is new, it helps to understand what all computers today have in common. All traditional computers use what is called the **Von Neumann architecture**.
 
 :::tip Key Term
-**Artificial Intelligence (AI)** is the ability of a computer system to perform tasks that normally require human intelligence — such as understanding language, recognising images, making decisions, and learning from experience.
+**Von Neumann architecture** — the design used by all traditional computers. It is built using electronic circuit boards, uses electricity to represent binary data, is mechanical in nature (metal and silicon), and is deterministic.
 :::
 
-AI is already all around you:
-- **Voice assistants**: Siri, Google Assistant, and Amazon Alexa understand spoken language and respond
-- **Recommendation engines**: Netflix, YouTube, and Spotify suggest content based on what you've watched or listened to
-- **Face recognition**: Unlocking your phone with your face, tagging people in photos
-- **Spam filters**: Email systems that identify junk mail
-- **Navigation**: Google Maps predicting traffic and suggesting routes
-- **Chatbots**: Customer service bots on websites
+A traditional computer is **deterministic** — meaning that a single bit is definitely a 0 or definitely a 1. It is never both, never in between. The instructions are clear and well-defined: the computer knows exactly what to do when it sees a 0 or a 1.
 
-### Machine Learning
+In the future, we might see computers with completely different architectures. Two of the most promising (though still mostly theoretical) new approaches are **DNA computers** and **quantum computers**.
+
+---
+
+## 2. DNA Computers
+
+**DNA computers** use actual biological DNA to store and process information, instead of electronic circuits.
+
+:::tip Key Term
+**DNA computer** — a type of computer that uses DNA strands and enzymes to perform computations, instead of electronic circuits.
+:::
+
+DNA computers were first introduced in **1994 by Leonard Adelman**. Here is how the core idea works:
+
+- Instead of using high and low voltages to represent 1s and 0s, DNA computers look at DNA chemicals. For example:
+  - Cytosine might be interpreted as a **1**
+  - Guanine might be interpreted as a **0**
+- By reading down a DNA strand, the computer can store enormous amounts of data in a tiny amount of space.
+
+### Why Are DNA Computers Exciting?
+
+| Feature | Traditional Computer | DNA Computer |
+|---------|---------------------|-------------|
+| Data storage | Limited by electronic memory size | Can store **billions of times** more data in the same space |
+| Parallelism | One CPU doing one operation at a time (gives the *illusion* of parallelism) | Can process multiple DNA strands with different enzymes **simultaneously** — **true** parallelism |
 
 :::info
-**Machine Learning** is a type of AI where a computer learns from data instead of being explicitly programmed. You show it thousands of examples, and it figures out the patterns. Example: show a model a million photos labelled "cat" or "not cat" and it learns to identify cats in new photos it has never seen.
+Traditional computers are not actually doing multiple things at the same time. They split their time between different applications to *seem* like they are multitasking, but the CPU can only do one thing at each clock cycle. DNA computers, on the other hand, can truly process multiple strands simultaneously.
 :::
 
-Machine learning powers self-driving cars, medical diagnosis tools (detecting cancer in X-rays), and fraud detection systems.
+DNA computers would be most useful for solving **complex mathematical problems**, not for everyday casual computing. You would not use a DNA computer to browse the internet — but you might use one to solve an extremely difficult maths problem that no traditional computer could crack in a reasonable amount of time.
 
-### Generative AI
+---
 
-A newer development — AI that **creates** original content such as text, images, music, and code. Examples include ChatGPT (text), DALL-E (images), and GitHub Copilot (code assistance).
+## 3. Quantum Computers
+
+**Quantum computers** apply the principles of quantum physics to computing, making a fundamentally different kind of machine.
+
+:::tip Key Term
+**Quantum computer** — a type of computer that uses quantum bits (qubits) instead of classical bits. Unlike a classical bit (which is strictly 0 or 1), a qubit can be 0, 1, or both at the same time.
+:::
+
+Quantum computing was first theorised by **Paul Benioff in 1981**.
+
+### The Key Difference: Qubits
+
+In a traditional computer, a bit is always exactly 0 or exactly 1 — it is **deterministic**. In a quantum computer, a **qubit** can be 0, 1, or in a state that is *both or neither or somewhere in between*. This property is called **superposition**.
+
+This makes quantum computers **non-deterministic** — and it is what gives them their power.
+
+### Advantages of Quantum Computers
+
+- **Truly parallel** — they can perform trillions of mathematical operations per second, compared to billions for a traditional computer.
+- **Non-deterministic** — qubits can represent many possibilities at once, which is enormously powerful for certain types of problems.
 
 :::warning
-AI-generated content raises serious questions: Who owns it? Can you submit AI-written work as your own? Is it always accurate? These are issues society is still working through.
+Quantum computing is still mostly theoretical. A practical, large-scale quantum computer has not yet been fully realised. The research is promising, but these machines are not yet commercially available in a meaningful way.
 :::
 
-## Quantum Computing
+### Comparison: Traditional vs DNA vs Quantum Computers
 
-Classical computers store data as **bits** — either 0 or 1. Quantum computers use **qubits** which can be 0, 1, or *both at the same time* (a property called superposition). This allows them to solve certain problems exponentially faster than classical computers.
+| Feature | Traditional Computer | DNA Computer | Quantum Computer |
+|---------|---------------------|-------------|-----------------|
+| Basic unit | Bit (0 or 1) | DNA chemical | Qubit (0, 1, or both) |
+| Deterministic? | Yes | Yes | No |
+| True parallelism? | No (illusion only) | Yes | Yes |
+| Operations/second | Billions | Very high | Trillions |
+| Current status | Widely available | Experimental | Mostly theoretical |
+| Best for | General computing | Complex maths problems | Complex maths problems |
+
+---
+
+## 4. What Are Computers Being Used For Today and in the Near Future?
+
+Even without new hardware architectures, computers are already being pushed into exciting new applications — and the pace is accelerating.
+
+### Current and Near-Future Applications
+
+| Application | Description |
+|-------------|-------------|
+| **Medical diagnosis** | IBM's Watson is being used to automate medical diagnosis |
+| **Data analysis** | Processing huge datasets to find patterns and insights |
+| **Powerful pocket computers** | Smartphones give people enormous computing power in their pockets |
+| **Modelling the universe** | Computers answer questions about how our universe is expanding |
+| **Games and virtual reality** | Increasingly immersive entertainment experiences |
+| **Security** | Both attacking and defending against cyber threats |
+| **Self-driving cars** | Computers making real-time driving decisions |
+| **Human-like robots** | Robots that can navigate environments and interact naturally |
+| **Automatic language translation** | Communicating with anyone in the world regardless of language |
+| **Digital currency** | Replacing physical money with electronic systems |
+| **Predicting behaviour** | Modelling human and social behaviour for various purposes |
+| **Modelling the human brain** | Neural networks that simulate how the brain learns |
+
+---
+
+## 5. Artificial Intelligence
+
+The most significant emerging area of computing is **artificial intelligence** (AI). AI is no longer science fiction — it is a real and active field of study.
 
 :::tip Key Term
-A **qubit** (quantum bit) is the basic unit of quantum computing. Unlike a classical bit, a qubit can represent 0 and 1 simultaneously, enabling quantum computers to process many possibilities at once.
+**Artificial intelligence (AI)** — a branch of computer science dealing with the simulation of intelligent behaviour in computers. It gives machines the capability to imitate intelligent behaviour, though the machine is still running a program written by humans.
 :::
 
-**Potential uses:**
-- Breaking current encryption (a challenge for cybersecurity)
-- Drug discovery and molecular simulation
-- Financial modelling and optimisation
-- Climate modelling
+It is important to understand: a computer with AI is not actually intelligent. It is still just running a program that humans wrote. But when the program runs, the computer *seems* intelligent — it behaves in ways that resemble intelligent human behaviour.
 
-Quantum computers are still in their early stages — very sensitive, expensive, and require extreme cooling. They won't replace your laptop, but they'll solve specific problems that would take classical computers millions of years.
+### What Counts as Intelligent Behaviour?
 
-## The Internet of Things (IoT)
+Computers can already do many things that seem intelligent:
+- Perform complex mathematical computations
+- Classify pictures (e.g. "this is a picture of a face" or "this is a picture of a cat")
+- Play games — and often beat humans (e.g. chess, Go, checkers)
 
-:::tip Key Term
-The **Internet of Things (IoT)** refers to everyday physical devices connected to the internet and to each other — collecting and sharing data.
+However, some things are still very hard for computers:
+- Understanding **emotions**
+- Reasoning based on **context** (e.g. detecting when someone is being sarcastic or ironic)
+- Reading **body language**
+
+:::warning
+As of now, computers still need instructions and algorithms to perform tasks. They cannot think on their own. But the gap between what computers can and cannot do is closing rapidly.
 :::
 
-Examples of IoT devices:
-- **Smart home**: smart lights (Philips Hue), smart locks, smart thermostats (Nest), robot vacuum cleaners
-- **Wearables**: fitness trackers (Fitbit), smartwatches (Apple Watch)
-- **Smart cities**: traffic sensors, smart streetlights, connected water meters
-- **Agriculture**: soil moisture sensors, automated irrigation, drone crop monitoring
-- **Healthcare**: pacemakers that send data to doctors, glucose monitors for diabetics
-- **Industry**: factory machines that monitor their own performance and predict failures
+### Real Applications of AI
 
-:::info
-By 2030 it is estimated there will be over **30 billion** IoT devices connected worldwide. That's roughly 4 devices for every person on Earth.
+AI is already producing impressive results in many areas:
+
+| Area | Example |
+|------|---------|
+| **Autopilot / self-driving** | Cars, planes, and ships that drive or navigate themselves |
+| **Robots** | Robot vacuums, customer service voice menus, humanlike robots |
+| **Game AI** | Computer programs that can beat humans at chess, Go, and checkers |
+| **Weaponry** | Unmanned drones that use AI to navigate |
+| **Natural language processing** | Converting speech to text, and text to speech; assistants like Siri and Cortana |
+| **Handwriting recognition** | The US Postal Service uses AI to read handwritten addresses on letters and parcels |
+
+:::info Real-World Example
+The United States Postal Service uses an artificially intelligent program to scan letters and automatically read the digits written on envelopes — even messy handwriting from different people. This allows millions of pieces of mail to be sorted quickly and accurately.
 :::
 
-**Security concern**: More connected devices means more potential entry points for hackers. A smart fridge or baby monitor can become a gateway into your home network if poorly secured.
+### Neural Networks and Deep Learning
 
-## Augmented Reality (AR) and Virtual Reality (VR)
+One of the most exciting developments in AI is the **neural network** — an algorithm that models how the human brain works at a high level. By simulating the way neurons connect and strengthen their connections through experience, a neural network can actually *simulate learning*.
 
-| Feature | Augmented Reality (AR) | Virtual Reality (VR) |
-|---------|----------------------|---------------------|
-| What it does | Adds digital elements to the real world | Replaces the real world with a virtual one |
-| Device needed | Smartphone, AR glasses | VR headset |
-| Examples | Pokémon GO, Snapchat filters, IKEA furniture preview app | Gaming (Oculus), virtual tours, training simulations |
-| Presence | You're still aware of your surroundings | You're fully immersed |
+This allows computers to improve at tasks over time simply by being exposed to more examples — a capability called **deep learning**. Neural networks are what power many of the AI applications mentioned above, from face recognition to language translation.
 
-**Uses in education and training:**
-- Medical students practising surgery in VR
-- Soldiers and pilots training in simulations
-- Architects showing clients virtual walkthroughs
-- Students visiting historical sites in AR/VR
+---
 
-## Cloud Computing
+## 6. Summary
 
-:::tip Key Term
-**Cloud computing** means using computing resources (storage, software, processing power) delivered over the internet rather than running on your local device.
-:::
+| Concept | Key Idea |
+|---------|---------|
+| **Von Neumann architecture** | How all traditional computers are built — electronic, binary, deterministic |
+| **DNA computers** | Use DNA instead of circuits; store billions of times more data; truly parallel |
+| **Quantum computers** | Use qubits that can be 0, 1, or both; non-deterministic; trillions of ops/second |
+| **Artificial intelligence** | Simulating intelligent behaviour using programs; still needs human-written instructions |
+| **Neural networks** | Algorithms modelled on the human brain; enable computers to simulate learning |
 
-You already use cloud computing constantly:
-- **Google Drive / OneDrive / iCloud**: storing files online
-- **Gmail / Outlook**: email on remote servers
-- **Netflix**: video streamed from remote servers
-- **Online games**: processed partly on remote servers
-- **Google Docs**: word processing that runs in your browser
-
-**Advantages:**
-- Access your data from any device, anywhere
-- No need to buy expensive hardware — rent what you need
-- Automatic backups
-- Easily scale up or down
-
-**Concerns:**
-- Requires reliable internet connection
-- Privacy: your data is stored on someone else's servers
-- If the service goes offline, you lose access
-
-## Wearable Technology
-
-Wearables are computers you wear on your body. They collect biometric and environmental data and connect to your smartphone.
-
-| Device | Examples | Data collected |
-|--------|---------|----------------|
-| Smartwatch | Apple Watch, Galaxy Watch | Heart rate, sleep, steps, notifications |
-| Fitness tracker | Fitbit, Garmin | Activity, calories, sleep quality |
-| Smart glasses | Ray-Ban Meta | Photos, video, audio, AR overlays |
-| Health monitor | Continuous glucose monitors | Blood sugar levels |
-| Smart clothing | Under Armour connected shoes | Running gait, distance, performance |
-
-## Ethical Questions About Future Technology
-
-As technology becomes more powerful, it raises difficult questions:
-
-**AI bias**: AI systems trained on biased data can make unfair decisions. Examples: facial recognition that works worse on dark skin tones; hiring algorithms that discriminate.
-
-**Job displacement**: Automation and AI will replace many jobs. Which ones? Truck drivers (self-driving vehicles), factory workers (robots), data entry clerks (AI). But new jobs will also be created.
-
-**Privacy**: IoT devices, AI, and cloud computing collect vast amounts of personal data. Who owns it? How is it used?
-
-**Deepfakes**: AI can generate convincing fake videos of real people saying things they never said — a serious threat to truth and trust.
-
-**Digital divide**: Not everyone has equal access to advanced technology. How do we ensure benefits reach everyone?
-
-## Computing's Impact in South Africa
-
-- South Africa has a growing tech sector — cities like Cape Town and Johannesburg are developing as African tech hubs
-- **Project Isizwe** and similar initiatives aim to provide free Wi-Fi in townships and rural areas
-- Demand for digital skills (coding, data science, AI) is increasing rapidly
-- The **4th Industrial Revolution** (4IR) is a government priority — preparing learners for an AI-powered economy
-- Opportunities in fintech, agritech, healthtech, and education technology
-
-:::info
-The 4th Industrial Revolution (4IR) describes the current era of rapid technological change blending the physical, digital, and biological worlds through AI, robotics, IoT, and more.
-:::
+---
 
 ## Check Your Understanding
 
-1. Give **three** examples of AI you have personally used or encountered. Explain what makes each one an example of AI.
-2. Explain the difference between AI and Machine Learning. Use an example in your answer.
-3. A farmer wants to use technology to monitor the moisture levels in their soil and automatically water crops when needed. What technology concept does this fall under? Explain how it would work.
-4. Explain the difference between AR and VR. Give one educational use for each.
-5. "Cloud computing makes life easier but creates new risks." Do you agree? Give one advantage and one risk in your answer.
-6. Choose **one** ethical concern about AI or future computing. Explain the concern and suggest one way it could be addressed.
-7. What is the 4th Industrial Revolution? Why should Grade 8 learners care about it?
+1. What does it mean for a computer to be "deterministic"? How does this apply to traditional (Von Neumann) computers?
+
+2. Who first introduced the concept of DNA computers, and in what year?
+
+3. Explain how a DNA computer represents binary data differently from a traditional computer.
+
+4. What does "true parallelism" mean? Why can DNA computers achieve it while traditional computers cannot?
+
+5. What is a qubit, and how is it different from a classical bit?
+
+6. Explain why quantum computers are described as "non-deterministic."
+
+7. What type of computing problem would DNA or quantum computers be most useful for? Why are they not ideal for general everyday computing?
+
+8. Define artificial intelligence in your own words. Give **three** real-world examples of AI that you have encountered or heard about.
+
+9. What are **two** things computers can already do well that seem intelligent, and **two** things that computers still find very difficult?
+
+10. What is a neural network, and what human structure does it model? What ability does it give computers?
+
+11. **Think and discuss:** If computers can beat humans at chess and Go, and can soon drive cars on their own, does that mean computers are smarter than humans? Explain your reasoning using what you have learned about AI.

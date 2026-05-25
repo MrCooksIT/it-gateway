@@ -4,148 +4,135 @@ title: Hacking Ethics
 
 # Hacking Ethics
 
-The word "hacker" in movies usually means a criminal in a dark room. In reality, hacking is a much broader concept — and some of the most important people in cybersecurity are hackers. Understanding the ethics of hacking helps you make sense of cybersecurity as a field, and helps you protect yourself.
+## What Is a Hacker?
 
-## What Is Hacking?
+:::tip Key Term
+A **security hacker** is someone who seeks to break through defences and exploit weaknesses in a computer system or network.
+:::
 
-The original meaning of "hacking" is simply clever, creative problem-solving with technology. Early hackers were enthusiasts who pushed computers to their limits out of curiosity and ingenuity.
+But are all hackers bad? The answer is no. The term "hacker" covers a wide spectrum of people with very different intentions and approaches. To understand the difference, we use the concepts of **white hat** and **black hat** — terms that come from early Western films, where the hero wore a white hat and the villain wore a black hat.
 
-Today, **hacking** usually refers to gaining unauthorised access to computer systems, networks, or data — but it exists on a spectrum from criminal activity to legitimate security work.
+---
 
 ## Types of Hackers
 
-### White Hat (Ethical Hackers)
-
-:::tip Key Term
-**White hat hackers** (also called **ethical hackers** or **penetration testers**) are security professionals who test systems for vulnerabilities — but with **permission** from the owner. Their goal is to find weaknesses before malicious hackers do.
-:::
-
-White hat hackers are hired by companies, banks, and governments to try to break into their own systems. When they find a vulnerability, they report it so it can be fixed.
-
 ### Black Hat Hackers
 
-:::danger
-**Black hat hackers** break into systems **without permission** for malicious purposes — stealing data, causing damage, demanding ransom, or selling access to others. This is illegal and can result in criminal prosecution.
+Black hat hackers are the criminals of the hacking world. They break into secure networks without permission in order to:
+
+- **Destroy, modify, or steal data**
+- **Break network functionality**
+- **Hack for personal gain or to cause harm**
+
+Black hat hackers face serious legal consequences for their actions.
+
+### White Hat Hackers
+
+White hat hackers are the opposite. They use the same methods and techniques as black hats, but they do so **with permission** from the organisation that owns the system.
+
+:::tip Key Term
+**White hat hackers** (also called **ethical hackers**) are hired to perform **penetration testing** — deliberately attempting to break into a system in order to find vulnerabilities before malicious attackers do.
 :::
 
-Motivations include:
-- Financial gain (stealing banking details, demanding ransom)
-- Espionage (stealing government or corporate secrets)
-- Disruption or revenge
-- Showing off
+By finding weaknesses first, white hat hackers help organisations build stronger, more secure systems. Think of it like: "You forgot to lock the back door!" — they point out the weaknesses so they can be fixed.
 
 ### Grey Hat Hackers
 
-Grey hat hackers fall in between. They may break into systems **without permission** but without malicious intent — perhaps to expose a flaw publicly to pressure the company to fix it. Even if well-intentioned, this is still illegal without authorisation.
+Grey hat hackers fall in between. They hack **without permission** — which is often illegal — but once they find a vulnerability, they typically contact the organisation and may request payment for disclosing what they found.
 
-| Type | Permission? | Intent | Legal? |
-|------|------------|--------|--------|
-| White hat | Yes | Find and fix vulnerabilities | Yes |
-| Grey hat | No | Expose vulnerabilities (mixed) | No |
-| Black hat | No | Malicious/criminal | No |
+| Type | Has Permission? | Intent | Legal? |
+|---|---|---|---|
+| **White hat** | Yes | Find and fix vulnerabilities | Yes |
+| **Grey hat** | No | Find vulnerabilities, then report (sometimes for payment) | Often no |
+| **Black hat** | No | Cause harm, steal data, personal gain | No |
 
-## Common Threats You Should Know
+---
 
-Understanding how attacks work helps you defend against them.
+## Bug Bounty Programmes
 
-### Malware
+Some companies run **bug bounty programmes** — formal arrangements where they pay individuals who find and report security vulnerabilities before malicious hackers can exploit them.
 
-:::tip Key Term
-**Malware** (malicious software) is any program designed to damage, disrupt, or gain unauthorised access to a system.
+:::info Bug Bounty Programmes
+- Companies pay researchers who responsibly report vulnerabilities.
+- Each programme has its own rules, which may exclude certain products or hacking methods.
+- Participating in a bug bounty programme is one way to hack **legally** — as long as you follow the programme's rules.
 :::
 
-| Malware type | What it does |
-|-------------|-------------|
-| **Virus** | Attaches to files and spreads when you open or share them |
-| **Worm** | Spreads automatically across networks without needing a file to attach to |
-| **Trojan** | Disguises itself as legitimate software, then causes harm once installed |
-| **Ransomware** | Encrypts your files and demands payment to restore access |
-| **Spyware** | Secretly monitors your activity and sends data to attackers |
-| **Adware** | Displays unwanted adverts; sometimes collects browsing data |
+---
 
-### Phishing
+## Legal vs Illegal Hacking
 
-:::tip Key Term
-**Phishing** is a social engineering attack where attackers send fake messages (email, SMS, or WhatsApp) that appear to come from trusted sources — to trick you into giving up personal information, passwords, or money.
+Not all hacking is the same. Whether hacking is legal or illegal depends on **permission** and **intent**.
+
+### Examples of Legal Hacking
+
+- Working as a **penetration tester** (hired to test systems with permission)
+- Following the rules of a company's **bug bounty programme**
+- Hacking a site created **explicitly as a teaching tool** (such as hackthissite.org)
+
+### Examples of Illegal Hacking
+
+- Finding and **exploiting vulnerabilities for personal gain**
+- **"Hacktivism"** — hacking to promote a political agenda or push for social change
+- **Trying to find system vulnerabilities without permission** (this is grey hat hacking and is still illegal)
+- **Breaking the rules** of a bug bounty programme
+
+:::danger The Key Principle
+The difference between legal and illegal hacking almost always comes down to one thing: **permission**. If you do not have explicit permission to access or test a system, it is illegal — regardless of your intentions.
 :::
 
-**Signs of a phishing message:**
-- Creates urgency ("Your account will be closed in 24 hours!")
-- Asks for passwords, ID numbers, or banking details
-- Contains a suspicious link (hover over it — does the URL match the claimed sender?)
-- Generic greeting ("Dear Customer" instead of your name)
-- Spelling and grammar errors
+---
 
-### Social Engineering
+## Consequences of Illegal Hacking
 
-Social engineering exploits **human psychology** rather than technical vulnerabilities. An attacker might call pretending to be IT support to get your password, or befriend an employee to get physical access to a building.
+Illegal hacking carries very serious legal consequences. In the United States, under the **Computer Fraud and Abuse Act**, a criminal hacker can face:
 
-:::info
-Famous example: Kevin Mitnick — once one of the most wanted hackers in the US — said most of his hacks involved social engineering, not technical exploits. He would simply call and ask people for information, pretending to be someone he wasn't.
+- **Felony charges**
+- **Prison time** of up to 20 years
+- **Fines** of up to $15,000
+
+These penalties are **in addition** to any punishment for other crimes committed during the hack (such as theft or fraud).
+
+:::danger Real Consequences
+These are not empty threats. People have gone to prison for hacking — even young people, and even those who claimed they meant no harm. Curiosity is not a legal defence.
 :::
 
-## Ethical Hacking as a Career
+---
 
-Cybersecurity is one of the fastest-growing and most in-demand career fields globally.
+## Summary
 
-**What ethical hackers do:**
-- **Penetration testing**: simulate attacks to find vulnerabilities in systems
-- **Vulnerability assessment**: scanning systems for known weaknesses
-- **Security auditing**: reviewing code and configurations for security flaws
-- **Incident response**: helping organisations recover after a breach
-- **Security consulting**: advising on best practices and policies
+| Concept | Key Point |
+|---|---|
+| Security hacker | Someone who seeks to exploit weaknesses in a computer system or network |
+| Black hat | Hacks without permission for personal gain or to cause harm; criminal |
+| White hat | Hacks with permission to find and fix vulnerabilities; legal and ethical |
+| Grey hat | Hacks without permission but without malicious intent; still often illegal |
+| Penetration testing | Being hired to try to break a system in order to find weaknesses |
+| Bug bounty programmes | Companies pay individuals to find and report vulnerabilities — legal if rules are followed |
+| Legal hacking | Requires explicit permission — as a penetration tester, through a bug bounty, or on a teaching platform |
+| Consequences | Felony charges, up to 20 years in prison, fines up to $15,000 (US) |
 
-**Bug bounty programmes**: Many companies (Google, Microsoft, Facebook, banks) pay ethical hackers to find and responsibly disclose security vulnerabilities. Some payouts run into millions of rands.
+---
 
-## The Law: Cybercrimes in South Africa
+## Conclusion
 
-:::danger Legal Warning
-In South Africa, the **Cybercrimes Act No. 19 of 2020** makes it illegal to:
-- Access a computer system, network, or data without permission
-- Intercept data
-- Interfere with data or a computer system
-- Use a device to commit a cybercrime
-- Threaten someone using electronic means
-
-Penalties include **fines and up to 15 years imprisonment** for serious offences.
+:::info Three Rules to Remember
+1. **Do not break the law.** Only hack with explicit permission.
+2. **If you are unsure whether something is legal, stop and seek clarification** before proceeding.
+3. **There are very real consequences for illegal hacking** — even if you have no harmful intentions.
 :::
 
-The fact that you *can* access a system does not mean you *may*. Curiosity is not a legal defence.
-
-**Real consequences**: Several South African teenagers have faced criminal charges for hacking school systems to change marks or access personal data.
-
-## Protecting Yourself from Hacking
-
-You don't need to be a cybersecurity expert to protect yourself. Basic habits make a big difference:
-
-| Action | Why it helps |
-|--------|-------------|
-| Use strong, unique passwords | Prevents brute-force attacks and limits damage if one site is breached |
-| Enable two-factor authentication (2FA) | A stolen password alone is not enough to access your account |
-| Keep software and OS updated | Updates patch known security vulnerabilities |
-| Don't click suspicious links | Prevents phishing and malware installation |
-| Use reputable antivirus software | Detects and removes malware |
-| Be careful on public Wi-Fi | Attackers on the same network can intercept unencrypted traffic |
-| Download software only from official sources | Pirated software often contains trojans |
-
-## The Ethics of Hacking
-
-Even if you have the technical ability to access a system, there are important ethical questions:
-
-- **Consent matters**: Just as you can't enter someone's home without permission, you can't enter their digital systems without authorisation.
-- **Exposure without permission**: Even if you find a security flaw, publishing it publicly without giving the organisation time to fix it can put users at risk.
-- **Intent doesn't fully excuse illegal acts**: Grey hat hacking, even if well-intentioned, is still breaking the law.
-
-:::info
-**Responsible disclosure** is the ethical practice of privately reporting a vulnerability to the affected organisation and giving them a reasonable time to fix it before going public. This is what professional ethical hackers do.
-:::
+---
 
 ## Check Your Understanding
 
-1. Explain the difference between a white hat and a black hat hacker.
-2. You discover a security vulnerability in your school's website that lets you see other learners' grades. What should you do, and why?
-3. Name and describe **three** types of malware.
-4. You receive a WhatsApp message saying "Your FNB account has been suspended — click here to verify your details." List **three** signs that suggest this is a phishing attempt.
-5. Is it legal to access a computer system without permission if you have no malicious intent? Explain with reference to South African law.
-6. A friend says "hacking is just being clever with computers — it can't be wrong." How would you respond?
-7. Why is cybersecurity one of the most in-demand career fields today? What does an ethical hacker actually do in their job?
+1. Define a security hacker in your own words.
+2. Explain the difference between a white hat hacker and a black hat hacker. What is the key factor that separates them?
+3. Where do the terms "white hat" and "black hat" originally come from?
+4. Describe what a grey hat hacker does. Even if their intentions are not harmful, why is grey hat hacking still a legal problem?
+5. What is penetration testing? Why do companies hire people to do this?
+6. What is a bug bounty programme? Give an example of what a hacker would do to participate in one legally.
+7. List **three examples of legal hacking** and **three examples of illegal hacking**.
+8. What are the consequences of illegal hacking in the United States under the Computer Fraud and Abuse Act?
+9. A student discovers a vulnerability in their school's website that lets them access other students' records. They do not misuse the data but show their friends. Is this legal? What should they have done instead?
+10. Why is "I didn't mean any harm" not a sufficient defence for illegal hacking?

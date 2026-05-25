@@ -4,156 +4,140 @@ title: Information Literacy
 
 # Information Literacy
 
-The internet gives you access to more information than any library in history — but not all of it is true, accurate, or unbiased. **Information literacy** is the skill of finding, evaluating, and responsibly using information. In an age of fake news, deepfakes, and misinformation, this is one of the most important skills you can develop.
+## Information Is Everywhere
+
+The internet gives us access to massive amounts of information — more than any library in history. However, it is very easy to find information online that is **misleading** or **inaccurate**. This means we need to be careful about what we read, where we find it, and whether we can trust it.
+
+---
 
 ## What Is Information Literacy?
 
 :::tip Key Term
-**Information literacy** is the ability to identify when you need information, find it effectively, evaluate whether it is reliable, and use it ethically.
+**Information literacy** is the ability to find information, evaluate its credibility, and use it effectively.
 :::
 
-Being information literate means you can:
-- Identify what information you need
-- Find it from appropriate sources
-- Judge whether the source is trustworthy
-- Use the information ethically (without plagiarising)
-- Spot when information is false or misleading
+Being information literate means you are not just able to search the web — you are able to judge whether what you find is actually reliable. This is an essential skill for anyone who uses the internet to learn, research, or make decisions.
 
-## Types of False Information
+In this chapter, we will cover four key information literacy skills:
 
-Not all false information is the same:
+1. Conducting effective internet searches
+2. Recognising advertising
+3. Judging the legitimacy of online sources
+4. Identifying misinformation
 
-| Type | Definition | Example |
-|------|-----------|---------|
-| **Misinformation** | False information shared by someone who believes it is true | Sharing a health myth because you genuinely think it helps people |
-| **Disinformation** | False information deliberately created and spread to deceive | A government or political group creating fake news stories |
-| **Malinformation** | True information used with the intent to harm | Leaking someone's private information to damage their reputation |
+---
 
-## What Is Fake News?
+## Effective Internet Searches
 
-:::tip Key Term
-**Fake news** is false or misleading information presented as genuine news. It is designed to look like legitimate journalism to deceive readers.
-:::
+There is so much information online that it can be hard to find exactly what you are looking for. Knowing how to search effectively saves time and gets you better results.
 
-### How to Spot Fake News
+### Search for Keywords
 
-Look for these warning signs:
-
-**1. Emotional or shocking headline**  
-Real news reports facts. Fake news uses language designed to make you angry, scared, or outraged. Example: "SHOCKING: Government hiding secret cure for cancer!"
-
-**2. Unknown or suspicious source**  
-Check the website's URL and "About" page. Is it a recognised news outlet? Websites with names similar to real outlets (e.g. "ABCnews.com.co") are often fake.
-
-**3. No author or date**  
-Legitimate articles have a named author and a date. Missing either is a red flag.
-
-**4. Poor spelling and grammar**  
-Reputable news outlets proofread carefully. Lots of errors suggest an unprofessional source.
-
-**5. Only one source or anonymous sources**  
-Good journalism verifies claims with multiple named sources.
-
-**6. Sensational images**  
-Images may be real but taken out of context, or digitally manipulated.
-
-### The SIFT Method
-
-A practical framework for evaluating information:
-
-| Letter | Step | What to do |
-|--------|------|-----------|
-| **S** | Stop | Pause before sharing — don't react emotionally |
-| **I** | Investigate the source | Who is behind this? Are they credible? |
-| **F** | Find better coverage | Is this story covered by multiple trusted sources? |
-| **T** | Trace claims | Find the original source of the claim or image |
-
-## Evaluating Websites: The CRAAP Test
-
-Use these five criteria to judge any website or source:
-
-| Criterion | Questions to ask |
-|-----------|----------------|
-| **C**urrency | When was it published? Is it up to date? |
-| **R**elevance | Is this information useful for your purpose? Is it appropriate for your level? |
-| **A**uthority | Who wrote it? What are their qualifications? Is there contact information? |
-| **A**ccuracy | Are sources cited? Can you verify the information elsewhere? Are there errors? |
-| **P**urpose | Why does this exist? To inform? Persuade? Sell? Entertain? |
-
-:::info
-Wikipedia is a useful **starting point** for research, but it is not a reliable final source — anyone can edit it. Use Wikipedia to get an overview and find links to primary sources, then cite those instead.
-:::
-
-## Confirmation Bias and Filter Bubbles
-
-:::tip Key Term
-**Confirmation bias** is the tendency to seek out and believe information that confirms what you already think, while ignoring information that challenges your views.
-:::
-
-:::tip Key Term
-A **filter bubble** is when social media algorithms show you mostly content that matches your existing views and interests — creating a bubble where you rarely encounter opposing perspectives.
-:::
-
-This matters because: if you only see information that agrees with you, you may believe false things more strongly and become less tolerant of other perspectives.
-
-**How to counter it:**
-- Deliberately seek out different viewpoints
-- Follow news sources with different perspectives
-- Question why you believe something — is it evidence or just what you want to be true?
-
-## Reverse Image Search
-
-Images are often shared out of context or are manipulated. A **reverse image search** lets you find where an image originally came from.
-
-**How to do it:**
-1. Go to images.google.com (or use TinEye)
-2. Click the camera icon
-3. Upload the image or paste its URL
-4. See where else the image appears online
-
-This helps you check if a photo really shows what it claims to show.
-
-## Citing Your Sources
-
-When you use information from a source, you must credit it. This is called **citing** or **referencing**.
-
-**Why it matters:**
-- Gives credit to the original author
-- Allows readers to verify your information
-- Is required to avoid plagiarism
-- Shows you have done proper research
-
-**Basic format for a website reference:**
-> Author (if available). Year. Title of page. [Online]. Available: URL [Date accessed].
+When searching online, focus on the **keywords** that define your topic — and be specific. Avoid writing full questions into the search bar.
 
 **Example:**
-> South African Broadcasting Corporation. 2024. Cybercrime on the rise in South Africa. [Online]. Available: https://www.sabc.co.za/... [Accessed 15 May 2024].
 
-:::warning
-Academic integrity matters. Copying text from a website without citing it — even if you paraphrase — is plagiarism. Your teacher can use software to detect this.
+> Question: Which US state produces the most solar energy?
+>
+> Effective keywords: `United States solar energy production`
+
+If you leave out key terms, your results will be too broad. The more specific your keywords, the more targeted your results.
+
+### Use Quotation Marks for Exact Phrases
+
+Putting a phrase in **quotation marks** tells the search engine to return results that contain that exact phrase.
+
+> `"solar energy"` — returns results that contain the exact phrase *solar energy*
+
+This is especially useful when you are searching for a specific term, name, or concept.
+
+### Use + and − to Narrow Your Search
+
+You can also use plus and minus signs to include or exclude specific terms:
+
+| Operator | What it does | Example |
+|---|---|---|
+| `+` | Results must include this term | `"solar energy" +USA` — returns results about solar energy **and** the USA |
+| `-` | Results must NOT include this term | `"solar energy" -jobs` — returns results about solar energy but **not** about jobs |
+
+:::info Important
+There must be **no space** between the `+` or `-` and the keyword. Write `-jobs`, not `- jobs`.
 :::
 
-## Finding Good Information Online
+For example, if you search for solar energy and keep seeing results about careers in the solar industry, you can use `-jobs` to filter those out and find more relevant results.
 
-**Reliable source types:**
-- Government websites (.gov.za, .gov)
-- Educational institutions (.ac.za, .edu)
-- Established news organisations (BBC, Reuters, News24, Daily Maverick)
-- Peer-reviewed academic articles (Google Scholar)
-- Recognised encyclopaedias and reference works
+---
 
-**Less reliable:**
-- Anonymous blogs
-- Social media posts (even from people you trust)
-- Sites with lots of ads and sensational content
-- Sites that only confirm one extreme viewpoint
+## Recognising Advertising
+
+Not everything at the top of a search page is there because it is the best result. Companies pay to appear at the top of search pages as **sponsored links** — these are advertisements, not real search results.
+
+:::warning Ads Are Not Credible Sources
+Sponsored links look like search results, but they are paid advertisements. A company paying for a top position does not make them a reliable source of information. Always scroll past sponsored results to find organic (non-paid) results.
+:::
+
+Learning to distinguish between sponsored links and real search results is an important part of information literacy.
+
+---
+
+## Judging Source Legitimacy
+
+Once you have found a source, you need to evaluate whether it is actually reliable. It is very easy for anyone to post misinformation online, so you cannot trust a source just because it appeared in your search results.
+
+When evaluating a source, consider these six factors:
+
+| Factor | Questions to Ask |
+|---|---|
+| **Author** | Is there an author listed? If so, what are their credentials? Are they an expert on this topic? No author is a bad sign. |
+| **Date** | When was the source published? If it was published several years ago, the information may no longer be accurate. |
+| **Sources** | Does the author cite their sources? If there are no sources cited, it is hard to know where the information came from. |
+| **Domain** | Is the site `.edu` or `.gov`? These are typically more reliable, as only educational and government organisations can publish under these domains. Other domains like `.com`, `.net`, and `.org` can still be reliable, but require more caution — anyone can buy them. |
+| **Site Design** | Is the website well-designed and professional-looking? A confusing or unprofessional design can indicate an unreliable source. |
+| **Writing Style** | Does the site follow correct spelling and grammar? Poor writing is a sign that the source may not be credible. |
+
+:::info Not an Exact Science
+Not every credible source will meet all of these requirements, and not every source that fails one criterion is automatically unreliable. If you are unsure, **cross-reference** the information with a source you know to be trustworthy, such as an encyclopaedia or textbook.
+:::
+
+---
+
+## Identifying Misinformation
+
+Beyond checking whether a source is legitimate, you should also actively look for signs of **misinformation** — false or misleading information presented as if it were true.
+
+To identify misinformation, ask yourself:
+
+1. **Is the author biased?** Are they pushing a particular viewpoint or agenda? You can search for the author's name to find out more about who they are and what they believe.
+2. **What sources are cited?** Do the sources linked in the article look credible and scholarly? Weak or absent sources are a red flag.
+3. **Can you find this information elsewhere?** Search for the same claim on other sites you know to be credible. If you cannot find supporting evidence on a reliable site, the information is probably not true.
+
+:::warning Cross-Reference Important Information
+If you read something surprising or important, always check whether you can find the same information confirmed on a credible, independent source before accepting it as true or sharing it with others.
+:::
+
+---
+
+## Summary
+
+| Skill | Key Points |
+|---|---|
+| Information literacy | The ability to find, evaluate, and effectively use information |
+| Effective searches | Use specific keywords; use quotation marks for exact phrases; use `+` and `-` to narrow results |
+| Recognising advertising | Sponsored links are paid ads, not reliable sources |
+| Judging legitimacy | Check author, date, sources cited, domain, site design, and writing style |
+| Identifying misinformation | Look for bias; check sources cited; verify on other credible sites |
+
+---
 
 ## Check Your Understanding
 
-1. Explain the difference between misinformation and disinformation. Give an example of each.
-2. You see a Facebook post claiming a popular soft drink causes a serious illness, with a shocking headline and no author listed. Using the SIFT method, explain how you would check whether this is true.
-3. Apply the CRAAP test to evaluate this source: a Wikipedia article about climate change written three years ago.
-4. What is a filter bubble? Explain how it could affect someone's understanding of a political issue.
-5. A classmate says "I found a great source — it had loads of information and cool graphics." Why is this not enough to know if the source is reliable?
-6. You want to use a photo in your project. Describe how you could check whether the photo is authentic and whether you have permission to use it.
-7. Why is it important to cite your sources in a school project, even for a website you visited?
+1. Define information literacy in your own words. Why is it an important skill for anyone who uses the internet?
+2. You want to find out which South African province produces the most wind energy. Write an effective search query using keywords, and explain why your keywords are a good choice.
+3. Explain how you would use quotation marks when searching. How does this change the results you get?
+4. What is the difference between using `+` and `-` in a search? Give an example of each.
+5. Why are sponsored links not reliable sources, even if they appear at the very top of a search results page?
+6. A website article has no author listed, was published in 2017, uses `.com` as its domain, and does not cite any sources. Using what you have learned about evaluating sources, would you trust this article? Explain your reasoning.
+7. Explain why a `.gov` or `.edu` domain is generally more trustworthy than a `.com` domain.
+8. What is misinformation, and what are **three questions** you should ask to help identify it?
+9. You find an article that claims a popular energy drink cures the common cold. The site looks professional and the writing is clear. What steps would you take to decide whether this claim is credible?
+10. A classmate says: "I found it on the first page of Google, so it must be accurate." What would you say to them, and what advice would you give about searching and evaluating sources?

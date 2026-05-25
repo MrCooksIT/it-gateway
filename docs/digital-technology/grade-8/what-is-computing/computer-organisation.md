@@ -6,439 +6,204 @@ title: Computer Organisation
 
 ## Introduction
 
-A computer is not one single thing — it is a carefully organised system of components that work together to accept data, process it, store it, and produce useful output. Understanding how these components are organised, and how they communicate, is fundamental to understanding everything else in this course.
+A computer is not one single thing — it is a carefully organised system of components that work together. Understanding how these components are organised helps you make sense of everything else about how computers work.
 
-In this topic, we explore the internal architecture of a computer from first principles. We start with a simple model — the four operations a computer performs — and then progressively zoom in to examine each component in detail: the CPU, memory, storage, and the connections between them. By the end, you will be able to trace exactly what happens inside a computer when you do something as simple as typing a letter.
+At the highest level, all computer parts fall into two main categories: **hardware** and **software**.
 
----
+- **Hardware** is the physical components of your computer — the things you can actually touch and hold, usually made of silicon or metal.
+- **Software** is the programs that run on the computer and make it do the things you want. Software is not physical — it is instructions given to the computer.
 
-## 1. The Four Operations: The IPSO Model
-
-Every computer, from the smallest microcontroller in your earbuds to the largest supercomputer in the world, performs four fundamental operations:
-
-1. **Input** — Accept data from the outside world
-2. **Processing** — Manipulate or transform that data
-3. **Storage** — Save data temporarily or permanently
-4. **Output** — Produce results that are useful to humans or other systems
-
-This is sometimes called the **IPSO model** or the **IPO model** (if storage is treated separately).
-
-```mermaid
-flowchart LR
-    I["INPUT\n(Keyboard, mouse,\nmicrophone, scanner)"]
-    P["PROCESSING\n(CPU — ALU\n& Control Unit)"]
-    S["STORAGE\n(RAM, HDD, SSD)"]
-    O["OUTPUT\n(Monitor, printer,\nspeaker)"]
-
-    I --> P
-    P --> S
-    S --> P
-    P --> O
-```
-
-Notice that storage has a two-way arrow with processing — data flows *to* storage (saving), and data flows *from* storage back to the processor (loading).
-
-### Real Examples of Each Operation
-
-| Operation | Component | Example |
-|-----------|-----------|---------|
-| Input | Keyboard | You press the "A" key |
-| Input | Microphone | You speak a voice command to Siri |
-| Input | Camera | A QR code is scanned at a shop |
-| Processing | CPU | The computer adds two numbers together |
-| Processing | CPU | A word processor checks spelling |
-| Storage (temporary) | RAM | The document you are currently editing |
-| Storage (permanent) | SSD/HDD | A saved Word document on your hard drive |
-| Output | Monitor | The letter "A" appears on screen |
-| Output | Printer | A document is printed on paper |
-| Output | Speaker | A song plays through your earphones |
-
-:::tip Key Term
-**IPSO Model** — the four fundamental operations of any computer system: Input, Processing, Storage, and Output. Every action a computer performs can be understood through this model.
-:::
+Within these two broad categories, there are several important subcategories: **output devices**, **input devices**, **storage devices**, and **network devices**. We will look at each of these in turn.
 
 ---
 
-## 2. Inside the CPU
+## 1. Output Devices
 
-The **Central Processing Unit (CPU)** is the component that does the actual processing — it executes instructions, performs calculations, and controls the behaviour of all other components. It is often called the "brain" of the computer, though "engine" might be a better analogy — it is not intelligent, but it is extraordinarily powerful at following instructions very quickly.
+**Output devices** are how your computer tells *you* things. They allow the computer to get information from inside the computer out into the outside world.
 
-Modern CPUs are microprocessors — entire processing units integrated onto a single chip. They are typically about the size of a postage stamp, yet contain billions of transistors.
+Behind the scenes, everything inside a computer is stored as numbers — as **digital information**. This is not very useful to humans on its own. Output devices take that digital information and transform it into physical information that you can actually understand and interact with — things like light (pictures on a screen) and sound.
 
-:::tip Key Term
-**CPU (Central Processing Unit)** — the primary component of a computer that executes program instructions. It performs arithmetic, logical operations, and controls the flow of data between components.
-:::
-
-### 2.1 The Arithmetic/Logic Unit (ALU)
-
-The **ALU** is the part of the CPU that performs all mathematical and logical operations:
-
-- **Arithmetic operations:** addition, subtraction, multiplication, division
-- **Logical operations:** comparisons (is A greater than B? is A equal to B?), and Boolean operations (AND, OR, NOT)
-
-Everything a computer does — even displaying graphics or playing audio — eventually comes down to arithmetic and logic at the hardware level.
+For example, if the computer reads the number 28, it might display a blue pixel on the screen. If it reads the number 32, it might display a yellow pixel. The output device is taking those digital numbers and turning them into something meaningful.
 
 :::tip Key Term
-**ALU (Arithmetic/Logic Unit)** — the component within the CPU responsible for performing mathematical calculations and logical comparisons.
+**Output device** — a device that transforms digital information stored inside the computer into physical information that a human can understand, such as images, sounds, or printed text.
 :::
 
-### 2.2 The Control Unit (CU)
+### Types of Output Devices
 
-The **Control Unit** is the manager or coordinator of the CPU. It does not perform calculations itself — instead, it:
-
-1. **Fetches** the next instruction from memory
-2. **Decodes** the instruction (works out what it means)
-3. **Executes** the instruction (tells the ALU or other components what to do)
-4. **Stores** the result
-
-This cycle — **Fetch → Decode → Execute → Store** — repeats billions of times per second in a modern CPU. Each repetition is one *instruction cycle* or *machine cycle*.
-
-:::tip Key Term
-**Control Unit (CU)** — the part of the CPU that directs the operation of the processor by fetching, decoding, and executing instructions in sequence.
-:::
-
-### 2.3 Registers
-
-**Registers** are tiny storage locations *inside* the CPU itself. They are the fastest storage in any computer system — the CPU can read from and write to them in a single clock cycle.
-
-Registers hold:
-- The instruction currently being executed
-- The data currently being processed
-- Memory addresses pointing to data in RAM
-- Intermediate results from calculations
-
-Because there are only a small number of registers (typically 16 to 64 in a modern CPU), data moves in and out of registers constantly as the CPU works through instructions.
-
-:::tip Key Term
-**Register** — an extremely fast, small storage location inside the CPU used to hold data that is being actively processed.
-:::
-
-### 2.4 Clock Speed
-
-The CPU operates on a clock signal — a regular pulse that synchronises all its operations. **Clock speed** is measured in **gigahertz (GHz)** — billions of cycles per second.
-
-- A 3.0 GHz processor completes 3 billion clock cycles per second
-- Each clock cycle can execute one or more operations
-- Higher clock speed generally means faster processing
-
-However, clock speed is not the only factor. The number of **cores** matters too — a modern CPU might have 4, 8, or even 32 cores, each capable of executing instructions simultaneously. A quad-core CPU running at 3.0 GHz can theoretically do four times the work of a single-core CPU at the same speed.
-
-| CPU Spec | What It Means |
-|----------|--------------|
-| 3.5 GHz clock speed | Executes up to 3.5 billion cycles per second |
-| Quad-core | Has 4 independent processing units (cores) |
-| 8 MB cache | Has 8 megabytes of very fast on-chip memory |
+| Type of Output | Examples |
+|---------------|---------|
+| **Visual (screen) output** | Monitors, video cards, projectors |
+| **Audio output** | Speakers, sound cards, headphones |
+| **Physical output (printing)** | Laser printers, inkjet printers, 3D printers |
 
 ---
 
-## 3. Memory: RAM and ROM
+## 2. Input Devices
 
-"Memory" in computing refers to electronic storage that the CPU can access very quickly — much faster than a hard drive. There are two fundamental types.
+**Input devices** are how you give your information *to* the computer. They allow information to travel from the outside world into the computer.
 
-### 3.1 RAM — Random Access Memory
-
-**RAM** is the computer's *working memory*. When you open a program, the computer loads it from storage (your hard drive or SSD) into RAM, because RAM is much faster.
-
-Key characteristics of RAM:
-- **Fast** — the CPU can read/write RAM in nanoseconds
-- **Volatile** — it loses all its data when power is switched off
-- **Temporary** — it holds data that is actively in use
-- **Large but limited** — modern computers typically have 8–32 GB of RAM
-
-Think of RAM like the surface of a desk. Your desk can hold the books and papers you are currently working with — but when you go home (power off), everything on the desk is put away (lost from RAM). The actual books go back on the bookshelf (storage).
+Input devices take messy, physical data from the real world — things like sound, light, touch, and movement — and convert it into clean, well-formed digital data (numbers) that the computer can store and work with.
 
 :::tip Key Term
-**RAM (Random Access Memory)** — fast, temporary (volatile) memory that the CPU uses to store data and programs that are currently in use. Data in RAM is lost when power is removed.
+**Input device** — a device that converts physical data from the outside world into digital data that the computer can store and process.
 :::
 
-:::warning Common Misconception
-Students often confuse RAM with storage. When you "save a file," you are saving it to the hard drive (permanent storage), not to RAM. RAM only holds data temporarily while the computer is on. This is why you can lose unsaved work if the computer crashes — the unsaved version in RAM disappears.
-:::
+### Interactive Input Devices
 
-### 3.2 ROM — Read-Only Memory
+These devices convert your physical actions (touch, movement, button presses) into digital signals:
 
-**ROM** is memory that is permanently built into the hardware and cannot normally be changed.
+- Touchpads and trackpads
+- Mice
+- Keyboards
+- Joysticks
+- Remote controls
+- Touchscreens
 
-Key characteristics of ROM:
-- **Non-volatile** — retains data when power is removed
-- **Read-only** (or very rarely writable)
-- **Small** — typically only a few megabytes
-- Contains the **firmware** — the most fundamental software instructions for the device
+### Sensing Input Devices
 
-The most important ROM in a computer is the chip that stores the **BIOS** (Basic Input/Output System) or **UEFI** (Unified Extensible Firmware Interface). When you switch on a computer, the CPU immediately starts reading instructions from ROM. These instructions check that hardware is working (the POST — Power-On Self Test) and then hand control over to the operating system on the hard drive.
+These devices constantly monitor the outside world and capture information as digital data:
 
-:::tip Key Term
-**ROM (Read-Only Memory)** — non-volatile memory permanently built into hardware. It retains data when power is removed and typically stores the firmware that starts up the computer.
-:::
+- **Scanners** — convert physical documents into digital images
+- **Microphones** — store audio information as digital data
+- **Digital cameras and webcams** — store visual information as digital data
+- **Sensors** — measure things like altitude, direction, humidity, and temperature
 
-### 3.3 RAM vs ROM: Comparison
-
-| Feature | RAM | ROM |
-|---------|-----|-----|
-| Full name | Random Access Memory | Read-Only Memory |
-| Volatile? | Yes — data lost when power off | No — data retained permanently |
-| Can be written by user? | Yes, continuously | No (or rarely) |
-| Speed | Very fast | Fast |
-| Typical size | 8–64 GB in modern PCs | A few MB |
-| What it stores | Running programs, open files | Firmware, BIOS/UEFI |
-| Analogy | The surface of your desk | The instructions printed on a label |
-
----
-
-## 4. Storage: HDD vs SSD
-
-While RAM is fast but temporary, **secondary storage** is slower but permanent. It holds your data when the computer is switched off.
-
-### 4.1 Hard Disk Drive (HDD)
-
-A **Hard Disk Drive** stores data on spinning magnetic platters. A read/write head moves across the surface of the platter (without touching it) to read or write data — like a record player needle, but never actually touching the disc.
-
-- Data is stored as tiny magnetic spots (North or South pole = 1 or 0)
-- The platters spin at 5,400 or 7,200 rpm (revolutions per minute)
-- Typical capacity: 500 GB to 20 TB
-- Relatively **slow** to access because the head must physically move to the right location
-- **Mechanical parts** make HDDs vulnerable to physical damage from drops or shocks
-- **Cheaper** per gigabyte than SSDs
-
-:::tip Key Term
-**HDD (Hard Disk Drive)** — a storage device that uses spinning magnetic platters and a moving read/write head to store and retrieve data. It is slower than an SSD but typically cheaper per gigabyte.
-:::
-
-### 4.2 Solid State Drive (SSD)
-
-A **Solid State Drive** has no moving parts at all. It stores data in **flash memory** — the same type of memory used in USB drives and phones, but in a much faster, more durable form.
-
-- Data is stored electronically in flash memory cells
-- No moving parts — much faster access times
-- Typical capacity: 256 GB to 4 TB (and growing)
-- Access times: 10–100 times faster than HDDs
-- More **durable** — resistant to drops and shocks
-- **More expensive** per gigabyte than HDDs
-
-:::tip Key Term
-**SSD (Solid State Drive)** — a storage device that uses flash memory chips with no moving parts. It is much faster and more durable than an HDD but currently more expensive per gigabyte.
-:::
-
-### 4.3 HDD vs SSD Comparison
-
-| Feature | HDD | SSD |
-|---------|-----|-----|
-| Technology | Spinning magnetic platters | Flash memory chips |
-| Moving parts? | Yes (spinning platter, moving head) | No |
-| Speed | Slower (80–160 MB/s read) | Much faster (500–7,000 MB/s read) |
-| Durability | Fragile — vulnerable to bumps | Robust — handles drops better |
-| Noise | Slight whirring sound | Silent |
-| Power consumption | Higher | Lower |
-| Cost per GB | Cheaper (approx R1–2/GB) | More expensive (approx R3–6/GB) |
-| Typical use | Large storage / backup | Main drive in laptops and gaming PCs |
-
-:::info South African Context
-In South Africa, many affordable laptops still ship with HDDs to keep costs down. If you are buying or upgrading a laptop, replacing an HDD with an SSD is one of the single most impactful upgrades you can make — boot times can go from 60 seconds to under 10 seconds.
+:::info Real-World Example
+An airplane cockpit is full of sensors (input devices) constantly gathering information such as altitude, direction, and humidity. The dials on the cockpit panel are the output devices — they receive information from those sensors and display it to the pilot in a readable form.
 :::
 
 ---
 
-## 5. Buses: The Communication Highways
+## 3. Storage Devices
 
-Components inside a computer cannot communicate by shouting — they send electrical signals along groups of wires called **buses**. A bus is a shared communication pathway connecting multiple components.
+**Storage devices** are how your computer remembers information and stores it for later. They are the computer's memory, allowing data to be saved and retrieved.
 
-:::tip Key Term
-**Bus** — a set of electrical connections (wires or traces on a circuit board) that carry data signals between components in a computer. Like a bus route that multiple passengers share, multiple components share the same bus.
-:::
+There are two categories of storage: **primary storage** and **secondary storage**.
 
-There are three types of bus:
+### Primary Storage
 
-### 5.1 Data Bus
+Primary storage is the memory the computer uses to perform its normal activity while it is switched on. When the computer is running, it is doing many calculations per second and needs a place to keep track of numbers for these quick calculations.
 
-Carries the actual data — the binary values (0s and 1s) — being transferred between components.
+This memory is **cleared when the power is turned off** — it needs electricity to hold its data.
 
-- A 64-bit data bus can transfer 64 bits of data simultaneously
-- Wider bus = more data transferred per cycle = faster throughput
-
-### 5.2 Address Bus
-
-Carries memory *addresses* — the locations in RAM where data should be read from or written to. You can think of an address as a house number on a street.
-
-- A 32-bit address bus can address 2³² = 4,294,967,296 memory locations (4 GB)
-- A 64-bit address bus can address vastly more — which is why 64-bit systems can use more than 4 GB of RAM
-
-### 5.3 Control Bus
-
-Carries control signals that coordinate the activities of components — for example, signals telling a component whether data is being *read* or *written*, or signals to synchronise operations with the clock.
-
-| Bus Type | What It Carries | Analogy |
-|----------|----------------|---------|
-| Data bus | The actual data (0s and 1s) | The passengers on the bus |
-| Address bus | Memory addresses (where to read/write) | The destination displayed on the bus |
-| Control bus | Timing and control signals | The timetable and traffic lights |
-
----
-
-## 6. The Motherboard
-
-The **motherboard** (also called the mainboard or system board) is the main circuit board of the computer. It is the central hub that physically connects and enables communication between all major components.
+This type of memory is called **RAM**, which stands for **Random Access Memory**. It is very fast to access, but it is constantly changing and only works while the computer is on.
 
 :::tip Key Term
-**Motherboard** — the main circuit board in a computer. It holds the CPU, RAM slots, ROM chip, expansion slots, and connectors for storage devices, USB ports, and other peripherals. All components connect to or through the motherboard.
+**RAM (Random Access Memory)** — the primary storage of a computer, used for quick calculations while the computer is running. It is very fast but loses all its data when the power is switched off.
 :::
 
-Key components on the motherboard:
+### Secondary Storage
 
-- **CPU socket** — where the CPU chip is installed
-- **RAM slots** — where RAM sticks are inserted (typically 2–4 slots)
-- **BIOS/UEFI chip** — the ROM chip with firmware
-- **Chipset** — manages data flow between CPU, RAM, and other components
-- **PCIe slots** — for adding graphics cards, network cards, etc.
-- **SATA connectors** — for connecting HDDs and SSDs
-- **USB headers** — for front-panel USB ports
-- **Power connectors** — for connecting the power supply
+Secondary storage is extra memory used for **persistent storage** — data that must survive whether the computer is switched on or off.
 
-```mermaid
-graph TB
-    CPU["CPU\n(Processor)"]
-    RAM["RAM\n(Memory)"]
-    ROM["ROM / BIOS\n(Firmware)"]
-    GPU["GPU\n(Graphics Card)"]
-    HDD["HDD / SSD\n(Storage)"]
-    USB["USB Devices\n(Input/Output)"]
-    MB["MOTHERBOARD\n(connects everything)"]
-    PSU["Power Supply"]
+Examples of secondary storage include:
+- CDs
+- USB drives
+- Hard drives
+- Floppy discs
+- Cloud storage
 
-    PSU --> MB
-    MB <--> CPU
-    MB <--> RAM
-    MB --> ROM
-    MB <--> GPU
-    MB <--> HDD
-    MB <--> USB
-```
+These devices store digital data and hold onto it permanently, even without power. You can save data to them, remove them from the computer, and retrieve the data later.
+
+| Feature | Primary Storage (RAM) | Secondary Storage |
+|---------|----------------------|------------------|
+| Speed | Very fast | Slower |
+| Keeps data when power is off | No | Yes |
+| Examples | RAM | Hard drives, USB drives, CDs |
+| Purpose | Active calculations while running | Long-term storage of files |
 
 ---
 
-## 7. Worked Example: Typing a Letter in a Word Processor
+## 4. Network Devices
 
-Now let us put it all together. Here is a step-by-step trace of exactly what happens inside your computer when you open a word processor and press the "A" key.
+**Network devices** are how your computer communicates with other computers. This ability to connect computers together is one of the most important applications of computing — it is what makes the internet possible.
 
-**Scenario:** Your laptop is on. Microsoft Word is open. You press the "A" key on the keyboard.
+### How Networks Work
 
----
+Computers on a network usually do not communicate directly with each other one-to-one. Instead, they connect to a central location that manages the traffic. This central machine is called a **router**.
 
-**Step 1 — Input: Keystroke detected**
-- The keyboard detects that the "A" key has been pressed.
-- The keyboard converts this into a digital signal (a **scan code** — a number identifying which key was pressed).
-- This signal travels via USB cable (or wirelessly) to the motherboard.
+:::tip Key Term
+**Router** — the central device of a network. It receives data from computers, analyses it, and routes (forwards) it to where it needs to go. A router can also connect to other routers, linking different networks together.
+:::
 
-**Step 2 — Interrupt: CPU notified**
-- The keyboard sends an **interrupt signal** to the CPU, saying "I have data for you."
-- The CPU pauses its current task briefly, saves its state to registers, and handles the interrupt.
+A router acts like a traffic controller: it receives data from computers and forwards it along to the correct destination. It can also receive data from routers on other networks, allowing different networks to be connected to each other.
 
-**Step 3 — Processing: Character identified**
-- The CPU receives the scan code from the keyboard.
-- The keyboard driver (a small software program) translates the scan code into the character "A" (or its ASCII code: 65).
-- The CPU passes this information to the word processor program running in RAM.
+### Types of Networks
 
-**Step 4 — Storage: RAM updated**
-- The word processor updates the document data in RAM — it adds the character "A" to the text buffer stored in RAM.
-- Note: the document has *not yet been saved* to the hard drive — it exists only in RAM at this point.
+**Local Area Network (LAN)**
 
-**Step 5 — Processing: Screen update calculated**
-- The CPU tells the graphics subsystem to update the display.
-- The GPU (or the CPU's integrated graphics) calculates what pixels need to change on screen to show the letter "A" at the cursor position.
+A LAN is a small network that connects computers that are physically close to each other — for example, in the same building. A single router is usually enough to run a LAN.
 
-**Step 6 — Output: Display updated**
-- The updated image data is sent to the monitor.
-- The letter "A" appears on screen at the cursor position.
+:::tip Key Term
+**LAN (Local Area Network)** — a network that connects computers within a small area, such as a single building, using one router.
+:::
 
----
+**Wide Area Network (WAN)**
 
-This entire sequence — from keypress to character appearing on screen — happens in **less than 50 milliseconds** (0.05 seconds). In fact, for most of those steps, the delay is measured in *microseconds* (millionths of a second).
+A WAN connects computers that are very far apart. To do this, it uses multiple routers and special cables that can span long distances. A WAN is usually made up of several smaller LANs connected together.
 
-```mermaid
-sequenceDiagram
-    participant KB as Keyboard (Input)
-    participant CPU as CPU (Processing)
-    participant RAM as RAM (Storage)
-    participant GPU as GPU
-    participant MON as Monitor (Output)
+:::tip Key Term
+**WAN (Wide Area Network)** — a network that connects computers across large distances, using multiple routers and often made up of several connected LANs.
+:::
 
-    KB->>CPU: Scan code for "A" key
-    CPU->>CPU: Decode scan code → character "A"
-    CPU->>RAM: Update document text in memory
-    RAM-->>CPU: Acknowledge
-    CPU->>GPU: Render character "A" on screen
-    GPU->>MON: Updated pixel data
-    MON-->>CPU: Character "A" displayed
-```
+:::info
+The **internet** is the world's largest wide area network. It connects your computer to all other computers by linking together millions of smaller networks, with routers directing the data from place to place.
+:::
+
+### How Computers Connect to a Router
+
+There are two main ways a computer connects to a router:
+
+1. **Ethernet port** — allows an ethernet cable to be physically attached to your computer, sending information through that cable to the router.
+2. **Wireless internet card (Wi-Fi card)** — allows your computer to connect to the router by sending and receiving radio waves, without any physical cable.
+
+| Network Device | Purpose |
+|---------------|---------|
+| **Router** | Receives and forwards data between computers and networks |
+| **Ethernet port** | Physical connection to a router using a cable |
+| **Wi-Fi card** | Wireless connection to a router using radio waves |
 
 ---
 
-## 8. Summary: How It All Fits Together
+## 5. Summary: Categories of Computer Components
 
-```mermaid
-graph TB
-    subgraph INPUT["INPUT DEVICES"]
-        K["Keyboard"]
-        M["Mouse"]
-        MIC["Microphone"]
-    end
-
-    subgraph CPU_BLOCK["CPU"]
-        CU["Control Unit"]
-        ALU["ALU"]
-        REG["Registers"]
-    end
-
-    subgraph MEMORY["MEMORY"]
-        RAM["RAM\n(Volatile, fast)"]
-        ROM["ROM\n(Non-volatile)"]
-    end
-
-    subgraph STORAGE["SECONDARY STORAGE"]
-        HDD["HDD"]
-        SSD["SSD"]
-    end
-
-    subgraph OUTPUT["OUTPUT DEVICES"]
-        DISP["Monitor"]
-        PRN["Printer"]
-        SPK["Speakers"]
-    end
-
-    INPUT --> CPU_BLOCK
-    CPU_BLOCK <--> MEMORY
-    CPU_BLOCK <--> STORAGE
-    CPU_BLOCK --> OUTPUT
-```
+| Category | What it does | Examples |
+|----------|-------------|---------|
+| **Output devices** | Turn digital information into physical information humans can use | Monitor, speakers, printer |
+| **Input devices** | Convert physical data from the real world into digital data | Keyboard, mouse, microphone, camera, sensors |
+| **Primary storage** | Fast, temporary memory used while the computer runs | RAM |
+| **Secondary storage** | Permanent storage for long-term data | Hard drive, USB drive, CD, cloud storage |
+| **Network devices** | Allow computers to communicate with each other | Router, ethernet port, Wi-Fi card |
 
 ---
 
 ## Check Your Understanding
 
-1. What does the acronym IPSO stand for? Give one real-world example of each of the four operations.
+1. What are the two main categories that all computer parts fall into? Describe the difference between them.
 
-2. What is the difference between the ALU and the Control Unit within the CPU? What does each one do?
+2. What is an output device? Give **three** examples and explain what physical information each one produces.
 
-3. Describe the Fetch–Decode–Execute–Store cycle. What happens at each stage?
+3. Explain what an input device does. Why is it necessary to convert physical data into digital data?
 
-4. What does it mean to say RAM is "volatile"? Give a practical consequence of this characteristic that you have probably experienced.
+4. Give **two** examples of sensing input devices and explain what each one measures or captures.
 
-5. What is ROM? Why does a computer need ROM in addition to RAM?
+5. What is the difference between primary storage and secondary storage? Give one example of each.
 
-6. Fill in this comparison table from memory:
+6. What does RAM stand for? Why does RAM lose its data when the computer is switched off?
 
-   | Feature | RAM | ROM |
-   |---------|-----|-----|
-   | Volatile? | | |
-   | Stores currently running programs? | | |
-   | Stores firmware/BIOS? | | |
-   | Data survives power-off? | | |
+7. What is a router, and what role does it play in a network?
 
-7. Explain the difference between a Hard Disk Drive and a Solid State Drive. In what situations might you prefer an HDD? When would an SSD be better?
+8. Explain the difference between a LAN and a WAN. Give an example of where each type of network would be used.
 
-8. What are the three types of bus in a computer? Describe the purpose of each one in your own words.
+9. Name **two** ways a computer can physically connect to a router, and briefly describe how each works.
 
-9. What is the motherboard, and what is its role in the computer system?
-
-10. Using the worked example in Section 7 as a guide, trace what happens when you click a "Save" button in a word processor. Which components are involved, and in what order?
-
-11. **Extension:** A friend says: "My computer is slow because it only has 256 GB of storage." Explain why this reasoning might be incorrect. What information would you need to properly diagnose the cause of the slowness?
+10. Look at the following devices and classify each one as an input device, output device, primary storage, secondary storage, or network device:
+    - A USB flash drive
+    - A microphone
+    - A projector
+    - A Wi-Fi card
+    - RAM
+    - A webcam
+    - A speaker
+    - A hard drive

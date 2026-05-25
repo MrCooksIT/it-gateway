@@ -4,25 +4,39 @@ title: Structure of an HTML Page
 
 # Structure of an HTML Page
 
-Every HTML page — from a simple school project to a complex website — follows the same basic structure. Understanding this skeleton is essential before adding any content.
+## The Problem: Where Does the Text Go?
 
-## The Minimal HTML5 Page
+Suppose you have a simple web page. In the browser tab at the top, you want to show the title "My First Web Page". And on the actual page itself, you want to show the word "Hello".
+
+You have two pieces of text:
+- `My First Web Page`
+- `Hello`
+
+How do you tell the browser that one belongs in the tab and the other belongs on the page? Simply writing both pieces of text in a document is not enough — the browser needs structure to understand **where** to put each piece.
+
+It turns out HTML has plenty of tags that help us tell the browser where we want text to go. These tags define the **structure** of the HTML page.
+
+---
+
+## The Basic HTML Skeleton
+
+Here is the skeleton for a basic HTML page:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My First Page</title>
-</head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>This is my first web page.</p>
-</body>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+  </body>
 </html>
 ```
 
-Let's break down every line.
+There is a lot going on here. Let us break it down tag by tag.
+
+---
 
 ## `<!DOCTYPE html>`
 
@@ -30,26 +44,27 @@ Let's break down every line.
 <!DOCTYPE html>
 ```
 
-- This is a **declaration**, not a tag
-- It tells the browser: "This is an HTML5 document"
-- Must be the very first line — before anything else
-- Not case-sensitive, but convention is uppercase `DOCTYPE`
+The doctype tells the browser which **version of HTML** we are using. This declaration says we are using HTML5.
 
-Without it, browsers may enter "quirks mode" and render the page differently.
+:::info
+The doctype is not an actual HTML tag — it is a comment at the top of the file that tells the browser which version of HTML to use. You will need this at the top of all your HTML pages.
+:::
 
-## The `<html>` Element
+---
+
+## The `<html>` Tag
 
 ```html
-<html lang="en">
-  ...all content goes here...
+<html>
+  ...everything goes here...
 </html>
 ```
 
-- The **root element** — everything else is inside it
-- The `lang` attribute tells browsers and screen readers what language the page is in (`en` for English, `af` for Afrikaans, `zu` for Zulu)
-- Has exactly two children: `<head>` and `<body>`
+The `<html>` tag says that everything between the opening and closing tag is our HTML page. It is the **container for all other tags** — our entire page goes inside the `<html>` tag.
 
-## The `<head>` Element
+---
+
+## The `<head>` Tag
 
 ```html
 <head>
@@ -57,161 +72,145 @@ Without it, browsers may enter "quirks mode" and render the page differently.
 </head>
 ```
 
-The `<head>` contains **metadata** — information about the page that is not displayed to the user. Think of it as behind-the-scenes instructions.
+The `<head>` tag contains **important information about the document**. It contains **metadata** — data that describes data.
 
-### `<meta charset="UTF-8">`
+Think of the head as information *about* the page, not the page itself. The content in the head is not displayed on the actual web page. It is behind-the-scenes information about the page.
 
-```html
-<meta charset="UTF-8">
-```
-
-- Sets the **character encoding** — how the browser interprets text characters
-- UTF-8 supports virtually all characters and languages in the world
-- Without this, special characters (é, ü, ñ, © etc.) may display incorrectly
-- Should always be the first thing in `<head>`
-
-### `<title>`
+### The `<title>` Tag
 
 ```html
-<title>My First Page</title>
+<title>My First Web Page</title>
 ```
 
-- Sets the text shown in the **browser tab** and in bookmark names
-- Used by search engines as the title in search results
-- Should be descriptive: "About Us | Marist School" rather than just "Page"
+The `<title>` tag defines the **title of the web page**. This is metadata — it is describing the page. The title is displayed in the browser tab at the top of the window. It is not shown in the body of the page itself.
 
-### Other Common `<head>` Elements
+---
 
-```html
-<meta name="description" content="A brief description of this page for search engines">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-```
-
-| Tag | Purpose |
-|-----|---------|
-| `<meta name="description">` | Page summary for search engines |
-| `<meta name="viewport">` | Controls layout on mobile devices (essential for responsive design) |
-| `<link rel="stylesheet">` | Links an external CSS file |
-| `<link rel="icon">` | Sets the small icon in the browser tab (favicon) |
-
-:::info
-None of the content in `<head>` appears on the web page itself. It's all instructions for the browser, search engines, and other tools.
-:::
-
-## The `<body>` Element
+## The `<body>` Tag
 
 ```html
 <body>
-  ...everything the user sees...
+  ...all page content here...
 </body>
 ```
 
-Everything inside `<body>` is displayed on the screen: headings, text, images, links, tables, forms — everything.
+The `<body>` tag is where the **actual content** of the document goes. Text, images, links — everything that actually appears on your web page goes inside the body tag. Most of the time when you are building a web page, you will be writing code inside the body.
 
-## Nesting: The Tree Structure
+---
 
-HTML elements can be **nested** inside each other — meaning one element can contain another. This creates a tree-like structure:
+## Tags Inside Tags: Nesting
 
-```html
-<body>
-  <h1>My Website</h1>
-  <p>Welcome to <strong>my</strong> page.</p>
-</body>
+One of the most important things to notice is that **tags can go inside other tags**. This is called **nesting**.
+
+- The `<head>` and `<body>` tags are both inside the `<html>` tag
+- The `<title>` tag is inside the `<head>` tag
+- The `<h1>` tag is inside the `<body>` tag
+
+### Indentation Shows Structure
+
+Every time we have a tag inside another tag, we **indent** those inner tags. Everything inside the `<html>` tag is indented one level. Everything inside the `<head>` tag is indented one level further.
+
+This indentation helps us see the structure of the page — it shows which tags are inside which other tags.
+
+---
+
+## The Tree Structure
+
+The structure of an HTML document can be described as a **tree**. At the very root of the tree is the `<html>` tag. The `<html>` tag has two children: `<head>` and `<body>`. Inside `<head>` we have `<title>`. Inside `<body>` we have our content tags like `<h1>`.
+
+```
+html
+├── head
+│   └── title
+└── body
+    └── h1
 ```
 
-In this example:
-- `<body>` contains `<h1>` and `<p>`
-- `<p>` contains `<strong>`
-- `<strong>` is a **child** of `<p>`; `<p>` is the **parent**
+If we added more tags inside the body — like another `<h1>` — they would both appear at the same level of the tree.
 
-**Critical rule**: elements must be properly nested — they cannot overlap.
+---
 
-```html
-<!-- CORRECT: properly nested -->
-<p>This is <strong>bold text</strong>.</p>
+## Putting it All Together
 
-<!-- WRONG: overlapping tags -->
-<p>This is <strong>bold text</p></strong>
-```
+Going back to our original problem: we wanted "My First Web Page" to appear in the browser tab, and "Hello" to appear on the page.
 
-## Indentation
-
-HTML does not require indentation — the browser ignores whitespace. But indentation makes your code **readable** for humans.
-
-**Convention**: Indent each nested level by 2 spaces (or a tab).
+- `My First Web Page` is **not** displayed on the actual page — it is metadata, information about the page. So it goes in the `<head>` inside a `<title>` tag.
+- `Hello` is **displayed on the page** — it is actual content. So it goes in the `<body>`. We also need to tell the browser *how* to display it, so we wrap it in an `<h1>` tag to make it big and bold.
 
 ```html
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Example</title>
+    <title>My First Web Page</title>
   </head>
   <body>
-    <h1>Heading</h1>
-    <p>Paragraph.</p>
+    <h1>Hello World</h1>
   </body>
 </html>
 ```
 
-Good indentation habits now will save you hours of debugging later.
+The result: the browser tab shows "My First Web Page" as the title, and the page itself shows "Hello World" as a large heading.
 
-## HTML Comments
+---
 
-```html
-<!-- This is a comment — the browser ignores it -->
-```
+## Key Points to Remember
 
-Comments are notes in your code that are not displayed on the page. Use them to:
-- Explain complex code
-- Temporarily "disable" a section of code
-- Leave reminders for yourself or collaborators
+:::tip Key Points
+1. **Tags can go inside other tags** — this is called nesting.
+2. **Use indentation** to show which tags are inside which other tags. This makes your code readable.
+3. **The structure of an HTML document is like a tree** — with `<html>` at the root.
+4. The `<head>` contains **metadata** (information about the page, not displayed to the user).
+5. The `<body>` contains the **actual content** that appears on the page.
+:::
 
-```html
-<!-- Navigation section -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-</nav>
+---
 
-<!-- TODO: add a contact form here -->
-```
-
-## A Complete Example with Explanation
+## Complete Example
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="My personal school project page">
-  <title>My School Project | Grade 9</title>
-</head>
-<body>
-
-  <h1>My Technology Project</h1>
-
-  <p>This website is about the <strong>history of computers</strong>.</p>
-
-  <h2>Introduction</h2>
-  <p>The first computers were room-sized machines that used
-  vacuum tubes to perform calculations.</p>
-
-  <!-- Add more content below this line -->
-
-</body>
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
 </html>
 ```
 
+This is the basic structure you will use for every HTML page you create.
+
+---
+
 ## Check Your Understanding
 
-1. What is `<!DOCTYPE html>` and why must it be the first line in an HTML file?
-2. What is the difference between the `<head>` and `<body>` sections? Give two examples of what belongs in each.
-3. Why is `<meta charset="UTF-8">` important? What could happen if you leave it out?
-4. Write the HTML code for a page with:
-   - A proper DOCTYPE and `<html>` element with the language set to English
-   - A `<head>` containing a title of "My Hobby" and the UTF-8 charset meta tag
-   - A `<body>` containing an `<h1>` with your hobby name and two sentences about it in a `<p>`
-5. Explain what nesting means in HTML. Why does it matter that tags are properly nested?
-6. What are HTML comments? Show the syntax and give one situation where you would use one.
-7. Does indentation in HTML affect what the user sees in the browser? Why do we use it anyway?
+1. What is the purpose of `<!DOCTYPE html>`? Where does it go in an HTML file?
+
+2. What does the `<html>` tag do? What does it contain?
+
+3. What is the difference between the `<head>` and `<body>` sections? Give one example of what belongs in each.
+
+4. What is metadata? Give an example of a tag that holds metadata.
+
+5. Where does the `<title>` tag text appear? Is it displayed on the web page itself?
+
+6. Write the complete HTML code for a page with a title of "About Me" and a heading on the page that says "Welcome to My Page".
+
+7. Explain what nesting means in HTML. Give an example using the `<html>`, `<head>`, and `<body>` tags.
+
+8. Why do we use indentation in HTML? Does it affect what the user sees in the browser?
+
+9. Draw or describe the tree structure of this HTML:
+   ```html
+   <html>
+     <head>
+       <title>Example</title>
+     </head>
+     <body>
+       <h1>Heading</h1>
+     </body>
+   </html>
+   ```
+
+10. What would happen if you put the `<title>` tag inside the `<body>` instead of the `<head>`?
