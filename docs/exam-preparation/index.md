@@ -1,9 +1,5 @@
 ---
-layout: page
 title: Exam Preparation
-permalink: /exam-preparation/
-nav_order: 10
-has_children: true
 ---
 
 # Exam Preparation
