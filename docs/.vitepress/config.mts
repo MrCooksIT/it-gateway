@@ -341,6 +341,14 @@ export default withMermaid(defineConfig({
                   { text: 'Hacking Ethics', link: '/digital-technology/grade-8/digital-citizenship/hacking-ethics' },
                 ],
               },
+
+              {
+                text: '📝 Exams',
+                collapsed: true,
+                items: [
+                  { text: 'Exam 1 (40 marks)', link: '/digital-technology/grade-8/exams/exam-1' },
+                ],
+              },
             ],
           },
 
