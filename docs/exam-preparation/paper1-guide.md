@@ -1,9 +1,5 @@
 ---
-layout: page
 title: Paper 1 Preparation Guide
-parent: Exam Preparation
-permalink: /exam-preparation/paper1-guide/
-nav_order: 1
 ---
 
 # Paper 1 Preparation Guide

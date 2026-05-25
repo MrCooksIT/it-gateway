@@ -19,6 +19,7 @@ export default withMermaid(defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Practical', link: '/practical/' },
       { text: 'Theory', link: '/theory/' },
+      { text: 'Digital Technology', link: '/digital-technology/' },
       { text: 'Quick Study', link: '/quick-study/' },
       { text: 'Exam Prep', link: '/exam-preparation/' },
       {
@@ -305,12 +306,11 @@ export default withMermaid(defineConfig({
         collapsed: true,
         items: [
           { text: 'Overview',                    link: '/digital-technology/' },
-          { text: 'What is Computing?',          link: '/digital-technology/gr8/what-is-computing' },
-          { text: 'History of Computers',        link: '/digital-technology/gr8/history' },
-          { text: 'Digital Citizenship',         link: '/digital-technology/gr9/digital-citizenship' },
-          { text: 'Web Design Basics',           link: '/digital-technology/gr9/web-design' },
-          { text: 'HTML & CSS',                  link: '/digital-technology/gr9/html-css' },
-          { text: 'Internet & Browsers',         link: '/digital-technology/gr9/internet-browsers' },
+          { text: 'Systems Technologies',        link: '/digital-technology/systems-tech' },
+          { text: 'Communication Technologies',  link: '/digital-technology/communication-tech' },
+          { text: 'Internet Technologies',       link: '/digital-technology/internet-tech' },
+          { text: 'Data and Information',        link: '/digital-technology/data-management' },
+          { text: 'Social Implications',         link: '/digital-technology/social-implications' },
         ],
       },
 

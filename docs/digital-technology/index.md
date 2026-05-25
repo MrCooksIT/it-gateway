@@ -1,15 +1,14 @@
 # Digital Technology (Gr8 and 9)
 
-This section covers the Digital Technology curriculum for Grades 8 and 9 — the foundation before the CAPS Information Technology course in Grades 10–12.
+This section contains revision and exam preparation material for Grade 8 and 9 learners. For the full curriculum your class uses [CodeHS](https://codehs.com) — use these pages to revise concepts and practise for tests and exams.
 
 | Topic | What it covers |
 |-------|---------------|
-| What is Computing? | Introduction to computers, hardware vs software, how computers process information |
-| History of Computers | Evolution from early machines to modern computing |
-| Digital Citizenship | Responsible and safe use of technology, online conduct |
-| Web Design Basics | Principles of good web design, layout, and user experience |
-| HTML & CSS | Creating and styling web pages |
-| Internet & Browsers | How the internet works, browsers, URLs, and search |
+| Systems Technologies | Hardware, software, types of computers, operating systems |
+| Communication Technologies | Networks, internet, communication tools, LAN vs WAN |
+| Internet Technologies | Internet services, online safety, browsers, web basics |
+| Data and Information | Data vs information, spreadsheets, databases, storage units |
+| Social Implications | Responsible use, cyberbullying, digital citizenship, copyright |
 
 ::: info
 Content for this section continues to be developed as the year progresses.
