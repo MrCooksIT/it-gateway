@@ -4,181 +4,145 @@ title: Images in HTML
 
 # Images in HTML
 
-Images make web pages visually engaging. The `<img>` tag is used to embed images into HTML — it is a **self-closing tag** with no content between tags.
+## Adding Images to Web Pages
+
+We have all seen it — web pages have images. Images spice up a web page, give us something to look at, and help communicate information. It is very common for a web page to include images.
+
+To add images to our web pages, we use the **`<img>` tag**.
+
+---
 
 ## The `<img>` Tag
 
+The `<img>` tag allows us to add images to our web pages.
+
 ```html
-<img src="path/to/image.jpg" alt="Description of the image">
+<img src="URL" alt="description">
 ```
 
-The two most important attributes:
-- `src` (source) — the path or URL to the image file
-- `alt` (alternative text) — a description of the image
+There are two important things to note about the `<img>` tag:
 
-:::warning
-The `alt` attribute is **required**. Never omit it. If the image fails to load, the alt text is displayed instead. Screen readers also read the alt text aloud for visually impaired users.
-:::
+1. **There is no closing tag.** Unlike most HTML tags, the `<img>` tag does not need a closing tag. This is because the image tag is not annotating or decorating text — it is simply fetching an image and placing it on the page. There is nothing to put inside an `<img>` tag and close, so it is just a single tag with attributes.
+
+2. **The attributes are very important.** Without attributes, the image tag would not know what to display or how big to make it.
+
+---
 
 ## The `src` Attribute
 
-Just like the `href` attribute in links, `src` can be a relative path or an absolute URL:
+The **`src`** attribute (short for **source**) specifies **where to get the image from**. The value of `src` is the URL of the image.
 
 ```html
-<!-- Image in the same folder -->
-<img src="photo.jpg" alt="A mountain">
-
-<!-- Image in an images subfolder -->
-<img src="images/logo.png" alt="Company logo">
-
-<!-- Image from another website (external) -->
-<img src="https://www.example.com/photo.jpg" alt="External image">
+<img src="https://www.example.com/logo.png" alt="Example logo">
 ```
 
-:::warning
-Linking directly to images on other websites (hotlinking) uses their bandwidth without permission. For your own projects, download and host images locally.
+The `src` attribute is where the `<img>` tag looks to grab the image and insert it onto your web page.
+
+:::tip
+If you don't know the URL of an image by memory, you can right-click on any image in a web browser and choose **"Copy image address"**. This gives you the URL of that image, which you can then use as the value of your `src` attribute.
 :::
 
-## Writing Good Alt Text
+---
 
-| Situation | Good alt text | Poor alt text |
-|-----------|--------------|---------------|
-| A photo of a cat sleeping | `alt="An orange cat sleeping on a sofa"` | `alt="cat"` |
-| A company logo | `alt="IT Gateway logo"` | `alt="logo"` |
-| A decorative divider line | `alt=""` (empty — tell screen reader to ignore it) | `alt="decorative image"` |
-| A graph showing sales data | `alt="Bar chart showing sales increase of 30% from 2023 to 2024"` | `alt="chart"` |
+## The `alt` Attribute
 
-:::info
-If an image is purely decorative (background pattern, decorative border), use an empty `alt=""`. This tells screen readers to skip it, reducing unnecessary noise for visually impaired users.
-:::
-
-## Sizing Images
-
-You can set the width and height directly in HTML:
+The **`alt`** attribute (short for **alternative**) defines text that the browser should display **in case the image is not found**.
 
 ```html
-<img src="photo.jpg" alt="Mountain" width="400" height="300">
+<img src="https://codehs.com/static/img/logo.png" alt="CodeHS logo">
 ```
 
-- Values are in pixels by default
-- Specifying both maintains the aspect ratio in the browser's rendering calculations (reduces layout shift as the page loads)
+If the URL in `src` is incorrect and the image cannot be loaded, the browser will display the alt text instead of the image. The alt text tells the user what the image was supposed to show.
 
-:::warning
-While setting dimensions in HTML is acceptable, it is better practice to control image sizes using CSS. Over-specifying in HTML can override CSS styling.
-:::
+---
 
-## Image File Formats
+## The `width` and `height` Attributes
 
-Choosing the right format affects file size, quality, and transparency support:
-
-| Format | Best for | Supports transparency? | Lossy/Lossless |
-|--------|---------|----------------------|----------------|
-| **JPEG / JPG** | Photographs, complex images with many colours | No | Lossy (quality decreases with compression) |
-| **PNG** | Screenshots, graphics, logos, images needing transparency | Yes (alpha channel) | Lossless |
-| **GIF** | Simple animations, limited colours | Yes (binary — fully transparent or not) | Lossless (limited to 256 colours) |
-| **SVG** | Icons, logos, illustrations | Yes | Vector (scales without pixelating) |
-| **WebP** | Modern replacement for JPEG/PNG — better compression | Yes | Both modes available |
+The **`width`** and **`height`** attributes specify the **size of the image** in **pixels**.
 
 :::tip Key Term
-**Lossy compression** reduces file size by permanently discarding some image data. Each time you save a JPEG, quality decreases slightly. **Lossless compression** reduces file size without losing any data — quality is always perfect.
+**Pixel:** The tiny, tiny little dots of colour on your computer screen. When put together, these dots of colour create the entire image you see on screen. Pixels are the unit of measurement used for image sizes.
 :::
-
-:::tip Key Term
-**Vector graphics** (SVG) are defined by mathematical formulas, not pixels. They scale to any size without becoming blurry or pixelated — unlike raster/bitmap images (JPEG, PNG, GIF).
-:::
-
-## Image Optimisation
-
-Large image files slow down web pages. For fast-loading sites:
-- Use JPEG for photographs (compress to 70–80% quality)
-- Use PNG only when transparency is needed
-- Use WebP for modern browsers (best compression)
-- Resize images to the maximum size they'll be displayed before uploading
-- Use free tools like Squoosh.app or TinyPNG.com to compress images
-
-:::info
-A single unoptimised photograph can be 5–10 MB. On a 4G connection, this could take several seconds to load. Optimised for the web, the same photo might be 200–400 KB.
-:::
-
-## Copyright and Images
-
-:::warning
-Just because you find an image on Google does not mean you can use it. Most images are protected by copyright. Using them without permission is copyright infringement.
-:::
-
-**Where to find free-to-use images:**
-- [Unsplash](https://unsplash.com) — free high-quality photos (CC0 or similar)
-- [Pexels](https://pexels.com) — free photos and videos
-- [Pixabay](https://pixabay.com) — free photos, illustrations, vectors
-
-**For Google Images**, filter by licence:
-- Tools → Usage Rights → "Creative Commons licences"
-
-Always read the specific licence — some require attribution even if free to use.
-
-## The `<figure>` and `<figcaption>` Elements
-
-For images with captions, use the semantic `<figure>` element:
 
 ```html
-<figure>
-  <img src="computer.jpg" alt="A modern desktop computer">
-  <figcaption>A typical desktop computer setup in 2024.</figcaption>
-</figure>
+<img src="logo.png" alt="Logo" width="100" height="100">
 ```
 
-- `<figure>` wraps the image and its caption as a self-contained unit
-- `<figcaption>` provides the visible caption shown below the image
-- This is semantically better than just placing a `<p>` beneath an `<img>`
+### Specifying Width Only
 
-## A Complete Example
+If you only specify **width** (and not height), the height will automatically scale to keep the image proportional — maintaining its original shape:
+
+```html
+<img src="logo.png" alt="Logo" width="100">
+```
+
+The image is resized to 100 pixels wide, and the height adjusts automatically to keep the correct proportions.
+
+### Specifying Both Width and Height
+
+If you specify **both** width and height, the image will be stretched to fit those exact dimensions — even if that distorts the image:
+
+```html
+<img src="logo.png" alt="Logo" width="100" height="600">
+```
+
+This would stretch the image to be very tall. Be careful when specifying both — only do this if you intentionally want to change the shape of the image.
+
+---
+
+## A Complete Image Example
+
+Here is an example of a web page that uses images above links:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Images Demo</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>My Links Page</title>
+  </head>
+  <body>
+    <h1>Useful Websites</h1>
 
-  <h1>Computer Hardware</h1>
+    <img src="https://codehs.com/static/img/logo.png" alt="CodeHS logo" width="100">
+    <a href="https://codehs.com/info">CodeHS</a>
 
-  <p>Below are examples of common computer components.</p>
-
-  <figure>
-    <img src="images/cpu.jpg" alt="An Intel CPU chip on a motherboard" width="400">
-    <figcaption>A modern CPU — the brain of the computer.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="images/monitor.jpg" alt="A widescreen LCD monitor displaying a desktop" width="400">
-    <figcaption>An output device: the monitor.</figcaption>
-  </figure>
-
-  <p>For more information, visit
-  <a href="https://www.howstuffworks.com" target="_blank" rel="noopener noreferrer">HowStuffWorks</a>.
-  </p>
-
-</body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/200px-Wikipedia-logo-v2.svg.png" alt="Wikipedia logo" width="200">
+    <a href="https://wikipedia.org">Wikipedia</a>
+  </body>
 </html>
 ```
 
+---
+
+## Summary of `<img>` Attributes
+
+| Attribute | Purpose | Example |
+|-----------|---------|---------|
+| `src` | The URL of the image to display | `src="logo.png"` |
+| `alt` | Text to show if the image cannot load | `alt="Company logo"` |
+| `width` | The width of the image in pixels | `width="100"` |
+| `height` | The height of the image in pixels | `height="200"` |
+
+---
+
 ## Check Your Understanding
 
-1. Write the HTML to display an image called `school.png` stored in an `images/` subfolder, with appropriate alt text.
+1. What is the purpose of the `<img>` tag? What does it do?
 
-2. Why is the `alt` attribute required? Give two separate reasons.
+2. Why does the `<img>` tag not have a closing tag?
 
-3. A designer creates a company logo. Should they save it as JPEG, PNG, or SVG? Explain your choice.
+3. What does the `src` attribute do? What type of value does it hold?
 
-4. An image of a person's face is 8 MB in size. Why is this a problem for a website, and what should be done about it?
+4. What does the `alt` attribute do? When does the alt text get shown to the user?
 
-5. What is the difference between a raster image (JPEG/PNG) and a vector image (SVG)?
+5. What is a pixel? What unit do width and height use?
 
-6. A student right-clicks an image on Google Images and uses "Copy image address" to link to it directly in their HTML. What is this practice called and why is it a problem?
+6. What happens if you specify only the `width` attribute and not the `height` attribute?
 
-7. Write the HTML to display an image `sunset.jpg` with:
-   - Alt text describing a sunset over the ocean
-   - A width of 600 pixels
-   - A caption that reads "Cape Town sunset, 2024"
+7. What happens if you specify both `width` and `height` attributes with different proportions than the original image?
+
+8. Write the HTML code to display an image from `https://www.example.com/photo.jpg` with the alt text "A mountain view" and a width of 300 pixels.
+
+9. How can you find the URL of an image you see on a web page without knowing it from memory?
+
+10. **Extended question:** Why is the `alt` attribute useful even when the image loads correctly? Think about users who might have difficulty seeing images on screen.
