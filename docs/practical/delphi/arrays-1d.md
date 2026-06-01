@@ -11,10 +11,16 @@ When you need to store and process a **collection of values of the same type**, 
 
 An **array** is a fixed-size collection of variables of the **same data type**, stored under one name and accessed by a numbered index.
 
-```
-aScores[1]  aScores[2]  aScores[3]  aScores[4]  aScores[5]
-   78           85           91           67           88
-```
+<div>
+  <div class="itg-array-name">aScores</div>
+  <div class="itg-array-vis">
+    <div class="itg-array-cell"><div class="itg-array-box">78</div><div class="itg-array-idx">[1]</div></div>
+    <div class="itg-array-cell"><div class="itg-array-box">85</div><div class="itg-array-idx">[2]</div></div>
+    <div class="itg-array-cell"><div class="itg-array-box">91</div><div class="itg-array-idx">[3]</div></div>
+    <div class="itg-array-cell"><div class="itg-array-box">67</div><div class="itg-array-idx">[4]</div></div>
+    <div class="itg-array-cell"><div class="itg-array-box">88</div><div class="itg-array-idx">[5]</div></div>
+  </div>
+</div>
 
 - All values are the same type (Integer here)
 - Each slot has an **index** (position number)
@@ -269,6 +275,105 @@ end;
 
 > [!WARNING] Never swap without a temp variable
 > Doing `aScores[3] := aScores[7]; aScores[7] := aScores[3]` doesn't work — the first line overwrites `aScores[3]` before you've saved its value.
+
+---
+
+## Sorting: Bubble Sort
+
+Bubble sort compares **adjacent elements** and swaps them if they are in the wrong order. After each full pass, the largest unsorted value "bubbles" to its correct position at the end.
+
+**Bubble sort pass-by-pass** — Array: `[5, 3, 8, 1, 9]` sorting ascending:
+
+<div class="itg-sort-wrap">
+  <div class="itg-sort-title">Bubble Sort — [5, 3, 8, 1, 9]</div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl">Start</span>
+    <span class="itg-sort-cell">5</span>
+    <span class="itg-sort-cell">3</span>
+    <span class="itg-sort-cell">8</span>
+    <span class="itg-sort-cell">1</span>
+    <span class="itg-sort-cell">9</span>
+  </div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl">Pass 1</span>
+    <span class="itg-sort-cell swapped">3</span>
+    <span class="itg-sort-cell swapped">5</span>
+    <span class="itg-sort-cell swapped">1</span>
+    <span class="itg-sort-cell swapped">8</span>
+    <span class="itg-sort-cell locked">9</span>
+    <span class="itg-sort-note">9 locked in</span>
+  </div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl">Pass 2</span>
+    <span class="itg-sort-cell">3</span>
+    <span class="itg-sort-cell swapped">1</span>
+    <span class="itg-sort-cell swapped">5</span>
+    <span class="itg-sort-cell locked">8</span>
+    <span class="itg-sort-cell locked">9</span>
+    <span class="itg-sort-note">8, 9 locked</span>
+  </div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl">Pass 3</span>
+    <span class="itg-sort-cell swapped">1</span>
+    <span class="itg-sort-cell swapped">3</span>
+    <span class="itg-sort-cell locked">5</span>
+    <span class="itg-sort-cell locked">8</span>
+    <span class="itg-sort-cell locked">9</span>
+    <span class="itg-sort-note">5, 8, 9 locked</span>
+  </div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl">Pass 4</span>
+    <span class="itg-sort-cell locked">1</span>
+    <span class="itg-sort-cell locked">3</span>
+    <span class="itg-sort-cell locked">5</span>
+    <span class="itg-sort-cell locked">8</span>
+    <span class="itg-sort-cell locked">9</span>
+  </div>
+
+  <div class="itg-sort-row">
+    <span class="itg-sort-lbl done">Sorted</span>
+    <span class="itg-sort-cell locked">1</span>
+    <span class="itg-sort-cell locked">3</span>
+    <span class="itg-sort-cell locked">5</span>
+    <span class="itg-sort-cell locked">8</span>
+    <span class="itg-sort-cell locked">9</span>
+  </div>
+
+  <div class="itg-sort-legend">
+    <span class="itg-sort-legend-item"><span class="itg-sort-legend-swatch itg-swatch-swap"></span> swapped this pass</span>
+    <span class="itg-sort-legend-item"><span class="itg-sort-legend-swatch itg-swatch-lock"></span> locked in final position</span>
+  </div>
+</div>
+
+**Delphi implementation:**
+
+```pascal
+procedure BubbleSort(var aScores: TArray; iSize: Integer);
+var
+  i, j, iTemp : Integer;
+begin
+  FOR i := 1 TO iSize - 1 DO          // number of passes
+  BEGIN
+    FOR j := 1 TO iSize - i DO        // compare adjacent pairs
+    BEGIN
+      IF aScores[j] > aScores[j + 1] THEN
+      BEGIN
+        iTemp          := aScores[j];
+        aScores[j]     := aScores[j + 1];
+        aScores[j + 1] := iTemp;
+      END;
+    END;
+  END;
+end;
+```
+
+> [!TIP] Why `iSize - i` in the inner loop?
+> After each pass, the last `i` elements are already in their final position — no need to compare them again. This makes bubble sort slightly more efficient.
 
 ---
 
