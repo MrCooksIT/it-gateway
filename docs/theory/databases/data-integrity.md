@@ -26,6 +26,20 @@ Storing data is only useful if the data is trustworthy. Data integrity is about 
 | **Domain integrity** | Values match the field's data type and rules | Data type, validation rules |
 | **User-defined integrity** | Custom business rules | CHECK constraints, triggers |
 
+```mermaid
+flowchart TD
+    DI["DATA INTEGRITY\nData is accurate, consistent, valid"]
+    DI --> ENT["Entity Integrity\nPK is unique\n& not NULL"]
+    DI --> REF["Referential Integrity\nFK must match\nexisting PK"]
+    DI --> DOM["Domain Integrity\nValues match data\ntype & rules"]
+    DI --> USR["User-defined Integrity\nCustom business rules\n(CHECK constraints)"]
+    style DI  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style ENT fill:#93c5fd,stroke:#3b82f6,color:#000
+    style REF fill:#f9a8d4,stroke:#ec4899,color:#000
+    style DOM fill:#6ee7b7,stroke:#10b981,color:#000
+    style USR fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 ### Entity Integrity
 Every table must have a primary key.  
 The PK must be unique and cannot be NULL.

@@ -149,22 +149,18 @@ end;
 **Problem:** Input a mark (0–100). Output whether it is a Pass (≥50) or Fail.
 
 **Flowchart:**
-```
-START
-  ↓
-Input mark
-  ↓
-┌─────────────┐
-│ mark >= 50? │
-└──────┬──────┘
- YES   │   NO
- ↓         ↓
-Output   Output
-"Pass"   "Fail"
-  ↓         ↓
-  └────┬────┘
-       ↓
-      END
+
+```mermaid
+flowchart TD
+    S([START]) --> I[/Input mark/]
+    I --> D{"mark ≥ 50?"}
+    D -->|YES| P[/"Output 'Pass'"/]
+    D -->|NO| F[/"Output 'Fail'"/]
+    P --> E([END])
+    F --> E
+    style S fill:#6ee7b7,stroke:#10b981,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
 ```
 
 **Delphi code:**
