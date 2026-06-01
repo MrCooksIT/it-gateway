@@ -80,6 +80,22 @@ Victims of harassment (including cyberbullying) can apply to court for a **Prote
 
 ## What to Do: A Step-by-Step Response
 
+```mermaid
+flowchart TD
+    START["Being cyberbullied?"] --> S1["① Don't respond or retaliate"]
+    S1 --> S2["② Block on every platform"]
+    S2 --> S3["③ Document everything\nscreenshots + timestamps"]
+    S3 --> S4["④ Report on the platform"]
+    S4 --> S5["⑤ Tell a trusted adult\nparent / teacher / counsellor"]
+    S5 --> Q{"Threats\ninvolved?"}
+    Q -->|YES| S6["⑥ Report to police\nSAPS cybercrime unit"]
+    Q -->|NO| S7["⑦ Seek support\ncounsellor / helpline"]
+    S6 --> S7
+    style START fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style S6    fill:#f9a8d4,stroke:#ec4899,color:#000
+    style S7    fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 **If you are being cyberbullied:**
 
 1. **Don't respond or retaliate** — responding often escalates the situation and gives the bully the reaction they want

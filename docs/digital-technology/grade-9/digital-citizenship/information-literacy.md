@@ -69,6 +69,19 @@ The name comes from AstroTurf (artificial grass) — it looks like a genuine gra
 You covered this in Grade 8. Here is a deeper analysis:
 
 **How filter bubbles form:**
+
+```mermaid
+flowchart LR
+    YOU["Your existing\nbeliefs"] --> ENG["You engage more\nwith matching content"]
+    ENG --> ALG["Algorithm learns\nyour preferences"]
+    ALG --> FEED["Feed shows more\nof the same"]
+    FEED --> BUBS["FILTER BUBBLE\nOne perspective only"]
+    BUBS -->|reinforces| YOU
+    style YOU  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ALG  fill:#fde68a,stroke:#f59e0b,color:#000
+    style BUBS fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 - Social media algorithms are designed to keep you engaged
 - Engagement is highest when content matches your existing beliefs
 - So the algorithm shows you more of what you already agree with

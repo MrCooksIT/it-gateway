@@ -39,6 +39,23 @@ Any organisation handling your personal information must follow these eight cond
 
 ### Your Rights Under POPIA
 
+```mermaid
+flowchart LR
+    ORG["Organisation holds\nyour personal data"] --> KNOW["Right to KNOW\nthey have it"]
+    ORG --> ACCESS["Right to ACCESS\nyour data"]
+    ORG --> CORRECT["Right to CORRECT\ninaccurate data"]
+    ORG --> OBJECT["Right to OBJECT\nto processing"]
+    ORG --> DELETE["Right to REQUEST\nDELETION"]
+    ORG --> COMPLAIN["Right to COMPLAIN\nto Information Regulator"]
+    style ORG      fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style KNOW     fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ACCESS   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CORRECT  fill:#6ee7b7,stroke:#10b981,color:#000
+    style OBJECT   fill:#fde68a,stroke:#f59e0b,color:#000
+    style DELETE   fill:#fde68a,stroke:#f59e0b,color:#000
+    style COMPLAIN fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 As a data subject (a person whose information is collected), you have the right to:
 - **Know** that an organisation has your personal information
 - **Access** your personal information held by an organisation
