@@ -65,6 +65,21 @@ A **software licence agreement** (EULA — End User Licence Agreement) is the le
 | **Open source** | Usually free | Yes | Yes, under conditions | Linux, Firefox, LibreOffice |
 | **Public domain** | Free | Yes | Yes, no restrictions | Some old government works |
 
+```mermaid
+flowchart LR
+    PROP["Proprietary\nPaid · closed source\nno copying allowed"] --> SHARE["Shareware\nFree trial\nclosed source"]
+    SHARE --> FREE["Freeware\nFree to use\nclosed source"]
+    FREE --> OPEN["Open Source\nFree + source code\ncan modify + distribute"]
+    OPEN --> PUB["Public Domain\nNo restrictions\nat all"]
+    style PROP  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SHARE fill:#fde68a,stroke:#f59e0b,color:#000
+    style FREE  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style OPEN  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PUB   fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
+*Most restrictive → Most open*
+
 ---
 
 ## Creative Commons (CC)
