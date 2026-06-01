@@ -45,10 +45,15 @@ A **computer network** is two or more computers connected together to share reso
 
 A **dedicated server** provides services to client computers.
 
-```
-Client 1 ──┐
-Client 2 ──┤── Server (file, print, web, email)
-Client 3 ──┘
+```mermaid
+flowchart LR
+    C1["Client 1"] --> S["SERVER\nfile · print · web · email"]
+    C2["Client 2"] --> S
+    C3["Client 3"] --> S
+    style S  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style C1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style C2 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style C3 fill:#93c5fd,stroke:#3b82f6,color:#000
 ```
 
 | Feature | Detail |
@@ -66,9 +71,14 @@ Client 3 ──┘
 
 All computers are **equal** — any device can be both client and server.
 
-```
-Computer A ── Computer B ── Computer C
-     └──────────────────────────┘
+```mermaid
+flowchart LR
+    A["Computer A"] <--> B["Computer B"]
+    B <--> C["Computer C"]
+    C <--> A
+    style A fill:#6ee7b7,stroke:#10b981,color:#000
+    style B fill:#6ee7b7,stroke:#10b981,color:#000
+    style C fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Feature | Detail |
@@ -155,12 +165,17 @@ The **topology** is the physical or logical arrangement of computers and cables 
 
 ### Star Topology
 
-```
-      PC
-      |
-PC ─ Switch ─ PC
-      |
-      PC
+```mermaid
+flowchart TD
+    SW["Switch"] --- PC1["PC"]
+    SW --- PC2["PC"]
+    SW --- PC3["PC"]
+    SW --- PC4["PC"]
+    style SW  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style PC1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC2 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC3 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC4 fill:#93c5fd,stroke:#3b82f6,color:#000
 ```
 
 - All devices connect to a **central switch or hub**
@@ -174,10 +189,15 @@ PC ─ Switch ─ PC
 
 ### Bus Topology
 
-```
-PC ─── PC ─── PC ─── PC ─── PC
-│                             │
-Terminator                  Terminator
+```mermaid
+flowchart LR
+    T1["Terminator"] --- PC1["PC"] --- PC2["PC"] --- PC3["PC"] --- PC4["PC"] --- T2["Terminator"]
+    style T1  fill:#fde68a,stroke:#f59e0b,color:#000
+    style T2  fill:#fde68a,stroke:#f59e0b,color:#000
+    style PC1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC2 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC3 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PC4 fill:#93c5fd,stroke:#3b82f6,color:#000
 ```
 
 - All devices connect to a single cable (the bus)
@@ -190,12 +210,13 @@ Terminator                  Terminator
 
 ### Ring Topology
 
-```
-    PC
-   /  \
- PC    PC
-   \  /
-    PC
+```mermaid
+flowchart LR
+    PC1["PC 1"] --> PC2["PC 2"] --> PC3["PC 3"] --> PC4["PC 4"] --> PC1
+    style PC1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style PC2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style PC3 fill:#6ee7b7,stroke:#10b981,color:#000
+    style PC4 fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 - Devices form a closed loop; data travels in one direction
