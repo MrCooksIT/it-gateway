@@ -30,21 +30,22 @@ A **sequential algorithm** executes steps **one after another in a fixed, top-to
 
 ## 2. Flowchart for a Sequential Algorithm
 
-A sequential flowchart uses only three shapes:
+A sequential flowchart uses only three shapes — no diamonds allowed:
 
-```
-[OVAL]              START
-       ↓
-[PARALLELOGRAM]     INPUT value(s)
-       ↓
-[RECTANGLE]         PROCESS (calculate)
-       ↓
-[PARALLELOGRAM]     OUTPUT result
-       ↓
-[OVAL]              END
-```
+| Shape | Meaning | Used for |
+|---|---|---|
+| Oval | Terminal | START and END |
+| Parallelogram | Input / Output | Reading input, displaying results |
+| Rectangle | Process | Calculations, assignments |
 
-There are no diamonds (decision symbols) in a sequential flowchart.
+```mermaid
+flowchart TD
+    A([START]) --> B[/Read length/]
+    B --> C[/Read width/]
+    C --> D["area = length × width"]
+    D --> E[/Display area/]
+    E --> F([END])
+```
 
 ---
 

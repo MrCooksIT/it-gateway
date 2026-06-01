@@ -19,18 +19,14 @@ Doing the same task over and over is what computers excel at. Adding 1,000 numbe
 Use when the number of repetitions is **known in advance**.
 
 **Flowchart:**
-```
-counter ← start
-    ↓
-┌──────────────────┐
-│ counter <= end?  │
-└──────┬───────────┘
- YES   │   NO
-  ↓         ↓
-body       EXIT
-  ↓
-counter ← counter + 1
-  ↑________________________|
+
+```mermaid
+flowchart TD
+    A["counter = start"] --> B{"counter ≤ end?"}
+    B -->|YES| C["Loop body"]
+    C --> D["counter = counter + 1"]
+    D --> B
+    B -->|NO| E([Exit loop])
 ```
 
 **Pseudocode:**
@@ -68,15 +64,11 @@ Use when you want to repeat **while a condition is true** — and you're not sur
 The condition is checked **before** the body executes. If false at the start, body never executes.
 
 **Flowchart:**
-```
-    ↓
-┌──────────────┐
-│  Condition?  │
-└──────┬───────┘
- TRUE  │   FALSE
-  ↓         ↓
-body       EXIT
-  ↑________________________|
+```mermaid
+flowchart TD
+    A{"Condition?<br>(pre-test)"} -->|TRUE| B["Loop body"]
+    B --> A
+    A -->|FALSE| C([Exit — may run 0 times])
 ```
 
 **Pseudocode:**
@@ -111,16 +103,12 @@ Use when the body must execute **at least once**, and you repeat until the condi
 The condition is checked **after** the body executes.
 
 **Flowchart:**
-```
-    ↓
-  body
-    ↓
-┌──────────────┐
-│  Condition?  │
-└──────┬───────┘
- TRUE  │   FALSE
-  ↓         ↑
-EXIT    (repeat)
+
+```mermaid
+flowchart TD
+    A["Loop body"] --> B{"Condition?<br>(post-test)"}
+    B -->|FALSE| A
+    B -->|TRUE| C([Exit — always runs at least once])
 ```
 
 **Pseudocode:**
@@ -154,6 +142,24 @@ end;
 | Condition checked | Before (pre-test) | Before (pre-test) | After (post-test) |
 | Min executions | 0 (if end < start) | 0 | 1 (always) |
 | Use case | Fixed count | Unknown count | Input validation, menu |
+
+**Key difference — pre-test vs post-test:**
+
+```mermaid
+flowchart LR
+    subgraph PRE["WHILE — pre-test (may skip)"]
+        direction TB
+        W1{"Condition?"} -->|TRUE| W2["Body"]
+        W2 --> W1
+        W1 -->|FALSE| W3([Exit])
+    end
+    subgraph POST["REPEAT-UNTIL — post-test (always runs once)"]
+        direction TB
+        R1["Body"] --> R2{"Condition?"}
+        R2 -->|FALSE| R1
+        R2 -->|TRUE| R3([Exit])
+    end
+```
 
 ---
 

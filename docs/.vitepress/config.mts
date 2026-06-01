@@ -452,6 +452,6 @@ export default withMermaid(defineConfig({
 
   // ─── Mermaid diagrams ─────────────────────────────────────────────────
   mermaid: {
-    theme: 'default',
+    theme: 'dark',
   },
 }))

@@ -11,15 +11,37 @@ A 1D array is a list. A **2D array** is a table — it has rows and columns. Thi
 
 A 2D array stores data in a **grid** — you access each element using **two indexes**: row and column.
 
-```
-          Col 1  Col 2  Col 3  Col 4
-Row 1:      78     85     91     67
-Row 2:      92     88     76     95
-Row 3:      65     71     83     89
-```
+<div class="itg-2d-grid-wrap">
+<div class="itg-2d-grid" style="grid-template-columns: 2rem repeat(4, 44px); grid-template-rows: 1.5rem repeat(3, 38px);">
+  <!-- Header row -->
+  <div></div>
+  <div class="itg-2d-hdr">[1]</div>
+  <div class="itg-2d-hdr">[2]</div>
+  <div class="itg-2d-hdr">[3]</div>
+  <div class="itg-2d-hdr">[4]</div>
+  <!-- Row 1 -->
+  <div class="itg-2d-row-lbl">[1]</div>
+  <div class="itg-2d-cell">78</div>
+  <div class="itg-2d-cell">85</div>
+  <div class="itg-2d-cell">91</div>
+  <div class="itg-2d-cell">67</div>
+  <!-- Row 2 -->
+  <div class="itg-2d-row-lbl">[2]</div>
+  <div class="itg-2d-cell">92</div>
+  <div class="itg-2d-cell">88</div>
+  <div class="itg-2d-cell col-hl">76</div>
+  <div class="itg-2d-cell">95</div>
+  <!-- Row 3 -->
+  <div class="itg-2d-row-lbl">[3]</div>
+  <div class="itg-2d-cell">65</div>
+  <div class="itg-2d-cell">71</div>
+  <div class="itg-2d-cell">83</div>
+  <div class="itg-2d-cell">89</div>
+</div>
+</div>
 
-- `aGrid[2][3]` = 76 (row 2, column 3)
-- `aGrid[1][4]` = 67 (row 1, column 4)
+- `aGrid[2][3]` = **76** (row 2, column 3) — highlighted above
+- `aGrid[1][4]` = **67** (row 1, column 4)
 
 ---
 
