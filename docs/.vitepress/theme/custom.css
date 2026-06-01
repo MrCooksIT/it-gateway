@@ -1,0 +1,342 @@
+/* ── IT Gateway ── Pastel dark theme ── */
+
+/* ── Grade & brand palette ── */
+:root {
+  --itg-brand: #5eead4;
+  --itg-gr8:   #6ee7b7;
+  --itg-gr9:   #6ee7b7;
+  --itg-gr10:  #93c5fd;
+  --itg-gr11:  #c4b5fd;
+  --itg-gr12:  #f9a8d4;
+}
+
+/* ── VitePress brand — light mode ── */
+:root {
+  --vp-c-brand-1: #0d9488;
+  --vp-c-brand-2: #0f766e;
+  --vp-c-brand-3: #134e4a;
+  --vp-c-brand-soft: rgba(13, 148, 136, 0.14);
+}
+
+/* ── VitePress brand — dark mode ── */
+.dark {
+  --vp-c-brand-1: #5eead4;
+  --vp-c-brand-2: #5eead4;
+  --vp-c-brand-3: #5eead4;
+  --vp-c-brand-soft: rgba(94, 234, 212, 0.14);
+}
+
+/* ── Sidebar badges ──────────────────────────────────────────────────────── */
+
+/* tip = Grade 10 → baby blue */
+.VPBadge.tip {
+  border-color: transparent !important;
+  color: #1d4ed8 !important;
+  background-color: rgba(147, 197, 253, 0.22) !important;
+}
+.dark .VPBadge.tip {
+  color: var(--itg-gr10) !important;
+  background-color: rgba(147, 197, 253, 0.14) !important;
+}
+
+/* info = Grade 11 → lavender */
+.VPBadge.info {
+  border-color: transparent !important;
+  color: #6d28d9 !important;
+  background-color: rgba(196, 181, 253, 0.22) !important;
+}
+.dark .VPBadge.info {
+  color: var(--itg-gr11) !important;
+  background-color: rgba(196, 181, 253, 0.14) !important;
+}
+
+/* warning = Grade 12 → pastel pink */
+.VPBadge.warning {
+  border-color: transparent !important;
+  color: #be185d !important;
+  background-color: rgba(249, 168, 212, 0.22) !important;
+}
+.dark .VPBadge.warning {
+  color: var(--itg-gr12) !important;
+  background-color: rgba(249, 168, 212, 0.14) !important;
+}
+
+/* ── Custom blocks (tip/info/warning containers) ─────────────────────────── */
+
+.dark .custom-block.tip {
+  background-color: rgba(147, 197, 253, 0.07);
+  border-color: rgba(147, 197, 253, 0.3);
+}
+.dark .custom-block.tip .custom-block-title {
+  color: var(--itg-gr10);
+}
+.dark .custom-block.tip code {
+  background-color: rgba(147, 197, 253, 0.14);
+}
+
+.dark .custom-block.info {
+  background-color: rgba(196, 181, 253, 0.07);
+  border-color: rgba(196, 181, 253, 0.3);
+}
+.dark .custom-block.info .custom-block-title {
+  color: var(--itg-gr11);
+}
+.dark .custom-block.info code {
+  background-color: rgba(196, 181, 253, 0.14);
+}
+
+.dark .custom-block.warning {
+  background-color: rgba(249, 168, 212, 0.07);
+  border-color: rgba(249, 168, 212, 0.3);
+}
+.dark .custom-block.warning .custom-block-title {
+  color: var(--itg-gr12);
+}
+.dark .custom-block.warning code {
+  background-color: rgba(249, 168, 212, 0.14);
+}
+
+/* ── Hero name gradient ──────────────────────────────────────────────────── */
+
+.VPHero .name .clip {
+  background: linear-gradient(135deg, #93c5fd 0%, #c4b5fd 55%, #f9a8d4 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ── Homepage — grade entry cards ───────────────────────────────────────── */
+
+.itg-home-section {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.itg-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--vp-c-text-2);
+  margin-bottom: 1rem;
+}
+
+.itg-grade-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.itg-grade-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+  text-decoration: none !important;
+  display: block;
+  color: inherit;
+}
+.itg-grade-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+  text-decoration: none !important;
+}
+.dark .itg-grade-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .4);
+}
+
+.itg-card-num {
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.itg-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.3rem;
+}
+.itg-card-desc {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Per-grade card accent colours */
+.itg-card-10 { --c: var(--itg-gr10); }
+.itg-card-11 { --c: var(--itg-gr11); }
+.itg-card-12 { --c: var(--itg-gr12); }
+.itg-card-89 { --c: var(--itg-gr8);  }
+
+.itg-grade-card .itg-card-num { color: var(--c); }
+.itg-grade-card:hover          { border-color: var(--c); }
+
+/* ── Quick-access links strip ────────────────────────────────────────────── */
+
+.itg-ql-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.itg-ql-item {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-1);
+  transition: border-color .15s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+}
+.itg-ql-item:hover { border-color: var(--vp-c-text-2); text-decoration: none !important; }
+
+.itg-ql-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.itg-dot-10    { background: var(--itg-gr10); }
+.itg-dot-11    { background: var(--itg-gr11); }
+.itg-dot-12    { background: var(--itg-gr12); }
+.itg-dot-89    { background: var(--itg-gr8);  }
+.itg-dot-study { background: var(--itg-brand); }
+.itg-dot-exam  { background: var(--itg-gr12);  }
+
+/* ── Grade landing pages ─────────────────────────────────────────────────── */
+
+.itg-grade-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.itg-grade-hero {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--vp-c-border);
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+.itg-grade-hero-num {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+.itg-grade-hero-text {}
+.itg-grade-hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.25rem;
+}
+.itg-grade-hero-sub {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
+
+/* Term blocks */
+.itg-term-block {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.itg-term-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+.itg-term-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  min-width: 3rem;
+}
+.itg-term-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+.itg-term-subtitle {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.1rem;
+}
+
+.itg-term-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.itg-term-col {
+  padding: 1.25rem 1.5rem;
+}
+.itg-term-col:first-child {
+  border-right: 1px solid var(--vp-c-border);
+}
+.itg-term-col-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.75rem;
+}
+
+.itg-link-list { list-style: none; margin: 0; padding: 0; }
+.itg-link-list li { margin-bottom: 0.3rem; }
+.itg-link-list a {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-1);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.18rem 0;
+  text-decoration: none !important;
+  transition: color .15s;
+}
+.itg-link-list a:hover {
+  text-decoration: none !important;
+}
+.itg-link-list .itg-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Grade colour applied per page via --itg-grade variable */
+.itg-grade-10 { --itg-grade: var(--itg-gr10); }
+.itg-grade-11 { --itg-grade: var(--itg-gr11); }
+.itg-grade-12 { --itg-grade: var(--itg-gr12); }
+.itg-grade-89 { --itg-grade: var(--itg-gr8);  }
+
+.itg-grade-hero-num { color: var(--itg-grade, var(--itg-brand)); }
+.itg-term-num       { color: var(--itg-grade, var(--itg-brand)); }
+.itg-link-list .itg-dot { background: var(--itg-grade, var(--itg-brand)); }
+.itg-link-list a:hover  { color: var(--itg-grade, var(--itg-brand)); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .itg-grade-cards { grid-template-columns: 1fr 1fr; }
+  .itg-term-body { grid-template-columns: 1fr; }
+  .itg-term-col:first-child { border-right: none; border-bottom: 1px solid var(--vp-c-border); }
+  .itg-grade-hero { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .itg-grade-hero-num { font-size: 3.5rem; }
+}
+@media (max-width: 480px) {
+  .itg-grade-cards { grid-template-columns: 1fr; }
+  .itg-home-section { padding: 1.5rem 1rem 3rem; }
+}
