@@ -32,6 +32,19 @@ Every computer — from a microcontroller to a high-end workstation — follows 
 | **Storage** | Keeps data short-term or long-term | RAM (short-term), HDD/SSD/USB (long-term) |
 | **Communication** | Sends/receives data to/from other devices | Network card, modem, Wi-Fi adapter |
 
+```mermaid
+flowchart LR
+    IN["INPUT\nKeyboard · Mouse\nScanner · Mic"] --> PROC["PROCESS\nCPU"]
+    PROC --> OUT["OUTPUT\nMonitor · Printer\nSpeakers"]
+    PROC <--> STG["STORAGE\nRAM · HDD · SSD"]
+    PROC <--> COM["COMMUNICATION\nNIC · Modem · Wi-Fi"]
+    style IN   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PROC fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style OUT  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style STG  fill:#6ee7b7,stroke:#10b981,color:#000
+    style COM  fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 > [!TIP] Exam Tip
 > The acronym **IPOSC** (Input → Process → Output → Storage → Communication) helps you remember the model. Most exam questions give you a device and ask which component role it plays.
 
@@ -55,6 +68,15 @@ Every computer — from a microcontroller to a high-end workstation — follows 
 | **Data** | Raw, unprocessed facts | `37`, `John`, `Cape Town` |
 | **Information** | Data processed and given context | John's temperature is 37°C |
 | **Knowledge** | Using information to make decisions | 37°C is a fever — John needs to rest and see a doctor |
+
+```mermaid
+flowchart LR
+    D["DATA\nRaw facts\n37 · John · Cape Town"] -->|"Process\n+ context"| I["INFORMATION\nMeaningful\nJohn's temp is 37°C"]
+    I -->|"Apply\n+ experience"| K["KNOWLEDGE\nActionable\n37°C is a fever —\nsee a doctor"]
+    style D fill:#93c5fd,stroke:#3b82f6,color:#000
+    style I fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style K fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 ---
 

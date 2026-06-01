@@ -77,6 +77,18 @@ Highlight the **1** bits — only those place values count:
 
 **Method: Repeated Division by 2** (divide and record remainders)
 
+```mermaid
+flowchart TD
+    A["Start with decimal number"] --> B["Divide by 2"]
+    B --> C["Record the remainder\n(0 or 1)"]
+    C --> D{"Quotient = 0?"}
+    D -->|No| B
+    D -->|Yes| E["Read remainders\nBOTTOM to TOP\n= binary number"]
+    style A fill:#93c5fd,stroke:#3b82f6,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 ### Worked Example: Convert `45` to binary
 
 | Step | Calculation | Quotient | Remainder |
