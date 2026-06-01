@@ -957,6 +957,121 @@
 }
 
 /* Responsive tweaks for visual components */
+/* ── Computer model diagram ── */
+.itg-cmodel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.itg-cmodel-row2 {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 0 1.25rem;
+  flex-wrap: wrap;
+}
+.itg-cmodel-box {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.itg-cm-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--vp-c-text-1);
+}
+.itg-cm-ex {
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.2rem;
+}
+.itg-cm-arrow {
+  font-size: 1.3rem;
+  color: var(--vp-c-text-2);
+  flex-shrink: 0;
+}
+.itg-cm-in    { border-top: 3px solid var(--itg-gr10); }
+.itg-cm-proc  { border-top: 3px solid var(--itg-gr12); }
+.itg-cm-out   { border-top: 3px solid var(--itg-gr11); }
+.itg-cm-store { border-top: 3px solid var(--itg-gr8); }
+.itg-cm-comm  { border-top: 3px solid var(--itg-brand); }
+
+/* ── OOP four pillars ── */
+.itg-oop-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.itg-oop-pillar {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+.itg-oop-pillar:nth-child(1) { border-top: 3px solid var(--itg-gr10); }
+.itg-oop-pillar:nth-child(2) { border-top: 3px solid var(--itg-gr11); }
+.itg-oop-pillar:nth-child(3) { border-top: 3px solid var(--itg-gr12); }
+.itg-oop-pillar:nth-child(4) { border-top: 3px solid var(--itg-brand); }
+.itg-oop-pillar-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.3rem;
+}
+.itg-oop-pillar-desc {
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.4;
+}
+
+/* ── UML-style class diagram ── */
+.itg-class-diagram {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 220px;
+  margin: 1.25rem 0;
+}
+.itg-class-hdr {
+  background: var(--itg-gr11);
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.45rem 1rem;
+}
+.itg-class-section {
+  border-top: 1px solid var(--vp-c-border);
+}
+.itg-class-section-lbl {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  padding: 0.3rem 0.75rem 0.1rem;
+  color: var(--vp-c-text-2);
+}
+.itg-class-row {
+  padding: 0.22rem 0.75rem;
+  font-size: 0.76rem;
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-mono);
+}
+.itg-class-row.method { color: var(--itg-gr10); }
+.itg-class-section.private .itg-class-section-lbl { color: var(--itg-gr12); }
+.itg-class-section.public  .itg-class-section-lbl { color: var(--itg-gr8); }
+
 @media (max-width: 600px) {
   .itg-ide-body { grid-template-columns: 1fr; }
   .itg-ide-col  { border-right: none; border-bottom: 1px solid var(--vp-c-border); }
@@ -967,4 +1082,5 @@
   .itg-erd-wrap { flex-direction: column; }
   .itg-erd-connector { flex-direction: row; padding: 0.5rem 0; }
   .itg-erd-line { width: 2px; height: 30px; }
+  .itg-oop-pillars { grid-template-columns: 1fr; }
 }

@@ -17,13 +17,32 @@ Your phone processes millions of instructions every second just to display your 
 
 Every computer — from a smartwatch to a supercomputer — follows the same fundamental processing model:
 
-```
-INPUT → PROCESS → OUTPUT
-            ↕
-         STORAGE
-            ↕
-       COMMUNICATION
-```
+<div class="itg-cmodel">
+  <div class="itg-cmodel-box itg-cm-in">
+    <div class="itg-cm-label">Input</div>
+    <div class="itg-cm-ex">Keyboard · Mouse · Mic</div>
+  </div>
+  <div class="itg-cm-arrow">→</div>
+  <div class="itg-cmodel-box itg-cm-proc">
+    <div class="itg-cm-label">Process</div>
+    <div class="itg-cm-ex">CPU</div>
+  </div>
+  <div class="itg-cm-arrow">→</div>
+  <div class="itg-cmodel-box itg-cm-out">
+    <div class="itg-cm-label">Output</div>
+    <div class="itg-cm-ex">Monitor · Printer · Speakers</div>
+  </div>
+</div>
+<div class="itg-cmodel-row2">
+  <div class="itg-cmodel-box itg-cm-store">
+    <div class="itg-cm-label">Storage</div>
+    <div class="itg-cm-ex">HDD · SSD · USB · Cloud</div>
+  </div>
+  <div class="itg-cmodel-box itg-cm-comm">
+    <div class="itg-cm-label">Communication</div>
+    <div class="itg-cm-ex">NIC · Wi-Fi · Modem</div>
+  </div>
+</div>
 
 | Stage | What happens | Examples |
 |---|---|---|
@@ -45,6 +64,16 @@ The CPU is the **brain of the computer** — it carries out every instruction gi
 ### The Fetch-Decode-Execute Cycle
 
 The CPU works by continuously repeating three steps:
+
+```mermaid
+flowchart LR
+    F["FETCH\nGet next instruction\nfrom RAM"] --> D["DECODE\nInterpret the\ninstruction"]
+    D --> E["EXECUTE\nCarry out the\ninstruction"]
+    E -->|repeat| F
+    style F fill:#93c5fd,stroke:#3b82f6,color:#000
+    style D fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 1. **Fetch** — retrieve the next instruction from RAM
 2. **Decode** — interpret what the instruction means
