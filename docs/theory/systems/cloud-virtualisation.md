@@ -120,11 +120,22 @@ flowchart LR
 
 A single physical computer can run multiple **virtual machines (VMs)** simultaneously, each with its own OS and applications.
 
-```
-Physical Server (1 machine)
-├── Virtual Machine 1 — Windows Server 2022
-├── Virtual Machine 2 — Ubuntu Linux
-└── Virtual Machine 3 — Windows 10
+```mermaid
+flowchart TD
+    HW["Physical Server\none machine"]
+    HV["Hypervisor\n(manages VMs)"]
+    VM1["Virtual Machine 1\nWindows Server 2022"]
+    VM2["Virtual Machine 2\nUbuntu Linux"]
+    VM3["Virtual Machine 3\nWindows 10"]
+    HW --> HV
+    HV --> VM1
+    HV --> VM2
+    HV --> VM3
+    style HW  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style HV  fill:#fde68a,stroke:#f59e0b,color:#000
+    style VM1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style VM2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style VM3 fill:#f9a8d4,stroke:#ec4899,color:#000
 ```
 
 ---

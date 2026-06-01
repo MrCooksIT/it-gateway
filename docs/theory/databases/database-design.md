@@ -9,8 +9,19 @@ A well-designed database stores data efficiently, without redundancy, and makes 
 
 ## Database Design Process
 
-```
-Requirements analysis → Conceptual design (ERD) → Logical design (tables, keys) → Physical design (create tables in DBMS) → Implementation → Testing
+```mermaid
+flowchart LR
+    REQ["Requirements\nanalysis"] --> CDES["Conceptual design\n(ERD)"]
+    CDES --> LDES["Logical design\n(tables & keys)"]
+    LDES --> PDES["Physical design\n(create in DBMS)"]
+    PDES --> IMPL["Implementation"]
+    IMPL --> TEST["Testing"]
+    style REQ  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style CDES fill:#fde68a,stroke:#f59e0b,color:#000
+    style LDES fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PDES fill:#93c5fd,stroke:#3b82f6,color:#000
+    style IMPL fill:#6ee7b7,stroke:#10b981,color:#000
+    style TEST fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 1. **Identify entities** — what "things" does the database need to store?
