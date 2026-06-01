@@ -13,9 +13,18 @@ Your files are on your phone, your laptop, and accessible from any computer in t
 
 Instead of owning hardware and software, you pay to use resources hosted elsewhere.
 
-```
-Traditional model: Buy server → Install software → Maintain it yourself
-Cloud model:       Connect to internet → Access service → Pay for what you use
+```mermaid
+flowchart LR
+    subgraph TRAD ["Traditional model"]
+        direction LR
+        T1["Buy server"] --> T2["Install software"] --> T3["Maintain it yourself"]
+    end
+    subgraph CLOUD ["Cloud model"]
+        direction LR
+        C1["Connect to\ninternet"] --> C2["Access service\nfrom provider"] --> C3["Pay only for\nwhat you use"]
+    end
+    style T3 fill:#f9a8d4,stroke:#ec4899,color:#000
+    style C3 fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 ---

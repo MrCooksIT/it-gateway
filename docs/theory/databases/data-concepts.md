@@ -15,8 +15,15 @@ Before a database can be designed, we need to understand what data actually is �
 | **Information** | Data that has been processed, organised, and given context | "Finn scored 85% on the March 2024 test" |
 | **Knowledge** | Information applied with understanding and experience | "Finn is performing well and likely to pass; a 90%+ target is achievable" |
 
-```
-Data → [Process] → Information → [Apply experience] → Knowledge
+```mermaid
+flowchart LR
+    D["Data\nRaw facts\n85 · 2024-03-15 · Finn"] --> P["Process\nOrganise + add context"]
+    P --> I["Information\nFinn scored 85%\non the March test"]
+    I --> A["Apply experience\n+ understanding"]
+    A --> K["Knowledge\nFinn is performing well;\n90%+ is achievable"]
+    style D fill:#f9a8d4,stroke:#ec4899,color:#000
+    style I fill:#93c5fd,stroke:#3b82f6,color:#000
+    style K fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Why the difference matters:**

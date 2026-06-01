@@ -20,16 +20,19 @@ Hardware is useless without software to run on it. Software is the set of instru
 
 ## Software Categories
 
-```
-SOFTWARE
-├── System Software
-│   ├── Operating System (OS)
-│   ├── Utility Software
-│   └── Device Drivers
-└── Application Software
-    ├── General Purpose
-    ├── Specific Purpose
-    └── Custom-Written
+```mermaid
+graph TD
+    SW["SOFTWARE"] --> SYS["System Software\nManages hardware + provides platform"]
+    SW --> APP["Application Software\nSolves user problems"]
+    SYS --> OS["Operating System\nWindows · macOS · Linux · Android"]
+    SYS --> UTIL["Utility Software\nAntivirus · Backup · Compression · Defrag"]
+    SYS --> DRV["Device Drivers\nPrinter · GPU · NIC · Scanner"]
+    APP --> GEN["General Purpose\nWord · Excel · Chrome · VLC"]
+    APP --> SPEC["Specific Purpose\nAccounting · Hospital · Payroll"]
+    APP --> CUST["Custom-Written\nBuilt for one specific organisation"]
+    style SW   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style SYS  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style APP  fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 ---
