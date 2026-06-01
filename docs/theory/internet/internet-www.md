@@ -63,6 +63,18 @@ subdomain  domain  TLD
 ### DNS Resolution
 
 When you type `www.school.co.za`:
+
+```mermaid
+flowchart LR
+    A["You type\nwww.school.co.za"] --> B{"Local\nDNS cache?"}
+    B -->|Found| E["Browser connects\nto IP address"]
+    B -->|Not found| C["Ask ISP's\nDNS server"]
+    C --> D["DNS returns\nIP: 196.22.145.100"]
+    D --> E
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#93c5fd,stroke:#3b82f6,color:#000
+```
+
 1. Your device checks its local **DNS cache**
 2. Asks your router → ISP's DNS server
 3. DNS server returns the IP address: `196.22.145.100`

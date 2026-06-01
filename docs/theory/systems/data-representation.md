@@ -29,11 +29,16 @@ Every piece of data in a computer — text, images, audio, video, program instru
 
 Each position represents a power of 2:
 
-```
-Position:  8    7    6    5    4    3    2    1
-Power:    2⁷  2⁶  2⁵  2⁴  2³  2²  2¹  2⁰
-Value:    128   64   32   16    8    4    2    1
-```
+<div class="itg-place-val">
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁷</div><div class="itg-pv-value">128</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁶</div><div class="itg-pv-value">64</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁵</div><div class="itg-pv-value">32</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁴</div><div class="itg-pv-value">16</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2³</div><div class="itg-pv-value">8</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2²</div><div class="itg-pv-value">4</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2¹</div><div class="itg-pv-value">2</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁰</div><div class="itg-pv-value">1</div></div>
+</div>
 
 **Key powers of 2 to memorise:**
 
