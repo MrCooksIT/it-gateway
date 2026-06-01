@@ -52,6 +52,17 @@ When you type a URL into the browser's address bar and press Enter, the browser 
 
 ### Rendering the Page
 
+```mermaid
+flowchart LR
+    URL["You type a URL"] --> REQ["Browser sends\nHTTP request"]
+    REQ --> DOWN["Download files\nHTML · CSS · Images · Videos"]
+    DOWN --> REND["Browser renders\nthe page"]
+    REND --> PAGE["Web page\ndisplayed on screen"]
+    style URL  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DOWN fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PAGE fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 Once the browser has downloaded all those files, it does something remarkable: it takes all those resources and **renders** a usable web page from them. Rendering means the browser reads the code and builds the visual page that you see on your screen.
 
 :::info
