@@ -35,6 +35,19 @@ A modern web page combines text, images, audio, video, and animations seamlessly
 | Use case | Documents, medical images, archival | Photos, audio, video for web |
 | Examples | PNG, GIF, ZIP, FLAC, BMP (raw) | JPEG, MP3, MP4, AAC, WebP |
 
+```mermaid
+flowchart LR
+    ORIG["Original file"] -->|"Lossless\nPNG · FLAC · ZIP"| LL["Compressed\n✓ all data kept"]
+    ORIG -->|"Lossy\nJPEG · MP3 · MP4"| LY["Compressed\n⚠ some data discarded"]
+    LL -->|"Decompress"| LL2["Exact original\nrestored"]
+    LY -->|"Decompress"| LY2["Slightly reduced\nquality — cannot undo"]
+    style ORIG fill:#93c5fd,stroke:#3b82f6,color:#000
+    style LL   fill:#6ee7b7,stroke:#10b981,color:#000
+    style LL2  fill:#6ee7b7,stroke:#10b981,color:#000
+    style LY   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style LY2  fill:#fda4af,stroke:#e11d48,color:#000
+```
+
 > [!TIP] Choose the right type
 > - Compress a logo or screenshot → use **PNG** (lossless — sharp edges preserved)
 > - Compress a photograph for web → use **JPEG** (lossy — small file, minimal visible loss)
@@ -136,10 +149,22 @@ At 30 fps, a 1920×1080 video generates: 30 × 6.2 MB = ~186 MB per second uncom
 - Automatically switches video quality (e.g. 4K → 1080p → 720p) if bandwidth drops
 - Minimises buffering — keeps playback smooth
 
-```
-Good connection:  4K (15–25 Mbps)
-Average connection:  1080p (5–8 Mbps)
-Poor connection:  480p (1.5–3 Mbps)
+```mermaid
+flowchart TD
+    CHK{"Measure\nbandwidth"} 
+    CHK -->|">15 Mbps"| Q4K["Stream 4K\n(15–25 Mbps)"]
+    CHK -->|"5–15 Mbps"| Q1080["Stream 1080p\n(5–8 Mbps)"]
+    CHK -->|"1.5–5 Mbps"| Q720["Stream 720p\n(2.5–4 Mbps)"]
+    CHK -->|"<1.5 Mbps"| Q480["Stream 480p\nbuffering risk"]
+    Q4K --> CHK
+    Q1080 --> CHK
+    Q720 --> CHK
+    Q480 --> CHK
+    style CHK  fill:#fde68a,stroke:#f59e0b,color:#000
+    style Q4K  fill:#6ee7b7,stroke:#10b981,color:#000
+    style Q1080 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style Q720 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q480 fill:#f9a8d4,stroke:#ec4899,color:#000
 ```
 
 ### Buffering:
