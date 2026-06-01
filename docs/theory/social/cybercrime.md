@@ -49,6 +49,31 @@ As more of our lives move online — banking, shopping, communication, health re
 | **Keylogger** | Records all keystrokes to capture passwords | Installed by Trojans or physical access |
 | **Botnet** | Network of infected "zombie" computers controlled remotely | Worms, Trojans |
 
+```mermaid
+graph TD
+    MAL["MALWARE"] --> SPR["Self-Spreading"]
+    MAL --> HID["Hidden / Deceptive"]
+    MAL --> EXT["Extortion / Profit"]
+    SPR --> VIR["Virus\nAttaches to files"]
+    SPR --> WRM["Worm\nSpreads via network"]
+    HID --> TRO["Trojan Horse\nDisguised as legit software"]
+    HID --> ROOT["Rootkit\nHides in OS"]
+    HID --> SPY["Spyware / Keylogger\nMonitors silently"]
+    EXT --> RAN["Ransomware\nEncrypts → demands payment"]
+    EXT --> BOT["Botnet\nZombie computer army"]
+    style MAL  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SPR  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style HID  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style EXT  fill:#fde68a,stroke:#f59e0b,color:#000
+    style VIR  fill:#ddd6fe,stroke:#7c3aed,color:#000
+    style WRM  fill:#ddd6fe,stroke:#7c3aed,color:#000
+    style TRO  fill:#e9d5ff,stroke:#9333ea,color:#000
+    style ROOT fill:#e9d5ff,stroke:#9333ea,color:#000
+    style SPY  fill:#e9d5ff,stroke:#9333ea,color:#000
+    style RAN  fill:#fda4af,stroke:#e11d48,color:#000
+    style BOT  fill:#fda4af,stroke:#e11d48,color:#000
+```
+
 ---
 
 ### Phishing
@@ -60,6 +85,20 @@ As more of our lives move online — banking, shopping, communication, health re
 2. Email contains an urgent message and a link
 3. Link leads to a fake website that looks identical to the real one
 4. Victim enters their credentials — now the attacker has them
+
+```mermaid
+flowchart TD
+    A["Attacker sends fake email\napparently from: bank / SARS / Netflix"] --> B["Victim reads urgent message\n'Your account will be suspended!'"]
+    B --> C{"Victim clicks\nthe link?"}
+    C -->|"Yes (bad)"| D["Fake website\nlooks identical to real one"]
+    D --> E["Victim enters credentials\nor banking details"]
+    E --> F["Attacker captures credentials\n→ account takeover / fraud"]
+    C -->|"No (correct)"| G["Report to IT / delete ✓"]
+    style A fill:#f9a8d4,stroke:#ec4899,color:#000
+    style F fill:#fda4af,stroke:#e11d48,color:#000
+    style G fill:#6ee7b7,stroke:#10b981,color:#000
+    style C fill:#fde68a,stroke:#f59e0b,color:#000
+```
 
 **Variations:**
 - **Spear phishing**: Targeted phishing using personal information to seem credible

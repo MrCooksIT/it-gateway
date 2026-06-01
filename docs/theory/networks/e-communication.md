@@ -39,6 +39,20 @@ Email relies on three protocols:
 4. Connects to the recipient's mail server and delivers the message
 5. Message sits in the recipient's mailbox until they download/view it
 
+```mermaid
+flowchart LR
+    S["Sender\n(Email client)"] -->|"SMTP\nsend"| OS["Outgoing\nmail server"]
+    OS -->|"DNS lookup\n(MX record)"| DNS["DNS Server\nfinds recipient\nmail server"]
+    DNS --> OS
+    OS -->|"SMTP\ndeliver"| IS["Recipient's\nmail server\n(inbox)"]
+    IS -->|"POP3 / IMAP\ndownload"| R["Recipient\n(Email client)"]
+    style S   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style OS  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DNS fill:#fde68a,stroke:#f59e0b,color:#000
+    style IS  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style R   fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ### POP3 vs IMAP
 
 | Feature | POP3 | IMAP |
