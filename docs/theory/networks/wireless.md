@@ -7,6 +7,17 @@ Cut the cable — wireless networking has made it possible to connect devices wi
 
 ---
 
+## Wireless Technologies — Range Comparison
+
+```mermaid
+flowchart LR
+    BT["Bluetooth\nIEEE 802.15\n~10 m"] --> WIFI["Wi-Fi\nIEEE 802.11\n~50 m indoors"] --> WIMAX["WiMAX\nIEEE 802.16\nup to 50 km"] --> MOBILE["Mobile 4G/5G\nCellular towers\nNationwide"]
+    style BT     fill:#6ee7b7,stroke:#10b981,color:#000
+    style WIFI   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style WIMAX  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style MOBILE fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ## Why Wireless?
 
 | Advantage | Explanation |
