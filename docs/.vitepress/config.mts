@@ -3,11 +3,13 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(defineConfig({
   title: 'IT Gateway',
-  description: 'Your complete CAPS Information Technology resource for Grades 10–12',
+  description: 'Your complete CAPS Information Technology resource for Grades 8–12',
   base: '/it-gateway/',
 
+  appearance: 'dark',
+
   head: [
-    ['meta', { name: 'theme-color', content: '#0f766e' }],
+    ['meta', { name: 'theme-color', content: '#5eead4' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
@@ -17,14 +19,17 @@ export default withMermaid(defineConfig({
     // ─── Top navigation bar ───────────────────────────────────────────────
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Practical', link: '/practical/' },
-      { text: 'Theory', link: '/theory/' },
-      { text: 'Digital Technology', link: '/digital-technology/' },
+      { text: 'Grade 10', link: '/grade-10/' },
+      { text: 'Grade 11', link: '/grade-11/' },
+      { text: 'Grade 12', link: '/grade-12/' },
+      { text: 'Digital Tech 8–9', link: '/digital-technology/' },
       { text: 'Quick Study', link: '/quick-study/' },
-      { text: 'Exam Prep', link: '/exam-preparation/' },
       {
         text: 'More',
         items: [
+          { text: '💻 Practical — Paper 1', link: '/practical/' },
+          { text: '📚 Theory — Paper 2', link: '/theory/' },
+          { text: '📝 Exam Prep', link: '/exam-preparation/' },
           { text: 'Google Classroom', link: 'https://classroom.google.com' },
           { text: 'About this site', link: '/about' },
         ],
@@ -32,9 +37,21 @@ export default withMermaid(defineConfig({
     ],
 
     // ─── Unified sidebar ──────────────────────────────────────────────────
-    // Single structure shown on all pages — textbook style:
-    // Practical → Theory → Quick Study → Digital Technology (Gr 8–9)
     sidebar: [
+
+      // ══════════════════════════════════════════════════════════════════
+      //  BROWSE BY GRADE
+      // ══════════════════════════════════════════════════════════════════
+      {
+        text: '📂 Browse by Grade',
+        collapsed: false,
+        items: [
+          { text: 'Grade 10 Overview', link: '/grade-10/' },
+          { text: 'Grade 11 Overview', link: '/grade-11/' },
+          { text: 'Grade 12 Overview', link: '/grade-12/' },
+          { text: 'Digital Tech (Gr 8 & 9)', link: '/digital-technology/' },
+        ],
+      },
 
       // ══════════════════════════════════════════════════════════════════
       //  PRACTICAL — Paper 1  (first exam)
