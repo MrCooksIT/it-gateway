@@ -11,6 +11,15 @@ In Delphi, all SQL runs as a text string assigned to a query component — you b
 
 Clauses must appear in this exact order. Writing them out of order causes a syntax error.
 
+<div class="itg-sql-template">
+  <div class="itg-sql-clause itg-sql-select">SELECT fields<span class="itg-sql-opt">required — what to show</span></div>
+  <div class="itg-sql-clause itg-sql-from">FROM table<span class="itg-sql-opt">required — which table</span></div>
+  <div class="itg-sql-clause itg-sql-where">WHERE condition<span class="itg-sql-opt">optional — filter rows</span></div>
+  <div class="itg-sql-clause itg-sql-group">GROUP BY field<span class="itg-sql-opt">optional — for aggregation</span></div>
+  <div class="itg-sql-clause itg-sql-having">HAVING condition<span class="itg-sql-opt">optional — filter groups</span></div>
+  <div class="itg-sql-clause itg-sql-order">ORDER BY field<span class="itg-sql-opt">optional — sort results</span></div>
+</div>
+
 | # | Clause | Purpose | Required? |
 |---|---|---|---|
 | 1 | `SELECT` | Which fields to display | Yes |

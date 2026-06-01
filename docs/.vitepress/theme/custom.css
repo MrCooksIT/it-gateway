@@ -957,6 +957,34 @@
 }
 
 /* Responsive tweaks for visual components */
+/* ── SQL clause template ── */
+.itg-sql-template {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 1.25rem 0;
+  font-family: var(--vp-font-family-mono);
+}
+.itg-sql-clause {
+  padding: 0.38rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: #0d1117;
+  font-weight: 600;
+}
+.itg-sql-select { background: var(--itg-gr12); }
+.itg-sql-from   { background: var(--itg-gr11); }
+.itg-sql-where  { background: var(--itg-gr10); }
+.itg-sql-group  { background: rgba(110,231,183,0.6); color: var(--vp-c-text-1); }
+.itg-sql-having { background: rgba(94,234,212,0.5); color: var(--vp-c-text-1); }
+.itg-sql-order  { background: rgba(147,197,253,0.5); color: var(--vp-c-text-1); }
+.itg-sql-opt {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
 /* ── TCP/IP layer stack ── */
 .itg-tcpip {
   display: flex;
