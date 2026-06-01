@@ -9,6 +9,15 @@ Real databases split data across multiple tables to avoid duplication. A school 
 
 ## How It Works
 
+```mermaid
+flowchart LR
+    T1["tblStudents\nStudentID · Surname\nFirstName · Grade"] -->|"WHERE StudentID matches"| RES["Combined result\nSurname + Subject + Mark\nper matching row"]
+    T2["tblMarks\nMarkID · StudentID\nSubject · Mark"] -->|"WHERE StudentID matches"| RES
+    style T1  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style T2  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style RES fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 Four rules cover every multi-table query you will write:
 
 - List **all tables** in the `FROM` clause, separated by a comma.

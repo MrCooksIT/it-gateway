@@ -59,6 +59,29 @@ These appear in nearly every question because user input arrives as text and mus
 
 ---
 
+## String Functions — Quick Reference Map
+
+```mermaid
+flowchart LR
+    TASK["String task"] --> CONV["Type conversion\nStrToInt · IntToStr\nStrToFloat · FloatToStr\nOrd · Chr"]
+    TASK --> CASE["Change case\nUpperCase\nLowerCase"]
+    TASK --> MEAS["Measure\nLength(s)"]
+    TASK --> TRIM["Remove spaces\nTrim(s)"]
+    TASK --> EXT["Extract part\nCopy(s, start, count)"]
+    TASK --> FIND["Find substring\nPos(needle, s)"]
+    TASK --> EDIT["Modify string\nDelete · Insert"]
+    style TASK fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CONV fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CASE fill:#6ee7b7,stroke:#10b981,color:#000
+    style MEAS fill:#fde68a,stroke:#f59e0b,color:#000
+    style TRIM fill:#fde68a,stroke:#f59e0b,color:#000
+    style EXT  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style FIND fill:#f9a8d4,stroke:#ec4899,color:#000
+    style EDIT fill:#5eead4,stroke:#0d9488,color:#000
+```
+
+---
+
 ## FloatToStrF — Formatting Decimal Places
 
 This is the standard way to display a Real with a fixed number of decimal places:

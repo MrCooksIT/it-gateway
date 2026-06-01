@@ -17,6 +17,15 @@ Every piece of data in a computer — text, images, audio, video, program instru
 
 ## Number Systems Overview
 
+```mermaid
+flowchart LR
+    DEC["Decimal\nBase 10\n0–9\nHumans use"] -->|"convert"| BIN["Binary\nBase 2\n0 and 1\nComputers use"]
+    BIN -->|"group 4 bits"| HEX["Hexadecimal\nBase 16\n0–9 + A–F\nCompact binary"]
+    style DEC fill:#6ee7b7,stroke:#10b981,color:#000
+    style BIN fill:#93c5fd,stroke:#3b82f6,color:#000
+    style HEX fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 | System | Base | Digits | Used for |
 |---|---|---|---|
 | **Decimal** | 10 | 0–9 | Human everyday counting |
@@ -222,6 +231,17 @@ Audio is captured by **sampling** the analogue sound wave at regular intervals.
 ## Data Compression
 
 Raw data is often much larger than necessary. Compression reduces file size.
+
+```mermaid
+flowchart TD
+    RAW["Raw data\n(large file size)"] --> Q{"Can quality\nloss be accepted?"}
+    Q -->|"NO — text, programs,\nmedical images"| LL["Lossless compression\nZIP · PNG · FLAC\nExact original recoverable"]
+    Q -->|"YES — photos, music,\nvideo for humans"| LY["Lossy compression\nJPEG · MP3 · MP4\nSmaller file, some detail lost"]
+    style RAW fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q   fill:#fde68a,stroke:#f59e0b,color:#000
+    style LL  fill:#6ee7b7,stroke:#10b981,color:#000
+    style LY  fill:#93c5fd,stroke:#3b82f6,color:#000
+```
 
 | Type | Method | Quality change | Examples |
 |---|---|---|---|
