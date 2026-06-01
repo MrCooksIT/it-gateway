@@ -190,13 +190,18 @@ Every device connects directly to every other device. Two types:
 - **Full mesh**: every device has a direct link to every other device
 - **Partial mesh**: some devices have multiple connections, not all
 
-```
-PC1 ——— PC2
- |  \  / |
- |   \/  |
- |   /\  |
- |  /  \ |
-PC3 ——— PC4
+```mermaid
+flowchart LR
+    PC1 <--> PC2
+    PC1 <--> PC3
+    PC1 <--> PC4
+    PC2 <--> PC3
+    PC2 <--> PC4
+    PC3 <--> PC4
+    style PC1 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PC2 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PC3 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PC4 fill:#c4b5fd,stroke:#8b5cf6,color:#000
 ```
 
 Full mesh with 5 devices requires: n(n-1)/2 = 10 connections.
