@@ -63,10 +63,16 @@ Uses **two mathematically linked keys**:
 - **Public key** — shared openly with everyone
 - **Private key** — kept secret by the owner
 
-```
-Sender encrypts with recipient's PUBLIC key
-↓
-Only the recipient's PRIVATE key can decrypt it
+```mermaid
+flowchart LR
+    A["Alice's message\n(plaintext)"] --> B["Encrypt with\nBob's PUBLIC key\n🔓 public = shared"]
+    B --> C["Ciphertext\nunreadable to anyone\nwho intercepts it"]
+    C --> D["Decrypt with\nBob's PRIVATE key\n🔐 private = secret"]
+    D --> E["Bob reads\nthe message"]
+    style B fill:#93c5fd,stroke:#3b82f6,color:#000
+    style C fill:#f9a8d4,stroke:#ec4899,color:#000
+    style D fill:#6ee7b7,stroke:#10b981,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Advantage | Disadvantage |
