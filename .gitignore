@@ -4,8 +4,9 @@
 # Node
 node_modules/
 
-# VitePress cache (build output is kept for deployment)
+# VitePress generated output (CI rebuilds these on deploy)
 docs/.vitepress/cache/
+docs/.vitepress/dist/
 
 # OS files
 .DS_Store
