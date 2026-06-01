@@ -9,6 +9,20 @@ Not all networks are the same size. The network in your bedroom connecting your 
 
 ## Overview: Network Classification by Size
 
+```mermaid
+flowchart LR
+    PAN["PAN\n&lt; 10 m\nBluetooth earphones"] --> HAN
+    HAN["HAN\nSingle home\nHome Wi-Fi"] --> LAN
+    LAN["LAN\nBuilding / campus\nSchool network"] --> MAN
+    MAN["MAN\nCity\nISP backbone"] --> WAN
+    WAN["WAN\nCountries / global\nThe Internet"]
+    style PAN fill:#6ee7b7,stroke:#10b981,color:#000
+    style HAN fill:#93c5fd,stroke:#3b82f6,color:#000
+    style LAN fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style MAN fill:#f9a8d4,stroke:#ec4899,color:#000
+    style WAN fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 | Network Type | Full Name | Typical Range | Who uses it |
 |---|---|---|---|
 | **PAN** | Personal Area Network | < 10 metres | Individual (Bluetooth devices) |
