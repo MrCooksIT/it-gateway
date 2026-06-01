@@ -153,18 +153,16 @@ There are many, many programming languages, and new ones are created every year.
 
 The diagram below shows how hardware, system software, and application software depend on each other:
 
-```
-┌────────────────────────────────┐
-│      USER APPLICATION          │  ← What you interact with (games, browsers, etc.)
-│         SOFTWARE               │
-├────────────────────────────────┤
-│        SYSTEM SOFTWARE         │  ← Manages the hardware for applications
-│    (Operating System, BIOS,    │
-│       device drivers)          │
-├────────────────────────────────┤
-│          HARDWARE              │  ← The physical machine
-│   (CPU, RAM, printer, mouse)   │
-└────────────────────────────────┘
+```mermaid
+flowchart TD
+    APP["USER APPLICATION SOFTWARE\nGames · Browsers · Word Processors\nWhat you interact with directly"]
+    SYS["SYSTEM SOFTWARE\nOperating System · BIOS · Device Drivers\nManages hardware for applications"]
+    HW["HARDWARE\nCPU · RAM · Printer · Mouse\nThe physical machine"]
+    APP -->|"uses services of"| SYS
+    SYS -->|"controls"| HW
+    style APP fill:#6ee7b7,stroke:#10b981,color:#000
+    style SYS fill:#93c5fd,stroke:#3b82f6,color:#000
+    style HW  fill:#c4b5fd,stroke:#8b5cf6,color:#000
 ```
 
 - The **hardware** is the foundation — it cannot do anything without instructions.

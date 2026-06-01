@@ -89,6 +89,17 @@ In this course, the first two steps are taken care of for you. **Your job is to 
 
 ## Summary of the Steps
 
+```mermaid
+flowchart LR
+    URL["① URL\nYou type or click\nthe address"] --> REQ["② Request\nBrowser sends HTTP\nrequest to server"]
+    REQ --> RESP["③ Response\nServer sends back\nthe HTML file"]
+    RESP --> REND["④ Rendering\nBrowser builds the\nvisual page on screen"]
+    style URL  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style REQ  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style RESP fill:#fde68a,stroke:#f59e0b,color:#000
+    style REND fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 | Step | What happens |
 |------|-------------|
 | 1. The URL | You type or click a URL — the address tells the browser what to look for and where |

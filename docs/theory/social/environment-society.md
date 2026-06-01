@@ -35,6 +35,25 @@ Technology powers the modern world — but at a cost. The devices we use daily c
 - **Manufacturer take-back** — some brands accept old devices
 - **Certified recyclers** — Waste Electrical and Electronic Equipment (WEEE)
 
+```mermaid
+flowchart TD
+    DEV["Old device or component"] --> Q{"Still working?"}
+    Q -->|YES| DON["Donate or sell\n Lifespan extended"]
+    Q -->|NO| Q2{"Certified WEEE\nrecycler available?"}
+    Q2 -->|YES| REC["WEEE certified recycler\nMetals recovered safely"]
+    Q2 -->|NO| Q3{"Manufacturer\ntake-back scheme?"}
+    Q3 -->|YES| BACK["Return to manufacturer\nSafely processed"]
+    Q3 -->|NO| WARN["Landfill — last resort\nToxic materials leach\ninto soil and groundwater"]
+    style DEV  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DON  fill:#6ee7b7,stroke:#10b981,color:#000
+    style REC  fill:#6ee7b7,stroke:#10b981,color:#000
+    style BACK fill:#6ee7b7,stroke:#10b981,color:#000
+    style WARN fill:#f9a8d4,stroke:#ec4899,color:#000
+    style Q    fill:#fde68a,stroke:#f59e0b,color:#000
+    style Q2   fill:#fde68a,stroke:#f59e0b,color:#000
+    style Q3   fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 ---
 
 ### Energy Consumption
@@ -159,6 +178,26 @@ ICT uses enormous amounts of electricity:
 - Solves problems too large for any single computer
 - Cost-effective — uses existing volunteer hardware
 - Resilient — no single point of failure
+
+```mermaid
+flowchart TD
+    PROB["Large problem\n(too big for one computer)"] --> COORD["Coordinator server\nsplits into sub-tasks"]
+    COORD --> N1["Node 1\nprocesses part A"]
+    COORD --> N2["Node 2\nprocesses part B"]
+    COORD --> N3["Node 3\nprocesses part C"]
+    COORD --> NN["Node N\nprocesses part N"]
+    N1 --> RESULT["Results combined\n= Solution"]
+    N2 --> RESULT
+    N3 --> RESULT
+    NN --> RESULT
+    style PROB   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style COORD  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style N1     fill:#93c5fd,stroke:#3b82f6,color:#000
+    style N2     fill:#93c5fd,stroke:#3b82f6,color:#000
+    style N3     fill:#93c5fd,stroke:#3b82f6,color:#000
+    style NN     fill:#93c5fd,stroke:#3b82f6,color:#000
+    style RESULT fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 ---
 

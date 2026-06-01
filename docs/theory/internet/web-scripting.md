@@ -130,8 +130,17 @@ These three always work together in a modern web page.
 **With AJAX:**
 - Click a button → JavaScript sends request to server → only relevant data returned → page updates silently
 
-```
-User action → JavaScript sends HTTP request → Server processes → Returns data (JSON/XML) → JavaScript updates DOM
+```mermaid
+flowchart LR
+    U["User action\n(click, scroll, type)"] --> JS["JavaScript\nsends HTTP request\nin background"]
+    JS --> SRV["Server\nprocesses request"]
+    SRV --> DATA["Returns data\n(JSON / XML)\nnot full HTML"]
+    DATA --> DOM["JavaScript updates\nonly that part\nof the page"]
+    style U    fill:#93c5fd,stroke:#3b82f6,color:#000
+    style JS   fill:#fde68a,stroke:#f59e0b,color:#000
+    style SRV  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DATA fill:#f9a8d4,stroke:#ec4899,color:#000
+    style DOM  fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Examples of AJAX in use:**
@@ -207,21 +216,20 @@ Multiple CSS rules can apply to one element — the "cascade" determines which r
 
 ### How a dynamic website works:
 
-```
-Browser
-  ↓ HTTP request (GET /profile.php?id=5)
-Web Server (Apache, Nginx)
-  ↓ runs PHP
-PHP Script
-  ↓ SQL query
-Database (MySQL)
-  ↓ returns data
-PHP Script
-  ↓ generates HTML
-Web Server
-  ↓ HTTP response (HTML page)
-Browser
-  ↓ renders HTML + CSS + JavaScript
+```mermaid
+flowchart TD
+    BR["Browser"] -->|"HTTP request\nGET /profile.php?id=5"| WS["Web Server\nApache · Nginx"]
+    WS -->|"executes"| PHP["PHP Script"]
+    PHP -->|"SQL query"| DB["Database\nMySQL"]
+    DB -->|"returns data rows"| PHP
+    PHP -->|"generates HTML"| WS
+    WS -->|"HTTP response\n(completed HTML page)"| BR
+    BR --> PAGE["Rendered page\nHTML + CSS + JavaScript"]
+    style BR   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style WS   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PHP  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style DB   fill:#fde68a,stroke:#f59e0b,color:#000
+    style PAGE fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Common technology stacks:**

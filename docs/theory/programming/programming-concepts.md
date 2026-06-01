@@ -29,13 +29,20 @@ Software is not just written — it is designed, tested, and maintained.
 
 ### Phases of Software Development:
 
-```
-1. Analysis        → Understand what the software must do
-2. Design          → Plan algorithms, data structures, interface
-3. Coding          → Write the source code
-4. Testing         → Find and fix errors
-5. Implementation  → Deploy the software to users
-6. Maintenance     → Update, fix bugs, improve
+```mermaid
+flowchart LR
+    AN["1. Analysis\nWhat must it do?"] --> DE["2. Design\nAlgorithms + interface"]
+    DE --> CO["3. Coding\nWrite source code"]
+    CO --> TE["4. Testing\nFind & fix errors"]
+    TE --> IM["5. Implementation\nDeploy to users"]
+    IM --> MA["6. Maintenance\nUpdate & improve"]
+    MA -->|"new requirements"| AN
+    style AN fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DE fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CO fill:#f9a8d4,stroke:#ec4899,color:#000
+    style TE fill:#fde68a,stroke:#f59e0b,color:#000
+    style IM fill:#6ee7b7,stroke:#10b981,color:#000
+    style MA fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 ---
@@ -209,14 +216,15 @@ flowchart LR
 
 ## Source Code, Object Code, and Machine Code
 
-```
-Source code (.pas)
-    ↓ Compiler
-Object code (binary)
-    ↓ Linker (combines libraries)
-Executable (.exe)
-    ↓ CPU executes
-Machine code (0s and 1s)
+```mermaid
+flowchart TD
+    SC["Source code (.pas)\nHuman-readable Delphi code"] -->|"Compiler"| OC["Object code\nIntermediate binary"]
+    OC -->|"Linker\n(adds library code)"| EXE["Executable (.exe)\nStandalone program"]
+    EXE -->|"CPU loads and runs"| MC["Machine code\n0s and 1s — CPU instructions"]
+    style SC  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style OC  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style EXE fill:#f9a8d4,stroke:#ec4899,color:#000
+    style MC  fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Code Type | Description |

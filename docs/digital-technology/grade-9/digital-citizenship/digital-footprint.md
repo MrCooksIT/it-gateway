@@ -44,6 +44,22 @@ In 2018, it was revealed that the political consulting firm Cambridge Analytica 
 
 ### The Tracking Ecosystem
 
+```mermaid
+flowchart LR
+    YOU["Your online\nbehaviour"] --> PLAT["Platforms\nFacebook · Google\nInstagram · TikTok"]
+    YOU --> THIRD["Third-party trackers\nPixels · Cookies\nDevice fingerprinting"]
+    PLAT --> BROKER["Data Brokers\nBuy + combine data\nfrom many sources"]
+    THIRD --> BROKER
+    BROKER --> ADV["Advertisers\nTargeted ads"]
+    BROKER --> INS["Insurers &amp; Banks\nRisk assessment"]
+    BROKER --> EMP["Employers\nBackground screening"]
+    style YOU   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style BROKER fill:#f9a8d4,stroke:#ec4899,color:#000
+    style ADV   fill:#fde68a,stroke:#f59e0b,color:#000
+    style INS   fill:#fde68a,stroke:#f59e0b,color:#000
+    style EMP   fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 Your data does not stay within one platform. It is shared across a vast ecosystem:
 
 | Tracker Type | What It Does | Example |

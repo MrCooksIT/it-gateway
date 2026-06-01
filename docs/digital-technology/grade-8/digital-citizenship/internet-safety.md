@@ -12,6 +12,24 @@ The internet has become a great place to socialise, learn, and connect with othe
 
 ## Core Safety Guidelines
 
+```mermaid
+flowchart TD
+    INT["Something happens online"] --> Q1{"Is it a stranger\ncontacting you?"}
+    Q1 -->|YES| Q2{"Asking for personal\ninformation?"}
+    Q2 -->|YES| STOP["Stop communicating\nimmediately — warning sign!"]
+    Q2 -->|NO| WARN["Proceed with caution\nVerify with real-life friends"]
+    Q1 -->|NO| Q3{"Does it feel\nuncomfortable or unsafe?"}
+    Q3 -->|YES| BLOCK["Block the person"]
+    BLOCK --> REPORT["Report to\nplatform admin"]
+    REPORT --> ADULT["Tell a trusted adult"]
+    Q3 -->|NO| OK["Continue — always use\ncommon sense"]
+    style STOP  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style WARN  fill:#fde68a,stroke:#f59e0b,color:#000
+    style BLOCK fill:#fde68a,stroke:#f59e0b,color:#000
+    style ADULT fill:#6ee7b7,stroke:#10b981,color:#000
+    style OK    fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 There are four fundamental guidelines that apply to almost every online situation:
 
 :::info Key Safety Guidelines

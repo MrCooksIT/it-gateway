@@ -26,6 +26,21 @@ ELSE
 
 ## Types of Validation to Know
 
+```mermaid
+flowchart TD
+    A[/"User submits a value"/] --> B{"Presence check:\nIs the field empty?"}
+    B -->|YES| E1["Error: field cannot be blank\nSetFocus → Exit"]
+    B -->|NO| C{"Type check:\nIs it the correct data type?"}
+    C -->|NO| E2["Error: invalid input type\nSetFocus → Exit"]
+    C -->|YES| D{"Range check:\nIs it within min–max?"}
+    D -->|NO| E3["Error: value out of range\nSetFocus → Exit"]
+    D -->|YES| F["Input accepted — proceed"]
+    style F  fill:#6ee7b7,stroke:#10b981,color:#000
+    style E1 fill:#f9a8d4,stroke:#ec4899,color:#000
+    style E2 fill:#f9a8d4,stroke:#ec4899,color:#000
+    style E3 fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 | Type | What it checks | Example |
 |---|---|---|
 | **Presence check** | Field is not empty | Name cannot be blank |

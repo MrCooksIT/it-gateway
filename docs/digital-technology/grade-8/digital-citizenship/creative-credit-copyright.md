@@ -32,6 +32,19 @@ Copyright applies to many types of creative work, including:
 
 There are several types of copyright licences, some offering more protection than others. All of them fall into one of three broad categories:
 
+```mermaid
+flowchart LR
+    CR["Someone else's\ncreative work"] --> Q{"What licence\ndoes it have?"}
+    Q -->|"All rights reserved"| ARR["Cannot use without\nexplicit permission"]
+    Q -->|"Some rights reserved\n(e.g. Creative Commons)"| SRR["Can use if you\ncredit the creator"]
+    Q -->|"Public domain"| PD["Free to use\nany way you like"]
+    style CR  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q   fill:#fde68a,stroke:#f59e0b,color:#000
+    style ARR fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SRR fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PD  fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 | Category | What It Means |
 |---|---|
 | **All rights reserved** | The creator reserves all rights. The work cannot be distributed, reused, or modified without their explicit permission. This is the most strict copyright licence. |

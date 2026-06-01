@@ -49,18 +49,33 @@ A **Database Management System (DBMS)** is the software that manages the databas
 
 **Visualising the terms:**
 
-```
-Table: Students
-┌──────────────┬──────────┬───────────┬───────┬──────┐
-│  StudentID   │ Surname  │ FirstName │ Grade │ Mark │  ← Fields (columns)
-├──────────────┼──────────┼───────────┼───────┼──────┤
-│    1001      │  Adams   │   Alice   │  11   │  87  │  ← Record (row)
-│    1002      │  Botha   │    Ben    │  11   │  72  │
-│    1003      │ Coetzee  │  Carol    │  12   │  91  │
-└──────────────┴──────────┴───────────┴───────┴──────┘
-      ↑
-  Primary Key (unique)
-```
+<div class="itg-norm-box" style="max-width:500px;margin:1.25rem 0">
+<div class="itg-norm-hdr good">Table: Students</div>
+<table class="itg-norm-table">
+<thead>
+  <tr>
+    <th>StudentID <span style="font-size:0.6rem;color:var(--itg-gr12)">(PK)</span></th>
+    <th>Surname</th>
+    <th>FirstName</th>
+    <th>Grade</th>
+    <th>Mark</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="fixed">1001</td><td>Adams</td><td>Alice</td><td>11</td><td>87</td>
+  </tr>
+  <tr>
+    <td class="fixed">1002</td><td>Botha</td><td>Ben</td><td>11</td><td>72</td>
+  </tr>
+  <tr>
+    <td class="fixed">1003</td><td>Coetzee</td><td>Carol</td><td>12</td><td>91</td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+Each column = a **field**. Each row = a **record**. `StudentID` = the **primary key** (highlighted green above).
 
 ---
 

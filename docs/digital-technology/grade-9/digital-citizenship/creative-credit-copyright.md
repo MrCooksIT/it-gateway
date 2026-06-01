@@ -26,6 +26,19 @@ South Africa's **Copyright Act No. 98 of 1978** (as amended) is the main legisla
 
 Copyright actually contains two types of rights:
 
+```mermaid
+flowchart LR
+    COPY["COPYRIGHT\nCreator's rights"] --> ECON["Economic Rights\nReproduce · Distribute\nAdapt · Commercially exploit"]
+    COPY --> MORAL["Moral Rights\nAttribution (be named)\nProtection from distortion"]
+    ECON -->|"can be SOLD\nor licensed"| PUB["Publisher · Company\nbuys these rights"]
+    MORAL -->|"CANNOT be sold\nstays with creator forever"| CREATOR["Creator\nalways credited"]
+    style COPY    fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style ECON    fill:#93c5fd,stroke:#3b82f6,color:#000
+    style MORAL   fill:#6ee7b7,stroke:#10b981,color:#000
+    style PUB     fill:#fde68a,stroke:#f59e0b,color:#000
+    style CREATOR fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 | Type | Description | Can it be sold or transferred? |
 |------|-------------|-------------------------------|
 | **Economic rights** | The right to reproduce, distribute, adapt, and commercially exploit the work | Yes — the creator can sell or licence these to publishers, companies, etc. |

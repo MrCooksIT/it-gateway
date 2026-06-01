@@ -29,16 +29,17 @@ SQL (Structured Query Language) is the language you use to communicate with a re
 
 ## How SQL Fits Into a Database System
 
-```
-Application (Delphi, website, report tool)
-    ↓ SQL query
-DBMS (MySQL, MS Access, PostgreSQL)
-    ↓ processes query against
-Database (tables, indexes, stored data)
-    ↓ returns
-Result set (table of matching rows)
-    ↓ displayed in
-Application (TDBGrid, web page, report)
+```mermaid
+flowchart TD
+    APP["Application\nDelphi · PHP · website"] -->|"SQL query"| DBMS["DBMS\nMySQL · MS Access · PostgreSQL"]
+    DBMS -->|"processes against"| DB["Database\ntables · indexes · stored data"]
+    DB -->|"returns rows"| RS["Result set\nmatching rows"]
+    RS -->|"displayed in"| APP2["Application\nTDBGrid · web page · report"]
+    style APP  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DBMS fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DB   fill:#fde68a,stroke:#f59e0b,color:#000
+    style RS   fill:#6ee7b7,stroke:#10b981,color:#000
+    style APP2 fill:#93c5fd,stroke:#3b82f6,color:#000
 ```
 
 ---
@@ -276,6 +277,21 @@ WHERE      -- filter rows (also defines table links for multi-table queries)
 GROUP BY   -- group rows
 HAVING     -- filter groups
 ORDER BY   -- sort results
+```
+
+```mermaid
+flowchart LR
+    SEL["SELECT\nwhat to show"] --> FROM["FROM\nwhich table"]
+    FROM --> WHERE["WHERE\nfilter rows"]
+    WHERE --> GRP["GROUP BY\ngroup rows"]
+    GRP --> HAV["HAVING\nfilter groups"]
+    HAV --> ORD["ORDER BY\nsort results"]
+    style SEL  fill:#6ee7b7,stroke:#10b981,color:#000
+    style FROM fill:#93c5fd,stroke:#3b82f6,color:#000
+    style WHERE fill:#fde68a,stroke:#f59e0b,color:#000
+    style GRP  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style HAV  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style ORD  fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 ---

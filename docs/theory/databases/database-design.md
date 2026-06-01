@@ -9,8 +9,19 @@ A well-designed database stores data efficiently, without redundancy, and makes 
 
 ## Database Design Process
 
-```
-Requirements analysis → Conceptual design (ERD) → Logical design (tables, keys) → Physical design (create tables in DBMS) → Implementation → Testing
+```mermaid
+flowchart LR
+    REQ["Requirements\nanalysis"] --> CDES["Conceptual design\n(ERD)"]
+    CDES --> LDES["Logical design\n(tables & keys)"]
+    LDES --> PDES["Physical design\n(create in DBMS)"]
+    PDES --> IMPL["Implementation"]
+    IMPL --> TEST["Testing"]
+    style REQ  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style CDES fill:#fde68a,stroke:#f59e0b,color:#000
+    style LDES fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PDES fill:#93c5fd,stroke:#3b82f6,color:#000
+    style IMPL fill:#6ee7b7,stroke:#10b981,color:#000
+    style TEST fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 1. **Identify entities** — what "things" does the database need to store?
@@ -43,16 +54,26 @@ An **ERD** is a visual diagram showing entities, their attributes, and how they 
 
 ### ERD Notation
 
-```
-┌─────────────┐         ┌─────────────┐
-│   STUDENT   │────────>│    MARK     │
-│             │  1:M    │             │
-│ StudentID   │         │ MarkID (PK) │
-│ FirstName   │         │ Mark        │
-│ Surname     │         │ Date        │
-│ Grade       │         │ StudentID   │
-└─────────────┘         └─────────────┘
-```
+<div class="itg-erd-wrap">
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">STUDENT</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> StudentID</div>
+    <div class="itg-erd-row">FirstName</div>
+    <div class="itg-erd-row">Surname</div>
+    <div class="itg-erd-row">Grade</div>
+  </div>
+  <div class="itg-erd-connector">
+    <div class="itg-erd-line"></div>
+    <div class="itg-erd-rel">1 : M →</div>
+  </div>
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">MARK</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> MarkID</div>
+    <div class="itg-erd-row">Mark</div>
+    <div class="itg-erd-row">Date</div>
+    <div class="itg-erd-row"><span class="itg-erd-fk">FK</span> StudentID</div>
+  </div>
+</div>
 
 **Crow's foot notation** (used in professional ERDs):
 
@@ -159,22 +180,58 @@ MARK table:       MarkID (PK) | Mark | Date | StudentID (FK → Student.StudentI
 - Mark
 
 **ERD:**
-```
-TEACHER                     SUBJECT
-TeacherID (PK)──────1:M──>SubjectCode (PK)
-FirstName                  SubjectName
-Surname                    TeacherID (FK)
-Email
-                               |
-                              1:M (via junction)
-                               |
-STUDENT ────M:M──── ENROLMENT ──────> MARK
-StudentID (PK)      StudentID (FK)     MarkID (PK)
-FirstName           SubjectCode (FK)   Mark
-Surname             EnrolmentDate      Date
-Grade                                  StudentID (FK)
-                                       SubjectCode (FK)
-```
+
+<div class="itg-erd-wrap">
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">TEACHER</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> TeacherID</div>
+    <div class="itg-erd-row">FirstName</div>
+    <div class="itg-erd-row">Surname</div>
+    <div class="itg-erd-row">Email</div>
+  </div>
+  <div class="itg-erd-connector">
+    <div class="itg-erd-line"></div>
+    <div class="itg-erd-rel">1 : M →</div>
+  </div>
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">SUBJECT</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> SubjectCode</div>
+    <div class="itg-erd-row">SubjectName</div>
+    <div class="itg-erd-row"><span class="itg-erd-fk">FK</span> TeacherID</div>
+  </div>
+</div>
+
+<div class="itg-erd-wrap">
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">STUDENT</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> StudentID</div>
+    <div class="itg-erd-row">FirstName</div>
+    <div class="itg-erd-row">Surname</div>
+    <div class="itg-erd-row">Grade</div>
+  </div>
+  <div class="itg-erd-connector">
+    <div class="itg-erd-line"></div>
+    <div class="itg-erd-rel">M : M →</div>
+  </div>
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">ENROLMENT</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span><span class="itg-erd-fk">FK</span> StudentID</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span><span class="itg-erd-fk">FK</span> SubjectCode</div>
+    <div class="itg-erd-row">EnrolmentDate</div>
+  </div>
+  <div class="itg-erd-connector">
+    <div class="itg-erd-line"></div>
+    <div class="itg-erd-rel">1 : M →</div>
+  </div>
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr11">MARK</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> MarkID</div>
+    <div class="itg-erd-row">Mark</div>
+    <div class="itg-erd-row">Date</div>
+    <div class="itg-erd-row"><span class="itg-erd-fk">FK</span> StudentID</div>
+    <div class="itg-erd-row"><span class="itg-erd-fk">FK</span> SubjectCode</div>
+  </div>
+</div>
 
 **Tables:**
 

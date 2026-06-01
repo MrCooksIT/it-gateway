@@ -23,6 +23,32 @@ StudentID | StudentName | Subject1 | Mark1 | Subject2 | Mark2 | Teacher | Teache
 - `Subject1`, `Mark1`, `Subject2`, `Mark2` in columns → can't add a third subject without redesigning
 - `NULL` values where Carol has no second subject
 
+<div class="itg-norm-compare">
+<div class="itg-norm-box">
+<div class="itg-norm-hdr bad">✗ Un-normalised — problems highlighted</div>
+<table class="itg-norm-table">
+<thead><tr><th>StudentID</th><th>StudentName</th><th>Subject1</th><th>Mark1</th><th>Teacher</th><th>TeacherEmail</th></tr></thead>
+<tbody>
+<tr><td>1001</td><td>Alice</td><td>IT</td><td>87</td><td class="dup">Smith</td><td class="dup">smith@school.co.za</td></tr>
+<tr><td>1002</td><td>Bob</td><td>IT</td><td>65</td><td class="dup">Smith</td><td class="dup">smith@school.co.za</td></tr>
+<tr><td>1003</td><td>Carol</td><td>IT</td><td>78</td><td class="dup">Smith</td><td class="dup">smith@school.co.za</td></tr>
+</tbody>
+</table>
+</div>
+<div class="itg-norm-box">
+<div class="itg-norm-hdr good">✓ After normalisation — each fact stored once</div>
+<table class="itg-norm-table">
+<thead><tr><th>STUDENT</th><th></th><th>MARK</th><th></th><th>TEACHER</th></tr></thead>
+<tbody>
+<tr><td class="fixed">StudentID</td><td></td><td class="fixed">MarkID</td><td></td><td class="fixed">TeacherID</td></tr>
+<tr><td class="fixed">StudentName</td><td></td><td class="fixed">Subject</td><td></td><td class="fixed">TeacherName</td></tr>
+<tr><td></td><td></td><td class="fixed">Mark</td><td></td><td class="fixed">TeacherEmail</td></tr>
+<tr><td></td><td></td><td class="fixed">StudentID (FK)</td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
 Normalisation fixes all of these.
 
 ---
@@ -96,12 +122,30 @@ Table: `StudentSubjects` — PK is `(StudentID, SubjectID)`
 
 **Fixed to 2NF:** Split into three tables:
 
-```
-Students (StudentID PK, StudentName)
-Subjects (SubjectID PK, SubjectName)
-Marks    (StudentID FK, SubjectID FK, Mark)
-         ← PK: (StudentID, SubjectID)
-```
+<div class="itg-norm-compare">
+<div class="itg-norm-box">
+<div class="itg-norm-hdr bad">✗ Partial dependencies (NOT 2NF)</div>
+<table class="itg-norm-table">
+<thead><tr><th>StudentID + SubjectID (PK)</th><th>StudentName</th><th>SubjectName</th><th>Mark</th></tr></thead>
+<tbody>
+<tr><td>1001 + S01</td><td class="dup">Alice ← depends on StudentID only</td><td class="dup">IT ← depends on SubjectID only</td><td>87</td></tr>
+<tr><td>1001 + S02</td><td class="dup">Alice</td><td class="dup">Maths</td><td>92</td></tr>
+<tr><td>1002 + S01</td><td class="dup">Bob</td><td class="dup">IT</td><td>65</td></tr>
+</tbody>
+</table>
+</div>
+<div class="itg-norm-box">
+<div class="itg-norm-hdr good">✓ 2NF — each field depends on its whole PK</div>
+<table class="itg-norm-table">
+<thead><tr><th>STUDENTS</th><th>SUBJECTS</th><th>MARKS</th></tr></thead>
+<tbody>
+<tr><td class="fixed">StudentID (PK)</td><td class="fixed">SubjectID (PK)</td><td class="fixed">StudentID (PK,FK)</td></tr>
+<tr><td class="fixed">StudentName</td><td class="fixed">SubjectName</td><td class="fixed">SubjectID (PK,FK)</td></tr>
+<tr><td></td><td></td><td class="fixed">Mark</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
 Now every non-key field in each table depends on the WHOLE primary key.
 
@@ -135,10 +179,32 @@ If Stellenbosch's postal code changes, you must update multiple rows.
 
 **Fixed to 3NF:** Split:
 
-```
-Students  (StudentID PK, Name, PostalCode FK)
-PostCodes (PostalCode PK, City, Province)
-```
+<div class="itg-norm-compare">
+<div class="itg-norm-box">
+<div class="itg-norm-hdr bad">✗ Transitive dependency (NOT 3NF)</div>
+<table class="itg-norm-table">
+<thead><tr><th>StudentID (PK)</th><th>Name</th><th>PostalCode</th><th>City</th><th>Province</th></tr></thead>
+<tbody>
+<tr><td>1001</td><td>Alice</td><td>7700</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
+<tr><td>1002</td><td>Bob</td><td>7700</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
+<tr><td>1003</td><td>Carol</td><td>8000</td><td class="dup">Cape Town</td><td class="dup">Western Cape</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.7rem;padding:0.4rem 0.5rem;color:var(--vp-c-text-2)">City &amp; Province depend on PostalCode, not StudentID directly</p>
+</div>
+<div class="itg-norm-box">
+<div class="itg-norm-hdr good">✓ 3NF — each table stores one topic</div>
+<table class="itg-norm-table">
+<thead><tr><th>STUDENTS</th><th>POSTCODES</th></tr></thead>
+<tbody>
+<tr><td class="fixed">StudentID (PK)</td><td class="fixed">PostalCode (PK)</td></tr>
+<tr><td class="fixed">Name</td><td class="fixed">City</td></tr>
+<tr><td class="fixed">PostalCode (FK)</td><td class="fixed">Province</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.7rem;padding:0.4rem 0.5rem;color:var(--vp-c-text-2)">Change a city name once in POSTCODES — all students update automatically</p>
+</div>
+</div>
 
 ---
 

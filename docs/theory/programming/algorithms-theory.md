@@ -138,19 +138,14 @@ A **flowchart** is a visual (diagram) representation of an algorithm. Each step 
 
 The following describes a flowchart read from top to bottom:
 
-```
-[OVAL]              START
-       ↓
-[PARALLELOGRAM]     INPUT number
-       ↓
-[DIAMOND]           Is number MOD 2 = 0?
-    YES ↓                       ↓ NO
-[PARALLELOGRAM]         [PARALLELOGRAM]
-DISPLAY "Even"          DISPLAY "Odd"
-    ↓                           ↓
-    └──────────┬────────────────┘
-               ↓
-[OVAL]              END
+```mermaid
+flowchart TD
+    A([START]) --> B[/INPUT number/]
+    B --> C{"number MOD 2 = 0?"}
+    C -->|YES| D[/DISPLAY 'Even'/]
+    C -->|NO| E[/DISPLAY 'Odd'/]
+    D --> F([END])
+    E --> F
 ```
 
 In this flowchart:

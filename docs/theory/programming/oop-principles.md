@@ -123,6 +123,25 @@ In Delphi, you call `oStudent.Free` to destroy an object (which internally calls
 
 ## The Four Pillars of OOP
 
+<div class="itg-oop-pillars">
+  <div class="itg-oop-pillar">
+    <div class="itg-oop-pillar-title">1. Encapsulation</div>
+    <div class="itg-oop-pillar-desc">Bundle data + methods. Declare data <code>private</code>; expose controlled access via <code>public</code> methods.</div>
+  </div>
+  <div class="itg-oop-pillar">
+    <div class="itg-oop-pillar-title">2. Inheritance</div>
+    <div class="itg-oop-pillar-desc">Child class inherits attributes + methods from parent. Extend without modifying the original. "IS-A" relationship.</div>
+  </div>
+  <div class="itg-oop-pillar">
+    <div class="itg-oop-pillar-title">3. Polymorphism</div>
+    <div class="itg-oop-pillar-desc">Same method name, different behaviour per class. Override parent method to customise action.</div>
+  </div>
+  <div class="itg-oop-pillar">
+    <div class="itg-oop-pillar-title">4. Abstraction</div>
+    <div class="itg-oop-pillar-desc">Hide complex implementation details. Users interact with simple method calls — they don't need to know how it works inside.</div>
+  </div>
+</div>
+
 ### 1. Encapsulation
 
 **Encapsulation** means bundling data and the methods that operate on it inside a class, and **hiding** the internal details from the outside world.
@@ -187,6 +206,27 @@ type
     procedure Bark;
     procedure Fetch;
   end;
+```
+
+```mermaid
+classDiagram
+    TAnimal <|-- TDog : inherits
+    TAnimal <|-- TCat : inherits
+    class TAnimal {
+        -sName String
+        +Create(sN)
+        +Eat()
+        +Sleep()
+    }
+    class TDog {
+        -sBreed String
+        +Bark()
+        +Fetch()
+    }
+    class TCat {
+        +Meow()
+        +Purr()
+    }
 ```
 
 ### 3. Polymorphism

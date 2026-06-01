@@ -107,19 +107,55 @@ So `1012₁₀ = 3F4₁₆` ✓
 
 ### Worked Example: `10111101₂` → Hex
 
-```
-1011 1101
-  B    D
-```
+Split into groups of 4 bits, convert each group:
+
+<div class="itg-nibble-row">
+  <div class="itg-nibble itg-nibble-grp1">
+    <div class="itg-nibble-bits">
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">0</div>
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">1</div>
+    </div>
+    <div class="itg-nibble-result">B</div>
+  </div>
+  <div class="itg-nibble-sep">→</div>
+  <div class="itg-nibble itg-nibble-grp2">
+    <div class="itg-nibble-bits">
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">1</div>
+      <div class="itg-nibble-bit">0</div><div class="itg-nibble-bit">1</div>
+    </div>
+    <div class="itg-nibble-result">D</div>
+  </div>
+</div>
 
 So `10111101₂ = BD₁₆`
 
 ### Worked Example: `1101001011₂` → Hex
 
-```
-  11 0100 1011      (pad left: 0011 0100 1011)
-   3    4    B
-```
+Pad to a multiple of 4 bits (add leading zeros), then split:
+
+<div class="itg-nibble-row">
+  <div class="itg-nibble itg-nibble-grp1">
+    <div class="itg-nibble-bits">
+      <div class="itg-nibble-bit">0</div><div class="itg-nibble-bit">0</div>
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">1</div>
+    </div>
+    <div class="itg-nibble-result">3</div>
+  </div>
+  <div class="itg-nibble itg-nibble-grp2">
+    <div class="itg-nibble-bits">
+      <div class="itg-nibble-bit">0</div><div class="itg-nibble-bit">1</div>
+      <div class="itg-nibble-bit">0</div><div class="itg-nibble-bit">0</div>
+    </div>
+    <div class="itg-nibble-result">4</div>
+  </div>
+  <div class="itg-nibble itg-nibble-grp3">
+    <div class="itg-nibble-bits">
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">0</div>
+      <div class="itg-nibble-bit">1</div><div class="itg-nibble-bit">1</div>
+    </div>
+    <div class="itg-nibble-result">B</div>
+  </div>
+</div>
 
 So `1101001011₂ = 34B₁₆`
 

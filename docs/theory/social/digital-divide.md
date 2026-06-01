@@ -16,6 +16,17 @@ The divide exists at multiple levels:
 - **Skills divide**: having access but lacking digital literacy to use it effectively
 - **Usage divide**: using technology for basic tasks vs. using it for education, employment, or economic opportunity
 
+```mermaid
+flowchart LR
+    A["No access\n(no device\nor internet)"] -->|"Overcome with\ninfrastructure + cost"| B["Access but\nno skills\n(can't use it)"]
+    B -->|"Overcome with\neducation + training"| C["Basic use\n(social media only)"]
+    C -->|"Overcome with\nopportunity + exposure"| D["Full participation\n(education · jobs · services · economy)"]
+    style A fill:#f9a8d4,stroke:#ec4899,color:#000
+    style B fill:#fde68a,stroke:#f59e0b,color:#000
+    style C fill:#93c5fd,stroke:#3b82f6,color:#000
+    style D fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ---
 
 ## Causes of the Digital Divide

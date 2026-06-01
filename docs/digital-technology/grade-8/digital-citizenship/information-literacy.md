@@ -84,6 +84,23 @@ Learning to distinguish between sponsored links and real search results is an im
 
 Once you have found a source, you need to evaluate whether it is actually reliable. It is very easy for anyone to post misinformation online, so you cannot trust a source just because it appeared in your search results.
 
+```mermaid
+flowchart TD
+    SRC["You found a source online"] --> AU["Author\nCredentials? Expert?"]
+    SRC --> DT["Date\nRecent enough?"]
+    SRC --> DOM["Domain\n.gov/.edu more reliable"]
+    SRC --> REF["Sources cited\nReferences listed?"]
+    SRC --> DES["Site design\nProfessional?"]
+    SRC --> WR["Writing quality\nSpelling & grammar?"]
+    AU & DT & DOM & REF & DES & WR --> JUDGE{"Most criteria\npassed?"}
+    JUDGE -->|YES| TRUST["Likely reliable\n— still cross-reference"]
+    JUDGE -->|NO| CAUTION["Treat with caution\n— find another source"]
+    style SRC    fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style JUDGE  fill:#fde68a,stroke:#f59e0b,color:#000
+    style TRUST  fill:#6ee7b7,stroke:#10b981,color:#000
+    style CAUTION fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 When evaluating a source, consider these six factors:
 
 | Factor | Questions to Ask |

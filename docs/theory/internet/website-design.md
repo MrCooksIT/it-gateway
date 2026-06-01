@@ -68,6 +68,22 @@ When evaluating a website's credibility and quality:
 | **Purpose** | Why was it created? To inform, sell, persuade, or entertain? Is there bias? |
 | **Objectivity** | Is information presented fairly? Are multiple viewpoints shown? Any obvious bias? |
 
+```mermaid
+flowchart LR
+    EVAL["Is this source\ntrustworthy?"]
+    EVAL --> A["A — AUTHORITY\nWho wrote it?\nAre they qualified?"]
+    EVAL --> ACC["A — ACCURACY\nIs it correct?\nSources cited?"]
+    EVAL --> CUR["C — CURRENCY\nIs it current?\nWhen updated?"]
+    EVAL --> PUR["P — PURPOSE\nWhy created?\nInform or sell?"]
+    EVAL --> OBJ["O — OBJECTIVITY\nIs it biased?\nMultiple viewpoints?"]
+    style EVAL fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style A    fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ACC  fill:#6ee7b7,stroke:#10b981,color:#000
+    style CUR  fill:#fde68a,stroke:#f59e0b,color:#000
+    style PUR  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style OBJ  fill:#5eead4,stroke:#0d9488,color:#000
+```
+
 > [!TIP] Quick evaluation check
 > Check the URL: `.gov` = government; `.ac` or `.edu` = education; `.org` = organisation — generally more credible than `.com` for factual information
 
@@ -116,6 +132,25 @@ When evaluating a website's credibility and quality:
 | **PHP** | Server-side scripting — generates dynamic content from database |
 | **MySQL / SQL** | Database storing dynamic content |
 | **CMS** | Content Management System — allows non-technical editing (WordPress, Joomla) |
+
+```mermaid
+flowchart LR
+    subgraph CLIENT["Client-side (Browser)"]
+        HTML["HTML\nStructure"] --> CSS["CSS\nPresentation"]
+        CSS --> JS["JavaScript\nBehaviour"]
+    end
+    subgraph SERVER["Server-side (Web Server)"]
+        PHP["PHP\nDynamic pages"]
+        DB["MySQL\nDatabase"]
+        PHP <-->|"SQL queries"| DB
+    end
+    JS <-->|"HTTP / AJAX"| PHP
+    style HTML fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CSS  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style JS   fill:#fde68a,stroke:#f59e0b,color:#000
+    style PHP  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style DB   fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 ---
 

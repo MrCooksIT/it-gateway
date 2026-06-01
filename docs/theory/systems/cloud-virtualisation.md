@@ -13,9 +13,18 @@ Your files are on your phone, your laptop, and accessible from any computer in t
 
 Instead of owning hardware and software, you pay to use resources hosted elsewhere.
 
-```
-Traditional model: Buy server → Install software → Maintain it yourself
-Cloud model:       Connect to internet → Access service → Pay for what you use
+```mermaid
+flowchart LR
+    subgraph TRAD ["Traditional model"]
+        direction LR
+        T1["Buy server"] --> T2["Install software"] --> T3["Maintain it yourself"]
+    end
+    subgraph CLOUD ["Cloud model"]
+        direction LR
+        C1["Connect to\ninternet"] --> C2["Access service\nfrom provider"] --> C3["Pay only for\nwhat you use"]
+    end
+    style T3 fill:#f9a8d4,stroke:#ec4899,color:#000
+    style C3 fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 ---
@@ -111,11 +120,22 @@ Cloud model:       Connect to internet → Access service → Pay for what you u
 
 A single physical computer can run multiple **virtual machines (VMs)** simultaneously, each with its own OS and applications.
 
-```
-Physical Server (1 machine)
-├── Virtual Machine 1 — Windows Server 2022
-├── Virtual Machine 2 — Ubuntu Linux
-└── Virtual Machine 3 — Windows 10
+```mermaid
+flowchart TD
+    HW["Physical Server\none machine"]
+    HV["Hypervisor\n(manages VMs)"]
+    VM1["Virtual Machine 1\nWindows Server 2022"]
+    VM2["Virtual Machine 2\nUbuntu Linux"]
+    VM3["Virtual Machine 3\nWindows 10"]
+    HW --> HV
+    HV --> VM1
+    HV --> VM2
+    HV --> VM3
+    style HW  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style HV  fill:#fde68a,stroke:#f59e0b,color:#000
+    style VM1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style VM2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style VM3 fill:#f9a8d4,stroke:#ec4899,color:#000
 ```
 
 ---

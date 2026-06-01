@@ -21,11 +21,16 @@ Compare with our everyday decimal (base-10) system, which uses 10 digits (0–9)
 
 Each position in a binary number represents a **power of 2**:
 
-```
-Position:  8    7    6    5    4    3    2    1
-Value:    2⁷  2⁶  2⁵  2⁴  2³  2²  2¹  2⁰
-        = 128   64   32   16    8    4    2    1
-```
+<div class="itg-place-val">
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁷</div><div class="itg-pv-value">128</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁶</div><div class="itg-pv-value">64</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁵</div><div class="itg-pv-value">32</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁴</div><div class="itg-pv-value">16</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2³</div><div class="itg-pv-value">8</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2²</div><div class="itg-pv-value">4</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2¹</div><div class="itg-pv-value">2</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁰</div><div class="itg-pv-value">1</div></div>
+</div>
 
 ---
 
@@ -35,14 +40,20 @@ Value:    2⁷  2⁶  2⁵  2⁴  2³  2²  2¹  2⁰
 
 ### Worked Example: Convert `10110101` to decimal
 
-| Bit | 1 | 0 | 1 | 1 | 0 | 1 | 0 | 1 |
-|---|---|---|---|---|---|---|---|---|
-| Place value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-| × Bit | 128 | 0 | 32 | 16 | 0 | 4 | 0 | 1 |
+Highlight the **1** bits — only those place values count:
 
-Sum = 128 + 32 + 16 + 4 + 1 = **181**
+<div class="itg-place-val">
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁷</div><div class="itg-pv-value">128</div><div class="itg-pv-bit on">1</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁶</div><div class="itg-pv-value">64</div><div class="itg-pv-bit">0</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁵</div><div class="itg-pv-value">32</div><div class="itg-pv-bit on">1</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁴</div><div class="itg-pv-value">16</div><div class="itg-pv-bit on">1</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2³</div><div class="itg-pv-value">8</div><div class="itg-pv-bit">0</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2²</div><div class="itg-pv-value">4</div><div class="itg-pv-bit on">1</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2¹</div><div class="itg-pv-value">2</div><div class="itg-pv-bit">0</div></div>
+  <div class="itg-pv-cell"><div class="itg-pv-power">2⁰</div><div class="itg-pv-value">1</div><div class="itg-pv-bit on">1</div></div>
+</div>
 
-So `10110101₂ = 181₁₀`
+128 + 32 + 16 + 4 + 1 = **181**  → `10110101₂ = 181₁₀`
 
 ### Step-by-Step Method
 
@@ -65,6 +76,18 @@ So `10110101₂ = 181₁₀`
 ## Decimal → Binary Conversion
 
 **Method: Repeated Division by 2** (divide and record remainders)
+
+```mermaid
+flowchart TD
+    A["Start with decimal number"] --> B["Divide by 2"]
+    B --> C["Record the remainder\n(0 or 1)"]
+    C --> D{"Quotient = 0?"}
+    D -->|No| B
+    D -->|Yes| E["Read remainders\nBOTTOM to TOP\n= binary number"]
+    style A fill:#93c5fd,stroke:#3b82f6,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
+```
 
 ### Worked Example: Convert `45` to binary
 

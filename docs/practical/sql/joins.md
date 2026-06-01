@@ -9,6 +9,15 @@ Real databases split data across multiple tables to avoid duplication. A school 
 
 ## How It Works
 
+```mermaid
+flowchart LR
+    T1["tblStudents\nStudentID · Surname\nFirstName · Grade"] -->|"WHERE StudentID matches"| RES["Combined result\nSurname + Subject + Mark\nper matching row"]
+    T2["tblMarks\nMarkID · StudentID\nSubject · Mark"] -->|"WHERE StudentID matches"| RES
+    style T1  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style T2  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style RES fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 Four rules cover every multi-table query you will write:
 
 - List **all tables** in the `FROM` clause, separated by a comma.
@@ -34,8 +43,27 @@ Replace `LinkField` with the actual primary key / foreign key pair that connects
 
 **Tables:**
 
-`tblStudents`: StudentID (PK), Surname, FirstName, Grade  
-`tblMarks`: MarkID (PK), StudentID (FK), Subject, Mark
+<div class="itg-erd-wrap">
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr12">tblStudents</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> StudentID</div>
+    <div class="itg-erd-row">Surname</div>
+    <div class="itg-erd-row">FirstName</div>
+    <div class="itg-erd-row">Grade</div>
+  </div>
+  <div class="itg-erd-connector">
+    <div class="itg-erd-line"></div>
+    <div class="itg-erd-rel">1 : M</div>
+    <div style="font-size:0.65rem;color:var(--vp-c-text-2);text-align:center;margin-top:0.3rem">linked by<br>StudentID</div>
+  </div>
+  <div class="itg-erd-table">
+    <div class="itg-erd-thead gr12">tblMarks</div>
+    <div class="itg-erd-row"><span class="itg-erd-pk">PK</span> MarkID</div>
+    <div class="itg-erd-row"><span class="itg-erd-fk">FK</span> StudentID</div>
+    <div class="itg-erd-row">Subject</div>
+    <div class="itg-erd-row">Mark</div>
+  </div>
+</div>
 
 The two tables are linked by `StudentID`. It is the primary key in `tblStudents` and the foreign key in `tblMarks`.
 

@@ -47,8 +47,17 @@ This means South African school learners who hack overseas websites can be prose
 
 Ethical hackers use a structured methodology to test security systems:
 
-```
-Reconnaissance → Scanning → Gaining Access → Maintaining Access → Reporting
+```mermaid
+flowchart LR
+    R["Reconnaissance\nGather info\nabout target"] --> S["Scanning\nPorts, services\nvulnerabilities"]
+    S --> G["Gaining Access\nExploit\nvulnerabilities"]
+    G --> M["Maintaining Access\nTest persistence\nof foothold"]
+    M --> REP["Reporting\nDocument findings\n+ recommendations"]
+    style R   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style S   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style G   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style M   fill:#fde68a,stroke:#f59e0b,color:#000
+    style REP fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Phase | What happens |

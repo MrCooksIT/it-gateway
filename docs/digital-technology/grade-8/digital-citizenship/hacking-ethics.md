@@ -16,6 +16,19 @@ But are all hackers bad? The answer is no. The term "hacker" covers a wide spect
 
 ## Types of Hackers
 
+```mermaid
+flowchart LR
+    WH["White Hat\nEthical Hacker"] -->|"works WITH permission"| LEGAL["LEGAL\nPenetration testing\nBug bounty programmes"]
+    GH["Grey Hat"] -->|"no permission\nbut reports findings"| IFFY["Often ILLEGAL\neven without malicious intent"]
+    BH["Black Hat\nCriminal"] -->|"no permission\n+ harmful intent"| CRIM["CRIMINAL\nUp to 20 yrs prison\nFines up to $15 000"]
+    style WH   fill:#6ee7b7,stroke:#10b981,color:#000
+    style GH   fill:#fde68a,stroke:#f59e0b,color:#000
+    style BH   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style LEGAL fill:#6ee7b7,stroke:#10b981,color:#000
+    style IFFY  fill:#fde68a,stroke:#f59e0b,color:#000
+    style CRIM  fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ### Black Hat Hackers
 
 Black hat hackers are the criminals of the hacking world. They break into secure networks without permission in order to:

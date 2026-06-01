@@ -13,12 +13,13 @@ A **DBMS** (Database Management System) is software that creates, manages, and c
 
 The DBMS sits between the user/application and the raw data:
 
-```
-User / Application
-       ↓
-     DBMS
-       ↓
-   Database (stored data files)
+```mermaid
+flowchart TD
+    APP["User / Application"] --> DBMS["DBMS\nDatabase Management System"]
+    DBMS --> DB["Database\nstored data files"]
+    style APP  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DBMS fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DB   fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Functions of a DBMS:**
@@ -153,6 +154,21 @@ When a SQL query is submitted to a DBMS:
 3. **Execution engine** — retrieves data according to the plan
 4. **Buffer manager** — manages data in memory vs disk
 5. **Result** — returned to the application
+
+```mermaid
+flowchart LR
+    Q["SQL query\nsubmitted"] --> PARSE["Parser\ncheck syntax"]
+    PARSE --> OPT["Query optimiser\nbest execution plan"]
+    OPT --> EXEC["Execution engine\nretrieve data"]
+    EXEC --> BUF["Buffer manager\nmemory / disk"]
+    BUF --> RES["Result set\nreturned to app"]
+    style Q     fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PARSE fill:#f9a8d4,stroke:#ec4899,color:#000
+    style OPT   fill:#fde68a,stroke:#f59e0b,color:#000
+    style EXEC  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style BUF   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style RES   fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 **Indexes:**
 - An **index** speeds up data retrieval, similar to a book index

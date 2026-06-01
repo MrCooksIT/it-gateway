@@ -12,6 +12,22 @@ SELECT retrieves data. But databases also need to receive new data, update exist
 | `UPDATE` | Modify existing rows |
 | `DELETE` | Remove rows from a table |
 
+```mermaid
+flowchart TD
+    Q{"What do you\nneed to do?"} 
+    Q -->|"Add a new record"| INS["INSERT INTO\ntable (cols)\nVALUES (vals)"]
+    Q -->|"Change an\nexisting record"| UPD["UPDATE table\nSET col = val\nWHERE condition"]
+    Q -->|"Remove a record"| DEL["DELETE FROM table\nWHERE condition"]
+    UPD --> W1["⚠ Always use WHERE\nor ALL rows change!"]
+    DEL --> W2["⚠ Always use WHERE\nor ALL rows deleted!"]
+    style INS fill:#6ee7b7,stroke:#10b981,color:#000
+    style UPD fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DEL fill:#f9a8d4,stroke:#ec4899,color:#000
+    style W1  fill:#fde68a,stroke:#f59e0b,color:#000
+    style W2  fill:#fde68a,stroke:#f59e0b,color:#000
+    style Q   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+```
+
 ---
 
 ## INSERT — Adding New Rows

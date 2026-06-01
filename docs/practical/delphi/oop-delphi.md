@@ -9,6 +9,28 @@ This page is the practical guide to implementing classes in Delphi. If you need 
 
 ## Class Structure in Delphi
 
+Every class in Delphi has two parts — the **declaration** (like a recipe) and the **implementation** (the actual cooking):
+
+<div class="itg-class-diagram">
+  <div class="itg-class-hdr">TProduct</div>
+  <div class="itg-class-section private">
+    <div class="itg-class-section-lbl">private — hidden from outside</div>
+    <div class="itg-class-row">sName : String</div>
+    <div class="itg-class-row">rPrice : Real</div>
+    <div class="itg-class-row">iQuantity : Integer</div>
+  </div>
+  <div class="itg-class-section public">
+    <div class="itg-class-section-lbl">public — accessible from outside</div>
+    <div class="itg-class-row method">constructor Create(sN; rP; iQ)</div>
+    <div class="itg-class-row method">destructor Destroy</div>
+    <div class="itg-class-row method">function GetName : String</div>
+    <div class="itg-class-row method">function GetPrice : Real</div>
+    <div class="itg-class-row method">procedure SetPrice(rP)</div>
+    <div class="itg-class-row method">function TotalValue : Real</div>
+    <div class="itg-class-row method">procedure ApplyDiscount(rPct)</div>
+  </div>
+</div>
+
 Every class in Delphi has two parts:
 
 1. **Declaration** — in the `type` section of the unit (usually in the same section as `TForm1`)

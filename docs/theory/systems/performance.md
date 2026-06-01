@@ -52,6 +52,24 @@ This table is the core of the performance topic. Every cell is examinable.
 
 **A bottleneck occurs when one slow component limits the performance of all other components.** The system can only run as fast as its slowest part.
 
+```mermaid
+flowchart LR
+    subgraph GOOD ["Balanced system — all fast"]
+        direction LR
+        C1["CPU\n3.6 GHz"] --> R1["RAM\nDDR5 32 GB"] --> S1["NVMe SSD\n3 500 MB/s"]
+    end
+    subgraph BAD ["Bottleneck — HDD limits everything"]
+        direction LR
+        C2["CPU\n3.6 GHz"] --> R2["RAM\nDDR5 32 GB"] --> H2["HDD\n5 400 RPM\nBOTTLENECK"]
+    end
+    style C1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style R1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style S1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style C2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style R2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style H2 fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 > Example: A powerful R20 000 CPU paired with a slow 5400 RPM hard drive will still feel sluggish — the CPU sits idle waiting for the hard drive to load data. Upgrading the CPU further won't help. Replacing the hard drive with an SSD would dramatically improve the experience.
 
 Storage speed matters most when:

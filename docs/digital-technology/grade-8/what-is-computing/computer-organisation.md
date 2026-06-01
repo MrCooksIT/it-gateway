@@ -166,6 +166,27 @@ There are two main ways a computer connects to a router:
 
 ---
 
+```mermaid
+flowchart LR
+    IN["INPUT DEVICES\nKeyboard · Mouse\nCamera · Microphone\nSensors"]
+    PROC["CPU\nProcesses\ninstructions"]
+    OUT["OUTPUT DEVICES\nMonitor · Speakers\nPrinter"]
+    PRI["Primary Storage\nRAM — fast, temporary"]
+    SEC["Secondary Storage\nHDD · USB · CD\npermanent"]
+    NET["Network Devices\nRouter · Wi-Fi card\nEthernet port"]
+    IN --> PROC
+    PROC --> OUT
+    PROC <--> PRI
+    PROC <--> SEC
+    PROC <--> NET
+    style IN   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PROC fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style OUT  fill:#6ee7b7,stroke:#10b981,color:#000
+    style PRI  fill:#fde68a,stroke:#f59e0b,color:#000
+    style SEC  fill:#fde68a,stroke:#f59e0b,color:#000
+    style NET  fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ## 5. Summary: Categories of Computer Components
 
 | Category | What it does | Examples |

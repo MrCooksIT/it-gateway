@@ -24,6 +24,28 @@ The operating system doesn't just provide a desktop — it is constantly working
 
 The OS organises all data on storage devices using a **hierarchical folder structure** (directory tree).
 
+```mermaid
+graph TD
+    ROOT["C:\\  (root)"] --> USERS["Users"]
+    ROOT --> PROG["Program Files"]
+    ROOT --> WIN["Windows"]
+    USERS --> FINN["Finn"]
+    FINN --> DOCS["Documents"]
+    FINN --> DOWN["Downloads"]
+    DOCS --> F1["notes.txt"]
+    DOCS --> F2["report.docx"]
+    DOWN --> F3["setup.exe"]
+    style ROOT fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style USERS fill:#93c5fd,stroke:#3b82f6,color:#000
+    style FINN  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style DOCS  fill:#6ee7b7,stroke:#10b981,color:#000
+    style DOWN  fill:#6ee7b7,stroke:#10b981,color:#000
+    style PROG  fill:#fde68a,stroke:#f59e0b,color:#000
+    style WIN   fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
+**Path to `notes.txt`:** `C:\Users\Finn\Documents\notes.txt`
+
 ### File System Concepts
 
 | Concept | Explanation |

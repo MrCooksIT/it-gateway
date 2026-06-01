@@ -136,6 +136,22 @@ We are more connected today than we have ever been in human history, and that is
 
 ## Summary Timeline
 
+```mermaid
+flowchart LR
+    A["2600 BC\nChinese Abacus\nFirst computing tool"] --> B["1910\nAnalytical Engine\nFirst mechanical calculator"]
+    B --> C["1936\nZ1 by Konrad Zuse\nFirst binary digital computer\n(uses electricity + binary)"]
+    C --> D["1946\nENIAC\nFirst general-purpose\nelectronic computer"]
+    D --> E["1950\nUNIVAC\nFirst modern computer\nkeyboard + disk memory"]
+    E --> F["1975\nFirst portable computer\n55 lbs · 5-inch screen\n64 KB memory"]
+    F --> G["Today\nSmartphones, tablets\ncomputers in everything\nMoore's Law doubling every 2 yrs"]
+    style A fill:#6ee7b7,stroke:#10b981,color:#000
+    style C fill:#93c5fd,stroke:#3b82f6,color:#000
+    style D fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style E fill:#fde68a,stroke:#f59e0b,color:#000
+    style F fill:#f9a8d4,stroke:#ec4899,color:#000
+    style G fill:#5eead4,stroke:#0d9488,color:#000
+```
+
 | Date | Event | Significance |
 |------|-------|-------------|
 | 2600 BC | Chinese Abacus | First computing tool |

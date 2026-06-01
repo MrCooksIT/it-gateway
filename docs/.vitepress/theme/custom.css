@@ -340,3 +340,807 @@
   .itg-grade-cards { grid-template-columns: 1fr; }
   .itg-home-section { padding: 1.5rem 1rem 3rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VISUAL COMPONENTS — diagrams, sort tables, component grids
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Array index visualizer ── */
+.itg-array-vis {
+  display: flex;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  gap: 0;
+}
+.itg-array-cell { text-align: center; flex: 1; min-width: 52px; }
+.itg-array-box {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--itg-gr10);
+  border-right: none;
+  padding: 0.65rem 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--itg-gr10);
+}
+.itg-array-cell:first-child .itg-array-box { border-radius: 6px 0 0 6px; }
+.itg-array-cell:last-child  .itg-array-box { border-right: 1px solid var(--itg-gr10); border-radius: 0 6px 6px 0; }
+.itg-array-idx {
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.3rem;
+  font-family: 'Courier New', monospace;
+}
+.itg-array-name {
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  margin-bottom: 0.25rem;
+  font-family: 'Courier New', monospace;
+}
+
+/* ── Sort step-by-step table ── */
+.itg-sort-wrap {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem 1rem;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+}
+.itg-sort-title {
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--itg-gr11);
+  margin-bottom: 1rem;
+}
+.itg-sort-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+.itg-sort-lbl {
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  min-width: 3.75rem;
+  text-align: right;
+  padding-right: 0.5rem;
+  flex-shrink: 0;
+}
+.itg-sort-lbl.done { color: var(--itg-gr8); font-weight: 700; }
+.itg-sort-cell {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-1);
+  border: 1px solid var(--vp-c-border);
+  flex-shrink: 0;
+}
+.itg-sort-cell.swapped {
+  background: rgba(196, 181, 253, 0.18);
+  border-color: var(--itg-gr11);
+  color: var(--itg-gr11);
+}
+.itg-sort-cell.locked {
+  background: rgba(110, 231, 183, 0.18);
+  border-color: var(--itg-gr8);
+  color: var(--itg-gr8);
+}
+.itg-sort-note {
+  font-size: 0.7rem;
+  color: var(--vp-c-text-2);
+  margin-left: 0.4rem;
+}
+.itg-sort-legend {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+}
+.itg-sort-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--vp-c-text-2);
+}
+.itg-sort-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.itg-swatch-swap { background: rgba(196,181,253,.18); border: 1px solid var(--itg-gr11); }
+.itg-swatch-lock { background: rgba(110,231,183,.18); border: 1px solid var(--itg-gr8); }
+
+/* ── Delphi IDE layout diagram ── */
+.itg-ide-wrap {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.25rem 0;
+  font-size: 0.78rem;
+}
+.itg-ide-titlebar {
+  background: var(--vp-c-bg-mute);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  border-bottom: 1px solid var(--vp-c-border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.itg-ide-menubar {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.72rem;
+  color: var(--vp-c-text-1);
+  border-bottom: 1px solid var(--vp-c-border);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--vp-c-bg-soft);
+}
+.itg-ide-body {
+  display: grid;
+  grid-template-columns: 155px 1fr 145px;
+  min-height: 200px;
+}
+.itg-ide-col {
+  border-right: 1px solid var(--vp-c-border);
+  display: flex;
+  flex-direction: column;
+}
+.itg-ide-col:last-child { border-right: none; border-left: 1px solid var(--vp-c-border); }
+.itg-ide-col-hd {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  border-bottom: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
+}
+.itg-ide-col-body {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.7rem;
+  color: var(--vp-c-text-2);
+  flex: 1;
+  line-height: 1.7;
+}
+.itg-ide-center {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.itg-ide-form-zone {
+  flex: 1;
+  margin: 0.75rem;
+  border: 2px dashed var(--itg-gr10);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  min-height: 130px;
+}
+.itg-ide-form-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--itg-gr10);
+  letter-spacing: .04em;
+}
+.itg-ide-mock-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.itg-ide-mock-btn {
+  background: var(--itg-gr10);
+  color: #0d1117;
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+.itg-ide-mock-lbl {
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+}
+.itg-ide-mock-edt {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-text-2);
+  border-radius: 3px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+  width: 90px;
+}
+.itg-ide-statusbar {
+  background: var(--itg-gr10);
+  color: #0d1117;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ── Component visual reference grid ── */
+.itg-comp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(138px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.itg-comp-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+}
+.itg-comp-preview {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.itg-comp-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--itg-gr10);
+  font-family: 'Courier New', monospace;
+  margin-bottom: 0.15rem;
+}
+.itg-comp-desc {
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+}
+/* Component preview primitives */
+.cp-form  { width:68px; height:40px; background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; font-size:0.55rem; color:var(--vp-c-text-2); display:flex; align-items:flex-start; padding:0.2rem 0.3rem; }
+.cp-label { font-size:0.82rem; color:var(--vp-c-text-1); }
+.cp-button { background:var(--itg-gr10); color:#0d1117; border-radius:4px; padding:0.3rem 0.7rem; font-size:0.75rem; font-weight:700; }
+.cp-edit  { background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; padding:0.2rem 0.4rem; font-size:0.68rem; color:var(--vp-c-text-2); width:96px; }
+.cp-memo  { background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; padding:0.2rem 0.4rem; font-size:0.6rem; color:var(--vp-c-text-2); width:88px; height:38px; overflow:hidden; line-height:1.5; }
+.cp-image { width:72px; height:40px; background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; display:flex; align-items:center; justify-content:center; font-size:0.62rem; color:var(--vp-c-text-2); }
+.cp-chk   { display:flex; align-items:center; gap:0.3rem; font-size:0.74rem; color:var(--vp-c-text-1); }
+.cp-chkbox { width:13px; height:13px; border:1px solid var(--vp-c-text-2); border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; color:var(--itg-gr8); flex-shrink:0; }
+.cp-radio { display:flex; flex-direction:column; gap:0.18rem; }
+.cp-ritem { display:flex; align-items:center; gap:0.3rem; font-size:0.68rem; color:var(--vp-c-text-1); }
+.cp-rdot  { width:11px; height:11px; border-radius:50%; border:1px solid var(--vp-c-text-2); position:relative; flex-shrink:0; }
+.cp-rdot.on::after { content:''; position:absolute; inset:2px; border-radius:50%; background:var(--itg-gr10); }
+.cp-panel { width:86px; height:40px; border:2px dashed var(--itg-gr11); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:0.6rem; color:var(--itg-gr11); }
+.cp-list  { width:76px; height:40px; background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; overflow:hidden; }
+.cp-litem { padding:0.08rem 0.3rem; font-size:0.6rem; color:var(--vp-c-text-2); }
+.cp-litem.on { background:var(--itg-gr10); color:#0d1117; }
+.cp-combo { background:var(--vp-c-bg-mute); border:1px solid var(--vp-c-text-2); border-radius:3px; padding:0.18rem 0.35rem; font-size:0.68rem; color:var(--vp-c-text-2); width:96px; display:flex; justify-content:space-between; align-items:center; }
+
+/* ── Binary / hex place-value chart ── */
+.itg-place-val {
+  display: flex;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  gap: 0;
+}
+.itg-pv-cell { text-align: center; flex: 1; min-width: 48px; }
+.itg-pv-power {
+  font-size: 0.7rem;
+  color: var(--vp-c-text-2);
+  padding: 0.25rem 0.2rem;
+  font-family: 'Courier New', monospace;
+  border: 1px solid var(--vp-c-border);
+  border-right: none;
+  background: var(--vp-c-bg-mute);
+}
+.itg-pv-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--itg-gr10);
+  padding: 0.35rem 0.2rem;
+  border: 1px solid var(--itg-gr10);
+  border-right: none;
+  border-top: none;
+}
+.itg-pv-bit {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  padding: 0.35rem 0.2rem;
+  border: 1px solid var(--vp-c-border);
+  border-right: none;
+  border-top: none;
+  background: var(--vp-c-bg-soft);
+}
+.itg-pv-bit.on {
+  color: var(--itg-gr12);
+  background: rgba(249,168,212,.1);
+  border-color: var(--itg-gr12);
+}
+.itg-pv-cell:first-child .itg-pv-power,
+.itg-pv-cell:first-child .itg-pv-value,
+.itg-pv-cell:first-child .itg-pv-bit { border-radius: 6px 0 0 0; }
+.itg-pv-cell:first-child .itg-pv-bit { border-radius: 0 0 0 6px; }
+.itg-pv-cell:last-child .itg-pv-power,
+.itg-pv-cell:last-child .itg-pv-value,
+.itg-pv-cell:last-child .itg-pv-bit {
+  border-right: 1px solid var(--vp-c-border);
+  border-radius: 0 6px 0 0;
+}
+.itg-pv-cell:last-child .itg-pv-value { border-right-color: var(--itg-gr10); }
+.itg-pv-cell:last-child .itg-pv-bit  { border-radius: 0 0 6px 0; }
+.itg-pv-cell:last-child .itg-pv-bit.on { border-right-color: var(--itg-gr12); }
+
+/* Hex nibble grouping visual */
+.itg-nibble-row {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.itg-nibble {
+  text-align: center;
+}
+.itg-nibble-bits {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.25rem;
+}
+.itg-nibble-bit {
+  width: 28px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+}
+.itg-nibble-result {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--itg-gr11);
+  text-align: center;
+}
+.itg-nibble-sep {
+  font-size: 1.5rem;
+  color: var(--vp-c-text-2);
+  padding-bottom: 0.5rem;
+}
+.itg-nibble-grp1 .itg-nibble-bit { border-color: var(--itg-gr10); color: var(--itg-gr10); }
+.itg-nibble-grp2 .itg-nibble-bit { border-color: var(--itg-gr11); color: var(--itg-gr11); }
+.itg-nibble-grp3 .itg-nibble-bit { border-color: var(--itg-gr12); color: var(--itg-gr12); }
+.itg-nibble-grp1 .itg-nibble-result { color: var(--itg-gr10); }
+.itg-nibble-grp2 .itg-nibble-result { color: var(--itg-gr11); }
+.itg-nibble-grp3 .itg-nibble-result { color: var(--itg-gr12); }
+
+/* ── 2D Array grid ── */
+.itg-2d-grid-wrap {
+  margin: 1.25rem 0;
+  overflow-x: auto;
+}
+.itg-2d-grid {
+  display: inline-grid;
+  gap: 3px;
+  margin-left: 2rem;
+}
+.itg-2d-hdr {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--itg-gr11);
+  text-align: center;
+  padding: 0.2rem;
+  font-family: 'Courier New', monospace;
+}
+.itg-2d-row-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--itg-gr10);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.4rem;
+  font-family: 'Courier New', monospace;
+}
+.itg-2d-cell {
+  width: 44px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 5px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+}
+.itg-2d-cell.row-hl  { background: rgba(147,197,253,.12); border-color: var(--itg-gr10); color: var(--itg-gr10); }
+.itg-2d-cell.col-hl  { background: rgba(196,181,253,.12); border-color: var(--itg-gr11); color: var(--itg-gr11); }
+.itg-2d-cell.diag-hl { background: rgba(249,168,212,.12); border-color: var(--itg-gr12); color: var(--itg-gr12); }
+
+/* ── Network topology diagrams ── */
+.itg-topo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.itg-topo-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+.itg-topo-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.75rem;
+}
+.itg-topo-card svg {
+  display: block;
+  margin: 0 auto;
+}
+.itg-topo-node {
+  fill: var(--vp-c-bg-mute);
+  stroke: var(--itg-gr10);
+  stroke-width: 1.5;
+}
+.itg-topo-hub {
+  fill: var(--vp-c-bg-mute);
+  stroke: var(--itg-gr11);
+  stroke-width: 2;
+}
+.itg-topo-line { stroke: #8b949e; stroke-width: 1.5; }
+.itg-topo-bus  { stroke: var(--itg-gr10); stroke-width: 2.5; }
+.itg-node-text { font-size: 7px; fill: var(--vp-c-text-2); font-family: system-ui; }
+.itg-hub-text  { font-size: 7px; fill: var(--itg-gr11); font-family: system-ui; }
+.itg-topo-adv {
+  font-size: 0.72rem;
+  color: var(--itg-gr8);
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.itg-topo-dis {
+  font-size: 0.72rem;
+  color: var(--itg-gr12);
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+/* ── ERD / Relationship diagrams ── */
+.itg-erd-wrap {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.itg-erd-table {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+.itg-erd-thead {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0d1117;
+}
+.itg-erd-thead.gr10 { background: var(--itg-gr10); }
+.itg-erd-thead.gr11 { background: var(--itg-gr11); }
+.itg-erd-thead.gr12 { background: var(--itg-gr12); }
+.itg-erd-row {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-1);
+  border-top: 1px solid var(--vp-c-border);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.itg-erd-pk {
+  font-size: 0.62rem;
+  font-weight: 700;
+  background: rgba(249,168,212,.2);
+  color: var(--itg-gr12);
+  border-radius: 3px;
+  padding: 0.05rem 0.3rem;
+  flex-shrink: 0;
+}
+.itg-erd-fk {
+  font-size: 0.62rem;
+  font-weight: 700;
+  background: rgba(110,231,183,.2);
+  color: var(--itg-gr8);
+  border-radius: 3px;
+  padding: 0.05rem 0.3rem;
+  flex-shrink: 0;
+}
+.itg-erd-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  flex-shrink: 0;
+}
+.itg-erd-line {
+  width: 40px;
+  height: 2px;
+  background: var(--vp-c-text-2);
+  position: relative;
+}
+.itg-erd-rel {
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.3rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ── Normalisation before/after comparison ── */
+.itg-norm-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.itg-norm-box {
+  background: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+}
+.itg-norm-hdr {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+.itg-norm-hdr.bad  { background: rgba(249,168,212,.15); color: var(--itg-gr12); border-bottom: 1px solid rgba(249,168,212,.3); }
+.itg-norm-hdr.good { background: rgba(110,231,183,.15); color: var(--itg-gr8);  border-bottom: 1px solid rgba(110,231,183,.3); }
+.itg-norm-table {
+  width: 100%;
+  font-size: 0.72rem;
+  border-collapse: collapse;
+}
+.itg-norm-table th {
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-mute);
+  border-bottom: 1px solid var(--vp-c-border);
+}
+.itg-norm-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+}
+.itg-norm-table tr:last-child td { border-bottom: none; }
+.itg-norm-table .dup { color: var(--itg-gr12); font-style: italic; }
+.itg-norm-table .fixed { color: var(--itg-gr8); }
+.itg-norm-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--vp-c-text-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+
+/* Responsive tweaks for visual components */
+/* ── SQL clause template ── */
+.itg-sql-template {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 1.25rem 0;
+  font-family: var(--vp-font-family-mono);
+}
+.itg-sql-clause {
+  padding: 0.38rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: #0d1117;
+  font-weight: 600;
+}
+.itg-sql-select { background: var(--itg-gr12); }
+.itg-sql-from   { background: var(--itg-gr11); }
+.itg-sql-where  { background: var(--itg-gr10); }
+.itg-sql-group  { background: rgba(110,231,183,0.6); color: var(--vp-c-text-1); }
+.itg-sql-having { background: rgba(94,234,212,0.5); color: var(--vp-c-text-1); }
+.itg-sql-order  { background: rgba(147,197,253,0.5); color: var(--vp-c-text-1); }
+.itg-sql-opt {
+  font-size: 0.65rem;
+  opacity: 0.75;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+/* ── TCP/IP layer stack ── */
+.itg-tcpip {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 500px;
+  margin: 1.25rem 0;
+}
+.itg-tcpip-layer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+}
+.itg-tcpip-name {
+  font-weight: 700;
+  font-size: 0.78rem;
+  width: 130px;
+  flex-shrink: 0;
+  color: #0d1117;
+}
+.itg-tcpip-proto {
+  font-size: 0.72rem;
+  color: #0d1117;
+  opacity: 0.85;
+}
+.itg-tcpip-layer.app       { background: var(--itg-gr12); }
+.itg-tcpip-layer.transport { background: var(--itg-gr11); }
+.itg-tcpip-layer.internet  { background: var(--itg-gr10); }
+.itg-tcpip-layer.netaccess { background: var(--itg-gr8); }
+
+/* ── Computer model diagram ── */
+.itg-cmodel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.itg-cmodel-row2 {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 0 1.25rem;
+  flex-wrap: wrap;
+}
+.itg-cmodel-box {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.itg-cm-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--vp-c-text-1);
+}
+.itg-cm-ex {
+  font-size: 0.68rem;
+  color: var(--vp-c-text-2);
+  margin-top: 0.2rem;
+}
+.itg-cm-arrow {
+  font-size: 1.3rem;
+  color: var(--vp-c-text-2);
+  flex-shrink: 0;
+}
+.itg-cm-in    { border-top: 3px solid var(--itg-gr10); }
+.itg-cm-proc  { border-top: 3px solid var(--itg-gr12); }
+.itg-cm-out   { border-top: 3px solid var(--itg-gr11); }
+.itg-cm-store { border-top: 3px solid var(--itg-gr8); }
+.itg-cm-comm  { border-top: 3px solid var(--itg-brand); }
+
+/* ── OOP four pillars ── */
+.itg-oop-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.itg-oop-pillar {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+.itg-oop-pillar:nth-child(1) { border-top: 3px solid var(--itg-gr10); }
+.itg-oop-pillar:nth-child(2) { border-top: 3px solid var(--itg-gr11); }
+.itg-oop-pillar:nth-child(3) { border-top: 3px solid var(--itg-gr12); }
+.itg-oop-pillar:nth-child(4) { border-top: 3px solid var(--itg-brand); }
+.itg-oop-pillar-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.3rem;
+}
+.itg-oop-pillar-desc {
+  font-size: 0.72rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.4;
+}
+
+/* ── UML-style class diagram ── */
+.itg-class-diagram {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 220px;
+  margin: 1.25rem 0;
+}
+.itg-class-hdr {
+  background: var(--itg-gr11);
+  color: #0d1117;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.45rem 1rem;
+}
+.itg-class-section {
+  border-top: 1px solid var(--vp-c-border);
+}
+.itg-class-section-lbl {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  padding: 0.3rem 0.75rem 0.1rem;
+  color: var(--vp-c-text-2);
+}
+.itg-class-row {
+  padding: 0.22rem 0.75rem;
+  font-size: 0.76rem;
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-mono);
+}
+.itg-class-row.method { color: var(--itg-gr10); }
+.itg-class-section.private .itg-class-section-lbl { color: var(--itg-gr12); }
+.itg-class-section.public  .itg-class-section-lbl { color: var(--itg-gr8); }
+
+@media (max-width: 600px) {
+  .itg-ide-body { grid-template-columns: 1fr; }
+  .itg-ide-col  { border-right: none; border-bottom: 1px solid var(--vp-c-border); }
+  .itg-ide-col:last-child { border-left: none; }
+  .itg-comp-grid { grid-template-columns: repeat(auto-fill, minmax(120px,1fr)); }
+  .itg-topo-grid { grid-template-columns: 1fr; }
+  .itg-norm-compare { grid-template-columns: 1fr; }
+  .itg-erd-wrap { flex-direction: column; }
+  .itg-erd-connector { flex-direction: row; padding: 0.5rem 0; }
+  .itg-erd-line { width: 2px; height: 30px; }
+  .itg-oop-pillars { grid-template-columns: 1fr; }
+}

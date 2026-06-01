@@ -23,18 +23,20 @@ It addresses:
 
 The **SDLC** is the structured process for planning, creating, testing, and deploying software.
 
-```
-1. Requirements analysis
-       ↓
-2. System design
-       ↓
-3. Implementation (coding)
-       ↓
-4. Testing
-       ↓
-5. Deployment
-       ↓
-6. Maintenance
+```mermaid
+flowchart TD
+    A["1. Requirements Analysis\nGather + document user needs"] --> B
+    B["2. System Design\nArchitecture, database, interfaces"] --> C
+    C["3. Implementation\nWrite the code"] --> D
+    D["4. Testing\nFind and fix bugs"] --> E
+    E["5. Deployment\nRelease to users"] --> F
+    F["6. Maintenance\nFix, update, improve"]
+    style A fill:#93c5fd,stroke:#3b82f6,color:#000
+    style B fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style C fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
+    style E fill:#f9a8d4,stroke:#ec4899,color:#000
+    style F fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 ### Phase Details
@@ -91,10 +93,15 @@ No going back — like water falling; once you've passed a phase, you don't retu
 
 **Agile** is an iterative, flexible approach where software is developed in short cycles called **sprints** (usually 1–4 weeks).
 
-```
-Plan → Design → Build → Test → Review → (repeat)
-         ↑________________________________↓
-                  Sprint cycle
+```mermaid
+flowchart LR
+    P["Plan"] --> D["Design"]
+    D --> B["Build"]
+    B --> T["Test"]
+    T --> R["Review\n& Release"]
+    R -->|next sprint| P
+    style P fill:#93c5fd,stroke:#3b82f6,color:#000
+    style R fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 After each sprint, a working piece of software is delivered and reviewed. Requirements can change between sprints.

@@ -28,6 +28,18 @@ The internet has moved almost everything online — banking, shopping, collabora
 
 **Cloud storage** saves files on remote servers, accessible from any internet-connected device.
 
+```mermaid
+flowchart TD
+    CLOUD["CLOUD COMPUTING\nServices delivered over the internet"]
+    CLOUD --> SAAS["SaaS — Software as a Service\nReady-to-use applications\nGmail · Google Docs · Netflix"]
+    CLOUD --> PAAS["PaaS — Platform as a Service\nDevelopment environment\nGoogle App Engine · Heroku"]
+    CLOUD --> IAAS["IaaS — Infrastructure as a Service\nVirtual hardware\nAWS · Microsoft Azure"]
+    style CLOUD fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style SAAS  fill:#6ee7b7,stroke:#10b981,color:#000
+    style PAAS  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style IAAS  fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 | Service | Provider | Free Storage |
 |---|---|---|
 | Google Drive | Google | 15 GB |
@@ -91,8 +103,18 @@ The internet has moved almost everything online — banking, shopping, collabora
 
 ### How Online Payments Work:
 
-```
-Customer → Checkout → Payment Gateway → Bank → Authorisation → Merchant
+```mermaid
+flowchart LR
+    CUST["Customer\nchecks out"] --> PG["Payment\nGateway"]
+    PG -->|"authorisation\nrequest"| BANK["Customer's\nBank"]
+    BANK -->|"approve / decline"| PG
+    PG --> MERCH["Merchant\nnotified"]
+    MERCH --> CONF["Order confirmed\nor declined"]
+    style CUST  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PG    fill:#fde68a,stroke:#f59e0b,color:#000
+    style BANK  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style MERCH fill:#f9a8d4,stroke:#ec4899,color:#000
+    style CONF  fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Security in e-commerce:**

@@ -73,6 +73,20 @@ The strong passwords are clearly more complex. When creating your own passwords,
 
 Even a strong password can benefit from an extra layer of protection. **Two-factor authentication** (also called two-step verification) adds a second step to the login process.
 
+```mermaid
+flowchart LR
+    LOG["Enter username\n+ password\n(factor 1)"] --> CHK{"Password\ncorrect?"}
+    CHK -->|NO| DENY["Access denied"]
+    CHK -->|YES| F2["Second factor required\nSMS PIN · App code\nSecurity question"]
+    F2 --> CHK2{"Factor 2\ncorrect?"}
+    CHK2 -->|NO| DENY
+    CHK2 -->|YES| ACCESS["Access granted"]
+    style LOG    fill:#93c5fd,stroke:#3b82f6,color:#000
+    style F2     fill:#fde68a,stroke:#f59e0b,color:#000
+    style ACCESS fill:#6ee7b7,stroke:#10b981,color:#000
+    style DENY   fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 :::tip Key Term
 **Two-factor authentication (2FA)** is a two-step verification process that adds an extra layer of security to your account beyond just your password.
 :::

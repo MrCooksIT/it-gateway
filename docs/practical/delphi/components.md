@@ -7,6 +7,76 @@ A Delphi program's visual interface is built from **components** — pre-built v
 
 ---
 
+## The Delphi IDE Layout
+
+When you open Delphi you see four main areas. Knowing which panel does what is the first step to using it confidently.
+
+<div class="itg-ide-wrap">
+  <div class="itg-ide-titlebar">Project1 – Delphi 11 – Unit1</div>
+  <div class="itg-ide-menubar">
+    <span>File</span><span>Edit</span><span>Search</span><span>View</span>
+    <span>Refactor</span><span>Project</span><span>Run</span>
+    <span>Component</span><span>Tools</span><span>Help</span>
+  </div>
+  <div class="itg-ide-body">
+    <!-- Left: Structure + Object Inspector -->
+    <div class="itg-ide-col">
+      <div class="itg-ide-col-hd">Structure Panel</div>
+      <div class="itg-ide-col-body">
+        Form1<br>
+        &nbsp;btnCalculate<br>
+        &nbsp;lblResult<br>
+        &nbsp;edtInput
+      </div>
+      <div class="itg-ide-col-hd" style="margin-top:auto">Object Inspector</div>
+      <div class="itg-ide-col-body">
+        <strong style="color:var(--vp-c-text-1)">Properties</strong> | Events<br><br>
+        Caption → 'Calculate'<br>
+        Name → btnCalc<br>
+        Enabled → True<br>
+        Font.Size → 10
+      </div>
+    </div>
+    <!-- Centre: Form / Design Area -->
+    <div class="itg-ide-center">
+      <div class="itg-ide-form-zone">
+        <div class="itg-ide-form-label">FORM / DESIGN AREA — drag components here</div>
+        <div class="itg-ide-mock-row">
+          <div class="itg-ide-mock-lbl">TLabel — lblTitle</div>
+        </div>
+        <div class="itg-ide-mock-row">
+          <div class="itg-ide-mock-edt">TEdit — edtInput</div>
+        </div>
+        <div class="itg-ide-mock-row">
+          <div class="itg-ide-mock-btn">TButton</div>
+        </div>
+      </div>
+      <div class="itg-ide-statusbar">Press F12 to toggle Code View ↔ Design View</div>
+    </div>
+    <!-- Right: Tool Palette -->
+    <div class="itg-ide-col">
+      <div class="itg-ide-col-hd">Tool Palette</div>
+      <div class="itg-ide-col-body">
+        <strong style="color:var(--vp-c-text-1)">Standard</strong><br>
+        TLabel &nbsp;TButton<br>TEdit<br><br>
+        <strong style="color:var(--vp-c-text-1)">Additional</strong><br>
+        TMemo &nbsp;TImage<br>TPanel<br><br>
+        <strong style="color:var(--vp-c-text-1)">Data Controls</strong><br>
+        TDBGrid
+      </div>
+    </div>
+  </div>
+</div>
+
+| Panel | What it does |
+|---|---|
+| **Structure Panel** | Shows all components on the form in a tree |
+| **Form / Design Area** | Where you drag and arrange components visually |
+| **Object Inspector** | Set properties (Caption, Name, Color) and link events |
+| **Tool Palette** | Library of components — drag to the form to add them |
+
+---
+
 ## The Golden Rule: Naming Conventions
 
 Every component must be renamed with the correct **Hungarian notation prefix**. Examiners deduct marks for wrong or missing prefixes.
@@ -31,6 +101,107 @@ Every component must be renamed with the correct **Hungarian notation prefix**. 
 | TSaveDialog | `dlg` | `dlgSave` |
 | TScrollBar | `scr` | `scrVolume` |
 | TTrackBar | `trk` | `trkValue` |
+
+### Visual Component Reference
+
+Here is what the most common components look like on a form:
+
+<div class="itg-comp-grid">
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-form">Form1</div></div>
+    <div class="itg-comp-name">TForm</div>
+    <div class="itg-comp-desc">The window itself</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-label">Your Label Here</div></div>
+    <div class="itg-comp-name">TLabel</div>
+    <div class="itg-comp-desc">Displays text</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-button">Click Me</div></div>
+    <div class="itg-comp-name">TButton</div>
+    <div class="itg-comp-desc">Triggers code</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-edit">user types here</div></div>
+    <div class="itg-comp-name">TEdit</div>
+    <div class="itg-comp-desc">Single-line input</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview">
+      <div class="cp-memo">Line 1<br>Line 2<br>Line 3</div>
+    </div>
+    <div class="itg-comp-name">TMemo</div>
+    <div class="itg-comp-desc">Multi-line text</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-image">[ image ]</div></div>
+    <div class="itg-comp-name">TImage</div>
+    <div class="itg-comp-desc">Displays a picture</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview">
+      <div class="cp-radio">
+        <div class="cp-ritem"><div class="cp-rdot on"></div> Option A</div>
+        <div class="cp-ritem"><div class="cp-rdot"></div> Option B</div>
+        <div class="cp-ritem"><div class="cp-rdot"></div> Option C</div>
+      </div>
+    </div>
+    <div class="itg-comp-name">TRadioGroup</div>
+    <div class="itg-comp-desc">Pick one option</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview">
+      <div style="display:flex;flex-direction:column;gap:0.2rem">
+        <div class="cp-chk"><div class="cp-chkbox">✓</div> Accept terms</div>
+        <div class="cp-chk"><div class="cp-chkbox"></div> Subscribe</div>
+      </div>
+    </div>
+    <div class="itg-comp-name">TCheckBox</div>
+    <div class="itg-comp-desc">True / False tick</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-panel">Groups components</div></div>
+    <div class="itg-comp-name">TPanel</div>
+    <div class="itg-comp-desc">Groups components</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview">
+      <div class="cp-list">
+        <div class="cp-litem on">Item 1</div>
+        <div class="cp-litem">Item 2</div>
+        <div class="cp-litem">Item 3</div>
+      </div>
+    </div>
+    <div class="itg-comp-name">TListBox</div>
+    <div class="itg-comp-desc">List of items</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview">
+      <div class="cp-combo"><span>Select...</span><span>▾</span></div>
+    </div>
+    <div class="itg-comp-name">TComboBox</div>
+    <div class="itg-comp-desc">Dropdown selector</div>
+  </div>
+
+  <div class="itg-comp-card">
+    <div class="itg-comp-preview"><div class="cp-edit" style="width:76px;text-align:center">scroll down ↓</div></div>
+    <div class="itg-comp-name">TScrollBar</div>
+    <div class="itg-comp-desc">Scroll control</div>
+  </div>
+
+</div>
 
 ---
 

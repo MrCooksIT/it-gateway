@@ -19,18 +19,11 @@ Condition FALSE → execute path B
 
 The simplest decision — take an action if a condition is true; skip it if false.
 
-```
-        ┌──────────────┐
-        │  Condition?  │
-        └──────┬───────┘
-          YES  │   NO
-         ┌─────┘   └────┐
-         ▼              │
-   ┌──────────┐          │
-   │  Action  │          │
-   └────┬─────┘          │
-        └────────────────┘
-                ▼
+```mermaid
+flowchart TD
+    A{Condition<br>is TRUE?} -->|YES| B["Execute action"]
+    A -->|NO| C[Continue...]
+    B --> C
 ```
 
 **Pseudocode:**
@@ -52,18 +45,12 @@ if iMark >= 50 then
 
 Take one of two possible actions based on the condition.
 
-```
-        ┌──────────────┐
-        │  Condition?  │
-        └──────┬───────┘
-          YES  │   NO
-         ┌─────┘   └────────┐
-         ▼                  ▼
-   ┌──────────┐       ┌──────────┐
-   │ Action A │       │ Action B │
-   └────┬─────┘       └────┬─────┘
-        └─────────┬─────────┘
-                  ▼
+```mermaid
+flowchart TD
+    A{Condition?} -->|YES| B["Action A"]
+    A -->|NO| C["Action B"]
+    B --> D[Continue...]
+    C --> D
 ```
 
 **Pseudocode:**
@@ -162,22 +149,18 @@ end;
 **Problem:** Input a mark (0–100). Output whether it is a Pass (≥50) or Fail.
 
 **Flowchart:**
-```
-START
-  ↓
-Input mark
-  ↓
-┌─────────────┐
-│ mark >= 50? │
-└──────┬──────┘
- YES   │   NO
- ↓         ↓
-Output   Output
-"Pass"   "Fail"
-  ↓         ↓
-  └────┬────┘
-       ↓
-      END
+
+```mermaid
+flowchart TD
+    S([START]) --> I[/Input mark/]
+    I --> D{"mark ≥ 50?"}
+    D -->|YES| P[/"Output 'Pass'"/]
+    D -->|NO| F[/"Output 'Fail'"/]
+    P --> E([END])
+    F --> E
+    style S fill:#6ee7b7,stroke:#10b981,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
 ```
 
 **Delphi code:**

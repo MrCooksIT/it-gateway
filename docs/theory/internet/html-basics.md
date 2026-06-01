@@ -23,6 +23,29 @@ HTML describes **what** content is (a heading, a paragraph, a link) — not **ho
 
 Every valid HTML page follows this structure:
 
+```mermaid
+graph TD
+    DOC["&lt;!DOCTYPE html&gt;"] --> HTML["&lt;html&gt;"]
+    HTML --> HEAD["&lt;head&gt; — metadata\nnot visible on page"]
+    HTML --> BODY["&lt;body&gt; — visible content\nall tags the user sees"]
+    HEAD --> TITLE["&lt;title&gt;\nbrowser tab text"]
+    HEAD --> META["&lt;meta charset&gt;\ncharacter encoding"]
+    BODY --> H1["&lt;h1&gt; headings"]
+    BODY --> P["&lt;p&gt; paragraphs"]
+    BODY --> A["&lt;a&gt; links"]
+    BODY --> IMG["&lt;img&gt; images"]
+    style DOC   fill:#fde68a,stroke:#f59e0b,color:#000
+    style HTML  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style HEAD  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style BODY  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style TITLE fill:#6ee7b7,stroke:#10b981,color:#000
+    style META  fill:#6ee7b7,stroke:#10b981,color:#000
+    style H1    fill:#5eead4,stroke:#0d9488,color:#000
+    style P     fill:#5eead4,stroke:#0d9488,color:#000
+    style A     fill:#5eead4,stroke:#0d9488,color:#000
+    style IMG   fill:#5eead4,stroke:#0d9488,color:#000
+```
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -250,6 +273,15 @@ Attributes provide additional information about elements. They go inside the ope
 | **HTML** | Structure — what content is | `<h1>Title</h1>` |
 | **CSS** | Presentation — how it looks | `h1 { color: blue; font-size: 32px; }` |
 | **JavaScript** | Behaviour — what it does | `document.getElementById('btn').onclick = ...` |
+
+```mermaid
+flowchart LR
+    HTML["HTML\nStructure\nWhat is on the page"] --> CSS["CSS\nPresentation\nHow it looks"]
+    CSS --> JS["JavaScript\nBehaviour\nWhat it does"]
+    style HTML fill:#f9a8d4,stroke:#ec4899,color:#000
+    style CSS  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style JS   fill:#fde68a,stroke:#f59e0b,color:#000
+```
 
 ---
 

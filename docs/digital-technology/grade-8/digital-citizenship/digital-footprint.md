@@ -28,6 +28,23 @@ Your digital footprint is not just one thing — it is a combination of many dif
 
 Your digital footprint has two main parts: **active** and **passive**. It is important to understand the difference.
 
+```mermaid
+flowchart LR
+    U["Everything\nyou do online"] --> ACT["ACTIVE FOOTPRINT\ndeliberately created by you"]
+    U --> PASS["PASSIVE FOOTPRINT\ncollected without you knowing"]
+    ACT --> A1["Social media posts"]
+    ACT --> A2["Comments & reviews"]
+    ACT --> A3["Photos uploaded"]
+    ACT --> A4["Forms filled in"]
+    PASS --> P1["Websites visited\n(cookies)"]
+    PASS --> P2["Location data\nfrom apps"]
+    PASS --> P3["Search history"]
+    PASS --> P4["App usage tracking"]
+    style U    fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style ACT  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style PASS fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ### Active Digital Footprint
 
 :::tip Key Term

@@ -25,12 +25,19 @@ Understanding data sizes lets you answer questions like: "How much storage does 
 
 ### Quick Scale
 
-```
-8 bits = 1 byte
-1 024 bytes = 1 KB
-1 024 KB    = 1 MB
-1 024 MB    = 1 GB
-1 024 GB    = 1 TB
+```mermaid
+flowchart LR
+    BIT["bit\n1 binary digit"] -->|×8| BYTE["Byte\n8 bits"]
+    BYTE -->|×1024| KB["KB\n1 024 bytes"]
+    KB -->|×1024| MB["MB\n1 024 KB"]
+    MB -->|×1024| GB["GB\n1 024 MB"]
+    GB -->|×1024| TB["TB\n1 024 GB"]
+    style BIT  fill:#6ee7b7,stroke:#10b981,color:#000
+    style BYTE fill:#93c5fd,stroke:#3b82f6,color:#000
+    style KB   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style MB   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style GB   fill:#fde68a,stroke:#f59e0b,color:#000
+    style TB   fill:#5eead4,stroke:#0d9488,color:#000
 ```
 
 ---

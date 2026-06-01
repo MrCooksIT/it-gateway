@@ -11,6 +11,21 @@ Strings are sequences of characters. Almost every Paper 1 question involves stri
 
 A `String` in Delphi is a sequence of characters. Strings are **1-indexed** — the first character is at position `1`, not `0`.
 
+<div class="itg-array-name">sWord := 'Gateway'</div>
+<div class="itg-array-vis">
+  <div class="itg-array-cell"><div class="itg-array-box">G</div><div class="itg-array-idx">[1]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">a</div><div class="itg-array-idx">[2]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">t</div><div class="itg-array-idx">[3]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">e</div><div class="itg-array-idx">[4]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">w</div><div class="itg-array-idx">[5]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">a</div><div class="itg-array-idx">[6]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">y</div><div class="itg-array-idx">[7]</div></div>
+</div>
+
+- `sWord[1]` = `'G'` — index starts at **1**, not 0
+- `Length(sWord)` = **7**
+- `Copy(sWord, 1, 4)` = `'Gate'`
+
 ```pascal
 var
   sName : String;
@@ -41,6 +56,29 @@ These appear in nearly every question because user input arrives as text and mus
 
 > [!WARNING] StrToInt Crashes on Non-Numbers
 > `StrToInt('hello')` throws a runtime exception. In exams the input is usually assumed valid, but in a real application you'd wrap it in `try...except`. See the Validation page.
+
+---
+
+## String Functions — Quick Reference Map
+
+```mermaid
+flowchart LR
+    TASK["String task"] --> CONV["Type conversion\nStrToInt · IntToStr\nStrToFloat · FloatToStr\nOrd · Chr"]
+    TASK --> CASE["Change case\nUpperCase\nLowerCase"]
+    TASK --> MEAS["Measure\nLength(s)"]
+    TASK --> TRIM["Remove spaces\nTrim(s)"]
+    TASK --> EXT["Extract part\nCopy(s, start, count)"]
+    TASK --> FIND["Find substring\nPos(needle, s)"]
+    TASK --> EDIT["Modify string\nDelete · Insert"]
+    style TASK fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CONV fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CASE fill:#6ee7b7,stroke:#10b981,color:#000
+    style MEAS fill:#fde68a,stroke:#f59e0b,color:#000
+    style TRIM fill:#fde68a,stroke:#f59e0b,color:#000
+    style EXT  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style FIND fill:#f9a8d4,stroke:#ec4899,color:#000
+    style EDIT fill:#5eead4,stroke:#0d9488,color:#000
+```
 
 ---
 

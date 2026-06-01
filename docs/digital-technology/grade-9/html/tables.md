@@ -126,16 +126,25 @@ This creates a nicely organised address book with a header row and two rows of d
 
 Notice the nesting structure of a table:
 
-```
-<table>
-  └── <tr> (row 1 — headers)
-        ├── <th>Name</th>
-        ├── <th>Phone Number</th>
-        └── <th>Email Address</th>
-  └── <tr> (row 2 — data)
-        ├── <td>Carol</td>
-        ├── <td>123-4567</td>
-        └── <td>carol@codehs.com</td>
+```mermaid
+flowchart TD
+    T["&lt;table&gt;"] --> R1["&lt;tr&gt; row 1 — headers"]
+    T --> R2["&lt;tr&gt; row 2 — data"]
+    R1 --> TH1["&lt;th&gt; Name"]
+    R1 --> TH2["&lt;th&gt; Phone Number"]
+    R1 --> TH3["&lt;th&gt; Email Address"]
+    R2 --> TD1["&lt;td&gt; Carol"]
+    R2 --> TD2["&lt;td&gt; 123-4567"]
+    R2 --> TD3["&lt;td&gt; carol@codehs.com"]
+    style T   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style R1  fill:#fde68a,stroke:#f59e0b,color:#000
+    style R2  fill:#fde68a,stroke:#f59e0b,color:#000
+    style TH1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style TH2 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style TH3 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style TD1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style TD2 fill:#6ee7b7,stroke:#10b981,color:#000
+    style TD3 fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 - `<tr>` tags go inside the `<table>` tag

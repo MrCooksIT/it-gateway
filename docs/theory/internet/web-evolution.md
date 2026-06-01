@@ -9,6 +9,14 @@ The web you use today is nothing like the web of the 1990s. From static pages th
 
 ## The Three Generations of the Web
 
+```mermaid
+flowchart LR
+    W1["Web 1.0\n~1991–2004\nRead-only\nStatic pages, no interaction"] --> W2["Web 2.0\n~2004–present\nRead-Write\nSocial media, user content"] --> W3["Web 3.0\nEmerging\nSemantic + AI\nPersonalised, intelligent"]
+    style W1 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style W2 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style W3 fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 | | **Web 1.0** | **Web 2.0** | **Web 3.0** |
 |---|---|---|---|
 | **Era** | ~1991–2004 | ~2004–present | Emerging |

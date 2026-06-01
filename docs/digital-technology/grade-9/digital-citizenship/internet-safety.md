@@ -18,6 +18,19 @@ Personal information you should **never** share online:
 
 ## Advanced Phishing Techniques
 
+```mermaid
+flowchart LR
+    PH["Phishing\n(broad attack)"] --> SP["Spear Phishing\nTargeted — uses your\nname, school, teacher"]
+    PH --> SM["Smishing\nSMS messages with\nfake links or offers"]
+    PH --> VS["Vishing\nPhone calls pretending\nto be bank / official"]
+    PH --> PA["Pharming\nDNS attack redirects you\nto a fake website"]
+    style PH fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style SP fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SM fill:#f9a8d4,stroke:#ec4899,color:#000
+    style VS fill:#f9a8d4,stroke:#ec4899,color:#000
+    style PA fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 Standard phishing uses mass emails hoping someone clicks. Advanced attackers are more targeted.
 
 ### Spear Phishing

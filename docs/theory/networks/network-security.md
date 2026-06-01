@@ -43,9 +43,13 @@ Encrypted: "Xk9#mP2!vL8@qR7$..."
 
 Both sender and receiver use the **same key** to encrypt and decrypt.
 
-```
-Sender: plaintext + key → ciphertext
-Receiver: ciphertext + same key → plaintext
+```mermaid
+flowchart LR
+    P1["Plaintext\n'Transfer R5000'"] -->|"encrypt\n+ secret key"| C["Ciphertext\n'Xk9#mP2!...'"]
+    C -->|"decrypt\n+ same secret key"| P2["Plaintext\n'Transfer R5000'"]
+    style P1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style C  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style P2 fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Advantage | Disadvantage |
@@ -63,10 +67,16 @@ Uses **two mathematically linked keys**:
 - **Public key** — shared openly with everyone
 - **Private key** — kept secret by the owner
 
-```
-Sender encrypts with recipient's PUBLIC key
-↓
-Only the recipient's PRIVATE key can decrypt it
+```mermaid
+flowchart LR
+    A["Alice's message\n(plaintext)"] --> B["Encrypt with\nBob's PUBLIC key\n🔓 public = shared"]
+    B --> C["Ciphertext\nunreadable to anyone\nwho intercepts it"]
+    C --> D["Decrypt with\nBob's PRIVATE key\n🔐 private = secret"]
+    D --> E["Bob reads\nthe message"]
+    style B fill:#93c5fd,stroke:#3b82f6,color:#000
+    style C fill:#f9a8d4,stroke:#ec4899,color:#000
+    style D fill:#6ee7b7,stroke:#10b981,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 | Advantage | Disadvantage |
@@ -93,11 +103,18 @@ TLS is what makes HTTPS work.
 
 ### How TLS works (simplified handshake):
 
-1. Client connects to server: "Hello — I want a secure connection"
-2. Server sends its **digital certificate** (contains public key)
-3. Client verifies the certificate (is it signed by a trusted CA?)
-4. Client and server agree on a **session key** (symmetric) using asymmetric encryption
-5. All further communication encrypted with the session key
+```mermaid
+flowchart TD
+    A["① Client: 'Hello — I want a secure connection'"] --> B["② Server sends digital certificate\n(contains public key + CA signature)"]
+    B --> C["③ Client verifies certificate\nwith trusted CA"]
+    C --> D["④ Client + server agree on\nsession key (asymmetric exchange)"]
+    D --> E["⑤ All data encrypted\nwith session key (symmetric)"]
+    style A fill:#93c5fd,stroke:#3b82f6,color:#000
+    style B fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style C fill:#fde68a,stroke:#f59e0b,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
+    style E fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 ```
 HTTPS = HTTP + TLS encryption
@@ -164,8 +181,13 @@ A **VPN** creates an encrypted "tunnel" through the internet, making the connect
 - Anonymising internet browsing
 - Bypassing geographic content restrictions
 
-```
-Your device → [Encrypted tunnel] → VPN server → Internet
+```mermaid
+flowchart LR
+    DEV["Your device"] -->|"encrypted tunnel"| VPN["VPN Server"]
+    VPN -->|"decrypted"| NET["Internet"]
+    style DEV fill:#93c5fd,stroke:#3b82f6,color:#000
+    style VPN fill:#fde68a,stroke:#f59e0b,color:#000
+    style NET fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Without VPN on public Wi-Fi:** data is readable by anyone on the same network  
