@@ -202,6 +202,22 @@ When you request a web page:
 4. **The packets can take different paths through the network** — they may arrive at different times, or even out of order
 5. At the destination, the packets are **reassembled in the correct order** to recreate the original information
 
+```mermaid
+flowchart LR
+    SRC["Your device\nSource IP: 122.21.44.100"] --> SPLIT["Data split\ninto packets"]
+    SPLIT --> R1["Router 1\nfinds best path"]
+    SPLIT --> R2["Router 2\nalternative path"]
+    R1 --> DEST["Destination server\nIP: 5.2.6.2"]
+    R2 --> DEST
+    DEST --> REASSEMBLE["Packets reassembled\nin correct order"]
+    style SRC       fill:#93c5fd,stroke:#3b82f6,color:#000
+    style SPLIT     fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style R1        fill:#fde68a,stroke:#f59e0b,color:#000
+    style R2        fill:#fde68a,stroke:#f59e0b,color:#000
+    style DEST      fill:#f9a8d4,stroke:#ec4899,color:#000
+    style REASSEMBLE fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 This packet-switching system is incredibly robust. Even if part of the network fails, packets can find alternative routes to their destination.
 
 ---

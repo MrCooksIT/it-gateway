@@ -188,6 +188,24 @@ This entire sequence — from clicking the icon to the printer receiving its ins
 
 ---
 
+```mermaid
+flowchart TD
+    MB["MOTHERBOARD\nconnects all components\ngenerates clock signal"]
+    CPU["CPU\nexecutes instructions\none per clock cycle"]
+    RAM["RAM\nfast, temporary\nlost on power-off"]
+    ROM["ROM\nread-only\nstores BIOS / startup"]
+    EXT["External Memory\nHDD · USB · CD\npermanent storage"]
+    MB --> CPU
+    MB --> RAM
+    MB --> ROM
+    MB --> EXT
+    style MB  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CPU fill:#f9a8d4,stroke:#ec4899,color:#000
+    style RAM fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ROM fill:#fde68a,stroke:#f59e0b,color:#000
+    style EXT fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ## 6. Summary of Main Hardware Components
 
 | Component | What It Is | What It Does |

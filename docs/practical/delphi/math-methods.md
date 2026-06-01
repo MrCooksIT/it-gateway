@@ -283,6 +283,22 @@ Inc(cLetter, 2);  // cLetter = 'D'
 
 ---
 
+## Choosing a Rounding Function
+
+```mermaid
+flowchart TD
+    Q{"Which rounding\nfunction?"}
+    Q -->|"Nearest integer\nbanker's rounding at .5"| ROUND["Round(x)"]
+    Q -->|"Just chop off decimals\nalways toward zero"| TRUNC["Trunc(x)"]
+    Q -->|"Always round UP\ncorrect for ceiling"| CEIL["Ceil(x)\nrequires Math unit"]
+    Q -->|"Always round DOWN\ncorrect for floor"| FLOOR["Floor(x)\nrequires Math unit"]
+    style ROUND fill:#6ee7b7,stroke:#10b981,color:#000
+    style TRUNC fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CEIL  fill:#fde68a,stroke:#f59e0b,color:#000
+    style FLOOR fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q     fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ## Quick Reference Table
 
 | Function | Unit | Returns | What it does |

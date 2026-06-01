@@ -60,6 +60,15 @@ Delphi follows standard mathematical precedence:
 2. `*`, `/`, `DIV`, `MOD` — multiplication/division
 3. `+`, `-` — addition/subtraction
 
+```mermaid
+flowchart LR
+    B["( Brackets )\nevaluated first"] --> MD["* / DIV MOD\nmultiplication & division"]
+    MD --> AS["+ −\naddition & subtraction"]
+    style B  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style MD fill:#fde68a,stroke:#f59e0b,color:#000
+    style AS fill:#93c5fd,stroke:#3b82f6,color:#000
+```
+
 ```pascal
 // Without brackets
 iResult := 2 + 3 * 4;      // = 14 (3*4 first, then +2)
