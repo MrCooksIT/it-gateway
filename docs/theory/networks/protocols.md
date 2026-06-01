@@ -23,6 +23,25 @@ A **network protocol** is a set of standardised rules that define:
 
 The **TCP/IP model** is the fundamental protocol suite of the internet. It organises protocols into four layers:
 
+<div class="itg-tcpip">
+  <div class="itg-tcpip-layer app">
+    <div class="itg-tcpip-name">4. Application</div>
+    <div class="itg-tcpip-proto">HTTP · HTTPS · FTP · SMTP · DNS · DHCP</div>
+  </div>
+  <div class="itg-tcpip-layer transport">
+    <div class="itg-tcpip-name">3. Transport</div>
+    <div class="itg-tcpip-proto">TCP · UDP</div>
+  </div>
+  <div class="itg-tcpip-layer internet">
+    <div class="itg-tcpip-name">2. Internet</div>
+    <div class="itg-tcpip-proto">IP (addressing and routing)</div>
+  </div>
+  <div class="itg-tcpip-layer netaccess">
+    <div class="itg-tcpip-name">1. Network Access</div>
+    <div class="itg-tcpip-proto">Ethernet · Wi-Fi · physical transmission</div>
+  </div>
+</div>
+
 | Layer | Protocols | Function |
 |---|---|---|
 | **Application** | HTTP, HTTPS, FTP, SMTP, DNS, DHCP | What the application does with data |

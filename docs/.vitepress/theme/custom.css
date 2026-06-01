@@ -957,6 +957,38 @@
 }
 
 /* Responsive tweaks for visual components */
+/* ── TCP/IP layer stack ── */
+.itg-tcpip {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 500px;
+  margin: 1.25rem 0;
+}
+.itg-tcpip-layer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+}
+.itg-tcpip-name {
+  font-weight: 700;
+  font-size: 0.78rem;
+  width: 130px;
+  flex-shrink: 0;
+  color: #0d1117;
+}
+.itg-tcpip-proto {
+  font-size: 0.72rem;
+  color: #0d1117;
+  opacity: 0.85;
+}
+.itg-tcpip-layer.app       { background: var(--itg-gr12); }
+.itg-tcpip-layer.transport { background: var(--itg-gr11); }
+.itg-tcpip-layer.internet  { background: var(--itg-gr10); }
+.itg-tcpip-layer.netaccess { background: var(--itg-gr8); }
+
 /* ── Computer model diagram ── */
 .itg-cmodel {
   display: flex;
