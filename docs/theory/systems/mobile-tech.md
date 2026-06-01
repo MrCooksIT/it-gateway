@@ -66,6 +66,17 @@ Mobile technology has transformed how we communicate, work, learn, and entertain
 | **4G LTE** | ~10–150 Mbps | ~30–50ms | HD video, mobile apps |
 | **5G** | ~100 Mbps–10 Gbps | <10ms | IoT, autonomous vehicles, AR/VR |
 
+```mermaid
+flowchart LR
+    G2["2G GSM\n~0.1 Mbps\nVoice + SMS"] -->|faster| G3["3G\n~2–42 Mbps\nMobile internet"]
+    G3 -->|faster| G4["4G LTE\n~10–150 Mbps\nHD video + apps"]
+    G4 -->|faster| G5["5G\n~10 Gbps\nIoT · AR/VR · autonomous"]
+    style G2 fill:#f9a8d4,stroke:#ec4899,color:#000
+    style G3 fill:#fde68a,stroke:#f59e0b,color:#000
+    style G4 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style G5 fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ### 4G vs 5G
 
 | Feature | 4G LTE | 5G |

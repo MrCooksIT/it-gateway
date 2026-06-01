@@ -143,6 +143,22 @@ end;
 | Min executions | 0 (if end < start) | 0 | 1 (always) |
 | Use case | Fixed count | Unknown count | Input validation, menu |
 
+**Choosing the right loop:**
+
+```mermaid
+flowchart TD
+    Q{"Do you know exactly\nhow many times to repeat?"}
+    Q -->|YES| FOR["FOR loop\nfor i := 1 to n do"]
+    Q -->|NO| Q2{"Must the body run\nat least ONCE?"}
+    Q2 -->|YES| REP["REPEAT-UNTIL\nrepeat...until condition\n(post-test)"]
+    Q2 -->|NO| WHI["WHILE loop\nwhile condition do\n(pre-test)"]
+    style FOR fill:#6ee7b7,stroke:#10b981,color:#000
+    style REP fill:#fde68a,stroke:#f59e0b,color:#000
+    style WHI fill:#93c5fd,stroke:#3b82f6,color:#000
+    style Q   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q2  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+```
+
 **Key difference — pre-test vs post-test:**
 
 ```mermaid

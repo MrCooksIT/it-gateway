@@ -30,9 +30,13 @@ The internet is more than just websites. Email, file transfer, streaming, voice 
 **HTTP** (Hypertext Transfer Protocol) is the foundation of data exchange on the web. Every time you visit a website, your browser uses HTTP to request pages from the server.
 
 ### HTTP Request-Response Cycle:
-```
-Browser → GET /index.html HTTP/1.1 → Web Server
-Web Server → 200 OK + HTML content → Browser
+
+```mermaid
+flowchart LR
+    BR["Browser"] -->|"GET /page HTTP/1.1\n(request)"| WS["Web Server"]
+    WS -->|"200 OK + HTML\n(response)"| BR
+    style BR fill:#93c5fd,stroke:#3b82f6,color:#000
+    style WS fill:#6ee7b7,stroke:#10b981,color:#000
 ```
 
 **Common HTTP status codes:**
@@ -86,6 +90,24 @@ www.google.com → 142.250.185.78
 6. Authoritative nameserver returns the IP address
 7. Browser connects to that IP address
 
+```mermaid
+flowchart TD
+    U["You type\nwww.example.com"] --> CACHE{"In local\nDNS cache?"}
+    CACHE -->|YES| CONN["Browser connects\nto IP address"]
+    CACHE -->|NO| RES["Recursive resolver\nISP's DNS server"]
+    RES --> ROOT["Root nameserver\ndirects to .com TLD"]
+    ROOT --> TLD["TLD nameserver\n(.com / .co.za)"]
+    TLD --> AUTH["Authoritative nameserver\nfor example.com"]
+    AUTH --> CONN
+    style U    fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CONN fill:#6ee7b7,stroke:#10b981,color:#000
+    style CACHE fill:#fde68a,stroke:#f59e0b,color:#000
+    style RES  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ROOT fill:#f9a8d4,stroke:#ec4899,color:#000
+    style TLD  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style AUTH fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 **DNS record types:**
 | Record | Purpose |
 |---|---|
@@ -103,6 +125,19 @@ www.google.com → 142.250.185.78
 1. **Crawling** — bots follow links across the web, discovering pages
 2. **Indexing** — discovered pages are analysed and added to the index
 3. **Ranking** — when a user searches, the algorithm ranks relevant results
+
+```mermaid
+flowchart LR
+    WEB["The web\nbillions of pages"] -->|"bots follow links"| CRAWL["CRAWL\ndiscover pages"]
+    CRAWL -->|"analyse content"| INDEX["INDEX\nstore in database"]
+    INDEX -->|"user submits query"| RANK["RANK\nalgorithm scores pages"]
+    RANK --> SERP["Search results\nreturned to user"]
+    style WEB   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style CRAWL fill:#93c5fd,stroke:#3b82f6,color:#000
+    style INDEX fill:#fde68a,stroke:#f59e0b,color:#000
+    style RANK  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SERP  fill:#6ee7b7,stroke:#10b981,color:#000
+```
 
 **Major search engines:** Google, Bing, DuckDuckGo, Baidu
 

@@ -108,6 +108,20 @@ People say they value privacy, but voluntarily share enormous amounts of persona
 | **Radicalisation** | Extremist content recommendations |
 | **Time theft** | Excessive screen time reduces productivity |
 
+```mermaid
+flowchart LR
+    YOU["You interact\nwith content"] --> ALG["Algorithm learns\nyour preferences"]
+    ALG --> FEED["Feeds you more\ncontent you agree with"]
+    FEED --> REIN["Reinforces\nexisting views"]
+    REIN --> YOU
+    REIN --> ECHO["ECHO CHAMBER\nOnly one viewpoint\nreaches you"]
+    style YOU  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ALG  fill:#fde68a,stroke:#f59e0b,color:#000
+    style FEED fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style REIN fill:#f9a8d4,stroke:#ec4899,color:#000
+    style ECHO fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 ---
 
 ## South African Privacy Law — POPIA

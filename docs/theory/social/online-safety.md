@@ -87,6 +87,23 @@ A second verification step beyond just your password:
 
 Your **digital footprint** is the trail of data left by everything you do online.
 
+```mermaid
+flowchart LR
+    U["Everything\nyou do online"] --> PASS["PASSIVE FOOTPRINT\ncollected without\nyour input"]
+    U --> ACT["ACTIVE FOOTPRINT\ndeliberately\ncreated by you"]
+    PASS --> P1["IP address\n& location"]
+    PASS --> P2["Websites visited\nvia cookies"]
+    PASS --> P3["Device & browser\nfingerprint"]
+    PASS --> P4["Search queries"]
+    ACT --> A1["Social media posts"]
+    ACT --> A2["Comments & reviews"]
+    ACT --> A3["Photos uploaded"]
+    ACT --> A4["Forms filled in"]
+    style U    fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PASS fill:#f9a8d4,stroke:#ec4899,color:#000
+    style ACT  fill:#93c5fd,stroke:#3b82f6,color:#000
+```
+
 ### Passive digital footprint
 Data collected without your active input:
 - IP address and location
