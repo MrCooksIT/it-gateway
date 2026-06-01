@@ -11,6 +11,21 @@ Strings are sequences of characters. Almost every Paper 1 question involves stri
 
 A `String` in Delphi is a sequence of characters. Strings are **1-indexed** — the first character is at position `1`, not `0`.
 
+<div class="itg-array-name">sWord := 'Gateway'</div>
+<div class="itg-array-vis">
+  <div class="itg-array-cell"><div class="itg-array-box">G</div><div class="itg-array-idx">[1]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">a</div><div class="itg-array-idx">[2]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">t</div><div class="itg-array-idx">[3]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">e</div><div class="itg-array-idx">[4]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">w</div><div class="itg-array-idx">[5]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">a</div><div class="itg-array-idx">[6]</div></div>
+  <div class="itg-array-cell"><div class="itg-array-box">y</div><div class="itg-array-idx">[7]</div></div>
+</div>
+
+- `sWord[1]` = `'G'` — index starts at **1**, not 0
+- `Length(sWord)` = **7**
+- `Copy(sWord, 1, 4)` = `'Gate'`
+
 ```pascal
 var
   sName : String;

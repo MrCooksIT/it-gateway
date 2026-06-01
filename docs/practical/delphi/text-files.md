@@ -22,6 +22,24 @@ The variable itself is not the file — it's a **handle** (reference) used to in
 
 ## The Five Essential Procedures
 
+```mermaid
+flowchart LR
+    subgraph WRITE ["Writing to a file"]
+        direction TB
+        W1["AssignFile(f, 'data.txt')"] --> W2["Rewrite(f)\ncreate / overwrite"]
+        W2 --> W3["WriteLn(f, value)\nrepeat per line"]
+        W3 --> W4["CloseFile(f)"]
+    end
+    subgraph READ ["Reading from a file"]
+        direction TB
+        R1["AssignFile(f, 'data.txt')"] --> R2["Reset(f)\nopen existing"]
+        R2 --> R3{"EOF(f)?"}
+        R3 -->|NO| R4["ReadLn(f, variable)"]
+        R4 --> R3
+        R3 -->|YES| R5["CloseFile(f)"]
+    end
+```
+
 | Procedure | Purpose |
 |---|---|
 | `AssignFile(f, filename)` | Link the file variable to a file path |

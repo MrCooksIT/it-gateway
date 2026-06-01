@@ -68,6 +68,65 @@ A **switch** is an intelligent network device that connects multiple devices and
 - **Unmanaged switch** — plug and play, no configuration
 - **Managed switch** — configurable (VLANs, QoS, monitoring)
 
+<div class="itg-topo-grid" style="grid-template-columns:1fr 1fr; max-width:480px;">
+
+  <div class="itg-topo-card">
+    <div class="itg-topo-title">Hub — broadcasts to all</div>
+    <svg viewBox="0 0 160 120" width="160" height="120">
+      <!-- Hub centre -->
+      <rect x="55" y="48" width="50" height="22" rx="4" class="itg-topo-hub"/>
+      <text x="80" y="62" text-anchor="middle" class="itg-hub-text">HUB</text>
+      <!-- Devices -->
+      <rect x="3"   y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="62"  y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="120" y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="3"   y="97"  width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="120" y="97"  width="36" height="18" rx="3" class="itg-topo-node"/>
+      <text x="21"  y="17" text-anchor="middle" class="itg-node-text">PC1</text>
+      <text x="80"  y="17" text-anchor="middle" class="itg-node-text">PC2</text>
+      <text x="138" y="17" text-anchor="middle" class="itg-node-text">PC3</text>
+      <text x="21"  y="109" text-anchor="middle" class="itg-node-text">PC4</text>
+      <text x="138" y="109" text-anchor="middle" class="itg-node-text">PC5</text>
+      <!-- All lines highlighted (broadcast) -->
+      <line x1="21"  y1="23"  x2="63"  y2="48"  stroke="#f9a8d4" stroke-width="2"/>
+      <line x1="80"  y1="23"  x2="80"  y2="48"  stroke="#f9a8d4" stroke-width="2"/>
+      <line x1="138" y1="23"  x2="97"  y2="48"  stroke="#f9a8d4" stroke-width="2"/>
+      <line x1="21"  y1="97"  x2="63"  y2="70"  stroke="#f9a8d4" stroke-width="2"/>
+      <line x1="138" y1="97"  x2="97"  y2="70"  stroke="#f9a8d4" stroke-width="2"/>
+      <text x="80" y="90" text-anchor="middle" font-size="8" fill="#f9a8d4">all ports receive</text>
+    </svg>
+  </div>
+
+  <div class="itg-topo-card">
+    <div class="itg-topo-title">Switch — sends to one</div>
+    <svg viewBox="0 0 160 120" width="160" height="120">
+      <!-- Switch centre -->
+      <rect x="55" y="48" width="50" height="22" rx="4" class="itg-topo-hub"/>
+      <text x="80" y="62" text-anchor="middle" class="itg-hub-text">SWITCH</text>
+      <!-- Devices -->
+      <rect x="3"   y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="62"  y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="120" y="5"   width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="3"   y="97"  width="36" height="18" rx="3" class="itg-topo-node"/>
+      <rect x="120" y="97"  width="36" height="18" rx="3" class="itg-topo-node"/>
+      <text x="21"  y="17" text-anchor="middle" class="itg-node-text">PC1</text>
+      <text x="80"  y="17" text-anchor="middle" class="itg-node-text">PC2</text>
+      <text x="138" y="17" text-anchor="middle" class="itg-node-text">PC3</text>
+      <text x="21"  y="109" text-anchor="middle" class="itg-node-text">PC4</text>
+      <text x="138" y="109" text-anchor="middle" class="itg-node-text">PC5</text>
+      <!-- Only one active route highlighted (PC1 → PC3) -->
+      <line x1="21"  y1="23"  x2="63"  y2="48"  stroke="#6ee7b7" stroke-width="2"/>
+      <line x1="138" y1="23"  x2="97"  y2="48"  stroke="#6ee7b7" stroke-width="2"/>
+      <!-- Other lines dimmed -->
+      <line x1="80"  y1="23"  x2="80"  y2="48"  class="itg-topo-line"/>
+      <line x1="21"  y1="97"  x2="63"  y2="70"  class="itg-topo-line"/>
+      <line x1="138" y1="97"  x2="97"  y2="70"  class="itg-topo-line"/>
+      <text x="80" y="90" text-anchor="middle" font-size="8" fill="#6ee7b7">PC1 → PC3 only</text>
+    </svg>
+  </div>
+
+</div>
+
 | Hub vs Switch | Hub | Switch |
 |---|---|---|
 | Data delivery | Broadcast to all ports | Only to destination port |
