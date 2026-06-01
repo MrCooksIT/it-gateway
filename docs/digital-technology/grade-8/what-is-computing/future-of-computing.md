@@ -79,6 +79,13 @@ This makes quantum computers **non-deterministic** — and it is what gives them
 Quantum computing is still mostly theoretical. A practical, large-scale quantum computer has not yet been fully realised. The research is promising, but these machines are not yet commercially available in a meaningful way.
 :::
 
+```mermaid
+flowchart LR
+    BIT["Classical Bit\nStrictly 0 OR 1\ndeterministic"] -->|"quantum leap"| QUBIT["Qubit\n0, 1, or BOTH at once\nnon-deterministic"]
+    style BIT   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style QUBIT fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ### Comparison: Traditional vs DNA vs Quantum Computers
 
 | Feature | Traditional Computer | DNA Computer | Quantum Computer |

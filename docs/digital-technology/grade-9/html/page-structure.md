@@ -118,12 +118,17 @@ This indentation helps us see the structure of the page — it shows which tags 
 
 The structure of an HTML document can be described as a **tree**. At the very root of the tree is the `<html>` tag. The `<html>` tag has two children: `<head>` and `<body>`. Inside `<head>` we have `<title>`. Inside `<body>` we have our content tags like `<h1>`.
 
-```
-html
-├── head
-│   └── title
-└── body
-    └── h1
+```mermaid
+flowchart TD
+    HTML["&lt;html&gt;"] --> HEAD["&lt;head&gt;\nmetadata about the page"]
+    HTML --> BODY["&lt;body&gt;\nvisible page content"]
+    HEAD --> TITLE["&lt;title&gt;\nMy First Web Page\n(appears in browser tab)"]
+    BODY --> H1["&lt;h1&gt;\nHello\n(appears on page)"]
+    style HTML  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style HEAD  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style BODY  fill:#6ee7b7,stroke:#10b981,color:#000
+    style TITLE fill:#fde68a,stroke:#f59e0b,color:#000
+    style H1    fill:#fde68a,stroke:#f59e0b,color:#000
 ```
 
 If we added more tags inside the body — like another `<h1>` — they would both appear at the same level of the tree.

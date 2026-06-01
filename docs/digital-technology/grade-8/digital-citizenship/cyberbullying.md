@@ -68,6 +68,23 @@ If you are the victim of cyberbullying, there are clear steps you should follow:
 
 Witnessing cyberbullying and doing nothing makes you a **bystander** — and bystanders allow bullying to continue. Instead, choose to be an **upstander** and break the cycle.
 
+```mermaid
+flowchart TD
+    SEE["You witness\ncyberbullying"] --> Q{"What will\nyou do?"}
+    Q -->|"Stay silent"| BY["BYSTANDER\nAllows bullying\nto continue"]
+    Q -->|"Take action"| UP["UPSTANDER\nBreaks the cycle"]
+    UP --> A1["Reach out to\nthe victim privately"]
+    UP --> A2["Tell a trusted adult\nor counsellor"]
+    UP --> A3["Report to the\nplatform administrator"]
+    style SEE fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style Q   fill:#fde68a,stroke:#f59e0b,color:#000
+    style BY  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style UP  fill:#6ee7b7,stroke:#10b981,color:#000
+    style A1  fill:#6ee7b7,stroke:#10b981,color:#000
+    style A2  fill:#6ee7b7,stroke:#10b981,color:#000
+    style A3  fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ### How to Be an Upstander
 
 - **Reach out to the victim.** Let them know that you care, that the bully is wrong, and encourage them to seek help from a trusted adult.
