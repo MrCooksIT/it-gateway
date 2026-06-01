@@ -15,6 +15,20 @@ Loops let your program repeat a block of code multiple times without you writing
 | `WHILE` | You don't know how many times — condition checked first | Before | 0 (may never run) |
 | `REPEAT...UNTIL` | You don't know how many times — must run at least once | After | 1 (always) |
 
+**Decision guide — which loop to choose:**
+
+```mermaid
+flowchart TD
+    A{"Do you know exactly\nhow many times?"}
+    A -->|YES| FOR["Use FOR\ncounting loop"]
+    A -->|NO| B{"Must the body\nalways run at least once?"}
+    B -->|YES| REP["Use REPEAT...UNTIL\npost-test — input validation,\nmenus"]
+    B -->|NO| WHL["Use WHILE\npre-test — may run\n0 times"]
+    style FOR  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style WHL  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style REP  fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ---
 
 ## The FOR Loop

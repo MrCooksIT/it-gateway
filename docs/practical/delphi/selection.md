@@ -136,6 +136,25 @@ begin
 end;
 ```
 
+**Delphi evaluates from top to bottom — stops at the first true condition:**
+
+```mermaid
+flowchart TD
+    A{"iMark ≥ 80?"} -->|YES| R1[/"Distinction (Level 7)"/]
+    A -->|NO| B{"iMark ≥ 70?"}
+    B -->|YES| R2[/"Merit (Level 6)"/]
+    B -->|NO| C{"iMark ≥ 60?"}
+    C -->|YES| R3[/"Substantial (Level 5)"/]
+    C -->|NO| D{"iMark ≥ 50?"}
+    D -->|YES| R4[/"Adequate (Level 4)"/]
+    D -->|NO| R5[/"Not Achieved (Level 1)"/]
+    style R1 fill:#6ee7b7,stroke:#10b981,color:#000
+    style R2 fill:#93c5fd,stroke:#3b82f6,color:#000
+    style R3 fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style R4 fill:#fde68a,stroke:#f59e0b,color:#000
+    style R5 fill:#f9a8d4,stroke:#ec4899,color:#000
+```
+
 > [!TIP] Single Statement — No BEGIN/END Needed
 > If there is only ONE statement after THEN or ELSE, BEGIN/END is optional. For readability and safety, many teachers still recommend using it. In exams, both styles are accepted — but single-statement form saves time.
 
