@@ -9,6 +9,20 @@ Not all computers look like the desktop in a lab. A microwave, a smartwatch, and
 
 ## Classification by Size and Power
 
+```mermaid
+flowchart LR
+    EMB["Embedded\nsystem"] --> WEAR["Smartphone /\nWearable"] --> LAP["Laptop /\nTablet"] --> DESK["Desktop"] --> SRV["Server"] --> MAIN["Mainframe"] --> SUPER["Supercomputer"]
+    style EMB   fill:#6ee7b7,stroke:#10b981,color:#000
+    style WEAR  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style LAP   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style DESK  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style SRV   fill:#fde68a,stroke:#f59e0b,color:#000
+    style MAIN  fill:#5eead4,stroke:#0d9488,color:#000
+    style SUPER fill:#ddd6fe,stroke:#7c3aed,color:#000
+```
+
+*Increasing size, power, cost, and number of users →*
+
 ### Microcomputers (Personal Computers)
 
 The most common type — used by individuals. All the devices below are microcomputers.

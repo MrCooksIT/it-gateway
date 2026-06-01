@@ -17,6 +17,19 @@ A **peripheral** is any external device connected to a computer that provides in
 - **Storage devices** — store data permanently (can be both input and output)
 - **Communication devices** — connect the computer to networks or other devices
 
+```mermaid
+flowchart LR
+    IN["INPUT\nKeyboard · Mouse\nScanner · Camera"] --> CPU["Computer\n(CPU + RAM)"]
+    CPU --> OUT["OUTPUT\nMonitor · Printer\nSpeakers"]
+    STG["STORAGE\nHDD · SSD · USB\nCloud"] <--> CPU
+    CPU <--> COM["COMMUNICATION\nNIC · Router\nModem · WAP"]
+    style IN  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style OUT fill:#f9a8d4,stroke:#ec4899,color:#000
+    style CPU fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style STG fill:#6ee7b7,stroke:#10b981,color:#000
+    style COM fill:#fde68a,stroke:#f59e0b,color:#000
+```
+
 ---
 
 ## Input Devices
@@ -130,10 +143,19 @@ These connect computers to networks or other devices.
 
 **Plug and Play** is the ability of an operating system to automatically detect and configure a newly connected device — no manual driver installation by the user.
 
-1. User plugs in device
-2. OS detects new hardware
-3. OS searches for and installs the correct driver
-4. Device is ready to use
+```mermaid
+flowchart TD
+    A["User plugs in device"] --> B["OS detects new hardware"]
+    B --> C["OS searches for driver"]
+    C --> D{"Driver found?"}
+    D -->|Yes| E["Driver installed automatically"]
+    D -->|No| F["Prompt user to install manually"]
+    E --> G["Device ready to use ✓"]
+    F --> G
+    style A fill:#6ee7b7,stroke:#10b981,color:#000
+    style G fill:#6ee7b7,stroke:#10b981,color:#000
+    style D fill:#fde68a,stroke:#f59e0b,color:#000
+```
 
 Most modern devices (USB peripherals, monitors, printers) are Plug and Play.
 

@@ -21,6 +21,26 @@ Before writing code, identify which pattern the problem uses:
 | **Reverse** | "reverse digits", "backwards" | MOD 10 / DIV 10 loop |
 | **Digit sum** | "sum of digits" | MOD 10 + DIV 10 loop |
 
+```mermaid
+flowchart TD
+    Q{"Read the\nproblem..."}
+    Q -->|"add up / total / sum"| SUM["Accumulator\nsum := sum + num"]
+    Q -->|"how many match"| CNT["Counter\nif condition then Inc(count)"]
+    Q -->|"largest / smallest"| MM["Max / Min tracker\ninitialise with first value"]
+    Q -->|"divisible only by 1 & itself"| PRM["Prime check\ntrial division loop"]
+    Q -->|"n × (n-1) × ... × 1"| FACT["Factorial\nresult := result × i"]
+    Q -->|"each = sum of two before"| FIB["Fibonacci\ntemp := a + b; a := b; b := temp"]
+    Q -->|"reverse / digit sum"| DIG["Digit ops\nmod 10 extracts last digit\ndiv 10 removes last digit"]
+    style Q    fill:#fde68a,stroke:#f59e0b,color:#000
+    style SUM  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style CNT  fill:#93c5fd,stroke:#3b82f6,color:#000
+    style MM   fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style PRM  fill:#f9a8d4,stroke:#ec4899,color:#000
+    style FACT fill:#6ee7b7,stroke:#10b981,color:#000
+    style FIB  fill:#6ee7b7,stroke:#10b981,color:#000
+    style DIG  fill:#5eead4,stroke:#0d9488,color:#000
+```
+
 ---
 
 ## 1. Sum and Average

@@ -251,6 +251,19 @@ ORDER BY Subject
 - `HAVING` requires `GROUP BY` to be present.
 - You can use aggregate functions inside `HAVING`.
 
+```mermaid
+flowchart LR
+    ALL["All rows\nin table"] -->|"WHERE\nfilters rows"| ROWS["Matching rows"]
+    ROWS -->|"GROUP BY\ncollects groups"| GRP["Groups"]
+    GRP -->|"HAVING\nfilters groups"| FGRP["Filtered groups"]
+    FGRP -->|"SELECT + aggregate\nproduces output"| OUT["Result"]
+    style ALL   fill:#93c5fd,stroke:#3b82f6,color:#000
+    style ROWS  fill:#c4b5fd,stroke:#8b5cf6,color:#000
+    style GRP   fill:#f9a8d4,stroke:#ec4899,color:#000
+    style FGRP  fill:#fde68a,stroke:#f59e0b,color:#000
+    style OUT   fill:#6ee7b7,stroke:#10b981,color:#000
+```
+
 ```sql
 -- Only show subjects with more than 3 mark entries
 SELECT Subject, Count(*) AS [Entries]
@@ -318,6 +331,20 @@ You often need to fill a ComboBox, ListBox, or RadioGroup with values from the d
 4. Inside the loop, add the field value to the control: `cmbXXX.Items.Add(qry['FieldName'])`. No type conversion is needed — `Items.Add` accepts the value directly.
 5. After adding, call `qry.Next` to advance to the next record.
 6. After the loop, set a prompt text: `cmbXXX.Text := 'Select a grade'`.
+
+```mermaid
+flowchart TD
+    A["Set qry.SQL.Text and call qry.Open"] --> B["qry.First"]
+    B --> C{"qry.Eof?"}
+    C -->|No| D["cmbGrade.Items.Add(qry['Grade'])"]
+    D --> E["qry.Next"]
+    E --> C
+    C -->|Yes| F["cmbGrade.Text := 'Select a grade'"]
+    style A fill:#93c5fd,stroke:#3b82f6,color:#000
+    style C fill:#fde68a,stroke:#f59e0b,color:#000
+    style D fill:#6ee7b7,stroke:#10b981,color:#000
+    style F fill:#c4b5fd,stroke:#8b5cf6,color:#000
+```
 
 > [!WARNING] Always include qry.Next inside the loop
 > If you forget `qry.Next`, the record pointer never advances and the loop runs forever, freezing the application. This is a common exam mistake.
