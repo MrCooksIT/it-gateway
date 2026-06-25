@@ -36,10 +36,10 @@ title: Grade 11 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/systems/performance"><span class="itg-dot"></span>Computer Performance</a></li>
-        <li><a href="/it-gateway/theory/systems/mobile-tech"><span class="itg-dot"></span>Mobile Technologies</a></li>
-        <li><a href="/it-gateway/theory/systems/data-representation"><span class="itg-dot"></span>Data Representation</a></li>
-        <li><a href="/it-gateway/theory/programming/algorithms-theory"><span class="itg-dot"></span>Algorithms — Theory</a></li>
+        <li><a href="/it-gateway/theory/systems/performance"><span class="itg-dot"></span>Computer Performance (Motherboard, Cache)</a></li>
+        <li><a href="/it-gateway/theory/systems/mobile-tech"><span class="itg-dot"></span>OS Types, Compilers &amp; Virtualisation</a></li>
+        <li><a href="/it-gateway/theory/networks/network-concepts"><span class="itg-dot"></span>Networks (Wi-Fi, WiMAX, 5G, VoIP, VPN)</a></li>
+        <li><a href="/it-gateway/theory/databases/database-concepts"><span class="itg-dot"></span>Database Intro (DBMS, DB Types, DBA)</a></li>
       </ul>
     </div>
   </div>
@@ -68,11 +68,10 @@ title: Grade 11 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/networks/network-types"><span class="itg-dot"></span>Types of Networks</a></li>
-        <li><a href="/it-gateway/theory/networks/topologies"><span class="itg-dot"></span>Network Topologies</a></li>
-        <li><a href="/it-gateway/theory/networks/protocols"><span class="itg-dot"></span>Protocols</a></li>
-        <li><a href="/it-gateway/theory/databases/database-design"><span class="itg-dot"></span>Database Design &amp; ERDs</a></li>
-        <li><a href="/it-gateway/theory/databases/normalisation"><span class="itg-dot"></span>Normalisation</a></li>
+        <li><a href="/it-gateway/theory/networks/e-communication"><span class="itg-dot"></span>E-Communication (Mobile &amp; Wireless)</a></li>
+        <li><a href="/it-gateway/theory/networks/protocols"><span class="itg-dot"></span>Protocols &amp; Data Security</a></li>
+        <li><a href="/it-gateway/theory/databases/database-concepts"><span class="itg-dot"></span>Database Concepts (DBMS, DB Types)</a></li>
+        <li><a href="/it-gateway/theory/programming/software-engineering"><span class="itg-dot"></span>Software Engineering Principles</a></li>
       </ul>
     </div>
   </div>
@@ -92,19 +91,16 @@ title: Grade 11 IT
       <div class="itg-term-col-title">💻 Practical — Paper 1</div>
       <ul class="itg-link-list">
         <li><a href="/it-gateway/practical/delphi/arrays-2d"><span class="itg-dot"></span>2D Arrays</a></li>
-        <li><a href="/it-gateway/practical/sql/select-advanced"><span class="itg-dot"></span>SQL — SELECT Advanced</a></li>
-        <li><a href="/it-gateway/practical/sql/joins"><span class="itg-dot"></span>SQL — Multi-Table Queries</a></li>
-        <li><a href="/it-gateway/practical/sql/data-manipulation"><span class="itg-dot"></span>SQL — INSERT / UPDATE / DELETE</a></li>
+        <li><a href="/it-gateway/practical/sql/delphi-database"><span class="itg-dot"></span>Connecting a Database in Delphi</a></li>
+        <li><a href="/it-gateway/practical/delphi/procedures-functions"><span class="itg-dot"></span>Methods — Parameter Passing &amp; Return Values</a></li>
       </ul>
     </div>
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/networks/e-communication"><span class="itg-dot"></span>E-Communication</a></li>
-        <li><a href="/it-gateway/theory/networks/wireless"><span class="itg-dot"></span>Wireless Technologies</a></li>
-        <li><a href="/it-gateway/theory/internet/multimedia"><span class="itg-dot"></span>Multimedia &amp; Streaming</a></li>
-        <li><a href="/it-gateway/theory/internet/website-design"><span class="itg-dot"></span>Website Design</a></li>
-        <li><a href="/it-gateway/theory/databases/sql-theory"><span class="itg-dot"></span>SQL — Theory</a></li>
+        <li><a href="/it-gateway/theory/databases/database-design"><span class="itg-dot"></span>Data &amp; Information Management (DB Design, Queries)</a></li>
+        <li><a href="/it-gateway/theory/databases/normalisation"><span class="itg-dot"></span>Database Relationships</a></li>
+        <li><a href="/it-gateway/theory/social/cybercrime"><span class="itg-dot"></span>Cybercrime &amp; Computer Error</a></li>
       </ul>
     </div>
   </div>
@@ -131,9 +127,9 @@ title: Grade 11 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/social/online-safety"><span class="itg-dot"></span>Online Safety</a></li>
-        <li><a href="/it-gateway/theory/social/privacy-ethics"><span class="itg-dot"></span>Privacy &amp; Ethics</a></li>
-        <li><a href="/it-gateway/theory/networks/network-security"><span class="itg-dot"></span>Network Security</a></li>
+        <li><a href="/it-gateway/theory/internet/internet-www"><span class="itg-dot"></span>Internet &amp; WWW (Evolution, Big Data)</a></li>
+        <li><a href="/it-gateway/theory/internet/internet-services"><span class="itg-dot"></span>Internet Services &amp; Security Services</a></li>
+        <li><a href="/it-gateway/theory/social/privacy-ethics"><span class="itg-dot"></span>Social Implications (Globalisation, 4IR)</a></li>
         <li><a href="/it-gateway/exam-preparation/Grade_11_IT_Theory_Notes"><span class="itg-dot"></span>Gr 11 Theory Exam Notes</a></li>
       </ul>
     </div>
