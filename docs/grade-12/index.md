@@ -58,20 +58,19 @@ title: Grade 12 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">💻 Practical — Paper 1</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/practical/delphi/oop-delphi"><span class="itg-dot"></span>OOP in Delphi</a></li>
+        <li><a href="/it-gateway/practical/sql/select-advanced"><span class="itg-dot"></span>SQL — WHERE, Wildcards, Aggregate Functions</a></li>
+        <li><a href="/it-gateway/practical/sql/joins"><span class="itg-dot"></span>SQL — JOIN Queries</a></li>
+        <li><a href="/it-gateway/practical/sql/data-manipulation"><span class="itg-dot"></span>SQL — INSERT / UPDATE / DELETE</a></li>
         <li><a href="/it-gateway/practical/delphi/arrays-2d"><span class="itg-dot"></span>2D Arrays</a></li>
-        <li><a href="/it-gateway/practical/delphi/procedures-functions"><span class="itg-dot"></span>Procedures &amp; Functions</a></li>
-        <li><a href="/it-gateway/practical/delphi/text-files"><span class="itg-dot"></span>Text Files</a></li>
       </ul>
     </div>
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/systems/cloud-virtualisation"><span class="itg-dot"></span>Cloud &amp; Virtualisation</a></li>
-        <li><a href="/it-gateway/theory/networks/wireless"><span class="itg-dot"></span>Wireless Technologies</a></li>
-        <li><a href="/it-gateway/theory/networks/network-security"><span class="itg-dot"></span>Network Security</a></li>
-        <li><a href="/it-gateway/theory/programming/oop-principles"><span class="itg-dot"></span>OOP Principles</a></li>
-        <li><a href="/it-gateway/theory/programming/software-engineering"><span class="itg-dot"></span>Software Engineering</a></li>
+        <li><a href="/it-gateway/theory/systems/cloud-virtualisation"><span class="itg-dot"></span>Cloud Computing &amp; Virtualisation</a></li>
+        <li><a href="/it-gateway/theory/systems/mobile-tech"><span class="itg-dot"></span>Augmented &amp; Virtual Reality</a></li>
+        <li><a href="/it-gateway/theory/social/cybercrime"><span class="itg-dot"></span>Computer Crime &amp; Criminals</a></li>
+        <li><a href="/it-gateway/theory/programming/software-engineering"><span class="itg-dot"></span>Software Engineering Principles</a></li>
       </ul>
     </div>
   </div>
