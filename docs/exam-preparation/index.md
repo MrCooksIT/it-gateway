@@ -14,20 +14,20 @@ This section helps you prepare specifically for IT examinations — strategies, 
 | Paper 2 | Theory | 3 hours | 150 | All five theory topics |
 | PAT | Project | Ongoing | 100 | Software development task |
 
-## Paper 2 — Theory topics
+## Paper 2 — Theory structure
 
-Paper 2 covers one question per CAPS topic:
+Paper 2 has six sections. Section A and Section F can include questions from any topic.
 
-| Question | Topic |
-|---|---|
-| 1 | Systems Technologies |
-| 2 | Communication Technologies |
-| 3 | Internet Technologies |
-| 4 | Data and Information Management |
-| 5 | Social Implications |
-| 6 | Integrated/Solution Development concepts |
+| Section | Topic | Marks |
+|---|---|---|
+| A | Short questions (multiple choice, one-word answers, true/false) | 20 |
+| B | Systems Technologies | 25 |
+| C | Communication and Network Technologies | 25 |
+| D | Data and Information Management | 25 |
+| E | Solution Development | 25 |
+| F | Integrated scenario (all topics, including Internet Technologies and Social Implications) | 30 |
 
-To revise each topic, go to the topic page directly — each page has a **Paper Connection** section and **Practice Questions**.
+Start your revision with the [Grade 12 Theory Notes](./Grade_12_IT_Theory_Notes). They have a revision checklist for every section. For more depth, go to the topic pages; each one has a **Paper Connection** section and **Practice Questions**.
 
 ## Cognitive levels
 
@@ -49,3 +49,5 @@ Both papers test content at three levels:
 ## Resources
 
 - [Paper 1 Preparation Guide](./paper1-guide)
+- [Grade 12 Theory Notes and Paper 2 revision checklist](./Grade_12_IT_Theory_Notes)
+- [Grade 12 IT Paper 2 Study Companion (PDF)](/downloads/Grade12_IT_Paper2_Study_Companion.pdf): a glossary of the terms that come up most often, common exam traps, database design and UML class diagrams, drawn from past NSC Paper 2 papers
