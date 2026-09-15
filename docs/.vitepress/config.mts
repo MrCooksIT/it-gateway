@@ -293,6 +293,7 @@ export default withMermaid(defineConfig({
             items: [
               { text: 'Practical Notes', link: '/exam-preparation/Grade_12_IT_Practical_Notes' },
               { text: 'Theory Notes',    link: '/exam-preparation/Grade_12_IT_Theory_Notes' },
+              { text: 'Paper 2 Study Companion (PDF)', link: '/it-gateway/downloads/Grade12_IT_Paper2_Study_Companion.pdf', target: '_blank' },   // non-page links don't get `base` added automatically
             ],
           },
         ],
