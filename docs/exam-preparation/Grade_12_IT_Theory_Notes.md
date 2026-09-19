@@ -41,88 +41,88 @@ The verb in the question tells you what kind of answer earns the marks. The mark
 
 ## Revision checklist
 
-Work through this list in the final weeks. The number in brackets tells you where to find each item in these notes. If you cannot explain an item out loud without looking, revise it again.
+Work through this list in the final weeks. Click the number in brackets to jump to the section of these notes that explains each item. If you cannot explain an item out loud without looking, revise it again.
 
 ### Section A: Short questions (all topics)
 
 - Multiple choice, one-word answers and true/false questions can come from **any** topic. Revise the ★ terms in the Study Companion glossary.
-- Terms that are often confused: green computing vs ergonomics vs e-waste vs dematerialisation (5.7) · compiler vs interpreter (1.22) · CPU register vs cache (1.16) · worm vs Trojan (5.1) · phishing vs pharming vs spoofing (5.5) · freeware vs shareware vs open source vs copyleft (5.8) · Web 1.0 vs 2.0 vs 3.0 (6.1)
-- Candidate, alternate, primary, composite and foreign keys (3.4, 3.17) · referential integrity (3.18) · GIGO (3.3)
-- Email protocols SMTP, POP3 and IMAP (2.10) · modem vs router vs switch (2.14) · AUP (2.9)
-- Parameters vs arguments (4.10) · the data type that `div`, `mod` and `/` produce (4.11) · SQL `WHERE` vs `HAVING` (3.26)
-- 3D printing (1.23) · SEO (6.6) · DRM (5.8)
+- Terms that are often confused: green computing vs ergonomics vs e-waste vs dematerialisation ([5.7](#s5-7)) · compiler vs interpreter ([1.22](#s1-22)) · CPU register vs cache ([1.16](#s1-16)) · worm vs Trojan ([5.1](#s5-1)) · phishing vs pharming vs spoofing ([5.5](#s5-5)) · freeware vs shareware vs open source vs copyleft ([5.8](#s5-8)) · Web 1.0 vs 2.0 vs 3.0 ([6.1](#s6-1))
+- Candidate, alternate, primary, composite and foreign keys ([3.4](#s3-4), [3.17](#s3-17)) · referential integrity ([3.18](#s3-18)) · GIGO ([3.3](#s3-3))
+- Email protocols SMTP, POP3 and IMAP ([2.10](#s2-10)) · modem vs router vs switch ([2.14](#s2-14)) · AUP ([2.9](#s2-9))
+- Parameters vs arguments ([4.10](#s4-10)) · the data type that `div`, `mod` and `/` produce ([4.11](#s4-11)) · SQL `WHERE` vs `HAVING` ([3.26](#s3-26))
+- 3D printing ([1.23](#s1-23)) · SEO ([6.6](#s6-6)) · DRM ([5.8](#s5-8))
 - **True/false technique:** if the statement is false, write FALSE **and** replace the underlined word(s) with the correct term. Writing FALSE on its own earns nothing.
 
 ### Section B: Systems Technologies
 
-- Reading a computer advert: operating system, screen size, CPU, integrated vs dedicated GPU, RAM, storage (1.14)
-- Recommending a computer for a specific user and justifying the choice with specifications (1.14)
-- Why a bigger drive does not make programs run faster; virtual memory and thrashing (1.11, 1.15)
-- Inside the CPU: control unit, ALU, registers; cache memory and its purpose (1.2, 1.16)
-- BIOS, POST, UEFI and CMOS (1.12, 1.17)
-- Device drivers and Plug-and-Play (1.18)
-- Multitasking vs multiprocessing vs multithreading (1.1, 1.19)
-- Virtualisation and virtual machines (1.6, 1.20)
-- VR vs AR vs Mixed Reality (1.7, 1.21)
-- Utility software, including file compression (1.13, 1.24)
-- SaaS and its benefits (2.8) · UPS and backups (1.9, 1.10)
+- Reading a computer advert: operating system, screen size, CPU, integrated vs dedicated GPU, RAM, storage ([1.14](#s1-14))
+- Recommending a computer for a specific user and justifying the choice with specifications ([1.14](#s1-14))
+- Why a bigger drive does not make programs run faster; virtual memory and thrashing ([1.11](#s1-11), [1.15](#s1-15))
+- Inside the CPU: control unit, ALU, registers; cache memory and its purpose ([1.2](#s1-2), [1.16](#s1-16))
+- BIOS, POST, UEFI and CMOS ([1.12](#s1-12), [1.17](#s1-17))
+- Device drivers and Plug-and-Play ([1.18](#s1-18))
+- Multitasking vs multiprocessing vs multithreading ([1.1](#s1-1), [1.19](#s1-19))
+- Virtualisation and virtual machines ([1.6](#s1-6), [1.20](#s1-20))
+- VR vs AR vs Mixed Reality ([1.7](#s1-7), [1.21](#s1-21))
+- Utility software, including file compression ([1.13](#s1-13), [1.24](#s1-24))
+- SaaS and its benefits ([2.8](#s2-8)) · UPS and backups ([1.9](#s1-9), [1.10](#s1-10))
 
 ### Section C: Communication and Network Technologies
 
-- Advantages and disadvantages of networks (2.11)
-- LAN vs WAN: geographical coverage **and** who owns the communication media (2.12)
-- How signals travel in UTP (electricity) vs fibre-optic (light) (2.2, 2.13)
-- Switch vs router vs modem vs WAP, and why a lab needs both a switch and a router (2.14)
-- Client-server vs peer-to-peer (P2P), e.g. BitTorrent (2.15)
-- Bandwidth, its unit of measurement, shaping vs throttling (2.6, 2.16)
-- Firewalls, SSL/TLS and HTTPS (2.7)
-- Symmetric vs asymmetric encryption, and how a session key is shared securely (2.17)
-- Digital certificates and Certificate Authorities (2.18)
-- VPN vs Remote Desktop Connection, and when to use each (2.7, 2.19)
-- Intranet, extranet and AUP (2.9)
+- Advantages and disadvantages of networks ([2.11](#s2-11))
+- LAN vs WAN: geographical coverage **and** who owns the communication media ([2.12](#s2-12))
+- How signals travel in UTP (electricity) vs fibre-optic (light) ([2.2](#s2-2), [2.13](#s2-13))
+- Switch vs router vs modem vs WAP, and why a lab needs both a switch and a router ([2.14](#s2-14))
+- Client-server vs peer-to-peer (P2P), e.g. BitTorrent ([2.15](#s2-15))
+- Bandwidth, its unit of measurement, shaping vs throttling ([2.6](#s2-6), [2.16](#s2-16))
+- Firewalls, SSL/TLS and HTTPS ([2.7](#s2-7))
+- Symmetric vs asymmetric encryption, and how a session key is shared securely ([2.17](#s2-17))
+- Digital certificates and Certificate Authorities ([2.18](#s2-18))
+- VPN vs Remote Desktop Connection, and when to use each ([2.7](#s2-7), [2.19](#s2-19))
+- Intranet, extranet and AUP ([2.9](#s2-9))
 
 ### Section D: Data and Information Management
 
-- Normalisation, data redundancy and the three anomalies: insert, update, delete (3.6, 3.19)
-- Splitting an unnormalised table into two tables, with PK <u>underlined</u> and FK marked with an asterisk * (3.20)
-- Drawing an ERD with correct cardinality (3.7, 3.21)
-- Candidate, alternate and composite keys (3.4, 3.17) · referential integrity (3.18)
-- Data independence (3.22)
-- Transactional database vs data warehouse · data mining and the human role in it (3.13, 3.23, 3.24)
-- Audit trails, access rights and data integrity (3.11, 3.25)
-- Data types for fields (3.5) · SQL `WHERE` vs `HAVING` (3.26)
+- Normalisation, data redundancy and the three anomalies: insert, update, delete ([3.6](#s3-6), [3.19](#s3-19))
+- Splitting an unnormalised table into two tables, with PK <u>underlined</u> and FK marked with an asterisk * ([3.20](#s3-20))
+- Drawing an ERD with correct cardinality ([3.7](#s3-7), [3.21](#s3-21))
+- Candidate, alternate and composite keys ([3.4](#s3-4), [3.17](#s3-17)) · referential integrity ([3.18](#s3-18))
+- Data independence ([3.22](#s3-22))
+- Transactional database vs data warehouse · data mining and the human role in it ([3.13](#s3-13), [3.23](#s3-23), [3.24](#s3-24))
+- Audit trails, access rights and data integrity ([3.11](#s3-11), [3.25](#s3-25))
+- Data types for fields ([3.5](#s3-5)) · SQL `WHERE` vs `HAVING` ([3.26](#s3-26))
 
 ### Section E: Solution Development
 
-- Choosing the right GUI component and giving a technical reason (4.16)
-- Drawing a UML class diagram: private attributes with data types, a constructor with a parameter list, mutators and accessors (4.3, 4.9)
-- Why the main form cannot assign a private attribute directly (4.9)
-- Finding a logical error in a formula and writing the corrected line (4.6, 4.12)
-- Runtime errors caused by invalid input, and the validation that prevents them (4.13)
-- `Random(n) + 1` and generating random values in a range (4.14)
-- Evaluating Boolean expressions with `NOT`, `AND`, `OR` and `mod`, using Delphi's order of precedence (4.5, 4.15)
-- Writing pseudocode that processes an array: totals, averages, counts, percentages (4.17)
-- Syntax vs runtime vs logical errors (4.6) · arrays (4.7)
+- Choosing the right GUI component and giving a technical reason ([4.16](#s4-16))
+- Drawing a UML class diagram: private attributes with data types, a constructor with a parameter list, mutators and accessors ([4.3](#s4-3), [4.9](#s4-9))
+- Why the main form cannot assign a private attribute directly ([4.9](#s4-9))
+- Finding a logical error in a formula and writing the corrected line ([4.6](#s4-6), [4.12](#s4-12))
+- Runtime errors caused by invalid input, and the validation that prevents them ([4.13](#s4-13))
+- `Random(n) + 1` and generating random values in a range ([4.14](#s4-14))
+- Evaluating Boolean expressions with `NOT`, `AND`, `OR` and `mod`, using Delphi's order of precedence ([4.5](#s4-5), [4.15](#s4-15))
+- Writing pseudocode that processes an array: totals, averages, counts, percentages ([4.17](#s4-17))
+- Syntax vs runtime vs logical errors ([4.6](#s4-6)) · arrays ([4.7](#s4-7))
 
 ### Section F: Integrated scenario
 
-- CSS and site-wide styling (6.2) · AJAX (6.3)
-- Client-side vs server-side processing (6.4) · cookies vs web cache (6.5)
-- Customised (personalised) search and SEO (6.6)
-- GUIDs and why they are used as session identifiers (6.7)
-- Live streaming vs video on demand, buffering and bandwidth (6.8)
-- Lossy vs lossless compression (6.9)
-- Distributed computing (6.10)
-- Certificate Authorities (2.18) · multi-factor authentication (2.7)
-- Zombies, botnets and DDoS attacks (5.6)
-- Information overload (5.9) · wikis and collaboration tools (6.11)
-- IoT, AR, RFID, location-based computing and privacy (2.5, 3.9, 5.2, 5.3)
+- CSS and site-wide styling ([6.2](#s6-2)) · AJAX ([6.3](#s6-3))
+- Client-side vs server-side processing ([6.4](#s6-4)) · cookies vs web cache ([6.5](#s6-5))
+- Customised (personalised) search and SEO ([6.6](#s6-6))
+- GUIDs and why they are used as session identifiers ([6.7](#s6-7))
+- Live streaming vs video on demand, buffering and bandwidth ([6.8](#s6-8))
+- Lossy vs lossless compression ([6.9](#s6-9))
+- Distributed computing ([6.10](#s6-10))
+- Certificate Authorities ([2.18](#s2-18)) · multi-factor authentication ([2.7](#s2-7))
+- Zombies, botnets and DDoS attacks ([5.6](#s5-6))
+- Information overload ([5.9](#s5-9)) · wikis and collaboration tools ([6.11](#s6-11))
+- IoT, AR, RFID, location-based computing and privacy ([2.5](#s2-5), [3.9](#s3-9), [5.2](#s5-2), [5.3](#s5-3))
 
 ---
 
 # SECTION 1: SYSTEM TECHNOLOGIES
 
-## 1.1 CPU Performance Concepts
+## 1.1 CPU Performance Concepts {#s1-1}
 
 ### Multiprocessing
 
@@ -138,7 +138,7 @@ A "thread" is one independent path of execution within a program. A web browser,
 
 Multiprocessing and multithreading are often combined: a 6-core CPU with hyper-threading can handle 12 threads at the same time.
 
-## 1.2 Cache and Disk Cache
+## 1.2 Cache and Disk Cache {#s1-2}
 
 ### Disk cache
 
@@ -153,7 +153,7 @@ Although both are forms of memory, they differ sharply:
 * **Speed and location** — Cache memory is built directly into (or right next to) the CPU and operates at almost CPU speed. RAM is on separate modules plugged into the motherboard, much further from the CPU, and is significantly slower.
 * **Size and cost** — Cache memory is very small (typically a few MB) but very expensive per MB. RAM is much larger (typically 8 GB to 64 GB) and far cheaper per GB. This is why the cache cannot simply be made enormous to replace RAM.
 
-## 1.3 Storage Hierarchy — Speed of Data Access
+## 1.3 Storage Hierarchy — Speed of Data Access {#s1-3}
 
 Inside a computer, different kinds of storage are arranged in a "hierarchy" — the fastest and most expensive at the top, the slowest and cheapest at the bottom. The CPU pulls data through this hierarchy.
 
@@ -167,7 +167,7 @@ From **fastest to slowest**:
 
 The reason for the hierarchy: faster memory is more expensive per byte, so we use a small amount of very fast memory close to the CPU, and a large amount of slow memory for the bulk storage of files.
 
-## 1.4 Motherboard — Point-to-Point Connections
+## 1.4 Motherboard — Point-to-Point Connections {#s1-4}
 
 Most components on the motherboard share a **bus** — a common pathway that several devices take turns to use. A **point-to-point connection** is a private, dedicated link between two specific components, used by no one else.
 
@@ -179,7 +179,7 @@ A typical example is the connection between the **CPU and RAM** (via the memory 
 * No "arbitration" overhead — no need to decide whose turn it is to use the bus.
 * The link can be optimised for the specific traffic between those two devices.
 
-## 1.5 The GPU (Graphics Processing Unit)
+## 1.5 The GPU (Graphics Processing Unit) {#s1-5}
 
 A **dedicated GPU** is a separate processor on the graphics card that is specialised for the kinds of mathematical calculations needed to draw graphics on screen — calculating where each pixel should appear, what colour it should be, and how 3D objects should be lit and rotated.
 
@@ -191,7 +191,7 @@ A **dedicated GPU improves general performance** by:
 
 The trade-off is that a dedicated GPU is expensive and uses more power.
 
-## 1.6 Virtual Machines (Standard Use Case)
+## 1.6 Virtual Machines (Standard Use Case) {#s1-6}
 
 A **virtual machine (VM)** is a software-created "computer within a computer" that runs its own operating system on top of the host computer.
 
@@ -200,7 +200,7 @@ A standard (non-developer) user might use a VM to:
 * **Test new or unknown software safely** — install a program that might contain a virus inside the VM. If it does, the host computer is untouched and the VM can be deleted.
 * **Run a different operating system** — keep Windows as the main OS but spin up an Ubuntu Linux VM to learn Linux, or run an old version of Windows to use legacy software that won't run on Windows 11.
 
-## 1.7 Virtual Reality (VR)
+## 1.7 Virtual Reality (VR) {#s1-7}
 
 **Virtual reality** is a computer-generated, **fully immersive 3D environment** that the user experiences by wearing a VR headset. The headset replaces what the user sees and hears, so they feel they are inside the virtual world instead of looking at a screen. Hand controllers (or hand tracking) let the user interact with virtual objects.
 
@@ -219,7 +219,7 @@ VR has applications across many industries:
 
 VR (Virtual Reality) **replaces** the real world entirely with a virtual one. AR (Augmented Reality) **adds** computer-generated information on top of the real world that the user can still see. Examples of AR include phone-camera filters, navigation arrows overlaid on streets, and games like Pokémon GO where virtual creatures appear in real locations.
 
-## 1.8 Beta Software
+## 1.8 Beta Software {#s1-8}
 
 A **beta version** is a near-final version of a software product released to a limited group of users (or sometimes to the public) for **testing in real-world conditions before the official release**.
 
@@ -230,13 +230,13 @@ The purpose of releasing a beta is to:
 
 The beta is not the final product — users are warned that it may be unstable, and they help the company by reporting problems.
 
-## 1.9 UPS — Uninterruptible Power Supply
+## 1.9 UPS — Uninterruptible Power Supply {#s1-9}
 
 A **UPS (Uninterruptible Power Supply)** is a device that contains a battery and sits between the wall socket and the computer. When the mains power fails, the UPS instantly switches over to its battery and **keeps the computer running for a short time** — usually long enough to save open work and shut down properly. It also protects the computer from power surges and dips.
 
 A UPS is especially valuable in **load-shedding regions and during thunderstorms**, where it prevents sudden shutdowns that can cause data loss and damage to the hardware.
 
-## 1.10 Backups
+## 1.10 Backups {#s1-10}
 
 A **backup** is a copy of the data, kept separately from the original, that can be used to restore the data if something goes wrong (hardware failure, file deletion, ransomware attack, theft, fire).
 
@@ -249,7 +249,7 @@ If full backups are taking too long and using too much space, the solution is to
 
 A combination of incremental backups + compression solves both the time problem and the storage problem.
 
-## 1.11 Virtual Memory
+## 1.11 Virtual Memory {#s1-11}
 
 **Virtual memory** is a technique used by the operating system to **use a portion of the storage device (SSD or HDD) as if it were extra RAM**. When physical RAM is full but a program needs more, the OS moves blocks of data that are not currently in active use out of RAM and onto the disk (into a special file called the **swap file** or **page file**). When that data is needed again, it is read back into RAM.
 
@@ -259,13 +259,13 @@ This allows the computer to run more programs at the same time than the physical
 
 The disk (even an SSD) is **vastly slower than RAM** — by a factor of hundreds or thousands. If the system has to swap data between RAM and the disk constantly (a situation called **thrashing**), the computer slows down dramatically. Programs become unresponsive, simple tasks take a long time, and the disk activity light is constantly on. The only real fix is to install more physical RAM so that virtual memory is needed less often.
 
-## 1.12 CMOS — Storing BIOS Settings
+## 1.12 CMOS — Storing BIOS Settings {#s1-12}
 
 The **CMOS** (Complementary Metal-Oxide-Semiconductor) is a small memory chip on the motherboard whose job is to **store the BIOS settings** — things like the system date and time, the boot order, and basic hardware configuration. The CMOS is kept powered by a small coin-shaped battery on the motherboard so that its contents are not lost when the computer is switched off.
 
 When the small battery runs out, the computer "forgets" the time and boot settings each time it is unplugged.
 
-## 1.13 System Software Quick Reference
+## 1.13 System Software Quick Reference {#s1-13}
 
 * **System software** is software that manages and controls the computer hardware (the OS, drivers, utility programs).
 * **Utility programs** are part of the system software and perform **maintenance and administrative tasks** — antivirus, backup, file compression, disk defragmenter, system clean-up tools.
@@ -273,7 +273,7 @@ When the small battery runs out, the computer "forgets" the time and boot settin
 * **Convergence** is the trend where separate technologies and functions are combined into a single multi-purpose device (the modern smartphone being the obvious example).
 * **Synchronisation** in the context of online (cloud) storage means that the same files are automatically kept up to date across multiple devices. A file edited on the laptop appears in its updated form on the phone moments later — no manual copying needed.
 
-## 1.14 Reading a Computer Specification (Advert Questions)
+## 1.14 Reading a Computer Specification (Advert Questions) {#s1-14}
 
 Section B often opens with two computer adverts, then asks you to pull facts out of them, compare them and recommend one for a particular user. You need to be able to decode every line of a specification.
 
@@ -318,7 +318,7 @@ In the example above, Laptop Y has a dedicated GPU: an NVIDIA GeForce RTX 5070 T
 
 A cheaper computer is the better recommendation when the user's needs are light, such as typing assignments, browsing and video calls. Paying for a powerful GPU would be wasted money. Always match the specification to the task in the scenario.
 
-## 1.15 Storage Capacity Does Not Equal Speed
+## 1.15 Storage Capacity Does Not Equal Speed {#s1-15}
 
 A common claim to evaluate: *"A 1TB SSD makes programs run twice as fast as a 512GB SSD."* This is **false**.
 
@@ -335,7 +335,7 @@ When the computer **runs out of physical RAM**, the operating system uses **virt
 
 It is still slow, though: disk storage is far slower than RAM, so heavy use of virtual memory causes **thrashing** (see 1.11). The real solution to thrashing is **more RAM**.
 
-## 1.16 Inside the CPU: Registers, ALU and Control Unit
+## 1.16 Inside the CPU: Registers, ALU and Control Unit {#s1-16}
 
 The CPU has three main parts:
 
@@ -356,14 +356,14 @@ The CPU has three main parts:
 
 Cache memory stores copies of **frequently used and recently used data and instructions** so that the CPU does not have to fetch them from the much slower RAM. This reduces the time the CPU spends **waiting** for data, so more instructions are processed per second.
 
-## 1.17 BIOS, POST and UEFI
+## 1.17 BIOS, POST and UEFI {#s1-17}
 
 * The **BIOS (Basic Input/Output System)** is **firmware**: software stored on a **ROM/flash memory chip on the motherboard**. It is the first software to run when the computer is switched on.
 * The BIOS performs the **POST (Power-On Self-Test)**: it checks that essential hardware such as the CPU, RAM, graphics and keyboard is present and working. If something fails, it reports the problem with an on-screen message or a series of beeps.
 * It then reads the boot settings stored in **CMOS** (see 1.12), finds the storage device with the operating system on it, and **loads the operating system into RAM** (booting).
 * **UEFI (Unified Extensible Firmware Interface)** is the modern replacement for BIOS. It boots faster, supports drives larger than 2TB, has a graphical interface that can use a mouse, and offers **Secure Boot**, which stops malware from loading during start-up.
 
-## 1.18 Device Drivers and Plug-and-Play
+## 1.18 Device Drivers and Plug-and-Play {#s1-18}
 
 A **device driver** is software that acts as a **translator between the operating system and a specific hardware device**. The OS sends general commands (e.g. "print this page"); the driver converts them into the exact instructions that particular printer model understands. Without the correct driver, the OS cannot use the device.
 
@@ -374,7 +374,7 @@ A **device driver** is software that acts as a **translator between the operatin
 3. It **automatically finds and installs the correct driver**, either from its built-in driver library or by downloading it (e.g. through Windows Update).
 4. It **configures** the device so that it is ready to use. The user does not need to install anything manually or restart the computer.
 
-## 1.19 Multitasking vs Multiprocessing vs Multithreading
+## 1.19 Multitasking vs Multiprocessing vs Multithreading {#s1-19}
 
 | Term | What happens | Key idea |
 |---|---|---|
@@ -384,7 +384,7 @@ A **device driver** is software that acts as a **translator between the operatin
 
 **Differentiating model answer:** *Multitasking is when the OS rapidly switches the processor between applications so that they seem to run at the same time, even though only one task is processed at any moment. Multiprocessing uses multiple cores or CPUs, so several tasks are really executed at the same time.*
 
-## 1.20 Virtualisation
+## 1.20 Virtualisation {#s1-20}
 
 **Virtualisation** is the use of software (called a **hypervisor**) to create **virtual (software-based) versions of hardware**. This allows **one physical computer to run several virtual machines at the same time**, each with its own operating system and applications, all **sharing the physical computer's resources** (CPU, RAM, storage).
 
@@ -395,7 +395,7 @@ Benefits:
 * New servers or test environments can be created **in minutes** and deleted just as easily.
 * Cloud computing depends on virtualisation: providers rent out virtual machines that run on shared physical servers.
 
-## 1.21 VR vs AR vs Mixed Reality
+## 1.21 VR vs AR vs Mixed Reality {#s1-21}
 
 | | Virtual Reality (VR) | Augmented Reality (AR) | Mixed Reality (MR) |
 |---|---|---|---|
@@ -405,7 +405,7 @@ Benefits:
 
 **Differentiating model answer:** *In VR the user is fully immersed in a virtual world and cannot see or interact with their physical surroundings. In MR the user can still see their physical surroundings, and virtual objects are placed into the real room so that the user can interact with both at the same time.*
 
-## 1.22 Compiler vs Interpreter
+## 1.22 Compiler vs Interpreter {#s1-22}
 
 Both are **translators**: system software that converts source code into machine code the CPU can execute (see 3.1).
 
@@ -417,13 +417,13 @@ Both are **translators**: system software that converts source code into machine
 | Lists all errors after compiling | Stops at the **first** error it reaches, which can make debugging easier |
 | Example: Delphi | Example: Python (traditionally) |
 
-## 1.23 3D Printing
+## 1.23 3D Printing {#s1-23}
 
 A **3D printer** is an **output device** that builds a **three-dimensional physical object layer by layer** from a digital 3D model. This is called *additive manufacturing*.
 
 The most common type (FDM, fused deposition modelling) **melts plastic filament** (e.g. PLA) in a heated nozzle and **extrudes** it in thin layers that harden as they cool. Uses include prototypes, spare parts, medical prosthetics, architectural models and school projects.
 
-## 1.24 Utility Software
+## 1.24 Utility Software {#s1-24}
 
 **Utility software** is system software that maintains, protects and optimises the computer.
 
@@ -440,7 +440,7 @@ The most common type (FDM, fused deposition modelling) **melts plastic filament*
 
 # SECTION 2: COMMUNICATION AND NETWORK TECHNOLOGIES
 
-## 2.1 Network Concepts and Hardware
+## 2.1 Network Concepts and Hardware {#s2-1}
 
 ### Host
 
@@ -462,7 +462,7 @@ A **switch** is a network device that connects multiple devices on the same netw
 
 In a **star topology**, every device on the network is connected by its own cable to a **central switch** (or hub). It is the most common topology in modern LANs. Its advantages: easy to add or remove devices without affecting others; if one cable fails, only that one device is affected; easy to troubleshoot.
 
-## 2.2 Cabling — Fibre vs UTP
+## 2.2 Cabling — Fibre vs UTP {#s2-2}
 
 For the **main backbone** of a high-traffic network, **fibre-optic cable** is preferred over copper UTP cable. Three technical advantages of fibre over copper:
 
@@ -472,7 +472,7 @@ For the **main backbone** of a high-traffic network, **fibre-optic cable** is pr
 
 The downside is that fibre is more expensive to buy and to install, and it cannot be bent sharply.
 
-## 2.3 Signal Loss — Attenuation
+## 2.3 Signal Loss — Attenuation {#s2-3}
 
 **Attenuation** is the **loss of signal strength** as a signal travels along a cable, through the air, or through any other medium. Causes include the distance the signal has travelled, the quality of the cable, and external interference. Attenuation is why network cables have maximum length limits (e.g. 100 m for UTP) — beyond that distance the signal is too weak to be useful. **Repeaters** and **switches** can boost the signal back up.
 
@@ -482,7 +482,7 @@ Other related terms that often get confused with attenuation:
 * **Eavesdropping** — secretly listening in on the data on the network.
 * **Crosstalk** — signal from one cable leaking into another nearby cable.
 
-## 2.4 GPS and 5G
+## 2.4 GPS and 5G {#s2-4}
 
 ### GPS
 
@@ -507,7 +507,7 @@ Reasons for choosing 5G:
 * **High speed** — modern 5G easily matches or exceeds typical fixed-line broadband, so large files can be transferred while the vehicle is on the move.
 * **No physical installation** — no cabling needs to be laid; the units are productive immediately.
 
-## 2.5 Location-Based Computing
+## 2.5 Location-Based Computing {#s2-5}
 
 **Location-based computing** is the use of a device's geographical location (usually from GPS, but also from Wi-Fi and cell-tower triangulation) to **provide services or information that are relevant to where the user is**. Examples include Google Maps directing you to the nearest petrol station, an app showing you the weather forecast for your current city, or a security app recording where the device is.
 
@@ -515,7 +515,7 @@ Reasons for choosing 5G:
 
 The major ethical concern is **privacy**. Location data is extremely sensitive: it reveals where you live, where you work, where your children go to school, what time you go to gym, and where you spent last Saturday night. If this data is collected without informed consent, sold to advertisers, leaked in a data breach, or accessed by a stalker or abusive partner, it can cause real harm. Companies collecting location data have an ethical (and often legal) duty to be transparent about how it is used and to keep it secure.
 
-## 2.6 Bandwidth Management — Shaping vs Throttling
+## 2.6 Bandwidth Management — Shaping vs Throttling {#s2-6}
 
 ISPs and network administrators control how bandwidth is used through two related but different techniques:
 
@@ -526,7 +526,7 @@ ISPs and network administrators control how bandwidth is used through two relate
 
 **Shaping** is the right choice. Shaping gives video conferencing **priority** so that calls are smooth and clear, while still allowing other traffic (like software updates) to use the leftover bandwidth at whatever speed is available. Throttling would simply cap one type of traffic regardless of conditions and might still leave video calls competing for bandwidth.
 
-## 2.7 Network Security
+## 2.7 Network Security {#s2-7}
 
 ### Firewall
 
@@ -557,7 +557,7 @@ A VPN is recommended for remote workers accessing the company network because:
 * All data sent over the public internet is **encrypted**, protecting it from being read or tampered with — even on insecure public Wi-Fi.
 * The user appears to be **inside the company network**, so they can access internal resources (file servers, internal applications) as if they were sitting at the office desk.
 
-## 2.8 Cloud Services
+## 2.8 Cloud Services {#s2-8}
 
 ### SaaS — Software as a Service
 
@@ -585,7 +585,7 @@ Disadvantages of relying *only* on VoIP:
 * **Customers without good internet** may struggle to reach the business (older customers or rural customers may prefer a normal phone number).
 * **Power dependency** — traditional phones often work during a power cut; VoIP devices need power and a working router.
 
-## 2.9 Internet Terminology
+## 2.9 Internet Terminology {#s2-9}
 
 ### Intranet
 
@@ -597,7 +597,7 @@ A common misconception worth correcting: an intranet is *not* accessible to user
 
 An **AUP (Acceptable Use Policy)** is a document that sets out the **rights and responsibilities of users on an organisation's network**. It explains what users are allowed to do (and not do), the consequences of misuse, and the organisation's right to monitor activity. New employees (and learners in a school) usually have to sign an AUP before being given a network account.
 
-## 2.10 Email Protocols
+## 2.10 Email Protocols {#s2-10}
 
 * **SMTP** (Simple Mail Transfer Protocol) — used to **send** email.
 * **POP3** (Post Office Protocol v3) — used to **receive** email; downloads messages to one device and (by default) removes them from the server.
@@ -605,7 +605,7 @@ An **AUP (Acceptable Use Policy)** is a document that sets out the **rights and 
 
 A common exam trick is to claim that "POP3 is a protocol for *sending* emails" — that is **false**. POP3 receives; SMTP sends.
 
-## 2.11 Advantages and Disadvantages of Networks
+## 2.11 Advantages and Disadvantages of Networks {#s2-11}
 
 | Advantages | Disadvantages |
 |---|---|
@@ -615,7 +615,7 @@ A common exam trick is to claim that "POP3 is a protocol for *sending* emails" �
 | **Communication**: email, messaging and collaboration | **Needs a skilled network administrator** to set up and maintain it |
 | **Central administration**: software updates and user accounts are managed from one place | **Performance**: heavy traffic can slow the network down for everyone |
 
-## 2.12 LAN vs WAN: Coverage and Ownership
+## 2.12 LAN vs WAN: Coverage and Ownership {#s2-12}
 
 | | LAN (Local Area Network) | WAN (Wide Area Network) |
 |---|---|---|
@@ -625,7 +625,7 @@ A common exam trick is to claim that "POP3 is a protocol for *sending* emails" �
 
 Other network types to know: a **PAN** (personal area network, a few metres, e.g. Bluetooth); a **WLAN** (wireless LAN, e.g. Wi-Fi); and a **MAN** (metropolitan area network, covering a city). The **internet** is the largest WAN.
 
-## 2.13 How Signals Travel: UTP vs Fibre-Optic
+## 2.13 How Signals Travel: UTP vs Fibre-Optic {#s2-13}
 
 | UTP (copper) | Fibre-optic |
 |---|---|
@@ -636,7 +636,7 @@ Other network types to know: a **PAN** (personal area network, a few metres, e.g
 
 **Model answer:** *A UTP cable transmits data as electrical pulses through copper wires, while a fibre-optic cable transmits data as pulses of light through glass fibres.*
 
-## 2.14 Network Devices: Switch, Router, Modem, WAP
+## 2.14 Network Devices: Switch, Router, Modem, WAP {#s2-14}
 
 | Device | Function |
 |---|---|
@@ -654,7 +654,7 @@ A switch cannot connect to the internet on its own, and a router alone does not 
 
 *A home "router" is really a router, switch, WAP and modem combined in one box. In an exam answer, describe each function separately.*
 
-## 2.15 Client-Server vs Peer-to-Peer (P2P)
+## 2.15 Client-Server vs Peer-to-Peer (P2P) {#s2-15}
 
 * **Client-server**: a central, powerful **server** provides resources (files, websites, email) to the **client** computers that request them. It is easy to secure and back up centrally, but the server is expensive and is a single point of failure.
 * **Peer-to-peer (P2P)**: there is **no central server**. Every computer (**peer**) is equal and can **both share and download** resources directly from other peers.
@@ -663,7 +663,7 @@ A switch cannot connect to the internet on its own, and a router alone does not 
 
 BitTorrent is a **P2P** file-sharing protocol. A large file is split into many small **pieces**. Your computer downloads different pieces **from many peers at the same time** and **uploads** the pieces it already has to other peers. The more people share a file, the faster it downloads, and no expensive central server is needed. The risks are that shared files may contain malware, and P2P networks are often used to share pirated content.
 
-## 2.16 Measuring Bandwidth
+## 2.16 Measuring Bandwidth {#s2-16}
 
 **Bandwidth** is the **maximum amount of data that can be transmitted per second** over a connection. It is measured in **bits per second (bps)**, usually **Mbps** (megabits per second) or **Gbps** (gigabits per second).
 
@@ -671,7 +671,7 @@ BitTorrent is a **P2P** file-sharing protocol. A large file is split into many s
 * **Download** bandwidth is how quickly you can *receive* data. **Upload** bandwidth is how quickly you can *send* data, which matters for video calls, uploading files and live-streaming an event.
 * 8 bits = 1 byte, so a 100 Mbps line downloads at about 12.5 MB per second.
 
-## 2.17 Encryption: Symmetric and Asymmetric
+## 2.17 Encryption: Symmetric and Asymmetric {#s2-17}
 
 **Encryption** scrambles data using a **key**, so that only someone with the correct key can **decrypt** and read it.
 
@@ -697,7 +697,7 @@ Secure websites (HTTPS) combine both types. They use asymmetric encryption to sh
 
 **SSL (Secure Sockets Layer)**, now replaced by **TLS** but still commonly called SSL, **encrypts the data sent between a browser and a web server**. Passwords, card numbers and personal details therefore cannot be read or changed if they are intercepted. It also lets the browser **verify that the website is genuine**.
 
-## 2.18 Digital Certificates and Certificate Authorities
+## 2.18 Digital Certificates and Certificate Authorities {#s2-18}
 
 A **digital certificate** is an electronic document that **proves the identity of a website or organisation**. It contains the owner's name, the owner's **public key**, an expiry date and the **digital signature of the Certificate Authority** that issued it.
 
@@ -709,7 +709,7 @@ A **Certificate Authority (CA)** is a **trusted third-party organisation** (e.g.
 
 Browsers have a built-in list of trusted CAs. If a site's certificate was signed by a trusted CA and is valid, the browser shows the padlock. If the certificate is fake, expired or self-signed, the browser shows a **security warning**. This is how a user can trust that a payment page is genuine and not a fake site set up by a criminal.
 
-## 2.19 VPN vs Remote Desktop Connection
+## 2.19 VPN vs Remote Desktop Connection {#s2-19}
 
 | | VPN (Virtual Private Network) | Remote Desktop Connection (RDC) |
 |---|---|---|
@@ -727,14 +727,14 @@ In practice, companies often **use both together**: the worker first connects th
 
 # SECTION 3: DATA AND INFORMATION MANAGEMENT
 
-## 3.1 Source Code vs Machine Code
+## 3.1 Source Code vs Machine Code {#s3-1}
 
 * **Source code** is the human-readable code written by a programmer in a programming language like Delphi, Python, Java or C++. It is plain text — programmers can read and edit it.
 * **Machine code** is the **binary instructions in 0s and 1s that the CPU can execute directly**. The CPU does not understand source code at all.
 
 A **compiler** translates the source code into machine code so the CPU can run it. A common exam trick is to claim "source code is in binary format that the CPU can execute directly" — that is **false**. Source code is in a human-readable programming language; *machine code* is the binary version.
 
-## 3.2 The Machine Cycle
+## 3.2 The Machine Cycle {#s3-2}
 
 The **machine cycle** is the **specific sequence of steps the CPU follows when carrying out an instruction**. The four steps are usually called:
 
@@ -745,11 +745,11 @@ The **machine cycle** is the **specific sequence of steps the CPU follows when c
 
 The CPU repeats this cycle billions of times per second.
 
-## 3.3 GIGO — Garbage In, Garbage Out
+## 3.3 GIGO — Garbage In, Garbage Out {#s3-3}
 
 **GIGO** is the principle that the **quality of the output of any computer system is directly related to the quality of the input**. If the data put into the system is wrong, incomplete or nonsense ("garbage"), the system can only produce wrong, incomplete or nonsense results — no matter how well-written the program is. GIGO is the reason why data validation and verification matter so much.
 
-## 3.4 Database Keys
+## 3.4 Database Keys {#s3-4}
 
 ### Primary key
 
@@ -763,7 +763,7 @@ A **composite key** is a primary key made up of **a combination of two or more f
 
 A **foreign key** is a field in one table whose value matches the primary key of another table. It is the mechanism that creates **relationships** between tables in a relational database. For example, in a Loans table, the `MemberID` field is a foreign key linking to the Members table.
 
-## 3.5 Data Types in a Database
+## 3.5 Data Types in a Database {#s3-5}
 
 When designing a database, each field needs an appropriate data type:
 
@@ -778,7 +778,7 @@ When designing a database, each field needs an appropriate data type:
 
 A field that stores a monetary value (e.g. `TotalAmount`, `Price`, `Salary`) should be of type **Currency**. A field that stores a count or quantity (e.g. `NumberOfItems`, `Age`) should be **Integer**. A field that stores a true/false condition (e.g. `IsActive`, `HasPaid`) should be **Boolean**.
 
-## 3.6 Normalisation
+## 3.6 Normalisation {#s3-6}
 
 **Normalisation** is the process of **organising the fields and tables of a relational database to reduce redundancy and improve data integrity**. The aim is to ensure that each piece of information is stored in **one place only**, and that each table contains data about only one "thing" (one entity).
 
@@ -794,7 +794,7 @@ A field that stores a **calculated or derived value** violates normalisation. Th
 
 The correct approach is to **calculate the value whenever it is needed** (using a query or a calculated field in the form) instead of storing it. Other examples of derived values that violate normalisation: storing an age (calculate from date of birth), storing an average (calculate from the underlying values), storing a person's full name when first name and surname already exist.
 
-## 3.7 Database Relationships
+## 3.7 Database Relationships {#s3-7}
 
 A **one-to-many relationship** is the most common kind of relationship in a relational database: one record in Table A is related to many records in Table B. Some everyday examples:
 
@@ -808,7 +808,7 @@ To create a one-to-many relationship between two tables (let's call them `tblPar
 * `tblChild` includes a field that stores the ID of the parent that the child record belongs to. In `tblChild`, that field is a **foreign key** that links to the primary key in `tblParent`.
 * In the DBMS the relationship is then defined between the foreign key and the primary key, and **referential integrity** is enforced — meaning the system will not allow a child record to refer to a parent that does not exist, and will not allow a parent to be deleted while children still reference it.
 
-## 3.8 Centralised vs Distributed Databases
+## 3.8 Centralised vs Distributed Databases {#s3-8}
 
 * In a **centralised database** model, all the data is stored on **one central server**, and every user (no matter where they are) connects to that one location to read and write data.
 * In a **distributed database** model, the data is **spread across multiple servers in different locations**, often kept in sync with each other. A user typically connects to the nearest server.
@@ -827,7 +827,7 @@ A distributed database is most useful when an organisation has multiple sites in
 
 However, distributed systems are **more complex and expensive**, and keeping the copies of the data in sync requires careful design.
 
-## 3.9 RFID
+## 3.9 RFID {#s3-9}
 
 **RFID (Radio Frequency Identification)** is a wireless technology in which a small tag (containing a microchip and antenna) transmits identifying information to a nearby reader using radio waves. RFID tags do not need line-of-sight (unlike barcodes), can be read from a short distance, and many tags can be read at the same time.
 
@@ -842,7 +842,7 @@ RFID is used wherever many items need to be tracked or identified automatically.
 * **Retail anti-theft** — clothing items are tagged; the tag triggers an alarm at the exit if not deactivated at the till.
 * **Contactless payment** — bank cards and phones use a short-range form of RFID (NFC) to pay without inserting the card.
 
-## 3.10 Invisible Online Data Collection
+## 3.10 Invisible Online Data Collection {#s3-10}
 
 **Invisible (or covert) online data collection** is the gathering of information about users by websites and online services **without the user being directly aware that the data is being collected**. The user is focused on the page content; the data collection happens silently in the background.
 
@@ -856,7 +856,7 @@ Examples include:
 
 This kind of data is used for targeted advertising, analytics and sometimes for profiling — and it is a major privacy concern.
 
-## 3.11 Data Integrity Controls
+## 3.11 Data Integrity Controls {#s3-11}
 
 ### Logging changes (audit log)
 
@@ -881,13 +881,13 @@ Used together, they prevent unauthorised personnel from altering sensitive data.
 
 A common validation technique to ensure a date field is valid is a **range check** — the date must fall within a specified range (e.g. between an official start date and end date), or simply must not be in the future.
 
-## 3.12 Transaction Rollback
+## 3.12 Transaction Rollback {#s3-12}
 
 A **transaction rollback** is a database mechanism that **undoes (rolls back) all changes made during a transaction if the transaction does not complete successfully**. Its purpose is to keep the database in a consistent state — either *all* the steps of a transaction happen, or *none* of them do.
 
 If the system is updating a table during a power surge and the update is interrupted halfway through, a rollback undoes any partial changes that were made, returning the database to exactly the state it was in before the failed transaction started. This prevents corrupted, half-finished data from being left behind.
 
-## 3.13 Data Warehousing and Data Mining
+## 3.13 Data Warehousing and Data Mining {#s3-13}
 
 These two terms are often confused but mean very different things:
 
@@ -896,11 +896,11 @@ These two terms are often confused but mean very different things:
 
 A simple analogy: the data warehouse is the library; data mining is the act of reading through the library to find a story no one had noticed before.
 
-## 3.14 SQL
+## 3.14 SQL {#s3-14}
 
 **SQL (Structured Query Language)** is the **standard language used for querying and manipulating data in a relational database**. Almost every relational DBMS — MySQL, PostgreSQL, Oracle, Microsoft SQL Server, Microsoft Access — supports SQL. With SQL the programmer can create tables, insert records, update records, delete records and run powerful queries to extract exactly the information needed.
 
-## 3.15 Database-Related Careers
+## 3.15 Database-Related Careers {#s3-15}
 
 Two careers involved in the day-to-day maintenance and security of databases:
 
@@ -909,7 +909,7 @@ Two careers involved in the day-to-day maintenance and security of databases:
 
 Other careers in the database field include **Database Analyst** (designs the data model) and **Database Programmer / Developer** (writes the queries and application code).
 
-## 3.16 Binary Conversion (8-bit)
+## 3.16 Binary Conversion (8-bit) {#s3-16}
 
 To convert a decimal number to its 8-bit binary equivalent, use the place values:
 
@@ -933,7 +933,7 @@ Start with the largest place value that fits in the number, write a 1 in that po
 
 (Always check: 32 + 16 + 4 + 1 = 53 ✓)
 
-## 3.17 Candidate, Alternate and Composite Keys
+## 3.17 Candidate, Alternate and Composite Keys {#s3-17}
 
 * A **candidate key** is **any field (or combination of fields) that could uniquely identify every record** in a table.
 * The **primary key** is the candidate key that the designer **chooses** to identify the records.
@@ -942,7 +942,7 @@ Start with the largest place value that fits in the number, write a 1 in that po
 
 **Example:** in `tblLearner`, the fields `LearnerID`, `IDNumber` and `EmailAddress` are all unique for every learner, so all three are candidate keys. If `LearnerID` is chosen as the primary key, then `IDNumber` and `EmailAddress` are **alternate keys**.
 
-## 3.18 Referential Integrity
+## 3.18 Referential Integrity {#s3-18}
 
 **Referential integrity** is the database rule that **every foreign key value must match an existing primary key value** in the related table. In other words, a record may never point to a record that does not exist.
 
@@ -956,7 +956,7 @@ When referential integrity is enforced, the DBMS will:
 
 This prevents **orphan records**: detail records that belong to nothing.
 
-## 3.19 Data Redundancy and Anomalies
+## 3.19 Data Redundancy and Anomalies {#s3-19}
 
 **Data redundancy** is when **the same data is unnecessarily stored more than once**. In an unnormalised table, redundancy causes three kinds of problem, called **anomalies**:
 
@@ -968,7 +968,7 @@ This prevents **orphan records**: detail records that belong to nothing.
 
 To "identify and explain an anomaly" for 2 marks: **name the anomaly**, then **explain it using actual data from the table** in the question.
 
-## 3.20 Normalising a Table into Two Tables (Worked Example)
+## 3.20 Normalising a Table into Two Tables (Worked Example) {#s3-20}
 
 A school IT department logs repair jobs in this **unnormalised** table:
 
@@ -1007,7 +1007,7 @@ Marks are usually given for: both table names · all the fields placed in the co
 
 Now the technician's details are stored **once**. A new technician can be added before they get a job, and deleting a job never deletes a technician.
 
-## 3.21 Drawing an ER Diagram
+## 3.21 Drawing an ER Diagram {#s3-21}
 
 An **Entity Relationship Diagram (ERD)** shows the **entities** (tables) and the **relationships** between them. For the design in 3.20:
 
@@ -1045,14 +1045,14 @@ What earns the marks:
 
 For more worked ERDs (including resolving many-to-many relationships with a junction table), see Part 3 of the Study Companion PDF.
 
-## 3.22 Data Independence
+## 3.22 Data Independence {#s3-22}
 
 **Data independence** means that **the way data is stored or structured can be changed without having to change the application programs that use the data**. The DBMS makes this possible by keeping the data separate from the programs.
 
 * **Physical data independence**: the *physical storage* can change (e.g. the database is moved to a new server or drive, or new indexes are added) without changing the logical design or the programs.
 * **Logical data independence**: the *logical structure* can change (e.g. a new field or table is added) without having to rewrite existing programs that do not use the new field.
 
-## 3.23 Transactional Database vs Data Warehouse
+## 3.23 Transactional Database vs Data Warehouse {#s3-23}
 
 | Transactional (operational) database | Data warehouse |
 |---|---|
@@ -1061,7 +1061,7 @@ For more worked ERDs (including resolving many-to-many relationships with a junc
 | Handles many small, fast **read and write** transactions (e.g. recording each sale as it happens) | Mostly **read-only**; loaded with new data periodically (e.g. overnight) |
 | Used to **run the business** every day | Used for **analysis, reporting and decision-making** (including data mining) |
 
-## 3.24 The Human Role in Data Mining
+## 3.24 The Human Role in Data Mining {#s3-24}
 
 **Data mining** software searches large data sets for **hidden patterns, trends and relationships** (see 3.13). It still depends on people:
 
@@ -1071,7 +1071,7 @@ For more worked ERDs (including resolving many-to-many relationships with a junc
 * **Making decisions**: people decide what action to take based on the patterns (e.g. change a marketing campaign or restock differently).
 * **Ethics and legality**: people must make sure that personal data is used lawfully and fairly (POPIA).
 
-## 3.25 Audit Trails
+## 3.25 Audit Trails {#s3-25}
 
 An **audit trail** (audit log) is an **automatic, time-stamped record of every action performed on the data**. It records **who** (the user account), **what** they did (viewed, added, changed or deleted, including old and new values), **which** record, **when**, and often **from which device** (see also *Logging changes* in 3.11).
 
@@ -1084,7 +1084,7 @@ An **audit trail** (audit log) is an **automatic, time-stamped record of every a
 
 The audit trail itself must be protected, so that ordinary users cannot edit or delete it.
 
-## 3.26 SQL: WHERE vs HAVING
+## 3.26 SQL: WHERE vs HAVING {#s3-26}
 
 * **`WHERE`** filters **individual records before they are grouped**. It **cannot** use aggregate functions such as `SUM`, `COUNT` or `AVG`.
 * **`HAVING`** filters **groups after `GROUP BY`**, using a condition that **does** use an aggregate function.
@@ -1103,11 +1103,11 @@ A common true/false trap claims that `WHERE` is used with aggregate functions. T
 
 # SECTION 4: SOLUTION DEVELOPMENT
 
-## 4.1 Algorithms and Programming Concepts
+## 4.1 Algorithms and Programming Concepts {#s4-1}
 
 An **algorithm** is a **step-by-step approach followed to solve a problem**. Every program begins as an algorithm before any code is written.
 
-## 4.2 Integer Division Operators in Delphi
+## 4.2 Integer Division Operators in Delphi {#s4-2}
 
 Delphi provides several operators for working with whole-number division. The four to know:
 
@@ -1123,7 +1123,7 @@ So among `div`, `Floor` and `Trunc`, all three give 10 for `64 ÷ 6`. **`64 mod 
 
 (Note: for **negative** numbers, `Trunc` and `Floor` behave differently — `Trunc(-2.5)` is −2, while `Floor(-2.5)` is −3. For positive numbers, they agree.)
 
-## 4.3 UML Class Diagrams (OOP)
+## 4.3 UML Class Diagrams (OOP) {#s4-3}
 
 A **UML (Unified Modeling Language) class diagram** is a visual blueprint of an object class. It shows the class's **attributes** (the data each object will store) and its **methods** (the actions each object can perform). A UML class diagram is split into three sections from top to bottom: the class name, the attributes, and the methods.
 
@@ -1165,7 +1165,7 @@ A UML class diagram is divided into three horizontal sections:
 
 Reading the diagram in this order — class name first, then attributes, then methods — gives a complete summary of what the class can do and what data each object holds.
 
-## 4.4 Validation Types
+## 4.4 Validation Types {#s4-4}
 
 Different types of validation suit different kinds of input:
 
@@ -1177,7 +1177,7 @@ Different types of validation suit different kinds of input:
 
 For a value that must be one of a small fixed set of options (e.g. a number from 1 to 5, or one of three categories), the appropriate **input component** is a **SpinEdit** or a **ComboBox / RadioGroup** with the valid options pre-loaded — both restrict the user to valid input from the start, so validation only has to confirm that *something* was selected.
 
-## 4.5 Boolean Logic
+## 4.5 Boolean Logic {#s4-5}
 
 A complex condition can be built using **AND**, **OR** and **NOT** combined with parentheses to control the order of evaluation. Each part must be evaluated true or false, then combined according to the standard rules:
 
@@ -1229,7 +1229,7 @@ If `iAge = 25`, `rHeight = 160`, `bHasLicence = False`, `iYearsExperience = 7`, 
 
 **Common trap**: pay close attention to whether the operator is `>` (strict) or `>=` (inclusive). A value of `18` satisfies `iAge >= 18` but does *not* satisfy `iAge > 18`.
 
-## 4.6 Types of Errors
+## 4.6 Types of Errors {#s4-6}
 
 Programs can fail in three different ways:
 
@@ -1249,7 +1249,7 @@ sLetters[RandomRange(1,26)]
 
 This is a **logical error**: the program runs fine and prints output, but the output is subtly wrong. The correct call would have been `RandomRange(1,27)` to include 26, or `Random(26)+1`.
 
-## 4.7 Arrays
+## 4.7 Arrays {#s4-7}
 
 ### One-dimensional array
 
@@ -1297,7 +1297,7 @@ for j := 1 to N do
 * The structure mirrors the real-world grid, making the code easier to read.
 * Each cell stores exactly one character of the correct type (`Char`), rather than the whole row as a less precise `String`.
 
-## 4.8 Permanent Storage of Program Data
+## 4.8 Permanent Storage of Program Data {#s4-8}
 
 When data must be kept **after the program ends and even after the computer is switched off**, the program must save it to a non-volatile data structure. Options include:
 
@@ -1311,7 +1311,7 @@ For permanently storing readable data such as reports, logs, generated content, 
 
 A common bug to look out for: if a `Lines.Add(sLine)` call is moved to **after** the end of the loop that builds the value of `sLine`, then `sLine` is added only **once** — and only the *last* value will appear in the output, instead of every value the loop produced. Each iteration's result must be added **inside** the loop, after the value for that iteration has been built.
 
-## 4.9 UML Diagrams in Practice and Private Attributes
+## 4.9 UML Diagrams in Practice and Private Attributes {#s4-9}
 
 ### A diagram with a parameterised constructor
 
@@ -1356,7 +1356,7 @@ This line causes a **compiler error** because `fWeight` is declared **private**.
 
 For more on the three kinds of UML question and a bank of model answers, see Part 4 of the Study Companion PDF.
 
-## 4.10 Parameters and Arguments
+## 4.10 Parameters and Arguments {#s4-10}
 
 * A **parameter** (formal parameter) is a **variable declared in the header of a procedure or function**. It **receives** the data sent into the subroutine.
 * An **argument** (actual parameter) is the **actual value or variable passed** to the subroutine **when it is called**.
@@ -1369,7 +1369,7 @@ rVAT := CalcVAT(250);                    // 250 is the ARGUMENT
 
 Remember also the difference between a **value parameter** (a copy is passed, so the original is not changed) and a **reference (`var`) parameter** (the actual variable is passed, so changes inside the subroutine change the original).
 
-## 4.11 Data Types of Expressions
+## 4.11 Data Types of Expressions {#s4-11}
 
 You may be asked what data type an expression produces:
 
@@ -1386,7 +1386,7 @@ You may be asked what data type an expression produces:
 
 `div` and `mod` only work with **integer** operands. Assigning the result of `/` to an Integer variable causes a **compiler error** (incompatible types).
 
-## 4.12 Finding Logical Errors in Code
+## 4.12 Finding Logical Errors in Code {#s4-12}
 
 A **logical error** means the program runs but gives the **wrong answer** (see 4.6). The compiler cannot find these errors for you. You must compare the code with the **description** of what it is supposed to do.
 
@@ -1417,7 +1417,7 @@ rFinalPrice := rPrice - rPrice * rDiscount / 100;
 
 **Answer format:** "Identify the line and correct it" questions want **the line number** *and* **the complete corrected line of code**, not just a description of the fix.
 
-## 4.13 Runtime Errors from Invalid Input and How to Prevent Them
+## 4.13 Runtime Errors from Invalid Input and How to Prevent Them {#s4-13}
 
 Conversion functions such as `StrToInt` and `StrToFloat` **crash the program with a runtime error** (an `EConvertError`) when the text cannot be converted to a number. This happens when the user:
 
@@ -1451,7 +1451,7 @@ Other acceptable methods:
 * wrap the conversion in a `try ... except` block
 * use a **SpinEdit**, which only accepts numbers
 
-## 4.14 Random Numbers in Delphi
+## 4.14 Random Numbers in Delphi {#s4-14}
 
 | Statement | Possible values |
 |---|---|
@@ -1472,7 +1472,7 @@ iNum := Random(High - Low + 1) + Low;
 
 Examples: roll a dice with `Random(6) + 1`; pick a random learner from `arrNames[1..25]` with `arrNames[Random(25) + 1]`. Call `Randomize` once (e.g. in `FormCreate`) so the program gives a different sequence each time it runs.
 
-## 4.15 Operator Precedence in Boolean Expressions
+## 4.15 Operator Precedence in Boolean Expressions {#s4-15}
 
 Delphi does **not** simply work from left to right. Operators are applied in this order:
 
@@ -1512,7 +1512,7 @@ bResult := (iScore >= 50) OR NOT bLate AND (iScore mod 4 = 0);
 
 The brackets change the answer.
 
-## 4.16 Choosing the Right GUI Component
+## 4.16 Choosing the Right GUI Component {#s4-16}
 
 When an input must come from a **limited set of valid values**, a component that **restricts** the input is better than a `TEdit`, where the user can type anything.
 
@@ -1528,7 +1528,7 @@ When an input must come from a **limited set of valid values**, a component that
 
 **Model answer structure:** *Use a **ComboBox** (or radio group) containing the valid options, because the user can only select one of the valid values and cannot type invalid or inconsistent input, so no validation is needed.*
 
-## 4.17 Pseudocode Algorithms that Process Arrays
+## 4.17 Pseudocode Algorithms that Process Arrays {#s4-17}
 
 Pseudocode is not marked on exact syntax. It is marked on **correct logic**, **correct order** and **clear structure**. Use these conventions:
 
@@ -1613,7 +1613,7 @@ END FOR
 
 # SECTION 5: SOCIAL IMPLICATIONS, CYBERSECURITY AND INTEGRATED TOPICS
 
-## 5.1 Cybercrime — Common Threats
+## 5.1 Cybercrime — Common Threats {#s5-1}
 
 ### Ransomware
 
@@ -1640,7 +1640,7 @@ These two terms are often confused:
 
 A common exam trick is to claim "a worm is a malicious program disguised as something useful" — that is **false**. A *Trojan* is disguised as something useful; a *worm* spreads through a network on its own.
 
-## 5.2 Internet of Things (IoT)
+## 5.2 Internet of Things (IoT) {#s5-2}
 
 The **Internet of Things (IoT)** is the network of everyday physical objects that have been fitted with sensors, software and internet connectivity, so that they can **collect data and exchange it with each other and with central systems**. Examples include smart watches, smart fridges, smart light bulbs, wearable medical devices, and industrial sensors in factories and warehouses.
 
@@ -1654,7 +1654,7 @@ Several technologies enable IoT — for example:
 
 **Impact on supply chains and logistics**: IoT sensors allow goods to be monitored in real time as they move through warehouses, factories, transport vehicles and shops. Typical sensors include temperature sensors on refrigerated cargo (to confirm the cold chain is unbroken), humidity sensors on moisture-sensitive products, GPS trackers on shipping containers, vibration sensors on fragile loads, and RFID readers at every checkpoint. Problems — a freezer warming up, a delayed truck, a load that has been dropped — are detected the moment they happen instead of when the goods arrive damaged. This **reduces waste, improves quality, lowers costs and speeds up decision-making**.
 
-## 5.3 Augmented Reality (AR)
+## 5.3 Augmented Reality (AR) {#s5-3}
 
 **Augmented reality** is technology that **overlays computer-generated information (images, sound, text) onto the user's view of the real world**. Unlike virtual reality (which replaces reality entirely), AR enhances it. The user sees the real environment through a phone camera, tablet or AR glasses, with digital content added on top.
 
@@ -1682,7 +1682,7 @@ For AR to align digital content correctly with the real world, the device must k
 
 The accelerometer + gyroscope combination is the most important: without them, the digital overlay would not stay locked onto the real surface as the phone moves.
 
-## 5.4 Central Server Storage — Advantages
+## 5.4 Central Server Storage — Advantages {#s5-4}
 
 For any system that generates a large volume of data — sensor readings in a factory, transaction logs in a shop, learner records in a school — storing the data on a **central server** has several advantages over keeping it on individual machines:
 
@@ -1691,7 +1691,7 @@ For any system that generates a large volume of data — sensor readings in a fa
 * **Better processing** — a server has more storage and processing power than individual workstations, so it can handle the enormous volume of data and run analysis tasks on it.
 * **Consistency** — all data is stored in one format, in one place, making reporting and analysis straightforward.
 
-## 5.5 Phishing, Pharming, Spoofing and Spyware
+## 5.5 Phishing, Pharming, Spoofing and Spyware {#s5-5}
 
 | Threat | How it works | Needs the user to make a mistake? |
 |---|---|---|
@@ -1702,7 +1702,7 @@ For any system that generates a large volume of data — sensor readings in a fa
 
 **Protection:** check for HTTPS and a valid certificate (see 2.18) before entering details; never click links in unexpected messages (type the address yourself); keep antivirus software and the OS updated; use multi-factor authentication (see 2.7).
 
-## 5.6 Zombies, Botnets and DDoS Attacks
+## 5.6 Zombies, Botnets and DDoS Attacks {#s5-6}
 
 * A **zombie** is a **computer or connected device that has been infected with malware** that lets a criminal **control it remotely without the owner knowing**. The owner usually notices nothing except perhaps a slower device.
 * A **botnet** is a **network of many zombie devices** (sometimes hundreds of thousands) that are **controlled together by one criminal** (the "bot herder") from a command server.
@@ -1710,7 +1710,7 @@ For any system that generates a large volume of data — sensor readings in a fa
 
 **IoT devices** such as smart cameras, smart TVs and home routers are common targets because they often still use **default passwords** and are rarely updated. **Protection:** change default passwords, install firmware updates, use a firewall and antivirus software, and switch off features that are not needed.
 
-## 5.7 Green Computing, E-waste, Dematerialisation and Ergonomics
+## 5.7 Green Computing, E-waste, Dematerialisation and Ergonomics {#s5-7}
 
 These four terms are easy to confuse in multiple-choice questions:
 
@@ -1719,7 +1719,7 @@ These four terms are easy to confuse in multiple-choice questions:
 * **Dematerialisation**: **replacing physical items or processes with digital versions**, e.g. e-books instead of paper books, online banking instead of paper statements, e-tickets, and streaming instead of DVDs. It reduces paper, plastic and transport.
 * **Ergonomics**: the **study and design of the workplace and equipment to fit the user**, improving **comfort, safety and productivity**. Examples: an adjustable chair, the screen at eye level, a wrist rest, good lighting and regular breaks. Good ergonomics prevents **RSI** (repetitive strain injury), **CVS** (computer vision syndrome) and back and neck strain.
 
-## 5.8 Software Licensing and DRM
+## 5.8 Software Licensing and DRM {#s5-8}
 
 | Type | Cost | Source code | Key idea |
 |---|---|---|---|
@@ -1741,7 +1741,7 @@ These four terms are easy to confuse in multiple-choice questions:
 
 **Disadvantage:** DRM can also restrict **legal** use. You may not be able to make a backup copy, or move a purchased e-book to a different device.
 
-## 5.9 Information Overload
+## 5.9 Information Overload {#s5-9}
 
 **Information overload** is when a person **receives more information than they can process effectively**. It becomes difficult to **identify what is important**, to **concentrate** and to **make good decisions**.
 
@@ -1762,7 +1762,7 @@ It is caused by constant notifications, large volumes of email, social media, ma
 
 These topics are most often examined in **Section F**, where one long scenario (a school portal, an online shop, a sports event) is used to ask questions from every topic. Always answer **in the context of the scenario**.
 
-## 6.1 Web 1.0, Web 2.0, Web 3.0 and the Semantic Web
+## 6.1 Web 1.0, Web 2.0, Web 3.0 and the Semantic Web {#s6-1}
 
 | | Web 1.0 | Web 2.0 | Web 3.0 / Semantic Web |
 |---|---|---|---|
@@ -1779,7 +1779,7 @@ These topics are most often examined in **Section F**, where one long scenario (
 * **Content management systems and easy-to-use platforms**: ordinary users can publish without knowing HTML.
 * **Smartphones with cameras and mobile data**: anyone can create and share content anywhere.
 
-## 6.2 CSS: Cascading Style Sheets
+## 6.2 CSS: Cascading Style Sheets {#s6-2}
 
 **CSS** is the language that controls the **presentation** of web pages: fonts, colours, borders, spacing and layout. **HTML** defines the **content and structure**, while **CSS** defines how it **looks**.
 
@@ -1798,7 +1798,7 @@ h1    { font-family: Arial, sans-serif; color: #0f766e; }
 
 All the pages **link to one external `.css` file**. To change the theme (e.g. new colours or fonts), the developer **edits the rules once in that single file**, and **every linked page updates automatically**. There is no need to edit each page separately, which saves time, keeps the design **consistent** and avoids missing a page.
 
-## 6.3 AJAX: Updating Part of a Page
+## 6.3 AJAX: Updating Part of a Page {#s6-3}
 
 **AJAX (Asynchronous JavaScript and XML)** is a technique in which **JavaScript in the browser sends a request to the web server in the background** and receives a small amount of data (often as JSON or XML). It then **updates only the part of the page that has changed, without reloading the whole page**.
 
@@ -1812,7 +1812,7 @@ Examples: live-updating sports scores, new messages appearing in a chat, a map l
 * The user can **continue interacting** (reading, scrolling, typing) while new data loads.
 * **Less data is transferred**, because only the changed information is sent. This helps users on slow or expensive mobile connections.
 
-## 6.4 Client-Side vs Server-Side Processing
+## 6.4 Client-Side vs Server-Side Processing {#s6-4}
 
 | | Client-side | Server-side |
 |---|---|---|
@@ -1823,7 +1823,7 @@ Examples: live-updating sports scores, new messages appearing in a chat, a map l
 
 **How to decide:** can the check be done using **only what the user typed**, without the database? Then it can be **client-side**. Does it need **stored data** (a password, stock levels, existing records)? Then it must be **server-side**. Good systems validate on **both** sides.
 
-## 6.5 Cookies vs Web Cache
+## 6.5 Cookies vs Web Cache {#s6-5}
 
 | | Cookie | Web cache (browser cache) |
 |---|---|---|
@@ -1831,7 +1831,7 @@ Examples: live-updating sports scores, new messages appearing in a chat, a map l
 | Primary purpose | To **remember the user and their state** between pages and visits (HTTP itself does not remember anything between requests) | To **load pages faster** when they are visited again, and to **save bandwidth**, by using local copies instead of downloading everything again |
 | Concern | **Privacy**: third-party cookies can track users across websites | Pages can show **old (stale) content** until the cache is refreshed |
 
-## 6.6 Search Engines: Customised Search and SEO
+## 6.6 Search Engines: Customised Search and SEO {#s6-6}
 
 A search engine uses **crawlers (spiders)** to visit web pages, stores what it finds in an **index**, and uses a **ranking algorithm** to order the results for each search.
 
@@ -1860,7 +1860,7 @@ Two users can therefore type **exactly the same keyword** and get **different re
 * **links from other reputable sites**
 * regularly updated, high-quality content
 
-## 6.7 GUIDs: Globally Unique Identifiers
+## 6.7 GUIDs: Globally Unique Identifiers {#s6-7}
 
 A **GUID (Globally Unique Identifier)** is a **128-bit number, usually written as 32 hexadecimal characters in five groups**, e.g. `3F2504E0-4F89-41D3-9A0C-0305E82C3301`. It is generated so that the chance of two GUIDs ever being the same is **practically zero**, **without any central list or counter being checked**.
 
@@ -1869,7 +1869,7 @@ A **GUID (Globally Unique Identifier)** is a **128-bit number, usually written a
 * **Security:** sequential numbers are **predictable**. If a user's session ID is 1005, an attacker could simply try 1004 or 1006 to **take over (hijack) another user's logged-in session**. A random GUID is practically **impossible to guess**.
 * **Uniqueness across servers:** a large website runs on many servers at once. Each server can generate GUIDs independently **without clashing**, whereas sequential numbers would need one central counter.
 
-## 6.8 Streaming: Live vs Video on Demand
+## 6.8 Streaming: Live vs Video on Demand {#s6-8}
 
 **Streaming** plays audio or video **as it arrives over the network**, without first downloading the whole file. The player keeps a small **buffer**: a few seconds of data downloaded ahead so playback is smooth.
 
@@ -1890,7 +1890,7 @@ When bandwidth drops, less video data can be sent per second, so the viewer expe
 
 If it is the **broadcaster's upload** bandwidth that drops, **every viewer** is affected, because less video can be sent out from the venue.
 
-## 6.9 Compression: Lossy vs Lossless
+## 6.9 Compression: Lossy vs Lossless {#s6-9}
 
 | Lossless compression | Lossy compression |
 |---|---|
@@ -1909,7 +1909,7 @@ Uncompressed video files are **enormous**. Lossy compression makes them **far sm
 
 The small loss in quality is **hardly noticeable to the human eye**, especially in moving images.
 
-## 6.10 Distributed Computing
+## 6.10 Distributed Computing {#s6-10}
 
 **Distributed computing** solves a very large task by **splitting it into many smaller sub-tasks**, which are **sent to many networked computers (nodes) to be processed at the same time**:
 
@@ -1926,7 +1926,7 @@ Examples:
 
 Disadvantages: it depends on the **network**, coordinating the work is complex, and if one computer fails, its part must be reassigned.
 
-## 6.11 Wikis and Other Collaboration Tools
+## 6.11 Wikis and Other Collaboration Tools {#s6-11}
 
 A **wiki** is a website whose pages can be **created and edited by many users directly in a web browser** (e.g. Wikipedia).
 
