@@ -2,8 +2,8 @@
 
 When you need to store and process a **collection of values of the same type**, an array is the tool. Instead of declaring 10 separate variables, you declare one array with 10 slots.
 
-> [!NOTE] Grade 10+
-> 1D arrays are introduced in Grade 10 and are one of the highest-weighted topics in Paper 1. Every year there is at least one significant array question.
+> [!NOTE] Grade 11+
+> 1D arrays are introduced in Grade 11 (CAPS) and are one of the highest-weighted topics in Paper 1. Every year there is at least one significant array question. Grade 11 must know **bubble sort**, **selection sort**, **linear search** and **binary search**.
 
 ---
 
@@ -374,6 +374,127 @@ end;
 
 > [!TIP] Why `iSize - i` in the inner loop?
 > After each pass, the last `i` elements are already in their final position — no need to compare them again. This makes bubble sort slightly more efficient.
+
+
+### Sorting in descending order
+
+Change **only the comparison**: `>` sorts ascending and `<` sorts descending.
+
+```pascal
+IF aScores[j] < aScores[j + 1] THEN     // descending: bigger values move to the front
+```
+
+---
+
+## Sorting: Selection Sort
+
+Selection sort finds the **smallest** (or largest) value in the unsorted part and swaps it into the next position, one position at a time.
+
+```text
+Start:   [ 5 | 9 | 1 | 8 | 3 ]
+Pass 1:  [ 1 | 9 | 5 | 8 | 3 ]   smallest (1) swapped into position 1
+Pass 2:  [ 1 | 3 | 5 | 8 | 9 ]   smallest of the rest (3) into position 2
+Pass 3:  [ 1 | 3 | 5 | 8 | 9 ]   5 already in place
+Pass 4:  [ 1 | 3 | 5 | 8 | 9 ]   done
+```
+
+```pascal
+FOR i := 1 TO MAX - 1 DO
+BEGIN
+  iMin := i;                              // assume position i holds the smallest
+  FOR j := i + 1 TO MAX DO
+    IF aScores[j] < aScores[iMin] THEN    // use > for descending
+      iMin := j;                          // remember where the smallest is
+  IF iMin <> i THEN
+  BEGIN
+    iTemp := aScores[i];                  // one swap per pass
+    aScores[i] := aScores[iMin];
+    aScores[iMin] := iTemp;
+  END;
+END;
+```
+
+> [!TIP] Bubble vs selection
+> **Bubble sort** compares neighbours and may swap many times per pass. **Selection sort** searches the whole unsorted part and swaps **at most once** per pass. Both use two nested loops. Learn both: CAPS expects Grade 11 learners to know each one.
+
+A common exam alternative that is also accepted as a selection-style sort compares position `i` with every later position `j` and swaps immediately:
+
+```pascal
+FOR i := 1 TO MAX - 1 DO
+  FOR j := i + 1 TO MAX DO
+    IF aScores[j] < aScores[i] THEN
+    BEGIN
+      iTemp := aScores[i];
+      aScores[i] := aScores[j];
+      aScores[j] := iTemp;
+    END;
+```
+
+---
+
+## Sorting Parallel Arrays
+
+When two arrays belong together (e.g. `aNames[3]` is the learner who scored `aScores[3]`), **every swap must be done in both arrays**. Otherwise the names end up next to the wrong scores.
+
+```pascal
+// Sort by score, highest first, keeping names linked
+FOR i := 1 TO MAX - 1 DO
+  FOR j := i + 1 TO MAX DO
+    IF aScores[j] > aScores[i] THEN
+    BEGIN
+      iTemp := aScores[i];  aScores[i] := aScores[j];  aScores[j] := iTemp;   // swap scores
+      sTemp := aNames[i];   aNames[i]  := aNames[j];   aNames[j]  := sTemp;   // swap names too
+    END;
+```
+
+> [!WARNING] Two temp variables
+> The temporary variable must have the **same type** as the array it swaps, so you need an Integer `iTemp` for the scores and a String `sTemp` for the names.
+
+---
+
+## Searching: Binary Search
+
+A **linear search** checks every element one by one. A **binary search** only works on a **sorted** array. It checks the **middle** element and throws away the half that cannot contain the value, again and again.
+
+```text
+Find 30 in:  [3 | 8 | 12 | 17 | 21 | 26 | 30 | 35 | 41 | 47]
+               1   2    3    4    5    6    7    8    9   10
+Low=1  High=10 Mid=5  → 21 < 30, search the right half: Low = 6
+Low=6  High=10 Mid=8  → 35 > 30, search the left half:  High = 7
+Low=6  High=7  Mid=6  → 26 < 30, Low = 7
+Low=7  High=7  Mid=7  → 30 = 30, FOUND at position 7
+```
+
+```pascal
+iLow := 1;
+iHigh := MAX;
+bFound := False;
+WHILE (iLow <= iHigh) AND (NOT bFound) DO
+BEGIN
+  iMid := (iLow + iHigh) DIV 2;
+  IF aKennels[iMid] = iSearch THEN
+    bFound := True
+  ELSE IF aKennels[iMid] < iSearch THEN
+    iLow := iMid + 1                      // value is in the right half
+  ELSE
+    iHigh := iMid - 1;                    // value is in the left half
+END;
+IF bFound THEN
+  ShowMessage('Found at position ' + IntToStr(iMid))
+ELSE
+  ShowMessage('Not found');
+```
+
+| | Linear search | Binary search |
+|---|---|---|
+| Array must be sorted? | No | **Yes** |
+| How it works | Checks every element in order | Halves the search area each time |
+| Max comparisons for 1 000 items | 1 000 | 10 (2¹⁰ = 1 024) |
+| Best for | Small or unsorted arrays | Large sorted arrays |
+
+> [!WARNING] Common misconception
+> Binary search on an **unsorted** array does not crash, but it often says "not found" for values that are in the array. Always sort first.
+
 
 ---
 

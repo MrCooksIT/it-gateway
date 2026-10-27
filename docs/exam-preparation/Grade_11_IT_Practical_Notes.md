@@ -863,6 +863,71 @@ Most buttons use the `OnClick` event — the code that runs when the user clicks
 
 ---
 
+# SECTION 10: SEARCHING — BINARY SEARCH
+
+A linear search checks every element. A **binary search** works only on a **sorted** array: check the middle element, discard the half that cannot contain the value, and repeat.
+
+```pascal
+iLow := 1;  iHigh := iCount;  bFound := False;
+while (iLow <= iHigh) and (not bFound) do
+begin
+  iMid := (iLow + iHigh) div 2;
+  if arrKennels[iMid] = iSearch then
+    bFound := True
+  else if arrKennels[iMid] < iSearch then
+    iLow := iMid + 1
+  else
+    iHigh := iMid - 1;
+end;
+```
+
+Full explanation with a trace: [1D Arrays — Binary Search](../practical/delphi/arrays-1d#searching-binary-search). Selection sort is on the same page.
+
+---
+
+# SECTION 11: DATABASES WITH TADOTable (NO SQL)
+
+In Grade 11 you work with an Access database through Delphi code. SQL starts in Grade 12. Every database question uses the same loop:
+
+```pascal
+tblAnimals.First;
+while not tblAnimals.Eof do
+begin
+  if tblAnimals['Species'] = 'Cat' then          // bracket notation to read a field
+  begin
+    tblAnimals.Edit;                             // Insert for a new record
+    tblAnimals['Sterilised'] := True;
+    tblAnimals.Post;
+  end;
+  tblAnimals.Next;
+end;
+```
+
+| Task | Code |
+|---|---|
+| Add a record | `Insert` → assign fields → `Post` |
+| Change a record | `Edit` → assign fields → `Post` |
+| Delete a record | `Delete` (don't also call `Next` for that record) |
+| Search | Boolean flag: `while (not Eof) and (not bFound)` |
+
+Full page: [Database Programming with TADOTable](../practical/delphi/database-navigation).
+
+---
+
+# SECTION 12: DATE AND TIME
+
+| Need | Code |
+|---|---|
+| Today / now | `Date`, `Now` |
+| Display | `FormatDateTime('dd mmmm yyyy', d)` — minutes are `nn`, not `mm` |
+| Days between | `Trunc(dEnd - dStart)` or `DaysBetween(dEnd, dStart)` |
+| Add days | `d + 30`, `IncMonth(d, 1)` |
+| Leap year | `IsLeapYear(iYear)` |
+
+Full page: [Date and Time](../practical/delphi/date-time).
+
+---
+
 # CHEAT SHEET APPENDIX
 
 ## A. The three loops

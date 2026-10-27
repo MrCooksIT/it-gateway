@@ -41,6 +41,9 @@ title: Grade 10 IT
         <li><a href="/it-gateway/theory/systems/peripherals"><span class="itg-dot"></span>Peripherals &amp; Devices</a></li>
         <li><a href="/it-gateway/theory/systems/software"><span class="itg-dot"></span>Software &amp; Licensing</a></li>
         <li><a href="/it-gateway/theory/programming/programming-concepts"><span class="itg-dot"></span>Programming Concepts</a></li>
+        <li><a href="/it-gateway/practical/number-systems/binary"><span class="itg-dot"></span>Number Systems — Binary &amp; Hexadecimal</a></li>
+        <li><a href="/it-gateway/theory/systems/data-representation"><span class="itg-dot"></span>Data Representation (ASCII, Unicode)</a></li>
+        <li><a href="/it-gateway/theory/social/digital-divide"><span class="itg-dot"></span>Social Implications — Digital Divide</a></li>
       </ul>
     </div>
   </div>
@@ -62,6 +65,7 @@ title: Grade 10 IT
         <li><a href="/it-gateway/practical/delphi/selection"><span class="itg-dot"></span>Selection — IF &amp; CASE</a></li>
         <li><a href="/it-gateway/practical/delphi/showmessage"><span class="itg-dot"></span>ShowMessage &amp; Dialogs</a></li>
         <li><a href="/it-gateway/practical/delphi/validation"><span class="itg-dot"></span>Input Validation (Basic)</a></li>
+        <li><a href="/it-gateway/practical/delphi/debugging"><span class="itg-dot"></span>Debugging &amp; Error Types</a></li>
       </ul>
     </div>
     <div class="itg-term-col">
@@ -72,6 +76,7 @@ title: Grade 10 IT
         <li><a href="/it-gateway/theory/networks/network-concepts"><span class="itg-dot"></span>Network Concepts</a></li>
         <li><a href="/it-gateway/theory/networks/network-types"><span class="itg-dot"></span>Types of Networks</a></li>
         <li><a href="/it-gateway/theory/networks/e-communication"><span class="itg-dot"></span>E-Communication</a></li>
+        <li><a href="/it-gateway/theory/social/environment-society"><span class="itg-dot"></span>Ergonomics, Green Computing &amp; Health</a></li>
       </ul>
     </div>
   </div>
@@ -93,6 +98,7 @@ title: Grade 10 IT
         <li><a href="/it-gateway/practical/delphi/loops"><span class="itg-dot"></span>Loops — FOR, WHILE, REPEAT</a></li>
         <li><a href="/it-gateway/practical/delphi/strings"><span class="itg-dot"></span>String Functions</a></li>
         <li><a href="/it-gateway/practical/delphi/math-methods"><span class="itg-dot"></span>Math Methods</a></li>
+        <li><a href="/it-gateway/practical/delphi/timer"><span class="itg-dot"></span>Timer — Simple Animations</a></li>
       </ul>
     </div>
     <div class="itg-term-col">
@@ -120,6 +126,7 @@ title: Grade 10 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">💻 Practical — Paper 1</div>
       <ul class="itg-link-list">
+        <li><a href="/it-gateway/exam-preparation/Grade_10_November_Scope"><span class="itg-dot"></span>📝 November Exam Scope</a></li>
         <li><a href="/it-gateway/practical/delphi/validation"><span class="itg-dot"></span>Input Validation</a></li>
         <li><a href="/it-gateway/practice/"><span class="itg-dot"></span>How to Practise Code</a></li>
         <li><a href="/it-gateway/exam-preparation/Grade_10_IT_Practical_Notes"><span class="itg-dot"></span>Gr 10 Practical Exam Notes</a></li>
@@ -128,9 +135,10 @@ title: Grade 10 IT
     <div class="itg-term-col">
       <div class="itg-term-col-title">📚 Theory — Paper 2</div>
       <ul class="itg-link-list">
-        <li><a href="/it-gateway/theory/internet/web-evolution"><span class="itg-dot"></span>Internet Services Technologies</a></li>
+        <li><a href="/it-gateway/exam-preparation/Grade_10_November_Scope"><span class="itg-dot"></span>📝 November Exam Scope</a></li>
+        <li><a href="/it-gateway/theory/internet/internet-services"><span class="itg-dot"></span>Internet Services Technologies</a></li>
         <li><a href="/it-gateway/theory/social/copyright"><span class="itg-dot"></span>Copyright &amp; Licensing</a></li>
-        <li><a href="/it-gateway/theory/social/cybercrime"><span class="itg-dot"></span>Social Implications (Digital Divide, POPIA)</a></li>
+        <li><a href="/it-gateway/theory/social/online-safety"><span class="itg-dot"></span>Social Implications (POPIA, Safe Internet Use)</a></li>
         <li><a href="/it-gateway/exam-preparation/Grade_10_IT_Theory_Notes"><span class="itg-dot"></span>Gr 10 Theory Exam Notes</a></li>
       </ul>
     </div>

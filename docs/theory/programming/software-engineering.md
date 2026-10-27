@@ -244,6 +244,22 @@ The **PAT** is a major component of Grade 12 IT assessment (25% of final mark).
 
 ---
 
+## User-Centred Design (Grade 11)
+
+**User-centred design** means designing the program around the people who will use it. The design is based on their needs, abilities and environment, and users test it throughout development.
+
+| Principle | What it looks like in a Delphi GUI |
+|---|---|
+| **Consistency** | Same fonts, colours, button positions and wording on every screen |
+| **Clarity** | Clear labels and instructions; a logical tab order from top to bottom |
+| **Error prevention** | Use a combo box, radio group or spin edit instead of a free-text edit box where possible |
+| **Feedback** | Confirm actions ("Record added") and give helpful error messages that say how to fix the problem |
+| **Simplicity** | Uncluttered screens; only show what the user needs for the current task |
+| **Accessibility** | Readable font sizes, good colour contrast, and no meaning carried by colour alone |
+
+> [!TIP] Exam pattern
+> "Give TWO user-centred design principles for the form…" (2): name the principle **and** link it to the form in the scenario, for example "Use a combo box for Species so that users cannot type an invalid species."
+
 ## Key Terms
 
 | Term | Definition |
