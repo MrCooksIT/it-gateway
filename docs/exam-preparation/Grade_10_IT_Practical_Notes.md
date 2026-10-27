@@ -705,6 +705,36 @@ for i := 1 to 20 do
 
 ---
 
+## 11.3 Conditional loops — while and repeat (Term 3)
+
+When you don't know in advance how many times the loop must run, use a **conditional loop**:
+
+| Loop | Condition checked | Runs at least once? | Typical use |
+|---|---|---|---|
+| `while … do` | **Before** each repetition | No | Keep buying while there is enough money |
+| `repeat … until` | **After** each repetition | Yes | Keep asking for input until 0 is entered |
+
+```pascal
+// while: how many R7.50 items can you buy?
+iCount := 0;
+while rBudget >= 7.50 do
+begin
+  rBudget := rBudget - 7.50;
+  Inc(iCount);
+end;
+
+// repeat: capture amounts until 0 is entered
+rTotal := 0;
+repeat
+  rAmount := StrToFloat(InputBox('Sales', 'Amount (0 to stop):', '0'));
+  rTotal := rTotal + rAmount;
+until rAmount = 0;
+```
+
+> The `while` condition says when to **keep going**; the `repeat` condition says when to **stop**. Make sure something inside the loop changes the condition, otherwise the loop never ends.
+
+See [Loops — FOR, WHILE, REPEAT](../practical/delphi/loops), [Debugging and error types](../practical/delphi/debugging) and [the Timer component](../practical/delphi/timer).
+
 # SECTION 12: TRANSLATING A FLOW DIAGRAM INTO CODE
 
 A flow diagram is a visual way of describing an algorithm. Each shape becomes a different kind of Delphi statement:
