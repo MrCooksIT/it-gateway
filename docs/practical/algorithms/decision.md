@@ -138,7 +138,7 @@ end;
 
 > [!TIP] When to use CASE vs IF
 > Use CASE when testing one variable against multiple **discrete** values.  
-> Use IF when testing **conditions** or **ranges** (CASE cannot test `> 50`).
+> Use IF when testing **conditions** such as `> 50`, compound conditions, or Real and String values. CASE can handle whole-number ranges written as `50..59`, but not open-ended conditions.
 
 ---
 

@@ -28,8 +28,8 @@ Used for mathematical calculations on numbers.
 `DIV` gives the **whole number** part of division. `MOD` gives the **remainder**.
 
 ```
-17 DIV 5 = 3      because 5 goes into 17 three times
-17 MOD 5 = 2      because 17 - (3 × 5) = 2 remainder
+19 DIV 5 = 3      because 5 goes into 19 three times
+19 MOD 5 = 4      because 19 - (3 × 5) = 4 remainder
 ```
 
 **Common uses of MOD:**

@@ -2,6 +2,9 @@
 
 These are the CAPS-prescribed algorithm problems that appear regularly in Paper 1. Master these patterns and you can solve almost any exam question by recognising which pattern applies.
 
+> [!NOTE] Grade 10+
+> The algorithms themselves (totals, counts, highest/lowest, primes, factorials, GCD, LCM, digits) are Grade 10 work. Many examples on this page are written as **functions with parameters**, which is Grade 11 syntax. In Grade 10, write the same logic directly inside the button's event handler.
+
 ---
 
 ## Pattern Recognition

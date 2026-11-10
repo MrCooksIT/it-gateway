@@ -45,15 +45,15 @@ Place values (right to left): 16⁰ = 1, 16¹ = 16, 16² = 256, 16³ = 4096
 
 ### Worked Example: `2B₁₆` → Decimal
 
-| Digit | B | 2 |
+| Digit | 2 | B |
 |---|---|---|
 | Place value | 16¹ = 16 | 16⁰ = 1 |
-| Value | B = 11 | 2 |
-| × place | 11 × 16 = 176 | 2 × 1 = 2 |
+| Value | 2 | B = 11 |
+| × place | 2 × 16 = 32 | 11 × 1 = 11 |
 
-Total = 176 + 2 = **178**
+Total = 32 + 11 = **43**
 
-So `2B₁₆ = 178₁₀`
+So `2B₁₆ = 43₁₀`
 
 ### Worked Example: `3F4₁₆` → Decimal
 
@@ -247,17 +247,17 @@ c) `2A3`:
 **Exercise 2 — Decimal to hex**
 
 Convert:
-a) `47₁₀`  
+a) `61₁₀`  
 b) `175₁₀`  
 c) `1000₁₀`
 
 <details>
 <summary>Show solution</summary>
 
-a) 47:  
-47 ÷ 16 = 2 rem **15 (F)**  
-2 ÷ 16 = 0 rem **2**  
-Bottom to top: **2F** → verify: 2×16 + 15 = 47 ✓
+a) 61:  
+61 ÷ 16 = 3 rem **13 (D)**  
+3 ÷ 16 = 0 rem **3**  
+Bottom to top: **3D** → verify: 3×16 + 13 = 61 ✓
 
 b) 175:  
 175 ÷ 16 = 10 rem **15 (F)**  
