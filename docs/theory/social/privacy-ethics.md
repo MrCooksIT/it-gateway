@@ -207,6 +207,30 @@ GDPR set the global standard — POPIA is modelled on it.
 
 ---
 
+## Acceptable Use Policies (AUP)
+
+> [!NOTE] Grade 11
+> Ethical and legal issues of network-use policies are Grade 11 work (Term 1).
+
+An **acceptable use policy (AUP)** is the set of rules that everyone who uses an organisation's network must agree to. A typical AUP states:
+
+- what the network and Internet may be used for (school or work purposes);
+- what is not allowed: illegal downloads, visiting inappropriate sites, bullying, installing software, sharing passwords;
+- that use may be monitored;
+- the consequences of breaking the rules.
+
+An AUP protects the organisation legally, protects users from each other, and keeps the network secure and fast for its real purpose.
+
+## Capabilities and Limitations of ICT
+
+| Capabilities | Limitations |
+|---|---|
+| Speed: millions of calculations per second | Only follows instructions; no judgement or common sense |
+| Accuracy and consistency | Wrong input gives wrong output (GIGO) |
+| Stores and searches huge amounts of data | Depends on electricity, hardware and connectivity |
+| Works continuously without tiring | Can fail, be hacked or be infected |
+| Communicates instantly over any distance | Cannot replace human empathy and creativity |
+
 ## Key Terms
 
 | Term | Definition |

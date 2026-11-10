@@ -2,6 +2,8 @@
 
 Fast-scan reference for all core Delphi syntax. No prose — just syntax patterns and examples.
 
+> **Which grade?** Grade 10: everything up to and including REPEAT...UNTIL, plus dialogs, math functions, type conversion and input/output. Grade 11 adds: arrays, procedures and functions, text files. **2D arrays are Grade 12 only.**
+
 ---
 
 ## Variable Declaration

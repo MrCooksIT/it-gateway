@@ -2,6 +2,8 @@
 
 All SQL syntax you need for Paper 1. Clause order is mandatory: SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY.
 
+> **Which grade?** **Grade 12 only.** Grade 11 database work uses `TADOTable` and Delphi code, with no SQL.
+
 ---
 
 ## SELECT Structure

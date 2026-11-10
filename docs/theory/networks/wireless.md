@@ -176,6 +176,21 @@ Cellular networks provide internet and communication via a network of base stati
 
 ---
 
+## Bandwidth, Latency, Throttling and Shaping
+
+> [!NOTE] Grade 11
+> Data transmission terms are Grade 11 work (Terms 1 and 2).
+
+| Term | Meaning | Effect on the user |
+|---|---|---|
+| **Bandwidth** | The amount of data that can be transmitted per second (Mbps) | Low bandwidth: slow downloads, video buffers |
+| **Latency** | The delay before data arrives (ms) | High latency: lag in video calls and online games |
+| **Congestion** | Too many users on the connection at once | Everyone slows down at peak times |
+| **Throttling** | The ISP deliberately slows a user's connection | Often applied after a data cap or fair-use limit is reached |
+| **Shaping** | The ISP gives some types of traffic priority over others | Browsing and e-mail stay fast; file sharing and streaming are slowed |
+
+Throttling slows **the whole connection** of a user. Shaping slows **certain types of traffic**.
+
 ## Key Terms
 
 | Term | Definition |

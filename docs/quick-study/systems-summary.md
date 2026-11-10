@@ -2,6 +2,8 @@
 
 Fast-scan reference for hardware, software, performance, and types of computers. No prose.
 
+> **Which grade?** Grade 10: computer model, memory comparison, storage, software classification, licences, types of computers, data sizes. Grade 11 adds: CPU internals, buses, performance factors, OS types, firmware, processing techniques, virtual memory. Grade 12 adds: user-type recommendations, VR and AR. Sections added for one grade are marked.
+
 ---
 
 ## Computer Model
@@ -185,3 +187,56 @@ SOFTWARE
 - Text: characters × 1 byte
 - Image: width × height × colour_depth_bits ÷ 8
 - Audio: sample_rate × bit_depth × channels × seconds ÷ 8
+
+---
+
+## Start-up Firmware (Grade 11)
+
+| Term | Meaning |
+|---|---|
+| BIOS | Older start-up firmware; text-based |
+| UEFI | Modern replacement: graphical, faster, large drives, Secure Boot |
+| CMOS | Stores the BIOS/UEFI settings (date, time, boot order); kept alive by a battery |
+| POST | Power-On Self-Test: checks essential hardware before the OS loads |
+
+Boot order: power on → firmware → POST → CMOS settings → bootloader → OS loaded into RAM.
+
+## Processing Techniques (Grade 11)
+
+| Technique | Meaning |
+|---|---|
+| Multitasking | OS switches the CPU between **several programs** |
+| Multithreading | **One program** split into threads that run at the same time |
+| Multiprocessing | **Several cores/CPUs** run tasks truly at the same time |
+
+## Virtual Memory and Virtualisation (Grade 11)
+
+| Term | Meaning |
+|---|---|
+| Virtual memory | Space on the HDD/SSD used as if it were RAM when RAM is full. Slow |
+| Cache levels | L1 smallest and fastest → L2 → L3 largest, shared by all cores |
+| Virtualisation | Running one or more simulated computers on one physical computer |
+| Virtual machine | The simulated computer, with its own OS, running in a window on the host |
+
+## Compiler vs Interpreter (Grade 11)
+
+| | Compiler | Interpreter |
+|---|---|---|
+| Translates | Whole program, before it runs | One line at a time, while it runs |
+| Produces | Executable file | Nothing; source needed each time |
+| Speed of program | Fast | Slower |
+
+## Primary vs Secondary (Grade 10)
+
+| | Primary memory (RAM, ROM, cache) | Secondary storage (HDD, SSD, flash, cloud) |
+|---|---|---|
+| Holds | What the CPU is using now | Programs and data kept permanently |
+| Volatile? | RAM is volatile | Non-volatile |
+| Speed / capacity | Fast / small | Slower / large |
+
+## VR vs AR (Grade 12)
+
+| | Virtual reality | Augmented reality |
+|---|---|---|
+| Real world | Replaced by a simulated 3D world | Still visible, with digital content added on top |
+| Device | Headset | Phone, tablet, smart glasses |

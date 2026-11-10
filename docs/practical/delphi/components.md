@@ -515,6 +515,52 @@ The decimal and thousands separators follow the regional settings of the compute
 
 ---
 
+## Dynamic Components
+
+> [!NOTE] Grade 11
+> Creating components in code ("dynamic instantiation") is Grade 11 work (Term 2) and is mostly used in the PAT.
+
+A component can be created while the program runs instead of being placed on the form at design time:
+
+```pascal
+var
+  btnNew : TButton;
+begin
+  btnNew := TButton.Create(Self);     // Self (the form) owns it and will free it
+  btnNew.Parent := Self;              // where it is displayed: the form or a panel
+  btnNew.Left := 20;
+  btnNew.Top := 60;
+  btnNew.Caption := 'Click me';
+  btnNew.OnClick := btnNewClick;      // link an event handler that you wrote
+end;
+```
+
+- `Create(Self)` sets the **owner** (responsible for freeing the component).
+- `Parent` sets the **container** it appears in. Without a `Parent` the component is never visible.
+- The handler must have the standard heading: `procedure btnNewClick(Sender: TObject);` declared in the form class.
+
+---
+
+## Multi-Form Applications
+
+> [!NOTE] Grade 11
+> Applications with more than one form are Grade 11 work (Term 3).
+
+1. Add a form with **File → New → VCL Form** and save its unit (e.g. `Details_U`).
+2. In the first form's unit, add the new unit under `implementation`: `uses Details_U;`
+3. Open the form from code:
+
+```pascal
+frmDetails.Show;          // opens the form; the user can still use the first form
+frmDetails.ShowModal;     // opens the form; it must be closed before going back
+frmMain.Hide;             // hide the current form
+Close;                    // close the current form
+```
+
+To pass data to another form, set a property of one of its components, or a public variable, before you show it: `frmDetails.lblName.Caption := sName;`
+
+---
+
 ## Reading Component Properties vs Variables
 
 | Source | Access |

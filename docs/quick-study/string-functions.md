@@ -2,6 +2,8 @@
 
 Complete reference for all Delphi string and conversion functions. No prose — scan and use.
 
+> **Which grade?** All of this is used from Grade 10 (Term 3) onwards.
+
 ---
 
 ## Core String Functions

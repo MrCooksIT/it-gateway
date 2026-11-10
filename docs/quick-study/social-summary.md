@@ -2,6 +2,8 @@
 
 No prose. Tables and key facts for all social implications topics.
 
+> **Which grade?** Grade 10: copyright, licences, piracy, phishing, protection measures, POPIA, digital divide, ergonomics, green computing. Grade 11 adds: cybercrime types, big data, digitalisation, globalisation and 4IR. Everything on this page is examinable in Grade 12.
+
 ---
 
 ## Copyright & Intellectual Property
@@ -162,3 +164,52 @@ The gap between those with and without access to ICT:
 | IoT | Smart homes/cities; privacy concerns |
 | Social media | Communication; cyberbullying; misinformation |
 | Remote work | Flexibility; work-life balance challenges |
+
+---
+
+## Ergonomics and Green Computing (Grade 10)
+
+| Health risk | Prevention |
+|---|---|
+| RSI | Breaks, straight wrists, wrist rest |
+| Eye strain | Look away every 20 minutes, reduce glare |
+| Back and neck pain | Adjustable chair, screen at eye level, good posture |
+
+Green computing: switch off or sleep, energy-efficient devices, print less, recycle e-waste and cartridges, donate working equipment.
+
+## Data → Information → Knowledge (Grade 10)
+
+| | Meaning |
+|---|---|
+| Data | Raw, unprocessed facts |
+| Information | Processed data with meaning |
+| Knowledge | Understanding used to make a decision |
+
+## Big Data (Grade 11)
+
+| V | Meaning |
+|---|---|
+| Volume | Enormous amount |
+| Velocity | Speed at which it arrives |
+| Variety | Many different forms |
+
+Benefit: patterns and trends for better decisions. Risk: loss of privacy, no consent, profiling.
+
+## Digitalisation, Globalisation and 4IR (Grade 11)
+
+| Term | Meaning |
+|---|---|
+| Digitalisation | Moving paper and manual processes to digital systems |
+| Globalisation | Technology connects people, businesses and countries into one system |
+| 4IR | Physical and digital worlds merge: AI, robotics, IoT, 3D printing, big data |
+| IoT | Everyday objects with sensors that exchange data over the Internet without human input |
+| Gig economy | Income from short-term tasks found through apps |
+
+## Human vs Computer Error (Grade 11)
+
+| | Human error | Computer error |
+|---|---|---|
+| Cause | Wrong data captured, result not checked | Hardware failure, software bug |
+| Reduce | Validation, verification, training | Testing, updates, backups |
+
+GIGO: garbage in, garbage out.

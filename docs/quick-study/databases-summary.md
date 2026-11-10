@@ -2,6 +2,8 @@
 
 No prose. Tables and key facts for Data & Information Management.
 
+> **Which grade?** Databases start in Grade 11: terminology, relationships, validation vs verification, anomalies and ERDs. **Normalisation and SQL are Grade 12 only.**
+
 ---
 
 ## Terminology
@@ -136,3 +138,40 @@ DELETE FROM Table WHERE Mark IS NULL
 - `IS NULL` not `= NULL`
 - JOIN condition: `ON t1.PK = t2.FK`
 - Clause order is mandatory — wrong order = syntax error
+
+---
+
+## Quality Data (Grade 11)
+
+| Characteristic | Meaning |
+|---|---|
+| Accurate | Correct |
+| Complete | Nothing needed is missing |
+| Consistent | Same value everywhere it is stored |
+| Current | Up to date |
+| Relevant | Useful for the purpose |
+
+## Anomalies (Grade 11)
+
+| Anomaly | Problem |
+|---|---|
+| Update | A change must be made in many records; missing one causes inconsistency |
+| Insert | Data cannot be added until other data exists |
+| Delete | Deleting one thing removes other data that is still needed |
+
+Cause: **data redundancy** (the same data repeated). Fix: split into related tables linked by PK and FK.
+
+## Desktop vs Server Database (Grade 11)
+
+| | Desktop | Server |
+|---|---|---|
+| Runs on | One computer | Central server |
+| Users | One or a few | Many at once |
+| Examples | Access, Base | MySQL, SQL Server, Oracle |
+
+## Data Warehousing and Data Mining (Grade 12)
+
+| Term | Meaning |
+|---|---|
+| Data warehouse | Huge central store of current and historical data from many sources, for analysis |
+| Data mining | Software searches the data for hidden patterns and trends |
