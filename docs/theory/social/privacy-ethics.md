@@ -3,7 +3,7 @@
 The digital world has created unprecedented challenges for privacy. Every app you install, every website you visit, and every post you make leaves data about you in the hands of others. Understanding privacy rights, ethical responsibilities, and the legal framework is essential for every digital citizen.
 
 > [!NOTE] Grade 11–12
-> Privacy, ethics, and social networking effects are Grade 11 content. POPIA, surveillance, and AI ethics are extended at Grade 12.
+> The basics of POPIA are Grade 10 work (Term 3). Privacy, ethics, network-use policies and social networking effects are Grade 11 content. Surveillance and AI ethics are extended at Grade 12.
 
 ---
 
@@ -170,7 +170,7 @@ flowchart LR
 | Consent | Must be freely given, specific, informed, unambiguous |
 | Right to deletion | "Right to be forgotten" |
 
-GDPR set the global standard — POPIA is modelled on it.
+GDPR and POPIA are built on the same principles (consent, purpose limitation, security, the right to access and correct your data). POPIA was signed in 2013, before GDPR, and drew on earlier European data-protection law.
 
 ---
 
