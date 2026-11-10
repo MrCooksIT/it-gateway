@@ -874,9 +874,9 @@ iLow := 1;  iHigh := iCount;  bFound := False;
 while (iLow <= iHigh) and (not bFound) do
 begin
   iMid := (iLow + iHigh) div 2;
-  if arrKennels[iMid] = iSearch then
+  if arrNums[iMid] = iSearch then
     bFound := True
-  else if arrKennels[iMid] < iSearch then
+  else if arrNums[iMid] < iSearch then
     iLow := iMid + 1
   else
     iHigh := iMid - 1;
@@ -921,7 +921,7 @@ Full page: [Database Programming with TADOTable](../practical/delphi/database-na
 | Need | Code |
 |---|---|
 | Today / now | `Date`, `Now` |
-| Display | `FormatDateTime('dd mmmm yyyy', d)` — minutes are `nn`, not `mm` |
+| Display | `FormatDateTime('dd mmmm yyyy', d)` — use `nn` for minutes (`mm` is the month) |
 | Days between | `Trunc(dEnd - dStart)` or `DaysBetween(dEnd, dStart)` |
 | Add days | `d + 30`, `IncMonth(d, 1)` |
 | Leap year | `IsLeapYear(iYear)` |

@@ -158,14 +158,14 @@ Section F questions on these topics are usually **"discuss"** or **"evaluate"** 
 
 **Question 2:** A municipality digitalises its water-meter readings. Give ONE advantage and ONE risk. (2)
 
-**Question 3:** A shelter's AI app matched a lost dog with the wrong owner. Is this human or computer error? Motivate. (2)
+**Question 3:** A school's automated attendance system marked a learner present on a day she was absent. Is this human or computer error? Motivate. (2)
 
 ::: details Check your answers
 **Q1:** Volume, a very large amount of data ✓. Velocity, data is generated and processed very fast/in real time ✓. Variety, many different types/formats of data ✓.
 
 **Q2:** Advantage, e.g. faster and more accurate billing / leaks detected early ✓. Risk, e.g. hacking of the system / no readings during outages / cost ✓.
 
-**Q3:** Either, if motivated ✓✓. Computer error: the algorithm gave an incorrect match. Human error: a poor photo was uploaded, or staff accepted the match without checking the microchip.
+**Q3:** Either, if motivated ✓✓. Computer error: the software or the scanner recorded the wrong learner. Human error: another learner used her card, or staff captured the register incorrectly and did not check it.
 :::
 
 ---

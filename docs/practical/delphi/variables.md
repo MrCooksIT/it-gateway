@@ -136,7 +136,7 @@ SA IT exams use **Hungarian notation** — a prefix letter indicates the data ty
 | `s` | String | `sName`, `sCode`, `sInput` |
 | `c` | Char | `cGrade`, `cChoice`, `cLetter` |
 | `b` | Boolean | `bFound`, `bValid`, `bPassed` |
-| `a` | Array | `aScores`, `aNames` |
+| `arr` (or `a`) | Array | `arrScores`, `arrNames` (exam papers use `arr`) |
 
 **Control/component names use a different prefix:**
 
@@ -281,14 +281,14 @@ end;
 
 ---
 
-## Typed Constants (Value That Can Change)
+## Typed Constants
 
 ```pascal
 const
-  iRunCount : Integer = 0;  // typed constant — can be modified at runtime
+  MAX_MARK : Integer = 100;  // typed constant — a constant with a stated data type
 ```
 
-Rarely tested but good to know.
+A typed constant cannot be changed while the program runs (unless a special compiler setting is switched on). Rarely tested.
 
 ---
 

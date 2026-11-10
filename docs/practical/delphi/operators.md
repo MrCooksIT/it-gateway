@@ -170,9 +170,9 @@ ELSE
 ```
 
 > [!WARNING] Always Bracket Each Sub-Condition
-> Delphi evaluates `NOT` before `AND` before `OR`. Without brackets, compound conditions can behave unexpectedly:
+> Delphi evaluates `NOT` before `AND` before `OR`. The comparison operators (`=`, `<`, `>=` …) come **last**, so without brackets a compound condition does not compile:
 > ```pascal
-> // WRONG — unpredictable ❌
+> // WRONG — does not compile ❌ (AND is evaluated before >=)
 > IF iAge >= 18 AND iMark >= 50 THEN
 >
 > // CORRECT ✓

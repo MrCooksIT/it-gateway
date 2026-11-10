@@ -51,7 +51,7 @@ rResult := RoundTo(rValue, iPlace);
 |---|---|---|
 | `RoundTo(247.93816, -3)` | `247.938` | 3 decimal places |
 | `RoundTo(247.93816, -1)` | `247.9` | 1 decimal place |
-| `RoundTo(247.93816, 2)` | `300.0` | Nearest hundred |
+| `RoundTo(247.93816, 2)` | `200.0` | Nearest hundred |
 
 > [!NOTE]
 > `RoundTo` uses Banker's rounding at .5, just like `Round`. For display purposes, `FloatToStrF` with `ffFixed` is usually simpler.
@@ -378,9 +378,13 @@ These arrays let you look up month and day names by number.
 | `FormatSettings.ShortDayNames[k]` | 1–7 | `ShortDayNames[2]` | `'Mon'` |
 
 ```pascal
-// Display "Wednesday, 23 April 2026"
+// Display the day name followed by the date, e.g. "Thursday, 2026/04/23"
+// (DateToStr uses the short date format set on the computer)
 lblDate.Caption := FormatSettings.LongDayNames[DayOfWeek(Date)]
                    + ', ' + DateToStr(Date);
+
+// For a full date such as "Thursday, 23 April 2026" use FormatDateTime
+lblDate.Caption := FormatDateTime('dddd, d mmmm yyyy', Date);
 ```
 
 ---

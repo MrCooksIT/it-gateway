@@ -7,49 +7,49 @@ description: Connect to an Access database in Delphi and read, add, change, dele
 
 ::: info 📌 Key Points
 - In Grade 11 you work with a database **through Delphi code**, not SQL. You move through the table one record at a time with `First`, `Next` and `Eof`.
-- Read and write fields with **bracket notation**: `tblAnimals['AnimalName']`.
+- Read and write fields with **bracket notation**: `tblBooks['Title']`.
 - To change data: `Insert` (new record) or `Edit` (existing record) → assign the fields → `Post`.
 - Searching and counting are done **from first principles**: a loop, an `if`, a counter or a Boolean flag.
 :::
 
-A shelter keeps the details of 30 animals in an Access database. The manager asks: *"Which animals have not been adopted yet? How many cats still need to be sterilised? Is Luna still here?"* You could open Access and look, but a program can answer all three questions with a single click. All it needs to do is walk through the table, one record at a time, and test each record.
+A school library keeps the details of its books in an Access database. The librarian asks: *"Which books are on the shelf right now? How many poetry books still need a barcode? Do we have Night Sky?"* You could open Access and look, but a program can answer all three questions with a single click. All it needs to do is walk through the table, one record at a time, and test each record.
 
 ---
 
 ## See it working
 
-The table **tblAnimals** in **ShelterDB.mdb**:
+The table **tblBooks** in **LibraryDB.mdb**:
 
-| AnimalID | AnimalName | Species | AgeMonths | Sterilised | Adopted |
+| BookID | Title | Genre | Pages | Barcoded | OnLoan |
 |---|---|---|---|---|---|
-| 1 | Bruno | Dog | 62 | True | False |
-| 2 | Luna | Cat | 18 | True | False |
-| 3 | Max | Dog | 30 | True | True |
-| 4 | Coco | Rabbit | 9 | False | False |
+| 1 | River Songs | Poetry | 96 | True | False |
+| 2 | Night Sky | Science | 240 | True | False |
+| 3 | Long Road | Fiction | 310 | True | True |
+| 4 | Tide Pools | Science | 128 | False | False |
 
-This button displays every animal that has **not** been adopted:
+This button displays every book that is **not** on loan:
 
 ```pascal
-procedure TfrmQuestion3.btnAvailableClick(Sender: TObject);
+procedure TfrmLibrary.btnOnShelfClick(Sender: TObject);
 begin
   redOutput.Clear;
-  redOutput.Lines.Add('Name' + #9 + 'Species' + #9 + 'Age (months)');
-  tblAnimals.First;                          // 1. go to the first record
-  while not tblAnimals.Eof do                // 2. until we pass the last record
+  redOutput.Lines.Add('Title' + #9 + 'Genre' + #9 + 'Pages');
+  tblBooks.First;                          // 1. go to the first record
+  while not tblBooks.Eof do                // 2. until we pass the last record
   begin
-    if not tblAnimals['Adopted'] then        // 3. test the current record
-      redOutput.Lines.Add(tblAnimals['AnimalName'] + #9 + tblAnimals['Species'] +
-        #9 + IntToStr(tblAnimals['AgeMonths']));
-    tblAnimals.Next;                         // 4. move to the next record
+    if not tblBooks['OnLoan'] then          // 3. test the current record
+      redOutput.Lines.Add(tblBooks['Title'] + #9 + tblBooks['Genre'] +
+        #9 + IntToStr(tblBooks['Pages']));
+    tblBooks.Next;                         // 4. move to the next record
   end;
 end;
 ```
 
 ```text
-Name      Species   Age (months)
-Bruno     Dog       62
-Luna      Cat       18
-Coco      Rabbit    9
+Title         Genre     Pages
+River Songs   Poetry    96
+Night Sky     Science   240
+Tide Pools    Science   128
 ```
 
 ---
@@ -59,12 +59,12 @@ Coco      Rabbit    9
 A `TADOTable` always points at **one record**: the *current record*. Everything you read or write applies to that record only.
 
 ```text
-            tblAnimals
+             tblBooks
    ┌──────────────────────────────┐
-   │ 1  Bruno   Dog     ...       │ ◄── First puts the pointer here
-   │ 2  Luna    Cat     ...       │ ◄── Next moves it down one record
-   │ 3  Max     Dog     ...       │
-   │ 4  Coco    Rabbit  ...       │
+   │ 1  River Songs  Poetry  ...  │ ◄── First puts the pointer here
+   │ 2  Night Sky    Science ...  │ ◄── Next moves it down one record
+   │ 3  Long Road    Fiction ...  │
+   │ 4  Tide Pools   Science ...  │
    └──────────────────────────────┘
      (after the last record)        ◄── Eof becomes True
 ```
@@ -80,7 +80,7 @@ A `TADOTable` always points at **one record**: the *current record*. Everything 
 ::: danger 🚨 Watch Out For
 1. **Forgetting `Next`** creates an endless loop because the pointer never moves. Delphi freezes.
 2. **Forgetting `First`** means the loop starts wherever the pointer was left by a previous button, so you may get no output at all.
-3. **Misspelling a field name** (`tblAnimals['Name']` instead of `['AnimalName']`) causes a runtime error: *Field not found*.
+3. **Misspelling a field name** (`tblBooks['Name']` instead of `['Title']`) causes a runtime error: *Field not found*.
 :::
 
 ---
@@ -92,21 +92,21 @@ In exams and PATs the connection code is usually **given** in a data module. You
 ```pascal
 // ConnectDB_U.pas — provided code
 adoC.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0; ' +
-  'Data Source=ShelterDB.mdb; Persist Security Info=False';
+  'Data Source=LibraryDB.mdb; Persist Security Info=False';
 adoC.LoginPrompt := False;
 adoC.Connected := True;
 
-tblAnimals.Connection := adoC;
-tblAnimals.TableName := 'tblAnimals';
-tblAnimals.Active := True;
-dsAnimals.DataSet := tblAnimals;       // the DBGrid shows dsAnimals
+tblBooks.Connection := adoC;
+tblBooks.TableName := 'tblBooks';
+tblBooks.Active := True;
+dsBooks.DataSet := tblBooks;       // the DBGrid shows dsBooks
 ```
 
 ```mermaid
 flowchart LR
-  A[(ShelterDB.mdb)] --> B[TADOConnection<br/>adoC]
-  B --> C[TADOTable<br/>tblAnimals]
-  C --> D[TDataSource<br/>dsAnimals]
+  A[(LibraryDB.mdb)] --> B[TADOConnection<br/>adoC]
+  B --> C[TADOTable<br/>tblBooks]
+  C --> D[TDataSource<br/>dsBooks]
   D --> E[TDBGrid<br/>on the form]
 ```
 
@@ -119,19 +119,19 @@ Every app you use, from a banking app to Takealot to your school's admin system,
 ## Reading fields — bracket notation
 
 ```pascal
-sName := tblAnimals['AnimalName'];                  // Short Text  → String
-iAge  := tblAnimals['AgeMonths'];                   // Number      → Integer
-bDone := tblAnimals['Adopted'];                     // Yes/No      → Boolean
-dDate := tblAnimals['DateArrived'];                 // Date/Time   → TDateTime
-rFee  := tblAnimals['Fee'];                         // Currency    → Real
+sName := tblBooks['Title'];                  // Short Text  → String
+iAge  := tblBooks['Pages'];                   // Number      → Integer
+bDone := tblBooks['OnLoan'];                     // Yes/No      → Boolean
+dDate := tblBooks['DateAdded'];                 // Date/Time   → TDateTime
+rCost := tblBooks['Price'];                         // Currency    → Real
 
-redOutput.Lines.Add(tblAnimals['AnimalName']);       // a text field can be added directly
-redOutput.Lines.Add(IntToStr(tblAnimals['AgeMonths']));            // numbers must be converted
-redOutput.Lines.Add(FormatDateTime('dd/mm/yyyy', tblAnimals['DateArrived']));
+redOutput.Lines.Add(tblBooks['Title']);       // a text field can be added directly
+redOutput.Lines.Add(IntToStr(tblBooks['Pages']));            // numbers must be converted
+redOutput.Lines.Add(FormatDateTime('dd/mm/yyyy', tblBooks['DateAdded']));
 ```
 
 ::: warning ⚠️ Common Misconception
-Learners often think that `tblAnimals['AgeMonths']` is a string because it comes "from the table". The field has the **data type of the database field**, so it is a number. Use `IntToStr`/`FloatToStrF` to display it and compare it directly with numbers: `if tblAnimals['AgeMonths'] > 6 then`.
+Learners often think that `tblBooks['Pages']` is a string because it comes "from the table". The field has the **data type of the database field**, so it is a number. Use `IntToStr`/`FloatToStrF` to display it and compare it directly with numbers: `if tblBooks['Pages'] > 200 then`.
 :::
 
 ---
@@ -143,19 +143,19 @@ All three operations follow the same shape: **put the table in a mode → assign
 ### Add a new record — `Insert` (or `Append`)
 
 ```pascal
-tblAnimals.Insert;                            // a new, empty record
-tblAnimals['AnimalName']  := 'Biscuit';
-tblAnimals['Species']     := 'Dog';
-tblAnimals['AgeMonths']   := 7;
-tblAnimals['DateArrived'] := Date;            // today's date
-tblAnimals['Sterilised']  := False;
-tblAnimals['Adopted']     := False;
-tblAnimals.Post;                              // save it
-ShowMessage('Biscuit has been added');
+tblBooks.Insert;                            // a new, empty record
+tblBooks['Title']     := 'Code Club';
+tblBooks['Genre']     := 'Science';
+tblBooks['Pages']     := 180;
+tblBooks['DateAdded'] := Date;                // today's date
+tblBooks['Barcoded']  := False;
+tblBooks['OnLoan']    := False;
+tblBooks.Post;                                // save it
+ShowMessage('Code Club has been added');
 ```
 
 ::: info 📝 AutoNumber fields
-Never assign a value to an **AutoNumber** primary key (e.g. `AnimalID`). Access generates it when you `Post`.
+Never assign a value to an **AutoNumber** primary key (e.g. `BookID`). Access generates it when you `Post`.
 :::
 
 ### Change existing records — `Edit`
@@ -164,32 +164,32 @@ Loop through the table and edit only the records that meet a condition:
 
 ```pascal
 iCount := 0;
-tblAnimals.First;
-while not tblAnimals.Eof do
+tblBooks.First;
+while not tblBooks.Eof do
 begin
-  if (tblAnimals['Species'] = 'Cat') and (tblAnimals['AgeMonths'] > 6) and
-     (not tblAnimals['Sterilised']) then
+  if (tblBooks['Genre'] = 'Poetry') and (tblBooks['Pages'] < 150) and
+     (not tblBooks['Barcoded']) then
   begin
-    tblAnimals.Edit;                          // 1. edit mode
-    tblAnimals['Sterilised'] := True;         // 2. change the field
-    tblAnimals.Post;                          // 3. save
+    tblBooks.Edit;                            // 1. edit mode
+    tblBooks['Barcoded'] := True;             // 2. change the field
+    tblBooks.Post;                            // 3. save
     Inc(iCount);
   end;
-  tblAnimals.Next;
+  tblBooks.Next;
 end;
-redOutput.Lines.Add('Number of cats sterilised: ' + IntToStr(iCount));
+redOutput.Lines.Add('Books barcoded: ' + IntToStr(iCount));
 ```
 
 ### Remove a record — `Delete`
 
 ```pascal
-tblAnimals.First;
-while not tblAnimals.Eof do
+tblBooks.First;
+while not tblBooks.Eof do
 begin
-  if tblAnimals['AnimalID'] = 15 then
-    tblAnimals.Delete                         // pointer moves to the next record automatically
+  if tblBooks['BookID'] = 15 then
+    tblBooks.Delete                         // pointer moves to the next record automatically
   else
-    tblAnimals.Next;
+    tblBooks.Next;
 end;
 ```
 
@@ -204,25 +204,25 @@ After `Delete`, the **next** record becomes the current record. If you also call
 Built-in shortcuts like `Locate` are **not** accepted when a question says *"from first principles"*. Use a flag that stops the loop as soon as the record is found:
 
 ```pascal
-sSearch := InputBox('Search', 'Enter the name of the animal:', '');
+sSearch := InputBox('Search', 'Enter the title of the book:', '');
 bFound := False;
-tblAnimals.First;
-while (not tblAnimals.Eof) and (not bFound) do
+tblBooks.First;
+while (not tblBooks.Eof) and (not bFound) do
 begin
-  if UpperCase(tblAnimals['AnimalName']) = UpperCase(sSearch) then
+  if UpperCase(tblBooks['Title']) = UpperCase(sSearch) then
   begin
     bFound := True;                           // stop the loop, stay on this record
-    redOutput.Lines.Add('Species: ' + tblAnimals['Species']);
-    redOutput.Lines.Add('Arrived: ' + FormatDateTime('dd mmmm yyyy', tblAnimals['DateArrived']));
+    redOutput.Lines.Add('Genre: ' + tblBooks['Genre']);
+    redOutput.Lines.Add('Added: ' + FormatDateTime('d mmm yyyy', tblBooks['DateAdded']));
   end
   else
-    tblAnimals.Next;
+    tblBooks.Next;
 end;
 if not bFound then
   redOutput.Lines.Add(sSearch + ' was not found');
 ```
 
-Making **both sides** uppercase makes the search *case-insensitive*, so "luna", "LUNA" and "Luna" all match.
+Making **both sides** uppercase makes the search *case-insensitive*, so "night sky", "NIGHT SKY" and "Night Sky" all match.
 
 ---
 
@@ -231,36 +231,36 @@ Making **both sides** uppercase makes the search *case-insensitive*, so "luna", 
 ```pascal
 iCount := 0;
 iTotal := 0;
-tblAnimals.First;
-while not tblAnimals.Eof do
+tblBooks.First;
+while not tblBooks.Eof do
 begin
-  if tblAnimals['Species'] = 'Dog' then
+  if tblBooks['Genre'] = 'Fiction' then
   begin
     Inc(iCount);
-    iTotal := iTotal + tblAnimals['AgeMonths'];
+    iTotal := iTotal + tblBooks['Pages'];
   end;
-  tblAnimals.Next;
+  tblBooks.Next;
 end;
 if iCount > 0 then
-  redOutput.Lines.Add('Average age: ' + FloatToStrF(iTotal / iCount, ffFixed, 6, 1) + ' months');
+  redOutput.Lines.Add('Average length: ' + FloatToStrF(iTotal / iCount, ffFixed, 6, 1) + ' pages');
 ```
 
 ### Grouping with an outer loop
 
-To report on **every** species, put the table loop *inside* a loop over the groups. Go back to `First` and reset the counters for each group:
+To report on **every** genre, put the table loop *inside* a loop over the groups. Go back to `First` and reset the counters for each group:
 
 ```pascal
-for I := 1 to 3 do                            // arrSpecies = ('Dog', 'Cat', 'Rabbit')
+for I := 1 to 3 do                            // arrGenres = ('Fiction', 'Poetry', 'Science')
 begin
   iCount := 0;
-  tblAnimals.First;                           // start at the top for EACH species
-  while not tblAnimals.Eof do
+  tblBooks.First;                           // start at the top for EACH genre
+  while not tblBooks.Eof do
   begin
-    if tblAnimals['Species'] = arrSpecies[I] then
+    if tblBooks['Genre'] = arrGenres[I] then
       Inc(iCount);
-    tblAnimals.Next;
+    tblBooks.Next;
   end;
-  redOutput.Lines.Add(arrSpecies[I] + ': ' + IntToStr(iCount));
+  redOutput.Lines.Add(arrGenres[I] + ': ' + IntToStr(iCount));
 end;
 ```
 
@@ -268,19 +268,19 @@ end;
 
 ```pascal
 iMaxDays := -1;
-tblAnimals.First;
-while not tblAnimals.Eof do
+tblBooks.First;
+while not tblBooks.Eof do
 begin
-  if not tblAnimals['Adopted'] then
+  if tblBooks['OnLoan'] then
   begin
-    iDays := Trunc(Date - tblAnimals['DateArrived']);   // days at the shelter
+    iDays := Trunc(Date - tblBooks['DateAdded']);       // days in the library
     if iDays > iMaxDays then
     begin
       iMaxDays := iDays;
-      sLongest := tblAnimals['AnimalName'];
+      sOldest := tblBooks['Title'];
     end;
   end;
-  tblAnimals.Next;
+  tblBooks.Next;
 end;
 ```
 
@@ -306,24 +306,24 @@ Marks are given for the **loop structure** (`First`, `while not Eof`, `Next`) on
 
 **Question 1:** A learner's loop never ends and the program freezes. Which line is most likely missing?
 
-**Question 2:** Explain why `tblAnimals.Next` is placed in the `else` part when deleting records.
+**Question 2:** Explain why `tblBooks.Next` is placed in the `else` part when deleting records.
 
-**Question 3:** Write the code to increase `AgeMonths` by 1 for every animal in the table. (5)
+**Question 3:** Write the code to increase `Pages` by 2 for every book in the table (a notice page has been added to each book). (5)
 
 ::: details Check your answers
-**Q1:** `tblAnimals.Next;` Without it, the record pointer never moves, so `Eof` never becomes True.
+**Q1:** `tblBooks.Next;` Without it, the record pointer never moves, so `Eof` never becomes True.
 
 **Q2:** `Delete` already moves the pointer to the next record. Calling `Next` as well would skip the record straight after the deleted one.
 
 **Q3:**
 ```pascal
-tblAnimals.First;                                          // ✓
-while not tblAnimals.Eof do                                // ✓
+tblBooks.First;                                          // ✓
+while not tblBooks.Eof do                                // ✓
 begin
-  tblAnimals.Edit;                                         // ✓
-  tblAnimals['AgeMonths'] := tblAnimals['AgeMonths'] + 1;  // ✓
-  tblAnimals.Post;
-  tblAnimals.Next;                                         // ✓
+  tblBooks.Edit;                                         // ✓
+  tblBooks['Pages'] := tblBooks['Pages'] + 2;              // ✓
+  tblBooks.Post;
+  tblBooks.Next;                                         // ✓
 end;
 ```
 :::

@@ -353,6 +353,7 @@ Bubble sort compares **adjacent elements** and swaps them if they are in the wro
 **Delphi implementation:**
 
 ```pascal
+// TArray must be declared first, under type:  TArray = array[1..MAX] of Integer;
 procedure BubbleSort(var aScores: TArray; iSize: Integer);
 var
   i, j, iTemp : Integer;
@@ -457,12 +458,12 @@ FOR i := 1 TO MAX - 1 DO
 A **linear search** checks every element one by one. A **binary search** only works on a **sorted** array. It checks the **middle** element and throws away the half that cannot contain the value, again and again.
 
 ```text
-Find 30 in:  [3 | 8 | 12 | 17 | 21 | 26 | 30 | 35 | 41 | 47]
-               1   2    3    4    5    6    7    8    9   10
-Low=1  High=10 Mid=5  → 21 < 30, search the right half: Low = 6
-Low=6  High=10 Mid=8  → 35 > 30, search the left half:  High = 7
-Low=6  High=7  Mid=6  → 26 < 30, Low = 7
-Low=7  High=7  Mid=7  → 30 = 30, FOUND at position 7
+Find 27 in:  [2 | 5 | 9 | 14 | 18 | 23 | 27 | 32 | 38 | 45]
+               1   2   3    4    5    6    7    8    9   10
+Low=1  High=10 Mid=5  → 18 < 27, search the right half: Low = 6
+Low=6  High=10 Mid=8  → 32 > 27, search the left half:  High = 7
+Low=6  High=7  Mid=6  → 23 < 27, Low = 7
+Low=7  High=7  Mid=7  → 27 = 27, FOUND at position 7
 ```
 
 ```pascal
@@ -472,9 +473,9 @@ bFound := False;
 WHILE (iLow <= iHigh) AND (NOT bFound) DO
 BEGIN
   iMid := (iLow + iHigh) DIV 2;
-  IF aKennels[iMid] = iSearch THEN
+  IF aNums[iMid] = iSearch THEN
     bFound := True
-  ELSE IF aKennels[iMid] < iSearch THEN
+  ELSE IF aNums[iMid] < iSearch THEN
     iLow := iMid + 1                      // value is in the right half
   ELSE
     iHigh := iMid - 1;                    // value is in the left half
@@ -489,7 +490,7 @@ ELSE
 |---|---|---|
 | Array must be sorted? | No | **Yes** |
 | How it works | Checks every element in order | Halves the search area each time |
-| Max comparisons for 1 000 items | 1 000 | 10 (2¹⁰ = 1 024) |
+| Max comparisons for 100 items | 100 | 7 (2⁷ = 128) |
 | Best for | Small or unsorted arrays | Large sorted arrays |
 
 > [!WARNING] Common misconception
