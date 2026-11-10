@@ -126,7 +126,7 @@ Cellular networks provide internet and communication via a network of base stati
 | Feature | 4G LTE | 5G |
 |---|---|---|
 | Max speed | ~150 Mbps | ~10 Gbps |
-| Latency | 30–50 ms | <1 ms |
+| Latency | 30–50 ms | <10 ms |
 | Device density | Moderate | Very high (IoT) |
 | Coverage | Widespread globally | Still expanding |
 | Infrastructure | Existing towers | New towers required (mmWave) |
@@ -213,7 +213,7 @@ Throttling slows **the whole connection** of a user. Shaping slows **certain typ
 
 > [!IMPORTANT] High-Frequency Questions
 >
-> 1. **"What is the difference between 4G and 5G?"** — 5G is much faster (up to 10 Gbps vs 150 Mbps); 5G has lower latency (<1 ms vs 30–50 ms); 5G supports higher device density for IoT; 4G has wider coverage currently
+> 1. **"What is the difference between 4G and 5G?"** — 5G is much faster (up to 10 Gbps vs 150 Mbps); 5G has lower latency (under 10 ms vs 30–50 ms); 5G supports higher device density for IoT; 4G has wider coverage currently
 >
 > 2. **"Give TWO advantages of wireless networking over wired"** — no cables needed (easy installation, mobility); can connect in locations where cabling is impractical
 >

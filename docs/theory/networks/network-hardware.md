@@ -2,8 +2,8 @@
 
 Every network needs physical components to make communication possible. From the cable in the wall to the router blinking in your lounge, each piece of hardware plays a specific role in getting data from one device to another.
 
-> [!NOTE] Grade 11
-> Network hardware is primarily a Grade 11 topic. Understanding the role and function of each device is essential for Paper 2.
+> [!NOTE] Grade 10+
+> The basic components (NIC, switch, router, modem, access point) and communication media (UTP, fibre, wireless) are Grade 10 work (Term 2). The detail on this page (MAC address tables, NAT, firewall types, cable categories) is Grade 11 and 12 extension. The "Layer" column in the first table is enrichment and is not examined.
 
 ---
 
@@ -245,7 +245,7 @@ A **firewall** is a security device (hardware or software) that monitors and con
 **RJ-45 connector** — standard plug for Ethernet cables (looks like a large phone plug)
 
 **Fibre optic advantages:**
-- Much faster — light travels faster than electrical signals
+- Much higher bandwidth — it carries far more data per second, over much longer distances
 - Not affected by electromagnetic interference (EMI)
 - More secure — cannot be easily tapped
 - Higher cost, more fragile
