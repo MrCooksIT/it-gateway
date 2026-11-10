@@ -47,30 +47,27 @@ These are the skills Paper 1 tests. They are the same whether you study them on 
 ### Grade 10 foundations
 - [ ] Declaring variables with the correct data type (`Integer`, `Real`, `String`, `Boolean`, `Char`)
 - [ ] Assignments and arithmetic operators (`+`, `-`, `*`, `/`, `div`, `mod`)
-- [ ] `if / else if / else` selection
-- [ ] `case` statements
-- [ ] `for` loops (counting up and down)
-- [ ] `while` and `repeat...until` loops
+- [ ] `if / else if / else` selection and `case` statements
+- [ ] `for` loops (counting up and down), `while` and `repeat...until` loops
+- [ ] String functions: `Length`, `Copy`, `Pos`, `Delete`, `Insert`, `UpperCase`, `LowerCase`, `Trim`, and working through a string character by character
+- [ ] Math functions: `Round`, `Trunc`, `Abs`, `Sqr`, `Sqrt`, `Power`, `Random`
+- [ ] Basic input validation and finding errors in given code
 - [ ] Reading from and writing to components (`edtInput.Text`, `lblOutput.Caption`)
 
 ### Grade 11 skills
-- [ ] 1D arrays — declaring, filling, searching, sorting
-- [ ] 2D arrays — rows and columns, nested loops
-- [ ] String functions: `Length`, `Copy`, `Pos`, `UpCase`, `LowerCase`, `Trim`, `IntToStr`, `StrToInt`
-- [ ] Math functions: `Round`, `Trunc`, `Abs`, `Sqr`, `Sqrt`
-- [ ] Input validation (while loops checking conditions)
-- [ ] SQL `SELECT` with `WHERE`, `ORDER BY`, `GROUP BY`, `HAVING`
+- [ ] 1D arrays and parallel arrays — declaring, filling, totals, highest/lowest
+- [ ] Searching (linear and binary) and sorting (bubble and selection sort)
+- [ ] Text file operations (`AssignFile`, `Reset`, `Rewrite`, `Append`, `ReadLn`, `WriteLn`, `CloseFile`, `FileExists`)
+- [ ] Procedures and functions with parameters (`var` and value parameters, `Result :=`)
+- [ ] Date and time functions
+- [ ] Database work through Delphi code with `TADOTable` (no SQL): looping through records, adding, changing, deleting and searching
 
 ### Grade 12 skills
-- [ ] Procedures with parameters (`var` and value parameters)
-- [ ] Functions with return values (`Result :=`)
-- [ ] Text file operations (`AssignFile`, `Reset`, `Rewrite`, `ReadLn`, `WriteLn`, `CloseFile`)
-- [ ] OOP: classes, constructors, properties, methods
-- [ ] Inheritance and method overriding
+- [ ] 2D arrays — rows and columns, nested loops
+- [ ] OOP: classes, constructors, accessor and mutator methods, `ToString`, creating and using objects
+- [ ] SQL `SELECT` with `WHERE`, `ORDER BY`, functions, `GROUP BY`, `HAVING`, and two-table queries
 - [ ] SQL `INSERT`, `UPDATE`, `DELETE`
-- [ ] Connecting Delphi to a database (`TADOConnection`, `TADOQuery`)
-
----
+- [ ] Running SQL from Delphi (`TADOConnection`, `TADOQuery`)
 
 ## How to use this section
 
