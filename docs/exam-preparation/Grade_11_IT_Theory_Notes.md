@@ -286,7 +286,7 @@ The purpose of protocols is to:
 | **FTP** | Transferring files between computers |
 | **TCP/IP** | The fundamental protocol that the internet itself uses |
 
-A common exam trick is to mix up **SMTP** (Send Mail Transfer Protocol) for **sending** and **POP3/IMAP** for **receiving** email.
+A common exam trick is to mix up **SMTP** (Simple Mail Transfer Protocol) for **sending** and **POP3/IMAP** for **receiving** email.
 
 ## 2.5 Mobile Technology and Wireless Communication
 
@@ -330,7 +330,7 @@ For **quick day-to-day communication** between staff, **instant messaging** is m
 
 ---
 
-*Continues with Data Management, Solution Development, and Social Implications…*
+
 
 ## 2.9 Internet, intranet and extranet
 
@@ -466,7 +466,7 @@ Examples of data validation:
 * **Presence check** — making sure a compulsory field has been filled in.
 * **Format check** — making sure an email address contains an `@` symbol.
 
-The opposite of validation is **verification**, which is checking that the data captured matches the original source (e.g. double-entry, where the data is typed in twice and the system checks that the two entries match).
+Validation is not the same as **verification**, which is checking that the data captured matches the original source (e.g. double-entry, where the data is typed in twice and the system checks that the two entries match).
 
 ## 3.4 Data Mining
 
@@ -611,7 +611,7 @@ A **loop** is a control structure that repeats a block of code more than once. T
 
 * **for loop** — used when the number of repetitions is **known in advance**. For example, "do this exactly 5 times" or "do this for each item in a list of 100 names".
 * **while…do loop** — a *pre-test* loop. It checks the condition **before** the loop body runs. If the condition is false at the start, the body never runs at all. Example: `while (count < 10) do …`
-* **repeat…until loop** — a *post-test* loop. It runs the body first, **then** checks the condition. The body always runs **at least once**, regardless of the condition. Example: `repeat … until iAnswer = 'Y'`
+* **repeat…until loop** — a *post-test* loop. It runs the body first, **then** checks the condition. The body always runs **at least once**, regardless of the condition. Example: `repeat … until sAnswer = 'Y'`
 
 ### `while…do` vs `repeat…until`
 
