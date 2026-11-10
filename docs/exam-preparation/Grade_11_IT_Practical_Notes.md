@@ -2,7 +2,7 @@
 
 *A topic-by-topic reference for Delphi programming concepts and syntax, building on the Grade 10 reference.*
 
-These notes assume the Grade 10 reference is already known: variables, data types, type conversions, form components, simple IF/ELSE/CASE, the `for` loop, the InputBox, arithmetic and string functions. Each section below begins with a short **Recap** of the relevant Grade 10 material before introducing the new Grade 11 material.
+These notes assume the Grade 10 reference is already known: variables, data types, type conversions, form components, simple IF/ELSE/CASE, the `for`, `while` and `repeat` loops, the InputBox, arithmetic and string functions. Each section below begins with a short **Recap** of the relevant Grade 10 material before introducing the new Grade 11 material.
 
 A **cheat sheet appendix** at the end of the document summarises every new pattern.
 
@@ -19,7 +19,9 @@ for iCount := 1 to 10 do
    <statement>;
 ```
 
-## 1.1 The two new loop types
+The two conditional loops, `while` and `repeat`, were also taught in Grade 10 (Term 3). They are revised here because Grade 11 uses them constantly: for text files, database tables and searches.
+
+## 1.1 The two conditional loops
 
 A `for` loop works when the count is known. Often the count is **not** known — the loop must keep going until something happens. There are two structures for this:
 
@@ -890,16 +892,16 @@ Full explanation with a trace: [1D Arrays — Binary Search](../practical/delphi
 In Grade 11 you work with an Access database through Delphi code. SQL starts in Grade 12. Every database question uses the same loop:
 
 ```pascal
-tblAnimals.First;
-while not tblAnimals.Eof do
+tblBooks.First;
+while not tblBooks.Eof do
 begin
-  if tblAnimals['Species'] = 'Cat' then          // bracket notation to read a field
+  if tblBooks['Genre'] = 'Poetry' then           // bracket notation to read a field
   begin
-    tblAnimals.Edit;                             // Insert for a new record
-    tblAnimals['Sterilised'] := True;
-    tblAnimals.Post;
+    tblBooks.Edit;                               // Insert for a new record
+    tblBooks['Price'] := tblBooks['Price'] * 0.9;
+    tblBooks.Post;
   end;
-  tblAnimals.Next;
+  tblBooks.Next;
 end;
 ```
 

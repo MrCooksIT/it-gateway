@@ -160,6 +160,77 @@ Cloud-based software is generally a good choice because schoolwork rarely needs 
 
 ---
 
+## 1.8 BIOS, UEFI, CMOS and POST
+
+| Term | Meaning |
+|---|---|
+| **BIOS** | Older start-up firmware on the motherboard: text-based, keyboard only, limited support for large drives |
+| **UEFI** | The modern replacement for BIOS: graphical interface with mouse support, faster start-up, support for large drives, and Secure Boot |
+| **CMOS** | Memory that stores the BIOS/UEFI **settings** (date, time, boot order), kept alive by a small battery |
+| **POST** | Power-On Self-Test: checks that the essential hardware (CPU, RAM, keyboard, storage) is present and working **before** the operating system loads. Errors are reported with beeps or a message |
+
+**Boot process:** power on → firmware starts → POST → settings read from CMOS → bootloader found on the boot device → operating system loaded into RAM.
+
+## 1.9 Cache levels and caching
+
+Cache is very fast memory on or close to the CPU that keeps the instructions and data used most recently and most often, so that the CPU does not have to wait for slower RAM.
+
+| Level | Size | Speed | Location |
+|---|---|---|---|
+| **L1** | Smallest | Fastest | Inside each core |
+| **L2** | Larger | Slower than L1 | Per core |
+| **L3** | Largest | Slowest of the three (still faster than RAM) | Shared by all cores |
+
+**Caching** is the general idea of keeping a copy of something in a faster place: **disk caching** keeps recently read data from a drive in RAM; **web caching** keeps copies of web pages and images on your device so that a site loads faster the next time.
+
+## 1.10 Types of operating systems
+
+| Type | Description | Example |
+|---|---|---|
+| **Single-user (stand-alone)** | One user at a time on one computer | Windows on a home laptop |
+| **Multi-user / network (server)** | Many users share the computer's resources at the same time; manages accounts and permissions | Windows Server, Linux server |
+| **Real-time (RTOS)** | Must respond to input within a guaranteed, very short time | Car airbag controller, medical monitor, factory robot |
+| **Embedded** | A small, dedicated OS built into a device that does one job | Microwave, smart TV, router |
+| **Mobile** | Designed for touchscreens, batteries and sensors | Android, iOS |
+
+Operating systems also differ in **cost** (proprietary vs open source), **size**, the **hardware** they need and the **platform** they run on.
+
+## 1.11 Processing techniques
+
+| Technique | Meaning |
+|---|---|
+| **Multitasking** | The OS runs **several programs** seemingly at once by switching the CPU between them very quickly |
+| **Multithreading** | **One program** is divided into threads that run at the same time (e.g. spell-checking while you type) |
+| **Multiprocessing** | **More than one core or CPU** is used, so tasks really run at the same time |
+
+## 1.12 Compilers and interpreters
+
+| | Compiler | Interpreter |
+|---|---|---|
+| How it translates | The **whole program** at once, before it runs | **One line at a time**, while the program runs |
+| Result | A separate executable file (`.exe`) | No executable; the source code is needed every time |
+| Speed of the program | Fast | Slower |
+| Errors | All syntax errors reported after compiling | Stops at the first error it reaches |
+| Example | Delphi, C++ | Python, JavaScript |
+
+A **high-level language** (Delphi, Python) is close to English, easy to read and debug, and can be translated for different processors. A **low-level language** (machine code, assembly) is close to what the CPU executes: fast, but hard to write and specific to one type of processor.
+
+## 1.13 Computer performance
+
+| Component | Effect on performance |
+|---|---|
+| **CPU** | Higher clock speed and more cores process more instructions per second |
+| **RAM** | More RAM means more programs and data stay in fast memory, so less **virtual memory** (slow storage used as if it were RAM) is needed |
+| **Cache** | More cache means fewer waits for RAM |
+| **Storage** | An SSD loads the OS, programs and files far faster than an HDD |
+| **GPU** | A dedicated graphics card takes graphics work off the CPU (games, video editing, 3D) |
+
+A **bottleneck** is the slowest component that holds the rest back. Upgrade that one first.
+
+A **device driver** is the software that lets the operating system communicate with a hardware device. A new device that does not work usually needs the correct driver installed or updated.
+
+---
+
 # SECTION 2: COMMUNICATION AND NETWORK TECHNOLOGIES
 
 ## 2.1 Bandwidth and Data Transmission
@@ -261,6 +332,85 @@ For **quick day-to-day communication** between staff, **instant messaging** is m
 
 *Continues with Data Management, Solution Development, and Social Implications…*
 
+## 2.9 Internet, intranet and extranet
+
+| | Who can use it | Example |
+|---|---|---|
+| **Internet** | Anyone; the public worldwide network | Public websites |
+| **Intranet** | Only people **inside** the organisation; a private network that uses Internet technologies (web pages, e-mail) | A staff portal with timetables and policies |
+| **Extranet** | An intranet that gives **limited access to authorised outsiders** such as suppliers or clients, with a login | A supplier checks stock levels on a company's system |
+
+A **VPN (Virtual Private Network)** creates a private, **encrypted tunnel** over the public Internet. A user at home or in another city connects as if they were on the organisation's own LAN, and data that is intercepted cannot be read.
+
+## 2.10 Wireless technologies and data transmission
+
+| Technology | Range | Use |
+|---|---|---|
+| **Bluetooth** | About 10 m | Connecting nearby devices (PAN) |
+| **Wi-Fi** | Tens of metres | Wireless LAN in a home, school or office |
+| **WiMAX** | Many kilometres from a tower | Fixed wireless broadband where cables are not available |
+| **LTE / 4G** | Cellular coverage | Mobile broadband |
+| **5G** | Cellular coverage (shorter range per tower) | Much higher speed, **lower latency**, and many more devices per area than 4G |
+
+| Term | Meaning |
+|---|---|
+| **Bandwidth** | The amount of data that can be transmitted per second (Mbps) |
+| **Latency** | The **delay** before data arrives. High latency causes lag in video calls and online games |
+| **Throttling** | The ISP deliberately slows a user's connection, e.g. after a data limit is reached |
+| **Shaping** | The ISP gives some types of traffic (e.g. browsing) priority over others (e.g. file sharing) |
+| **Congestion** | Too many users at once, so everyone's connection slows down |
+
+A **wireless access point** or range extender is added to bring Wi-Fi coverage to areas the router does not reach.
+
+## 2.11 VoIP and location-based computing
+
+**VoIP (Voice over Internet Protocol)** carries voice calls over the Internet instead of the telephone network (WhatsApp calls, Teams, Zoom). It is cheap or free, especially for long-distance calls, and can include video; call quality depends on bandwidth and latency, and it does not work without power and a connection.
+
+**Location-based computing** uses the position of a device to provide a service: navigation, finding the nearest shop, tracking deliveries, tagging photos, location-based advertising.
+
+- **GPS** uses satellite signals to work out a device's position. The receiver needs power and a clear view of the sky.
+- **RFID** uses a small tag that sends its ID number when a reader is held close to it. A passive tag has no battery and **cannot report its location**; it only identifies itself to a nearby scanner.
+
+**Social implications:** location data shows where a person lives, works and travels, and when they are away. It can be used for stalking, burglary or profiling, so it needs consent and protection.
+
+## 2.12 The Internet and WWW (Term 4)
+
+**Evolution of the Internet:** from static, read-only pages (Web 1.0), to interactive pages where users create content (Web 2.0: social media, blogs, wikis), to connected "things" and intelligent services (the **Internet of Things**, AI assistants).
+
+**Multimedia:**
+
+| | Downloading | Streaming |
+|---|---|---|
+| How | The whole file is saved on the device first | The media plays **while it is being received**; it is not stored permanently |
+| Advantage | Can be played later without a connection | Starts almost immediately; uses no storage space |
+| Disadvantage | Waiting time; uses storage | Needs a fast, stable connection; uses data every time |
+
+**Types of websites:** e-commerce (buying and selling), social networking, blogs and video sharing, wikis, news and information, web applications, crowdfunding, search engines.
+
+**Security services:**
+
+- **SSL/TLS** encrypts the data sent between a browser and a web server. A site that uses it shows `https` and a padlock.
+- A **digital certificate** is issued by a trusted **certificate authority**. It proves that the website really belongs to the organisation it claims to be, and it enables the encrypted connection.
+- **Multi-factor authentication (MFA)** asks for a second proof of identity, such as a one-time PIN (OTP), as well as the password.
+
+## 2.13 Threats and remedies
+
+| Threat | What it does |
+|---|---|
+| **Virus** | Attaches itself to a file or program and spreads when that file is opened |
+| **Worm** | Spreads by itself across a network without any user action |
+| **Trojan** | Pretends to be a useful program while doing harm in the background |
+| **Ransomware** | Encrypts the victim's files and demands payment for the key |
+| **Spyware** | Secretly records what the user does (e.g. keystrokes and passwords) |
+| **Phishing** | Fake messages that trick users into giving personal details |
+| **DoS attack** | Floods a server with requests so that real users cannot reach it |
+
+Threats can also be **physical** (theft, fire, power failure) or **hardware** failures (a drive that dies).
+
+**Remedies:** regular **backups** kept off-site or in the cloud; up-to-date **antivirus**; a **firewall**; installing **updates**; strong passwords and MFA; **encryption**; limiting user permissions; a UPS for power failures; and training users not to open unknown attachments or links.
+
+---
+
 # SECTION 3: DATA AND INFORMATION MANAGEMENT
 
 ## 3.1 Database Management Systems (DBMS)
@@ -331,6 +481,93 @@ A real-world database project is not run by one person — it has several specia
 * **Database Programmer** — responsible for **writing the code** that interacts with the database. The programmer writes the SQL queries, the stored procedures and the application code that lets users add, edit and view the data through a friendly interface.
 
 The three roles overlap in some organisations, but in larger projects they are very distinct: the analyst designs it, the programmer builds it, and the DBA runs it.
+
+---
+
+## 3.6 Desktop and server databases
+
+| | Desktop database | Server (client-server) database |
+|---|---|---|
+| Where it runs | On one computer | On a central server that many clients connect to |
+| Users | One user, or a few | Many users **at the same time**, from different places |
+| Size and security | Small; limited security | Large; user access control and centralised backups |
+| Examples | Microsoft Access, LibreOffice Base | MySQL, Microsoft SQL Server, Oracle, PostgreSQL |
+
+A **distributed database** is spread over servers in different locations that work together as one.
+
+## 3.7 Data, information, knowledge and decisions
+
+**Data** (raw facts) is processed into **information** (meaningful results such as totals, averages and trends). Understanding that information gives **knowledge**, which is used to make a **decision**.
+
+**Characteristics of quality data:**
+
+| Characteristic | Meaning |
+|---|---|
+| **Accurate** | Correct and free of errors |
+| **Complete** | Nothing that is needed is missing |
+| **Consistent** | The same fact has the same value everywhere it is stored |
+| **Current (up to date)** | Reflects the present situation |
+| **Relevant** | Useful for the purpose |
+
+Poor-quality data gives poor information, however good the software is (**GIGO**: garbage in, garbage out).
+
+## 3.8 Validation and verification
+
+| | Validation | Verification |
+|---|---|---|
+| Who or what checks | The **computer**, using rules | A **person** (or a second entry) |
+| What it checks | That the data is **reasonable and allowed** | That the data was **captured correctly** from the source |
+| Example | A mark must be from 0 to 100 | Typing a password twice; reading a number back to the customer |
+
+Validation cannot prove that data is *true*: a mark of 56 passes a range check even if the learner really got 65.
+
+**Validation checks:** presence (not empty), range (between limits), type (number, date), length (number of characters), format (pattern, e.g. two letters then four digits), and check digit.
+
+## 3.9 Tables, keys and data types
+
+A **table** holds **records** (rows), and each record is made up of **fields** (columns).
+
+- A **primary key (PK)** is a field that uniquely identifies each record. It may not be empty or repeated.
+- A **foreign key (FK)** is a field in one table that refers to the primary key of another table. It creates the **relationship** between the tables.
+
+| Field data type | Used for |
+|---|---|
+| Short Text | Names, codes, and numbers that are not calculated with (phone and ID numbers keep their leading 0) |
+| Number | Whole or decimal numbers used in calculations |
+| Currency | Money |
+| Date/Time | Dates and times |
+| Yes/No | True/False values |
+| AutoNumber | A unique number generated automatically, often the primary key |
+
+## 3.10 Redundancy and anomalies
+
+**Data redundancy** is the unnecessary repetition of the same data. When everything is kept in one big table, the same details are stored in many records. This wastes space and causes **anomalies**:
+
+| Anomaly | Problem | Example (one table of library loans that repeats each member's details) |
+|---|---|---|
+| **Update anomaly** | A change must be made in many records; if one is missed, the data is inconsistent | A member's new address is changed in three loan records but not the fourth |
+| **Insert anomaly** | Data cannot be added because other data does not exist yet | A new member cannot be stored until they borrow a book |
+| **Delete anomaly** | Deleting one thing removes other data that is still needed | Deleting a member's only loan also deletes the member's details |
+
+## 3.11 Splitting a table and drawing an ERD
+
+The solution is to give each **entity** (thing you store data about) its own table and to link the tables with keys.
+
+```
+tblMembers              tblLoans                 tblBooks
+MemberID (PK) 1 ----< MemberID (FK)
+MemberName              LoanID (PK)
+Cell                    LoanDate
+                        BookID (FK) >---- 1 BookID (PK)
+                                             Title
+                                             Author
+```
+
+- One member can have many loans: **one-to-many** from tblMembers to tblLoans.
+- One book can be lent many times: **one-to-many** from tblBooks to tblLoans.
+- Each member's details are now stored **once**.
+
+In an ERD question, show: every table with its fields, the PK of each table, the FKs in the linking table, and the relationship type on each line.
 
 ---
 
@@ -451,6 +688,124 @@ A compiler is different from an **interpreter**, which translates and executes s
 
 ---
 
+## 4.8 Searching an array
+
+| | Linear search | Binary search |
+|---|---|---|
+| How | Checks every element from the start until the value is found | Checks the **middle** element and discards the half that cannot contain the value; repeats |
+| Data must be sorted? | No | **Yes** |
+| Speed | Slow on large arrays | Very fast: each step halves the search area |
+| Most comparisons for 100 items | 100 | 7 (because 2⁷ = 128) |
+
+```pascal
+iLow := 1;  iHigh := 8;  bFound := False;
+while (iLow <= iHigh) and (not bFound) do
+begin
+  iMid := (iLow + iHigh) div 2;
+  if arrNums[iMid] = iSearch then
+    bFound := True
+  else if arrNums[iMid] < iSearch then
+    iLow := iMid + 1
+  else
+    iHigh := iMid - 1;
+end;
+```
+
+**Trace** for `arrNums` = 4, 9, 15, 22, 28, 31, 40, 52 (index 1 to 8) and `iSearch` = 10:
+
+| iLow | iHigh | iMid | arrNums[iMid] | bFound |
+|---|---|---|---|---|
+| 1 | 8 | 4 | 22 | False |
+| 1 | 3 | 2 | 9 | False |
+| 3 | 3 | 3 | 15 | False |
+| 3 | 2 | | | False (loop ends: iLow > iHigh) |
+
+The array must be sorted because the algorithm decides which half to discard by comparing with the middle value. That only works if smaller values are on one side and larger values on the other.
+
+## 4.9 Sorting an array
+
+**Bubble sort** compares **neighbouring** elements and swaps them if they are in the wrong order. After each pass the largest remaining value has "bubbled" to the end.
+
+Ascending sort of `7, 3, 9, 2`:
+
+| Pass | Comparisons | Array after the pass |
+|---|---|---|
+| 1 | 7,3 swap · 7,9 no swap · 9,2 swap | 3, 7, 2, 9 |
+| 2 | 3,7 no swap · 7,2 swap | 3, 2, 7, 9 |
+| 3 | 3,2 swap | 2, 3, 7, 9 |
+
+**Selection sort** finds the smallest value in the unsorted part and swaps it into the first unsorted position.
+
+| Pass | Action | Array after the pass |
+|---|---|---|
+| 1 | Smallest of all is 2; swap with position 1 | 2, 3, 9, 7 |
+| 2 | Smallest of the rest is 3; already in place | 2, 3, 9, 7 |
+| 3 | Smallest of the rest is 7; swap with position 3 | 2, 3, 7, 9 |
+
+With **parallel arrays**, every swap must be done in **all** the arrays, or the data no longer lines up.
+
+## 4.10 Reading text-file code
+
+| Statement | What it does |
+|---|---|
+| `AssignFile(tFile, 'Data.txt')` | Links the file variable (logical name) to the file on disk (physical name) |
+| `Reset(tFile)` | Opens an existing file for **reading**, from the first line |
+| `Rewrite(tFile)` | Creates a new, empty file for writing. **An existing file is wiped** |
+| `Append(tFile)` | Opens an existing file for writing and **adds to the end** |
+| `Eof(tFile)` | True when the end of the file has been reached |
+| `ReadLn(tFile, sLine)` / `WriteLn(tFile, sLine)` | Reads / writes one line |
+| `CloseFile(tFile)` | Closes the file; without it, written data may be lost |
+| `FileExists('Data.txt')` | True if the file exists. Test it before `Reset` or `Append` |
+
+Splitting a line such as `Karoo#12.5`: `iPos := Pos('#', sLine)` finds the separator, `Copy(sLine, 1, iPos - 1)` gives the first part, and `Delete(sLine, 1, iPos)` leaves the rest in `sLine`.
+
+## 4.11 Exception handling
+
+A **runtime error (exception)** crashes the program while it runs: opening a file that does not exist, or `StrToInt` on text that is not a number. Prevent it by **checking first** (`FileExists`, validating input) or handle it with `try … except`:
+
+```pascal
+try
+  iAge := StrToInt(edtAge.Text);
+except
+  ShowMessage('Please enter a whole number');
+  Exit;
+end;
+```
+
+## 4.12 Procedures, functions and parameters
+
+A **function** returns a single value and is used in an expression. A **procedure** carries out a task and does not return a value through its name.
+
+| | Value parameter | Variable (reference) parameter |
+|---|---|---|
+| Declared | `iNum: Integer` | `var iNum: Integer` |
+| What is passed | A **copy** of the value | The **original variable** itself |
+| Changes inside the method | Do **not** affect the caller's variable | **Do** change the caller's variable |
+
+```pascal
+procedure DoubleBoth(var iA: Integer; iB: Integer);
+begin
+  iA := iA * 2;
+  iB := iB * 2;
+end;
+```
+
+If `iX = 4` and `iY = 10`, then after `DoubleBoth(iX, iY)` the value of `iX` is **8** (`var` parameter: the original was changed) and `iY` is still **10** (value parameter: only the copy was changed).
+
+## 4.13 User-centred design and software development
+
+**User-centred design** puts the needs of the user first:
+
+- a consistent layout, with the same colours and fonts throughout;
+- clear labels and instructions, and a logical tab order;
+- components that limit mistakes (combo box, spin edit, radio group instead of free typing);
+- helpful error messages and feedback after every action;
+- an uncluttered, readable screen.
+
+**Software development phases:** analyse the problem → design the interface and the solution → code → test and debug → document → implement and maintain.
+
+---
+
 # SECTION 5: SOCIAL IMPLICATIONS AND INTEGRATED TOPICS
 
 ## 5.1 Social Networking Sites
@@ -530,6 +885,71 @@ Cloud storage is generally a good idea because files become accessible from anyw
 ## 5.7 Impact of Social Media on Learners
 
 Social media has both positive and negative effects on learners. On the positive side, learners can join study groups, share notes, watch educational content, and stay connected with classmates. On the negative side, social media is a major source of **distraction** during study time, can lead to **cyberbullying**, can damage self-esteem through unrealistic comparisons, and excessive use is linked to anxiety and reduced sleep. Schools, parents and other organisations that support learners should encourage healthy, purposeful use of social media — not a complete ban, but boundaries and awareness.
+
+---
+
+## 5.8 Big data
+
+**Big data** is data sets so large and complex that ordinary software cannot process them. It is described by the **Vs**:
+
+| V | Meaning |
+|---|---|
+| **Volume** | The enormous amount of data |
+| **Velocity** | The speed at which new data arrives and must be processed |
+| **Variety** | The many forms it takes: text, images, video, sensor readings, clicks |
+| Veracity / Value | How trustworthy the data is / how useful it is (often added) |
+
+Analysing big data reveals **patterns and trends** that support better decisions (what to stock, where to build a clinic, which adverts to show). **Social implications:** loss of privacy; data collected without informed consent; data sold or leaked; people profiled and treated differently because of it.
+
+## 5.9 Digitalisation
+
+**Digitalisation** is moving processes and records from paper and manual work to digital systems.
+
+- **Benefits:** records are found and shared quickly, can be backed up, take no physical space and can be analysed.
+- **Effects:** some jobs disappear or change while new ones appear; work can be done remotely; people without access or skills are left behind; organisations depend on their systems and on electricity.
+
+## 5.10 Globalisation and the Fourth Industrial Revolution
+
+**Globalisation** is the way technology connects people, businesses and countries into one interconnected system: people in different countries work on the same platform, buy from each other and share information in real time.
+
+The **Fourth Industrial Revolution (4IR)** is the merging of the physical and digital worlds through technologies such as AI, robotics, the Internet of Things, 3D printing and big data.
+
+- **Effect on work:** routine jobs (data capturing, manual record keeping, some factory work) are automated; new jobs are created (data analyst, AI specialist, IoT technician, cybersecurity specialist). Workers need to keep learning new skills.
+
+## 5.11 The Internet of Things and artificial intelligence
+
+The **Internet of Things (IoT)** is everyday objects fitted with sensors and connectivity that collect and exchange data over the Internet without human input: smart watches, fridges, security cameras, farm sensors. Practical concerns: battery life, network coverage, data costs, security and privacy.
+
+**Artificial intelligence (AI)** is software that performs tasks that normally need human intelligence. In **machine learning**, a system is trained on a very large number of examples, finds patterns in them, and improves as it receives more data and feedback. Its results depend on the quality of the training data.
+
+## 5.12 Human error and computer error
+
+| | Human error | Computer error |
+|---|---|---|
+| Cause | Wrong data captured, wrong option chosen, a result accepted without checking | Hardware failure, a bug in the software, an inaccurate AI result |
+| Reduce it by | Validation and verification, training, clear screens | Testing, updates, backups, human checks on important results |
+
+**GIGO (garbage in, garbage out):** if the input is wrong, the output will be wrong, even when the program works perfectly.
+
+## 5.13 Cybercrime and your online identity
+
+- **Online fraud and scams:** fake websites, adverts or messages that trick people into paying for something that does not exist.
+- **Identity theft:** using someone's personal details to pretend to be them, for example to open accounts.
+- **Checking that a site is legitimate:** look carefully at the domain name; look for `https` and a valid certificate; search for reviews and warnings; contact the organisation on a number you already know.
+- **Protecting your online identity:** strong, unique passwords and MFA; think before you post; limit what is public in your privacy settings; check what a search for your own name shows (your **digital footprint**); report fake accounts.
+
+## 5.14 Privacy, the law and network-use policies
+
+- **POPIA** requires organisations to collect only the personal information they need, with consent, to keep it secure, and not to share it without permission.
+- An **acceptable use policy (AUP)** is the set of rules that users of an organisation's network agree to: what the network may be used for, what is not allowed (illegal downloads, bullying, sharing passwords), and the consequences.
+
+## 5.15 Capabilities and limitations of ICT
+
+**Capabilities:** speed, accuracy, huge storage, working without tiring, instant communication. **Limitations:** computers only follow instructions, depend on correct data and on power and connectivity, can fail or be attacked, and cannot replace human judgement and empathy.
+
+## 5.16 Internet-related careers
+
+Web designer, web developer, multimedia designer, network administrator, database administrator, data analyst, cybersecurity specialist, social media manager.
 
 ---
 

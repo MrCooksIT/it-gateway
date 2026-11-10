@@ -121,6 +121,19 @@ A modern 3.6 GHz CPU completes **3.6 billion processing cycles every second**.
 
 ---
 
+### Multitasking, Multithreading and Multiprocessing
+
+> [!NOTE] Grade 11
+> These three processing techniques are Grade 11 work (Term 1). They are easy to confuse.
+
+| Technique | What it means | Example |
+|---|---|---|
+| **Multitasking** | The operating system runs **several programs** at what seems to be the same time, by switching the CPU between them very quickly | A browser, a music player and Word are all open |
+| **Multithreading** | **One program** is split into smaller parts (threads) that run at the same time | A browser downloads a file in one thread while you keep scrolling in another |
+| **Multiprocessing** | **More than one processor or core** is used, so that tasks really do run at the same time | A quad-core CPU runs four tasks on four cores |
+
+Multitasking and multithreading are done by software (the operating system and the program). Multiprocessing needs the hardware: more than one core or CPU.
+
 ## Memory: RAM, ROM, and Cache
 
 The word "memory" is used for several very different components. They differ in speed, capacity, and whether they keep their data when power is removed.
@@ -244,6 +257,26 @@ The motherboard is the **main circuit board** of a computer. Every other compone
 > You must know the major motherboard components and their roles for Grade 11. A common exam question is: "Why can't you install any CPU into any motherboard?" — the answer is that the CPU must match the motherboard's socket type. Know what PCI-e slots are used for and why the chipset matters for bus speeds.
 
 ---
+
+## BIOS, UEFI and the Boot Process
+
+> [!NOTE] Grade 11
+> BIOS/UEFI, CMOS and POST are Grade 11 work (Term 1).
+
+| Term | Meaning |
+|---|---|
+| **BIOS** (Basic Input/Output System) | Older firmware on the motherboard that starts the computer. Text-based interface, keyboard only, limited support for large drives |
+| **UEFI** (Unified Extensible Firmware Interface) | The modern replacement for BIOS. Graphical interface with mouse support, faster start-up, support for large drives, and **Secure Boot** (blocks unauthorised software from loading at start-up) |
+| **CMOS** | A small memory chip that stores the BIOS/UEFI **settings**: date, time and boot order. The CMOS battery keeps it powered when the computer is off |
+| **POST** (Power-On Self-Test) | The check that runs as soon as the computer is switched on, to make sure the essential hardware (CPU, RAM, keyboard, storage) is present and working. Problems are reported with beeps or an error message |
+
+**The boot process:**
+
+1. The power is switched on and the firmware (BIOS/UEFI) starts.
+2. **POST** checks the essential hardware.
+3. The firmware reads its settings from CMOS and looks for a boot device in the boot order.
+4. The **bootloader** on that device loads the operating system into RAM.
+5. The operating system loads drivers and start-up programs and shows the login screen.
 
 ## Buses
 

@@ -4,8 +4,8 @@ You've seen two computers side by side — one flies, one crawls. The difference
 
 ---
 
-> [!IMPORTANT] Grade 12 — Primary Topic
-> Computer performance is primarily a Grade 12 theory topic, though the hardware components themselves are introduced in Grade 10 and 11.
+> [!IMPORTANT] Grade 11 and 12
+> Computer performance is taught in Grade 11 (Term 1) and examined again in Grade 12. The hardware components themselves are introduced in Grade 10.
 
 ---
 

@@ -1,363 +1,717 @@
 # Grade 10 Information Technology — Theory Study Notes
 
-*A topic-by-topic reference for CAPS Information Technology theory.*
+*A topic-by-topic reference for CAPS Information Technology theory (Paper 2).*
 
-These notes follow the CAPS topic order: System Technologies → Communication and Network Technologies → Data and Information Management → Solution Development. Each topic is explained in full so the notes can be used as standalone study material for any examination.
+These notes follow the sections of the Grade 10 theory paper and cover every topic in the 2026 Annual Teaching Plan (Terms 1 to 4):
+
+| Paper 2 section | Where to find it in these notes |
+|---|---|
+| A — Short questions (any topic) | All sections |
+| B — Systems Technologies | Section 1 |
+| C — Communication and Network Technologies | Section 2 |
+| D — Data and Information Management | Section 3 |
+| E — Solution Development | Section 4 |
+| F — Integrated scenario (incl. social implications) | Section 5, plus any other section |
+
+Use them together with the [Grade 10 November Exam Scope](./Grade_10_November_Scope) checklist. Each heading links to a topic page with more detail and practice questions.
 
 ---
 
-# SECTION 1: SYSTEM TECHNOLOGIES
+# SECTION 1: SYSTEMS TECHNOLOGIES
 
-## 1.1 Computing Devices
+## 1.1 Basic concepts of computing
 
-A **computing device** is any electronic device that can accept input, process data according to a set of instructions, store data, and produce output. The word "computer" no longer refers only to a desktop PC — it includes laptops, tablets, smartphones, smartwatches, gaming consoles, smart TVs, and even devices like ATMs and modern motor vehicles.
+**Information Technology (IT)** is the use of computers, software and networks to capture, store, process and share data. **Digital technologies** are all the electronic devices and systems that work with data in digital (binary) form.
 
-### Convergence devices
+A **computer** is an electronic device that accepts input, processes it according to a set of instructions (a program), stores data and produces output.
 
-A **convergence device** is a single device that combines the functions of several separate devices into one. The clearest example is the modern smartphone: a single device that replaces a telephone, camera, video camera, calculator, music player, alarm clock, GPS, web browser, gaming console and torch. Other examples include smart TVs (TV + internet browser + streaming platform) and modern game consoles (gaming + streaming + web browser + media player).
+### The general model of a computer
+
+Every computing device, from a smartwatch to a server, follows the same model:
+
+| Stage | What happens | Examples |
+|---|---|---|
+| **Input** | Data and instructions enter the computer | Keyboard, mouse, touchscreen, scanner, microphone |
+| **Processing** | The CPU carries out instructions on the data | Calculating, comparing, sorting |
+| **Output** | Results are presented to the user | Monitor, printer, speakers |
+| **Storage** | Data and programs are kept for later use | SSD, hard drive, flash drive, cloud |
+| **Communication** | Data is sent to and received from other devices | Network card, Wi-Fi, Bluetooth |
+
+An **ICT system** is the combination of **hardware, software, data, people and procedures** (and the communication between them) that work together to turn data into useful information.
+
+### Types of computers
+
+| Type | Description | Typical use |
+|---|---|---|
+| **Desktop** | Not portable; separate monitor, keyboard and mouse; easy to upgrade | Office work, programming, gaming |
+| **Laptop** | Portable; built-in screen, keyboard and battery | Work and study on the move |
+| **Tablet** | Touchscreen device, very light, long battery life | Reading, browsing, taking orders, presentations |
+| **Smartphone** | Pocket-sized, always connected, many sensors | Communication, apps, payments |
+| **Server** | Powerful computer that provides services to other computers on a network | File storage, e-mail, websites |
+| **Embedded computer** | A dedicated computer built into another device | Microwave, car, ATM, smart TV |
+
+**Comparing a desktop with a mobile device** (a common exam question):
+
+| | Desktop | Tablet / smartphone |
+|---|---|---|
+| Portability | Stays in one place; needs mains power | Light, battery powered, used anywhere |
+| Input | Keyboard and mouse | Touchscreen, voice, built-in camera |
+| Output | Large monitor | Small built-in screen |
+| Processing and storage | More powerful, more storage, easy to upgrade | Less powerful, limited storage, not upgradable |
+| Connectivity | Many ports (USB, HDMI, network) | Few ports; relies on Wi-Fi, Bluetooth, cellular |
+| Risk | Hard to steal or drop | Easily lost, stolen or damaged |
+
+A **convergence device** combines the functions of several separate devices in one. A smartphone is a phone, camera, music player, GPS, calculator and web browser in a single device.
 
 ### Advantages and disadvantages of using computers
 
-Computers have transformed how people work, learn and communicate, but the benefits come with costs.
+**Advantages:** speed, accuracy, large storage capacity, fast communication over any distance, automation of repetitive tasks.
 
-Advantages include faster processing of large amounts of data, accurate calculations, the ability to store and quickly retrieve enormous amounts of information, easy global communication, and the automation of repetitive tasks so that people can focus on more creative work.
+**Disadvantages:** cost of equipment and software, dependence on electricity and working systems, health problems, job losses through automation, exposure to cybercrime, less face-to-face contact.
 
-Disadvantages include the high cost of equipment and software, the dependency that develops (when systems fail, work stops completely), health issues from prolonged use such as eye strain and repetitive strain injuries, the loss of jobs through automation, increased exposure to cybercrime, and the social impact of reduced face-to-face interaction.
+**Economic reasons for using computers:** they save **time** (tasks are completed faster), **labour** (fewer people are needed for repetitive work), **paper and money** (electronic documents and communication), and they improve **accuracy and reliability** (fewer costly mistakes).
+
+📖 [What is Computing?](../theory/systems/what-is-computing) · [Types of Computers](../theory/systems/types-of-computers)
 
 ## 1.2 Hardware
 
-### Input and output devices
+**Hardware** is the physical parts of a computer that you can touch. **Software** is the programs (instructions) that tell the hardware what to do.
 
-An **input device** allows the user (or the environment) to give data and instructions to the computer. Common examples are the keyboard, mouse, touchscreen, microphone, webcam, scanner and barcode reader.
+### Input, output and storage devices
 
-An **output device** is used by the computer to present information to the user. Common examples are the monitor, printer, speakers and headphones.
+| Category | Purpose | Examples |
+|---|---|---|
+| **Input** | Sends data and instructions into the computer | Keyboard, mouse, touchscreen, scanner, barcode scanner, microphone, webcam, biometric (fingerprint) reader |
+| **Output** | Presents results to the user | Monitor, printer, speakers, headphones, data projector |
+| **Storage** | Keeps data and programs permanently | HDD, SSD, flash drive, memory card, optical disc, cloud storage |
+| **Input and output** | Does both | Touchscreen, network card, modem, headset with a microphone |
 
-Some devices are both input and output — a touchscreen, for example, displays output (it is a monitor) but also accepts input (you tap on it). A modem and a network card are also both input and output devices because they send and receive data.
+A **barcode scanner** reads the pattern of lines on a product and sends the number to the computer. It is faster than typing and avoids typing mistakes. A **touchscreen** suits busy public places because it is quick to use, needs little training and takes less space than a keyboard and mouse.
 
-### Storage — HDD vs SSD
+**Monitors:** screen size is measured **diagonally** in inches. LED monitors use less power, are thinner and last longer than older LCD monitors with fluorescent backlights. **Printers:** inkjet printers are cheap to buy and good for colour photos; laser printers print faster and are cheaper per page for large volumes.
 
-Both an HDD (Hard Disk Drive) and an SSD (Solid State Drive) are used as **secondary storage** — they hold data permanently, even when the computer is switched off. The difference is in how they store data:
+### The system unit
 
-* An **HDD** uses spinning magnetic platters and a moving read/write head, much like an old vinyl record player. Because it has moving mechanical parts, it is slower, makes a small amount of noise, generates heat, uses more power, and is more easily damaged by being knocked or dropped.
-* An **SSD** uses flash memory chips with no moving parts at all. It is much faster (boot times and program loading drop dramatically), silent, more energy-efficient, lighter, more resistant to physical shock, but is more expensive per gigabyte.
+| Component | What it does |
+|---|---|
+| **Motherboard** | The main circuit board. All other components plug into it and communicate through it |
+| **CPU (processor)** | The "brain". It **fetches, decodes and executes** program instructions |
+| **RAM** | Temporary working memory for the programs and data in use |
+| **ROM** | A chip that permanently holds the start-up instructions |
+| **Storage drive** | Permanent storage for the operating system, programs and files |
+| **Power supply** | Converts mains electricity to the low voltages the components need |
 
-### Monitors — LCD and LED
+**Clock speed** is measured in gigahertz (**GHz**). It shows how many instruction cycles the CPU can perform per second: a 3 GHz processor performs about 3 billion cycles per second. A higher clock speed generally means a faster CPU.
 
-An LCD (Liquid Crystal Display) monitor uses fluorescent (CCFL) backlighting behind the liquid crystal panel. An LED (Light Emitting Diode) monitor uses LEDs as the backlight instead.
+### Primary memory vs secondary storage
 
-Advantages of LED over LCD include lower power consumption, a thinner and lighter design, longer lifespan, better contrast and brighter colours, and a more environmentally friendly manufacturing process (no mercury in the backlight).
+| | Primary memory | Secondary storage |
+|---|---|---|
+| Examples | RAM, ROM, cache | HDD, SSD, flash drive, optical disc, cloud |
+| Purpose | Holds the programs and data the CPU is using **right now** | Keeps programs and data **permanently** for later use |
+| Volatile? | RAM is **volatile**: it loses its contents when the power is switched off | **Non-volatile**: contents stay when the power is off |
+| Speed | Very fast | Slower |
+| Capacity and cost | Smaller, more expensive per GB | Larger, cheaper per GB |
 
-**Screen size** is measured **diagonally from corner to corner of the visible screen**. A "17.3 inch" monitor means the diagonal distance across the screen is 17.3 inches (about 44 cm). Screen size is not the same as resolution — a small screen can have a very high resolution, and a large screen can have a low resolution.
+- **RAM (Random Access Memory)** is volatile and can be read from and written to. More RAM lets you run more programs at once without the computer slowing down.
+- **ROM (Read-Only Memory)** is non-volatile. It stores the firmware that starts the computer.
+- **Cache** is a small amount of very fast memory in the CPU that holds the instructions and data used most often.
+- **Firmware** is software that is permanently stored on a chip in a hardware device and controls that device (for example in a router, printer or the motherboard).
 
-### Barcode scanners
+### HDD vs SSD
 
-A **barcode scanner** is an input device that reads the parallel black-and-white lines printed on product labels, book covers, packages and many other items. It works by shining a light onto the barcode and measuring the reflection — the white spaces reflect more light than the black bars. The scanner converts this pattern into the number the barcode represents and sends that number to the computer.
+| | HDD (hard disk drive) | SSD (solid state drive) |
+|---|---|---|
+| How it works | Spinning magnetic disks and a moving read/write head | Flash memory chips, no moving parts |
+| Speed | Slower | Much faster start-up and loading |
+| Durability | Easily damaged if bumped or dropped | Resistant to shock |
+| Noise, heat, power | Noisier, warmer, uses more power | Silent, cooler, uses less power |
+| Cost | Cheaper per GB, large capacities | More expensive per GB |
 
-Benefits of using barcode scanners include:
+Other storage: **flash drives** and **memory cards** (small, portable), **optical discs** (CD, DVD, Blu-ray) and **cloud storage** (files saved on servers on the Internet, see Section 2.7).
 
-* Speed — scanning is much faster than typing a long product/identification number.
-* Accuracy — there are no typing errors, so the wrong item is never recorded.
-* Automation — once an item is scanned, the database can be updated immediately (e.g. stock count reduced, item marked as sold, or item marked as out on loan).
+### Ports and connectors
 
-### Upgrading for performance
+| Port | Used for |
+|---|---|
+| **USB** (Universal Serial Bus) | Connecting almost any device: keyboard, mouse, printer, flash drive, phone |
+| **HDMI** | Digital video **and** sound to a monitor, TV or projector |
+| **Ethernet (RJ45)** | A network cable |
+| **Audio jack (3.5 mm)** | Headphones, speakers, microphone |
 
-When a computer is slow at running many programs at the same time, the component to upgrade is usually the **RAM**. RAM is the working memory where all open programs and their data must sit while the CPU uses them. If there is not enough RAM, the operating system has to swap data constantly between RAM and the (much slower) storage drive, which causes the computer to feel sluggish.
+**Advantages of USB:** it is a standard found on almost every device; it is **plug-and-play** (the device is detected and set up automatically); it is **hot-swappable** (devices can be connected and removed while the computer is on); and it can supply power to the device.
 
-### Webcams and video conferencing
+📖 [Hardware](../theory/systems/hardware) · [Peripherals](../theory/systems/peripherals)
 
-Most modern laptops have a small **webcam** built into the top of the screen bezel, together with a microphone. The webcam captures video and the microphone captures audio, which together allow the laptop to be used for video conferencing (Zoom, Microsoft Teams, Google Meet) without buying any extra hardware.
+## 1.3 Software
 
-## 1.3 System Software and the Operating System
+| Type | Purpose | Examples |
+|---|---|---|
+| **System software** | Controls and manages the computer itself | Operating system, utility programs, device drivers |
+| **Application software** | Lets the user do a specific task | Word processor, spreadsheet, web browser, e-mail client, graphics editor, games |
 
-### What system software is
+### The operating system (OS)
 
-**System software** is the software that controls and manages the computer's hardware so that the user and application software (like Word or Chrome) can actually use it. It is the "middleman" between the hardware and the application programs.
+Examples: Windows, macOS, Linux, Android, iOS. The functions of an operating system are to:
 
-System software includes:
+- provide a **user interface** (so the user can interact with the computer);
+- manage **memory** (decide which programs get RAM);
+- manage the **CPU** (share processing time between programs);
+- manage **files and storage** (folders, saving, copying, deleting);
+- manage **hardware devices** through drivers;
+- provide **security** (user accounts, passwords, permissions).
 
-* the **operating system** (e.g. Windows 11, macOS, Linux, Android)
-* **utility programs** (antivirus, disk defragmenter, file compression, backup tools)
-* **device drivers**
+### Utility programs
 
-Examples of operating systems include Windows 11, macOS, Linux distributions like Ubuntu, Android (for phones) and iOS (for iPhones). Microsoft Word, Google Chrome and Adobe Photoshop are *not* operating systems — they are application software that runs on top of the operating system.
+A **utility program** is system software that helps to maintain, protect or manage the computer.
 
-### The purpose of the operating system
+| Utility | What it does |
+|---|---|
+| Antivirus | Finds and removes malware |
+| Backup | Makes copies of files so they can be restored |
+| File compression | Makes files smaller (for example a `.zip` file) |
+| Disk clean-up | Removes temporary and unnecessary files to free up space |
+| Disk defragmenter | Rearranges the parts of files on an HDD so they load faster |
+| File manager | Lets you organise files and folders |
 
-The main purpose of an operating system is to **manage the hardware and software resources of the computer**. This includes:
+### Device drivers and plug-and-play
 
-* providing a user interface so the user can interact with the computer
-* managing memory (deciding which programs get RAM and how much)
-* managing the CPU (scheduling which program runs when)
-* managing storage (organising the file system)
-* managing input and output devices
-* providing security (user accounts, passwords, permissions)
+A **device driver** is a small program that lets the operating system communicate with a specific hardware device. Without the correct driver the device will not work, even if it is plugged in. **Plug-and-play** means the OS detects a new device automatically and installs the driver for it.
 
-### Device drivers
+### Software licences
 
-A **device driver** is a small program that allows the operating system to communicate with a specific hardware device. Each device that the computer connects to (printer, scanner, graphics card, webcam, etc.) needs its own driver because each manufacturer designs its hardware slightly differently.
+| Licence | Cost | Source code | Notes |
+|---|---|---|---|
+| **Proprietary** | Paid | Secret; may not be changed | Owned by a company, e.g. Microsoft Office. Official support |
+| **Open source** | Usually free | Available; may be viewed, changed and shared | e.g. Linux, LibreOffice. Community support |
+| **Freeware** | Free for an unlimited time | Not available | Free to use, but you may not change or sell it |
+| **Shareware** | Free for a **trial period** or with limited features | Not available | You must pay to keep using it or to unlock everything |
 
-Device drivers are important because without the correct driver, the operating system simply does not know how to "talk to" the hardware. The device might be physically connected and powered on, but it will not work. A printer is a typical example — even though it is plugged in, it will not print until the driver is installed.
+A **licence agreement (EULA)** is the contract between the user and the software owner that says how the software may be used. A **single-user licence** allows installation for one user; a **site licence** covers a whole organisation. A **product key** is the code that proves you bought the software.
 
-### Plug-and-Play and hot-swappable devices
+**Software updates** fix security weaknesses and bugs, and add new features. Install them regularly.
 
-**Plug-and-Play (PnP)** is a technology that allows the operating system to automatically detect a new hardware device when it is connected, identify it, and load the correct driver — all without the user needing to manually install anything. A printer that "just works" the moment you plug it in is using Plug-and-Play.
+📖 [Software](../theory/systems/software)
 
-The advantage is that the user does not need any technical knowledge to add new hardware. The device is ready to use within seconds.
+## 1.4 Computer management
 
-A **hot-swappable** device is one that can be safely connected to (or disconnected from) the computer while the computer is switched on and running. A USB flash drive is the classic example — you can plug it in and pull it out without restarting. Older technologies were *not* hot-swappable — adding a hard drive used to require shutting the machine down completely first.
+Looking after a computer means doing regular management tasks:
 
-## 1.4 Proprietary vs Open-Source Software
+- **File management:** organise files in a logical **folder (directory) structure** with meaningful names. A **file path** shows where a file is stored, e.g. `C:\Users\Thandi\Documents\IT\Task1.docx` (drive → folders → file name → extension).
+- **Backups:** keep copies of important files on a different device or in the cloud, in a different place from the original.
+- **Housekeeping:** delete unused files and programs, empty the recycle bin, run disk clean-up.
+- **Updates:** keep the operating system, applications and antivirus up to date.
+- **Security:** use antivirus software and a **firewall** (which blocks unauthorised access to the computer over a network), and protect accounts with passwords.
 
-When choosing software, users have to decide between **proprietary software** and **open-source software**.
-
-* **Proprietary software** (e.g. Microsoft Office, Adobe Photoshop) is owned by a company. Users must pay for a licence to use it. The source code is kept secret and may not be changed by the user.
-* **Open-source software** (e.g. LibreOffice, Linux, GIMP) is software whose source code is freely available. Anyone may use, copy, study and modify the code. It is usually free of charge.
-
-**Comparison of support:**
-
-* Proprietary software comes with **official paid support** from the company that makes it — phone help desks, online ticket systems, official documentation. The support is usually reliable and professional, but is part of what you pay for.
-* Open-source software relies mainly on **community support** — online forums, user groups, wikis and volunteers. Help is free but can be slow and inconsistent. Some open-source projects offer paid commercial support as an add-on.
+📖 [OS and File Management](../theory/systems/os-management)
 
 ---
 
 # SECTION 2: COMMUNICATION AND NETWORK TECHNOLOGIES
 
-## 2.1 Computer Networks
+## 2.1 What a network is
 
-A **computer network** is a group of two or more computing devices that are connected together so that they can share data, resources (like printers and storage) and an internet connection.
+A **computer network** is two or more computing devices that are connected so that they can share data, hardware, software and an Internet connection.
 
-**Communication media** is the physical or wireless pathway that the data travels along. Examples of wired media include UTP (twisted-pair copper) cables, coaxial cables and fibre-optic cables. The most common wireless medium is Wi-Fi, which uses radio waves; others include Bluetooth, infrared and cellular (3G/4G/5G).
+| Advantages | Disadvantages |
+|---|---|
+| Share hardware (one printer for many users) | Malware can spread across the network |
+| Share files and software | Security risks: unauthorised access to data |
+| Share one Internet connection | If the server or network fails, nobody can work |
+| Easy communication (e-mail, messaging) | Cost of equipment, set-up and maintenance |
+| Centralised storage, backups and security | Needs someone with skills to manage it |
 
-### Advantages of using a computer network
+## 2.2 Types of networks
 
-* **Sharing of resources** — many users can share one printer, one internet connection, one set of files, instead of each computer needing its own.
-* **Communication** — users can send each other messages, emails, files and video calls easily.
-* **Centralised data** — files can be stored in one central location, making backup and access easier.
-* **Cost saving** — sharing one printer between 30 computers is much cheaper than buying 30 printers.
+| Type | Stands for | Area covered | Example |
+|---|---|---|---|
+| **PAN** | Personal Area Network | Around one person (a few metres) | Wireless earphones or a smartwatch connected to a phone with Bluetooth |
+| **HAN** | Home Area Network | One home | Phones, laptops, smart TV and printer connected to the home router |
+| **LAN** | Local Area Network | One building or site | A school or office network |
+| **WLAN** | Wireless LAN | One building or site, using Wi-Fi | The Wi-Fi network at school |
+| **WAN** | Wide Area Network | Cities, countries or the world | A bank's network that links all its branches |
 
-### LAN vs WAN
+**The Internet is a WAN** because it connects millions of networks and devices over a very large geographical area (the whole world).
 
-A **LAN (Local Area Network)** is a network that covers a small geographic area, typically a single building or campus. The network in a school, in an office or in a home is a LAN. The owner of the network usually owns all the cables and equipment.
+## 2.3 Basic network components
 
-A **WAN (Wide Area Network)** is a network that covers a large geographic area, often connecting many LANs together across cities, countries or continents. The internet is the largest WAN in the world. A WAN typically uses cables, equipment and services that are owned and rented from telecommunications companies.
+| Component | Purpose |
+|---|---|
+| **NIC** (network interface card) | Lets a device connect to a network, by cable or wirelessly |
+| **Switch** | Connects the devices in a LAN and sends data only to the device it is meant for |
+| **Router** | Connects two networks, for example a LAN to the Internet, and directs data between them |
+| **Modem** | Converts signals so that data can travel over the ISP's line (telephone line, fibre, cellular) |
+| **Wireless access point** | Lets wireless devices join a wired network |
+| **Communication medium** | The cable or wireless signal that carries the data |
 
-The network used **within a school building** is a LAN.
+### Communication media
 
-## 2.2 Network Hardware
+| Medium | Type | Advantages | Disadvantages |
+|---|---|---|---|
+| **UTP cable** | Wired (copper) | Cheap, fast, reliable, secure | Limited to about 100 m; devices cannot move around; interference possible |
+| **Fibre-optic cable** | Wired (glass, light signals) | Very fast, long distances, no electrical interference | Expensive, fragile, harder to install |
+| **Wi-Fi** | Wireless (radio waves) | Mobility, no cables, easy to add devices | Slower than cable, limited range, less secure, interference |
+| **Bluetooth** | Wireless, short range | Simple connection between nearby devices, low power | Short range (about 10 m), slow |
+| **NFC** (Near Field Communication) | Wireless, a few centimetres | Tap to pay or tap to share | Extremely short range |
+| **Cellular (3G/4G/5G)** | Wireless, wide area | Internet access almost anywhere | Data costs; depends on signal coverage |
 
-### Routers
+## 2.4 Client-server vs peer-to-peer
 
-A **router** is a network device that connects two or more networks and routes (directs) data packets between them. In a typical home or school, the router connects the local network (LAN) to the internet (WAN). It looks at the address of every data packet and decides which network and which device it must be sent to.
+| | Client-server | Peer-to-peer (P2P) |
+|---|---|---|
+| How it works | A central **server** provides services and resources (files, printing, Internet, logins) to **client** computers and controls access to them | All computers are equal; each one shares its own files and devices with the others |
+| Security and backups | Centralised: controlled from the server | Each user is responsible for their own computer |
+| Cost | Expensive: server, server software and an administrator | Cheap and easy to set up |
+| Suited to | Schools, businesses, larger networks | Homes and very small offices (fewer than about 10 computers) |
 
-### Functions of network communication
+## 2.5 Electronic communication
 
-Network communication exists to allow:
+**E-communication** is sending and receiving messages and data electronically. Compared with posting a letter or meeting in person, it is better in terms of:
 
-* **Resource sharing** — printers, storage and internet connections can be used by many devices.
-* **Data sharing** — files and information can be sent between users.
-* **Centralised management** — a server can store files, manage user accounts, and enforce security policies for all the devices on the network.
-* **Communication services** — email, video calls and instant messaging all rely on networks.
+- **speed and time:** messages arrive in seconds, at any time of day;
+- **distance:** the receiver can be anywhere in the world;
+- **cost:** far cheaper than travel, printing or postage;
+- **accuracy:** there is a written record, and the same message reaches everyone.
 
-## 2.3 Network Security
+**Tools:** e-mail, instant messaging (WhatsApp), video conferencing (Teams, Zoom, Google Meet), VoIP (voice calls over the Internet), social media, blogs.
 
-Security is important in network communication because data travelling across a network is vulnerable to interception, theft and tampering. Without security:
+### E-mail
 
-* Personal information (passwords, ID numbers, banking details) can be stolen and used for fraud.
-* Confidential business or organisational information can be leaked or sold.
-* Attackers can install malware on devices on the network.
-* The organisation's network and devices can be hijacked to attack other networks.
+An e-mail address has the form `username@domain`, for example `thandi@school.co.za`.
 
-### Risks of using public Wi-Fi
+| Field | Use |
+|---|---|
+| **To** | The main person or people the message is for |
+| **Cc** (carbon copy) | People who must see the message but do not need to act on it. Everyone can see these addresses |
+| **Bcc** (blind carbon copy) | Recipients whose addresses are **hidden** from everyone else. Use it when e-mailing a large group, to protect their privacy and to prevent "reply all" messages |
+| **Subject** | A short, clear description of what the message is about |
+| **Attachment** | A file sent with the message |
 
-When someone uses a public Wi-Fi network (in a coffee shop, mall, airport or hotel) to access email or any sensitive service:
+**E-mail best practices (netiquette):**
 
-* Data sent over the connection is often not encrypted, so an attacker on the same Wi-Fi can capture passwords and emails.
-* Fake "hotspot" networks (named to look legitimate) can be set up by criminals to harvest user data — this is called an "evil twin" attack.
-* Malware can be pushed onto the device through the open connection.
+- Use a clear, meaningful subject line.
+- Keep the message short and polite. Do not type in CAPITAL LETTERS (it reads as shouting).
+- Check spelling and grammar before sending.
+- Keep attachments small; compress large files or share a link instead.
+- Use Bcc for large groups and think before you click "reply all".
+- Do not forward chain letters, hoaxes or spam.
 
-**Precautions** to reduce these risks include using a VPN to encrypt all traffic, only accessing sites that use HTTPS, turning off "automatic connection to Wi-Fi", avoiding banking and sensitive logins on public networks, and using two-factor authentication on email accounts.
+**PDF** is a good format for attachments: the layout stays the same on any device, it opens with free software, and it is not easily changed.
 
-## 2.4 Key Network Terms
+📖 [Network Concepts](../theory/networks/network-concepts) · [Types of Networks](../theory/networks/network-types) · [E-Communication](../theory/networks/e-communication)
 
-### IP address
+## 2.6 The Internet and the World Wide Web
 
-An **IP address (Internet Protocol address)** is a unique numerical address that identifies a device on a network. Just as every house in a street needs a unique street address so that the post office can deliver mail to the correct house, every device on a network needs a unique IP address so that data can be delivered to the correct device.
+- The **Internet** is the worldwide network of connected networks (the hardware and connections).
+- The **World Wide Web (WWW)** is a **service** that runs on the Internet: the collection of web pages and websites linked by **hyperlinks**. E-mail and file transfer are other Internet services.
 
-The most common form (IPv4) consists of **four sets of digits separated by dots**, for example `192.168.1.10`. Each of the four numbers can be between 0 and 255.
+**What you need to connect to the Internet:** a device, an **ISP** (Internet Service Provider, the company that sells you Internet access), a connection (fibre, cellular/LTE/5G, DSL or satellite), a modem/router, and software such as a web browser.
 
-### Bandwidth
+| Term | Meaning |
+|---|---|
+| **Web browser** | **Software on your device** that displays web pages (Chrome, Edge, Firefox, Safari) |
+| **Search engine** | A **website/service** that finds web pages that match your keywords (Google, Bing) |
+| **Web page / website** | A single document on the web / a collection of linked web pages |
+| **Download / upload** | Copy a file from the Internet to your device / from your device to the Internet |
+| **IP address** | The unique numeric address of a device on a network, e.g. `192.168.1.10` |
+| **Bandwidth** | The amount of data that can be transferred per second (Mbps) |
+| **Protocol** | A set of rules for how data is sent and received |
 
-**Bandwidth** is the maximum amount of data that can be transferred over a network connection in a given amount of time. It is typically measured in megabits per second (Mbps) or gigabits per second (Gbps). A higher bandwidth means more data can flow at the same time — like a wider road letting more cars through at once.
+### Parts of a URL
 
-A connection with low bandwidth feels slow when many people try to use it at the same time, when streaming video, or when downloading large files.
+A **URL** (Uniform Resource Locator) is the address of a web page:
 
-### Protocol
+`https://www.capetown.gov.za/services/water.html`
 
-A **protocol** is a set of rules that governs how data is transmitted and received across a network. Two devices can only communicate if they both "speak" the same protocol — in the same way that two people can only have a conversation if they both speak the same language. Examples include HTTP and HTTPS (for web pages), SMTP (for sending email), POP3 and IMAP (for receiving email), and FTP (for file transfer).
+| Part | In the example | Meaning |
+|---|---|---|
+| **Protocol** | `https` | The rules used to transfer the page. HTTPS is the secure (encrypted) version of HTTP |
+| **Domain name** | `www.capetown.gov.za` | The name of the website / web server |
+| **Path (folder)** | `/services/` | The folder on the server |
+| **File name** | `water.html` | The page that is opened |
 
-### Modem
+In the domain name, `.za` is the country code and `.gov`, `.co`, `.org`, `.ac` and `.school` show the type of organisation.
 
-A **modem** (modulator-demodulator) is a device that converts the digital signals used by a computer into analogue signals that can travel over a telephone line, and then converts incoming analogue signals back into digital signals. Modems were essential when home internet was delivered over phone lines; today, most "modems" supplied by ISPs are actually combined modem-router units.
+**Search tips:** use specific keywords, put exact phrases in "quotation marks", and judge the results: who wrote it, how recent is it, and can it be confirmed elsewhere?
 
-## 2.5 Internet Safety
+📖 [Internet and WWW](../theory/internet/internet-www)
 
-### Phishing
+## 2.7 Internet services
 
-**Phishing** is a type of online scam where attackers send fake emails, SMS messages or create fake websites that look like they come from a legitimate source (a bank, the school, Microsoft, etc.). The goal is to **trick users into giving personal information** — usernames, passwords, ID numbers, banking details — through fake login pages.
+| Service | What it offers |
+|---|---|
+| **Cloud (online) storage** | Files are saved on servers on the Internet (Google Drive, OneDrive). Access them from any device, share them easily, and they act as an off-site backup. Needs an Internet connection; privacy depends on the provider |
+| **File synchronisation** | Keeps the same, latest version of a file on all your devices |
+| **Online collaboration** | Several people work on the same document at the same time (Google Docs) |
+| **Online shopping and banking** | Buy, sell and pay over the Internet |
+| **Social media** | Share content and communicate with a wide audience |
+| **Streaming** | Watch or listen while the media is being received, without saving the whole file |
 
-Phishing is *not* the same as illegally copying software (that is **piracy**) and not the same as viruses (which are malicious *programs*).
+📖 [Internet Services](../theory/internet/internet-services)
 
 ---
 
 # SECTION 3: DATA AND INFORMATION MANAGEMENT
 
-## 3.1 Units of Data
+## 3.1 Data, information and knowledge
 
-The smallest unit of data in a computer is the **bit** (binary digit). A bit can only have one of two values: 0 or 1.
+| | Meaning | Example |
+|---|---|---|
+| **Data** | Raw, unprocessed facts and figures that have no meaning on their own | `62, 48, 75, 81` |
+| **Information** | Data that has been processed and organised so that it has meaning | "The class average for the test is 66.5%" |
+| **Knowledge** | Understanding gained from information, used to make a **decision** | "The class struggled with Question 3, so we will revise that topic" |
 
-A **byte** consists of **8 bits**. Because each bit can be either 0 or 1, a single byte can represent **2⁸ = 256** different unique combinations. A byte is large enough to store a single character of text (a letter, a digit or a symbol) using a coding system like ASCII or Unicode.
+In a scenario question: a single captured record is **data**; a total, average, trend or "most popular" result is **information**; the decision that someone takes because of it is **knowledge**.
 
-Larger units are built up from bytes:
+## 3.2 Bits, bytes and storage units
 
-* 1 kilobyte (KB) = 1 024 bytes
-* 1 megabyte (MB) = 1 024 KB
-* 1 gigabyte (GB) = 1 024 MB
-* 1 terabyte (TB) = 1 024 GB
+A **bit** (binary digit) is the smallest unit of data: a 0 or a 1. A **byte** is 8 bits. One byte can hold 2⁸ = **256** different values, from 0 to **255**.
 
-## 3.2 Number Systems
+| Unit | Size |
+|---|---|
+| 1 kilobyte (KB) | 1 024 bytes |
+| 1 megabyte (MB) | 1 024 KB |
+| 1 gigabyte (GB) | 1 024 MB |
+| 1 terabyte (TB) | 1 024 GB |
 
-Computers use different number systems depending on the task. The three you must know are:
+**To convert to a bigger unit, divide by 1 024. To convert to a smaller unit, multiply by 1 024.**
 
-* **Decimal (base 10)** — the everyday system humans use, with digits 0–9.
-* **Binary (base 2)** — the system computers actually use internally, with only two digits: 0 and 1.
-* **Hexadecimal (base 16)** — a short-hand system used by programmers, with digits 0–9 and letters A–F (where A = 10, B = 11, C = 12, D = 13, E = 14, F = 15).
+**Worked example:** A phone takes photos of 3 MB each. How many photos fit on a 16 GB memory card?
 
-### Binary to Decimal
+1. Convert to the same unit: 16 GB × 1 024 = 16 384 MB
+2. Divide: 16 384 ÷ 3 = 5 461.3
+3. Answer: **5 461 photos** (round down, because part of a photo cannot be stored)
 
-Each position in a binary number represents a power of 2, starting from the right. Write the place values above the bits, then add up the place values where there is a 1.
+**Worked example:** 250 files of 512 KB each must be backed up. Will they fit on 100 MB of free space?
 
-**Example: Convert 10101100₂ to decimal**
+1. Total: 250 × 512 = 128 000 KB
+2. Convert: 128 000 ÷ 1 024 = 125 MB
+3. Answer: **No**, 125 MB is more than 100 MB.
+
+Always show the multiplication, the unit conversion and a final sentence that answers the question.
+
+## 3.3 Number systems
+
+| System | Base | Digits |
+|---|---|---|
+| **Binary** | 2 | 0, 1 |
+| **Decimal** | 10 | 0 to 9 |
+| **Hexadecimal** | 16 | 0 to 9 and A to F (A = 10, B = 11, C = 12, D = 13, E = 14, F = 15) |
+
+Computers work in binary. Hexadecimal is a shorter way for people to write binary values (colour codes, memory addresses).
+
+### Binary to decimal
+
+Write the place values above the bits and add the place values where there is a 1.
+
+**Convert 10101100₂ to decimal**
 
 | Place value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 |---|---|---|---|---|---|---|---|---|
-| Binary digit | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
+| Bit | 1 | 0 | 1 | 0 | 1 | 1 | 0 | 0 |
 
-Add only the place values where the binary digit is 1:
 128 + 32 + 8 + 4 = **172**
 
-### Decimal to Binary
+### Decimal to binary
 
-Use the "place value subtraction" method or "successive division by 2" method.
+**Method 1: place values.** Find the largest place value that fits, subtract, and repeat.
 
-**Example: Convert 198 to binary**
+**Convert 198 to binary:** 198 − 128 = 70 → 70 − 64 = 6 → 6 − 4 = 2 → 2 − 2 = 0. There are 1s at 128, 64, 4 and 2: **11000110₂**
 
-Using place value subtraction (largest power of 2 that fits, then subtract, then repeat):
+**Method 2: repeated division by 2.** Write down the remainders and read them from the bottom up.
 
-| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
-|---|---|---|---|---|---|---|---|
-| 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 |
+**Convert 37 to binary:** 37 ÷ 2 = 18 r **1** · 18 ÷ 2 = 9 r **0** · 9 ÷ 2 = 4 r **1** · 4 ÷ 2 = 2 r **0** · 2 ÷ 2 = 1 r **0** · 1 ÷ 2 = 0 r **1** → **100101₂**
 
-Working: 198 − 128 = 70 → 70 − 64 = 6 → 6 − 4 = 2 → 2 − 2 = 0
-So we have 1s at the 128, 64, 4 and 2 positions.
+### Hexadecimal to decimal
 
-Answer: **11000110₂**
+Each position is a power of 16 (…, 256, 16, 1).
 
-### Hexadecimal to Decimal
+**Convert 1F7₁₆ to decimal:** (1 × 256) + (15 × 16) + (7 × 1) = 256 + 240 + 7 = **503**
 
-Each position is a power of 16, starting from the right. Multiply each digit by its place value, then add.
+### Decimal to hexadecimal
 
-**Example: Convert 1F7₁₆ to decimal**
+Divide by 16 repeatedly and read the remainders from the bottom up (write remainders of 10 to 15 as A to F).
 
-| Place value | 256 | 16 | 1 |
-|---|---|---|---|
-| Hex digit | 1 | F (=15) | 7 |
+**Convert 289 to hexadecimal:** 289 ÷ 16 = 18 r **1** · 18 ÷ 16 = 1 r **2** · 1 ÷ 16 = 0 r **1** → **121₁₆**
 
-(1 × 256) + (15 × 16) + (7 × 1) = 256 + 240 + 7 = **503**
+**Convert 190 to hexadecimal:** 190 ÷ 16 = 11 r **14 (E)** · 11 ÷ 16 = 0 r **11 (B)** → **BE₁₆**
 
-### Decimal to Hexadecimal
+### Binary ↔ hexadecimal
 
-Successively divide by 16 and record the remainders, reading them from bottom to top.
+One hex digit equals exactly **four bits**. Split the binary number into groups of four from the right: `1011 1110` → B E → **BE₁₆**.
 
-**Example: Convert 289 to hexadecimal**
+📖 [Binary](../practical/number-systems/binary) · [Hexadecimal](../practical/number-systems/hexadecimal) · [Data Sizes](../practical/number-systems/data-sizes)
 
-* 289 ÷ 16 = 18 remainder 1
-* 18 ÷ 16 = 1 remainder 2
-* 1 ÷ 16 = 0 remainder 1
+## 3.4 Character representation — ASCII and Unicode
 
-Reading the remainders from bottom to top: **121₁₆**
+Text is stored as numbers. A coding system says which number stands for which character.
 
-## 3.3 Data Types
+| | ASCII | Unicode |
+|---|---|---|
+| Bits per character | 7 bits (standard) or **8 bits** (extended ASCII) | 16 bits or more |
+| Number of characters | 128 (standard) or **256** (extended) | More than a million possible |
+| What it can represent | English letters, digits, punctuation | The characters of almost all the world's languages, plus symbols and emojis |
 
-A **data type** tells the computer what kind of data is being stored and how much memory to reserve for it. The main primitive data types you must know are:
+In ASCII, `'A'` is 65, `'a'` is 97 and `'0'` is 48. **Unicode is needed** when text contains characters that ASCII does not have, such as other alphabets, special symbols and emojis. The first 128 Unicode characters are the same as ASCII.
 
-* **Integer** — whole numbers (positive or negative) with no decimal part. Used for counting things. Example: number of items in a list, number of people in a group, age in completed years.
-* **Real / Float** — numbers with a decimal part. Used for measurements and calculations that need fractions. Example: a temperature like 23.5 °C, a price like 15.95, a height in metres.
-* **Boolean** — a value that can only be **True** or **False**. Used for yes/no questions. Example: "Is the device connected to the internet?", "Has the user accepted the terms?"
-* **Char** — a single character (one letter, digit or symbol). Example: 'K', 'A', '7', '$'.
-* **String** — a sequence of characters that form text. Example: "Hello123", a person's name, an address.
+## 3.5 Data types
 
-Selecting the right data type matters because the wrong choice wastes memory, can cause calculation errors (e.g. trying to do arithmetic on a string), or makes validation impossible.
+| Data type | Stores | Example |
+|---|---|---|
+| **Integer** | Whole numbers | Number of learners: `32` |
+| **Real** | Numbers with a decimal part | Price: `15.95` |
+| **Boolean** | True or False | Has paid: `True` |
+| **Char** | One character | Grade symbol: `'A'` |
+| **String** | Text (a sequence of characters) | Name: `'Sipho'`. Also phone and ID numbers, because they are not used in calculations and may start with 0 |
+
+## 3.6 Files and file types
+
+A **file** is a named collection of data saved on storage. Files are organised in **folders**. The **file extension** (after the full stop) tells the operating system what type of file it is and which program opens it.
+
+| Type of file | Common extensions |
+|---|---|
+| Text / document | `.txt` `.docx` `.pdf` |
+| Spreadsheet | `.xlsx` `.csv` |
+| Presentation | `.pptx` |
+| Image | `.jpg` `.png` `.gif` `.bmp` |
+| Sound | `.mp3` `.wav` |
+| Video | `.mp4` `.avi` `.mov` |
+| Compressed | `.zip` `.rar` |
+| Program | `.exe` |
+| Web page | `.html` |
+| Delphi | `.dpr` (project) `.pas` (code) `.dfm` (form) |
+
+📖 [Data Representation](../theory/systems/data-representation) · [Data Concepts](../theory/databases/data-concepts)
 
 ---
 
 # SECTION 4: SOLUTION DEVELOPMENT
 
-## 4.1 Algorithms
+## 4.1 Algorithms and problem solving
 
-An **algorithm** is a step-by-step set of instructions that solves a particular problem or completes a particular task. A recipe is an everyday example of an algorithm. In programming, every program starts as an algorithm before any code is written.
+An **algorithm** is a step-by-step set of instructions that solves a problem. A good algorithm is in the correct **sequence (order)**, is **precise** (every step is clear and unambiguous), **ends** after a limited number of steps, and is **efficient** (uses as few steps as possible).
 
-### Criteria for a well-designed algorithm
+**Problem-solving steps:** (1) understand the problem; (2) plan the solution (IPO table, flowchart or pseudocode); (3) write the code; (4) test and debug; (5) document and maintain.
 
-A good algorithm must meet the following criteria:
-
-* **Finiteness** — it must always end after a finite number of steps. An algorithm must not loop forever.
-* **Definiteness** — every step must be clear and unambiguous. There must be no doubt about what to do at each step.
-* **Input** — it must accept zero or more clearly-defined inputs.
-* **Output** — it must produce at least one clearly-defined output (the answer to the problem).
-* **Effectiveness** — every step must be basic enough that it can actually be carried out.
-
-### "Order" vs "Precision" in an algorithm
-
-* **Order** refers to the **sequence** of the steps — they must be carried out in the correct order. Frying an egg before cracking the shell does not work.
-* **Precision** refers to **how exactly** each step is described — each step must be specific and unambiguous, so that the same algorithm produces the same result every time it is followed.
-
-## 4.2 The IPO Table
-
-An **IPO (Input – Processing – Output) table** is a planning tool used before writing code. It forces the programmer to think clearly about three things:
-
-* **Input** — what data the program needs from the user (or another source) to do its job.
-* **Processing** — what calculations or decisions must be performed on the input.
-* **Output** — what the program must show to the user as a result.
-
-**Example: Calculate the surface area of a sphere — formula 4 × π × r²**
+## 4.2 The IPO table
 
 | Input | Processing | Output |
 |---|---|---|
-| The radius (r) of the sphere | Surface area = 4 × π × r × r | The surface area of the sphere |
+| What the program needs from the user | The calculations and decisions | What is shown to the user |
 
-## 4.3 Pseudocode
+**Example:** a program calculates the cost of printing. Pages cost R1.50 each; orders of more than 100 pages get 5% off.
 
-**Pseudocode** is a way of writing out an algorithm using a mixture of plain English and basic programming-style keywords (`IF … THEN … ELSE`, `WHILE`, `INPUT`, `OUTPUT`). It is not real code — it cannot be run on a computer — but its structure makes it easy to translate later into any actual programming language.
+| Input | Processing | Output |
+|---|---|---|
+| Number of pages | cost = pages × 1.50; if pages > 100 then cost = cost − 5% of cost | The cost of the printing |
 
-**Example: Profit / Loss / Break-even calculator**
+Constants (like the price per page) are **not** inputs. The user does not type them in.
 
-A company makes a profit when income > expenses, a loss when income < expenses, and breaks even when income = expenses.
+## 4.3 Flowcharts and pseudocode
+
+| Flowchart symbol | Meaning |
+|---|---|
+| Oval | Start / End |
+| Parallelogram | Input or output |
+| Rectangle | Process (calculation or assignment) |
+| Diamond | Decision (Yes / No) |
+| Arrow | Direction of flow |
+
+**Pseudocode** describes an algorithm in structured, English-like statements:
 
 ```
-START
-    INPUT income
-    INPUT expenses
-    IF income > expenses THEN
-        OUTPUT "Profit"
-    ELSE IF income < expenses THEN
-        OUTPUT "Loss"
-    ELSE
-        OUTPUT "Break-even"
-    END IF
-END
+INPUT income, expenses
+IF income > expenses THEN
+    OUTPUT "Profit"
+ELSE IF income < expenses THEN
+    OUTPUT "Loss"
+ELSE
+    OUTPUT "Break-even"
+ENDIF
 ```
 
-The pseudocode above shows three of the most important programming concepts: **input** (getting data from the user), **selection** (the IF / ELSE structure that chooses between alternatives) and **output** (displaying results).
+## 4.4 Control structures
+
+| Structure | Meaning | Delphi |
+|---|---|---|
+| **Sequence** | Steps run one after the other | Statements in order |
+| **Selection** | Choose between paths based on a condition | `if … then … else`, `case` |
+| **Repetition (iteration)** | Repeat steps | `for`, `while`, `repeat … until` |
+
+### The three loops
+
+| Loop | Type | Condition tested | Runs at least once? | Use when |
+|---|---|---|---|---|
+| `for` | Fixed (counting) | — | Only if the range is valid | You know how many times to repeat |
+| `while … do` | **Pre-test** (conditional) | **Before** each repetition; loop continues **while** the condition is true | **No**, it may run zero times | You don't know how many times, and it may not need to run at all |
+| `repeat … until` | **Post-test** (conditional) | **After** each repetition; loop stops when the condition **becomes** true | **Yes**, always at least once | The steps must happen at least once, e.g. asking for input |
+
+## 4.5 Trace tables
+
+A **trace table** follows an algorithm step by step and records how each variable changes. Make one column per variable, one for each condition, and one for output. Work through the code one line at a time.
+
+```
+1  sum ← 0
+2  FOR k ← 1 TO 3
+3     INPUT num
+4     IF num MOD 2 = 0 THEN
+5        sum ← sum + num
+6     ENDIF
+7  ENDFOR
+8  OUTPUT sum
+```
+
+Trace with the inputs 4, 7, 10:
+
+| Line | k | num | num MOD 2 = 0 | sum | Output |
+|---|---|---|---|---|---|
+| 1 | | | | 0 | |
+| 2 | 1 | | | | |
+| 3 | | 4 | | | |
+| 4 | | | True | | |
+| 5 | | | | 4 | |
+| 2 | 2 | | | | |
+| 3 | | 7 | | | |
+| 4 | | | False | | |
+| 2 | 3 | | | | |
+| 3 | | 10 | | | |
+| 4 | | | True | | |
+| 5 | | | | 14 | |
+| 8 | | | | | 14 |
+
+**What does the algorithm do?** It adds up the even numbers that were entered. When asked for the purpose, describe it in words like this. Don't just repeat the code.
+
+## 4.6 Reading Delphi code — errors and output
+
+| Error type | When it shows | Example |
+|---|---|---|
+| **Syntax error** | The code breaks the rules of the language, so it **will not compile** | Missing semicolon, misspelt keyword, `=` instead of `:=`, assigning a String to a Real (type mismatch) |
+| **Runtime error** | The program compiles but **crashes while running** | `StrToInt('abc')`, dividing by zero |
+| **Logic error** | The program runs but gives the **wrong answer** | Using `+` instead of `*`, `>` instead of `>=`, wrong formula |
+
+**Converting between types** is needed because edit boxes hold text:
+
+| Function | Converts |
+|---|---|
+| `StrToInt` | String → Integer |
+| `StrToFloat` | String → Real |
+| `IntToStr` | Integer → String |
+| `FloatToStr` / `FloatToStrF` | Real → String (formatted) |
+
+**Integer operators:** `div` gives the whole-number part of a division and `mod` gives the remainder: `23 div 4 = 5` and `23 mod 4 = 3`.
+
+**Basic validation** prevents runtime errors and bad data: check that a box is not empty (presence check), that a number is within limits (range check), and that the text really is a number before converting it. Using a spin edit, combo box or radio group instead of an edit box also limits what the user can enter.
+
+📖 [Programming Concepts](../theory/programming/programming-concepts) · [Algorithms](../theory/programming/algorithms-theory) · [Debugging](../practical/delphi/debugging) · [Grade 10 Practical Notes](./Grade_10_IT_Practical_Notes)
+
+---
+
+# SECTION 5: SOCIAL IMPLICATIONS
+
+## 5.1 Copyright, licences and piracy
+
+- **Intellectual property** is something a person created with their mind: software, music, books, images, logos.
+- **Copyright** is the legal right of the creator to control how their work is copied and used. You need permission (or a licence) to use someone else's work. Finding it on the Internet does not make it free to use.
+- **Piracy** is illegally copying, sharing or using software, music, films or games.
+- **Plagiarism** is presenting someone else's work or ideas as your own. Always acknowledge your sources.
+- **Copyleft** is a type of licence that allows anyone to use, change and share a work, on condition that the new versions are shared under the same free terms.
+- **Creative Commons** licences let creators state exactly what others may do with their work (for example: use it with credit, but not for profit).
+
+## 5.2 The digital divide
+
+The **digital divide** is the gap between people who have access to computers, the Internet and digital skills, and people who do not. **Causes:** cost of devices and data, lack of electricity or network coverage (especially in rural areas), lack of skills, language and disability. **Effects:** fewer chances in education, work and access to services.
+
+## 5.3 Ergonomics and health
+
+**Ergonomics** is the study of designing equipment and workplaces to fit the user, so that they are comfortable and avoid injury.
+
+| Health risk | Prevention |
+|---|---|
+| **RSI** (repetitive strain injury) in the wrists and hands | Take regular breaks, use a wrist rest, keep wrists straight |
+| **Eye strain** and headaches | Look away from the screen every 20 minutes, reduce glare, adjust the brightness |
+| **Back and neck pain** | Adjustable chair, sit upright, top of the screen at eye level, feet flat on the floor |
+
+## 5.4 Green computing and e-waste
+
+**Green computing** means using computers in a way that limits harm to the environment.
+
+- **E-waste** is discarded electronic equipment. It contains toxic substances such as lead and mercury that pollute soil and water if it is dumped.
+- **Green practices:** recycle old equipment at an e-waste collection point or donate it; switch devices off or use sleep mode; buy energy-efficient devices; print less and print double-sided; refill or recycle ink cartridges.
+
+## 5.5 E-mail threats and safe Internet use
+
+| Threat | What it is |
+|---|---|
+| **Spam** | Unwanted bulk e-mail, usually advertising |
+| **Phishing** | A fake e-mail, message or website that pretends to be from a trusted organisation to trick you into giving personal information such as passwords or bank details |
+| **Social engineering** | Manipulating or tricking **people** (rather than hacking computers) into giving away confidential information or doing something that breaks security |
+| **Malware** | Malicious software (viruses, worms, Trojans, spyware, ransomware), often spread through attachments and downloads |
+| **Hoax** | A false warning or story that people are asked to forward |
+| **Identity theft** | Using someone's personal information to pretend to be them |
+
+**Signs of a phishing message:** a sense of urgency or a threat; a request for a password or bank details; a link or sender address that does not match the real organisation; a generic greeting ("Dear customer"); spelling and grammar mistakes.
+
+**Staying safe:**
+
+- **Strong passwords:** long (at least 8 to 12 characters), a mix of upper- and lowercase letters, digits and symbols, no personal information or dictionary words, and a different password for each account.
+- **Two-factor authentication (2FA):** after the password, a second proof is needed, such as a one-time PIN (OTP) sent to your phone. Someone who steals your password still cannot log in.
+- Do not open attachments or click links from unknown senders. Check the web address and look for `https`.
+- Keep antivirus software and the operating system up to date.
+- Be careful on public Wi-Fi, and think before you share personal information online.
+
+## 5.6 POPIA
+
+**POPIA** is the **Protection of Personal Information Act**. It protects people's personal information (name, ID number, contact details, photos). An organisation that collects personal information must:
+
+- collect only what it needs, for a clear purpose;
+- tell the person why it is collected and get **consent**;
+- keep it accurate and **secure** against unauthorised access;
+- not share or sell it without permission;
+- delete it when it is no longer needed.
+
+📖 [Copyright](../theory/social/copyright) · [Digital Divide](../theory/social/digital-divide) · [Environment and Society](../theory/social/environment-society) · [Cybercrime](../theory/social/cybercrime) · [Online Safety](../theory/social/online-safety) · [Privacy and Ethics](../theory/social/privacy-ethics)
+
+---
+
+# QUICK REFERENCE
+
+**Abbreviations to know in full**
+
+| | | | |
+|---|---|---|---|
+| CPU — Central Processing Unit | RAM — Random Access Memory | ROM — Read-Only Memory | HDD — Hard Disk Drive |
+| SSD — Solid State Drive | USB — Universal Serial Bus | OS — Operating System | GUI — Graphical User Interface |
+| PAN — Personal Area Network | HAN — Home Area Network | LAN — Local Area Network | WAN — Wide Area Network |
+| WLAN — Wireless LAN | NIC — Network Interface Card | ISP — Internet Service Provider | URL — Uniform Resource Locator |
+| WWW — World Wide Web | HTTP(S) — HyperText Transfer Protocol (Secure) | NFC — Near Field Communication | Bcc — Blind carbon copy |
+| ASCII — American Standard Code for Information Interchange | IPO — Input, Processing, Output | RSI — Repetitive Strain Injury | POPIA — Protection of Personal Information Act |
+| 2FA — Two-Factor Authentication | OTP — One-Time PIN | ICT — Information and Communication Technology | EULA — End-User Licence Agreement |
+
+**Pairs that are often confused**
+
+| | |
+|---|---|
+| RAM (volatile, working memory) | ROM (non-volatile, start-up instructions) |
+| Primary memory (in use now) | Secondary storage (kept permanently) |
+| System software (runs the computer) | Application software (does a task for the user) |
+| Freeware (free forever) | Shareware (free trial, then pay) |
+| Proprietary (closed source, paid) | Open source (source code available) |
+| Internet (the network) | WWW (a service on it) |
+| Web browser (software on your device) | Search engine (website that finds pages) |
+| Client-server (central control) | Peer-to-peer (all equal) |
+| Cc (addresses visible) | Bcc (addresses hidden) |
+| Data (raw facts) | Information (processed, meaningful) |
+| `while` (pre-test, may run 0 times) | `repeat` (post-test, runs at least once) |
+| Syntax error (won't compile) | Runtime error (crashes) / Logic error (wrong answer) |
+| Phishing (a fake message) | Social engineering (tricking people in general) |
+| Copyright (law protecting creators) | Piracy (breaking it by copying) |
+
+**Answering Paper 2 questions**
+
+- The mark allocation shows how many facts are needed: **(2) = two separate points**.
+- "Explain", "motivate" and "differentiate" need a reason or both sides, not one word.
+- Sections B to F are based on a scenario. Use the scenario in your answer.
+- Show all working in conversions and storage calculations. The working earns marks.
 
 ---
 

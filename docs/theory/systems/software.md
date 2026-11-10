@@ -3,7 +3,7 @@
 Hardware is useless without software to run on it. Software is the set of instructions — programs — that tell a computer what to do. Every program you use, from a browser to Delphi, is software.
 
 > [!NOTE] Grade 10+
-> The software classification system (System vs Application) is introduced in Grade 10. Operating system types and utility software extend into Grade 11.
+> The software classification system (System vs Application) is introduced in Grade 10. Utility programs are also Grade 10 work (Term 2). Operating system types, compilers and interpreters are Grade 11 work.
 
 ---
 

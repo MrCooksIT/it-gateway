@@ -162,15 +162,20 @@ A standard money display:
 sDisplay := FloatToStrF(rAmount, ffCurrency, 10, 2);
 ```
 
-The `10` is the total width (a safe value to use for almost any number); the `2` is the number of decimal places.
+The `10` is the total width (a safe value to use for almost any number); the `2` is the number of decimal places. The exact look of currency output (`R1 234,50` or `R1 234.50`) depends on the regional settings of the computer, so don't worry if your separator differs from an example.
+
+`FormatFloat` is an alternative that uses a pattern: `FormatFloat('0.00', rAmount)` always shows two decimals, and `FormatFloat('R #,##0.00', rAmount)` adds the R and a thousands separator.
 
 ## 3.3 Why conversion matters
 
-Trying to do arithmetic on the raw text from an edit box always fails:
+The `.Text` of an edit box is always a String. You cannot store it in a number variable or do arithmetic with it until you convert it:
 
 ```pascal
-// This DOES NOT WORK — sName.Text is a String:
-iTotal := edtNumberOne.Text + edtNumberTwo.Text;     // joins as strings: '5' + '3' = '53'!
+// This DOES NOT COMPILE — type mismatch (a String cannot be assigned to an Integer):
+iTotal := edtNumberOne.Text + edtNumberTwo.Text;
+
+// This compiles but is a LOGIC error — + joins strings: '5' + '3' = '53', not 8:
+sTotal := edtNumberOne.Text + edtNumberTwo.Text;
 
 // This works — convert first:
 iTotal := StrToInt(edtNumberOne.Text) + StrToInt(edtNumberTwo.Text);  // 5 + 3 = 8
@@ -266,9 +271,25 @@ lbl.Font.Style := [fsBold, fsItalic];       // both
 lbl.Font.Style := [];                       // plain — clear all styles
 ```
 
+**Panels:** a panel only shows the colour you assign if its `ParentBackground` property is `False`:
+
+```pascal
+pnlHeading.ParentBackground := False;
+pnlHeading.Color := clSkyBlue;
+```
+
+**Shapes:** a `TShape` (prefix `shp`) has no `.Color`. Its fill colour is `Brush.Color`:
+
+```pascal
+if iTemp > 30 then
+   shpStatus.Brush.Color := clRed
+else
+   shpStatus.Brush.Color := clLime;
+```
+
 ## 4.6 Useful built-in colour constants
 
-`clRed`, `clBlue`, `clGreen`, `clYellow`, `clBlack`, `clWhite`, `clGray`, `clAqua`, `clMaroon`, `clNavy`, `clOlive`, `clTeal`, `clPurple`, `clMoneyGreen`, `clSkyBlue`, `clWebLightSalmon`. Any of these can be assigned to `.Color` or `.Font.Color`.
+`clLime` (bright green), `clRed`, `clBlue`, `clGreen` (dark green), `clYellow`, `clBlack`, `clWhite`, `clGray`, `clAqua`, `clMaroon`, `clNavy`, `clOlive`, `clTeal`, `clPurple`, `clMoneyGreen`, `clSkyBlue`, `clWebLightSalmon`. Any of these can be assigned to `.Color` or `.Font.Color`.
 
 ## 4.7 Building multi-line output
 
@@ -293,6 +314,19 @@ Always clear an output area before writing fresh content:
 memReport.Lines.Clear;
 redOutput.Clear;
 ```
+
+## 4.8 Events — where your code runs
+
+Code runs when an **event** happens. Most code goes in a button's `OnClick` event, but a question can ask for code in a form event:
+
+| Event | Runs when | Typical use |
+|---|---|---|
+| `OnClick` (button) | The user clicks the button | Almost everything |
+| `OnCreate` (form) → `FormCreate` | The form is created, once, before it is visible | `Randomize`, starting values |
+| `OnShow` (form) → `FormShow` | The form is about to be displayed | Set captions, colours and fonts |
+| `OnActivate` (form) → `FormActivate` | The form becomes the active window | Set up or refresh the display |
+
+To create the event handler, select the form (or component), open the **Events** tab of the Object Inspector and double-click next to the event name. Never type the procedure heading yourself: Delphi must create it so that it is linked to the event.
 
 ---
 
@@ -329,6 +363,23 @@ To put an apostrophe inside a string, write it twice — `'Visitor''s name'` dis
 | `mod` | Remainder after integer division | `5 mod 2` | `1` |
 
 `/` always returns a real number, even when both inputs are whole numbers. `div` and `mod` only work on integers.
+
+**Using `div` and `mod` together** splits a whole number into parts:
+
+```pascal
+// 135 minutes = 2 hours and 15 minutes
+iHours   := iTotalMinutes div 60;      // 2
+iMinutes := iTotalMinutes mod 60;      // 15
+
+// Separate the digits of a three-digit number, e.g. 472
+iHundreds := iNum div 100;             // 4
+iTens     := (iNum div 10) mod 10;     // 7
+iUnits    := iNum mod 10;              // 2
+
+// Even or odd? Multiple of 5?
+if iNum mod 2 = 0 then ...             // even
+if iNum mod 3 = 0 then ...             // multiple of 3
+```
 
 ## 6.2 Comparison operators (return a Boolean)
 
@@ -384,7 +435,7 @@ These functions are essential for most calculation tasks. Functions marked **(Ma
 | `Abs(x)` | Absolute (positive) value | `Abs(-5)` → `5` |
 | `Sqr(x)` | x squared (x²) | `Sqr(5)` → `25` |
 | `Sqrt(x)` | square root of x | `Sqrt(25)` → `5` |
-| `Round(x)` | round to nearest integer | `Round(13.5)` → `14` |
+| `Round(x)` | round to nearest integer (exactly .5 goes to the nearest **even** number: `Round(12.5)` → `12`) | `Round(13.6)` → `14` |
 | `Trunc(x)` | chop off the decimal part | `Trunc(13.88)` → `13` |
 | `Frac(x)` | the decimal part only | `Frac(13.88)` → `0.88` |
 | `Int(x)` | the integer part as a Real | `Int(13.88)` → `13.0` |
@@ -393,7 +444,7 @@ These functions are essential for most calculation tasks. Functions marked **(Ma
 | `Power(x, y)` **(Math)** | x to the power y | `Power(2, 3)` → `8` |
 | `Floor(x)` **(Math)** | round down to nearest integer | `Floor(13.88)` → `13` |
 | `Ceil(x)` **(Math)** | round up to nearest integer | `Ceil(13.05)` → `14` |
-| `Pi` **(Math)** | the constant π ≈ 3.14159 | — |
+| `Pi` | the constant π ≈ 3.14159 (built in, no `Math` unit needed) | `Pi * Sqr(rRadius)` |
 
 ## 7.1 Difference between Trunc, Floor, Round and Ceil
 
@@ -471,6 +522,62 @@ A common pattern — the first letter capital, the rest unchanged:
 ```pascal
 sResult := UpCase(sName[1]) + Copy(sName, 2, Length(sName) - 1);
 ```
+
+## 8.5 String handling from first principles
+
+"From first principles" means you work through the string **one character at a time with a loop**, instead of letting a built-in function do the work. The pattern is always the same:
+
+```pascal
+for i := 1 to Length(sText) do
+   begin
+      // look at sText[i] and decide what to do with it
+   end;
+```
+
+**Count** characters that match a test:
+
+```pascal
+iVowels := 0;
+for i := 1 to Length(sText) do
+   if UpCase(sText[i]) in ['A', 'E', 'I', 'O', 'U'] then
+      Inc(iVowels);
+```
+
+**Build a new string** that leaves characters out (here: remove the spaces):
+
+```pascal
+sNew := '';
+for i := 1 to Length(sText) do
+   if sText[i] <> ' ' then
+      sNew := sNew + sText[i];
+```
+
+**Check that every character is allowed** (here: digits only) with a Boolean flag:
+
+```pascal
+bValid := True;
+for i := 1 to Length(sCell) do
+   if not (sCell[i] in ['0'..'9']) then
+      bValid := False;
+```
+
+**Replace** characters (here: every space becomes an underscore):
+
+```pascal
+for i := 1 to Length(sText) do
+   if sText[i] = ' ' then
+      sText[i] := '_';
+```
+
+**Reverse** a string by adding each character to the front:
+
+```pascal
+sReverse := '';
+for i := 1 to Length(sText) do
+   sReverse := sText[i] + sReverse;
+```
+
+Useful sets: `['A'..'Z']` capital letters, `['a'..'z']` lowercase letters, `['0'..'9']` digits. You can loop over part of a string too, e.g. `for i := 1 to 3 do` for the first three characters.
 
 ---
 
@@ -642,7 +749,45 @@ if iMark IN [0..100] then ...
 
 All three give the same result. Choose whichever reads most clearly for the situation.
 
-## 10.4 Pop-up dialogs
+## 10.4 Validation with a Boolean flag
+
+When there are several rules, assume the input is valid and switch a flag off as soon as a rule is broken. Give a message that tells the user what is wrong.
+
+```pascal
+bValid := True;
+sMessage := '';
+
+if Length(sUsername) < 5 then
+   begin
+      bValid := False;
+      sMessage := 'The username must have at least 5 characters';
+   end
+else if not (sUsername[1] in ['A'..'Z', 'a'..'z']) then
+   begin
+      bValid := False;
+      sMessage := 'The username must start with a letter';
+   end;
+
+if bValid then
+   lblResult.Caption := sUsername + ' is valid'
+else
+   lblResult.Caption := sUsername + ' is NOT valid: ' + sMessage;
+```
+
+**Selections:** check that the user chose something before you use it.
+
+```pascal
+if rgpSize.ItemIndex = -1 then
+   ShowMessage('Please select a size')
+else
+   case rgpSize.ItemIndex of
+      0 : rPrice := 20;
+      1 : rPrice := 27.50;
+      2 : rPrice := 35;
+   end;
+```
+
+## 10.5 Pop-up dialogs
 
 `ShowMessage(text)` displays a simple pop-up with an OK button.
 
@@ -654,7 +799,7 @@ All three give the same result. Choose whichever reads most clearly for the situ
 
 # SECTION 11: REPETITION — LOOPS
 
-Loops repeat a block of code multiple times. Grade 10 mostly uses the `for` loop; the other two kinds are covered in Grade 11.
+Loops repeat a block of code multiple times. Grade 10 uses **all three** loops: the `for` loop (fixed number of repetitions), the `while` loop (pre-test) and the `repeat…until` loop (post-test). All three are examinable in the November exam.
 
 ## 11.1 The for loop — when the count is known
 
@@ -711,31 +856,115 @@ When you don't know in advance how many times the loop must run, use a **conditi
 
 | Loop | Condition checked | Runs at least once? | Typical use |
 |---|---|---|---|
-| `while … do` | **Before** each repetition | No | Keep buying while there is enough money |
-| `repeat … until` | **After** each repetition | Yes | Keep asking for input until 0 is entered |
+| `while … do` | **Before** each repetition | No | Keep going while a target has not been reached |
+| `repeat … until` | **After** each repetition | Yes | Keep asking for input until it is acceptable |
 
 ```pascal
-// while: how many R7.50 items can you buy?
-iCount := 0;
-while rBudget >= 7.50 do
+// while: how many years until savings double at 8% interest per year?
+rTarget := rSavings * 2;
+iYears := 0;
+while rSavings < rTarget do
 begin
-  rBudget := rBudget - 7.50;
-  Inc(iCount);
+  rSavings := rSavings + rSavings * 0.08;
+  Inc(iYears);
 end;
 
-// repeat: capture amounts until 0 is entered
-rTotal := 0;
+// repeat: keep asking until a mark from 0 to 100 is entered
 repeat
-  rAmount := StrToFloat(InputBox('Sales', 'Amount (0 to stop):', '0'));
-  rTotal := rTotal + rAmount;
-until rAmount = 0;
+  iMark := StrToInt(InputBox('Mark', 'Enter a mark (0 to 100):', '0'));
+until (iMark >= 0) and (iMark <= 100);
 ```
 
 > The `while` condition says when to **keep going**; the `repeat` condition says when to **stop**. Make sure something inside the loop changes the condition, otherwise the loop never ends.
 
+**Sentinel loop:** keep reading values until a "stop" value is typed. Test the value before you use it, so that the stop value itself is not processed:
+
+```pascal
+iCount := 0;
+rTotal := 0;
+repeat
+  rValue := StrToFloat(InputBox('Rainfall', 'mm of rain (-1 to stop):', '-1'));
+  if rValue <> -1 then
+  begin
+    rTotal := rTotal + rValue;
+    Inc(iCount);
+  end;
+until rValue = -1;
+
+if iCount > 0 then
+  lblAverage.Caption := FloatToStrF(rTotal / iCount, ffFixed, 8, 1)
+else
+  lblAverage.Caption := 'No values entered';        // never divide by zero
+```
+
+## 11.4 Highest and lowest
+
+To find the highest value, start with a value lower than anything possible (or with the first value) and replace it whenever a bigger value arrives. For the lowest, do the opposite.
+
+```pascal
+rHighest := 0;                          // lower than any real mark
+rLowest  := 101;                        // higher than any real mark
+for i := 1 to 5 do
+begin
+  rMark := StrToFloat(InputBox('Marks', 'Enter mark ' + IntToStr(i), ''));
+  if rMark > rHighest then
+    rHighest := rMark;
+  if rMark < rLowest then
+    rLowest := rMark;
+end;
+```
+
+## 11.5 Building output line by line
+
+A loop can produce one line of output per repetition, for example a multiplication table:
+
+```pascal
+redOutput.Clear;
+for i := 1 to 12 do
+  redOutput.Lines.Add(IntToStr(i) + ' x ' + IntToStr(iNum) + ' = ' + IntToStr(i * iNum));
+```
+
+## 11.6 Random numbers in a loop
+
+```pascal
+// Randomize is called once, in FormCreate
+iSixes := 0;
+for i := 1 to 20 do
+begin
+  iDice := Random(6) + 1;               // 1 to 6
+  redOutput.Lines.Add(IntToStr(iDice));
+  if iDice = 6 then
+    Inc(iSixes);
+end;
+redOutput.Lines.Add('Number of sixes: ' + IntToStr(iSixes));
+```
+
 See [Loops — FOR, WHILE, REPEAT](../practical/delphi/loops), [Debugging and error types](../practical/delphi/debugging) and [the Timer component](../practical/delphi/timer).
 
-# SECTION 12: TRANSLATING A FLOW DIAGRAM INTO CODE
+---
+
+# SECTION 12: DEBUGGING — FINDING AND FIXING ERRORS
+
+A debugging question gives you code that already contains errors (often inside comment braces `{ }` that you must remove first). There are three kinds of error:
+
+| Error | What you see | Typical causes |
+|---|---|---|
+| **Syntax error** | The program will not compile. Delphi shows a red line and a message | Missing `;`, missing `end`, `=` instead of `:=`, misspelt name, a `;` before `else`, undeclared variable, type mismatch (e.g. putting `.Text` straight into a Real) |
+| **Runtime error** | The program compiles but crashes while it runs | `StrToInt` on text that is not a whole number, `StrToInt` where `StrToFloat` is needed for decimals, division by zero |
+| **Logic error** | The program runs but the answer is wrong | Wrong operator (`+` for `-`, `>` for `<`), values the wrong way round, wrong formula, missing brackets, wrong variable displayed |
+
+**How to work through it:**
+
+1. Remove the comment braces and compile. Fix the **syntax** errors first: double-click each message and read the line it points to *and the line above it* (a missing `;` is reported on the next line).
+2. Run the program with the example input from the question. If it crashes, look at the conversions.
+3. Compare your output with the example output. If it differs, check the formula, the operators and the condition, one at a time.
+4. Test the "other" path too (for example an input that should give the error message).
+
+📖 [Debugging and Error Types](../practical/delphi/debugging)
+
+---
+
+# SECTION 13: TRANSLATING A FLOW DIAGRAM INTO CODE
 
 A flow diagram is a visual way of describing an algorithm. Each shape becomes a different kind of Delphi statement:
 
@@ -755,9 +984,9 @@ Reading order: follow the arrows from START down to END. Every shape becomes a s
 
 ---
 
-# SECTION 13: IMAGES AND OTHER COMMON COMPONENT TASKS
+# SECTION 14: IMAGES AND OTHER COMMON COMPONENT TASKS
 
-## 13.1 Loading a picture from a file
+## 14.1 Loading a picture from a file
 
 ```pascal
 imgPhoto.Picture.LoadFromFile('filename.jpg');
@@ -765,7 +994,7 @@ imgPhoto.Picture.LoadFromFile('filename.jpg');
 
 If only a filename is given (no path), Delphi looks for the file in the **same folder as the running program** (`.exe`). For files in another folder, give the full path.
 
-## 13.2 Building a filename from variables
+## 14.2 Building a filename from variables
 
 A common pattern: pick a number, build a matching filename, then load it.
 
@@ -775,7 +1004,7 @@ sFile  := 'picture' + IntToStr(iIndex) + '.jpg';          // 'picture3.jpg'
 imgPhoto.Picture.LoadFromFile(sFile);
 ```
 
-## 13.3 Synchronising components
+## 14.3 Synchronising components
 
 Setting one component's value to match another:
 
@@ -784,7 +1013,7 @@ cmbChoice.ItemIndex := iSelected;             // highlight the matching combobox
 lblChosen.Caption := cmbChoice.Items[iSelected];   // show the chosen text
 ```
 
-## 13.4 Enabling and disabling buttons
+## 14.4 Enabling and disabling buttons
 
 Useful when a button should only become active after another step has run:
 
@@ -863,7 +1092,7 @@ end;
 | `Application.Terminate;` | Close the program |
 | `Exit;` | Leave this procedure only |
 
-## F. Math functions (uses Math)
+## F. Math functions (Power, Floor, Ceil and RandomRange need `uses Math`)
 
 | Function | Result for example |
 |---|---|
@@ -923,7 +1152,7 @@ end;
 if cCh IN ['0'..'9'] then ...
 ```
 
-## I. The for loop
+## I. Loops
 
 ```pascal
 for iCount := 1 to 10 do
@@ -937,6 +1166,18 @@ for iCount := 1 to 10 do
       <stmt>;
       <stmt>;
    end;
+
+// while: test BEFORE, may run zero times, continues while the condition is True
+while <cond> do
+   begin
+      <stmt>;
+   end;
+
+// repeat: test AFTER, runs at least once, stops when the condition is True
+repeat
+   <stmt>;
+   <stmt>;
+until <cond>;
 ```
 
 ## J. Common formatting characters
@@ -951,7 +1192,7 @@ for iCount := 1 to 10 do
 
 * Add your name and surname as a comment in every `.pas` file.
 * Use the variable and component names exactly as given.
-* Add `Math` to the `uses` clause when using `Power`, `Floor`, `Ceil`, `Pi`, `RandomRange`.
+* Add `Math` to the `uses` clause when using `Power`, `Floor`, `Ceil`, `RandomRange`. (`Pi`, `Sqr`, `Sqrt`, `Round`, `Trunc` and `Random` need no extra unit.)
 * Clear an output area before adding new content (`memo.Lines.Clear`).
 * Format real numbers with `FloatToStrF` — never let raw scientific notation reach the screen.
 * Use the constants given by the question, never hard-code their values.

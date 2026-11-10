@@ -3,7 +3,7 @@
 Delphi comes with built-in mathematical functions you can call without writing them yourself. These are **predefined methods** and are heavily tested in Paper 1.
 
 > [!NOTE] Grade 10+
-> Basic math methods (Round, Trunc, Sqrt, Random) introduced in Grade 10. Ceil, Floor, Power, RandomRange need the **Math unit** — extended in Grade 11.
+> All the methods on this page are used from Grade 10. `Ceil`, `Floor`, `Power` and `RandomRange` need the **Math unit** in the `uses` clause; `Round`, `Trunc`, `Sqr`, `Sqrt`, `Random` and `Pi` do not.
 
 ---
 

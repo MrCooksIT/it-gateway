@@ -2,8 +2,8 @@
 
 A 1D array is a list. A **2D array** is a table — it has rows and columns. Think of a spreadsheet, a seating plan, a grid of pixels, or a mark book: rows for students, columns for subjects.
 
-> [!NOTE] Grade 11+
-> 2D arrays are introduced in Grade 11 and appear in Paper 1. They are always processed with nested loops.
+> [!NOTE] Grade 12
+> 2D arrays are Grade 12 work (Term 2) and appear in the Grade 12 Paper 1. They are not examined in Grade 10 or 11. They are always processed with nested loops.
 
 ---
 

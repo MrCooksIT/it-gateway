@@ -98,7 +98,7 @@ The connection code and a `Restore DB` button are given. **No SQL**: everything 
 - [ ] **Compilers vs interpreters**; high-level vs low-level languages
 - [ ] **Virtualisation** and virtual machines
 
-📖 [Computer Performance](../theory/systems/performance) · [Cloud & Virtualisation](../theory/systems/cloud-virtualisation) · [OS & File Management](../theory/systems/os-management) · [Software](../theory/systems/software)
+📖 [Hardware (motherboard, cache, BIOS)](../theory/systems/hardware) · [Programming Concepts (compilers vs interpreters)](../theory/programming/programming-concepts) · [Computer Performance](../theory/systems/performance) · [Cloud & Virtualisation](../theory/systems/cloud-virtualisation) · [OS & File Management](../theory/systems/os-management) · [Software](../theory/systems/software)
 
 ### Section C: Communication and Network Technologies
 - [ ] Network types, topologies and hardware (switch, router, access point, NIC, modem)
@@ -109,7 +109,7 @@ The connection code and a `Restore DB` button are given. **No SQL**: everything 
 - [ ] **Internet and WWW (Term 4):** evolution of the Internet, multimedia and **streaming**, types of websites, Internet services, **security services** (SSL/TLS, digital certificates, HTTPS)
 - [ ] **Threats and remedies:** malware (virus, worm, Trojan, ransomware, spyware), phishing, DoS; firewalls, antivirus, backups, updates, encryption, MFA
 
-📖 [Wireless](../theory/networks/wireless) · [Protocols](../theory/networks/protocols) · [Network Security](../theory/networks/network-security) · [Internet Services](../theory/internet/internet-services) · [Multimedia](../theory/internet/multimedia)
+📖 [Network Concepts (intranet, extranet)](../theory/networks/network-concepts) · [Mobile Technology (location-based computing)](../theory/systems/mobile-tech) · [Web Evolution](../theory/internet/web-evolution) · [Online Services (types of websites)](../theory/internet/online-services) · [Cybercrime (malware)](../theory/social/cybercrime) · [Wireless](../theory/networks/wireless) · [Protocols](../theory/networks/protocols) · [Network Security](../theory/networks/network-security) · [Internet Services](../theory/internet/internet-services) · [Multimedia](../theory/internet/multimedia)
 
 ### Section D: Data and Information Management
 - [ ] **DBMS:** what it is, examples (open source and commercial), **desktop vs server** databases
@@ -132,7 +132,7 @@ The connection code and a `Restore DB` button are given. **No SQL**: everything 
 - [ ] Modify pseudocode / algorithms; choose suitable control structures
 - [ ] **User-centred design** principles for a GUI; software development phases
 
-📖 [Algorithms (Theory)](../theory/programming/algorithms-theory) · [Software Engineering](../theory/programming/software-engineering) · [Debugging](../practical/delphi/debugging)
+📖 [1D Arrays (searching and sorting)](../practical/delphi/arrays-1d) · [Text Files](../practical/delphi/text-files) · [Procedures & Functions (parameters)](../practical/delphi/procedures-functions) · [Algorithms (Theory)](../theory/programming/algorithms-theory) · [Software Engineering](../theory/programming/software-engineering) · [Debugging](../practical/delphi/debugging)
 
 ### Section F: Integrated scenario
 Any Grade 11 topic can appear, with the emphasis on **Term 4** content and social implications:

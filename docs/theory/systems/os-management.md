@@ -3,7 +3,7 @@
 The operating system doesn't just provide a desktop — it is constantly working behind the scenes managing files, memory, processes, and devices. Understanding what an OS manages is core Paper 2 content.
 
 > [!NOTE] Grade 10+
-> OS management functions are introduced in Grade 10. File management, backup, and compression are key Gr10 topics. Virtualisation links to Grade 12.
+> OS management functions are introduced in Grade 10. File management, backup, and compression are key Gr10 topics. Virtual memory and virtualisation are Grade 11 work (Term 1) and return in Grade 12.
 
 ---
 

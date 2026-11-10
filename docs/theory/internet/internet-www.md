@@ -121,6 +121,20 @@ A **web browser** is the application that retrieves and displays web content:
 - Interprets HTML, CSS, JavaScript
 - Communicates using HTTP/HTTPS
 
+### Search Engine
+
+A **search engine** is a website or service that finds web pages matching the keywords you type:
+- Google, Bing, DuckDuckGo
+- It searches its own index of the web and returns a ranked list of links
+
+| | Web browser | Search engine |
+|---|---|---|
+| What it is | **Software installed on your device** | A **website/service** on the Internet |
+| What it does | Displays web pages | Finds web pages that match keywords |
+| Examples | Chrome, Edge, Firefox, Safari | Google, Bing |
+
+You open a search engine *in* a browser. Chrome is a browser; Google Search is a search engine.
+
 ### Web Server
 
 A **web server** is a computer that stores and serves web pages:
