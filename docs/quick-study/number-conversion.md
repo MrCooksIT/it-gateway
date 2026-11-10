@@ -11,15 +11,15 @@ Fast-scan guide for binary, decimal, and hexadecimal conversions. Steps only —
 **Repeated division by 2. Read remainders bottom to top.**
 
 ```
-45 ÷ 2 = 22 r 1
-22 ÷ 2 = 11 r 0
-11 ÷ 2 =  5 r 1
- 5 ÷ 2 =  2 r 1
- 2 ÷ 2 =  1 r 0
+53 ÷ 2 = 26 r 1
+26 ÷ 2 = 13 r 0
+13 ÷ 2 =  6 r 1
+ 6 ÷ 2 =  3 r 0
+ 3 ÷ 2 =  1 r 1
  1 ÷ 2 =  0 r 1  ← start reading here
 
-Result: 101101  (read bottom to top)
-Verify: 32+8+4+1 = 45 ✓
+Result: 110101  (read bottom to top)
+Verify: 32+16+4+1 = 53 ✓
 ```
 
 ---
@@ -57,9 +57,9 @@ Verify: 15×16 + 15 = 255 ✓
 
 ```
 2B16:
-B = 11 →  11 × 16 = 176
-2      →   2 ×  1 =   2
-               Total = 178
+2      →   2 × 16 =  32
+B = 11 →  11 ×  1 =  11
+               Total =  43
 ```
 
 Place values: 16⁰=1, 16¹=16, 16²=256, 16³=4096

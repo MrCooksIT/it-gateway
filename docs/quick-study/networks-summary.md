@@ -54,7 +54,7 @@ No prose. Tables and key facts only.
 | Hub | Like switch but broadcasts to ALL (less efficient) |
 | Router | Connects DIFFERENT networks; assigns IP (DHCP) |
 | Modem | Converts digital ↔ analogue for phone line |
-| WAP | Wireless Access Point — extends Wi-Fi coverage |
+| WAP | Wireless Access Point — connects wireless devices to a wired network |
 | Firewall | Filters network traffic for security |
 | Repeater | Extends signal distance |
 

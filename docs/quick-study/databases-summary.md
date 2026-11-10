@@ -114,12 +114,12 @@ GROUP BY Grade
 HAVING AVG(Mark) > 60
 ```
 
-### Join
+### Two tables (WHERE method)
 ```sql
-SELECT s.Surname, m.Mark
-FROM Students AS s
-INNER JOIN Marks AS m ON s.StudentID = m.StudentID
-WHERE m.Mark >= 50
+SELECT Students.Surname, Marks.Mark
+FROM Students, Marks
+WHERE Students.StudentID = Marks.StudentID
+AND Marks.Mark >= 50
 ```
 
 ### Modifying data
@@ -136,7 +136,7 @@ DELETE FROM Table WHERE Mark IS NULL
 - String values need `'quotes'`; numbers don't
 - `HAVING` filters groups (after GROUP BY); `WHERE` filters rows (before)
 - `IS NULL` not `= NULL`
-- JOIN condition: `ON t1.PK = t2.FK`
+- Two tables: link them in WHERE with `t1.PK = t2.FK`, then add other conditions with AND
 - Clause order is mandatory — wrong order = syntax error
 
 ---
