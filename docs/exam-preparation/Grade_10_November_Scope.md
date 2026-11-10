@@ -101,7 +101,7 @@ Sections B–F are each based on a **scenario**. Always relate your answer to th
 - [ ] E-communication and **e-mail best practices** (To / Cc / Bcc, subject lines, attachments, netiquette)
 - [ ] Internet vs WWW; browsers vs search engines; **parts of a URL**; ISPs; Internet services
 
-📖 [Network Concepts](../theory/networks/network-concepts) · [Types of Networks](../theory/networks/network-types) · [E-Communication](../theory/networks/e-communication) · [Internet & WWW](../theory/internet/internet-www)
+📖 [Network Concepts](../theory/networks/network-concepts) · [Network Hardware (components and media)](../theory/networks/network-hardware) · [Types of Networks](../theory/networks/network-types) · [E-Communication](../theory/networks/e-communication) · [Internet & WWW](../theory/internet/internet-www)
 
 ### Section D: Data and Information Management
 - [ ] **Data vs information vs knowledge**, with examples from a scenario
@@ -132,7 +132,7 @@ Sections B–F are each based on a **scenario**. Always relate your answer to th
 - [ ] **Green computing** and e-waste
 - [ ] The **digital divide**; advantages and disadvantages of using computers
 
-📖 [Cybercrime](../theory/social/cybercrime) · [Copyright](../theory/social/copyright) · [Online Safety](../theory/social/online-safety) · [Environment & Society](../theory/social/environment-society) · [Digital Divide](../theory/social/digital-divide)
+📖 [Privacy & Ethics (POPIA)](../theory/social/privacy-ethics) · [Cybercrime](../theory/social/cybercrime) · [Copyright](../theory/social/copyright) · [Online Safety](../theory/social/online-safety) · [Environment & Society](../theory/social/environment-society) · [Digital Divide](../theory/social/digital-divide)
 
 ---
 

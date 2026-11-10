@@ -69,8 +69,8 @@ export default withMermaid(defineConfig({
               { text: 'Overview', link: '/practical/algorithms/' },
               { text: 'Sequential Algorithms', link: '/practical/algorithms/sequential', badge: { type: 'tip', text: 'Gr 10' } },
               { text: 'Decision Algorithms', link: '/practical/algorithms/decision', badge: { type: 'tip', text: 'Gr 10' } },
-              { text: 'Repetition Algorithms', link: '/practical/algorithms/repetition', badge: { type: 'info', text: 'Gr 11' } },
-              { text: 'Classic Problems', link: '/practical/algorithms/classic-problems', badge: { type: 'info', text: 'Gr 11' } },
+              { text: 'Repetition Algorithms', link: '/practical/algorithms/repetition', badge: { type: 'tip', text: 'Gr 10' } },
+              { text: 'Classic Problems', link: '/practical/algorithms/classic-problems', badge: { type: 'tip', text: 'Gr 10' } },
             ],
           },
 

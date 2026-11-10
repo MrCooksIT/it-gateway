@@ -105,6 +105,32 @@ ICT uses enormous amounts of electricity:
 
 ---
 
+## Ergonomics and Health
+
+> [!NOTE] Grade 10
+> Ergonomics, health and green computing are Grade 10 work (Term 2) and are often asked in the integrated scenario (Section F).
+
+**Ergonomics** is the study of designing equipment and workplaces to fit the user, so that people can work comfortably and without injury.
+
+| Health risk | Cause | Ergonomic prevention |
+|---|---|---|
+| **RSI** (repetitive strain injury) | Repeating the same small movements, e.g. typing and clicking for hours | Take regular breaks; keep wrists straight; use a wrist rest or an ergonomic keyboard and mouse |
+| **Eye strain and headaches** | Staring at a screen for long periods; glare; poor lighting | Look away every 20 minutes; adjust brightness; position the screen to avoid glare |
+| **Back and neck pain** | Poor posture; screen too low or too high | Adjustable chair with back support; sit upright; top of the screen at eye level; feet flat on the floor |
+| **Poor circulation, weight gain** | Sitting still for long periods | Stand up, stretch and walk around regularly |
+
+### Green computing
+
+**Green computing** means using and disposing of computers in a way that limits harm to the environment:
+
+- Switch devices off, or use sleep mode, when they are not in use
+- Buy energy-efficient devices
+- Print less, print on both sides, and refill or recycle ink cartridges
+- Repair or upgrade a device before replacing it
+- Donate working equipment and recycle the rest at an e-waste collection point
+
+---
+
 ## ICT and Society
 
 ### AI and Automation

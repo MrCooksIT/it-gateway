@@ -2,8 +2,8 @@
 
 This page is the practical guide to implementing classes in Delphi. If you need the theory (what OOP is, why we use it), see the [OOP Principles](/theory/programming/oop-principles) page. Here we focus on the exact Delphi syntax used in Paper 1.
 
-> [!NOTE] Grade 11+
-> OOP implementation in Delphi is introduced in Grade 11. Grade 12 extends with destructors, more complex class designs, and arrays of objects.
+> [!NOTE] Grade 12
+> Object-oriented programming is Grade 12 work (Term 1): classes, constructors, accessor and mutator methods, `ToString` and arrays of objects. It is not examined in Grade 10 or 11.
 
 ---
 

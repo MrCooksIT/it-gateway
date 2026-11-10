@@ -3,7 +3,7 @@
 Not all networks are the same size. The network in your bedroom connecting your phone to your laptop is nothing like the network connecting offices across continents. Networks are classified by their geographic scope, ownership, and purpose.
 
 > [!NOTE] Grade 10–11
-> Network types (PAN, LAN, WAN) are introduced at Grade 10. Grade 11 adds MAN, HAN, and more detailed comparisons.
+> PAN, HAN, LAN/WLAN and WAN are all Grade 10 work (Term 2). Grade 11 adds more detailed comparisons and wireless technologies.
 
 ---
 

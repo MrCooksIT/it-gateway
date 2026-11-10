@@ -444,16 +444,74 @@ Form1.Caption := 'IT Gateway — Student App';
 Form1.Color := clWhite;
 ```
 
-**Key event:** `OnCreate` — runs when the form first loads
+**Form events:** a question can ask for code in a form event instead of a button.
+
+| Event | Handler | Runs when | Typical use |
+|---|---|---|---|
+| `OnCreate` | `FormCreate` | The form is created, once, before it is visible | `Randomize`, starting values |
+| `OnShow` | `FormShow` | The form is about to be displayed | Set captions, colours and fonts; `SetFocus` |
+| `OnActivate` | `FormActivate` | The form becomes the active window | Set up or refresh the display |
+
+Create the handler by double-clicking next to the event name on the **Events** tab of the Object Inspector. Don't type the heading yourself.
 
 ```pascal
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  Randomize;              // seed random number generator
-  edtName.SetFocus;       // focus first input
+  Randomize;               // seed random number generator
   lblStatus.Caption := ''; // clear any default caption
 end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  edtName.SetFocus;        // SetFocus only works once the form is visible
+end;
 ```
+
+---
+
+## TPanel
+
+A panel displays text in its `Caption` and is often used for headings and results.
+
+```pascal
+pnlHeading.Caption := 'Results';
+pnlHeading.ParentBackground := False;    // needed, or the colour does not show
+pnlHeading.Color := clSkyBlue;
+pnlHeading.Font.Size := 14;
+pnlHeading.Font.Color := clNavy;
+pnlHeading.Font.Style := [fsBold, fsItalic];
+```
+
+> [!WARNING] Colour not showing?
+> A panel ignores `Color` while `ParentBackground` is `True`. Set it to `False` first.
+
+---
+
+## TShape
+
+A shape (`shp`) is a rectangle, circle or ellipse used as a visual indicator. It has no `Color` property. The fill colour is `Brush.Color`.
+
+```pascal
+if iStock = 0 then
+  shpStatus.Brush.Color := clRed
+else if iStock < 20 then
+  shpStatus.Brush.Color := clYellow
+else
+  shpStatus.Brush.Color := clLime;      // clLime is bright green; clGreen is dark green
+```
+
+---
+
+## Formatting numbers for output
+
+| Code | Result for `1234.5` |
+|---|---|
+| `FloatToStrF(r, ffFixed, 8, 2)` | `1234.50` |
+| `FloatToStrF(r, ffCurrency, 8, 2)` | `R1 234.50` |
+| `FormatFloat('0.00', r)` | `1234.50` |
+| `FormatFloat('#,##0.00', r)` | `1 234.50` |
+
+The decimal and thousands separators follow the regional settings of the computer.
 
 ---
 

@@ -2,8 +2,8 @@
 
 As programs grow, repeating the same code in multiple places becomes a maintenance problem. **Procedures** and **functions** let you write code once, name it, and call it wherever needed.
 
-> [!NOTE] Grade 10+
-> User-defined procedures and functions are introduced in Grade 10 and are extended in Grade 11 with parameter passing. Both value parameters and variable (reference) parameters are examined.
+> [!NOTE] Grade 11+
+> User-defined procedures and functions, with and without parameters, are Grade 11 work (Term 2). In Grade 10 you only write code inside event handlers. Both value parameters and variable (reference) parameters are examined.
 
 ---
 

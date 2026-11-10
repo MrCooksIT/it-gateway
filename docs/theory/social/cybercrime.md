@@ -2,8 +2,8 @@
 
 As more of our lives move online — banking, shopping, communication, health records — the potential for harm grows with it. Cybercrime costs the global economy trillions of rands annually. Understanding the threats, how they work, and how to protect against them is core Paper 2 content.
 
-> [!NOTE] Grade 11+
-> Cybercrime types, prevention, and legislation are extended in Grade 11. Network security (encryption, SSL) is a Grade 12 focus.
+> [!NOTE] Grade 10+
+> Phishing, spam, social engineering, passwords and safe Internet use are Grade 10 work (Term 3). Cybercrime types, prevention, and legislation are extended in Grade 11. Network security (encryption, SSL) is a Grade 12 focus.
 
 ---
 

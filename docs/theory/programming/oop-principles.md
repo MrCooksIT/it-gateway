@@ -2,8 +2,8 @@
 
 Procedural programming — writing one procedure after another — works for small programs. As programs grow, it becomes unmanageable. Object-Oriented Programming (OOP) organises code around **objects** that model real-world entities, making large programs easier to design, maintain, and extend.
 
-> [!NOTE] Grade 11+
-> OOP concepts are introduced theoretically in Grade 11 and implemented in Delphi (practical). Grade 12 extends with destructors, accessors/mutators, and more complex class design.
+> [!NOTE] Grade 12
+> OOP concepts and their implementation in Delphi are Grade 12 work (Term 1). They are not examined in Grade 10 or 11.
 
 ---
 

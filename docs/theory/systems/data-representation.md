@@ -3,7 +3,7 @@
 Inside a computer, everything is stored as binary — sequences of 0s and 1s. Letters, images, sounds, and instructions are all represented this way. Understanding how data is encoded into binary is fundamental to understanding how computers work.
 
 > [!NOTE] Grade 10+
-> Binary and ASCII are introduced in Grade 10. Hexadecimal and Unicode extend into Grade 11. Number conversions are examined in both Paper 1 and Paper 2.
+> Binary, hexadecimal, ASCII and Unicode are all Grade 10 work (Term 1) and are revised in Grade 11 and 12. Number conversions are examined in both Paper 1 and Paper 2.
 
 ---
 
