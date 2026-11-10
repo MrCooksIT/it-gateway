@@ -121,7 +121,7 @@ end;
 ### Procedure with parameters
 
 ```pascal
-procedure DisplayLine(sText : String);
+procedure TForm1.DisplayLine(sText : String);   // a method of the form, so it can use redOutput
 begin
   redOutput.Lines.Add(sText);
 end;
@@ -205,12 +205,12 @@ lblMax.Caption := 'Highest: ' + IntToStr(Maximum(iA, iB));
 A **copy** of the value is passed. The original variable is **not changed**.
 
 ```pascal
-procedure Double(iNum : Integer);
+procedure DoubleIt(iNum : Integer);
 begin
   iNum := iNum * 2;   // only changes the local copy
 end;
 
-// After calling Double(iX), iX is UNCHANGED
+// After calling DoubleIt(iX), iX is UNCHANGED
 ```
 
 ### Variable Parameters (VAR) — Pass by Reference
@@ -218,12 +218,12 @@ end;
 The **actual variable** is passed — changes inside the procedure affect the original.
 
 ```pascal
-procedure Double(var iNum : Integer);
+procedure DoubleIt(var iNum : Integer);
 begin
   iNum := iNum * 2;   // changes the original variable
 end;
 
-// After calling Double(iX), iX IS now doubled
+// After calling DoubleIt(iX), iX IS now doubled
 ```
 
 > [!WARNING] VAR Keyword Is Critical
@@ -401,8 +401,8 @@ end;
 > 1. **Forgetting `Result :=`** — function returns garbage/zero if you forget to assign Result
 > 2. **Missing `var` keyword** for reference parameter — changes won't affect the original
 > 3. **Calling a function as a statement** — `CalculateVAT(rPrice);` discards the return value; assign it: `rVAT := CalculateVAT(rPrice);`
-> 4. **Not declaring in the `private` section** — compiler error "Unknown identifier" when calling from an event handler
-> 5. **Local variable same name as parameter** — shadowing can cause hard-to-find bugs; use distinct names
+> 4. **Not declaring in the `private` section** — compiler error "Undeclared identifier" when calling from an event handler
+> 5. **Local variable with the same name as a parameter** — not allowed; Delphi reports "Identifier redeclared". Use distinct names
 
 ---
 

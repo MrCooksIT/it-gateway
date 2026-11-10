@@ -2,8 +2,8 @@
 
 In the Grade 12 exam you connect a Delphi application to a Microsoft Access database and use code to query, display, and update data. All SQL runs as a text string assigned to a query component's `SQL.Text` property, then executed with either `Open` (SELECT) or `ExecSQL` (INSERT, UPDATE, DELETE).
 
-> [!NOTE] Grade 11–12
-> Database integration with Delphi is a Grade 12 CAPS topic. You must be able to set up the ADO components, write dynamic SQL strings, loop through results, and perform all four CRUD operations.
+> [!NOTE] Grade 12
+> Using SQL from Delphi is Grade 12 work. For Grade 11 (TADOTable, no SQL) see [Database Programming with TADOTable](../delphi/database-navigation). You must be able to set up the ADO components, write dynamic SQL strings, loop through results, and perform all four CRUD operations.
 
 ---
 
@@ -67,7 +67,7 @@ flowchart TD
 
 ## Running a SELECT Query
 
-Use `Open` to run any SELECT statement. If the query is already open, close it first or you will get a runtime error.
+Use `Open` to run any SELECT statement. If the query is already open, close it first.
 
 ```pascal
 // First time — query is not yet open
@@ -82,8 +82,8 @@ qryActivity.SQL.Text := 'SELECT * FROM tblActivity WHERE CompanyID = ' + QuotedS
 qryActivity.Open;
 ```
 
-> [!WARNING] Always close before changing SQL.Text
-> Setting `SQL.Text` on an open query causes a runtime error. Calling `Close` on a query that is already closed is safe — it does nothing.
+> [!WARNING] Close before changing SQL.Text
+> Get into the habit of calling `Close` before you give a query new SQL. Calling `Close` on a query that is already closed is safe — it does nothing.
 
 ---
 
@@ -99,7 +99,7 @@ iTickets := qryActivity['TicketsSold'];
 rCost    := qryActivity['RentingCost'];
 ```
 
-No type conversion is needed when assigning to a `String` variable or populating a `ComboBox`. The bracket syntax returns the raw field value.
+No type conversion is needed when assigning a text field to a `String` variable or adding it to a `ComboBox`. A **number** field must be converted (`IntToStr`, `FloatToStrF`) before you join it to text, otherwise the program crashes with a conversion error.
 
 ### FieldByName (also valid)
 
@@ -153,7 +153,8 @@ lstOutput.Clear;
 qryActivity.First;
 while not qryActivity.Eof do
 begin
-  lstOutput.Items.Add(qryActivity['ActivityName'] + ' — R' + qryActivity['TicketCost']);
+  lstOutput.Items.Add(qryActivity['ActivityName'] + ' — R' +
+    FloatToStrF(qryActivity['TicketCost'], ffFixed, 8, 2));   // convert the number first
   qryActivity.Next;
 end;
 ```
@@ -204,7 +205,7 @@ qryActivity.SQL.Text := 'SELECT * FROM tblActivity WHERE AgeRestriction = ' + Bo
 > - **String** → `"value"` or `QuotedStr(value)` — double quotes inside the SQL string, or use `QuotedStr`
 > - **Number** → no quotes — just concatenate the digits
 > - **Date** → `#date#` — hash symbols, not quotes
-> - **Boolean** → no quotes — `True` or `False` as a bare word
+> - **Boolean** → no quotes — `BoolToStr` gives `-1` (True) or `0` (False), which Access accepts; you may also type `True` or `False` as a bare word
 
 ---
 
@@ -289,12 +290,12 @@ lblTotal.Caption := 'Total tickets sold: ' + IntToStr(qryActivity['GrandTotal'])
 
 | Mistake | What goes wrong | Fix |
 |---|---|---|
-| Setting `SQL.Text` without calling `Close` first | Runtime error — cannot change SQL on an open query | Always call `qry.Close` before changing `SQL.Text` |
+| Joining a number field straight onto text (`'R' + qry['Cost']`) | Runtime error — the text cannot be converted to a number | Convert first: `'R' + FloatToStrF(qry['Cost'], ffFixed, 8, 2)` |
 | Using `Open` for INSERT, UPDATE, or DELETE | Runtime error — these statements return no result set | Use `qry.ExecSQL` for all non-SELECT statements |
 | Using `ExecSQL` for SELECT | No records are loaded — the grid stays empty | Use `qry.Open` for SELECT statements |
 | Forgetting `qry.Next` inside the while loop | Infinite loop — the program freezes | `qry.Next` must be the last line inside the `while not qry.Eof` block |
 | Putting string values without quotes in the SQL string | Access rejects the query with a syntax error | Wrap strings in `"..."` or use `QuotedStr()` |
-| Using `'` (single quotes) around string values inside the SQL | Access SQL uses `"` for string delimiters, not `'` | Use double quotes inside the SQL string, or use `QuotedStr` (which adds single quotes Delphi-side but the result is compatible) |
+| The user's text contains a quote mark (e.g. O'Brien) and the quotes were added by hand | The SQL string breaks — syntax error | Use `QuotedStr`, which handles this for you |
 
 ---
 
@@ -314,7 +315,7 @@ lblTotal.Caption := 'Total tickets sold: ' + IntToStr(qryActivity['GrandTotal'])
 | `Eof` | Property — `True` when the current position is past the last record |
 | `FieldByName` | Method — returns a field object by name; use `.AsString`, `.AsInteger`, `.AsFloat` |
 | `QuotedStr` | Delphi function — wraps a string in single quotes for safe SQL embedding |
-| `BoolToStr` | Delphi function — converts a Boolean to `'True'` or `'False'` |
+| `BoolToStr` | Delphi function — converts a Boolean to `'-1'` (True) or `'0'` (False); `BoolToStr(b, True)` gives `'True'` or `'False'` |
 | `DateToStr` | Delphi function — converts a `TDate` to a string for use in SQL |
 
 ---
@@ -347,7 +348,8 @@ lstActivity.Clear;
 qryActivity.First;
 while not qryActivity.Eof do
 begin
-  lstActivity.Items.Add(qryActivity['ActivityName'] + ' — R' + qryActivity['TicketCost']);
+  lstActivity.Items.Add(qryActivity['ActivityName'] + ' — R' +
+    FloatToStrF(qryActivity['TicketCost'], ffFixed, 8, 2));
   qryActivity.Next;
 end;
 ```

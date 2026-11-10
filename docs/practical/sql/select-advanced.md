@@ -116,7 +116,7 @@ WHERE LEN(Surname) = 5
 | Function | Description | Example | Result |
 |---|---|---|---|
 | `Format(F, "Currency")` | Displays a number as Rand currency | `Format(121.2323, "Currency")` | `R 121.23` |
-| `Date()` | Returns the current system date | `Round((Date() - DOB) / 365.25)` | Age in years |
+| `Date()` | Returns the current system date | `Int((Date() - DOB) / 365.25)` | Age in completed years |
 | `Now()` | Returns the current date and time | `SELECT *, NOW() AS [Right Now]` | — |
 | `Format(F, "hh:mm")` | Displays only the time portion | `Format(NOW(), "hh:mm") AS [Right Now]` | `14:35` |
 | `Format(F, "dd-mm-yyyy")` | Displays a date in day-month-year format | `Format(Date(), "dd-mm-yyyy")` | `10-04-2026` |
@@ -142,7 +142,7 @@ WHERE LEN(Surname) = 5
 
 ```sql
 -- Calculate each student's age from their date of birth
-SELECT Surname, Round((Date() - DOB) / 365.25) AS Age
+SELECT Surname, Int((Date() - DOB) / 365.25) AS Age
 FROM tblStudents
 
 -- Students born in the year 2008
@@ -276,7 +276,7 @@ SELECT Grade, Round(Avg(Mark), 1) AS Average
 FROM tblStudents
 GROUP BY Grade
 HAVING Avg(Mark) >= 60
-ORDER BY Average DESC
+ORDER BY Avg(Mark) DESC
 ```
 
 ---
@@ -286,7 +286,7 @@ ORDER BY Average DESC
 When data is spread across two tables, list both tables in the FROM clause (separated by a comma) and define the **relationship** in the WHERE clause.
 
 > [!IMPORTANT] Correct Method for Access via Delphi
-> In Microsoft Access accessed through Delphi ADO, use the comma-separation method shown below. Do not use INNER JOIN syntax.
+> The Grade 12 curriculum joins tables with the `WHERE` method shown below. `INNER JOIN` also works in Access, but you are not required to know it.
 
 ### Syntax
 
