@@ -64,7 +64,7 @@ The **OS** is the most important piece of system software. It is the bridge betw
 | **CLI (Command Line Interface)** | Text commands only — no mouse | MS-DOS, Linux terminal, PowerShell |
 | **Multi-user** | Multiple users can work simultaneously | Linux servers, mainframes |
 | **Multi-tasking** | Multiple programs run at the same time | Windows, macOS |
-| **Real-time OS (RTOS)** | Processes data instantly with no delay | Medical equipment, aircraft, factory robots |
+| **Real-time OS (RTOS)** | Responds to input within a guaranteed, very short time | Medical equipment, aircraft, factory robots |
 | **Embedded OS** | Built into a device; dedicated function | Smart TV OS, washing machine controller |
 | **Mobile OS** | Designed for touchscreen portable devices | Android, iOS |
 | **Network OS (NOS)** | Manages network resources, shared access | Windows Server, Novell NetWare |
@@ -151,9 +151,9 @@ Software written specifically for ONE organisation's unique needs:
 | Licence Type | Cost | Restrictions | Examples |
 |---|---|---|---|
 | **Proprietary / Commercial** | Paid | Cannot copy, modify, or distribute | Microsoft Office, Adobe CC |
-| **Freeware** | Free | Can use freely; cannot modify source | VLC, 7-Zip |
+| **Freeware** | Free | Can use freely; cannot modify source | Adobe Acrobat Reader, WhatsApp Desktop |
 | **Shareware** | Free trial | Pay to continue after trial | WinZip (trial) |
-| **Open source** | Free | Source code available; can modify and distribute | Linux, Firefox, LibreOffice |
+| **Open source** | Free | Source code available; can modify and distribute | Linux, Firefox, LibreOffice, VLC, 7-Zip |
 | **Creative Commons** | Varies | Specific conditions set by the creator | Many online images and music |
 
 > [!NOTE] Open Source ≠ Free

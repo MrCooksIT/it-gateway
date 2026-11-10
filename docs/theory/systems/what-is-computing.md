@@ -11,9 +11,9 @@ Your phone, your laptop, the traffic light at the corner — they all process in
 | **IT (Information Technology)** | The use of computers and software to manage, store, process and communicate information |
 | **ICT (Information & Communication Technology)** | IT *plus* communication technology — combining computing with networks and the internet |
 | **Computer** | An electronic device that accepts data as input, processes it, stores results and produces output |
-| **Data** | Raw, unprocessed facts and figures (e.g. the number `37`) |
-| **Information** | Data that has been processed and given meaning (e.g. "the temperature is 37°C") |
-| **Knowledge** | Applying information to make decisions (e.g. "37°C is a fever — see a doctor") |
+| **Data** | Raw, unprocessed facts and figures (e.g. the number `39`) |
+| **Information** | Data that has been processed and given meaning (e.g. "the temperature is 39°C") |
+| **Knowledge** | Applying information to make decisions (e.g. "39°C is a fever — see a doctor") |
 
 > [!NOTE] Grade 10 — Foundation
 > This entire page is core Grade 10 content. Know all definitions and the computer model cold.
@@ -65,14 +65,14 @@ flowchart LR
 
 | Level | What it is | Example |
 |---|---|---|
-| **Data** | Raw, unprocessed facts | `37`, `John`, `Cape Town` |
-| **Information** | Data processed and given context | John's temperature is 37°C |
-| **Knowledge** | Using information to make decisions | 37°C is a fever — John needs to rest and see a doctor |
+| **Data** | Raw, unprocessed facts | `39`, `John`, `Cape Town` |
+| **Information** | Data processed and given context | John's temperature is 39°C |
+| **Knowledge** | Using information to make decisions | 39°C is a fever — John needs to rest and see a doctor |
 
 ```mermaid
 flowchart LR
-    D["DATA\nRaw facts\n37 · John · Cape Town"] -->|"Process\n+ context"| I["INFORMATION\nMeaningful\nJohn's temp is 37°C"]
-    I -->|"Apply\n+ experience"| K["KNOWLEDGE\nActionable\n37°C is a fever —\nsee a doctor"]
+    D["DATA\nRaw facts\n39 · John · Cape Town"] -->|"Process\n+ context"| I["INFORMATION\nMeaningful\nJohn's temp is 39°C"]
+    I -->|"Apply\n+ experience"| K["KNOWLEDGE\nActionable\n39°C is a fever —\nsee a doctor"]
     style D fill:#93c5fd,stroke:#3b82f6,color:#000
     style I fill:#c4b5fd,stroke:#8b5cf6,color:#000
     style K fill:#6ee7b7,stroke:#10b981,color:#000

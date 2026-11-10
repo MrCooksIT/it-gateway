@@ -74,16 +74,16 @@ Multiply each bit by its place value and add:
 
 Divide by 2 repeatedly; read remainders bottom to top:
 
-45 ÷ 2 = 22 r **1**  
-22 ÷ 2 = 11 r **0**  
-11 ÷ 2 = 5 r **1**  
-5 ÷ 2 = 2 r **1**  
-2 ÷ 2 = 1 r **0**  
+53 ÷ 2 = 26 r **1**  
+26 ÷ 2 = 13 r **0**  
+13 ÷ 2 = 6 r **1**  
+6 ÷ 2 = 3 r **0**  
+3 ÷ 2 = 1 r **1**  
 1 ÷ 2 = 0 r **1**
 
-Read bottom to top: **101101**
+Read bottom to top: **110101**
 
-Verify: 32 + 8 + 4 + 1 = 45 ✓
+Verify: 32 + 16 + 4 + 1 = 53 ✓
 
 ---
 
