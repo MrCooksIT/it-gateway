@@ -3,7 +3,7 @@
 Before writing a single line of code, developers need to understand how software is built — the paradigms, tools, and processes that turn an idea into a working program. This page covers the theoretical foundations of programming.
 
 > [!NOTE] Grade 10–11
-> Programming concepts (IDE, event-driven programming, development process) are introduced at Grade 10–11. OOP paradigm is Grade 11. Software engineering methodologies are Grade 12.
+> Programming concepts (IDE, event-driven programming, development process) are introduced at Grade 10–11. Compilers and interpreters are Grade 11. The OOP paradigm and software engineering methodologies are Grade 12.
 
 ---
 

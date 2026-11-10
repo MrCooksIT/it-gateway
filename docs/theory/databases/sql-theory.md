@@ -2,8 +2,8 @@
 
 SQL (Structured Query Language) is the language you use to communicate with a relational database. Paper 2 tests whether you understand what SQL does and why — Paper 1 tests whether you can write it. This page focuses on the theory: concepts, syntax rules, and what each clause does.
 
-> [!NOTE] Grade 11–12
-> SQL SELECT and WHERE are Grade 11. JOINs, GROUP BY, aggregate functions, and INSERT/UPDATE/DELETE are Grade 12.
+> [!NOTE] Grade 12
+> All SQL is Grade 12 work: SELECT, WHERE, ORDER BY, functions, GROUP BY, multi-table queries and INSERT/UPDATE/DELETE. Grade 11 works with databases through Delphi code (TADOTable) only.
 
 ---
 
@@ -74,8 +74,9 @@ SELECT DISTINCT Grade FROM Students;
 
 ### Column aliases:
 ```sql
-SELECT FirstName AS 'First Name', Mark * 1.1 AS 'Adjusted Mark'
+SELECT FirstName AS [First Name], Mark * 1.1 AS [Adjusted Mark]
 FROM Students;
+-- In Access, a heading with a space goes in square brackets
 ```
 
 ---
@@ -89,7 +90,7 @@ FROM Students;
 | Operator | Meaning | Example |
 |---|---|---|
 | `=` | Equal to | `WHERE Grade = 11` |
-| `<>` or `!=` | Not equal | `WHERE Grade <> 10` |
+| `<>` | Not equal (Access does not accept `!=`) | `WHERE Grade <> 10` |
 | `>` | Greater than | `WHERE Mark > 60` |
 | `<` | Less than | `WHERE Mark < 50` |
 | `>=` | Greater or equal | `WHERE Mark >= 50` |
@@ -215,7 +216,7 @@ HAVING AVG(Mark) > 70;
 A multi-table query retrieves data from two tables at once by linking them on a common field (primary key / foreign key pair).
 
 > [!IMPORTANT] Access / Delphi Syntax
-> In Microsoft Access accessed through Delphi ADO, list both tables in `FROM` separated by a comma and define the link in `WHERE`. Do **not** use `INNER JOIN` or `LEFT JOIN` syntax in Paper 1.
+> For Paper 1, list both tables in `FROM` separated by a comma and define the link in `WHERE`. This is the method the Grade 12 curriculum prescribes.
 
 ```sql
 SELECT tblStudents.Surname, tblMarks.Subject, tblMarks.Mark
@@ -226,7 +227,7 @@ ORDER BY tblStudents.Surname;
 ```
 
 > [!NOTE] Standard SQL vs Access/Delphi
-> Standard SQL (MySQL, SQL Server, PostgreSQL) uses `INNER JOIN … ON` and `LEFT JOIN … ON` syntax. These are equivalent in logic to the WHERE-based method above, but are not used in the CAPS Paper 1 exam environment. `INNER JOIN` returns only matching rows from both tables; `LEFT JOIN` returns all rows from the left table plus matched rows from the right (unmatched = NULL).
+> Standard SQL (MySQL, SQL Server, PostgreSQL) uses `INNER JOIN … ON` and `LEFT JOIN … ON` syntax. Access accepts `INNER JOIN` too, and it is equivalent in logic to the WHERE-based method above, but you are not required to know it for Paper 1. `INNER JOIN` returns only matching rows from both tables; `LEFT JOIN` returns all rows from the left table plus matched rows from the right (unmatched = NULL).
 
 ---
 
