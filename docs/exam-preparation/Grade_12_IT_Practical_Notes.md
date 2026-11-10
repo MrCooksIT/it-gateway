@@ -189,7 +189,7 @@ var
    objPerson : TPerson;
 ```
 
-This declares the variable but does not yet create an object. Until `Create` is called, the variable is **nil** (empty).
+This declares the variable but does not yet create an object. Until `Create` is called, the variable does not refer to any object, and calling a method on it causes an access violation.
 
 ### Instantiating an object — calling Create
 
@@ -317,6 +317,7 @@ SELECT <fields>
 FROM <tables>
 WHERE <condition>
 GROUP BY <field>
+HAVING <condition on a group>
 ORDER BY <field> [ASC | DESC];
 ```
 
@@ -528,7 +529,9 @@ while not tblParent.EOF do
       while not tblChild.EOF do
          begin
             if tblChild['ParentID'] = tblParent['ParentID'] then
-               // … this child record belongs to this parent …
+               begin
+                  // … this child record belongs to this parent …
+               end;
             tblChild.Next;
          end;
 
@@ -545,6 +548,25 @@ The critical step that is easy to forget is **`tblChild.First`** at the start of
 ## Recap (Grade 11)
 
 Grade 11 covered parallel arrays, text files (the five-step pattern), delimited-line parsing with `Pos`/`Copy`/`Delete`, bubble sort with parallel-array swapping, and linear search. The principle of parallel arrays remains: *if you change the order of one, change the order of all*.
+
+## 3.0 Two-dimensional arrays
+
+A **2D array** is a table of values with rows and columns. It is Grade 12 work and is always processed with **nested loops**: the outer loop walks the rows and the inner loop walks the columns.
+
+```pascal
+var
+   arrMarks : array [1..4, 1..3] of Integer;      // 4 rows, 3 columns
+
+for iRow := 1 to 4 do
+   begin
+      iRowTotal := 0;
+      for iCol := 1 to 3 do
+         iRowTotal := iRowTotal + arrMarks[iRow, iCol];
+      memOutput.Lines.Add('Row ' + IntToStr(iRow) + ': ' + IntToStr(iRowTotal));
+   end;
+```
+
+To work column by column, swap the loops (columns outside, rows inside). Full page: [2D Arrays](../practical/delphi/arrays-2d).
 
 ## 3.1 The "destructive" find-the-largest approach
 
@@ -890,9 +912,9 @@ WHERE <condition>
 GROUP BY <field>;
 
 -- Join two tables
-SELECT a.<field>, b.<field>
+SELECT <tableA>.<field>, <tableB>.<field>
 FROM <tableA>, <tableB>
-WHERE a.<fk> = b.<pk>
+WHERE <tableA>.<fk> = <tableB>.<pk>
   AND <other conditions>;
 
 -- Update
