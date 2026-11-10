@@ -87,9 +87,12 @@ Every component must be renamed with the correct **Hungarian notation prefix**. 
 | TLabel | `lbl` | `lblResult`, `lblTotal` |
 | TEdit | `edt` | `edtName`, `edtScore` |
 | TRichEdit | `red` | `redOutput`, `redNotes` |
-| TMemo | `mmo` | `mmoText`, `mmoNotes` |
+| TMemo | `mmo` or `mem` | `mmoNotes`, `memOutput` |
 | TCheckBox | `chk` | `chkRemember`, `chkActive` |
 | TRadioButton | `rdb` | `rdbMale`, `rdbFemale` |
+| TRadioGroup | `rgp` | `rgpSize`, `rgpGender` |
+| TSpinEdit | `sed` or `spn` | `sedQuantity`, `spnAge` |
+| TShape | `shp` | `shpStatus` |
 | TComboBox | `cmb` | `cmbGrade`, `cmbSubject` |
 | TListBox | `lst` | `lstItems`, `lstNames` |
 | TGroupBox | `grp` | `grpOptions` |
@@ -365,6 +368,30 @@ ELSE IF rdbFemale.Checked THEN
 
 ---
 
+## TRadioGroup and TSpinEdit
+
+A **radio group** (`rgp`) is one component that holds a list of options. `ItemIndex` gives the position of the selected option, starting at 0, and is -1 if nothing has been selected.
+
+```pascal
+IF rgpSize.ItemIndex = -1 THEN
+  ShowMessage('Please select a size')
+ELSE
+  CASE rgpSize.ItemIndex OF
+    0 : rPrice := 20;       // first option
+    1 : rPrice := 27.50;    // second option
+    2 : rPrice := 35;       // third option
+  END;
+
+sChosen := rgpSize.Items[rgpSize.ItemIndex];   // the text of the selected option
+```
+
+A **spin edit** (`sed` or `spn`) lets the user choose a whole number with up and down arrows. Its `Value` is already an Integer, so no conversion is needed.
+
+```pascal
+iQuantity := sedQuantity.Value;
+```
+
+---
 ## TComboBox
 
 A dropdown list that also allows text input. User selects from a list.

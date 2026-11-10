@@ -328,7 +328,7 @@ Every text-file operation follows the same five steps:
 |---|---|---|---|
 | `Reset(f)` | Open for reading | Crashes (use `FileExists` first) | Reads from the start |
 | `Rewrite(f)` | Create a new file for writing | Creates an empty file | **Wipes** all existing content |
-| `Append(f)` | Add to the end of an existing file | Creates an empty file | Adds at the end, keeping existing content |
+| `Append(f)` | Add to the end of an existing file | Crashes (use `FileExists` first, or `Rewrite` to create it) | Adds at the end, keeping existing content |
 
 ## 4.3 Checking if a file exists before opening
 
@@ -529,7 +529,7 @@ end;
 A worked example:
 
 ```pascal
-procedure ClearAll;
+procedure TForm1.ClearAll;          // declared in the private section of the form class
 begin
    edtName.Text := '';
    edtAge.Text  := '';
@@ -579,11 +579,29 @@ end;
 When two parameters share a type, they can be listed together with one type declaration: `rA, rB, rC : Real`. When the types differ, each gets its own type declaration, separated by semicolons:
 
 ```pascal
-function Format(sName : String; iAge : Integer; rPrice : Real) : String;
+function Describe(sName : String; iAge : Integer; rPrice : Real) : String;
 begin
    Result := sName + ' (' + IntToStr(iAge) + '): R' + FloatToStr(rPrice);
 end;
 ```
+
+### Value and `var` (reference) parameters
+
+By default a parameter is a **value parameter**: the method receives a *copy*, so changing it inside the method does not change the caller's variable. Put `var` in front of a parameter to make it a **reference parameter**: the method then works on the caller's own variable, and any change is kept.
+
+```pascal
+procedure AddBonus(var iMark : Integer; iBonus : Integer);
+begin
+   iMark  := iMark + iBonus;     // changes the caller's variable
+   iBonus := 0;                  // only changes the local copy
+end;
+
+// iTest = 60, iExtra = 5
+AddBonus(iTest, iExtra);
+// now iTest = 65 and iExtra is still 5
+```
+
+A method that belongs to the form is **declared** in the `private` section of the form class and **implemented** with the class name in front: `procedure TForm1.AddBonus(...)`.
 
 ## 6.5 Calling functions and procedures
 
@@ -598,7 +616,7 @@ A **function** is called wherever a value of its return type would be valid — 
 
 ```pascal
 rArea := CalculateArea(5.0, 3.0);                   // 15.0
-lblOut.Caption := IntToStr(CalculateArea(5.0, 3.0));
+lblOut.Caption := FloatToStrF(CalculateArea(5.0, 3.0), ffFixed, 8, 2);   // a Real result needs FloatToStr/FloatToStrF
 if Average(rA, rB, rC) > 50 then
    …
 ```
@@ -805,7 +823,7 @@ if IsPrime(iValue) AND IsPalindrome(IntToStr(iValue)) then
 
 ## Recap (Grade 10)
 
-The basic math functions covered in Grade 10 include `Abs`, `Sqr`, `Sqrt`, `Round`, `Trunc`, `Random` and `RandomRange`. The `Math` unit must be added to `uses` for `Power`, `Floor`, `Ceil`, `Pi` and `RandomRange`.
+The basic math functions covered in Grade 10 include `Abs`, `Sqr`, `Sqrt`, `Round`, `Trunc`, `Random` and `RandomRange`. The `Math` unit must be added to `uses` for `Power`, `Floor`, `Ceil` and `RandomRange` (`Pi` needs no extra unit).
 
 ## 8.1 When to use Floor vs Ceil vs Trunc vs Round
 
