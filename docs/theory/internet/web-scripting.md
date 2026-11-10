@@ -167,7 +167,7 @@ flowchart LR
 
 **Why JSON over XML:**
 - Less verbose — smaller file size
-- Native JavaScript format — no parsing needed
+- Based on JavaScript object syntax — very easy for a web page to read
 - Human-readable
 - APIs almost universally use JSON today
 

@@ -2,8 +2,8 @@
 
 The internet is more than just websites. Email, file transfer, streaming, voice calls, and real-time communication all run on the same network infrastructure but use different protocols and services designed for each purpose.
 
-> [!NOTE] Grade 11
-> Internet services and protocols (HTTP/S, FTP, VoIP, RSS, SEO) are Grade 11 content. Grade 12 extends with scripting and online applications.
+> [!NOTE] Grade 10+
+> An overview of Internet services (what they are and what they offer) is Grade 10 work (Term 4). The protocols, DNS detail, streaming and security services are Grade 11 content. SEO, cookies and online applications are Grade 12 extension.
 
 ---
 
