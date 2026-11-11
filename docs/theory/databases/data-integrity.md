@@ -176,7 +176,7 @@ SELECT * FROM Users WHERE Username = 'finn' AND Password = 'mypassword'
 SELECT * FROM Users WHERE Username = 'finn' OR '1'='1' AND Password = ''
 ```
 
-Since `'1'='1'` is always true, this returns all users — bypassing authentication entirely.
+`AND` is evaluated before `OR`, so the condition becomes: *Username is 'finn'* **OR** *(something true AND the password is empty)*. The first part is true for finn's record whatever password was typed — the attacker is logged in as finn **without knowing the password**.
 
 ### What attackers can do:
 - Bypass login authentication

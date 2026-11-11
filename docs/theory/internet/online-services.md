@@ -2,8 +2,8 @@
 
 The internet has moved almost everything online — banking, shopping, collaboration, entertainment, and communication. Understanding what services exist, how they work, and what the trade-offs are is essential for both the theory exam and everyday digital life.
 
-> [!NOTE] Grade 12
-> Online services and applications (cloud storage, online apps, cookies, e-commerce) are primarily Grade 12 content, building on Grade 11 internet knowledge.
+> [!NOTE] Grade 10+
+> Cloud storage, online shopping and social media are first met in Grade 10 (Term 4) as Internet services. Types of websites and what they offer are Grade 11 (Term 4). Online applications, cookies and e-commerce detail are Grade 12 content.
 
 ---
 
@@ -46,7 +46,6 @@ flowchart TD
 | OneDrive | Microsoft | 5 GB |
 | Dropbox | Dropbox | 2 GB |
 | iCloud | Apple | 5 GB |
-| Amazon Drive | Amazon | 5 GB |
 
 **Advantages of cloud storage:**
 - Access files from any device, anywhere

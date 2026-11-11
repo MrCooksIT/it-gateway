@@ -110,7 +110,9 @@ Called with: `oStudent := TStudent.Create('Alice', 11);`
 A **destructor** is called when an object is destroyed — it cleans up resources (frees memory).
 
 ```pascal
-destructor TStudent.Destroy; override;
+// In the class declaration:   destructor Destroy; override;
+// In the implementation (no "override" here):
+destructor TStudent.Destroy;
 begin
   // free any sub-objects if needed
   inherited;

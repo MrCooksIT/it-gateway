@@ -6,6 +6,8 @@ title: Paper 1 Preparation Guide
 
 This guide will help you prepare effectively for the IT Paper 1 practical examination.
 
+> **Which grade?** The structure and skills below describe the **Grade 12** Paper 1. Grade 10 and 11 learners should start with the [Grade 10 scope](./Grade_10_November_Scope) or the [Grade 11 scope](./Grade_11_November_Scope); their papers have different questions and do not include SQL or OOP.
+
 ## Understanding Paper 1
 
 The Paper 1 examination tests your practical programming skills in Delphi. It's designed to assess:

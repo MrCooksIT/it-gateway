@@ -32,13 +32,13 @@ Every Delphi answer lives inside an event handler or procedure. The form, button
 ```pascal
 procedure TForm1.btnCalculateClick(Sender: TObject);
 var
-  nScore : Integer;
+  iScore : Integer;
   sGrade : String;
 begin
-  nScore := StrToInt(edtScore.Text);
-  if nScore >= 75 then
+  iScore := StrToInt(edtScore.Text);
+  if iScore >= 75 then
     sGrade := 'Distinction'
-  else if nScore >= 50 then
+  else if iScore >= 50 then
     sGrade := 'Pass'
   else
     sGrade := 'Fail';
@@ -48,10 +48,10 @@ end;
 
 **What the logic actually is (no GUI needed):**
 ```
-INPUT nScore
-IF nScore >= 75 THEN
+INPUT iScore
+IF iScore >= 75 THEN
     sGrade = 'Distinction'
-ELSE IF nScore >= 50 THEN
+ELSE IF iScore >= 50 THEN
     sGrade = 'Pass'
 ELSE
     sGrade = 'Fail'
@@ -70,37 +70,37 @@ These are identical in meaning. You can study, trace, and write the second form 
 
 1. List all variables and write their starting values (usually `0`, `''`, or `False`)
 2. Read each line in order, exactly as the computer would
-3. Update variable values when assignments (`:-`) happen
+3. Update variable values when assignments (`:=`) happen
 4. For loops: track the counter, check the condition, execute the body
 
 ### Worked example 1 — Simple loop
 
 ```pascal
 var
-  i, nTotal : Integer;
+  i, iTotal : Integer;
 begin
-  nTotal := 0;
+  iTotal := 0;
   for i := 1 to 5 do
-    nTotal := nTotal + i;
-  ShowMessage(IntToStr(nTotal));
+    iTotal := iTotal + i;
+  ShowMessage(IntToStr(iTotal));
 end;
 ```
 
 **Trace table — track each variable after each step:**
 
-| Step | Code executed | `i` | `nTotal` |
+| Step | Code executed | `i` | `iTotal` |
 |------|--------------|-----|---------|
-| 1 | `nTotal := 0` | — | **0** |
+| 1 | `iTotal := 0` | — | **0** |
 | 2 | Loop: `i := 1` | **1** | 0 |
-| 3 | `nTotal := 0 + 1` | 1 | **1** |
+| 3 | `iTotal := 0 + 1` | 1 | **1** |
 | 4 | Loop: `i := 2` | **2** | 1 |
-| 5 | `nTotal := 1 + 2` | 2 | **3** |
+| 5 | `iTotal := 1 + 2` | 2 | **3** |
 | 6 | Loop: `i := 3` | **3** | 3 |
-| 7 | `nTotal := 3 + 3` | 3 | **6** |
+| 7 | `iTotal := 3 + 3` | 3 | **6** |
 | 8 | Loop: `i := 4` | **4** | 6 |
-| 9 | `nTotal := 6 + 4` | 4 | **10** |
+| 9 | `iTotal := 6 + 4` | 4 | **10** |
 | 10 | Loop: `i := 5` | **5** | 10 |
-| 11 | `nTotal := 10 + 5` | 5 | **15** |
+| 11 | `iTotal := 10 + 5` | 5 | **15** |
 | 12 | `ShowMessage('15')` | — | — |
 
 **Output: `15`** — The code adds the numbers 1 to 5 together.
@@ -145,18 +145,18 @@ end;
 ```pascal
 var
   arrScores : array[1..5] of Integer;
-  i, nHighest : Integer;
+  i, iHighest : Integer;
 begin
   arrScores[1] := 65;  arrScores[2] := 82;
   arrScores[3] := 71;  arrScores[4] := 90;
   arrScores[5] := 58;
 
-  nHighest := arrScores[1];
+  iHighest := arrScores[1];
   for i := 2 to 5 do
-    if arrScores[i] > nHighest then
-      nHighest := arrScores[i];
+    if arrScores[i] > iHighest then
+      iHighest := arrScores[i];
 
-  ShowMessage('Highest: ' + IntToStr(nHighest));
+  ShowMessage('Highest: ' + IntToStr(iHighest));
 end;
 ```
 
@@ -168,7 +168,7 @@ end;
 
 **Trace the search:**
 
-| `i` | `arrScores[i]` | `> nHighest`? | `nHighest` |
+| `i` | `arrScores[i]` | `> iHighest`? | `iHighest` |
 |-----|---------------|---------------|-----------|
 | Start | — | — | **65** |
 | 2 | 82 | 82 > 65 → Yes | **82** |
@@ -187,13 +187,13 @@ Try this one yourself before looking at the answer. What does this function retu
 ```pascal
 function Mystery(sText : String) : Integer;
 var
-  i, nCount : Integer;
+  i, iCount : Integer;
 begin
-  nCount := 0;
+  iCount := 0;
   for i := 1 to Length(sText) do
     if sText[i] = ' ' then
-      Inc(nCount);
-  Result := nCount + 1;
+      Inc(iCount);
+  Result := iCount + 1;
 end;
 ```
 
@@ -202,7 +202,7 @@ end;
 
 `sText = 'Hello World'`, `Length('Hello World') = 11`
 
-| `i` | `sText[i]` | Is it `' '`? | `nCount` |
+| `i` | `sText[i]` | Is it `' '`? | `iCount` |
 |-----|-----------|------------|---------|
 | 1 | 'H' | No | 0 |
 | 2 | 'e' | No | 0 |
@@ -292,31 +292,31 @@ UNTIL condition
 
 **Step 1 — Pseudocode:**
 ```
-INPUT nNum
-IF nNum MOD 3 = 0 AND nNum MOD 5 = 0 THEN
+INPUT iNum
+IF iNum MOD 3 = 0 AND iNum MOD 5 = 0 THEN
     OUTPUT 'FizzBuzz'
-ELSE IF nNum MOD 3 = 0 THEN
+ELSE IF iNum MOD 3 = 0 THEN
     OUTPUT 'Fizz'
-ELSE IF nNum MOD 5 = 0 THEN
+ELSE IF iNum MOD 5 = 0 THEN
     OUTPUT 'Buzz'
 ELSE
-    OUTPUT nNum
+    OUTPUT iNum
 ENDIF
 ```
 
 **Step 2 — Translate to Delphi:**
 ```pascal
-var nNum : Integer;
+var iNum : Integer;
 begin
-  nNum := StrToInt(edtNumber.Text);
-  if (nNum mod 3 = 0) and (nNum mod 5 = 0) then
+  iNum := StrToInt(edtNumber.Text);
+  if (iNum mod 3 = 0) and (iNum mod 5 = 0) then
     lblResult.Caption := 'FizzBuzz'
-  else if nNum mod 3 = 0 then
+  else if iNum mod 3 = 0 then
     lblResult.Caption := 'Fizz'
-  else if nNum mod 5 = 0 then
+  else if iNum mod 5 = 0 then
     lblResult.Caption := 'Buzz'
   else
-    lblResult.Caption := IntToStr(nNum);
+    lblResult.Caption := IntToStr(iNum);
 end;
 ```
 
@@ -354,66 +354,63 @@ Expert programmers don't solve problems from scratch every time — they recogni
 ### Pattern 1 — Sum and average of an array
 
 ```pascal
-nTotal := 0;
-for i := 1 to nSize do
-  nTotal := nTotal + arrData[i];
-rAverage := nTotal / nSize;
+iTotal := 0;
+for i := 1 to iSize do
+  iTotal := iTotal + arrData[i];
+rAverage := iTotal / iSize;
 ```
 
 ### Pattern 2 — Find the maximum value
 
 ```pascal
-nMax := arrData[1];           // assume first is largest
-for i := 2 to nSize do
-  if arrData[i] > nMax then
-    nMax := arrData[i];
+iMax := arrData[1];           // assume first is largest
+for i := 2 to iSize do
+  if arrData[i] > iMax then
+    iMax := arrData[i];
 ```
 
 ### Pattern 3 — Count items meeting a condition
 
 ```pascal
-nCount := 0;
-for i := 1 to nSize do
+iCount := 0;
+for i := 1 to iSize do
   if arrData[i] > 50 then    // change condition as needed
-    Inc(nCount);
+    Inc(iCount);
 ```
 
 ### Pattern 4 — Linear search
 
 ```pascal
 bFound := False;
-nIndex := 0;
-for i := 1 to nSize do
+iIndex := 0;
+for i := 1 to iSize do
   if arrNames[i] = sSearch then
   begin
     bFound := True;
-    nIndex := i;
+    iIndex := i;
   end;
 ```
 
 ### Pattern 5 — Input validation (while loop)
-
 ```pascal
-while (StrToIntDef(edtInput.Text, -1) < 0) or
-      (StrToIntDef(edtInput.Text, -1) > 100) do
+iValue := StrToIntDef(InputBox('Input', 'Enter a value between 0 and 100:', ''), -1);
+while (iValue < 0) or (iValue > 100) do
 begin
-  ShowMessage('Enter a value between 0 and 100');
-  edtInput.SetFocus;
-  edtInput.Clear;
+  ShowMessage('That is not a value between 0 and 100');
+  iValue := StrToIntDef(InputBox('Input', 'Enter a value between 0 and 100:', ''), -1);
 end;
-nValue := StrToInt(edtInput.Text);
 ```
-
+`StrToIntDef` returns -1 if the user types something that is not a whole number, so bad input simply fails the range test and the question is asked again.
 ### Pattern 6 — Read a text file into an array
 
 ```pascal
 AssignFile(f, 'data.txt');
 Reset(f);
-nCount := 0;
+iCount := 0;
 while not EOF(f) do
 begin
-  Inc(nCount);
-  ReadLn(f, arrData[nCount]);
+  Inc(iCount);
+  ReadLn(f, arrData[iCount]);
 end;
 CloseFile(f);
 ```
@@ -422,7 +419,7 @@ CloseFile(f);
 
 ```pascal
 lstResults.Items.Clear;
-for i := 1 to nCount do
+for i := 1 to iCount do
   if arrScores[i] >= 50 then
     lstResults.Items.Add(arrNames[i] + ' — ' + IntToStr(arrScores[i]));
 ```
@@ -430,13 +427,13 @@ for i := 1 to nCount do
 ### Pattern 8 — Bubble sort (ascending)
 
 ```pascal
-for i := 1 to nSize - 1 do
-  for j := 1 to nSize - i do
+for i := 1 to iSize - 1 do
+  for j := 1 to iSize - i do
     if arrData[j] > arrData[j + 1] then
     begin
-      nTemp := arrData[j];
+      iTemp := arrData[j];
       arrData[j] := arrData[j + 1];
-      arrData[j + 1] := nTemp;
+      arrData[j + 1] := iTemp;
     end;
 ```
 
@@ -476,16 +473,14 @@ GROUP BY Grade
 HAVING AVG(Score) > 60;
 ```
 
-**JOIN two tables:**
+**Two tables (WHERE method, as used in Paper 1):**
 ```sql
-SELECT Students.Surname, Subjects.SubjectName, Results.Mark
-FROM Students
-INNER JOIN Results ON Students.StudentID = Results.StudentID
-INNER JOIN Subjects ON Results.SubjectID = Subjects.SubjectID
-WHERE Results.Mark > 50
+SELECT Students.Surname, Results.Subject, Results.Mark
+FROM Students, Results
+WHERE Students.StudentID = Results.StudentID
+AND Results.Mark > 50
 ORDER BY Students.Surname;
 ```
-
 **Data manipulation:**
 ```sql
 INSERT INTO Students (StudentID, Surname, Name, Score)
@@ -500,7 +495,7 @@ WHERE Score < 30;
 ```
 
 ::: warning SQL case sensitivity
-SQL keywords like `SELECT`, `WHERE`, `ORDER BY` are not case sensitive, but values like `'Dlamini'` must match exactly, including capitals.
+SQL keywords like `SELECT`, `WHERE`, `ORDER BY` are not case sensitive. In Microsoft Access, text values are not case sensitive either (`'dlamini'` matches `'Dlamini'`), but in many other database systems (including some of the online tools above) they are, so type values exactly as they are stored.
 :::
 
 ---
@@ -525,18 +520,18 @@ The logic inside a button click is identical to console Pascal. Only the input/o
 | `edtName.Text` | `ReadLn(sName)` |
 | `lblResult.Caption := ...` | `WriteLn(...)` |
 | `ShowMessage(...)` | `WriteLn(...)` |
-| `StrToInt(edtNum.Text)` | `ReadLn(nNum)` (declare as `Integer`) |
+| `StrToInt(edtNum.Text)` | `ReadLn(iNum)` (declare as `Integer`) |
 
 **Delphi button click version:**
 ```pascal
 procedure TForm1.btnGreetClick(Sender: TObject);
 var
   sName : String;
-  nAge  : Integer;
+  iAge  : Integer;
 begin
   sName := edtName.Text;
-  nAge  := StrToInt(edtAge.Text);
-  if nAge >= 18 then
+  iAge  := StrToInt(edtAge.Text);
+  if iAge >= 18 then
     lblResult.Caption := sName + ' is an adult.'
   else
     lblResult.Caption := sName + ' is a minor.';
@@ -548,11 +543,11 @@ end;
 program AgeCheck;
 var
   sName : String;
-  nAge  : Integer;
+  iAge  : Integer;
 begin
   Write('Enter name: ');  ReadLn(sName);
-  Write('Enter age: ');   ReadLn(nAge);
-  if nAge >= 18 then
+  Write('Enter age: ');   ReadLn(iAge);
+  if iAge >= 18 then
     WriteLn(sName + ' is an adult.')
   else
     WriteLn(sName + ' is a minor.');

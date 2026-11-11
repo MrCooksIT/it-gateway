@@ -89,22 +89,22 @@ flowchart TD
     style D fill:#fde68a,stroke:#f59e0b,color:#000
 ```
 
-### Worked Example: Convert `45` to binary
+### Worked Example: Convert `53` to binary
 
 | Step | Calculation | Quotient | Remainder |
 |---|---|---|---|
-| 1 | 45 ÷ 2 | 22 | **1** |
-| 2 | 22 ÷ 2 | 11 | **0** |
-| 3 | 11 ÷ 2 | 5 | **1** |
-| 4 | 5 ÷ 2 | 2 | **1** |
-| 5 | 2 ÷ 2 | 1 | **0** |
+| 1 | 53 ÷ 2 | 26 | **1** |
+| 2 | 26 ÷ 2 | 13 | **0** |
+| 3 | 13 ÷ 2 | 6 | **1** |
+| 4 | 6 ÷ 2 | 3 | **0** |
+| 5 | 3 ÷ 2 | 1 | **1** |
 | 6 | 1 ÷ 2 | 0 | **1** |
 
-Read remainders **bottom to top**: **101101**
+Read remainders **bottom to top**: **110101**
 
-So `45₁₀ = 101101₂`
+So `53₁₀ = 110101₂`
 
-**Verify:** 32 + 8 + 4 + 1 = 45 ✓
+**Verify:** 32 + 16 + 4 + 1 = 53 ✓
 
 ### Alternative Method: Subtraction (Place Values)
 
@@ -279,7 +279,7 @@ Add: `10110111 + 01001101`
   1 0 1 1 0 1 1 1   (= 183)
 + 0 1 0 0 1 1 0 1   (= 77)
 -----------
-  1 0 0 0 0 1 0 0   (= 260)
+1 0 0 0 0 0 1 0 0   (= 260, a 9th bit is needed)
 ```
 
 Check: 183 + 77 = 260 = `100000100₂` ✓

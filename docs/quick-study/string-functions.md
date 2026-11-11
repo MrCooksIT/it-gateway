@@ -90,7 +90,7 @@ IF Pos('error', LowerCase(sLog)) > 0 THEN
 
 Pos('at', 'I am at school')   // → 6  (found at position 6)
 Pos('IT', 'Python is cool')   // → 0  (not found)
-Pos('oo', 'I am cool')        // → 8  (found at position 8)
+Pos('oo', 'I am cool')        // → 7  (found at position 7)
 ```
 
 Always check the result before using it:

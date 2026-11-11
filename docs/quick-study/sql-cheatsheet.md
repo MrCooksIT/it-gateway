@@ -22,7 +22,7 @@ ORDER BY column ASC|DESC;      -- optional sort
 ```sql
 SELECT *                        -- all columns
 SELECT DISTINCT column          -- unique values only
-SELECT column AS 'Alias'        -- rename output column
+SELECT column AS Alias          -- rename output column; use [My Alias] if it has a space
 SELECT COUNT(*) AS Total        -- count all rows
 SELECT SUM(Mark) AS TotalMark
 SELECT AVG(Mark) AS AverageMark
@@ -100,7 +100,7 @@ ORDER BY tblStudents.Surname;
 ```
 
 - Always prefix field names with the table name when the same field exists in both tables.
-- The relationship condition (`tblStudents.StudentID = tblMarks.StudentID`) must come first in WHERE; add extra filters with AND.
+- The relationship condition (`tblStudents.StudentID = tblMarks.StudentID`) is written first in WHERE; add extra filters with AND.
 
 ---
 

@@ -147,7 +147,7 @@ flowchart TD
     C -->|YES| R3[/"Substantial (Level 5)"/]
     C -->|NO| D{"iMark ≥ 50?"}
     D -->|YES| R4[/"Adequate (Level 4)"/]
-    D -->|NO| R5[/"Not Achieved (Level 1)"/]
+    D -->|NO| R5[/"Levels 3, 2 and 1 are checked the same way"/]
     style R1 fill:#6ee7b7,stroke:#10b981,color:#000
     style R2 fill:#93c5fd,stroke:#3b82f6,color:#000
     style R3 fill:#c4b5fd,stroke:#8b5cf6,color:#000
@@ -171,9 +171,9 @@ Combine multiple conditions in one IF using **AND**, **OR**, and **NOT**.
 | `NOT` | Reverses the condition | — |
 
 > [!WARNING] Always Use Brackets with AND / OR
-> Delphi's operator precedence can cause bugs if you don't bracket compound conditions.
+> `AND` and `OR` are evaluated **before** the comparison operators, so a compound condition without brackets does not compile.
 > ```pascal
-> // WRONG — unpredictable results ❌
+> // WRONG — does not compile ❌ (AND is evaluated before >)
 > IF x > 0 AND y > 0 THEN
 > 
 > // CORRECT — bracket each sub-condition ✓
@@ -295,7 +295,7 @@ END;
 > 3. **Wrong comparison operator** — use `=` in conditions (not `:=` which is assignment)
 > 4. **No brackets on AND/OR conditions** — causes incorrect operator precedence
 > 5. **CASE with a String variable** — compiler error: CASE only accepts ordinal types
-> 6. **Overlapping CASE values** — if two cases could match, only the first one runs
+> 6. **Overlapping CASE values** — the same value may not appear in two branches; Delphi reports a "duplicate case label" error
 
 ---
 

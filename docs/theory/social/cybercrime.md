@@ -44,6 +44,7 @@ As more of our lives move online — banking, shopping, communication, health re
 | **Trojan horse** | Disguised as legitimate software; opens a backdoor | Malicious downloads, fake software |
 | **Ransomware** | Encrypts files; demands payment for decryption key | Phishing emails, infected sites |
 | **Spyware** | Secretly monitors user activity, logs keystrokes | Bundled with free software |
+| **Spyware / keylogger** | Secretly records what the user does (keystrokes, passwords, sites visited) and sends it to the attacker | Bundled software, infected downloads |
 | **Adware** | Displays unwanted advertisements | Bundled software, malicious websites |
 | **Rootkit** | Hides deep in OS, giving persistent hidden access | Advanced malware |
 | **Keylogger** | Records all keystrokes to capture passwords | Installed by Trojans or physical access |
@@ -132,6 +133,7 @@ flowchart TD
 
 | Crime | Description |
 |---|---|
+| **Spam** | Unwanted bulk e-mail or messages, usually advertising; often carries scams and malicious links |
 | **Cyberbullying** | Using technology to harass, threaten, or humiliate individuals |
 | **Online fraud** | Fake online stores, lottery scams, advance fee fraud (419 scams) |
 | **DDoS attack** | Distributed Denial of Service — flooding a server with requests to crash it |

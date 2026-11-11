@@ -12,35 +12,36 @@ description: Syntax, runtime and logic errors in Delphi, how to find them, and h
 - Exams give you broken code and ask you to find **and** fix the errors. Each error is usually worth 2 marks.
 :::
 
-Your program compiles, you click the button, and it shows `Change: R-26.50`. Nothing crashed and the code looks fine, but the answer is wrong. Programmers spend more time finding mistakes than writing new code, and a structured way of hunting for them is one of the most useful programming skills you can learn.
+Your program compiles, you click the button, and it shows `Average: 135%`. Nothing crashed and the code looks fine, but the answer is wrong. Programmers spend more time finding mistakes than writing new code, and a structured way of hunting for them is one of the most useful programming skills you can learn.
 
 ---
 
 ## See it working — broken code
 
-This code should calculate the change for a customer. It contains **four** errors:
+This code should work out a learner's average from a total and the number of tests, and say whether the learner passed (50 or more). It contains **four** errors:
 
 ```pascal
-procedure TfrmShop.btnChangeClick(Sender: TObject);
+procedure TfrmMarks.btnAverageClick(Sender: TObject);
 var
-  rTotal, rPaid, rChange: Real;
+  iTotal, iCount: Integer;
+  rAverage: Real;
 begin
-  rTotal := StrToFloat(edtTotal.Text)                   // ❶
-  rPaid := StrToInt(edtPaid.Text);                      // ❷
-  rChange := rTotal - rPaid;                            // ❸
-  if rChange < 0 then
-    lblChange.Caption := 'Insufficient amount paid';    // ❹
+  iTotal = StrToInt(edtTotal.Text);                     // ❶
+  iCount := StrToInt(edtCount.Text);
+  rAverage := iTotal / iCount;                          // ❷
+  if rAverage > 50 then                                 // ❸
+    lblResult.Caption := 'Pass'
   else
-    lblChange.Caption := 'Change: ' + FloatToStrF(rChange, ffCurrency, 8, 2);
+    lblReslt.Caption := 'Not yet';                      // ❹
 end;
 ```
 
 | # | Error | Type | Fix |
 |---|---|---|---|
-| ❶ | Missing `;` at the end of the statement | Syntax | `rTotal := StrToFloat(edtTotal.Text);` |
-| ❷ | `StrToInt` crashes when the user enters 50.50 | Runtime | `rPaid := StrToFloat(edtPaid.Text);` |
-| ❸ | Operands swapped, so the change is negative | Logic | `rChange := rPaid - rTotal;` |
-| ❹ | `;` before `else` is not allowed | Syntax | Remove the `;` after `'Insufficient amount paid'` |
+| ❶ | `=` used instead of `:=` for assignment | Syntax | `iTotal := StrToInt(edtTotal.Text);` |
+| ❷ | Division by zero when the number of tests is 0 | Runtime | Check first: `if iCount > 0 then …` |
+| ❸ | An average of exactly 50 is shown as "Not yet" | Logic | `if rAverage >= 50 then` |
+| ❹ | Component name misspelt (undeclared identifier) | Syntax | `lblResult.Caption := 'Not yet';` |
 
 ---
 

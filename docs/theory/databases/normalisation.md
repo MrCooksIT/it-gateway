@@ -165,8 +165,8 @@ A **transitive dependency** occurs when: **Non-key A → Non-key B** (B depends 
 
 | StudentID | Name | PostalCode | City | Province |
 |---|---|---|---|---|
-| 1001 | Alice | 7700 | Stellenbosch | Western Cape |
-| 1002 | Bob | 7700 | Stellenbosch | Western Cape |
+| 1001 | Alice | 7600 | Stellenbosch | Western Cape |
+| 1002 | Bob | 7600 | Stellenbosch | Western Cape |
 | 1003 | Carol | 8000 | Cape Town | Western Cape |
 
 PK = `StudentID`
@@ -185,8 +185,8 @@ If Stellenbosch's postal code changes, you must update multiple rows.
 <table class="itg-norm-table">
 <thead><tr><th>StudentID (PK)</th><th>Name</th><th>PostalCode</th><th>City</th><th>Province</th></tr></thead>
 <tbody>
-<tr><td>1001</td><td>Alice</td><td>7700</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
-<tr><td>1002</td><td>Bob</td><td>7700</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
+<tr><td>1001</td><td>Alice</td><td>7600</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
+<tr><td>1002</td><td>Bob</td><td>7600</td><td class="dup">Stellenbosch</td><td class="dup">Western Cape</td></tr>
 <tr><td>1003</td><td>Carol</td><td>8000</td><td class="dup">Cape Town</td><td class="dup">Western Cape</td></tr>
 </tbody>
 </table>
@@ -297,6 +297,6 @@ Un-normalised tables cause three types of anomalies:
 >
 > 3. **"Explain what a transitive dependency is. Give an example."** — non-key column depending on another non-key column; example: PostalCode → City (city depends on postal code, not directly on StudentID)
 >
-> 4. **"What is a update anomaly? How does normalisation solve it?"** — having to update the same data in multiple rows; normalisation stores data once (in its own table), so one update is sufficient
+> 4. **"What is an update anomaly? How does normalisation solve it?"** — having to update the same data in multiple rows; normalisation stores data once (in its own table), so one update is sufficient
 >
 > 5. **"Convert this table to 3NF. Show all tables with their primary keys and foreign keys."** — show the final structure: each entity in its own table, PKs and FKs clearly indicated

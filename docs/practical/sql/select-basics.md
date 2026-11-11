@@ -2,8 +2,8 @@
 
 In Delphi, all SQL runs as a text string assigned to a query component — you build the SQL with Pascal string operations, then open the query to execute it. Clause order is fixed and must follow the mnemonic **SFWGHO**: Select, From, Where, Group By, Having, Order By.
 
-> [!NOTE] Grade 11–12
-> Basic SELECT (SELECT, FROM, WHERE, ORDER BY, DISTINCT) is introduced in Grade 11. Grade 12 extends this to joins, aggregate functions, GROUP BY, and HAVING. Every Paper 1 paper has at least one SQL section.
+> [!NOTE] Grade 12
+> SQL is Grade 12 work. Grade 11 database questions use `TADOTable` and Delphi code, with no SQL. Every Grade 12 Paper 1 has an SQL section.
 
 ---
 
@@ -58,7 +58,7 @@ SELECT DISTINCT Province
 FROM tblStudents
 ```
 
-Returns each unique value of `Province` once. By default, `DISTINCT` sorts the result ascending.
+Returns each unique value of `Province` once. Access usually returns `DISTINCT` results in ascending order, but add `ORDER BY` if the order matters.
 
 Two fields with DISTINCT finds unique **combinations** of those fields:
 
@@ -195,7 +195,7 @@ All SQL runs as a Pascal string. When you insert a variable into that string, th
 
 ### String fields (Text in Access)
 
-Access SQL uses `"` to delimit string values inside the query. In Pascal you build this with either `QuotedStr()` or direct string concatenation.
+Access SQL accepts either `"` or `'` around string values inside the query. In Pascal you build this with either `QuotedStr()` (which adds single quotes) or direct string concatenation.
 
 ```pascal
 var
@@ -203,7 +203,7 @@ var
 begin
   sInput := InputBox('Search', 'Enter surname:', '');
 
-  // Option 1 — QuotedStr wraps the value in double quotes automatically
+  // Option 1 — QuotedStr wraps the value in single quotes automatically
   qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname = ' + QuotedStr(sInput);
 
   // Option 2 — manual double-quote concatenation
@@ -265,7 +265,7 @@ end;
 
 ### Boolean (Yes/No) fields
 
-Use `BoolToStr` to convert a Boolean value to a string for the SQL.
+Use `BoolToStr` to convert a Boolean value to a string for the SQL. It gives `-1` for True and `0` for False, which Access accepts.
 
 ```pascal
 var
@@ -295,7 +295,7 @@ lblMark.Caption := IntToStr(qry['Mark']);
 Wrap the wildcard characters inside the string value before concatenating:
 
 ```pascal
-// Option 1 — QuotedStr adds the double quotes; % goes inside the value
+// Option 1 — QuotedStr adds the quotes; % goes inside the value
 qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname LIKE ' +
                 QuotedStr('%' + sInput + '%');
 
@@ -324,12 +324,12 @@ qry.SQL.Text := 'SELECT * FROM tblStudents WHERE Surname LIKE "%' + sInput + '%"
 | `FROM` | Specifies the table(s) to query |
 | `WHERE` | Filters rows; only rows where the condition is true are returned |
 | `ORDER BY` | Sorts the result set; ASC (default) or DESC |
-| `DISTINCT` | Removes duplicate rows from the result; sorts ascending by default |
+| `DISTINCT` | Removes duplicate rows from the result |
 | `BETWEEN x AND y` | Range check, inclusive of both x and y |
 | `IN (...)` | Matches any value in the given list |
 | `LIKE` | Pattern match using `%` (any chars) or `_` (one char); Text and Date fields only |
 | `IS NULL` | Tests whether a field has no value |
-| `QuotedStr()` | Delphi function that wraps a string in double quotes for use in Access SQL |
+| `QuotedStr()` | Delphi function that wraps a string in single quotes for use in SQL |
 | `BoolToStr()` | Delphi function that converts a Boolean to its string representation |
 | `DateToStr()` | Delphi function that converts a TDate/TDateTime to a string |
 | SFWGHO | Mnemonic for clause order: Select, From, Where, Group By, Having, Order By |

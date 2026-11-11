@@ -82,10 +82,10 @@ flowchart LR
 | Feature | 4G LTE | 5G |
 |---|---|---|
 | Max speed | ~150 Mbps | ~10 Gbps |
-| Latency | 30–50 ms | <1 ms |
+| Latency | 30–50 ms | <10 ms |
 | Capacity | Moderate density | Very high device density |
 | Infrastructure | Existing towers | New mmWave towers + existing |
-| Coverage | Widespread | Still expanding (2024) |
+| Coverage | Widespread | Still expanding |
 | Use cases | Streaming, browsing | Autonomous vehicles, smart cities, AR |
 
 ---

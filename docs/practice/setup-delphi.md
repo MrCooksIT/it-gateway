@@ -127,7 +127,7 @@ The exam uses standard Hungarian-style prefixes. Use them consistently — it ma
 
 | Prefix | Data type | Example names |
 |--------|-----------|--------------|
-| `n` | Integer | `nScore`, `nCount`, `nTotal` |
+| `i` | Integer | `iScore`, `iCount`, `iTotal` |
 | `r` | Real / Double | `rAverage`, `rPrice` |
 | `s` | String | `sName`, `sResult`, `sSurname` |
 | `b` | Boolean | `bFound`, `bValid` |
@@ -152,13 +152,12 @@ Learning these shortcuts will save you significant time in the exam. Practise us
 | `F9` | Run the application |
 | `F8` | Step through code one line at a time (debugging) |
 | `F5` | Toggle breakpoint on the current line |
-| `F2` | Save current file |
 | `Ctrl + S` | Save |
 | `Ctrl + Space` | Code completion — shows available options |
 | `Ctrl + F` | Find text |
 | `Ctrl + Z` | Undo |
 | `Ctrl + Shift + C` | Complete class (auto-generate method bodies) |
-| `Alt + F9` | Compile without running (check for errors) |
+| `Ctrl + F9` | Compile without running (check for errors) |
 
 ---
 
@@ -169,19 +168,19 @@ Learning these shortcuts will save you significant time in the exam. Practise us
 **1. Forgetting to convert between String and Integer**
 ```pascal
 // Wrong — won't compile:
-nTotal := edtScore.Text + 10;
+iTotal := edtScore.Text + 10;
 
 // Correct:
-nTotal := StrToInt(edtScore.Text) + 10;
+iTotal := StrToInt(edtScore.Text) + 10;
 ```
 
 **2. Using `=` instead of `:=` for assignment**
 ```pascal
 // Wrong:
-nScore = 75;
+iScore = 75;
 
 // Correct:
-nScore := 75;
+iScore := 75;
 ```
 
 **3. Off-by-one errors in loops**
@@ -194,21 +193,21 @@ for i := 1 to 10 do  // Correct
 **4. Not initialising counters and totals before a loop**
 ```pascal
 // Always do this before the loop:
-nTotal := 0;
-nCount := 0;
-for i := 1 to nSize do
+iTotal := 0;
+iCount := 0;
+for i := 1 to iSize do
   ...
 ```
 
 **5. Missing `begin...end` when a loop body has more than one line**
 ```pascal
 // Wrong — only the first line is inside the if:
-if nScore >= 50 then
+if iScore >= 50 then
   lblGrade.Caption := 'Pass';
   lblColour.Font.Color := clGreen;  // This always runs!
 
 // Correct:
-if nScore >= 50 then
+if iScore >= 50 then
 begin
   lblGrade.Caption := 'Pass';
   lblColour.Font.Color := clGreen;
@@ -302,7 +301,7 @@ Read a sentence from a `TEdit`. Display:
 **Exercise 7: Bubble sort**
 Read 8 numbers into an array. Sort them in ascending order using bubble sort. Display the unsorted array, then the sorted array side by side.
 
-**Exercise 8: 2D array — class marks**
+**Exercise 8: 2D array — class marks (Grade 12 work)**
 Create a 4×5 array of random marks. Display in a `TStringGrid`. Show:
 - The average per row (student average)
 - The average per column (subject average)
@@ -310,16 +309,16 @@ Create a 4×5 array of random marks. Display in a `TStringGrid`. Show:
 
 ---
 
-### Grade 12 — Files, OOP, and databases
+### Grade 12 — OOP and databases
 
-**Exercise 9: Text file reader**
+**Exercise 9: Text file reader (Grade 11 work)**
 Read a text file containing names and scores (`Dlamini,78` format, one per line). Store in parallel arrays. Display in a `TStringGrid`. Show the average score.
 
 **Exercise 10: OOP — Student class**
 
 Create a `TStudent` class with:
 - Private fields: `FSurname`, `FName`, `FScore` (all strings/integers)
-- Constructor: `Create(sSurname, sName : String; nScore : Integer)`
+- Constructor: `Create(sSurname, sName : String; iScore : Integer)`
 - Read-only properties: `Surname`, `Name`, `Score`
 - Method `GetGrade`: returns the grade symbol (`'A'`–`'F'`) for the score
 - Method `GetDetails`: returns a formatted string: `'Dlamini, Sipho — 78 (B)'`

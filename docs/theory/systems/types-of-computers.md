@@ -149,7 +149,7 @@ An **embedded system** is a computer built into a device for a specific, dedicat
 | Microwave oven | Timer management, power level control |
 | Modern car | Engine management, ABS, GPS navigation, entertainment |
 | ATM machine | Process banking transactions, control card reader |
-| Medical pacemaker | Monitor heart rate, deliver shocks when needed |
+| Medical pacemaker | Monitor heart rate, send small electrical pulses to keep the heartbeat regular |
 | Traffic light | Control timing sequence, respond to sensors |
 | Industrial robot | Precise movement control, sensor response |
 
@@ -203,7 +203,7 @@ An **embedded system** is a computer built into a device for a specific, dedicat
 | Feature | 4G LTE | 5G |
 |---|---|---|
 | Max download speed | ~150 Mbps | ~10 Gbps |
-| Latency | ~30–50 ms | <1 ms |
+| Latency | ~30–50 ms | <10 ms |
 | Connected devices per area | Lower capacity | Much higher density |
 | Use cases | Video streaming, general mobile | Autonomous vehicles, IoT, AR/VR |
 
@@ -220,7 +220,7 @@ An **embedded system** is a computer built into a device for a specific, dedicat
 | **Mainframe** | Large, multi-user computer handling massive transaction volumes |
 | **Supercomputer** | Fastest computers used for scientific simulations |
 | **Embedded system** | Computer built into a device for a single dedicated purpose |
-| **RTOS** | Real-Time Operating System — responds to inputs with no delay |
+| **RTOS** | Real-Time Operating System — responds to inputs within a guaranteed, very short time |
 | **FLOPS** | Floating Point Operations Per Second — measure of supercomputer speed |
 | **4G/5G** | Mobile network standards; 5G is faster with lower latency |
 | **Wearable** | Computer worn on the body (watch, fitness tracker) |

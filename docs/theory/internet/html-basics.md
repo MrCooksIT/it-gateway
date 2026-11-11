@@ -2,8 +2,8 @@
 
 Every web page you visit is built on HTML. Behind the images, buttons, and layouts is a plain text file with tags telling the browser what each piece of content means. Understanding HTML is understanding the language of the web.
 
-> [!NOTE] Grade 10
-> HTML basics are a Grade 10 theory topic. You need to understand the structure, common tags, and their purpose — not write full websites from scratch in the theory exam.
+> [!NOTE] Background
+> HTML is not a separate topic in the Grade 10–12 IT teaching plans (it is taught in Grade 9 Digital Technology). It is useful background for the Grade 12 work on web technologies and scripting languages. You need to understand the structure and common tags — you are not asked to write websites in the IT theory exam.
 
 ---
 

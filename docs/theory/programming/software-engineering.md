@@ -258,7 +258,7 @@ The **PAT** is a major component of Grade 12 IT assessment (25% of final mark).
 | **Accessibility** | Readable font sizes, good colour contrast, and no meaning carried by colour alone |
 
 > [!TIP] Exam pattern
-> "Give TWO user-centred design principles for the form…" (2): name the principle **and** link it to the form in the scenario, for example "Use a combo box for Species so that users cannot type an invalid species."
+> "Give TWO user-centred design principles for the form…" (2): name the principle **and** link it to the form in the scenario, for example "Use a combo box for Province so that users cannot type a province that does not exist."
 
 ## Key Terms
 

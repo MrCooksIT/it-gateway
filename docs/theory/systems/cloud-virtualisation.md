@@ -3,7 +3,7 @@
 Your files are on your phone, your laptop, and accessible from any computer in the world — that's the cloud. Behind the scenes, physical servers run dozens of virtual machines simultaneously. These two technologies — cloud and virtualisation — have reshaped how businesses and individuals use computing.
 
 > [!NOTE] Grade 11–12
-> Cloud computing is introduced at Grade 11. Virtualisation and deeper cloud architecture are Grade 12 content.
+> Virtualisation is Grade 11 work (Term 1) and returns in Grade 12. Cloud computing, virtual reality and augmented reality are Grade 12 work (Term 2). Cloud **storage** is first met in Grade 10 as an Internet service.
 
 ---
 

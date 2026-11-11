@@ -118,7 +118,7 @@ These connect computers to networks or other devices.
 | **Router** | Connects networks; directs data packets between networks; provides DHCP |
 | **Switch** | Connects devices on the SAME network; faster than hub |
 | **Hub** | Connects devices on same network; broadcasts to all (less efficient than switch) |
-| **Wireless Access Point (WAP)** | Extends wireless network coverage |
+| **Wireless Access Point (WAP)** | Lets wireless devices connect to a wired network; extra access points extend Wi-Fi coverage |
 | **Bluetooth adapter** | Short-range wireless connection for peripherals |
 | **4G/5G modem/dongle** | Mobile internet connection via cellular network |
 
@@ -175,7 +175,7 @@ Most modern devices (USB peripherals, monitors, printers) are Plug and Play.
 | **MICR** | Magnetic Ink Character Recognition — reads magnetic ink on cheques |
 | **Modem** | Converts digital data to analogue signals for phone line transmission |
 | **NIC** | Network Interface Card — hardware enabling network connection |
-| **WAP** | Wireless Access Point — extends Wi-Fi coverage |
+| **WAP** | Wireless Access Point — lets wireless devices join a wired network |
 | **Plug and Play** | OS automatically detects and configures new hardware |
 
 ---

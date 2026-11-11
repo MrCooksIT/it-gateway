@@ -79,8 +79,8 @@ An **ERD** is a visual diagram showing entities, their attributes, and how they 
 
 | Symbol | Meaning |
 |---|---|
-| Single line `─` | One |
-| Double line `═` | One and only one |
+| One bar `|` across the line | One |
+| Two bars `||` across the line | One and only one |
 | Crow's foot `<` | Many |
 | Circle `○` | Zero or one |
 

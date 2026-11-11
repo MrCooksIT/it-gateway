@@ -2,8 +2,8 @@
 
 Every time data travels across a network, it could be intercepted, altered, or stolen. Network security is about ensuring that only authorised people can access data, and that the data arriving is exactly what was sent.
 
-> [!NOTE] Grade 12
-> Network security (encryption, SSL/TLS, public/private keys, certificates) is a Grade 12 topic.
+> [!NOTE] Grade 11 and 12
+> Firewalls, encryption, HTTPS, digital certificates, VPNs and multi-factor authentication are Grade 11 work (data security in Term 2, security services in Term 4). Symmetric vs asymmetric keys, digital signatures and intrusion detection are Grade 12 depth.
 
 ---
 

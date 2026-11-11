@@ -2,8 +2,8 @@
 
 Technology powers the modern world — but at a cost. The devices we use daily consume enormous energy, create hazardous waste, and contribute to carbon emissions. At the same time, ICT offers powerful tools for addressing environmental challenges. Understanding both sides is essential for responsible digital citizenship.
 
-> [!NOTE] Grade 12
-> Environmental impact of ICT, distributed computing, and AI/robotics in society are primarily Grade 12 topics.
+> [!NOTE] Grade 10+
+> E-waste, green computing, ergonomics and health are Grade 10 work (Term 2). Energy use, carbon footprint, AI, robotics and distributed computing are Grade 12 extension.
 
 ---
 

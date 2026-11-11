@@ -12,7 +12,7 @@ description: TDateTime, Date, Now, FormatDateTime, date calculations and leap ye
 - Because a date is a number, **subtracting two dates gives the number of days** between them.
 :::
 
-How many days has a dog been at the shelter? Is a learner 16 yet? Is 2028 a leap year? What date is 30 days from today? These questions come up in almost every real program, and Delphi answers each of them with one or two built-in functions.
+How many days has a library book been out on loan? Is a learner 16 yet? Is 2028 a leap year? What date is 30 days from today? These questions come up in almost every real program, and Delphi answers each of them with one or two built-in functions.
 
 ---
 
@@ -21,24 +21,24 @@ How many days has a dog been at the shelter? Is a learner 16 yet? Is 2028 a leap
 ```pascal
 procedure TfrmDates.btnInfoClick(Sender: TObject);
 var
-  dArrived: TDateTime;
+  dBorrowed: TDateTime;
   iDays: Integer;
 begin
-  dArrived := StrToDate('2025/03/14');
-  iDays := Trunc(Date - dArrived);
+  dBorrowed := StrToDate('2026/10/19');
+  iDays := Trunc(Date - dBorrowed);
 
   redOutput.Lines.Add('Today is ' + FormatDateTime('dddd, d mmmm yyyy', Date));
-  redOutput.Lines.Add('Arrived on ' + FormatDateTime('dd/mm/yyyy', dArrived));
-  redOutput.Lines.Add('Days at the shelter: ' + IntToStr(iDays));
-  redOutput.Lines.Add('Check-up due: ' + DateToStr(dArrived + 365));
+  redOutput.Lines.Add('Borrowed on ' + FormatDateTime('dd/mm/yyyy', dBorrowed));
+  redOutput.Lines.Add('Days on loan: ' + IntToStr(iDays));
+  redOutput.Lines.Add('Was due back: ' + DateToStr(dBorrowed + 14));
 end;
 ```
 
 ```text
 Today is Monday, 9 November 2026
-Arrived on 14/03/2025
-Days at the shelter: 605
-Check-up due: 2026/03/14
+Borrowed on 19/10/2026
+Days on loan: 21
+Was due back: 2026/11/02
 ```
 
 ---
@@ -92,7 +92,7 @@ This is why arithmetic works on dates:
 | `FormatDateTime('hh:nn', Now)` | 08:30 |
 
 ::: danger 🚨 Watch Out For
-1. Minutes are **`nn`**, not `mm`. `mm` means **month**, so `'hh:mm'` shows the month instead of the minutes.
+1. Use **`nn`** for minutes. `mm` normally means **month**. Delphi only treats `mm` as minutes when it comes directly after the hours (`'hh:mm'`), so `nn` is the safe choice everywhere.
 2. `d` = 9, `dd` = 09, `ddd` = Mon, `dddd` = Monday. The same pattern applies to `m`/`mm`/`mmm`/`mmmm`.
 :::
 
@@ -156,14 +156,14 @@ In a practical exam, the date on the computer is not the date in the example out
 
 ## ✏️ Check Your Understanding
 
-**Question 1:** What is displayed by `FormatDateTime('hh:mm', Now)` at 14:45 on 9 November, and why is it wrong?
+**Question 1:** What is displayed by `FormatDateTime('mm:ss', Now)` at 14:45:30 on 9 November, and why is it wrong?
 
 **Question 2:** Write one statement that displays the date 90 days from today in the format 07 February 2027.
 
 **Question 3:** Is 1900 a leap year? Use the rule to explain. (2)
 
 ::: details Check your answers
-**Q1:** It displays `14:11`. `mm` means month (November = 11). Use `'hh:nn'`.
+**Q1:** It displays `11:30`. Here `mm` does not follow the hours, so it means month (November = 11). Use `'nn:ss'`.
 
 **Q2:** `lblDue.Caption := FormatDateTime('dd mmmm yyyy', Date + 90);`
 

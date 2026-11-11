@@ -1130,7 +1130,7 @@ A **UML (Unified Modeling Language) class diagram** is a visual blueprint of an 
 ### Naming conventions
 
 * Class names begin with **T**: `TPerson`, `TBook`, `TVehicle`.
-* Attribute names use Hungarian notation prefixes: `s` for string, `i` for integer, `r` for real, `b` for Boolean, `c` for char, `arr` for array. For example: `sName`, `iAge`, `rPrice`, `bIsActive`.
+* Attribute names begin with **f** (for *field*): `fName`, `fAge`, `fPrice`, `fIsActive`. Parameters and local variables use the Hungarian prefixes: `s` for string, `i` for integer, `r` for real, `b` for Boolean, `c` for char, `arr` for array (e.g. `sName`, `iAge`).
 * Methods are named clearly to describe what they do.
 
 ### Three kinds of methods

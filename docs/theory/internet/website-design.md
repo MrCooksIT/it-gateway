@@ -56,7 +56,7 @@ A website that looks beautiful but confuses visitors has failed at its job. Good
 
 ---
 
-## Website Evaluation Criteria (ACCPO)
+## Website Evaluation Criteria (AACPO)
 
 When evaluating a website's credibility and quality:
 
@@ -206,7 +206,7 @@ Good design needs both: beautiful (UI) AND functional (UX).
 >
 > 1. **"Give FOUR characteristics of a well-designed website"** — consistent navigation; fast loading; responsive (mobile-friendly); high contrast text; accurate and current content; accessibility
 >
-> 2. **"Explain the ACCPO criteria for evaluating a website"** — Authority (who created it?); Accuracy (is it correct?); Currency (when updated?); Purpose (why created?); Objectivity (is it biased?)
+> 2. **"Explain the AACPO criteria for evaluating a website"** — Authority (who created it?); Accuracy (is it correct?); Currency (when updated?); Purpose (why created?); Objectivity (is it biased?)
 >
 > 3. **"What is responsive web design?"** — Design that automatically adapts the layout to different screen sizes (desktop, tablet, phone) so the site is usable on any device
 >

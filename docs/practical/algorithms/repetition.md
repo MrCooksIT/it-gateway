@@ -377,7 +377,7 @@ end;
 
 ---
 
-### Exercise 2 — Count numbers above average
+### Exercise 2 — Count numbers above average (Grade 11 — uses an array)
 Input 10 numbers. Calculate the average, then count how many are above the average.
 
 <details>

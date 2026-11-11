@@ -382,7 +382,7 @@ end;
 > 3. **Accessing private field directly** — `oStudent.sName` from outside the class is a compiler error; use `oStudent.GetName`
 > 4. **Missing `override` in destructor** — `destructor Destroy; override;` — the `override` is required
 > 5. **Creating object without assigning** — `var oS : TStudent;` then using `oS.GetName` without `oS := TStudent.Create(...)` first — access violation
-> 6. **Forgetting to declare in `private` section of TForm1** — the class declaration goes in the `type` section, not inside TForm1
+> 6. **Declaring the class inside TForm1** — a class is declared on its own in the `type` section (or in its own unit), not inside the form class
 
 ---
 

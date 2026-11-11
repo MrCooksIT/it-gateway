@@ -60,9 +60,9 @@ A **software licence agreement** (EULA — End User Licence Agreement) is the le
 | Licence Type | Cost | Modify source? | Distribute? | Example |
 |---|---|---|---|---|
 | **Proprietary / Commercial** | Paid | No | No — cannot copy | Microsoft Office, Adobe Photoshop |
-| **Freeware** | Free | No | Usually yes (as-is) | VLC, 7-Zip (some versions) |
+| **Freeware** | Free | No | Usually yes (as-is) | Adobe Acrobat Reader, WhatsApp Desktop |
 | **Shareware** | Free trial | No | Share trial version | WinZip (trial period) |
-| **Open source** | Usually free | Yes | Yes, under conditions | Linux, Firefox, LibreOffice |
+| **Open source** | Usually free | Yes | Yes, under conditions | Linux, Firefox, LibreOffice, VLC |
 | **Public domain** | Free | Yes | Yes, no restrictions | Some old government works |
 
 ```mermaid
@@ -106,6 +106,15 @@ The creator chooses which rights to retain and which to grant:
 | CC0 | Public domain dedication | Completely free — no conditions |
 
 ---
+
+## Copyleft
+
+**Copyleft** is a type of licence that uses copyright law to keep a work free. Anyone may use, change and share the work, **on condition that** every changed version is shared under the same free terms. The GNU General Public Licence (GPL), used by Linux, is the best-known copyleft licence. The Creative Commons **Share-Alike (SA)** condition is the same idea.
+
+| | Copyright (all rights reserved) | Copyleft |
+|---|---|---|
+| Copying and changing | Only with the owner's permission | Allowed for everyone |
+| Condition | Pay or get permission | New versions must stay free under the same licence |
 
 ## Piracy
 

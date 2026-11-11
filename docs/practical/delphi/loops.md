@@ -11,7 +11,7 @@ Loops let your program repeat a block of code multiple times without you writing
 
 | Loop | Use when… | Condition checked | Minimum runs |
 |---|---|---|---|
-| `FOR` | You know exactly how many times to repeat | Before (implicit in counter) | 1 (if start ≤ end) |
+| `FOR` | You know exactly how many times to repeat | Before (implicit in counter) | 0 (does not run if start > end) |
 | `WHILE` | You don't know how many times — condition checked first | Before | 0 (may never run) |
 | `REPEAT...UNTIL` | You don't know how many times — must run at least once | After | 1 (always) |
 
@@ -286,7 +286,7 @@ end;
 > 2. **Forgetting to update the counter** in WHILE — causes infinite loop
 > 3. **UNTIL condition is wrong way around** — remember: UNTIL stops the loop (condition = TRUE to stop)
 > 4. **Off-by-one errors** — e.g. looping `FOR i := 0 TO MAX` when array is `[1..MAX]` causes access violations
-> 5. **Modifying the FOR loop counter** inside the loop — undefined behaviour in Delphi; never do this
+> 5. **Modifying the FOR loop counter** inside the loop — not allowed; Delphi gives a compile error ("Assignment to FOR-Loop variable")
 > 6. **Nested loop variable names reused** — use different counter names (i and j, not i and i)
 
 ---

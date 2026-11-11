@@ -2,8 +2,8 @@
 
 Text files allow your program to **save data permanently** and **read it back later**. Without file I/O, all data is lost when the program closes. In Paper 1, text file questions typically ask you to write to a file, read from a file, or both.
 
-> [!NOTE] Grade 10+
-> Text file I/O is introduced in Grade 10. The standard exam pattern is: open file → read/write with a loop → close file.
+> [!NOTE] Grade 11+
+> Text files are Grade 11 work (Term 2). In Grade 10 they are used only in the PAT. The standard exam pattern is: open file → read/write with a loop → close file.
 
 ---
 
@@ -168,8 +168,8 @@ begin
 end;
 ```
 
-> [!NOTE] ReadLn Always Reads a String
-> `ReadLn(f, sLine)` reads the text into `sLine`. If you need an integer, read into a String first then convert: `iScore := StrToInt(sLine)`.
+> [!NOTE] Read Each Line into a String
+> `ReadLn(f, sLine)` reads the whole line as text into `sLine`. If you need an integer, read into a String first then convert: `iScore := StrToInt(sLine)`.
 
 ---
 
@@ -307,7 +307,7 @@ Carol
 > 1. **Forgetting `CloseFile`** — data may not flush to disk; file stays locked
 > 2. **Using `Reset` when the file doesn't exist** — runtime error; check `FileExists` first
 > 3. **Using `Rewrite` instead of `Reset`** for reading — `Rewrite` empties the file!
-> 4. **Not converting types** — `ReadLn` always reads text; convert with `StrToInt`/`StrToFloat` as needed
+> 4. **Not converting types** — a line read into a String is text; convert with `StrToInt`/`StrToFloat` as needed
 > 5. **Hardcoding absolute paths** — `'C:\Users\me\scores.txt'` won't work on a different computer; use relative paths in exams
 > 6. **Missing `EOF` check** — reading past the end of file causes a runtime error
 
