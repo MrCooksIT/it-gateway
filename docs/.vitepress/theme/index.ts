@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import TawkTo from './TawkTo.vue'
+import HelpButton from './HelpButton.vue'
 import { h } from 'vue'
 import './custom.css'
 
@@ -7,7 +7,7 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'layout-bottom': () => h(TawkTo),
+      'layout-bottom': () => h(HelpButton),
     })
   },
 }
