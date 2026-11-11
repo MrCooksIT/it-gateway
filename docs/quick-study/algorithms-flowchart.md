@@ -2,6 +2,8 @@
 
 No prose. Symbols, pseudocode patterns, and algorithm structures only.
 
+> **Which grade?** Grade 10: flowchart symbols, IPO tables, pseudocode, sequence, decision and repetition patterns, tracing. Grade 11 adds: searching and sorting arrays.
+
 ---
 
 ## Flowchart Symbols
@@ -255,3 +257,24 @@ Output: x=3, y=4
 | `WHILE x < 10 DO` | `WHILE x < 10 DO` |
 | `REPEAT...UNTIL x = 0` | `REPEAT...UNTIL x = 0;` |
 | `SWAP a, b` | `t := a; a := b; b := t;` |
+
+---
+
+## IPO Table (Grade 10)
+
+| Input | Processing | Output |
+|---|---|---|
+| What the user supplies | Calculations and decisions | What is displayed |
+
+Constants are not inputs.
+
+## Searching and Sorting (Grade 11)
+
+| Algorithm | How it works | Note |
+|---|---|---|
+| Linear search | Check every element from the start | Works on unsorted data |
+| Binary search | Check the middle; discard the half that cannot hold the value; repeat | Data **must be sorted**; very fast |
+| Bubble sort | Compare neighbours and swap if out of order; largest "bubbles" to the end each pass | |
+| Selection sort | Find the smallest in the unsorted part; swap it into the first unsorted position | |
+
+Parallel arrays: swap in **all** arrays.

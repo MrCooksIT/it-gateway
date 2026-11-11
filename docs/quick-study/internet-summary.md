@@ -2,6 +2,8 @@
 
 No prose. Tables and key facts for Internet Technologies.
 
+> **Which grade?** Grade 10: Internet vs WWW, URL and domain structure, Internet services, online safety. Grade 11 adds: web evolution, intranet/extranet, streaming, security services. Everything on this page is examinable in Grade 12.
+
 ---
 
 ## Internet vs WWW
@@ -158,3 +160,29 @@ subdomain  domain  2ndTLD  TLD
 - Can be used for targeted advertising
 - User can clear cookies or block them
 - GDPR/POPIA requires consent notification
+
+---
+
+## Browser vs Search Engine (Grade 10)
+
+| | Web browser | Search engine |
+|---|---|---|
+| What | Software on your device | Website/service on the Internet |
+| Does | Displays web pages | Finds pages that match keywords |
+| Examples | Chrome, Edge, Firefox | Google, Bing |
+
+## Download vs Streaming (Grade 11)
+
+| | Download | Streaming |
+|---|---|---|
+| Stored on device? | Yes, the whole file | No, played while received |
+| Starts | After the download | Almost immediately |
+| Needs | Storage space | A fast, stable connection |
+
+## Security Services (Grade 11)
+
+| Term | Meaning |
+|---|---|
+| SSL/TLS | Encrypts data between browser and server (`https`, padlock) |
+| Digital certificate | Issued by a certificate authority; proves the site belongs to who it claims |
+| MFA / OTP | A second proof of identity after the password |

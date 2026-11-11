@@ -47,6 +47,19 @@ The **RDBMS** is by far the most common and is the focus of the CAPS IT curricul
 
 ---
 
+### Database types by size and accessibility
+
+> [!NOTE] Grade 11
+> Choosing a database type according to how it will be used is Grade 11 work.
+
+| | Desktop database | Server database | Distributed database |
+|---|---|---|---|
+| Where it runs | On one computer | On a central server that clients connect to | On several servers in different locations that work as one |
+| Users | One, or a few | Many at the same time, from different places | Very many, worldwide |
+| Size | Small | Large | Very large |
+| Security and backups | Limited; up to the user | User access control; centralised backups | Data is duplicated across sites, so one failure does not stop the system |
+| Examples | Microsoft Access, LibreOffice Base | MySQL, SQL Server, Oracle, PostgreSQL | Systems used by banks, airlines and social networks |
+
 ## Common RDBMS Software
 
 ### Microsoft Access

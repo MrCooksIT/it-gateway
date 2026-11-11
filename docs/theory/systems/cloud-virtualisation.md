@@ -177,6 +177,22 @@ Most cloud services are built on virtualisation:
 
 ---
 
+## Virtual Reality and Augmented Reality
+
+> [!NOTE] Grade 12
+> Overviews of virtual reality and augmented reality are Grade 12 work (Term 2).
+
+| | Virtual reality (VR) | Augmented reality (AR) |
+|---|---|---|
+| What it does | **Replaces** the real world with a computer-generated 3D environment | **Adds** computer-generated images and information on top of the real world |
+| Equipment | Headset that blocks out the surroundings, motion sensors, hand controllers | A smartphone, tablet or smart glasses with a camera |
+| Examples | Flight and surgery simulators, virtual tours, games | Furniture apps that show an item in your room, navigation arrows over a live camera view, face filters |
+
+**Uses:** training without risk, education, design and architecture, entertainment, retail.
+**Limitations:** cost of equipment, motion sickness and eye strain with VR, needs powerful hardware, safety when users cannot see their surroundings.
+
+Do not confuse **virtual reality** (a simulated world for a person) with **virtualisation** (simulated computers running on one physical computer).
+
 ## Key Terms
 
 | Term | Definition |

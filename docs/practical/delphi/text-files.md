@@ -55,6 +55,18 @@ flowchart LR
 
 ---
 
+## Physical vs Logical File Names
+
+| | Physical file name | Logical file name |
+|---|---|---|
+| What it is | The name of the file **on the disk** | The **file variable** in your program |
+| Example | `'Results.txt'` | `tFile` (declared as `TextFile`) |
+| Used by | The operating system | Your code: `Reset(tFile)`, `ReadLn(tFile, sLine)` |
+
+`AssignFile(tFile, 'Results.txt')` links the two. After that line, your code only ever uses the logical name.
+
+Each line of a text file ends with an invisible **end-of-line** marker (which is why `ReadLn` reads exactly one line), and the file ends with an **end-of-file** marker (which is what `Eof(tFile)` tests for).
+
 ## Writing to a Text File
 
 ```pascal

@@ -207,6 +207,22 @@ Data you deliberately create:
 
 ---
 
+## Protecting Your Online Identity
+
+> [!NOTE] Grade 11
+> How to protect your online identity is Grade 11 work (Term 2).
+
+Your **online identity** is everything that represents you online: accounts, usernames, photos, posts and the personal details linked to them.
+
+| Risk | Protection |
+|---|---|
+| Someone logs in as you | Strong, unique passwords; multi-factor authentication |
+| Someone pretends to be you (fake profile, identity theft) | Limit the personal details you make public; report fake accounts |
+| Old posts damage your reputation | Think before you post; review your privacy settings; search for your own name |
+| Details stolen through fake sites and messages | Check the web address and `https`; never give details through a link in a message |
+
+Organisations protect their online identity in the same way, and also register their domain names, verify their social media accounts and publish their official contact details.
+
 ## Key Terms
 
 | Term | Definition |

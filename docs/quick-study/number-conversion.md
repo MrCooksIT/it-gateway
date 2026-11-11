@@ -2,6 +2,8 @@
 
 Fast-scan guide for binary, decimal, and hexadecimal conversions. Steps only — no prose.
 
+> **Which grade?** All of this is Grade 10 work (Term 1) and stays examinable in Grade 11 and 12.
+
 ---
 
 ## Decimal → Binary

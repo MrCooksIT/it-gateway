@@ -2,6 +2,8 @@
 
 No prose. Tables and key facts only.
 
+> **Which grade?** Grade 10: network types, network models, basic hardware, Internet concepts, e-mail threats. Grade 11 adds: protocols, wireless technologies, intranet/extranet, VPN, SSL/TLS. Everything on this page is examinable in Grade 12.
+
 ---
 
 ## Network Types
@@ -168,3 +170,40 @@ Private key = kept secret → decrypts
 | IaaS | Virtual hardware (servers, storage) | AWS, Azure |
 | PaaS | Development platform | Google App Engine |
 | SaaS | Software via internet | MS 365, Gmail, Netflix |
+
+---
+
+## Wireless and Data Transmission (Grade 11)
+
+| Technology | Range | Use |
+|---|---|---|
+| Bluetooth | ±10 m | Nearby devices (PAN) |
+| Wi-Fi | Tens of metres | WLAN |
+| WiMAX | Kilometres | Fixed wireless broadband without cables |
+| LTE / 4G | Cellular | Mobile broadband |
+| 5G | Cellular | Faster, lower latency, more devices than 4G |
+
+| Term | Meaning |
+|---|---|
+| Bandwidth | Data transmitted per second |
+| Latency | Delay before data arrives |
+| Throttling | ISP slows a user's whole connection |
+| Shaping | ISP prioritises some traffic types over others |
+| VPN | Encrypted tunnel over the Internet to a private network |
+| VoIP | Voice calls over the Internet |
+
+## Location-Based Computing (Grade 11)
+
+| | GPS | RFID |
+|---|---|---|
+| How | Satellite signals give the device's position | Tag sends its ID to a nearby reader |
+| Power | Needs power | Passive tags need none |
+| Can report location? | Yes | No; it only identifies itself when scanned |
+
+## Communication Media (Grade 10)
+
+| Medium | Advantage | Disadvantage |
+|---|---|---|
+| UTP cable | Cheap, fast, reliable, secure | ±100 m limit; no mobility |
+| Fibre | Very fast, long distance, no interference | Expensive, fragile |
+| Wi-Fi | Mobility, no cables | Slower, limited range, less secure |

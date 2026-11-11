@@ -164,6 +164,22 @@ Collection → Storage → Processing → Analysis → Distribution → Archivin
 
 ---
 
+## Data Warehousing and Data Mining
+
+> [!NOTE] Grade 12
+> Data collection, data warehousing and data mining are Grade 12 work (Term 1).
+
+| Term | Meaning |
+|---|---|
+| **Data warehouse** | A very large, central store that combines current and historical data from many sources in an organisation, organised for **analysis** rather than for day-to-day transactions |
+| **Data mining** | Using software to search very large amounts of data for **hidden patterns, trends and relationships** that people would not easily notice |
+
+**How they fit together:** data is collected (till slips, loyalty cards, website clicks, sensors, location data) → stored in a data warehouse → mined for patterns → the patterns support decisions.
+
+**Examples of data mining:** a retailer finds products that are often bought together; a bank detects unusual transactions that may be fraud; a streaming service recommends films based on viewing history.
+
+**Concerns:** people are often unaware that their data is collected and combined; profiles can be built without consent; conclusions drawn from poor data can be wrong or unfair.
+
 ## Key Terms
 
 | Term | Definition |

@@ -64,6 +64,13 @@ flowchart LR
 
 ---
 
+### The gig economy and remote work
+
+Digitalisation has changed how people work:
+
+- **Gig economy:** people earn money from short-term tasks ("gigs") found through apps and websites, instead of from one permanent job: ride-hailing drivers, delivery riders, online freelancers. It offers flexibility, but no fixed income, leave or benefits.
+- **Remote work:** staff work from home using video conferencing, cloud storage and collaboration tools. It saves travel time and office costs, but needs a reliable connection and can be isolating.
+
 ## Globalisation
 
 **Globalisation** is the process by which people, businesses and countries become **interconnected and interdependent** through trade, communication and technology.
